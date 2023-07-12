@@ -69,6 +69,7 @@ void main(void)
     while (1)
     {
         // Add your application code
+        __delay_ms(1);
     }
 }
 /**

@@ -56,6 +56,13 @@ void __interrupt() INTERRUPT_InterruptManager (void)
     {
         PIN_MANAGER_IOC();
     }
+    if(INTCONbits.PEIE == 1)
+    {
+        if(PIE1bits.TMR1IE == 1 && PIR1bits.TMR1IF == 1)
+        {
+            TMR1_ISR();
+        } 
+    }      
 }
 /**
  End of File

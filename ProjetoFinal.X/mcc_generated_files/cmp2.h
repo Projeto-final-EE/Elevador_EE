@@ -131,6 +131,21 @@ void CMP2_Initialize(void);
 */
 bool CMP2_GetOutputStatus(void);
 
+/**
+  @Summary
+    Implements ISR
+
+  @Description
+    This routine is used to implement the ISR for the interrupt-driven
+    implementations.
+
+  @Returns
+    None
+
+  @Param
+    None
+*/
+void CMP2_ISR(void);
 
 
 #ifdef __cplusplus  // Provide C++ Compatibility

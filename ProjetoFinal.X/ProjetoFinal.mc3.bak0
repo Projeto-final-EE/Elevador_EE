@@ -1,4 +1,4 @@
-<config configName="default" projectName="ProjetoFinal" configVersion="1.1" device="PIC16F1827" deviceLibraryClass="com.microchip.mcc.mcu8.Mcu8PeripheralLibrary" coreVersion="5.4.14">
+<config configName="default" projectName="ProjetoFinal" configVersion="1.1" device="PIC16F1827" deviceLibraryClass="com.microchip.mcc.mcu8.Mcu8PeripheralLibrary" coreVersion="5.5.0">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -4886,11 +4886,11 @@
       </entry>
       <entry>
          <file>mcc_generated_files\mcc.c</file>
-         <hash>95d673bbfacba6300057ac0563bec5a829b3a5f906d596434052e99ddb96ec61</hash>
+         <hash>5873478d8876ee237c2f4b57e5d5f9cf312da9c177c6603a7bab957af09b8de2</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\mcc.h</file>
-         <hash>5b17c190ae2f56afbf8f70c5701a8b7d727e2018eaec6e14d2357a32f8a718be</hash>
+         <hash>f759be371ea9c074b6e1975ef56a033cf41c99b5b20006ec233f736fe8d67233</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\device_config.h</file>
@@ -4909,12 +4909,12 @@
          <hash>d4e8bcbcb679cb955632857da55ad0b3066ef3bbbe4442d3a9a3b768ccea7ca7</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\device_config.c</file>
-         <hash>42f5de9d140a2b1a569f5b4d8b040d709a1f9df6a0d06374bfe0155fe86af9de</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\tmr2.h</file>
          <hash>ff9cd458725a2612bb55636b38815a75edf189f5db9bcea269c1a73ddc555bc5</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\device_config.c</file>
+         <hash>42f5de9d140a2b1a569f5b4d8b040d709a1f9df6a0d06374bfe0155fe86af9de</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\tmr2.c</file>

@@ -46,6 +46,18 @@
 /*
                          Main application
  */
+void chegadaS1(){ //função acionada ao sensor S1 ser acionado
+}
+
+void chegadaS2(){ //função acionada ao sensor S2 ser acionado
+}
+
+void chegadaS3(){ //função acionada ao sensor S3 ser acionado
+}
+
+void chegadaS4(){ //função acionada ao sensor S4 ser acionado
+}
+
 void main(void)
 {
     // initialize the device
@@ -53,12 +65,13 @@ void main(void)
 
     // When using interrupts, you need to set the Global and Peripheral Interrupt Enable bits
     // Use the following macros to:
-
+    IOCBF3_SetInterruptHandler(chegadaS1());
+    IOCBF3_SetInterruptHandler(chegadaS2());
     // Enable the Global Interrupts
-    //INTERRUPT_GlobalInterruptEnable();
+    INTERRUPT_GlobalInterruptEnable();
 
     // Enable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptEnable();
+    INTERRUPT_PeripheralInterruptEnable();
 
     // Disable the Global Interrupts
     //INTERRUPT_GlobalInterruptDisable();

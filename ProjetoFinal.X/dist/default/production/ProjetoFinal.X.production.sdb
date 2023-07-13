@@ -42,19 +42,21 @@ SPI1_DEFAULT 0
 [v i1_chegadaS2 chegadaS2 `(v  1 e 1 0 ]
 "144
 [v _chegadaS3 chegadaS3 `(v  1 e 1 0 ]
+[v i1_chegadaS3 chegadaS3 `(v  1 e 1 0 ]
 "167
 [v _chegadaS4 chegadaS4 `(v  1 e 1 0 ]
+[v i1_chegadaS4 chegadaS4 `(v  1 e 1 0 ]
 "190
 [v _main main `(v  1 e 1 0 ]
 "67 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
-"58 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/cmp1.c
+"59 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/cmp1.c
 [v _CMP1_Initialize CMP1_Initialize `(v  1 e 1 0 ]
-"85
+"86
 [v _CMP1_ISR CMP1_ISR `(v  1 e 1 0 ]
-"58 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/cmp2.c
+"59 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/cmp2.c
 [v _CMP2_Initialize CMP2_Initialize `(v  1 e 1 0 ]
-"85
+"86
 [v _CMP2_ISR CMP2_ISR `(v  1 e 1 0 ]
 "66 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/eusart.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
@@ -141,7 +143,7 @@ SPI1_DEFAULT 0
 [v _destinoSub destinoSub `uc  1 e 1 0 ]
 "32
 [v _destinoDesc destinoDesc `uc  1 e 1 0 ]
-[s S307 . 1 `uc 1 IOCIF 1 0 :1:0 
+[s S325 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 IOCIE 1 0 :1:3 
@@ -151,14 +153,14 @@ SPI1_DEFAULT 0
 `uc 1 GIE 1 0 :1:7 
 ]
 "375 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
-[s S316 . 1 `uc 1 . 1 0 :2:0 
+[s S334 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 T0IE 1 0 :1:5 
 ]
-[u S321 . 1 `S307 1 . 1 0 `S316 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES321  1 e 1 @11 ]
-[s S618 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S339 . 1 `S325 1 . 1 0 `S334 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES339  1 e 1 @11 ]
+[s S636 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSP1IF 1 0 :1:3 
@@ -168,8 +170,8 @@ SPI1_DEFAULT 0
 `uc 1 TMR1GIF 1 0 :1:7 
 ]
 "571
-[u S627 . 1 `S618 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES627  1 e 1 @17 ]
+[u S645 . 1 `S636 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES645  1 e 1 @17 ]
 [s S85 . 1 `uc 1 CCP2IF 1 0 :1:0 
 `uc 1 . 1 0 :2:1 
 `uc 1 BCL1IF 1 0 :1:3 
@@ -189,7 +191,7 @@ SPI1_DEFAULT 0
 [v _TMR1H TMR1H `VEuc  1 e 1 @23 ]
 "800
 [v _T1CON T1CON `VEuc  1 e 1 @24 ]
-[s S994 . 1 `uc 1 TMR1ON 1 0 :1:0 
+[s S1012 . 1 `uc 1 TMR1ON 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 nT1SYNC 1 0 :1:2 
 `uc 1 T1OSCEN 1 0 :1:3 
@@ -199,15 +201,15 @@ SPI1_DEFAULT 0
 `uc 1 TMR1CS1 1 0 :1:7 
 ]
 "822
-[s S1003 . 1 `uc 1 . 1 0 :4:0 
+[s S1021 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 T1CKPS 1 0 :2:4 
 `uc 1 TMR1CS 1 0 :2:6 
 ]
-[u S1007 . 1 `S994 1 . 1 0 `S1003 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES1007  1 e 1 @24 ]
+[u S1025 . 1 `S1012 1 . 1 0 `S1021 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES1025  1 e 1 @24 ]
 "872
 [v _T1GCON T1GCON `VEuc  1 e 1 @25 ]
-[s S1024 . 1 `uc 1 T1GSS0 1 0 :1:0 
+[s S1042 . 1 `uc 1 T1GSS0 1 0 :1:0 
 `uc 1 T1GSS1 1 0 :1:1 
 `uc 1 T1GVAL 1 0 :1:2 
 `uc 1 T1GGO 1 0 :1:3 
@@ -217,17 +219,17 @@ SPI1_DEFAULT 0
 `uc 1 TMR1GE 1 0 :1:7 
 ]
 "892
-[s S1033 . 1 `uc 1 T1GSS 1 0 :2:0 
+[s S1051 . 1 `uc 1 T1GSS 1 0 :2:0 
 ]
-[u S1035 . 1 `S1024 1 . 1 0 `S1033 1 . 1 0 ]
-[v _T1GCONbits T1GCONbits `VES1035  1 e 1 @25 ]
+[u S1053 . 1 `S1042 1 . 1 0 `S1051 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES1053  1 e 1 @25 ]
 "942
 [v _TMR2 TMR2 `VEuc  1 e 1 @26 ]
 "962
 [v _PR2 PR2 `VEuc  1 e 1 @27 ]
 "982
 [v _T2CON T2CON `VEuc  1 e 1 @28 ]
-[s S1109 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+[s S1127 . 1 `uc 1 T2CKPS0 1 0 :1:0 
 `uc 1 T2CKPS1 1 0 :1:1 
 `uc 1 TMR2ON 1 0 :1:2 
 `uc 1 T2OUTPS0 1 0 :1:3 
@@ -236,17 +238,17 @@ SPI1_DEFAULT 0
 `uc 1 T2OUTPS3 1 0 :1:6 
 ]
 "1003
-[s S1117 . 1 `uc 1 T2CKPS 1 0 :2:0 
+[s S1135 . 1 `uc 1 T2CKPS 1 0 :2:0 
 `uc 1 . 1 0 :1:2 
 `uc 1 T2OUTPS 1 0 :4:3 
 ]
-[u S1121 . 1 `S1109 1 . 1 0 `S1117 1 . 1 0 ]
-[v _T2CONbits T2CONbits `VES1121  1 e 1 @28 ]
+[u S1139 . 1 `S1127 1 . 1 0 `S1135 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES1139  1 e 1 @28 ]
 "1153
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1215
 [v _TRISB TRISB `VEuc  1 e 1 @141 ]
-[s S749 . 1 `uc 1 TRISB0 1 0 :1:0 
+[s S767 . 1 `uc 1 TRISB0 1 0 :1:0 
 `uc 1 TRISB1 1 0 :1:1 
 `uc 1 TRISB2 1 0 :1:2 
 `uc 1 TRISB3 1 0 :1:3 
@@ -256,9 +258,9 @@ SPI1_DEFAULT 0
 `uc 1 TRISB7 1 0 :1:7 
 ]
 "1232
-[u S758 . 1 `S749 1 . 1 0 ]
-[v _TRISBbits TRISBbits `VES758  1 e 1 @141 ]
-[s S902 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[u S776 . 1 `S767 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES776  1 e 1 @141 ]
+[s S920 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 SSP1IE 1 0 :1:3 
@@ -268,8 +270,8 @@ SPI1_DEFAULT 0
 `uc 1 TMR1GIE 1 0 :1:7 
 ]
 "1294
-[u S911 . 1 `S902 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES911  1 e 1 @145 ]
+[u S929 . 1 `S920 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES929  1 e 1 @145 ]
 [s S64 . 1 `uc 1 CCP2IE 1 0 :1:0 
 `uc 1 . 1 0 :2:1 
 `uc 1 BCL1IE 1 0 :1:3 
@@ -283,7 +285,7 @@ SPI1_DEFAULT 0
 [v _PIE2bits PIE2bits `VES72  1 e 1 @146 ]
 "1456
 [v _OPTION_REG OPTION_REG `VEuc  1 e 1 @149 ]
-[s S175 . 1 `uc 1 PS0 1 0 :1:0 
+[s S193 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
 `uc 1 PSA 1 0 :1:3 
@@ -293,13 +295,13 @@ SPI1_DEFAULT 0
 `uc 1 nWPUEN 1 0 :1:7 
 ]
 "1479
-[s S184 . 1 `uc 1 PS 1 0 :3:0 
+[s S202 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 . 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
 ]
-[u S189 . 1 `S175 1 . 1 0 `S184 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES189  1 e 1 @149 ]
+[u S207 . 1 `S193 1 . 1 0 `S202 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES207  1 e 1 @149 ]
 "1590
 [v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
 "1649
@@ -312,7 +314,7 @@ SPI1_DEFAULT 0
 [v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
 "1888
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
-[s S472 . 1 `uc 1 ADON 1 0 :1:0 
+[s S490 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -321,22 +323,22 @@ SPI1_DEFAULT 0
 `uc 1 CHS4 1 0 :1:6 
 ]
 "1913
-[s S480 . 1 `uc 1 . 1 0 :1:0 
+[s S498 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADGO 1 0 :1:1 
 `uc 1 CHS 1 0 :5:2 
 ]
-[s S484 . 1 `uc 1 . 1 0 :1:0 
+[s S502 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 ]
-[u S487 . 1 `S472 1 . 1 0 `S480 1 . 1 0 `S484 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES487  1 e 1 @157 ]
+[u S505 . 1 `S490 1 . 1 0 `S498 1 . 1 0 `S502 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES505  1 e 1 @157 ]
 "1968
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
 "2040
 [v _LATA LATA `VEuc  1 e 1 @268 ]
 "2097
 [v _LATB LATB `VEuc  1 e 1 @269 ]
-[s S1208 . 1 `uc 1 LATB0 1 0 :1:0 
+[s S1226 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -346,8 +348,8 @@ SPI1_DEFAULT 0
 `uc 1 LATB7 1 0 :1:7 
 ]
 "2114
-[u S1217 . 1 `S1208 1 . 1 0 ]
-[v _LATBbits LATBbits `VES1217  1 e 1 @269 ]
+[u S1235 . 1 `S1226 1 . 1 0 ]
+[v _LATBbits LATBbits `VES1235  1 e 1 @269 ]
 "2159
 [v _CM1CON0 CM1CON0 `VEuc  1 e 1 @273 ]
 "2216
@@ -366,7 +368,7 @@ SPI1_DEFAULT 0
 [v _BORCON BORCON `VEuc  1 e 1 @278 ]
 "2458
 [v _FVRCON FVRCON `VEuc  1 e 1 @279 ]
-[s S534 . 1 `uc 1 ADFVR0 1 0 :1:0 
+[s S552 . 1 `uc 1 ADFVR0 1 0 :1:0 
 `uc 1 ADFVR1 1 0 :1:1 
 `uc 1 CDAFVR0 1 0 :1:2 
 `uc 1 CDAFVR1 1 0 :1:3 
@@ -376,11 +378,11 @@ SPI1_DEFAULT 0
 `uc 1 FVREN 1 0 :1:7 
 ]
 "2479
-[s S543 . 1 `uc 1 ADFVR 1 0 :2:0 
+[s S561 . 1 `uc 1 ADFVR 1 0 :2:0 
 `uc 1 CDAFVR 1 0 :2:2 
 ]
-[u S546 . 1 `S534 1 . 1 0 `S543 1 . 1 0 ]
-[v _FVRCONbits FVRCONbits `VES546  1 e 1 @279 ]
+[u S564 . 1 `S552 1 . 1 0 `S561 1 . 1 0 ]
+[v _FVRCONbits FVRCONbits `VES564  1 e 1 @279 ]
 "2780
 [v _APFCON0 APFCON0 `VEuc  1 e 1 @285 ]
 "2842
@@ -399,7 +401,7 @@ SPI1_DEFAULT 0
 [v _SPBRGH SPBRGH `VEuc  1 e 1 @412 ]
 "3312
 [v _RCSTA RCSTA `VEuc  1 e 1 @413 ]
-[s S660 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S678 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -409,11 +411,11 @@ SPI1_DEFAULT 0
 `uc 1 SPEN 1 0 :1:7 
 ]
 "3329
-[u S669 . 1 `S660 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES669  1 e 1 @413 ]
+[u S687 . 1 `S678 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES687  1 e 1 @413 ]
 "3374
 [v _TXSTA TXSTA `VEuc  1 e 1 @414 ]
-[s S639 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S657 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -423,8 +425,8 @@ SPI1_DEFAULT 0
 `uc 1 CSRC 1 0 :1:7 
 ]
 "3391
-[u S648 . 1 `S639 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES648  1 e 1 @414 ]
+[u S666 . 1 `S657 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES666  1 e 1 @414 ]
 "3436
 [v _BAUDCON BAUDCON `VEuc  1 e 1 @415 ]
 "3488
@@ -439,7 +441,7 @@ SPI1_DEFAULT 0
 [v _SSP1STAT SSP1STAT `VEuc  1 e 1 @532 ]
 "3823
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
-[s S770 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S788 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
@@ -449,10 +451,10 @@ SPI1_DEFAULT 0
 `uc 1 WCOL 1 0 :1:7 
 ]
 "3852
-[s S779 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S797 . 1 `uc 1 SSPM 1 0 :4:0 
 ]
-[u S781 . 1 `S770 1 . 1 0 `S779 1 . 1 0 ]
-[v _SSP1CON1bits SSP1CON1bits `VES781  1 e 1 @533 ]
+[u S799 . 1 `S788 1 . 1 0 `S797 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES799  1 e 1 @533 ]
 "4027
 [v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @534 ]
 [s S25 . 1 `uc 1 C1TSEL0 1 0 :1:0 
@@ -478,7 +480,7 @@ SPI1_DEFAULT 0
 [v _CCPR3H CCPR3H `VEuc  1 e 1 @786 ]
 "5618
 [v _CCP3CON CCP3CON `VEuc  1 e 1 @787 ]
-[s S261 . 1 `uc 1 IOCBP0 1 0 :1:0 
+[s S279 . 1 `uc 1 IOCBP0 1 0 :1:0 
 `uc 1 IOCBP1 1 0 :1:1 
 `uc 1 IOCBP2 1 0 :1:2 
 `uc 1 IOCBP3 1 0 :1:3 
@@ -488,11 +490,11 @@ SPI1_DEFAULT 0
 `uc 1 IOCBP7 1 0 :1:7 
 ]
 "5813
-[s S270 . 1 `uc 1 IOCBP 1 0 :8:0 
+[s S288 . 1 `uc 1 IOCBP 1 0 :8:0 
 ]
-[u S272 . 1 `S261 1 . 1 0 `S270 1 . 1 0 ]
-[v _IOCBPbits IOCBPbits `VES272  1 e 1 @916 ]
-[s S235 . 1 `uc 1 IOCBN0 1 0 :1:0 
+[u S290 . 1 `S279 1 . 1 0 `S288 1 . 1 0 ]
+[v _IOCBPbits IOCBPbits `VES290  1 e 1 @916 ]
+[s S253 . 1 `uc 1 IOCBN0 1 0 :1:0 
 `uc 1 IOCBN1 1 0 :1:1 
 `uc 1 IOCBN2 1 0 :1:2 
 `uc 1 IOCBN3 1 0 :1:3 
@@ -502,11 +504,11 @@ SPI1_DEFAULT 0
 `uc 1 IOCBN7 1 0 :1:7 
 ]
 "5883
-[s S244 . 1 `uc 1 IOCBN 1 0 :8:0 
+[s S262 . 1 `uc 1 IOCBN 1 0 :8:0 
 ]
-[u S246 . 1 `S235 1 . 1 0 `S244 1 . 1 0 ]
-[v _IOCBNbits IOCBNbits `VES246  1 e 1 @917 ]
-[s S209 . 1 `uc 1 IOCBF0 1 0 :1:0 
+[u S264 . 1 `S253 1 . 1 0 `S262 1 . 1 0 ]
+[v _IOCBNbits IOCBNbits `VES264  1 e 1 @917 ]
+[s S227 . 1 `uc 1 IOCBF0 1 0 :1:0 
 `uc 1 IOCBF1 1 0 :1:1 
 `uc 1 IOCBF2 1 0 :1:2 
 `uc 1 IOCBF3 1 0 :1:3 
@@ -516,18 +518,18 @@ SPI1_DEFAULT 0
 `uc 1 IOCBF7 1 0 :1:7 
 ]
 "5953
-[s S218 . 1 `uc 1 IOCBF 1 0 :8:0 
+[s S236 . 1 `uc 1 IOCBF 1 0 :8:0 
 ]
-[u S220 . 1 `S209 1 . 1 0 `S218 1 . 1 0 ]
-[v _IOCBFbits IOCBFbits `VES220  1 e 1 @918 ]
-[s S572 . 1 `uc 1 perr 1 0 :1:0 
+[u S238 . 1 `S227 1 . 1 0 `S236 1 . 1 0 ]
+[v _IOCBFbits IOCBFbits `VES238  1 e 1 @918 ]
+[s S590 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
 `uc 1 oerr 1 0 :1:2 
 `uc 1 reserved 1 0 :5:3 
 ]
 "52 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/eusart.c
-[u S577 . 1 `S572 1 . 1 0 `uc 1 status 1 0 ]
-[v _eusartRxLastError eusartRxLastError `VES577  1 e 1 0 ]
+[u S595 . 1 `S590 1 . 1 0 `uc 1 status 1 0 ]
+[v _eusartRxLastError eusartRxLastError `VES595  1 e 1 0 ]
 "58
 [v _EUSART_FramingErrorHandler EUSART_FramingErrorHandler `*.37(v  1 e 2 0 ]
 "59
@@ -538,9 +540,9 @@ SPI1_DEFAULT 0
 [v _IOCBF0_InterruptHandler IOCBF0_InterruptHandler `*.37(v  1 e 2 0 ]
 "55
 [v _IOCBF3_InterruptHandler IOCBF3_InterruptHandler `*.37(v  1 e 2 0 ]
-[s S741 . 4 `uc 1 con1 1 0 `uc 1 stat 1 1 `uc 1 add 1 2 `uc 1 operation 1 3 ]
+[s S759 . 4 `uc 1 con1 1 0 `uc 1 stat 1 1 `uc 1 add 1 2 `uc 1 operation 1 3 ]
 "58 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/spi1.c
-[v _spi1_configuration spi1_configuration `DC[1]S741  1 s 4 spi1_configuration ]
+[v _spi1_configuration spi1_configuration `DC[1]S759  1 s 4 spi1_configuration ]
 "58 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/tmr0.c
 [v _timer0ReloadVal timer0ReloadVal `VEuc  1 e 1 0 ]
 "59
@@ -560,7 +562,7 @@ SPI1_DEFAULT 0
 "89
 [v initMatrix@j j `uc  1 a 1 16 ]
 "88
-[v initMatrix@i_1285 i `uc  1 a 1 15 ]
+[v initMatrix@i_1303 i `uc  1 a 1 15 ]
 "85
 [v initMatrix@i i `uc  1 a 1 14 ]
 "83
@@ -717,15 +719,15 @@ SPI1_DEFAULT 0
 [v EUSART_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
 "167
 } 0
-"58 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/cmp2.c
+"59 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/cmp2.c
 [v _CMP2_Initialize CMP2_Initialize `(v  1 e 1 0 ]
 {
-"78
+"79
 } 0
-"58 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/cmp1.c
+"59 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/cmp1.c
 [v _CMP1_Initialize CMP1_Initialize `(v  1 e 1 0 ]
 {
-"78
+"79
 } 0
 "67 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
@@ -809,6 +811,36 @@ SPI1_DEFAULT 0
 {
 "142
 } 0
+"136 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/pin_manager.c
+[v _IOCBF0_ISR IOCBF0_ISR `(v  1 e 1 0 ]
+{
+"146
+} 0
+"158
+[v _IOCBF0_DefaultInterruptHandler IOCBF0_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"161
+} 0
+"86 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/cmp2.c
+[v _CMP2_ISR CMP2_ISR `(v  1 e 1 0 ]
+{
+"91
+} 0
+"167 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+[v i1_chegadaS4 chegadaS4 `(v  1 e 1 0 ]
+{
+"188
+} 0
+"86 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/cmp1.c
+[v _CMP1_ISR CMP1_ISR `(v  1 e 1 0 ]
+{
+"91
+} 0
+"144 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+[v i1_chegadaS3 chegadaS3 `(v  1 e 1 0 ]
+{
+"165
+} 0
 "62
 [v i1_matrixUpdate matrixUpdate `(v  1 e 1 0 ]
 {
@@ -839,24 +871,4 @@ SPI1_DEFAULT 0
 "102
 [v i1SPI1_ExchangeBlock@block block `*.4v  1 a 1 3 ]
 "110
-} 0
-"136 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/pin_manager.c
-[v _IOCBF0_ISR IOCBF0_ISR `(v  1 e 1 0 ]
-{
-"146
-} 0
-"158
-[v _IOCBF0_DefaultInterruptHandler IOCBF0_DefaultInterruptHandler `(v  1 e 1 0 ]
-{
-"161
-} 0
-"85 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/cmp2.c
-[v _CMP2_ISR CMP2_ISR `(v  1 e 1 0 ]
-{
-"89
-} 0
-"85 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/cmp1.c
-[v _CMP1_ISR CMP1_ISR `(v  1 e 1 0 ]
-{
-"89
 } 0

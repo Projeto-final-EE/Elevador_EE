@@ -51,7 +51,6 @@
 
 #include <xc.h>
 #include "cmp1.h"
-#include "main.c"
 /**
   Section: CMP1 APIs
 */
@@ -87,7 +86,6 @@ void CMP1_ISR(void)
 {
     // clear the CMP1 interrupt flag
     PIR2bits.C1IF = 0;
-    chegadaS3();
 }
 
 /**

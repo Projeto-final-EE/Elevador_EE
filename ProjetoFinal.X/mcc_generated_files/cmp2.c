@@ -51,7 +51,6 @@
 
 #include <xc.h>
 #include "cmp2.h"
-#include "main.c"
 /**
   Section: CMP2 APIs
 */
@@ -87,7 +86,6 @@ void CMP2_ISR(void)
 {
     // clear the CMP2 interrupt flag
     PIR2bits.C2IF = 0;
-    chegadaS4();
 }
 
 /**

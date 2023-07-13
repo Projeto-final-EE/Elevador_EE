@@ -14,7 +14,7 @@ channel_FVR 31
 [e E355 . `uc
 SPI1_DEFAULT 0
 ]
-"216 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+"207 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
 [e E2816 . `uc
 SPI1_DEFAULT 0
 ]
@@ -26,25 +26,25 @@ SPI1_DEFAULT 0
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"64 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+"54 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
 [v _txSpi txSpi `(v  1 e 1 0 ]
 [v i1_txSpi txSpi `(v  1 e 1 0 ]
-"72
+"62
 [v _matrixUpdate matrixUpdate `(v  1 e 1 0 ]
 [v i1_matrixUpdate matrixUpdate `(v  1 e 1 0 ]
-"92
+"82
 [v _initMatrix initMatrix `(v  1 e 1 0 ]
-"110
+"101
 [v _chegadaS1 chegadaS1 `(v  1 e 1 0 ]
 [v i1_chegadaS1 chegadaS1 `(v  1 e 1 0 ]
-"130
+"121
 [v _chegadaS2 chegadaS2 `(v  1 e 1 0 ]
 [v i1_chegadaS2 chegadaS2 `(v  1 e 1 0 ]
-"153
+"144
 [v _chegadaS3 chegadaS3 `(v  1 e 1 0 ]
-"176
+"167
 [v _chegadaS4 chegadaS4 `(v  1 e 1 0 ]
-"199
+"190
 [v _main main `(v  1 e 1 0 ]
 "67 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
@@ -131,6 +131,16 @@ SPI1_DEFAULT 0
 [v _TMR1_DefaultInterruptHandler TMR1_DefaultInterruptHandler `(v  1 e 1 0 ]
 "62 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+"18 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X/main.h
+[v _matrix_conf matrix_conf `DC[12]uc  1 e 12 0 ]
+"29
+[v _subindo subindo `a  1 e 1 0 ]
+"30
+[v _MatrixLed MatrixLed `[8]uc  1 e 8 0 ]
+"31
+[v _destinoSub destinoSub `uc  1 e 1 0 ]
+"32
+[v _destinoDesc destinoDesc `uc  1 e 1 0 ]
 [s S307 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
@@ -510,16 +520,6 @@ SPI1_DEFAULT 0
 ]
 [u S220 . 1 `S209 1 . 1 0 `S218 1 . 1 0 ]
 [v _IOCBFbits IOCBFbits `VES220  1 e 1 @918 ]
-"49 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-[v _matrix_conf matrix_conf `DC[12]uc  1 e 12 0 ]
-"60
-[v _subindo subindo `a  1 e 1 0 ]
-"61
-[v _MatrixLed MatrixLed `[8]uc  1 e 8 0 ]
-"62
-[v _destinoSub destinoSub `uc  1 e 1 0 ]
-"63
-[v _destinoDesc destinoDesc `uc  1 e 1 0 ]
 [s S572 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
 `uc 1 oerr 1 0 :1:2 
@@ -549,63 +549,63 @@ SPI1_DEFAULT 0
 [v _timer1ReloadVal timer1ReloadVal `VEus  1 e 2 0 ]
 "58
 [v _TMR1_InterruptHandler TMR1_InterruptHandler `*.37(v  1 e 2 0 ]
-"199 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+"190 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"242
+"233
 } 0
-"92
+"82
 [v _initMatrix initMatrix `(v  1 e 1 0 ]
 {
-"99
+"89
 [v initMatrix@j j `uc  1 a 1 16 ]
-"98
+"88
 [v initMatrix@i_1285 i `uc  1 a 1 15 ]
-"95
+"85
 [v initMatrix@i i `uc  1 a 1 14 ]
-"93
+"83
 [v initMatrix@data data `[4]uc  1 a 4 9 ]
-"94
+"84
 [v initMatrix@k k `uc  1 a 1 13 ]
-"109
+"99
 } 0
-"176
+"167
 [v _chegadaS4 chegadaS4 `(v  1 e 1 0 ]
 {
-"197
+"188
 } 0
-"153
+"144
 [v _chegadaS3 chegadaS3 `(v  1 e 1 0 ]
 {
-"174
+"165
 } 0
-"130
+"121
 [v _chegadaS2 chegadaS2 `(v  1 e 1 0 ]
 {
-"151
+"142
 } 0
-"110
+"101
 [v _chegadaS1 chegadaS1 `(v  1 e 1 0 ]
 {
-"128
+"119
 } 0
-"72
+"62
 [v _matrixUpdate matrixUpdate `(v  1 e 1 0 ]
 {
-"75
+"65
 [v matrixUpdate@i i `uc  1 a 1 11 ]
-"73
+"63
 [v matrixUpdate@data data `[2]uc  1 a 2 9 ]
-"90
+"80
 } 0
-"64
+"54
 [v _txSpi txSpi `(v  1 e 1 0 ]
 {
 [v txSpi@data data `*.4uc  1 a 1 wreg ]
 [v txSpi@data data `*.4uc  1 a 1 wreg ]
 [v txSpi@dataSize dataSize `ui  1 p 2 5 ]
 [v txSpi@data data `*.4uc  1 a 1 7 ]
-"70
+"60
 } 0
 "100 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/spi1.c
 [v _SPI1_ExchangeBlock SPI1_ExchangeBlock `(v  1 e 1 0 ]
@@ -794,38 +794,38 @@ SPI1_DEFAULT 0
 {
 "176
 } 0
-"110 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+"101 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
 [v i1_chegadaS1 chegadaS1 `(v  1 e 1 0 ]
 {
-"128
+"119
 } 0
 "188 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/pin_manager.c
 [v _IOCBF3_DefaultInterruptHandler IOCBF3_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
 "191
 } 0
-"130 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+"121 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
 [v i1_chegadaS2 chegadaS2 `(v  1 e 1 0 ]
 {
-"151
+"142
 } 0
-"72
+"62
 [v i1_matrixUpdate matrixUpdate `(v  1 e 1 0 ]
 {
-"73
+"63
 [v i1matrixUpdate@data data `[2]uc  1 a 2 9 ]
-"75
+"65
 [v i1matrixUpdate@i i `uc  1 a 1 11 ]
-"90
+"80
 } 0
-"64
+"54
 [v i1_txSpi txSpi `(v  1 e 1 0 ]
 {
 [v i1txSpi@data data `*.4uc  1 a 1 wreg ]
 [v i1txSpi@data data `*.4uc  1 a 1 wreg ]
 [v i1txSpi@dataSize dataSize `ui  1 p 2 5 ]
 [v i1txSpi@data data `*.4uc  1 a 1 7 ]
-"70
+"60
 } 0
 "100 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/spi1.c
 [v i1_SPI1_ExchangeBlock SPI1_ExchangeBlock `(v  1 e 1 0 ]

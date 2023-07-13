@@ -75,7 +75,7 @@ idataBANK0 CODE 0 55E 55E 1 2 1
 dataBANK0 BANK0 1 53 53 1 1 1
 clrtext CODE 0 51C 51C 6 2 1
 config CONFIG 4 8007 8007 2 2 1
-$C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.o
+$C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.o
 idloc IDLOC 5 8000 8000 4 2 1
 reset_vec CODE 0 0 0 2 2 1
 end_init CODE 0 49 49 2 2 1
@@ -155,20 +155,20 @@ STRING 563-FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\ProjetoFinal.X.production.o
-4B cinit CODE >5150:C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.s
-4B cinit CODE >5153:C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.s
-4B cinit CODE >5191:C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.s
-4E cinit CODE >5192:C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.s
-4F cinit CODE >5209:C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.s
-50 cinit CODE >5210:C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.s
-51 cinit CODE >5211:C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.s
-52 cinit CODE >5212:C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.s
-53 cinit CODE >5213:C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.s
-54 cinit CODE >5214:C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.s
-57 cinit CODE >5220:C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.s
-57 cinit CODE >5222:C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.s
-58 cinit CODE >5223:C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.s
-59 cinit CODE >5224:C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.s
+4B cinit CODE >5150:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.s
+4B cinit CODE >5153:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.s
+4B cinit CODE >5191:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.s
+4E cinit CODE >5192:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.s
+4F cinit CODE >5209:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.s
+50 cinit CODE >5210:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.s
+51 cinit CODE >5211:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.s
+52 cinit CODE >5212:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.s
+53 cinit CODE >5213:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.s
+54 cinit CODE >5214:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.s
+57 cinit CODE >5220:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.s
+57 cinit CODE >5222:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.s
+58 cinit CODE >5223:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.s
+59 cinit CODE >5224:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.s
 4 intentry CODE >52:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/interrupt_manager.c
 6 intentry CODE >55:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/interrupt_manager.c
 E intentry CODE >57:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/interrupt_manager.c
@@ -205,57 +205,57 @@ E intentry CODE >57:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal
 369 text46 CODE >103:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/spi1.c
 36E text46 CODE >103:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/spi1.c
 375 text46 CODE >110:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/spi1.c
-498 text45 CODE >64:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-499 text45 CODE >65:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-49B text45 CODE >66:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-4A3 text45 CODE >67:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-4A5 text45 CODE >70:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-3E5 text44 CODE >72:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-3E5 text44 CODE >75:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-3E9 text44 CODE >76:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-3ED text44 CODE >77:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-3F5 text44 CODE >78:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-3FD text44 CODE >79:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-404 text44 CODE >90:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-234 text43 CODE >130:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-234 text43 CODE >132:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-236 text43 CODE >133:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-23A text43 CODE >134:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-23E text43 CODE >135:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-240 text43 CODE >136:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-241 text43 CODE >137:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-246 text43 CODE >138:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-24A text43 CODE >139:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-24E text43 CODE >140:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-252 text43 CODE >141:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-257 text43 CODE >142:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-258 text43 CODE >143:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-25C text43 CODE >144:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-260 text43 CODE >145:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-264 text43 CODE >146:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-269 text43 CODE >148:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-26E text43 CODE >149:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-273 text43 CODE >150:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-276 text43 CODE >151:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+498 text45 CODE >54:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+499 text45 CODE >55:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+49B text45 CODE >56:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+4A3 text45 CODE >57:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+4A5 text45 CODE >60:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+3E5 text44 CODE >62:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+3E5 text44 CODE >65:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+3E9 text44 CODE >66:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+3ED text44 CODE >67:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+3F5 text44 CODE >68:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+3FD text44 CODE >69:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+404 text44 CODE >80:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+234 text43 CODE >121:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+234 text43 CODE >123:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+236 text43 CODE >124:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+23A text43 CODE >125:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+23E text43 CODE >126:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+240 text43 CODE >127:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+241 text43 CODE >128:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+246 text43 CODE >129:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+24A text43 CODE >130:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+24E text43 CODE >131:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+252 text43 CODE >132:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+257 text43 CODE >133:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+258 text43 CODE >134:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+25C text43 CODE >135:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+260 text43 CODE >136:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+264 text43 CODE >137:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+269 text43 CODE >139:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+26E text43 CODE >140:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+273 text43 CODE >141:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+276 text43 CODE >142:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
 561 text42 CODE >188:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/pin_manager.c
 561 text42 CODE >191:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/pin_manager.c
-2B4 text41 CODE >110:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-2B4 text41 CODE >112:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-2B9 text41 CODE >113:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-2BD text41 CODE >114:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-2C1 text41 CODE >115:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-2C5 text41 CODE >116:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-2C6 text41 CODE >117:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-2CB text41 CODE >118:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-2CF text41 CODE >119:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-2D3 text41 CODE >120:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-2D7 text41 CODE >121:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-2D8 text41 CODE >122:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-2DC text41 CODE >123:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-2E0 text41 CODE >124:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-2E4 text41 CODE >125:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-2E9 text41 CODE >127:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-2EC text41 CODE >128:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+2B4 text41 CODE >101:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+2B4 text41 CODE >103:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+2B9 text41 CODE >104:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+2BD text41 CODE >105:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+2C1 text41 CODE >106:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+2C5 text41 CODE >107:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+2C6 text41 CODE >108:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+2CB text41 CODE >109:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+2CF text41 CODE >110:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+2D3 text41 CODE >111:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+2D7 text41 CODE >112:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+2D8 text41 CODE >113:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+2DC text41 CODE >114:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+2E0 text41 CODE >115:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+2E4 text41 CODE >116:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+2E9 text41 CODE >118:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+2EC text41 CODE >119:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
 47A text40 CODE >166:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/pin_manager.c
 47A text40 CODE >171:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/pin_manager.c
 481 text40 CODE >173:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/pin_manager.c
@@ -459,139 +459,139 @@ ED text30 CODE >80:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.
 33E text8 CODE >103:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/spi1.c
 343 text8 CODE >103:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/spi1.c
 34A text8 CODE >110:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/spi1.c
-46A text7 CODE >64:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-46C text7 CODE >65:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-46E text7 CODE >66:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-477 text7 CODE >67:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-479 text7 CODE >70:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-3C3 text6 CODE >72:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-3C3 text6 CODE >75:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-3C8 text6 CODE >76:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-3CC text6 CODE >77:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-3D4 text6 CODE >78:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-3DC text6 CODE >79:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-3E4 text6 CODE >90:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-277 text5 CODE >110:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-27B text5 CODE >112:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-280 text5 CODE >113:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-284 text5 CODE >114:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-288 text5 CODE >115:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-28C text5 CODE >116:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-28D text5 CODE >117:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-292 text5 CODE >118:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-296 text5 CODE >119:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-29A text5 CODE >120:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-29E text5 CODE >121:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-29F text5 CODE >122:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-2A3 text5 CODE >123:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-2A7 text5 CODE >124:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-2AB text5 CODE >125:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-2B0 text5 CODE >127:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-2B3 text5 CODE >128:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1ED text4 CODE >130:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1F1 text4 CODE >132:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1F3 text4 CODE >133:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1F7 text4 CODE >134:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1FB text4 CODE >135:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1FD text4 CODE >136:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1FE text4 CODE >137:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-203 text4 CODE >138:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-207 text4 CODE >139:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-20B text4 CODE >140:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-20F text4 CODE >141:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-214 text4 CODE >142:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-215 text4 CODE >143:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-219 text4 CODE >144:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-21D text4 CODE >145:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-221 text4 CODE >146:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-226 text4 CODE >148:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-22B text4 CODE >149:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-230 text4 CODE >150:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-233 text4 CODE >151:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1A5 text3 CODE >153:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1A5 text3 CODE >155:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1AA text3 CODE >156:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1AE text3 CODE >157:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1B2 text3 CODE >158:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1B6 text3 CODE >159:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1B7 text3 CODE >160:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1BC text3 CODE >161:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1C0 text3 CODE >162:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1C4 text3 CODE >163:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1C8 text3 CODE >164:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1CD text3 CODE >165:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1CE text3 CODE >166:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1D2 text3 CODE >167:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1D6 text3 CODE >168:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1DA text3 CODE >169:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1DF text3 CODE >171:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1E4 text3 CODE >172:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1E9 text3 CODE >173:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1EC text3 CODE >174:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-15D text2 CODE >176:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-15D text2 CODE >178:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-162 text2 CODE >179:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-166 text2 CODE >180:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-16A text2 CODE >181:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-16E text2 CODE >182:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-16F text2 CODE >183:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-174 text2 CODE >184:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-178 text2 CODE >185:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-17C text2 CODE >186:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-180 text2 CODE >187:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-185 text2 CODE >188:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-186 text2 CODE >189:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-18A text2 CODE >190:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-18E text2 CODE >191:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-192 text2 CODE >192:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-197 text2 CODE >194:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-19C text2 CODE >195:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1A1 text2 CODE >196:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-1A4 text2 CODE >197:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-5B text1 CODE >92:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-5B text1 CODE >94:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-5D text1 CODE >95:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-5E text1 CODE >96:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-63 text1 CODE >97:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-69 text1 CODE >97:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-6D text1 CODE >98:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-6E text1 CODE >99:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-6F text1 CODE >100:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-73 text1 CODE >100:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-7E text1 CODE >101:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-82 text1 CODE >101:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-8E text1 CODE >102:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-95 text1 CODE >102:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-99 text1 CODE >103:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-9E text1 CODE >104:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-A6 text1 CODE >108:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-AD text1 CODE >108:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-B1 text1 CODE >109:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-109 maintext CODE >199:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-109 maintext CODE >202:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-10C maintext CODE >210:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-114 maintext CODE >211:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-11C maintext CODE >215:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-11E maintext CODE >216:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-122 maintext CODE >217:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-125 maintext CODE >220:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-126 maintext CODE >223:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-127 maintext CODE >231:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-127 maintext CODE >234:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-12A maintext CODE >235:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-137 maintext CODE >236:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-13A maintext CODE >237:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-147 maintext CODE >238:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-14A maintext CODE >239:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-157 maintext CODE >240:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-51C clrtext CODE >5198:C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.s
-51C clrtext CODE >5199:C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.s
-51D clrtext CODE >5200:C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.s
-51D clrtext CODE >5201:C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.s
-51E clrtext CODE >5202:C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.s
-51F clrtext CODE >5203:C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.s
-520 clrtext CODE >5204:C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.s
-521 clrtext CODE >5205:C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.s
+46A text7 CODE >54:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+46C text7 CODE >55:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+46E text7 CODE >56:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+477 text7 CODE >57:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+479 text7 CODE >60:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+3C3 text6 CODE >62:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+3C3 text6 CODE >65:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+3C8 text6 CODE >66:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+3CC text6 CODE >67:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+3D4 text6 CODE >68:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+3DC text6 CODE >69:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+3E4 text6 CODE >80:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+277 text5 CODE >101:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+27B text5 CODE >103:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+280 text5 CODE >104:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+284 text5 CODE >105:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+288 text5 CODE >106:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+28C text5 CODE >107:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+28D text5 CODE >108:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+292 text5 CODE >109:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+296 text5 CODE >110:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+29A text5 CODE >111:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+29E text5 CODE >112:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+29F text5 CODE >113:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+2A3 text5 CODE >114:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+2A7 text5 CODE >115:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+2AB text5 CODE >116:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+2B0 text5 CODE >118:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+2B3 text5 CODE >119:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1ED text4 CODE >121:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1F1 text4 CODE >123:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1F3 text4 CODE >124:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1F7 text4 CODE >125:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1FB text4 CODE >126:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1FD text4 CODE >127:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1FE text4 CODE >128:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+203 text4 CODE >129:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+207 text4 CODE >130:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+20B text4 CODE >131:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+20F text4 CODE >132:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+214 text4 CODE >133:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+215 text4 CODE >134:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+219 text4 CODE >135:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+21D text4 CODE >136:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+221 text4 CODE >137:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+226 text4 CODE >139:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+22B text4 CODE >140:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+230 text4 CODE >141:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+233 text4 CODE >142:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1A5 text3 CODE >144:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1A5 text3 CODE >146:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1AA text3 CODE >147:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1AE text3 CODE >148:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1B2 text3 CODE >149:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1B6 text3 CODE >150:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1B7 text3 CODE >151:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1BC text3 CODE >152:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1C0 text3 CODE >153:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1C4 text3 CODE >154:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1C8 text3 CODE >155:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1CD text3 CODE >156:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1CE text3 CODE >157:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1D2 text3 CODE >158:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1D6 text3 CODE >159:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1DA text3 CODE >160:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1DF text3 CODE >162:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1E4 text3 CODE >163:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1E9 text3 CODE >164:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1EC text3 CODE >165:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+15D text2 CODE >167:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+15D text2 CODE >169:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+162 text2 CODE >170:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+166 text2 CODE >171:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+16A text2 CODE >172:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+16E text2 CODE >173:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+16F text2 CODE >174:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+174 text2 CODE >175:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+178 text2 CODE >176:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+17C text2 CODE >177:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+180 text2 CODE >178:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+185 text2 CODE >179:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+186 text2 CODE >180:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+18A text2 CODE >181:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+18E text2 CODE >182:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+192 text2 CODE >183:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+197 text2 CODE >185:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+19C text2 CODE >186:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1A1 text2 CODE >187:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+1A4 text2 CODE >188:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+5B text1 CODE >82:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+5B text1 CODE >84:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+5D text1 CODE >85:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+5E text1 CODE >86:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+63 text1 CODE >87:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+69 text1 CODE >87:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+6D text1 CODE >88:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+6E text1 CODE >89:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+6F text1 CODE >90:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+73 text1 CODE >90:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+7E text1 CODE >91:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+82 text1 CODE >91:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+8E text1 CODE >92:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+95 text1 CODE >92:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+99 text1 CODE >93:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+9E text1 CODE >94:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+A6 text1 CODE >98:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+AD text1 CODE >98:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+B1 text1 CODE >99:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+109 maintext CODE >190:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+109 maintext CODE >193:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+10C maintext CODE >201:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+114 maintext CODE >202:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+11C maintext CODE >206:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+11E maintext CODE >207:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+122 maintext CODE >208:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+125 maintext CODE >211:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+126 maintext CODE >214:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+127 maintext CODE >222:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+127 maintext CODE >225:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+12A maintext CODE >226:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+137 maintext CODE >227:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+13A maintext CODE >228:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+147 maintext CODE >229:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+14A maintext CODE >230:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+157 maintext CODE >231:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+51C clrtext CODE >5198:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.s
+51C clrtext CODE >5199:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.s
+51D clrtext CODE >5200:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.s
+51D clrtext CODE >5201:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.s
+51E clrtext CODE >5202:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.s
+51F clrtext CODE >5203:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.s
+520 clrtext CODE >5204:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.s
+521 clrtext CODE >5205:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -635,11 +635,11 @@ _TMR2 1A 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 _WPUA 20C 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 _WPUB 20D 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 __end_of_IOCBF0_SetInterruptHandler A74 0 CODE 0 text20 dist/default/production\ProjetoFinal.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.o
+___sp 0 0 STACK 2 stack C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.o
 _main 212 0 CODE 0 maintext dist/default/production\ProjetoFinal.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 _IOCBF0_DefaultInterruptHandler AC4 0 CODE 0 text48 dist/default/production\ProjetoFinal.X.production.o
-start 92 0 CODE 0 init C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.o
+start 92 0 CODE 0 init C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.o
 _TMR0_InterruptHandler 33 0 BANK0 1 nvBANK0 dist/default/production\ProjetoFinal.X.production.o
 SPI1_ExchangeBlock@data 24 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
 _chegadaS1 4EE 0 CODE 0 text5 dist/default/production\ProjetoFinal.X.production.o
@@ -660,12 +660,12 @@ __end_of_spi1_configuration AA0 0 STRCODE 0 stringtext2 dist/default/production\
 _TMR2_Initialize A0A 0 CODE 0 text11 dist/default/production\ProjetoFinal.X.production.o
 TMR0_SetInterruptHandler@InterruptHandler 20 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
 _chegadaS2$intlevel0 3E2 0 CODE 0 text4 dist/default/production\ProjetoFinal.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.o
 wtemp0 7E 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 _EUSART_DefaultFramingErrorHandler 0 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
@@ -704,8 +704,8 @@ _FVRCON 117 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 i1_SPI1_ExchangeBlock 696 0 CODE 0 text46 dist/default/production\ProjetoFinal.X.production.o
 __LnvBANK0 0 0 ABS 0 nvBANK0 -
 _OPTION_REG 95 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.o
-___stacklo 0 0 ABS 0 - C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.o
+___stackhi 0 0 ABS 0 - C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.o
+___stacklo 0 0 ABS 0 - C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.o
 _EUSART_Initialize 73C 0 CODE 0 text23 dist/default/production\ProjetoFinal.X.production.o
 _PIN_MANAGER_Initialize 5DA 0 CODE 0 text18 dist/default/production\ProjetoFinal.X.production.o
 __end_of_FVR_Initialize AB0 0 CODE 0 text22 dist/default/production\ProjetoFinal.X.production.o
@@ -729,7 +729,7 @@ matrixUpdate@data 29 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.
 _IOCBF3_SetInterruptHandler A5C 0 CODE 0 text19 dist/default/production\ProjetoFinal.X.production.o
 __end_of_TMR1_SetInterruptHandler A50 0 CODE 0 text13 dist/default/production\ProjetoFinal.X.production.o
 _WDTCON 97 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.o
+___int_sp 0 0 STACK 2 stack C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.o
 __end_of_PWM3_Initialize A0A 0 CODE 0 text17 dist/default/production\ProjetoFinal.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
@@ -890,7 +890,7 @@ __end_of_CMP2_Initialize 9CA 0 CODE 0 text27 dist/default/production\ProjetoFina
 i1SPI1_ExchangeBlock@block 73 0 COMMON 1 cstackCOMMON dist/default/production\ProjetoFinal.X.production.o
 __HnvBANK0 0 0 ABS 0 nvBANK0 -
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.o
 _CCPTMRS0bits 29E 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 __pdataBANK0 53 0 BANK0 1 dataBANK0 dist/default/production\ProjetoFinal.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
@@ -1046,8 +1046,8 @@ __Lreset_vec 0 0 CODE 0 reset_vec -
 __end_ofi1_SPI1_ExchangeBlock 6EC 0 CODE 0 text46 dist/default/production\ProjetoFinal.X.production.o
 __Hstringtext1 0 0 ABS 0 stringtext1 -
 __Hstringtext2 0 0 ABS 0 stringtext2 -
-___heap_hi 0 0 ABS 0 - C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.o
-___heap_lo 0 0 ABS 0 - C:\Users\ACTECN~1\AppData\Local\Temp\xcAs6ks.o
+___heap_hi 0 0 ABS 0 - C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.o
+___heap_lo 0 0 ABS 0 - C:\Users\ACTECN~1\AppData\Local\Temp\xcAsebo.o
 _subindo 53 0 BANK0 1 dataBANK0 dist/default/production\ProjetoFinal.X.production.o
 i1SPI1_ExchangeBlock@data 74 0 COMMON 1 cstackCOMMON dist/default/production\ProjetoFinal.X.production.o
 __end_of_IOCBF0_DefaultInterruptHandler AC6 0 CODE 0 text48 dist/default/production\ProjetoFinal.X.production.o

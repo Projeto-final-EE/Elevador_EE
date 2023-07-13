@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.36 build 20220127204148 
-                                                                                               Thu Jul 13 19:33:46 2023
+                                                                                               Thu Jul 13 20:02:13 2023
 
 Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1 
      1                           	processor	16F1827
@@ -3099,7 +3099,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3085 ;;
   3086 ;; *************** function _main *****************
   3087 ;; Defined at:
-  3088 ;;		line 199 in file "main.c"
+  3088 ;;		line 190 in file "main.c"
   3089 ;; Parameters:    Size  Location     Type
   3090 ;;		None
   3091 ;; Auto vars:     Size  Location     Type
@@ -3141,10 +3141,10 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3127                           ; Regs used in _main: [wreg-fsr1h+status,2+status,0+pclath+cstack]
   3128                           
   3129                           
-  3130                           ;main.c: 202:     SYSTEM_Initialize();
+  3130                           ;main.c: 193:     SYSTEM_Initialize();
   3131  0109  3183  2376  3181   	fcall	_SYSTEM_Initialize
   3132                           
-  3133                           ;main.c: 210:     IOCBF3_SetInterruptHandler(chegadaS1);
+  3133                           ;main.c: 201:     IOCBF3_SetInterruptHandler(chegadaS1);
   3134  010C  3077               	movlw	low _chegadaS1
   3135  010D  0020               	movlb	0	; select bank0
   3136  010E  00A0               	movwf	IOCBF3_SetInterruptHandler@InterruptHandler
@@ -3152,7 +3152,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3138  0110  00A1               	movwf	IOCBF3_SetInterruptHandler@InterruptHandler+1
   3139  0111  3185  252E  3181   	fcall	_IOCBF3_SetInterruptHandler
   3140                           
-  3141                           ;main.c: 211:     IOCBF3_SetInterruptHandler(chegadaS2);
+  3141                           ;main.c: 202:     IOCBF3_SetInterruptHandler(chegadaS2);
   3142  0114  30ED               	movlw	low _chegadaS2
   3143  0115  0020               	movlb	0	; select bank0
   3144  0116  00A0               	movwf	IOCBF3_SetInterruptHandler@InterruptHandler
@@ -3164,30 +3164,30 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3150  011D  148D               	bsf	13,1	;volatile
   3151  011E                     l2420:
   3152                           
-  3153                           ;main.c: 216:     SPI1_Open(SPI1_DEFAULT);
+  3153                           ;main.c: 207:     SPI1_Open(SPI1_DEFAULT);
   3154  011E  3000               	movlw	0
   3155  011F  3180  20B2  3181   	fcall	_SPI1_Open
   3156  0122                     l2422:
   3157                           
-  3158                           ;main.c: 217:     initMatrix();
+  3158                           ;main.c: 208:     initMatrix();
   3159  0122  3180  205B  3181   	fcall	_initMatrix
   3160  0125                     l2424:
   3161                           
-  3162                           ;main.c: 220:     (INTCONbits.GIE = 1);
+  3162                           ;main.c: 211:     (INTCONbits.GIE = 1);
   3163  0125  178B               	bsf	11,7	;volatile
   3164  0126                     l2426:
   3165                           
-  3166                           ;main.c: 223:     (INTCONbits.PEIE = 1);
+  3166                           ;main.c: 214:     (INTCONbits.PEIE = 1);
   3167  0126  170B               	bsf	11,6	;volatile
   3168  0127                     l615:	
-  3169                           ;main.c: 231:     while (1)
+  3169                           ;main.c: 222:     while (1)
   3170                           
   3171                           
-  3172                           ;main.c: 232:     {;main.c: 234:         chegadaS1();
+  3172                           ;main.c: 223:     {;main.c: 225:         chegadaS1();
   3173  0127  3182  2277  3181   	fcall	_chegadaS1
   3174  012A                     l2428:
   3175                           
-  3176                           ;main.c: 235:         _delay((unsigned long)((1000)*(4000000/4000.0)));
+  3176                           ;main.c: 226:         _delay((unsigned long)((1000)*(4000000/4000.0)));
   3177  012A  3006               	movlw	6
   3178  012B  0020               	movlb	0	; select bank0
   3179  012C  00B2               	movwf	??_main+1
@@ -3204,10 +3204,10 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3190  0136  3200               	nop2
   3191  0137                     l2430:
   3192                           
-  3193                           ;main.c: 236:         chegadaS2();
+  3193                           ;main.c: 227:         chegadaS2();
   3194  0137  3181  21ED  3181   	fcall	_chegadaS2
   3195                           
-  3196                           ;main.c: 237:         _delay((unsigned long)((1000)*(4000000/4000.0)));
+  3196                           ;main.c: 228:         _delay((unsigned long)((1000)*(4000000/4000.0)));
   3197  013A  3006               	movlw	6
   3198  013B  0020               	movlb	0	; select bank0
   3199  013C  00B2               	movwf	??_main+1
@@ -3224,11 +3224,11 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3210  0146  3200               	nop2
   3211  0147                     l2432:
   3212                           
-  3213                           ;main.c: 238:         chegadaS3();
+  3213                           ;main.c: 229:         chegadaS3();
   3214  0147  3181  21A5  3181   	fcall	_chegadaS3
   3215  014A                     l2434:
   3216                           
-  3217                           ;main.c: 239:         _delay((unsigned long)((1000)*(4000000/4000.0)));
+  3217                           ;main.c: 230:         _delay((unsigned long)((1000)*(4000000/4000.0)));
   3218  014A  3006               	movlw	6
   3219  014B  0020               	movlb	0	; select bank0
   3220  014C  00B2               	movwf	??_main+1
@@ -3244,7 +3244,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3230  0155  2950               	goto	u867
   3231  0156  3200               	nop2
   3232                           
-  3233                           ;main.c: 240:         chegadaS4();
+  3233                           ;main.c: 231:         chegadaS4();
   3234  0157  3181  215D  3181   	fcall	_chegadaS4
   3235  015A  2927               	goto	l615
   3236  015B  3180  2849         	ljmp	start
@@ -3254,7 +3254,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3240  005B                     __ptext1:	
   3241 ;; *************** function _initMatrix *****************
   3242 ;; Defined at:
-  3243 ;;		line 92 in file "main.c"
+  3243 ;;		line 82 in file "main.c"
   3244 ;; Parameters:    Size  Location     Type
   3245 ;;		None
   3246 ;; Auto vars:     Size  Location     Type
@@ -3294,15 +3294,15 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3280                           ; Regs used in _initMatrix: [wreg-fsr1h+status,2+status,0+pclath+cstack]
   3281                           
   3282                           
-  3283                           ;main.c: 93:     uint8_t data[4];;main.c: 94:     uint8_t k=0;
+  3283                           ;main.c: 83:     uint8_t data[4];;main.c: 84:     uint8_t k=0;
   3284  005B  0020               	movlb	0	; select bank0
   3285  005C  01AD               	clrf	initMatrix@k
   3286                           
-  3287                           ;main.c: 95:    for(uint8_t i =0; i<8; i++){
+  3287                           ;main.c: 85:    for(uint8_t i =0; i<8; i++){
   3288  005D  01AE               	clrf	initMatrix@i
   3289  005E                     l2256:
   3290                           
-  3291                           ;main.c: 96:             MatrixLed[i] = 0;
+  3291                           ;main.c: 86:             MatrixLed[i] = 0;
   3292  005E  082E               	movf	initMatrix@i,w
   3293  005F  3E43               	addlw	(low (_MatrixLed| 0))& (0+255)
   3294  0060  0086               	movwf	6
@@ -3310,7 +3310,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3296  0062  0181               	clrf	1
   3297  0063                     l2258:
   3298                           
-  3299                           ;main.c: 97:         }
+  3299                           ;main.c: 87:         }
   3300  0063  3001               	movlw	1
   3301  0064  00A8               	movwf	??_initMatrix
   3302  0065  0828               	movf	??_initMatrix,w
@@ -3326,15 +3326,15 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3312  006D                     u640:
   3313  006D                     l2262:
   3314                           
-  3315                           ;main.c: 98:     for(uint8_t i=0;i<6;i++){
+  3315                           ;main.c: 88:     for(uint8_t i=0;i<6;i++){
   3316  006D  01AF               	clrf	initMatrix@i_1285
   3317  006E                     l2268:
   3318                           
-  3319                           ;main.c: 99:         for(uint8_t j=0;j<4;j=j+2){
+  3319                           ;main.c: 89:         for(uint8_t j=0;j<4;j=j+2){
   3320  006E  01B0               	clrf	initMatrix@j
   3321  006F                     l2274:
   3322                           
-  3323                           ;main.c: 100:             data[j]= matrix_conf[k];
+  3323                           ;main.c: 90:             data[j]= matrix_conf[k];
   3324  006F  082D               	movf	initMatrix@k,w
   3325  0070  3ECD               	addlw	low (_matrix_conf| (0+32768))
   3326  0071  0084               	movwf	4
@@ -3351,7 +3351,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3337  007C  0828               	movf	??_initMatrix,w
   3338  007D  0081               	movwf	1
   3339                           
-  3340                           ;main.c: 101:             data[j+1]= matrix_conf[k+1];
+  3340                           ;main.c: 91:             data[j+1]= matrix_conf[k+1];
   3341  007E  082D               	movf	initMatrix@k,w
   3342  007F  3ECE               	addlw	low ((_matrix_conf+1)| (0+32768))
   3343  0080  0084               	movwf	4
@@ -3370,7 +3370,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3356  008D  0081               	movwf	1
   3357  008E                     l2276:
   3358                           
-  3359                           ;main.c: 102:         }
+  3359                           ;main.c: 92:         }
   3360  008E  0830               	movf	initMatrix@j,w
   3361  008F  3E02               	addlw	2
   3362  0090  00A8               	movwf	??_initMatrix
@@ -3387,7 +3387,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3373  0099                     u650:
   3374  0099                     l2280:
   3375                           
-  3376                           ;main.c: 103:         k=k+2;
+  3376                           ;main.c: 93:         k=k+2;
   3377  0099  082D               	movf	initMatrix@k,w
   3378  009A  3E02               	addlw	2
   3379  009B  00A8               	movwf	??_initMatrix
@@ -3395,7 +3395,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3381  009D  00AD               	movwf	initMatrix@k
   3382  009E                     l2282:
   3383                           
-  3384                           ;main.c: 104:         txSpi( data, 4);
+  3384                           ;main.c: 94:         txSpi( data, 4);
   3385  009E  3004               	movlw	4
   3386  009F  00A5               	movwf	txSpi@dataSize
   3387  00A0  3000               	movlw	0
@@ -3404,7 +3404,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3390  00A3  3184  246A  3180   	fcall	_txSpi
   3391  00A6                     l2286:
   3392                           
-  3393                           ;main.c: 108:     }
+  3393                           ;main.c: 98:     }
   3394  00A6  3001               	movlw	1
   3395  00A7  0020               	movlb	0	; select bank0
   3396  00A8  00A8               	movwf	??_initMatrix
@@ -3427,7 +3427,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3413  015D                     __ptext2:	
   3414 ;; *************** function _chegadaS4 *****************
   3415 ;; Defined at:
-  3416 ;;		line 176 in file "main.c"
+  3416 ;;		line 167 in file "main.c"
   3417 ;; Parameters:    Size  Location     Type
   3418 ;;		None
   3419 ;; Auto vars:     Size  Location     Type
@@ -3463,37 +3463,37 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3449                           ; Regs used in _chegadaS4: [wreg+fsr1l+fsr1h+status,2+status,0+pclath+cstack]
   3450                           
   3451                           
-  3452                           ;main.c: 178:     MatrixLed[0] = 0b10000001;
+  3452                           ;main.c: 169:     MatrixLed[0] = 0b10000001;
   3453  015D  3081               	movlw	129
   3454  015E  0020               	movlb	0	; select bank0
   3455  015F  00AC               	movwf	??_chegadaS4
   3456  0160  082C               	movf	??_chegadaS4,w
   3457  0161  00C3               	movwf	_MatrixLed
   3458                           
-  3459                           ;main.c: 179:     MatrixLed[1] = 0b10010001;
+  3459                           ;main.c: 170:     MatrixLed[1] = 0b10010001;
   3460  0162  3091               	movlw	145
   3461  0163  00AC               	movwf	??_chegadaS4
   3462  0164  082C               	movf	??_chegadaS4,w
   3463  0165  00C4               	movwf	_MatrixLed+1
   3464                           
-  3465                           ;main.c: 180:     MatrixLed[2] = 0b10010001;
+  3465                           ;main.c: 171:     MatrixLed[2] = 0b10010001;
   3466  0166  3091               	movlw	145
   3467  0167  00AC               	movwf	??_chegadaS4
   3468  0168  082C               	movf	??_chegadaS4,w
   3469  0169  00C5               	movwf	_MatrixLed+2
   3470                           
-  3471                           ;main.c: 181:     MatrixLed[3] = 0b01101110;
+  3471                           ;main.c: 172:     MatrixLed[3] = 0b01101110;
   3472  016A  306E               	movlw	110
   3473  016B  00AC               	movwf	??_chegadaS4
   3474  016C  082C               	movf	??_chegadaS4,w
   3475  016D  00C6               	movwf	_MatrixLed+3
   3476  016E                     l2350:
   3477                           
-  3478                           ;main.c: 182:     MatrixLed[4] = 0;
+  3478                           ;main.c: 173:     MatrixLed[4] = 0;
   3479  016E  01C7               	clrf	_MatrixLed+4
   3480  016F                     l2352:
   3481                           
-  3482                           ;main.c: 183:     if(subindo){
+  3482                           ;main.c: 174:     if(subindo){
   3483  016F  0853               	movf	_subindo,w
   3484  0170  1903               	btfsc	3,2
   3485  0171  2973               	goto	u701
@@ -3503,56 +3503,56 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3489  0174                     u700:
   3490  0174                     l2354:
   3491                           
-  3492                           ;main.c: 184:         MatrixLed[5] = 0b01100000;
+  3492                           ;main.c: 175:         MatrixLed[5] = 0b01100000;
   3493  0174  3060               	movlw	96
   3494  0175  00AC               	movwf	??_chegadaS4
   3495  0176  082C               	movf	??_chegadaS4,w
   3496  0177  00C8               	movwf	_MatrixLed+5
   3497                           
-  3498                           ;main.c: 185:         MatrixLed[6] = 0b11000000;
+  3498                           ;main.c: 176:         MatrixLed[6] = 0b11000000;
   3499  0178  30C0               	movlw	192
   3500  0179  00AC               	movwf	??_chegadaS4
   3501  017A  082C               	movf	??_chegadaS4,w
   3502  017B  00C9               	movwf	_MatrixLed+6
   3503                           
-  3504                           ;main.c: 186:         MatrixLed[7] = 0b01100000;
+  3504                           ;main.c: 177:         MatrixLed[7] = 0b01100000;
   3505  017C  3060               	movlw	96
   3506  017D  00AC               	movwf	??_chegadaS4
   3507  017E  082C               	movf	??_chegadaS4,w
   3508  017F  00CA               	movwf	_MatrixLed+7
   3509  0180                     l2356:
   3510                           
-  3511                           ;main.c: 187:         destinoSub = destinoSub & 0b11110111;
+  3511                           ;main.c: 178:         destinoSub = destinoSub & 0b11110111;
   3512  0180  0850               	movf	_destinoSub,w
   3513  0181  39F7               	andlw	247
   3514  0182  00AC               	movwf	??_chegadaS4
   3515  0183  082C               	movf	??_chegadaS4,w
   3516  0184  00D0               	movwf	_destinoSub
   3517                           
-  3518                           ;main.c: 188:     }else{
+  3518                           ;main.c: 179:     }else{
   3519  0185  2997               	goto	l2362
   3520  0186                     l2358:
   3521                           
-  3522                           ;main.c: 189:         MatrixLed[5] = 0b11000000;
+  3522                           ;main.c: 180:         MatrixLed[5] = 0b11000000;
   3523  0186  30C0               	movlw	192
   3524  0187  00AC               	movwf	??_chegadaS4
   3525  0188  082C               	movf	??_chegadaS4,w
   3526  0189  00C8               	movwf	_MatrixLed+5
   3527                           
-  3528                           ;main.c: 190:         MatrixLed[6] = 0b01100000;
+  3528                           ;main.c: 181:         MatrixLed[6] = 0b01100000;
   3529  018A  3060               	movlw	96
   3530  018B  00AC               	movwf	??_chegadaS4
   3531  018C  082C               	movf	??_chegadaS4,w
   3532  018D  00C9               	movwf	_MatrixLed+6
   3533                           
-  3534                           ;main.c: 191:         MatrixLed[7] = 0b11000000;
+  3534                           ;main.c: 182:         MatrixLed[7] = 0b11000000;
   3535  018E  30C0               	movlw	192
   3536  018F  00AC               	movwf	??_chegadaS4
   3537  0190  082C               	movf	??_chegadaS4,w
   3538  0191  00CA               	movwf	_MatrixLed+7
   3539  0192                     l2360:
   3540                           
-  3541                           ;main.c: 192:         destinoDesc = destinoDesc & 0b11110111;
+  3541                           ;main.c: 183:         destinoDesc = destinoDesc & 0b11110111;
   3542  0192  084F               	movf	_destinoDesc,w
   3543  0193  39F7               	andlw	247
   3544  0194  00AC               	movwf	??_chegadaS4
@@ -3560,7 +3560,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3546  0196  00CF               	movwf	_destinoDesc
   3547  0197                     l2362:
   3548                           
-  3549                           ;main.c: 194:     MatrixLed[7] = MatrixLed[7] | destinoSub;
+  3549                           ;main.c: 185:     MatrixLed[7] = MatrixLed[7] | destinoSub;
   3550  0197  084A               	movf	_MatrixLed+7,w
   3551  0198  0450               	iorwf	_destinoSub,w
   3552  0199  00AC               	movwf	??_chegadaS4
@@ -3568,7 +3568,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3554  019B  00CA               	movwf	_MatrixLed+7
   3555  019C                     l2364:
   3556                           
-  3557                           ;main.c: 195:     MatrixLed[6] = MatrixLed[6] | destinoDesc;
+  3557                           ;main.c: 186:     MatrixLed[6] = MatrixLed[6] | destinoDesc;
   3558  019C  0849               	movf	_MatrixLed+6,w
   3559  019D  044F               	iorwf	_destinoDesc,w
   3560  019E  00AC               	movwf	??_chegadaS4
@@ -3576,7 +3576,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3562  01A0  00C9               	movwf	_MatrixLed+6
   3563  01A1                     l2366:
   3564                           
-  3565                           ;main.c: 196:     matrixUpdate();
+  3565                           ;main.c: 187:     matrixUpdate();
   3566  01A1  3183  23C3  3181   	fcall	_matrixUpdate
   3567  01A4                     l608:
   3568  01A4  0008               	return
@@ -3586,7 +3586,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3572  01A5                     __ptext3:	
   3573 ;; *************** function _chegadaS3 *****************
   3574 ;; Defined at:
-  3575 ;;		line 153 in file "main.c"
+  3575 ;;		line 144 in file "main.c"
   3576 ;; Parameters:    Size  Location     Type
   3577 ;;		None
   3578 ;; Auto vars:     Size  Location     Type
@@ -3622,37 +3622,37 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3608                           ; Regs used in _chegadaS3: [wreg+fsr1l+fsr1h+status,2+status,0+pclath+cstack]
   3609                           
   3610                           
-  3611                           ;main.c: 155:     MatrixLed[0] = 0b01000011;
+  3611                           ;main.c: 146:     MatrixLed[0] = 0b01000011;
   3612  01A5  3043               	movlw	67
   3613  01A6  0020               	movlb	0	; select bank0
   3614  01A7  00AC               	movwf	??_chegadaS3
   3615  01A8  082C               	movf	??_chegadaS3,w
   3616  01A9  00C3               	movwf	_MatrixLed
   3617                           
-  3618                           ;main.c: 156:     MatrixLed[1] = 0b10000101;
+  3618                           ;main.c: 147:     MatrixLed[1] = 0b10000101;
   3619  01AA  3085               	movlw	133
   3620  01AB  00AC               	movwf	??_chegadaS3
   3621  01AC  082C               	movf	??_chegadaS3,w
   3622  01AD  00C4               	movwf	_MatrixLed+1
   3623                           
-  3624                           ;main.c: 157:     MatrixLed[2] = 0b10001001;
+  3624                           ;main.c: 148:     MatrixLed[2] = 0b10001001;
   3625  01AE  3089               	movlw	137
   3626  01AF  00AC               	movwf	??_chegadaS3
   3627  01B0  082C               	movf	??_chegadaS3,w
   3628  01B1  00C5               	movwf	_MatrixLed+2
   3629                           
-  3630                           ;main.c: 158:     MatrixLed[3] = 0b01110001;
+  3630                           ;main.c: 149:     MatrixLed[3] = 0b01110001;
   3631  01B2  3071               	movlw	113
   3632  01B3  00AC               	movwf	??_chegadaS3
   3633  01B4  082C               	movf	??_chegadaS3,w
   3634  01B5  00C6               	movwf	_MatrixLed+3
   3635  01B6                     l2330:
   3636                           
-  3637                           ;main.c: 159:     MatrixLed[4] = 0;
+  3637                           ;main.c: 150:     MatrixLed[4] = 0;
   3638  01B6  01C7               	clrf	_MatrixLed+4
   3639  01B7                     l2332:
   3640                           
-  3641                           ;main.c: 160:     if(subindo){
+  3641                           ;main.c: 151:     if(subindo){
   3642  01B7  0853               	movf	_subindo,w
   3643  01B8  1903               	btfsc	3,2
   3644  01B9  29BB               	goto	u691
@@ -3662,56 +3662,56 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3648  01BC                     u690:
   3649  01BC                     l2334:
   3650                           
-  3651                           ;main.c: 161:         MatrixLed[5] = 0b01100000;
+  3651                           ;main.c: 152:         MatrixLed[5] = 0b01100000;
   3652  01BC  3060               	movlw	96
   3653  01BD  00AC               	movwf	??_chegadaS3
   3654  01BE  082C               	movf	??_chegadaS3,w
   3655  01BF  00C8               	movwf	_MatrixLed+5
   3656                           
-  3657                           ;main.c: 162:         MatrixLed[6] = 0b11000000;
+  3657                           ;main.c: 153:         MatrixLed[6] = 0b11000000;
   3658  01C0  30C0               	movlw	192
   3659  01C1  00AC               	movwf	??_chegadaS3
   3660  01C2  082C               	movf	??_chegadaS3,w
   3661  01C3  00C9               	movwf	_MatrixLed+6
   3662                           
-  3663                           ;main.c: 163:         MatrixLed[7] = 0b01100000;
+  3663                           ;main.c: 154:         MatrixLed[7] = 0b01100000;
   3664  01C4  3060               	movlw	96
   3665  01C5  00AC               	movwf	??_chegadaS3
   3666  01C6  082C               	movf	??_chegadaS3,w
   3667  01C7  00CA               	movwf	_MatrixLed+7
   3668  01C8                     l2336:
   3669                           
-  3670                           ;main.c: 164:         destinoSub = destinoSub & 0b11111011;
+  3670                           ;main.c: 155:         destinoSub = destinoSub & 0b11111011;
   3671  01C8  0850               	movf	_destinoSub,w
   3672  01C9  39FB               	andlw	251
   3673  01CA  00AC               	movwf	??_chegadaS3
   3674  01CB  082C               	movf	??_chegadaS3,w
   3675  01CC  00D0               	movwf	_destinoSub
   3676                           
-  3677                           ;main.c: 165:     }else{
+  3677                           ;main.c: 156:     }else{
   3678  01CD  29DF               	goto	l2342
   3679  01CE                     l2338:
   3680                           
-  3681                           ;main.c: 166:         MatrixLed[5] = 0b11000000;
+  3681                           ;main.c: 157:         MatrixLed[5] = 0b11000000;
   3682  01CE  30C0               	movlw	192
   3683  01CF  00AC               	movwf	??_chegadaS3
   3684  01D0  082C               	movf	??_chegadaS3,w
   3685  01D1  00C8               	movwf	_MatrixLed+5
   3686                           
-  3687                           ;main.c: 167:         MatrixLed[6] = 0b01100000;
+  3687                           ;main.c: 158:         MatrixLed[6] = 0b01100000;
   3688  01D2  3060               	movlw	96
   3689  01D3  00AC               	movwf	??_chegadaS3
   3690  01D4  082C               	movf	??_chegadaS3,w
   3691  01D5  00C9               	movwf	_MatrixLed+6
   3692                           
-  3693                           ;main.c: 168:         MatrixLed[7] = 0b11000000;
+  3693                           ;main.c: 159:         MatrixLed[7] = 0b11000000;
   3694  01D6  30C0               	movlw	192
   3695  01D7  00AC               	movwf	??_chegadaS3
   3696  01D8  082C               	movf	??_chegadaS3,w
   3697  01D9  00CA               	movwf	_MatrixLed+7
   3698  01DA                     l2340:
   3699                           
-  3700                           ;main.c: 169:         destinoDesc = destinoDesc & 0b11111011;
+  3700                           ;main.c: 160:         destinoDesc = destinoDesc & 0b11111011;
   3701  01DA  084F               	movf	_destinoDesc,w
   3702  01DB  39FB               	andlw	251
   3703  01DC  00AC               	movwf	??_chegadaS3
@@ -3719,7 +3719,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3705  01DE  00CF               	movwf	_destinoDesc
   3706  01DF                     l2342:
   3707                           
-  3708                           ;main.c: 171:     MatrixLed[7] = MatrixLed[7] | destinoSub;
+  3708                           ;main.c: 162:     MatrixLed[7] = MatrixLed[7] | destinoSub;
   3709  01DF  084A               	movf	_MatrixLed+7,w
   3710  01E0  0450               	iorwf	_destinoSub,w
   3711  01E1  00AC               	movwf	??_chegadaS3
@@ -3727,7 +3727,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3713  01E3  00CA               	movwf	_MatrixLed+7
   3714  01E4                     l2344:
   3715                           
-  3716                           ;main.c: 172:     MatrixLed[6] = MatrixLed[6] | destinoDesc;
+  3716                           ;main.c: 163:     MatrixLed[6] = MatrixLed[6] | destinoDesc;
   3717  01E4  0849               	movf	_MatrixLed+6,w
   3718  01E5  044F               	iorwf	_destinoDesc,w
   3719  01E6  00AC               	movwf	??_chegadaS3
@@ -3735,7 +3735,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3721  01E8  00C9               	movwf	_MatrixLed+6
   3722  01E9                     l2346:
   3723                           
-  3724                           ;main.c: 173:     matrixUpdate();
+  3724                           ;main.c: 164:     matrixUpdate();
   3725  01E9  3183  23C3  3181   	fcall	_matrixUpdate
   3726  01EC                     l603:
   3727  01EC  0008               	return
@@ -3745,7 +3745,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3731  01ED                     __ptext4:	
   3732 ;; *************** function _chegadaS2 *****************
   3733 ;; Defined at:
-  3734 ;;		line 130 in file "main.c"
+  3734 ;;		line 121 in file "main.c"
   3735 ;; Parameters:    Size  Location     Type
   3736 ;;		None
   3737 ;; Auto vars:     Size  Location     Type
@@ -3788,34 +3788,34 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3774                           ; Regs used in _chegadaS2: [wreg+fsr1l+fsr1h+status,2+status,0+pclath+cstack]
   3775                           
   3776                           
-  3777                           ;main.c: 132:     MatrixLed[0] = 0b00000000;
+  3777                           ;main.c: 123:     MatrixLed[0] = 0b00000000;
   3778  01F1  0020               	movlb	0	; select bank0
   3779  01F2  01C3               	clrf	_MatrixLed
   3780  01F3                     l2306:
   3781                           
-  3782                           ;main.c: 133:     MatrixLed[1] = 0b01000001;
+  3782                           ;main.c: 124:     MatrixLed[1] = 0b01000001;
   3783  01F3  3041               	movlw	65
   3784  01F4  00AC               	movwf	??_chegadaS2
   3785  01F5  082C               	movf	??_chegadaS2,w
   3786  01F6  00C4               	movwf	_MatrixLed+1
   3787  01F7                     l2308:
   3788                           
-  3789                           ;main.c: 134:     MatrixLed[2] = 0b11111111;
+  3789                           ;main.c: 125:     MatrixLed[2] = 0b11111111;
   3790  01F7  30FF               	movlw	255
   3791  01F8  00AC               	movwf	??_chegadaS2
   3792  01F9  082C               	movf	??_chegadaS2,w
   3793  01FA  00C5               	movwf	_MatrixLed+2
   3794  01FB                     l2310:
   3795                           
-  3796                           ;main.c: 135:     MatrixLed[3] = 0b00000001;
+  3796                           ;main.c: 126:     MatrixLed[3] = 0b00000001;
   3797  01FB  01C6               	clrf	_MatrixLed+3
   3798  01FC  0AC6               	incf	_MatrixLed+3,f
   3799                           
-  3800                           ;main.c: 136:     MatrixLed[4] = 0;
+  3800                           ;main.c: 127:     MatrixLed[4] = 0;
   3801  01FD  01C7               	clrf	_MatrixLed+4
   3802  01FE                     l2312:
   3803                           
-  3804                           ;main.c: 137:     if(subindo){
+  3804                           ;main.c: 128:     if(subindo){
   3805  01FE  0853               	movf	_subindo,w
   3806  01FF  1903               	btfsc	3,2
   3807  0200  2A02               	goto	u681
@@ -3825,56 +3825,56 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3811  0203                     u680:
   3812  0203                     l2314:
   3813                           
-  3814                           ;main.c: 138:         MatrixLed[5] = 0b01100000;
+  3814                           ;main.c: 129:         MatrixLed[5] = 0b01100000;
   3815  0203  3060               	movlw	96
   3816  0204  00AC               	movwf	??_chegadaS2
   3817  0205  082C               	movf	??_chegadaS2,w
   3818  0206  00C8               	movwf	_MatrixLed+5
   3819                           
-  3820                           ;main.c: 139:         MatrixLed[6] = 0b11000000;
+  3820                           ;main.c: 130:         MatrixLed[6] = 0b11000000;
   3821  0207  30C0               	movlw	192
   3822  0208  00AC               	movwf	??_chegadaS2
   3823  0209  082C               	movf	??_chegadaS2,w
   3824  020A  00C9               	movwf	_MatrixLed+6
   3825                           
-  3826                           ;main.c: 140:         MatrixLed[7] = 0b01100000;
+  3826                           ;main.c: 131:         MatrixLed[7] = 0b01100000;
   3827  020B  3060               	movlw	96
   3828  020C  00AC               	movwf	??_chegadaS2
   3829  020D  082C               	movf	??_chegadaS2,w
   3830  020E  00CA               	movwf	_MatrixLed+7
   3831  020F                     l2316:
   3832                           
-  3833                           ;main.c: 141:         destinoSub = destinoSub & 0b11111101;
+  3833                           ;main.c: 132:         destinoSub = destinoSub & 0b11111101;
   3834  020F  0850               	movf	_destinoSub,w
   3835  0210  39FD               	andlw	253
   3836  0211  00AC               	movwf	??_chegadaS2
   3837  0212  082C               	movf	??_chegadaS2,w
   3838  0213  00D0               	movwf	_destinoSub
   3839                           
-  3840                           ;main.c: 142:     }else{
+  3840                           ;main.c: 133:     }else{
   3841  0214  2A26               	goto	l2322
   3842  0215                     l2318:
   3843                           
-  3844                           ;main.c: 143:         MatrixLed[5] = 0b11000000;
+  3844                           ;main.c: 134:         MatrixLed[5] = 0b11000000;
   3845  0215  30C0               	movlw	192
   3846  0216  00AC               	movwf	??_chegadaS2
   3847  0217  082C               	movf	??_chegadaS2,w
   3848  0218  00C8               	movwf	_MatrixLed+5
   3849                           
-  3850                           ;main.c: 144:         MatrixLed[6] = 0b01100000;
+  3850                           ;main.c: 135:         MatrixLed[6] = 0b01100000;
   3851  0219  3060               	movlw	96
   3852  021A  00AC               	movwf	??_chegadaS2
   3853  021B  082C               	movf	??_chegadaS2,w
   3854  021C  00C9               	movwf	_MatrixLed+6
   3855                           
-  3856                           ;main.c: 145:         MatrixLed[7] = 0b11000000;
+  3856                           ;main.c: 136:         MatrixLed[7] = 0b11000000;
   3857  021D  30C0               	movlw	192
   3858  021E  00AC               	movwf	??_chegadaS2
   3859  021F  082C               	movf	??_chegadaS2,w
   3860  0220  00CA               	movwf	_MatrixLed+7
   3861  0221                     l2320:
   3862                           
-  3863                           ;main.c: 146:         destinoDesc = destinoDesc & 0b11111101;
+  3863                           ;main.c: 137:         destinoDesc = destinoDesc & 0b11111101;
   3864  0221  084F               	movf	_destinoDesc,w
   3865  0222  39FD               	andlw	253
   3866  0223  00AC               	movwf	??_chegadaS2
@@ -3882,7 +3882,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3868  0225  00CF               	movwf	_destinoDesc
   3869  0226                     l2322:
   3870                           
-  3871                           ;main.c: 148:     MatrixLed[7] = MatrixLed[7] | destinoSub;
+  3871                           ;main.c: 139:     MatrixLed[7] = MatrixLed[7] | destinoSub;
   3872  0226  084A               	movf	_MatrixLed+7,w
   3873  0227  0450               	iorwf	_destinoSub,w
   3874  0228  00AC               	movwf	??_chegadaS2
@@ -3890,7 +3890,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3876  022A  00CA               	movwf	_MatrixLed+7
   3877  022B                     l2324:
   3878                           
-  3879                           ;main.c: 149:     MatrixLed[6] = MatrixLed[6] | destinoDesc;
+  3879                           ;main.c: 140:     MatrixLed[6] = MatrixLed[6] | destinoDesc;
   3880  022B  0849               	movf	_MatrixLed+6,w
   3881  022C  044F               	iorwf	_destinoDesc,w
   3882  022D  00AC               	movwf	??_chegadaS2
@@ -3898,7 +3898,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3884  022F  00C9               	movwf	_MatrixLed+6
   3885  0230                     l2326:
   3886                           
-  3887                           ;main.c: 150:     matrixUpdate();
+  3887                           ;main.c: 141:     matrixUpdate();
   3888  0230  3183  23C3  3181   	fcall	_matrixUpdate
   3889  0233                     l598:
   3890  0233  0008               	return
@@ -3908,7 +3908,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3894  0277                     __ptext5:	
   3895 ;; *************** function _chegadaS1 *****************
   3896 ;; Defined at:
-  3897 ;;		line 110 in file "main.c"
+  3897 ;;		line 101 in file "main.c"
   3898 ;; Parameters:    Size  Location     Type
   3899 ;;		None
   3900 ;; Auto vars:     Size  Location     Type
@@ -3951,37 +3951,37 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3937                           ; Regs used in _chegadaS1: [wreg+fsr1l+fsr1h+status,2+status,0+pclath+cstack]
   3938                           
   3939                           
-  3940                           ;main.c: 112:     MatrixLed[0] = 0b01111110;
+  3940                           ;main.c: 103:     MatrixLed[0] = 0b01111110;
   3941  027B  307E               	movlw	126
   3942  027C  0020               	movlb	0	; select bank0
   3943  027D  00AC               	movwf	??_chegadaS1
   3944  027E  082C               	movf	??_chegadaS1,w
   3945  027F  00C3               	movwf	_MatrixLed
   3946                           
-  3947                           ;main.c: 113:     MatrixLed[1] = 0b10000001;
+  3947                           ;main.c: 104:     MatrixLed[1] = 0b10000001;
   3948  0280  3081               	movlw	129
   3949  0281  00AC               	movwf	??_chegadaS1
   3950  0282  082C               	movf	??_chegadaS1,w
   3951  0283  00C4               	movwf	_MatrixLed+1
   3952                           
-  3953                           ;main.c: 114:     MatrixLed[2] = 0b10000001;
+  3953                           ;main.c: 105:     MatrixLed[2] = 0b10000001;
   3954  0284  3081               	movlw	129
   3955  0285  00AC               	movwf	??_chegadaS1
   3956  0286  082C               	movf	??_chegadaS1,w
   3957  0287  00C5               	movwf	_MatrixLed+2
   3958                           
-  3959                           ;main.c: 115:     MatrixLed[3] = 0b01111110;
+  3959                           ;main.c: 106:     MatrixLed[3] = 0b01111110;
   3960  0288  307E               	movlw	126
   3961  0289  00AC               	movwf	??_chegadaS1
   3962  028A  082C               	movf	??_chegadaS1,w
   3963  028B  00C6               	movwf	_MatrixLed+3
   3964  028C                     l2292:
   3965                           
-  3966                           ;main.c: 116:     MatrixLed[4] = 0;
+  3966                           ;main.c: 107:     MatrixLed[4] = 0;
   3967  028C  01C7               	clrf	_MatrixLed+4
   3968  028D                     l2294:
   3969                           
-  3970                           ;main.c: 117:     if(subindo){
+  3970                           ;main.c: 108:     if(subindo){
   3971  028D  0853               	movf	_subindo,w
   3972  028E  1903               	btfsc	3,2
   3973  028F  2A91               	goto	u671
@@ -3991,48 +3991,48 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   3977  0292                     u670:
   3978  0292                     l2296:
   3979                           
-  3980                           ;main.c: 118:         MatrixLed[5] = 0b01100000;
+  3980                           ;main.c: 109:         MatrixLed[5] = 0b01100000;
   3981  0292  3060               	movlw	96
   3982  0293  00AC               	movwf	??_chegadaS1
   3983  0294  082C               	movf	??_chegadaS1,w
   3984  0295  00C8               	movwf	_MatrixLed+5
   3985                           
-  3986                           ;main.c: 119:         MatrixLed[6] = 0b11000000;
+  3986                           ;main.c: 110:         MatrixLed[6] = 0b11000000;
   3987  0296  30C0               	movlw	192
   3988  0297  00AC               	movwf	??_chegadaS1
   3989  0298  082C               	movf	??_chegadaS1,w
   3990  0299  00C9               	movwf	_MatrixLed+6
   3991                           
-  3992                           ;main.c: 120:         MatrixLed[7] = 0b01100000;
+  3992                           ;main.c: 111:         MatrixLed[7] = 0b01100000;
   3993  029A  3060               	movlw	96
   3994  029B  00AC               	movwf	??_chegadaS1
   3995  029C  082C               	movf	??_chegadaS1,w
   3996  029D  00CA               	movwf	_MatrixLed+7
   3997                           
-  3998                           ;main.c: 121:     }else{
+  3998                           ;main.c: 112:     }else{
   3999  029E  2AB0               	goto	l2302
   4000  029F                     l2298:
   4001                           
-  4002                           ;main.c: 122:         MatrixLed[5] = 0b11000000;
+  4002                           ;main.c: 113:         MatrixLed[5] = 0b11000000;
   4003  029F  30C0               	movlw	192
   4004  02A0  00AC               	movwf	??_chegadaS1
   4005  02A1  082C               	movf	??_chegadaS1,w
   4006  02A2  00C8               	movwf	_MatrixLed+5
   4007                           
-  4008                           ;main.c: 123:         MatrixLed[6] = 0b01100000;
+  4008                           ;main.c: 114:         MatrixLed[6] = 0b01100000;
   4009  02A3  3060               	movlw	96
   4010  02A4  00AC               	movwf	??_chegadaS1
   4011  02A5  082C               	movf	??_chegadaS1,w
   4012  02A6  00C9               	movwf	_MatrixLed+6
   4013                           
-  4014                           ;main.c: 124:         MatrixLed[7] = 0b11000000;
+  4014                           ;main.c: 115:         MatrixLed[7] = 0b11000000;
   4015  02A7  30C0               	movlw	192
   4016  02A8  00AC               	movwf	??_chegadaS1
   4017  02A9  082C               	movf	??_chegadaS1,w
   4018  02AA  00CA               	movwf	_MatrixLed+7
   4019  02AB                     l2300:
   4020                           
-  4021                           ;main.c: 125:         destinoDesc = destinoDesc & 0b11111110;
+  4021                           ;main.c: 116:         destinoDesc = destinoDesc & 0b11111110;
   4022  02AB  084F               	movf	_destinoDesc,w
   4023  02AC  39FE               	andlw	254
   4024  02AD  00AC               	movwf	??_chegadaS1
@@ -4040,7 +4040,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   4026  02AF  00CF               	movwf	_destinoDesc
   4027  02B0                     l2302:
   4028                           
-  4029                           ;main.c: 127:     matrixUpdate();
+  4029                           ;main.c: 118:     matrixUpdate();
   4030  02B0  3183  23C3  3182   	fcall	_matrixUpdate
   4031  02B3                     l593:
   4032  02B3  0008               	return
@@ -4050,7 +4050,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   4036  03C3                     __ptext6:	
   4037 ;; *************** function _matrixUpdate *****************
   4038 ;; Defined at:
-  4039 ;;		line 72 in file "main.c"
+  4039 ;;		line 62 in file "main.c"
   4040 ;; Parameters:    Size  Location     Type
   4041 ;;		None
   4042 ;; Auto vars:     Size  Location     Type
@@ -4092,7 +4092,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   4078                           ; Regs used in _matrixUpdate: [wreg+fsr1l+fsr1h+status,2+status,0+pclath+cstack]
   4079                           
   4080                           
-  4081                           ;main.c: 75:         for(uint8_t i=8;i>0;i--){
+  4081                           ;main.c: 65:         for(uint8_t i=8;i>0;i--){
   4082  03C3  3008               	movlw	8
   4083  03C4  0020               	movlb	0	; select bank0
   4084  03C5  00A8               	movwf	??_matrixUpdate
@@ -4100,14 +4100,14 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   4086  03C7  00AB               	movwf	matrixUpdate@i
   4087  03C8                     l2186:
   4088                           
-  4089                           ;main.c: 76:             data[0] = i;
+  4089                           ;main.c: 66:             data[0] = i;
   4090  03C8  082B               	movf	matrixUpdate@i,w
   4091  03C9  00A8               	movwf	??_matrixUpdate
   4092  03CA  0828               	movf	??_matrixUpdate,w
   4093  03CB  00A9               	movwf	matrixUpdate@data
   4094  03CC                     l2188:
   4095                           
-  4096                           ;main.c: 77:             data[1] = MatrixLed[i-1];
+  4096                           ;main.c: 67:             data[1] = MatrixLed[i-1];
   4097  03CC  082B               	movf	matrixUpdate@i,w
   4098  03CD  3E42               	addlw	(low ((_MatrixLed| 0+255)))& (0+255)
   4099  03CE  0086               	movwf	6
@@ -4118,7 +4118,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   4104  03D3  00AA               	movwf	matrixUpdate@data+1
   4105  03D4                     l2190:
   4106                           
-  4107                           ;main.c: 78:             txSpi(data, 2);
+  4107                           ;main.c: 68:             txSpi(data, 2);
   4108  03D4  3002               	movlw	2
   4109  03D5  00A5               	movwf	txSpi@dataSize
   4110  03D6  3000               	movlw	0
@@ -4127,7 +4127,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   4113  03D9  3184  246A  3183   	fcall	_txSpi
   4114  03DC                     l2192:
   4115                           
-  4116                           ;main.c: 79:         }
+  4116                           ;main.c: 69:         }
   4117  03DC  3001               	movlw	1
   4118  03DD  0020               	movlb	0	; select bank0
   4119  03DE  02AB               	subwf	matrixUpdate@i,f
@@ -4147,7 +4147,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   4133  046A                     __ptext7:	
   4134 ;; *************** function _txSpi *****************
   4135 ;; Defined at:
-  4136 ;;		line 64 in file "main.c"
+  4136 ;;		line 54 in file "main.c"
   4137 ;; Parameters:    Size  Location     Type
   4138 ;;  data            1    wreg     PTR unsigned char 
   4139 ;;		 -> initMatrix@data(4), matrixUpdate@data(2), 
@@ -4189,13 +4189,13 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   4175  046A  0020               	movlb	0	; select bank0
   4176  046B  00A7               	movwf	txSpi@data
   4177  046C                     l565:	
-  4178                           ;main.c: 65:     do { LATBbits.LATB1 = 0; } while(0);
+  4178                           ;main.c: 55:     do { LATBbits.LATB1 = 0; } while(0);
   4179                           
   4180  046C  0022               	movlb	2	; select bank2
   4181  046D  108D               	bcf	13,1	;volatile
   4182  046E                     l1972:
   4183                           
-  4184                           ;main.c: 66:     SPI1_ExchangeBlock(data,dataSize);
+  4184                           ;main.c: 56:     SPI1_ExchangeBlock(data,dataSize);
   4185  046E  0020               	movlb	0	; select bank0
   4186  046F  0826               	movf	txSpi@dataSize+1,w
   4187  0470  00A1               	movwf	SPI1_ExchangeBlock@blockSize+1
@@ -6649,7 +6649,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   6597  02B4                     __ptext41:	
   6598 ;; *************** function i1_chegadaS1 *****************
   6599 ;; Defined at:
-  6600 ;;		line 110 in file "main.c"
+  6600 ;;		line 101 in file "main.c"
   6601 ;; Parameters:    Size  Location     Type
   6602 ;;		None
   6603 ;; Auto vars:     Size  Location     Type
@@ -6685,37 +6685,37 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   6633                           ; Regs used in i1_chegadaS1: [wreg+fsr1l+fsr1h+status,2+status,0+pclath+cstack]
   6634                           
   6635                           
-  6636                           ;main.c: 112:     MatrixLed[0] = 0b01111110;
+  6636                           ;main.c: 103:     MatrixLed[0] = 0b01111110;
   6637  02B4  307E               	movlw	126
   6638  02B5  00FC               	movwf	??i1_chegadaS1
   6639  02B6  087C               	movf	??i1_chegadaS1,w
   6640  02B7  0020               	movlb	0	; select bank0
   6641  02B8  00C3               	movwf	_MatrixLed
   6642                           
-  6643                           ;main.c: 113:     MatrixLed[1] = 0b10000001;
+  6643                           ;main.c: 104:     MatrixLed[1] = 0b10000001;
   6644  02B9  3081               	movlw	129
   6645  02BA  00FC               	movwf	??i1_chegadaS1
   6646  02BB  087C               	movf	??i1_chegadaS1,w
   6647  02BC  00C4               	movwf	_MatrixLed+1
   6648                           
-  6649                           ;main.c: 114:     MatrixLed[2] = 0b10000001;
+  6649                           ;main.c: 105:     MatrixLed[2] = 0b10000001;
   6650  02BD  3081               	movlw	129
   6651  02BE  00FC               	movwf	??i1_chegadaS1
   6652  02BF  087C               	movf	??i1_chegadaS1,w
   6653  02C0  00C5               	movwf	_MatrixLed+2
   6654                           
-  6655                           ;main.c: 115:     MatrixLed[3] = 0b01111110;
+  6655                           ;main.c: 106:     MatrixLed[3] = 0b01111110;
   6656  02C1  307E               	movlw	126
   6657  02C2  00FC               	movwf	??i1_chegadaS1
   6658  02C3  087C               	movf	??i1_chegadaS1,w
   6659  02C4  00C6               	movwf	_MatrixLed+3
   6660  02C5                     i1l1978:
   6661                           
-  6662                           ;main.c: 116:     MatrixLed[4] = 0;
+  6662                           ;main.c: 107:     MatrixLed[4] = 0;
   6663  02C5  01C7               	clrf	_MatrixLed+4
   6664  02C6                     i1l1980:
   6665                           
-  6666                           ;main.c: 117:     if(subindo){
+  6666                           ;main.c: 108:     if(subindo){
   6667  02C6  0853               	movf	_subindo,w
   6668  02C7  1903               	btfsc	3,2
   6669  02C8  2ACA               	goto	u52_21
@@ -6725,48 +6725,48 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   6673  02CB                     u52_20:
   6674  02CB                     i1l1982:
   6675                           
-  6676                           ;main.c: 118:         MatrixLed[5] = 0b01100000;
+  6676                           ;main.c: 109:         MatrixLed[5] = 0b01100000;
   6677  02CB  3060               	movlw	96
   6678  02CC  00FC               	movwf	??i1_chegadaS1
   6679  02CD  087C               	movf	??i1_chegadaS1,w
   6680  02CE  00C8               	movwf	_MatrixLed+5
   6681                           
-  6682                           ;main.c: 119:         MatrixLed[6] = 0b11000000;
+  6682                           ;main.c: 110:         MatrixLed[6] = 0b11000000;
   6683  02CF  30C0               	movlw	192
   6684  02D0  00FC               	movwf	??i1_chegadaS1
   6685  02D1  087C               	movf	??i1_chegadaS1,w
   6686  02D2  00C9               	movwf	_MatrixLed+6
   6687                           
-  6688                           ;main.c: 120:         MatrixLed[7] = 0b01100000;
+  6688                           ;main.c: 111:         MatrixLed[7] = 0b01100000;
   6689  02D3  3060               	movlw	96
   6690  02D4  00FC               	movwf	??i1_chegadaS1
   6691  02D5  087C               	movf	??i1_chegadaS1,w
   6692  02D6  00CA               	movwf	_MatrixLed+7
   6693                           
-  6694                           ;main.c: 121:     }else{
+  6694                           ;main.c: 112:     }else{
   6695  02D7  2AE9               	goto	i1l1988
   6696  02D8                     i1l1984:
   6697                           
-  6698                           ;main.c: 122:         MatrixLed[5] = 0b11000000;
+  6698                           ;main.c: 113:         MatrixLed[5] = 0b11000000;
   6699  02D8  30C0               	movlw	192
   6700  02D9  00FC               	movwf	??i1_chegadaS1
   6701  02DA  087C               	movf	??i1_chegadaS1,w
   6702  02DB  00C8               	movwf	_MatrixLed+5
   6703                           
-  6704                           ;main.c: 123:         MatrixLed[6] = 0b01100000;
+  6704                           ;main.c: 114:         MatrixLed[6] = 0b01100000;
   6705  02DC  3060               	movlw	96
   6706  02DD  00FC               	movwf	??i1_chegadaS1
   6707  02DE  087C               	movf	??i1_chegadaS1,w
   6708  02DF  00C9               	movwf	_MatrixLed+6
   6709                           
-  6710                           ;main.c: 124:         MatrixLed[7] = 0b11000000;
+  6710                           ;main.c: 115:         MatrixLed[7] = 0b11000000;
   6711  02E0  30C0               	movlw	192
   6712  02E1  00FC               	movwf	??i1_chegadaS1
   6713  02E2  087C               	movf	??i1_chegadaS1,w
   6714  02E3  00CA               	movwf	_MatrixLed+7
   6715  02E4                     i1l1986:
   6716                           
-  6717                           ;main.c: 125:         destinoDesc = destinoDesc & 0b11111110;
+  6717                           ;main.c: 116:         destinoDesc = destinoDesc & 0b11111110;
   6718  02E4  084F               	movf	_destinoDesc,w
   6719  02E5  39FE               	andlw	254
   6720  02E6  00FC               	movwf	??i1_chegadaS1
@@ -6774,7 +6774,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   6722  02E8  00CF               	movwf	_destinoDesc
   6723  02E9                     i1l1988:
   6724                           
-  6725                           ;main.c: 127:     matrixUpdate();
+  6725                           ;main.c: 118:     matrixUpdate();
   6726  02E9  3183  23E5  3182   	fcall	i1_matrixUpdate
   6727  02EC                     i1l593:
   6728  02EC  0008               	return
@@ -6826,7 +6826,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   6774  0234                     __ptext43:	
   6775 ;; *************** function i1_chegadaS2 *****************
   6776 ;; Defined at:
-  6777 ;;		line 130 in file "main.c"
+  6777 ;;		line 121 in file "main.c"
   6778 ;; Parameters:    Size  Location     Type
   6779 ;;		None
   6780 ;; Auto vars:     Size  Location     Type
@@ -6862,34 +6862,34 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   6810                           ; Regs used in i1_chegadaS2: [wreg+fsr1l+fsr1h+status,2+status,0+pclath+cstack]
   6811                           
   6812                           
-  6813                           ;main.c: 132:     MatrixLed[0] = 0b00000000;
+  6813                           ;main.c: 123:     MatrixLed[0] = 0b00000000;
   6814  0234  0020               	movlb	0	; select bank0
   6815  0235  01C3               	clrf	_MatrixLed
   6816  0236                     i1l1992:
   6817                           
-  6818                           ;main.c: 133:     MatrixLed[1] = 0b01000001;
+  6818                           ;main.c: 124:     MatrixLed[1] = 0b01000001;
   6819  0236  3041               	movlw	65
   6820  0237  00FC               	movwf	??i1_chegadaS2
   6821  0238  087C               	movf	??i1_chegadaS2,w
   6822  0239  00C4               	movwf	_MatrixLed+1
   6823  023A                     i1l1994:
   6824                           
-  6825                           ;main.c: 134:     MatrixLed[2] = 0b11111111;
+  6825                           ;main.c: 125:     MatrixLed[2] = 0b11111111;
   6826  023A  30FF               	movlw	255
   6827  023B  00FC               	movwf	??i1_chegadaS2
   6828  023C  087C               	movf	??i1_chegadaS2,w
   6829  023D  00C5               	movwf	_MatrixLed+2
   6830  023E                     i1l1996:
   6831                           
-  6832                           ;main.c: 135:     MatrixLed[3] = 0b00000001;
+  6832                           ;main.c: 126:     MatrixLed[3] = 0b00000001;
   6833  023E  01C6               	clrf	_MatrixLed+3
   6834  023F  0AC6               	incf	_MatrixLed+3,f
   6835                           
-  6836                           ;main.c: 136:     MatrixLed[4] = 0;
+  6836                           ;main.c: 127:     MatrixLed[4] = 0;
   6837  0240  01C7               	clrf	_MatrixLed+4
   6838  0241                     i1l1998:
   6839                           
-  6840                           ;main.c: 137:     if(subindo){
+  6840                           ;main.c: 128:     if(subindo){
   6841  0241  0853               	movf	_subindo,w
   6842  0242  1903               	btfsc	3,2
   6843  0243  2A45               	goto	u53_21
@@ -6899,56 +6899,56 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   6847  0246                     u53_20:
   6848  0246                     i1l2000:
   6849                           
-  6850                           ;main.c: 138:         MatrixLed[5] = 0b01100000;
+  6850                           ;main.c: 129:         MatrixLed[5] = 0b01100000;
   6851  0246  3060               	movlw	96
   6852  0247  00FC               	movwf	??i1_chegadaS2
   6853  0248  087C               	movf	??i1_chegadaS2,w
   6854  0249  00C8               	movwf	_MatrixLed+5
   6855                           
-  6856                           ;main.c: 139:         MatrixLed[6] = 0b11000000;
+  6856                           ;main.c: 130:         MatrixLed[6] = 0b11000000;
   6857  024A  30C0               	movlw	192
   6858  024B  00FC               	movwf	??i1_chegadaS2
   6859  024C  087C               	movf	??i1_chegadaS2,w
   6860  024D  00C9               	movwf	_MatrixLed+6
   6861                           
-  6862                           ;main.c: 140:         MatrixLed[7] = 0b01100000;
+  6862                           ;main.c: 131:         MatrixLed[7] = 0b01100000;
   6863  024E  3060               	movlw	96
   6864  024F  00FC               	movwf	??i1_chegadaS2
   6865  0250  087C               	movf	??i1_chegadaS2,w
   6866  0251  00CA               	movwf	_MatrixLed+7
   6867  0252                     i1l2002:
   6868                           
-  6869                           ;main.c: 141:         destinoSub = destinoSub & 0b11111101;
+  6869                           ;main.c: 132:         destinoSub = destinoSub & 0b11111101;
   6870  0252  0850               	movf	_destinoSub,w
   6871  0253  39FD               	andlw	253
   6872  0254  00FC               	movwf	??i1_chegadaS2
   6873  0255  087C               	movf	??i1_chegadaS2,w
   6874  0256  00D0               	movwf	_destinoSub
   6875                           
-  6876                           ;main.c: 142:     }else{
+  6876                           ;main.c: 133:     }else{
   6877  0257  2A69               	goto	i1l2008
   6878  0258                     i1l2004:
   6879                           
-  6880                           ;main.c: 143:         MatrixLed[5] = 0b11000000;
+  6880                           ;main.c: 134:         MatrixLed[5] = 0b11000000;
   6881  0258  30C0               	movlw	192
   6882  0259  00FC               	movwf	??i1_chegadaS2
   6883  025A  087C               	movf	??i1_chegadaS2,w
   6884  025B  00C8               	movwf	_MatrixLed+5
   6885                           
-  6886                           ;main.c: 144:         MatrixLed[6] = 0b01100000;
+  6886                           ;main.c: 135:         MatrixLed[6] = 0b01100000;
   6887  025C  3060               	movlw	96
   6888  025D  00FC               	movwf	??i1_chegadaS2
   6889  025E  087C               	movf	??i1_chegadaS2,w
   6890  025F  00C9               	movwf	_MatrixLed+6
   6891                           
-  6892                           ;main.c: 145:         MatrixLed[7] = 0b11000000;
+  6892                           ;main.c: 136:         MatrixLed[7] = 0b11000000;
   6893  0260  30C0               	movlw	192
   6894  0261  00FC               	movwf	??i1_chegadaS2
   6895  0262  087C               	movf	??i1_chegadaS2,w
   6896  0263  00CA               	movwf	_MatrixLed+7
   6897  0264                     i1l2006:
   6898                           
-  6899                           ;main.c: 146:         destinoDesc = destinoDesc & 0b11111101;
+  6899                           ;main.c: 137:         destinoDesc = destinoDesc & 0b11111101;
   6900  0264  084F               	movf	_destinoDesc,w
   6901  0265  39FD               	andlw	253
   6902  0266  00FC               	movwf	??i1_chegadaS2
@@ -6956,7 +6956,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   6904  0268  00CF               	movwf	_destinoDesc
   6905  0269                     i1l2008:
   6906                           
-  6907                           ;main.c: 148:     MatrixLed[7] = MatrixLed[7] | destinoSub;
+  6907                           ;main.c: 139:     MatrixLed[7] = MatrixLed[7] | destinoSub;
   6908  0269  084A               	movf	_MatrixLed+7,w
   6909  026A  0450               	iorwf	_destinoSub,w
   6910  026B  00FC               	movwf	??i1_chegadaS2
@@ -6964,7 +6964,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   6912  026D  00CA               	movwf	_MatrixLed+7
   6913  026E                     i1l2010:
   6914                           
-  6915                           ;main.c: 149:     MatrixLed[6] = MatrixLed[6] | destinoDesc;
+  6915                           ;main.c: 140:     MatrixLed[6] = MatrixLed[6] | destinoDesc;
   6916  026E  0849               	movf	_MatrixLed+6,w
   6917  026F  044F               	iorwf	_destinoDesc,w
   6918  0270  00FC               	movwf	??i1_chegadaS2
@@ -6972,7 +6972,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   6920  0272  00C9               	movwf	_MatrixLed+6
   6921  0273                     i1l2012:
   6922                           
-  6923                           ;main.c: 150:     matrixUpdate();
+  6923                           ;main.c: 141:     matrixUpdate();
   6924  0273  3183  23E5  3182   	fcall	i1_matrixUpdate
   6925  0276                     i1l598:
   6926  0276  0008               	return
@@ -6982,7 +6982,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   6930  03E5                     __ptext44:	
   6931 ;; *************** function i1_matrixUpdate *****************
   6932 ;; Defined at:
-  6933 ;;		line 72 in file "main.c"
+  6933 ;;		line 62 in file "main.c"
   6934 ;; Parameters:    Size  Location     Type
   6935 ;;		None
   6936 ;; Auto vars:     Size  Location     Type
@@ -7022,21 +7022,21 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   6970                           ; Regs used in i1_matrixUpdate: [wreg+fsr1l+fsr1h+status,2+status,0+pclath+cstack]
   6971                           
   6972                           
-  6973                           ;main.c: 75:         for(uint8_t i=8;i>0;i--){
+  6973                           ;main.c: 65:         for(uint8_t i=8;i>0;i--){
   6974  03E5  3008               	movlw	8
   6975  03E6  00F8               	movwf	??i1_matrixUpdate
   6976  03E7  0878               	movf	??i1_matrixUpdate,w
   6977  03E8  00FB               	movwf	i1matrixUpdate@i
   6978  03E9                     i1l1930:
   6979                           
-  6980                           ;main.c: 76:             data[0] = i;
+  6980                           ;main.c: 66:             data[0] = i;
   6981  03E9  087B               	movf	i1matrixUpdate@i,w
   6982  03EA  00F8               	movwf	??i1_matrixUpdate
   6983  03EB  0878               	movf	??i1_matrixUpdate,w
   6984  03EC  00F9               	movwf	i1matrixUpdate@data
   6985  03ED                     i1l1932:
   6986                           
-  6987                           ;main.c: 77:             data[1] = MatrixLed[i-1];
+  6987                           ;main.c: 67:             data[1] = MatrixLed[i-1];
   6988  03ED  087B               	movf	i1matrixUpdate@i,w
   6989  03EE  3E42               	addlw	(low ((_MatrixLed| 0+255)))& (0+255)
   6990  03EF  0086               	movwf	6
@@ -7047,7 +7047,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   6995  03F4  00FA               	movwf	i1matrixUpdate@data+1
   6996  03F5                     i1l1934:
   6997                           
-  6998                           ;main.c: 78:             txSpi(data, 2);
+  6998                           ;main.c: 68:             txSpi(data, 2);
   6999  03F5  3002               	movlw	2
   7000  03F6  00F5               	movwf	i1txSpi@dataSize
   7001  03F7  3000               	movlw	0
@@ -7056,7 +7056,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   7004  03FA  3184  2498  3183   	fcall	i1_txSpi
   7005  03FD                     i1l1936:
   7006                           
-  7007                           ;main.c: 79:         }
+  7007                           ;main.c: 69:         }
   7008  03FD  3001               	movlw	1
   7009  03FE  02FB               	subwf	i1matrixUpdate@i,f
   7010  03FF                     i1l1938:
@@ -7075,7 +7075,7 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   7023  0498                     __ptext45:	
   7024 ;; *************** function i1_txSpi *****************
   7025 ;; Defined at:
-  7026 ;;		line 64 in file "main.c"
+  7026 ;;		line 54 in file "main.c"
   7027 ;; Parameters:    Size  Location     Type
   7028 ;;  data            1    wreg     PTR unsigned char 
   7029 ;;		 -> i1matrixUpdate@data(2), initMatrix@data(4), matrixUpdate@data(2), 
@@ -7115,13 +7115,13 @@ Microchip MPLAB XC8 C Compiler v2.36 (Free license) build 20220127204148 Og1
   7063                           ;i1txSpi@data stored from wreg
   7064  0498  00F7               	movwf	i1txSpi@data
   7065  0499                     i1l565:	
-  7066                           ;main.c: 65:     do { LATBbits.LATB1 = 0; } while(0);
+  7066                           ;main.c: 55:     do { LATBbits.LATB1 = 0; } while(0);
   7067                           
   7068  0499  0022               	movlb	2	; select bank2
   7069  049A  108D               	bcf	13,1	;volatile
   7070  049B                     i1l1910:
   7071                           
-  7072                           ;main.c: 66:     SPI1_ExchangeBlock(data,dataSize);
+  7072                           ;main.c: 56:     SPI1_ExchangeBlock(data,dataSize);
   7073  049B  0876               	movf	i1txSpi@dataSize+1,w
   7074  049C  00F1               	movwf	i1SPI1_ExchangeBlock@blockSize+1
   7075  049D  0875               	movf	i1txSpi@dataSize,w
@@ -8015,7 +8015,7 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.36 build 20220127204148 
-Symbol Table                                                                                   Thu Jul 13 19:33:46 2023
+Symbol Table                                                                                   Thu Jul 13 20:02:13 2023
 
              ??_IOCBF3_DefaultInterruptHandler 0070                ?_IOCBF3_DefaultInterruptHandler 0070  
                            _SPI1_ExchangeBlock 031E                                             l11 0504  

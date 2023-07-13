@@ -4712,10 +4712,8 @@ void OSCILLATOR_Initialize(void);
 void WDT_Initialize(void);
 # 44 "main.c" 2
 
-
-
-
-
+# 1 "./main.h" 1
+# 18 "./main.h"
 const uint8_t matrix_conf[] = {
     0x09,0x00,
     0x0A,0x00,
@@ -4729,8 +4727,20 @@ const uint8_t matrix_conf[] = {
 
 _Bool subindo = 1;
 uint8_t MatrixLed[8];
-uint8_t destinoSub;
-uint8_t destinoDesc;
+uint8_t destinoSub= 0;
+uint8_t destinoDesc= 0;
+
+
+
+void txSpi( uint8_t *data, size_t dataSize);
+void matrixUpdate();
+void initMatrix();
+void chegadaS1();
+void chegadaS2();
+void chegadaS3();
+void chegadaS4();
+# 45 "main.c" 2
+# 54 "main.c"
 void txSpi( uint8_t *data, size_t dataSize){
     do { LATBbits.LATB1 = 0; } while(0);
     SPI1_ExchangeBlock(data,dataSize);
@@ -4777,6 +4787,7 @@ void initMatrix(){
         }
     }
 }
+
 void chegadaS1(){
 
     MatrixLed[0] = 0b01111110;

@@ -42,25 +42,15 @@
 */
 
 #include "mcc_generated_files/mcc.h"
+#include "main.h"
 
 /*
                          Main application
  */
-const uint8_t matrix_conf[] = {
-    0x09,0x00,  // Decode mode = 0
-    0x0A,0x00,  // Intensity 1/32
-    0x0B,0x07,  // Scan Limit
-    0x0C,0x01,  // Shutdown mode = 1
-    0x0F,0x01,  // Display-Test = 1
-    0x0F,0x00,  // Display-Test = 0
-};  ///< Configuração da matriz de  LEDs
 
-#define flip_matrix  true
 
-bool subindo = true;
-uint8_t MatrixLed[8];
-uint8_t destinoSub= 0; // indice 1 para andar 1, 2 para andar 2 e 3 para andar 3
-uint8_t destinoDesc= 0;// indice 0 para andar 0, 1 para andar 1 e 2 para andar 2
+
+
 void txSpi( uint8_t *data, size_t dataSize){
     CS_SetLow();            // Ativa CS
     SPI1_ExchangeBlock(data,dataSize);// Tx

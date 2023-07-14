@@ -164,7 +164,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADC" name="dependentModuleKey"/>
-         <value>1</value>
+         <value>2</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADC" name="enableInterrupt"/>
@@ -732,7 +732,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="CMP1" registerAlias="CMCON1"/>
-         <value>96</value>
+         <value>160</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="CMP1" registerAlias="CI" settingAlias="enable"/>
@@ -776,11 +776,11 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="CMP1" registerAlias="CMCON1" settingAlias="CINTN"/>
-         <value>intFlag_neg</value>
+         <value>no_intFlag</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="CMP1" registerAlias="CMCON1" settingAlias="CINTP"/>
-         <value>no_intFlag</value>
+         <value>intFlag_pos</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="CMP1" registerAlias="CMCON1" settingAlias="CNCH"/>
@@ -924,7 +924,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="CMP2" registerAlias="CMCON1"/>
-         <value>97</value>
+         <value>161</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="CMP2" registerAlias="CI" settingAlias="enable"/>
@@ -968,11 +968,11 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="CMP2" registerAlias="CMCON1" settingAlias="CINTN"/>
-         <value>intFlag_neg</value>
+         <value>no_intFlag</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="CMP2" registerAlias="CMCON1" settingAlias="CINTP"/>
-         <value>no_intFlag</value>
+         <value>intFlag_pos</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="CMP2" registerAlias="CMCON1" settingAlias="CNCH"/>
@@ -4316,7 +4316,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TMR1" name="dependentModuleKey"/>
-         <value>1</value>
+         <value>2</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TMR1" name="gatePin"/>
@@ -4886,11 +4886,11 @@
       </entry>
       <entry>
          <file>mcc_generated_files\mcc.c</file>
-         <hash>5873478d8876ee237c2f4b57e5d5f9cf312da9c177c6603a7bab957af09b8de2</hash>
+         <hash>95d673bbfacba6300057ac0563bec5a829b3a5f906d596434052e99ddb96ec61</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\mcc.h</file>
-         <hash>f759be371ea9c074b6e1975ef56a033cf41c99b5b20006ec233f736fe8d67233</hash>
+         <hash>5b17c190ae2f56afbf8f70c5701a8b7d727e2018eaec6e14d2357a32f8a718be</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\device_config.h</file>
@@ -4946,7 +4946,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\cmp2.c</file>
-         <hash>d6ebf456b2269609498cad5b2237f7430d0cf7c077924c9efca553d8418ced48</hash>
+         <hash>452ae95dfc2d49763cbcb68679cc9cee716f3f8a1953f37dd5ee46daf7199772</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\cmp2.h</file>
@@ -4974,7 +4974,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\cmp1.c</file>
-         <hash>ce1e50b8c60f6f671de92b9bd300e310053e359ea7052f15f44471e8e5464a4c</hash>
+         <hash>b509d2cdc2eb60dd6c5fa3f4d0aca7a5cbca208552ab37d43d1d137b5fc8f768</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>

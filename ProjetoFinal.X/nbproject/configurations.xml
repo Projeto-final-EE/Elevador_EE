@@ -22,6 +22,7 @@
         <itemPath>mcc_generated_files/spi1.h</itemPath>
         <itemPath>mcc_generated_files/tmr0.h</itemPath>
       </logicalFolder>
+      <itemPath>main.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"

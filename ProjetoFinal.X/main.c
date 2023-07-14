@@ -42,10 +42,17 @@
 */
 
 #include "mcc_generated_files/mcc.h"
+#include "main.h"
+
+// Functions
+bool isValidFloor(char floor){
+    return floor >= '0' && floor <= '3';
+}
 
 /*
                          Main application
  */
+
 void main(void)
 {
     // initialize the device
@@ -69,7 +76,29 @@ void main(void)
     while (1)
     {
         // Add your application code
-        __delay_ms(1);
+        if(EUSART_is_rx_ready()){
+            rxValue.v = EUSART_Read();
+            switch(rxValue.v){
+                case '$':
+                    waitRX = true;
+                    break;
+                case 0x0D:
+                    if(RXaccepted){
+                        origem = rxValue.o - 0x30;
+                        origem = rxValue.d - 0x30;
+                    }
+                    RXaccepted = false;
+                    break;
+                default:
+                    RXaccepted = false;
+                    if(waitRX){
+                        if(isValidFloor(rxValue.o) && isValidFloor(rxValue.d)){
+                            RXaccepted = true;
+                        }
+                    }
+                    waitRX = false;
+            }
+        }
     }
 }
 /**

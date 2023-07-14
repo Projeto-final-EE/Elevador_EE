@@ -4565,6 +4565,15 @@ extern void (*TMR1_InterruptHandler)(void);
 void TMR1_DefaultInterruptHandler(void);
 # 57 "mcc_generated_files/mcc.h" 2
 
+# 1 "mcc_generated_files/cmp2.h" 1
+# 92 "mcc_generated_files/cmp2.h"
+void CMP2_Initialize(void);
+# 132 "mcc_generated_files/cmp2.h"
+_Bool CMP2_GetOutputStatus(void);
+# 148 "mcc_generated_files/cmp2.h"
+void CMP2_ISR(void);
+# 58 "mcc_generated_files/mcc.h" 2
+
 # 1 "mcc_generated_files/tmr2.h" 1
 # 103 "mcc_generated_files/tmr2.h"
 void TMR2_Initialize(void);
@@ -4580,15 +4589,6 @@ void TMR2_WriteTimer(uint8_t timerVal);
 void TMR2_LoadPeriodRegister(uint8_t periodVal);
 # 325 "mcc_generated_files/tmr2.h"
 _Bool TMR2_HasOverflowOccured(void);
-# 58 "mcc_generated_files/mcc.h" 2
-
-# 1 "mcc_generated_files/cmp2.h" 1
-# 92 "mcc_generated_files/cmp2.h"
-void CMP2_Initialize(void);
-# 132 "mcc_generated_files/cmp2.h"
-_Bool CMP2_GetOutputStatus(void);
-# 148 "mcc_generated_files/cmp2.h"
-void CMP2_ISR(void);
 # 59 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/cmp1.h" 1

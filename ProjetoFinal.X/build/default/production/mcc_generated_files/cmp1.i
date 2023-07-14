@@ -4339,6 +4339,50 @@ _Bool CMP1_GetOutputStatus(void);
 void CMP1_ISR(void);
 # 53 "mcc_generated_files/cmp1.c" 2
 
+# 1 "mcc_generated_files/../main.h" 1
+# 19 "mcc_generated_files/../main.h"
+const uint8_t matrix_conf[] = {
+    0x09,0x00,
+    0x0A,0x00,
+    0x0B,0x07,
+    0x0C,0x01,
+    0x0F,0x01,
+    0x0F,0x00,
+};
+
+
+
+
+union{
+    char v;
+    struct{
+        char o : 4;
+        char d : 4;
+    };
+}rxValue;
+_Bool waitRX = 0;
+_Bool RXaccepted = 0;
+
+uint8_t origem;
+uint8_t destino;
+
+_Bool subindo = 1;
+uint8_t MatrixLed[8];
+uint8_t destinoSub= 0;
+uint8_t destinoDesc= 0;
+# 56 "mcc_generated_files/../main.h"
+_Bool isValidFloor(char floor);
+
+
+void txSpi( uint8_t *data, size_t dataSize);
+void matrixUpdate();
+void initMatrix();
+void chegadaS1();
+void chegadaS2();
+void chegadaS3();
+void chegadaS4();
+# 54 "mcc_generated_files/cmp1.c" 2
+
 
 
 
@@ -4356,7 +4400,7 @@ void CMP1_Initialize(void)
     CM1CON0 = 0x84;
 
 
-    CM1CON1 = 0x60;
+    CM1CON1 = 0xA0;
 
 
     PIR2bits.C1IF = 0;
@@ -4374,4 +4418,5 @@ void CMP1_ISR(void)
 {
 
     PIR2bits.C1IF = 0;
+    chegadaS3();
 }

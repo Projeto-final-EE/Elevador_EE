@@ -4564,6 +4564,15 @@ extern void (*TMR1_InterruptHandler)(void);
 void TMR1_DefaultInterruptHandler(void);
 # 57 "./mcc_generated_files/mcc.h" 2
 
+# 1 "./mcc_generated_files/cmp2.h" 1
+# 92 "./mcc_generated_files/cmp2.h"
+void CMP2_Initialize(void);
+# 132 "./mcc_generated_files/cmp2.h"
+_Bool CMP2_GetOutputStatus(void);
+# 148 "./mcc_generated_files/cmp2.h"
+void CMP2_ISR(void);
+# 58 "./mcc_generated_files/mcc.h" 2
+
 # 1 "./mcc_generated_files/tmr2.h" 1
 # 103 "./mcc_generated_files/tmr2.h"
 void TMR2_Initialize(void);
@@ -4579,15 +4588,6 @@ void TMR2_WriteTimer(uint8_t timerVal);
 void TMR2_LoadPeriodRegister(uint8_t periodVal);
 # 325 "./mcc_generated_files/tmr2.h"
 _Bool TMR2_HasOverflowOccured(void);
-# 58 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/cmp2.h" 1
-# 92 "./mcc_generated_files/cmp2.h"
-void CMP2_Initialize(void);
-# 132 "./mcc_generated_files/cmp2.h"
-_Bool CMP2_GetOutputStatus(void);
-# 148 "./mcc_generated_files/cmp2.h"
-void CMP2_ISR(void);
 # 59 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/cmp1.h" 1
@@ -4711,7 +4711,19 @@ void WDT_Initialize(void);
 # 44 "main.c" 2
 
 # 1 "./main.h" 1
-# 18 "./main.h"
+# 19 "./main.h"
+const uint8_t matrix_conf[] = {
+    0x09,0x00,
+    0x0A,0x00,
+    0x0B,0x07,
+    0x0C,0x01,
+    0x0F,0x01,
+    0x0F,0x00,
+};
+
+
+
+
 union{
     char v;
     struct{
@@ -4725,8 +4737,26 @@ _Bool RXaccepted = 0;
 uint8_t origem;
 uint8_t destino;
 
+_Bool subindo = 1;
+uint8_t MatrixLed[8];
+uint8_t destinoSub= 0;
+uint8_t destinoDesc= 0;
+# 56 "./main.h"
 _Bool isValidFloor(char floor);
+
+
+void txSpi( uint8_t *data, size_t dataSize);
+void matrixUpdate();
+void initMatrix();
+void chegadaS1();
+void chegadaS2();
+void chegadaS3();
+void chegadaS4();
 # 45 "main.c" 2
+
+
+
+
 
 
 
@@ -4734,15 +4764,174 @@ _Bool isValidFloor(char floor){
     return floor >= '0' && floor <= '3';
 }
 
+void txSpi( uint8_t *data, size_t dataSize){
+    do { LATBbits.LATB1 = 0; } while(0);
+    SPI1_ExchangeBlock(data,dataSize);
+    do { LATBbits.LATB1 = 1; } while(0);
 
 
+}
 
+void matrixUpdate(){
+    uint8_t data[2];
+    if (1){
+        for(uint8_t i=8;i>0;i--){
+            data[0] = i;
+            data[1] = MatrixLed[i-1];
+            txSpi(data, 2);
+        }
+    }else{
+        uint8_t index = 7;
+        for(uint8_t i=1;i<9;i++){
+
+            data[0] = i;
+            data[1] = MatrixLed[index];
+            txSpi(data, 2);
+            index--;
+        }
+    }
+}
+
+void initMatrix(){
+    uint8_t data[4];
+    uint8_t k=0;
+   for(uint8_t i =0; i<8; i++){
+            MatrixLed[i] = 0;
+        }
+    for(uint8_t i=0;i<6;i++){
+        for(uint8_t j=0;j<4;j=j+2){
+            data[j]= matrix_conf[k];
+            data[j+1]= matrix_conf[k+1];
+        }
+        k=k+2;
+        txSpi( data, 4);
+        if(i==4){
+
+        }
+    }
+}
+
+void chegadaS1(){
+
+    MatrixLed[0] = 0b01111110;
+    MatrixLed[1] = 0b10000001;
+    MatrixLed[2] = 0b10000001;
+    MatrixLed[3] = 0b01111110;
+    MatrixLed[4] = 0;
+    if(subindo){
+        MatrixLed[5] = 0b01100000;
+        MatrixLed[6] = 0b11000000;
+        MatrixLed[7] = 0b01100000;
+    }else{
+        MatrixLed[5] = 0b11000000;
+        MatrixLed[6] = 0b01100000;
+        MatrixLed[7] = 0b11000000;
+        destinoDesc = destinoDesc & 0b11111110;
+    }
+    matrixUpdate();
+}
+
+void chegadaS2(){
+
+    MatrixLed[0] = 0b00000000;
+    MatrixLed[1] = 0b01000001;
+    MatrixLed[2] = 0b11111111;
+    MatrixLed[3] = 0b00000001;
+    MatrixLed[4] = 0;
+    if(subindo){
+        MatrixLed[5] = 0b01100000;
+        MatrixLed[6] = 0b11000000;
+        MatrixLed[7] = 0b01100000;
+        destinoSub = destinoSub & 0b11111101;
+    }else{
+        MatrixLed[5] = 0b11000000;
+        MatrixLed[6] = 0b01100000;
+        MatrixLed[7] = 0b11000000;
+        destinoDesc = destinoDesc & 0b11111101;
+    }
+    MatrixLed[7] = MatrixLed[7] | destinoSub;
+    MatrixLed[6] = MatrixLed[6] | destinoDesc;
+    matrixUpdate();
+}
+
+void chegadaS3(){
+
+    MatrixLed[0] = 0b01000011;
+    MatrixLed[1] = 0b10000101;
+    MatrixLed[2] = 0b10001001;
+    MatrixLed[3] = 0b01110001;
+    MatrixLed[4] = 0;
+    if(subindo){
+        MatrixLed[5] = 0b01100000;
+        MatrixLed[6] = 0b11000000;
+        MatrixLed[7] = 0b01100000;
+        destinoSub = destinoSub & 0b11111011;
+    }else{
+        MatrixLed[5] = 0b11000000;
+        MatrixLed[6] = 0b01100000;
+        MatrixLed[7] = 0b11000000;
+        destinoDesc = destinoDesc & 0b11111011;
+    }
+    MatrixLed[7] = MatrixLed[7] | destinoSub;
+    MatrixLed[6] = MatrixLed[6] | destinoDesc;
+    matrixUpdate();
+}
+
+void chegadaS4(){
+
+    MatrixLed[0] = 0b10000001;
+    MatrixLed[1] = 0b10010001;
+    MatrixLed[2] = 0b10010001;
+    MatrixLed[3] = 0b01101110;
+    MatrixLed[4] = 0;
+    if(subindo){
+        MatrixLed[5] = 0b01100000;
+        MatrixLed[6] = 0b11000000;
+        MatrixLed[7] = 0b01100000;
+        destinoSub = destinoSub & 0b11110111;
+    }else{
+        MatrixLed[5] = 0b11000000;
+        MatrixLed[6] = 0b01100000;
+        MatrixLed[7] = 0b11000000;
+        destinoDesc = destinoDesc & 0b11110111;
+    }
+    MatrixLed[7] = MatrixLed[7] | destinoSub;
+    MatrixLed[6] = MatrixLed[6] | destinoDesc;
+    matrixUpdate();
+}
 
 void main(void)
 {
 
     SYSTEM_Initialize();
-# 76 "main.c"
+
+
+
+
+
+
+
+    IOCBF3_SetInterruptHandler(chegadaS1);
+    IOCBF3_SetInterruptHandler(chegadaS2);
+
+
+
+    do { LATBbits.LATB1 = 1; } while(0);
+    SPI1_Open(SPI1_DEFAULT);
+    initMatrix();
+
+
+    (INTCONbits.GIE = 1);
+
+
+    (INTCONbits.PEIE = 1);
+
+
+
+
+
+
+
     while (1)
     {
 

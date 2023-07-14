@@ -28,6 +28,11 @@ bool RXaccepted = false; // Indica que o valor recebido pela comunicação serial 
 uint8_t origem; // Indica origem da chamada do elevador
 uint8_t destino; // Indica o destino do elevador
 
+/**
+ * Funcao para checar se o char é um número entre '0' e '3', que sao os andares de operacao do elevador
+ * @param floor
+ * @return true se o char é um número entre '0' e '3' e false se nao é
+ */
 bool isValidFloor(char floor);
 
 #ifdef	__cplusplus

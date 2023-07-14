@@ -122,6 +122,8 @@ SPI1_DEFAULT 0
 [v _RXaccepted RXaccepted `a  1 e 1 0 ]
 "28
 [v _origem origem `uc  1 e 1 0 ]
+"29
+[v _destino destino `uc  1 e 1 0 ]
 [s S307 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
@@ -521,7 +523,7 @@ SPI1_DEFAULT 0
 "56 C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"100
+"103
 } 0
 "48
 [v _isValidFloor isValidFloor `(a  1 e 1 0 ]

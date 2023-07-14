@@ -85,7 +85,7 @@ void main(void)
                 case 0x0D:
                     if(RXaccepted){
                         origem = rxValue.o - 0x30;
-                        origem = rxValue.d - 0x30;
+                        destino = rxValue.d - 0x30;
                     }
                     RXaccepted = false;
                     break;

@@ -4755,13 +4755,16 @@ void main(void)
                 case 0x0D:
                     if(RXaccepted){
                         origem = rxValue.o - 0x30;
-                        origem = rxValue.d - 0x30;
+                        destino = rxValue.d - 0x30;
                     }
                     RXaccepted = 0;
                     break;
                 default:
-                    if(isValidFloor(rxValue.o) && isValidFloor(rxValue.d)){
-                        RXaccepted = 1;
+                    RXaccepted = 0;
+                    if(waitRX){
+                        if(isValidFloor(rxValue.o) && isValidFloor(rxValue.d)){
+                            RXaccepted = 1;
+                        }
                     }
                     waitRX = 0;
             }

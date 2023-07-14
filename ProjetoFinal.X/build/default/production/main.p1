@@ -576,8 +576,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 87:                         origem = rxValue.o - 0x30;
 [e = _origem -> - -> . . _rxValue 1 0 `i -> 48 `i `uc ]
 "88
-[; ;main.c: 88:                         origem = rxValue.d - 0x30;
-[e = _origem -> - -> . . _rxValue 1 1 `i -> 48 `i `uc ]
+[; ;main.c: 88:                         destino = rxValue.d - 0x30;
+[e = _destino -> - -> . . _rxValue 1 1 `i -> 48 `i `uc ]
 "89
 [; ;main.c: 89:                     }
 }
@@ -592,21 +592,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 92:                 default:
 [e :U 372 ]
 "93
-[; ;main.c: 93:                     if(isValidFloor(rxValue.o) && isValidFloor(rxValue.d)){
-[e $ ! && != -> ( _isValidFloor (1 -> . . _rxValue 1 0 `uc `i -> 0 `i != -> ( _isValidFloor (1 -> . . _rxValue 1 1 `uc `i -> 0 `i 373  ]
-{
+[; ;main.c: 93:                     RXaccepted = 0;
+[e = _RXaccepted -> -> 0 `i `a ]
 "94
-[; ;main.c: 94:                         RXaccepted = 1;
-[e = _RXaccepted -> -> 1 `i `a ]
+[; ;main.c: 94:                     if(waitRX){
+[e $ ! != -> _waitRX `i -> 0 `i 373  ]
+{
 "95
-[; ;main.c: 95:                     }
+[; ;main.c: 95:                         if(isValidFloor(rxValue.o) && isValidFloor(rxValue.d)){
+[e $ ! && != -> ( _isValidFloor (1 -> . . _rxValue 1 0 `uc `i -> 0 `i != -> ( _isValidFloor (1 -> . . _rxValue 1 1 `uc `i -> 0 `i 374  ]
+{
+"96
+[; ;main.c: 96:                             RXaccepted = 1;
+[e = _RXaccepted -> -> 1 `i `a ]
+"97
+[; ;main.c: 97:                         }
+}
+[e :U 374 ]
+"98
+[; ;main.c: 98:                     }
 }
 [e :U 373 ]
-"96
-[; ;main.c: 96:                     waitRX = 0;
+"99
+[; ;main.c: 99:                     waitRX = 0;
 [e = _waitRX -> -> 0 `i `a ]
-"97
-[; ;main.c: 97:             }
+"100
+[; ;main.c: 100:             }
 }
 [e $U 367  ]
 [e :U 368 ]
@@ -614,17 +625,17 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 13 `i 370
  372 ]
 [e :U 367 ]
-"98
-[; ;main.c: 98:         }
+"101
+[; ;main.c: 101:         }
 }
 [e :U 366 ]
-"99
-[; ;main.c: 99:     }
+"102
+[; ;main.c: 102:     }
 }
 [e :U 363 ]
 [e $U 364  ]
 [e :U 365 ]
-"100
-[; ;main.c: 100: }
+"103
+[; ;main.c: 103: }
 [e :UE 362 ]
 }

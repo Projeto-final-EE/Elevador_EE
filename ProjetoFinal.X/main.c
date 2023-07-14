@@ -44,17 +44,14 @@
 #include "mcc_generated_files/mcc.h"
 #include "main.h"
 
-// Functions
-bool isValidFloor(char floor){
-    return floor >= '0' && floor <= '3';
-}
-
 /*
                          Main application
  */
 
-
-
+// Functions
+bool isValidFloor(char floor){
+    return floor >= '0' && floor <= '3';
+}
 
 void txSpi( uint8_t *data, size_t dataSize){
     CS_SetLow();            // Ativa CS

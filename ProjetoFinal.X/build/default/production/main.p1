@@ -1,12 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"33 ./main.h
-[; ;./main.h: 33:     struct{
-[s S360 :4 `uc 1 :4 `uc 1 ]
-[n S360 . o d ]
-"31
-[; ;./main.h: 31: union{
-[u S359 `uc 1 `S360 1 ]
-[n S359 . v . ]
+"39 ./main.h
+[; ;./main.h: 39: State state = START;
+[c E2944 0 1 2 3 .. ]
+[n E2944 . START FIRST_NUM SECOND_NUM CR  ]
 "2103 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 2103:     struct {
 [s S112 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -29,8 +25,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "375 ./mcc_generated_files/pin_manager.h
 [; ;./mcc_generated_files/pin_manager.h: 375: void IOCBF3_SetInterruptHandler(void (* InterruptHandler)(void));
 [v _IOCBF3_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F2492 ]
-[v F2992 `(v ~T0 @X0 0 tf ]
-[v F2994 `(v ~T0 @X0 0 tf ]
+[v F2993 `(v ~T0 @X0 0 tf ]
+[v F2995 `(v ~T0 @X0 0 tf ]
 "209 main.c
 [; ;main.c: 209:     SPI1_Open(SPI1_DEFAULT);
 [c E2819 0 .. ]
@@ -533,8 +529,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6749
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 6749: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"19 ./main.h
-[; ;./main.h: 19: const uint8_t matrix_conf[] = {
+"27 ./main.h
+[; ;./main.h: 27: const uint8_t matrix_conf[] = {
 [v _matrix_conf `Cuc ~T0 @X0 -> 12 `i e ]
 [i _matrix_conf
 :U ..
@@ -552,44 +548,50 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ..
 ]
-"37
-[; ;./main.h: 37: }rxValue;
-[v _rxValue `S359 ~T0 @X0 1 e ]
-"38
-[; ;./main.h: 38: _Bool waitRX = 0;
+"39
+[; ;./main.h: 39: State state = START;
+[v _state `E2944 ~T0 @X0 1 e ]
+[i _state
+. `E2944 0
+]
+"40
+[; ;./main.h: 40: char rxValue;
+[v _rxValue `uc ~T0 @X0 1 e ]
+"41
+[; ;./main.h: 41: _Bool waitRX = 0;
 [v _waitRX `a ~T0 @X0 1 e ]
 [i _waitRX
 -> -> 0 `i `a
 ]
-"39
-[; ;./main.h: 39: _Bool RXaccepted = 0;
+"42
+[; ;./main.h: 42: _Bool RXaccepted = 0;
 [v _RXaccepted `a ~T0 @X0 1 e ]
 [i _RXaccepted
 -> -> 0 `i `a
 ]
-"41
-[; ;./main.h: 41: uint8_t origem;
-[v _origem `uc ~T0 @X0 1 e ]
-"42
-[; ;./main.h: 42: uint8_t destino;
-[v _destino `uc ~T0 @X0 1 e ]
 "44
-[; ;./main.h: 44: _Bool subindo = 1;
+[; ;./main.h: 44: uint8_t origem;
+[v _origem `uc ~T0 @X0 1 e ]
+"45
+[; ;./main.h: 45: uint8_t destino;
+[v _destino `uc ~T0 @X0 1 e ]
+"47
+[; ;./main.h: 47: _Bool subindo = 1;
 [v _subindo `a ~T0 @X0 1 e ]
 [i _subindo
 -> -> 1 `i `a
 ]
-"45
-[; ;./main.h: 45: uint8_t MatrixLed[8];
+"48
+[; ;./main.h: 48: uint8_t MatrixLed[8];
 [v _MatrixLed `uc ~T0 @X0 -> 8 `i e ]
-"46
-[; ;./main.h: 46: uint8_t destinoSub= 0;
+"49
+[; ;./main.h: 49: uint8_t destinoSub= 0;
 [v _destinoSub `uc ~T0 @X0 1 e ]
 [i _destinoSub
 -> -> 0 `i `uc
 ]
-"47
-[; ;./main.h: 47: uint8_t destinoDesc= 0;
+"50
+[; ;./main.h: 50: uint8_t destinoDesc= 0;
 [v _destinoDesc `uc ~T0 @X0 1 e ]
 [i _destinoDesc
 -> -> 0 `i `uc
@@ -604,10 +606,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "53
 [; ;main.c: 53:     return floor >= '0' && floor <= '3';
 [e ) -> -> && >= -> _floor `ui -> 48 `ui <= -> _floor `ui -> 51 `ui `i `a ]
-[e $UE 361  ]
+[e $UE 359  ]
 "54
 [; ;main.c: 54: }
-[e :UE 361 ]
+[e :UE 359 ]
 }
 "56
 [; ;main.c: 56: void txSpi( uint8_t *data, size_t dataSize){
@@ -619,24 +621,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "57
 [; ;main.c: 57:     do { LATBbits.LATB1 = 0; } while(0);
-[e :U 365 ]
+[e :U 363 ]
 {
 [e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
 }
-[e :U 364 ]
+[e :U 362 ]
 "58
 [; ;main.c: 58:     SPI1_ExchangeBlock(data,dataSize);
 [e ( _SPI1_ExchangeBlock (2 , -> _data `*v _dataSize ]
 "59
 [; ;main.c: 59:     do { LATBbits.LATB1 = 1; } while(0);
-[e :U 368 ]
+[e :U 366 ]
 {
 [e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
 }
-[e :U 367 ]
+[e :U 365 ]
 "62
 [; ;main.c: 62: }
-[e :UE 362 ]
+[e :UE 360 ]
 }
 "64
 [; ;main.c: 64: void matrixUpdate(){
@@ -649,16 +651,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _data `uc ~T0 @X0 -> 2 `i a ]
 "66
 [; ;main.c: 66:     if (1){
-[e $ ! != -> 1 `i -> 0 `i 370  ]
+[e $ ! != -> 1 `i -> 0 `i 368  ]
 {
 "67
 [; ;main.c: 67:         for(uint8_t i=8;i>0;i--){
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 8 `i `uc ]
-[e $ > -> _i `i -> 0 `i 371  ]
-[e $U 372  ]
-[e :U 371 ]
+[e $ > -> _i `i -> 0 `i 369  ]
+[e $U 370  ]
+[e :U 369 ]
 {
 "68
 [; ;main.c: 68:             data[0] = i;
@@ -673,14 +675,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 71:         }
 }
 [e -- _i -> -> 1 `i `uc ]
-[e $ > -> _i `i -> 0 `i 371  ]
-[e :U 372 ]
+[e $ > -> _i `i -> 0 `i 369  ]
+[e :U 370 ]
 }
 "72
 [; ;main.c: 72:     }else{
 }
-[e $U 374  ]
-[e :U 370 ]
+[e $U 372  ]
+[e :U 368 ]
 {
 "73
 [; ;main.c: 73:         uint8_t index = 7;
@@ -691,9 +693,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 9 `i 375  ]
-[e $U 376  ]
-[e :U 375 ]
+[e $ < -> _i `i -> 9 `i 373  ]
+[e $U 374  ]
+[e :U 373 ]
 {
 "76
 [; ;main.c: 76:             data[0] = i;
@@ -711,16 +713,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 80:         }
 }
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 9 `i 375  ]
-[e :U 376 ]
+[e $ < -> _i `i -> 9 `i 373  ]
+[e :U 374 ]
 }
 "81
 [; ;main.c: 81:     }
 }
-[e :U 374 ]
+[e :U 372 ]
 "82
 [; ;main.c: 82: }
-[e :UE 369 ]
+[e :UE 367 ]
 }
 "84
 [; ;main.c: 84: void initMatrix(){
@@ -740,9 +742,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 8 `i 379  ]
-[e $U 380  ]
-[e :U 379 ]
+[e $ < -> _i `i -> 8 `i 377  ]
+[e $U 378  ]
+[e :U 377 ]
 {
 "88
 [; ;main.c: 88:             MatrixLed[i] = 0;
@@ -751,26 +753,26 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 89:         }
 }
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 8 `i 379  ]
-[e :U 380 ]
+[e $ < -> _i `i -> 8 `i 377  ]
+[e :U 378 ]
 }
 "90
 [; ;main.c: 90:     for(uint8_t i=0;i<6;i++){
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 6 `i 382  ]
-[e $U 383  ]
-[e :U 382 ]
+[e $ < -> _i `i -> 6 `i 380  ]
+[e $U 381  ]
+[e :U 380 ]
 {
 "91
 [; ;main.c: 91:         for(uint8_t j=0;j<4;j=j+2){
 {
 [v _j `uc ~T0 @X0 1 a ]
 [e = _j -> -> 0 `i `uc ]
-[e $ < -> _j `i -> 4 `i 385  ]
-[e $U 386  ]
-[e :U 385 ]
+[e $ < -> _j `i -> 4 `i 383  ]
+[e $U 384  ]
+[e :U 383 ]
 {
 "92
 [; ;main.c: 92:             data[j]= matrix_conf[k];
@@ -782,8 +784,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 94:         }
 }
 [e = _j -> + -> _j `i -> 2 `i `uc ]
-[e $ < -> _j `i -> 4 `i 385  ]
-[e :U 386 ]
+[e $ < -> _j `i -> 4 `i 383  ]
+[e :U 384 ]
 }
 "95
 [; ;main.c: 95:         k=k+2;
@@ -793,22 +795,22 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _txSpi (2 , &U _data -> -> 4 `i `ui ]
 "97
 [; ;main.c: 97:         if(i==4){
-[e $ ! == -> _i `i -> 4 `i 388  ]
+[e $ ! == -> _i `i -> 4 `i 386  ]
 {
 "99
 [; ;main.c: 99:         }
 }
-[e :U 388 ]
+[e :U 386 ]
 "100
 [; ;main.c: 100:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 6 `i 382  ]
-[e :U 383 ]
+[e $ < -> _i `i -> 6 `i 380  ]
+[e :U 381 ]
 }
 "101
 [; ;main.c: 101: }
-[e :UE 378 ]
+[e :UE 376 ]
 }
 "103
 [; ;main.c: 103: void chegadaS1(){
@@ -833,7 +835,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = *U + &U _MatrixLed * -> -> -> 4 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 0 `i `uc ]
 "110
 [; ;main.c: 110:     if(subindo){
-[e $ ! != -> _subindo `i -> 0 `i 390  ]
+[e $ ! != -> _subindo `i -> 0 `i 388  ]
 {
 "111
 [; ;main.c: 111:         MatrixLed[5] = 0b01100000;
@@ -847,8 +849,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "114
 [; ;main.c: 114:     }else{
 }
-[e $U 391  ]
-[e :U 390 ]
+[e $U 389  ]
+[e :U 388 ]
 {
 "115
 [; ;main.c: 115:         MatrixLed[5] = 0b11000000;
@@ -865,13 +867,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "119
 [; ;main.c: 119:     }
 }
-[e :U 391 ]
+[e :U 389 ]
 "120
 [; ;main.c: 120:     matrixUpdate();
 [e ( _matrixUpdate ..  ]
 "121
 [; ;main.c: 121: }
-[e :UE 389 ]
+[e :UE 387 ]
 }
 "123
 [; ;main.c: 123: void chegadaS2(){
@@ -896,7 +898,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = *U + &U _MatrixLed * -> -> -> 4 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 0 `i `uc ]
 "130
 [; ;main.c: 130:     if(subindo){
-[e $ ! != -> _subindo `i -> 0 `i 393  ]
+[e $ ! != -> _subindo `i -> 0 `i 391  ]
 {
 "131
 [; ;main.c: 131:         MatrixLed[5] = 0b01100000;
@@ -913,8 +915,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "135
 [; ;main.c: 135:     }else{
 }
-[e $U 394  ]
-[e :U 393 ]
+[e $U 392  ]
+[e :U 391 ]
 {
 "136
 [; ;main.c: 136:         MatrixLed[5] = 0b11000000;
@@ -931,7 +933,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "140
 [; ;main.c: 140:     }
 }
-[e :U 394 ]
+[e :U 392 ]
 "141
 [; ;main.c: 141:     MatrixLed[7] = MatrixLed[7] | destinoSub;
 [e = *U + &U _MatrixLed * -> -> -> 7 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> | -> *U + &U _MatrixLed * -> -> -> 7 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux `i -> _destinoSub `i `uc ]
@@ -943,7 +945,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _matrixUpdate ..  ]
 "144
 [; ;main.c: 144: }
-[e :UE 392 ]
+[e :UE 390 ]
 }
 "146
 [; ;main.c: 146: void chegadaS3(){
@@ -968,7 +970,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = *U + &U _MatrixLed * -> -> -> 4 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 0 `i `uc ]
 "153
 [; ;main.c: 153:     if(subindo){
-[e $ ! != -> _subindo `i -> 0 `i 396  ]
+[e $ ! != -> _subindo `i -> 0 `i 394  ]
 {
 "154
 [; ;main.c: 154:         MatrixLed[5] = 0b01100000;
@@ -985,8 +987,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "158
 [; ;main.c: 158:     }else{
 }
-[e $U 397  ]
-[e :U 396 ]
+[e $U 395  ]
+[e :U 394 ]
 {
 "159
 [; ;main.c: 159:         MatrixLed[5] = 0b11000000;
@@ -1003,7 +1005,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "163
 [; ;main.c: 163:     }
 }
-[e :U 397 ]
+[e :U 395 ]
 "164
 [; ;main.c: 164:     MatrixLed[7] = MatrixLed[7] | destinoSub;
 [e = *U + &U _MatrixLed * -> -> -> 7 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> | -> *U + &U _MatrixLed * -> -> -> 7 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux `i -> _destinoSub `i `uc ]
@@ -1015,7 +1017,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _matrixUpdate ..  ]
 "167
 [; ;main.c: 167: }
-[e :UE 395 ]
+[e :UE 393 ]
 }
 "169
 [; ;main.c: 169: void chegadaS4(){
@@ -1040,7 +1042,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = *U + &U _MatrixLed * -> -> -> 4 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 0 `i `uc ]
 "176
 [; ;main.c: 176:     if(subindo){
-[e $ ! != -> _subindo `i -> 0 `i 399  ]
+[e $ ! != -> _subindo `i -> 0 `i 397  ]
 {
 "177
 [; ;main.c: 177:         MatrixLed[5] = 0b01100000;
@@ -1057,8 +1059,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "181
 [; ;main.c: 181:     }else{
 }
-[e $U 400  ]
-[e :U 399 ]
+[e $U 398  ]
+[e :U 397 ]
 {
 "182
 [; ;main.c: 182:         MatrixLed[5] = 0b11000000;
@@ -1075,7 +1077,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "186
 [; ;main.c: 186:     }
 }
-[e :U 400 ]
+[e :U 398 ]
 "187
 [; ;main.c: 187:     MatrixLed[7] = MatrixLed[7] | destinoSub;
 [e = *U + &U _MatrixLed * -> -> -> 7 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> | -> *U + &U _MatrixLed * -> -> -> 7 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux `i -> _destinoSub `i `uc ]
@@ -1087,7 +1089,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _matrixUpdate ..  ]
 "190
 [; ;main.c: 190: }
-[e :UE 398 ]
+[e :UE 396 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
 "192
@@ -1103,17 +1105,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _SYSTEM_Initialize ..  ]
 "203
 [; ;main.c: 203:     IOCBF3_SetInterruptHandler(chegadaS1);
-[e ( _IOCBF3_SetInterruptHandler (1 -> &U _chegadaS1 `*F2992 ]
+[e ( _IOCBF3_SetInterruptHandler (1 -> &U _chegadaS1 `*F2993 ]
 "204
 [; ;main.c: 204:     IOCBF3_SetInterruptHandler(chegadaS2);
-[e ( _IOCBF3_SetInterruptHandler (1 -> &U _chegadaS2 `*F2994 ]
+[e ( _IOCBF3_SetInterruptHandler (1 -> &U _chegadaS2 `*F2995 ]
 "208
 [; ;main.c: 208:     do { LATBbits.LATB1 = 1; } while(0);
-[e :U 404 ]
+[e :U 402 ]
 {
 [e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
 }
-[e :U 403 ]
+[e :U 401 ]
 "209
 [; ;main.c: 209:     SPI1_Open(SPI1_DEFAULT);
 [e ( _SPI1_Open (1 . `E2819 0 ]
@@ -1128,101 +1130,141 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
 "224
 [; ;main.c: 224:     while (1)
-[e :U 406 ]
+[e :U 404 ]
 "225
 [; ;main.c: 225:     {
 {
 "227
 [; ;main.c: 227:         if(EUSART_is_rx_ready()){
-[e $ ! != -> ( _EUSART_is_rx_ready ..  `i -> 0 `i 408  ]
+[e $ ! != -> ( _EUSART_is_rx_ready ..  `i -> 0 `i 406  ]
 {
 "228
-[; ;main.c: 228:             rxValue.v = EUSART_Read();
-[e = . _rxValue 0 -> ( _EUSART_Read ..  `uc ]
+[; ;main.c: 228:             rxValue = EUSART_Read();
+[e = _rxValue -> ( _EUSART_Read ..  `uc ]
 "229
-[; ;main.c: 229:             switch(rxValue.v){
-[e $U 410  ]
+[; ;main.c: 229:             switch(state){
+[e $U 408  ]
 {
 "230
-[; ;main.c: 230:                 case '$':
-[e :U 411 ]
+[; ;main.c: 230:                 case START:
+[e :U 409 ]
 "231
-[; ;main.c: 231:                     waitRX = 1;
-[e = _waitRX -> -> 1 `i `a ]
-"232
-[; ;main.c: 232:                     break;
-[e $U 409  ]
-"233
-[; ;main.c: 233:                 case 0x0D:
-[e :U 412 ]
-"234
-[; ;main.c: 234:                     if(RXaccepted){
-[e $ ! != -> _RXaccepted `i -> 0 `i 413  ]
+[; ;main.c: 231:                     if(rxValue == '$'){
+[e $ ! == -> _rxValue `ui -> 36 `ui 410  ]
 {
+"232
+[; ;main.c: 232:                         state = FIRST_NUM;
+[e = _state . `E2944 1 ]
+"233
+[; ;main.c: 233:                     }
+}
+[e :U 410 ]
+"234
+[; ;main.c: 234:                     break;
+[e $U 407  ]
 "235
-[; ;main.c: 235:                         origem = rxValue.o - 0x30;
-[e = _origem -> - -> . . _rxValue 1 0 `i -> 48 `i `uc ]
+[; ;main.c: 235:                 case FIRST_NUM:
+[e :U 411 ]
 "236
-[; ;main.c: 236:                         destino = rxValue.d - 0x30;
-[e = _destino -> - -> . . _rxValue 1 1 `i -> 48 `i `uc ]
+[; ;main.c: 236:                     if(isValidFloor(rxValue)){
+[e $ ! != -> ( _isValidFloor (1 _rxValue `i -> 0 `i 412  ]
+{
 "237
-[; ;main.c: 237:                     }
+[; ;main.c: 237:                         origem = rxValue - 0x30;
+[e = _origem -> - -> _rxValue `i -> 48 `i `uc ]
+"238
+[; ;main.c: 238:                         state = SECOND_NUM;
+[e = _state . `E2944 2 ]
+"239
+[; ;main.c: 239:                     }else{
+}
+[e $U 413  ]
+[e :U 412 ]
+{
+"240
+[; ;main.c: 240:                         state = START;
+[e = _state . `E2944 0 ]
+"241
+[; ;main.c: 241:                     }
 }
 [e :U 413 ]
-"238
-[; ;main.c: 238:                     RXaccepted = 0;
-[e = _RXaccepted -> -> 0 `i `a ]
-"239
-[; ;main.c: 239:                     break;
-[e $U 409  ]
-"240
-[; ;main.c: 240:                 default:
-[e :U 414 ]
-"241
-[; ;main.c: 241:                     RXaccepted = 0;
-[e = _RXaccepted -> -> 0 `i `a ]
 "242
-[; ;main.c: 242:                     if(waitRX){
-[e $ ! != -> _waitRX `i -> 0 `i 415  ]
-{
+[; ;main.c: 242:                     break;
+[e $U 407  ]
 "243
-[; ;main.c: 243:                         if(isValidFloor(rxValue.o) && isValidFloor(rxValue.d)){
-[e $ ! && != -> ( _isValidFloor (1 -> . . _rxValue 1 0 `uc `i -> 0 `i != -> ( _isValidFloor (1 -> . . _rxValue 1 1 `uc `i -> 0 `i 416  ]
-{
+[; ;main.c: 243:                 case SECOND_NUM:
+[e :U 414 ]
 "244
-[; ;main.c: 244:                             RXaccepted = 1;
-[e = _RXaccepted -> -> 1 `i `a ]
+[; ;main.c: 244:                     if(isValidFloor(rxValue)){
+[e $ ! != -> ( _isValidFloor (1 _rxValue `i -> 0 `i 415  ]
+{
 "245
-[; ;main.c: 245:                         }
+[; ;main.c: 245:                         destino = rxValue - 0x30;
+[e = _destino -> - -> _rxValue `i -> 48 `i `uc ]
+"246
+[; ;main.c: 246:                         state = CR;
+[e = _state . `E2944 3 ]
+"247
+[; ;main.c: 247:                     }else{
+}
+[e $U 416  ]
+[e :U 415 ]
+{
+"248
+[; ;main.c: 248:                         state = START;
+[e = _state . `E2944 0 ]
+"249
+[; ;main.c: 249:                     }
 }
 [e :U 416 ]
-"246
-[; ;main.c: 246:                     }
-}
-[e :U 415 ]
-"247
-[; ;main.c: 247:                     waitRX = 0;
-[e = _waitRX -> -> 0 `i `a ]
-"248
-[; ;main.c: 248:             }
-}
-[e $U 409  ]
-[e :U 410 ]
-[e [\ -> . _rxValue 0 `i , $ -> -> 36 `ui `i 411
- , $ -> 13 `i 412
- 414 ]
-[e :U 409 ]
-"249
-[; ;main.c: 249:         }
-}
-[e :U 408 ]
 "250
-[; ;main.c: 250:     }
-}
-[e :U 405 ]
-[e $U 406  ]
-[e :U 407 ]
+[; ;main.c: 250:                     break;
+[e $U 407  ]
 "251
-[; ;main.c: 251: }
-[e :UE 401 ]
+[; ;main.c: 251:                 case CR:
+[e :U 417 ]
+"252
+[; ;main.c: 252:                     if(rxValue == 0x0D){
+[e $ ! == -> _rxValue `i -> 13 `i 418  ]
+{
+"254
+[; ;main.c: 254:                     }
+}
+[e :U 418 ]
+"255
+[; ;main.c: 255:                     state = START;
+[e = _state . `E2944 0 ]
+"256
+[; ;main.c: 256:                     break;
+[e $U 407  ]
+"257
+[; ;main.c: 257:                 default:
+[e :U 419 ]
+"258
+[; ;main.c: 258:                     state = START;
+[e = _state . `E2944 0 ]
+"259
+[; ;main.c: 259:             }
+}
+[e $U 407  ]
+[e :U 408 ]
+[e [\ -> _state `ui , $ -> . `E2944 0 `ui 409
+ , $ -> . `E2944 1 `ui 411
+ , $ -> . `E2944 2 `ui 414
+ , $ -> . `E2944 3 `ui 417
+ 419 ]
+[e :U 407 ]
+"260
+[; ;main.c: 260:         }
+}
+[e :U 406 ]
+"261
+[; ;main.c: 261:     }
+}
+[e :U 403 ]
+[e $U 404  ]
+[e :U 405 ]
+"262
+[; ;main.c: 262: }
+[e :UE 399 ]
 }

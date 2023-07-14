@@ -4712,6 +4712,14 @@ void WDT_Initialize(void);
 
 # 1 "./main.h" 1
 # 19 "./main.h"
+typedef enum{
+    START,
+    FIRST_NUM,
+    SECOND_NUM,
+    CR
+}State;
+
+
 const uint8_t matrix_conf[] = {
     0x09,0x00,
     0x0A,0x00,
@@ -4724,13 +4732,8 @@ const uint8_t matrix_conf[] = {
 
 
 
-union{
-    char v;
-    struct{
-        char o : 4;
-        char d : 4;
-    };
-}rxValue;
+State state = START;
+char rxValue;
 _Bool waitRX = 0;
 _Bool RXaccepted = 0;
 
@@ -4741,7 +4744,7 @@ _Bool subindo = 1;
 uint8_t MatrixLed[8];
 uint8_t destinoSub= 0;
 uint8_t destinoDesc= 0;
-# 56 "./main.h"
+# 59 "./main.h"
 _Bool isValidFloor(char floor);
 
 
@@ -4936,26 +4939,37 @@ void main(void)
     {
 
         if(EUSART_is_rx_ready()){
-            rxValue.v = EUSART_Read();
-            switch(rxValue.v){
-                case '$':
-                    waitRX = 1;
-                    break;
-                case 0x0D:
-                    if(RXaccepted){
-                        origem = rxValue.o - 0x30;
-                        destino = rxValue.d - 0x30;
+            rxValue = EUSART_Read();
+            switch(state){
+                case START:
+                    if(rxValue == '$'){
+                        state = FIRST_NUM;
                     }
-                    RXaccepted = 0;
+                    break;
+                case FIRST_NUM:
+                    if(isValidFloor(rxValue)){
+                        origem = rxValue - 0x30;
+                        state = SECOND_NUM;
+                    }else{
+                        state = START;
+                    }
+                    break;
+                case SECOND_NUM:
+                    if(isValidFloor(rxValue)){
+                        destino = rxValue - 0x30;
+                        state = CR;
+                    }else{
+                        state = START;
+                    }
+                    break;
+                case CR:
+                    if(rxValue == 0x0D){
+
+                    }
+                    state = START;
                     break;
                 default:
-                    RXaccepted = 0;
-                    if(waitRX){
-                        if(isValidFloor(rxValue.o) && isValidFloor(rxValue.d)){
-                            RXaccepted = 1;
-                        }
-                    }
-                    waitRX = 0;
+                    state = START;
             }
         }
     }

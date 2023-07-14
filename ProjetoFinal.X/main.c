@@ -225,26 +225,37 @@ void main(void)
     {
         // Add your application code
         if(EUSART_is_rx_ready()){
-            rxValue.v = EUSART_Read();
-            switch(rxValue.v){
-                case '$':
-                    waitRX = true;
-                    break;
-                case 0x0D:
-                    if(RXaccepted){
-                        origem = rxValue.o - 0x30;
-                        destino = rxValue.d - 0x30;
+            rxValue = EUSART_Read();
+            switch(state){
+                case START:
+                    if(rxValue == '$'){
+                        state = FIRST_NUM;
                     }
-                    RXaccepted = false;
+                    break;
+                case FIRST_NUM:
+                    if(isValidFloor(rxValue)){
+                        origem = rxValue - 0x30;
+                        state = SECOND_NUM;
+                    }else{
+                        state = START;
+                    }
+                    break;
+                case SECOND_NUM:
+                    if(isValidFloor(rxValue)){
+                        destino = rxValue - 0x30;
+                        state = CR;
+                    }else{
+                        state = START;
+                    }
+                    break;
+                case CR:
+                    if(rxValue == 0x0D){
+                        // Chamar alguma funcao
+                    }
+                    state = START;
                     break;
                 default:
-                    RXaccepted = false;
-                    if(waitRX){
-                        if(isValidFloor(rxValue.o) && isValidFloor(rxValue.d)){
-                            RXaccepted = true;
-                        }
-                    }
-                    waitRX = false;
+                    state = START;
             }
         }
     }

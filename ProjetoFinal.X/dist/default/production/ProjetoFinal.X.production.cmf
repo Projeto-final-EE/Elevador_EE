@@ -63,20 +63,20 @@ text47 CODE 0 1D5 1D5 2C 2 1
 text48 CODE 0 2EC 2EC 1A 2 1
 text49 CODE 0 3BB 3BB E 2 1
 text50 CODE 0 27D 27D 27 2 1
-nvBANK0 BANK0 1 48 48 E 1 1
+nvBANK0 BANK0 1 49 49 E 1 1
 idataCOMMON CODE 0 48C 48C 1 2 1
 maintext CODE 0 5D 5D 71 2 1
 cstackCOMMON COMMON 1 70 70 B 1 1
-cstackBANK0 BANK0 1 35 35 13 1 1
+cstackBANK0 BANK0 1 36 36 13 1 1
 stringtext1 STRCODE 0 3F0 3F0 C 2 1
 stringtext2 STRCODE 0 480 480 4 2 1
 intentry CODE 0 4 4 45 2 1
-bssBANK0 BANK0 1 20 20 15 1 1
+bssBANK0 BANK0 1 20 20 16 1 1
 dataCOMMON COMMON 1 7D 7D 1 1 1
 clrtext CODE 0 43F 43F 6 2 1
 bssCOMMON COMMON 1 7B 7B 2 1 1
 config CONFIG 4 8007 8007 2 2 1
-$C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_15.o
+$C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_15.o
 idloc IDLOC 5 8000 8000 4 2 1
 reset_vec CODE 0 0 0 2 2 1
 end_init CODE 0 49 49 2 2 1
@@ -87,12 +87,12 @@ config CONFIG 4 8007 8007 2 2 1
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 56-6F 1
+RAM 57-6F 1
 RAM A0-EF 1
 RAM 120-16F 1
 RAM 1A0-1EF 1
 RAM 220-24F 1
-BANK0 56-6F 1
+BANK0 57-6F 1
 BANK1 A0-EF 1
 BANK2 120-16F 1
 BANK3 1A0-1EF 1
@@ -155,22 +155,22 @@ STRING 491-FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\ProjetoFinal.X.production.o
-4B cinit CODE >5150:C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_1.s
-4B cinit CODE >5153:C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_1.s
-4B cinit CODE >5212:C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_1.s
-4E cinit CODE >5213:C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_1.s
-4F cinit CODE >5230:C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_1.s
-50 cinit CODE >5231:C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_1.s
-51 cinit CODE >5235:C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_1.s
-52 cinit CODE >5236:C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_1.s
-53 cinit CODE >5237:C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_1.s
-54 cinit CODE >5238:C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_1.s
-55 cinit CODE >5239:C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_1.s
-56 cinit CODE >5240:C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_1.s
-59 cinit CODE >5246:C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_1.s
-59 cinit CODE >5248:C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_1.s
-5A cinit CODE >5249:C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_1.s
-5B cinit CODE >5250:C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_1.s
+4B cinit CODE >5149:C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_1.s
+4B cinit CODE >5152:C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_1.s
+4B cinit CODE >5214:C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_1.s
+4E cinit CODE >5215:C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_1.s
+4F cinit CODE >5232:C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_1.s
+50 cinit CODE >5233:C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_1.s
+51 cinit CODE >5237:C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_1.s
+52 cinit CODE >5238:C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_1.s
+53 cinit CODE >5239:C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_1.s
+54 cinit CODE >5240:C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_1.s
+55 cinit CODE >5241:C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_1.s
+56 cinit CODE >5242:C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_1.s
+59 cinit CODE >5248:C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_1.s
+59 cinit CODE >5250:C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_1.s
+5A cinit CODE >5251:C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_1.s
+5B cinit CODE >5252:C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_1.s
 4 intentry CODE >52:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\mcc_generated_files/interrupt_manager.c
 6 intentry CODE >55:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\mcc_generated_files/interrupt_manager.c
 E intentry CODE >57:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\mcc_generated_files/interrupt_manager.c
@@ -557,33 +557,34 @@ FA text26 CODE >79:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_
 7F maintext CODE >227:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
 83 maintext CODE >228:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
 88 maintext CODE >229:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
-89 maintext CODE >230:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
 89 maintext CODE >231:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
-8B maintext CODE >232:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
-8C maintext CODE >234:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
-91 maintext CODE >235:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
-95 maintext CODE >236:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
-99 maintext CODE >238:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
-9A maintext CODE >239:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
-9B maintext CODE >241:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
-9C maintext CODE >242:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
-A1 maintext CODE >243:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
-A7 maintext CODE >243:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
-B2 maintext CODE >243:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
-B6 maintext CODE >244:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
-B9 maintext CODE >247:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
-BB maintext CODE >248:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
-C1 maintext CODE >248:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
-C6 maintext CODE >248:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
-C9 maintext CODE >248:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
-43F clrtext CODE >5219:C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_1.s
-43F clrtext CODE >5220:C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_1.s
-440 clrtext CODE >5221:C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_1.s
-440 clrtext CODE >5222:C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_1.s
-441 clrtext CODE >5223:C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_1.s
-442 clrtext CODE >5224:C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_1.s
-443 clrtext CODE >5225:C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_1.s
-444 clrtext CODE >5226:C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_1.s
+8F maintext CODE >232:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
+92 maintext CODE >236:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
+97 maintext CODE >236:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
+9B maintext CODE >237:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
+9F maintext CODE >238:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
+A1 maintext CODE >239:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
+A2 maintext CODE >240:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
+A5 maintext CODE >244:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
+AA maintext CODE >244:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
+AE maintext CODE >245:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
+B2 maintext CODE >246:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
+B4 maintext CODE >247:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
+B5 maintext CODE >259:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
+BA maintext CODE >259:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
+BF maintext CODE >259:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
+C2 maintext CODE >259:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
+C5 maintext CODE >259:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
+C8 maintext CODE >259:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
+CB maintext CODE >260:C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
+43F clrtext CODE >5221:C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_1.s
+43F clrtext CODE >5222:C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_1.s
+440 clrtext CODE >5223:C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_1.s
+440 clrtext CODE >5224:C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_1.s
+441 clrtext CODE >5225:C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_1.s
+442 clrtext CODE >5226:C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_1.s
+443 clrtext CODE >5227:C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_1.s
+444 clrtext CODE >5228:C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_1.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -614,7 +615,7 @@ _CM1CON1 112 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 _CM2CON0 113 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 _CM2CON1 114 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-SPI1_ExchangeBlock@blockSize 35 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
+SPI1_ExchangeBlock@blockSize 36 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
 _T1CONbits 18 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 __end_of_PIN_MANAGER_IOC 6FC 0 CODE 0 text37 dist/default/production\ProjetoFinal.X.production.o
 __L__absolute__ 0 0 ABS 0 __absolute__ -
@@ -627,13 +628,13 @@ _TMR2 1A 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 _WPUA 20C 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 _WPUB 20D 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 __end_of_IOCBF0_SetInterruptHandler 8BA 0 CODE 0 text16 dist/default/production\ProjetoFinal.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_15.o
+___sp 0 0 STACK 2 stack C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_15.o
 _main BA 0 CODE 0 maintext dist/default/production\ProjetoFinal.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 _IOCBF0_DefaultInterruptHandler 920 0 CODE 0 text43 dist/default/production\ProjetoFinal.X.production.o
-start 92 0 CODE 0 init C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_15.o
-_TMR0_InterruptHandler 48 0 BANK0 1 nvBANK0 dist/default/production\ProjetoFinal.X.production.o
-SPI1_ExchangeBlock@data 39 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
+start 92 0 CODE 0 init C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_15.o
+_TMR0_InterruptHandler 49 0 BANK0 1 nvBANK0 dist/default/production\ProjetoFinal.X.production.o
+SPI1_ExchangeBlock@data 3A 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
 _chegadaS1 592 0 CODE 0 text39 dist/default/production\ProjetoFinal.X.production.o
 _chegadaS2 402 0 CODE 0 text41 dist/default/production\ProjetoFinal.X.production.o
 _chegadaS3 3AA 0 CODE 0 text47 dist/default/production\ProjetoFinal.X.production.o
@@ -643,7 +644,7 @@ __end_of_SPI1_Initialize 83E 0 CODE 0 text12 dist/default/production\ProjetoFina
 __end_of_TMR0_SetInterruptHandler 8A2 0 CODE 0 text11 dist/default/production\ProjetoFinal.X.production.o
 _IOCBF3_DefaultInterruptHandler 91E 0 CODE 0 text40 dist/default/production\ProjetoFinal.X.production.o
 __end_of_EUSART_SetFramingErrorHandler 8D2 0 CODE 0 text21 dist/default/production\ProjetoFinal.X.production.o
-initMatrix@data 3E 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
+initMatrix@data 3F 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
 __end_of_EUSART_SetOverrunErrorHandler 8C6 0 CODE 0 text20 dist/default/production\ProjetoFinal.X.production.o
 _OPTION_REGbits 95 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 __end_of_EUSART_Initialize 592 0 CODE 0 text19 dist/default/production\ProjetoFinal.X.production.o
@@ -651,21 +652,21 @@ __Hpowerup 0 0 CODE 0 powerup -
 __end_of_spi1_configuration 908 0 STRCODE 0 stringtext2 dist/default/production\ProjetoFinal.X.production.o
 _TMR2_Initialize 850 0 CODE 0 text7 dist/default/production\ProjetoFinal.X.production.o
 __HdataCOMMON 0 0 ABS 0 dataCOMMON -
-TMR0_SetInterruptHandler@InterruptHandler 35 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_15.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_15.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_15.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_15.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_15.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_15.o
+TMR0_SetInterruptHandler@InterruptHandler 36 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_15.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_15.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_15.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_15.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_15.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_15.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 _EUSART_DefaultFramingErrorHandler 0 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 _EUSART_DefaultOverrunErrorHandler 0 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 _PIN_MANAGER_IOC 6DA 0 CODE 0 text37 dist/default/production\ProjetoFinal.X.production.o
-initMatrix@i_1343 44 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
-_IOCBF3_InterruptHandler 52 0 BANK0 1 nvBANK0 dist/default/production\ProjetoFinal.X.production.o
+initMatrix@i_1339 45 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
+_IOCBF3_InterruptHandler 53 0 BANK0 1 nvBANK0 dist/default/production\ProjetoFinal.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
 __pidataCOMMON 918 0 CODE 0 idataCOMMON dist/default/production\ProjetoFinal.X.production.o
 _destino 30 0 BANK0 1 bssBANK0 dist/default/production\ProjetoFinal.X.production.o
@@ -688,7 +689,7 @@ _CCPR3L 311 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 __end_of_EUSART_is_rx_ready 900 0 CODE 0 text27 dist/default/production\ProjetoFinal.X.production.o
 _FVRCONbits 117 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 __end_of_INTERRUPT_InterruptManager 92 0 CODE 0 intentry dist/default/production\ProjetoFinal.X.production.o
-IOCBF3_SetInterruptHandler@InterruptHandler 35 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
+IOCBF3_SetInterruptHandler@InterruptHandler 36 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
 _MatrixLed 20 0 BANK0 1 bssBANK0 dist/default/production\ProjetoFinal.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 matrixUpdate@i 7A 0 COMMON 1 cstackCOMMON dist/default/production\ProjetoFinal.X.production.o
@@ -696,33 +697,33 @@ _FVRCON 117 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 i1_SPI1_ExchangeBlock 4FA 0 CODE 0 text50 dist/default/production\ProjetoFinal.X.production.o
 __LnvBANK0 0 0 ABS 0 nvBANK0 -
 _OPTION_REG 95 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_15.o
-___stacklo 0 0 ABS 0 - C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_15.o
+___stackhi 0 0 ABS 0 - C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_15.o
+___stacklo 0 0 ABS 0 - C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_15.o
 _EUSART_Initialize 548 0 CODE 0 text19 dist/default/production\ProjetoFinal.X.production.o
 __LidataCOMMON 0 0 ABS 0 idataCOMMON -
 _EUSART_is_rx_ready 8F6 0 CODE 0 text27 dist/default/production\ProjetoFinal.X.production.o
 _PIN_MANAGER_Initialize 2F0 0 CODE 0 text14 dist/default/production\ProjetoFinal.X.production.o
 __end_of_FVR_Initialize 918 0 CODE 0 text18 dist/default/production\ProjetoFinal.X.production.o
 start_initialization 96 0 CODE 0 cinit dist/default/production\ProjetoFinal.X.production.o
-SPI1_ExchangeBlock@block 38 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
+SPI1_ExchangeBlock@block 39 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
 _EUSART_SetErrorHandler 8D2 0 CODE 0 text22 dist/default/production\ProjetoFinal.X.production.o
 _OSCCON 99 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
-IOCBF0_SetInterruptHandler@InterruptHandler 35 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
+IOCBF0_SetInterruptHandler@InterruptHandler 36 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
 _TRISBbits 8D 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
-EUSART_SetOverrunErrorHandler@interruptHandler 35 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
+EUSART_SetOverrunErrorHandler@interruptHandler 36 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
 __end_of_CMP1_Initialize 828 0 CODE 0 text24 dist/default/production\ProjetoFinal.X.production.o
 __end_of_SYSTEM_Initialize 4FA 0 CODE 0 text5 dist/default/production\ProjetoFinal.X.production.o
 clear_ram0 87E 0 CODE 0 clrtext dist/default/production\ProjetoFinal.X.production.o
 _SPBRGH 19C 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 _SPBRGL 19B 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
-__pcstackBANK0 35 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
+__pcstackBANK0 36 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
 _T1GCON 19 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
-_IOCBF0_InterruptHandler 54 0 BANK0 1 nvBANK0 dist/default/production\ProjetoFinal.X.production.o
+_IOCBF0_InterruptHandler 55 0 BANK0 1 nvBANK0 dist/default/production\ProjetoFinal.X.production.o
 matrixUpdate@data 78 0 COMMON 1 cstackCOMMON dist/default/production\ProjetoFinal.X.production.o
 _IOCBF3_SetInterruptHandler 8A2 0 CODE 0 text15 dist/default/production\ProjetoFinal.X.production.o
 __end_of_TMR1_SetInterruptHandler 896 0 CODE 0 text9 dist/default/production\ProjetoFinal.X.production.o
 _WDTCON 97 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_15.o
+___int_sp 0 0 STACK 2 stack C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_15.o
 __end_of_EUSART_Read 73A 0 CODE 0 text28 dist/default/production\ProjetoFinal.X.production.o
 __end_of_PWM3_Initialize 850 0 CODE 0 text13 dist/default/production\ProjetoFinal.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
@@ -800,7 +801,7 @@ __Lbank9 0 0 BANK9 1 bank9 -
 __Lcinit 96 0 CODE 0 cinit -
 _T1GCONbits 19 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 __Lidloc 0 0 IDLOC 5 idloc -
-EUSART_SetErrorHandler@interruptHandler 35 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
+EUSART_SetErrorHandler@interruptHandler 36 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
 __Lsfr10 0 0 ABS 0 sfr10 -
 __Lsfr11 0 0 ABS 0 sfr11 -
 __Lsfr12 0 0 ABS 0 sfr12 -
@@ -860,21 +861,21 @@ __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
 __pstringtext1 7E0 0 STRCODE 0 stringtext1 dist/default/production\ProjetoFinal.X.production.o
 __pstringtext2 900 0 STRCODE 0 stringtext2 dist/default/production\ProjetoFinal.X.production.o
-__pnvBANK0 48 0 BANK0 1 nvBANK0 dist/default/production\ProjetoFinal.X.production.o
+__pnvBANK0 49 0 BANK0 1 nvBANK0 dist/default/production\ProjetoFinal.X.production.o
 _SSP1CON1 215 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 _SSP1CON2 216 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 _SSP1STAT 214 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 int$flags 7E 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-initMatrix@i 43 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
-initMatrix@j 45 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
-initMatrix@k 42 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
+initMatrix@i 44 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
+initMatrix@j 46 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
+initMatrix@k 43 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
 _PR2 1B 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 __S0 491 0 ABS 0 - -
 __S1 7E 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_isValidFloor$1320 35 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
+_isValidFloor$1316 36 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
 _matrix_conf 7E0 0 STRCODE 0 stringtext1 dist/default/production\ProjetoFinal.X.production.o
 __end_of_TMR0_DefaultInterruptHandler 91E 0 CODE 0 text36 dist/default/production\ProjetoFinal.X.production.o
 _PWM3_Initialize 83E 0 CODE 0 text13 dist/default/production\ProjetoFinal.X.production.o
@@ -888,7 +889,7 @@ i1SPI1_ExchangeBlock@block 73 0 COMMON 1 cstackCOMMON dist/default/production\Pr
 _rxValue 34 0 BANK0 1 bssBANK0 dist/default/production\ProjetoFinal.X.production.o
 __HnvBANK0 0 0 ABS 0 nvBANK0 -
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_15.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_15.o
 _CCPTMRS0bits 29E 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 __Lstringtext1 0 0 ABS 0 stringtext1 -
@@ -900,7 +901,7 @@ _RCSTAbits 19D 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 _PIE1bits 91 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 _PIE2bits 92 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 _IOCBFbits 396 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
-EUSART_SetFramingErrorHandler@interruptHandler 35 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
+EUSART_SetFramingErrorHandler@interruptHandler 36 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
 _IOCBNbits 395 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 _IOCBPbits 394 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 _TMR0_ISR 63E 0 CODE 0 text34 dist/default/production\ProjetoFinal.X.production.o
@@ -978,25 +979,24 @@ _initMatrix 252 0 CODE 0 text2 dist/default/production\ProjetoFinal.X.production
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
 i1txSpi@data 77 0 COMMON 1 cstackCOMMON dist/default/production\ProjetoFinal.X.production.o
-txSpi@dataSize 3A 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
+txSpi@dataSize 3B 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
 __end_of_TMR0_ISR 66E 0 CODE 0 text34 dist/default/production\ProjetoFinal.X.production.o
 __end_of_TMR1_ISR 7AC 0 CODE 0 text30 dist/default/production\ProjetoFinal.X.production.o
-isValidFloor@floor 36 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
+isValidFloor@floor 37 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
 _LATBbits 10D 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 TMR0_ISR@CountCallBack 28 0 BANK0 1 bssBANK0 dist/default/production\ProjetoFinal.X.production.o
 _CMP2_Initialize 7F8 0 CODE 0 text23 dist/default/production\ProjetoFinal.X.production.o
 __end_ofi1_txSpi 792 0 CODE 0 text49 dist/default/production\ProjetoFinal.X.production.o
 _TMR0_SetInterruptHandler 896 0 CODE 0 text11 dist/default/production\ProjetoFinal.X.production.o
 __end_of_SPI1_ExchangeBlock 4AA 0 CODE 0 text4 dist/default/production\ProjetoFinal.X.production.o
-_EUSART_FramingErrorHandler 50 0 BANK0 1 nvBANK0 dist/default/production\ProjetoFinal.X.production.o
-_EUSART_OverrunErrorHandler 4E 0 BANK0 1 nvBANK0 dist/default/production\ProjetoFinal.X.production.o
+_EUSART_FramingErrorHandler 51 0 BANK0 1 nvBANK0 dist/default/production\ProjetoFinal.X.production.o
+_EUSART_OverrunErrorHandler 4F 0 BANK0 1 nvBANK0 dist/default/production\ProjetoFinal.X.production.o
 __end_of_SPI1_Open 252 0 CODE 0 text26 dist/default/production\ProjetoFinal.X.production.o
 _OSCTUNE 98 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 _ADCON0bits 9D 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
-_waitRX 33 0 BANK0 1 bssBANK0 dist/default/production\ProjetoFinal.X.production.o
 i1SPI1_ExchangeBlock@blockSize 70 0 COMMON 1 cstackCOMMON dist/default/production\ProjetoFinal.X.production.o
 __end_of_isValidFloor 694 0 CODE 0 text1 dist/default/production\ProjetoFinal.X.production.o
-_EUSART_ErrorHandler 4C 0 BANK0 1 nvBANK0 dist/default/production\ProjetoFinal.X.production.o
+_EUSART_ErrorHandler 4D 0 BANK0 1 nvBANK0 dist/default/production\ProjetoFinal.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
@@ -1010,7 +1010,7 @@ _PIR2bits 12 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 __Lend_init 92 0 CODE 0 end_init -
 _EUSART_DefaultErrorHandler 0 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-SPI1_Open@spi1UniqueConfiguration 38 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
+SPI1_Open@spi1UniqueConfiguration 39 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
 _EUSART_SetFramingErrorHandler 8C6 0 CODE 0 text21 dist/default/production\ProjetoFinal.X.production.o
 _EUSART_SetOverrunErrorHandler 8BA 0 CODE 0 text20 dist/default/production\ProjetoFinal.X.production.o
 end_of_initialization B2 0 CODE 0 cinit dist/default/production\ProjetoFinal.X.production.o
@@ -1021,7 +1021,7 @@ __Lstrings 0 0 ABS 0 strings -
 _matrixUpdate 5D8 0 CODE 0 text48 dist/default/production\ProjetoFinal.X.production.o
 _SPI1_ExchangeBlock 458 0 CODE 0 text4 dist/default/production\ProjetoFinal.X.production.o
 __Hreset_vec 4 0 CODE 0 reset_vec -
-TMR1_SetInterruptHandler@InterruptHandler 35 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
+TMR1_SetInterruptHandler@InterruptHandler 36 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
 __end_of_initMatrix 2F0 0 CODE 0 text2 dist/default/production\ProjetoFinal.X.production.o
 __ptext1 66E 0 CODE 0 text1 dist/default/production\ProjetoFinal.X.production.o
@@ -1046,8 +1046,8 @@ __Lreset_vec 0 0 CODE 0 reset_vec -
 __end_ofi1_SPI1_ExchangeBlock 548 0 CODE 0 text50 dist/default/production\ProjetoFinal.X.production.o
 __Hstringtext1 0 0 ABS 0 stringtext1 -
 __Hstringtext2 0 0 ABS 0 stringtext2 -
-___heap_hi 0 0 ABS 0 - C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_15.o
-___heap_lo 0 0 ABS 0 - C:\Users\Victor\AppData\Local\Temp\xcAs9es.\driver_tmp_15.o
+___heap_hi 0 0 ABS 0 - C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_15.o
+___heap_lo 0 0 ABS 0 - C:\Users\Victor\AppData\Local\Temp\xcAs5io.\driver_tmp_15.o
 _subindo 7D 0 COMMON 1 dataCOMMON dist/default/production\ProjetoFinal.X.production.o
 i1SPI1_ExchangeBlock@data 74 0 COMMON 1 cstackCOMMON dist/default/production\ProjetoFinal.X.production.o
 __end_of_IOCBF0_DefaultInterruptHandler 922 0 CODE 0 text43 dist/default/production\ProjetoFinal.X.production.o
@@ -1065,7 +1065,7 @@ __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\ProjetoFinal.
 _TXSTAbits 19E 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 _SSP1ADD 212 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 _SSP1BUF 211 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
-txSpi@data 3C 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
+txSpi@data 3D 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
 __Hend_init 96 0 CODE 0 end_init -
 _CMP1_ISR 8EA 0 CODE 0 text46 dist/default/production\ProjetoFinal.X.production.o
 _CMP2_ISR 8DE 0 CODE 0 text44 dist/default/production\ProjetoFinal.X.production.o
@@ -1087,6 +1087,7 @@ __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 _TMR1_Initialize 60C 0 CODE 0 text8 dist/default/production\ProjetoFinal.X.production.o
 _TMR1_WriteTimer 6B8 0 CODE 0 text31 dist/default/production\ProjetoFinal.X.production.o
+_state 35 0 BANK0 1 bssBANK0 dist/default/production\ProjetoFinal.X.production.o
 _txSpi 6FC 0 CODE 0 text3 dist/default/production\ProjetoFinal.X.production.o
 __end_of_CMP1_ISR 8F6 0 CODE 0 text46 dist/default/production\ProjetoFinal.X.production.o
 __end_of_CMP2_ISR 8EA 0 CODE 0 text44 dist/default/production\ProjetoFinal.X.production.o
@@ -1100,11 +1101,10 @@ __initialization 96 0 CODE 0 cinit dist/default/production\ProjetoFinal.X.produc
 __pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production\ProjetoFinal.X.production.o
 __pdataCOMMON 7D 0 COMMON 1 dataCOMMON dist/default/production\ProjetoFinal.X.production.o
 _T2CONbits 1C 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
-_RXaccepted 32 0 BANK0 1 bssBANK0 dist/default/production\ProjetoFinal.X.production.o
 __end_of_IOCBF0_ISR 776 0 CODE 0 text42 dist/default/production\ProjetoFinal.X.production.o
 __end_of_IOCBF3_ISR 758 0 CODE 0 text38 dist/default/production\ProjetoFinal.X.production.o
 _TMR1_SetInterruptHandler 88A 0 CODE 0 text9 dist/default/production\ProjetoFinal.X.production.o
-_TMR1_InterruptHandler 4A 0 BANK0 1 nvBANK0 dist/default/production\ProjetoFinal.X.production.o
+_TMR1_InterruptHandler 4B 0 BANK0 1 nvBANK0 dist/default/production\ProjetoFinal.X.production.o
 _OSCILLATOR_Initialize 870 0 CODE 0 text17 dist/default/production\ProjetoFinal.X.production.o
 __end_of_TMR2_Initialize 860 0 CODE 0 text7 dist/default/production\ProjetoFinal.X.production.o
 # %SPLITSTAB Section
@@ -1139,7 +1139,7 @@ stringtext1 0 3F0 7E0 C 2
 stringtext2 0 480 900 4 2
 intentry 0 4 8 3EC 2
 reset_vec 0 0 0 2 2
-bssBANK0 1 20 20 36 1
+bssBANK0 1 20 20 37 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

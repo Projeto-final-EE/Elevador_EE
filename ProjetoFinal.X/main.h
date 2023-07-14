@@ -14,6 +14,14 @@ extern "C" {
 
 //Defines
 #define flip_matrix  true
+    
+// Enums
+typedef enum{
+    START,
+    FIRST_NUM,
+    SECOND_NUM,
+    CR    
+}State;
 
 //Constantes 
 const uint8_t matrix_conf[] = {
@@ -28,15 +36,10 @@ const uint8_t matrix_conf[] = {
 /**
  * Variaveis Globais 
 */
-union{
-    char v;
-    struct{
-        char o : 4;
-        char d : 4;
-    };
-}rxValue; // Variavel para receber as informa��es do USART
+State state = START; // O estado que indica qual valor o EUSART esta aguardando
+char rxValue; // Variavel para receber as informacoes do USART
 bool waitRX = false; // Indica se o micro-controlador deve aguardar pelos valores de origem e destino do elevador
-bool RXaccepted = false; // Indica que o valor recebido pela comunica��o serial � valida
+bool RXaccepted = false; // Indica que o valor recebido pela comunicacao serial e valida
 
 uint8_t origem; // Indica origem da chamada do elevador
 uint8_t destino; // Indica o destino do elevador
@@ -46,7 +49,7 @@ uint8_t MatrixLed[8]; //Matrix de Dados que armazena o valor a ser transmito por
 uint8_t destinoSub= 0; // indice 1 para andar 1, 2 para andar 2 e 3 para andar 3
 uint8_t destinoDesc= 0;// indice 0 para andar 0, 1 para andar 1 e 2 para andar 2
 
-//Funções
+//Funcoes
 
 /**
  * Funcao para checar se o char � um n�mero entre '0' e '3', que sao os andares de operacao do elevador

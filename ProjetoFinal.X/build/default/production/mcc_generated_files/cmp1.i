@@ -4341,6 +4341,14 @@ void CMP1_ISR(void);
 
 # 1 "mcc_generated_files/../main.h" 1
 # 19 "mcc_generated_files/../main.h"
+typedef enum{
+    START,
+    FIRST_NUM,
+    SECOND_NUM,
+    CR
+}State;
+
+
 const uint8_t matrix_conf[] = {
     0x09,0x00,
     0x0A,0x00,
@@ -4353,13 +4361,8 @@ const uint8_t matrix_conf[] = {
 
 
 
-union{
-    char v;
-    struct{
-        char o : 4;
-        char d : 4;
-    };
-}rxValue;
+State state = START;
+char rxValue;
 _Bool waitRX = 0;
 _Bool RXaccepted = 0;
 
@@ -4370,7 +4373,7 @@ _Bool subindo = 1;
 uint8_t MatrixLed[8];
 uint8_t destinoSub= 0;
 uint8_t destinoDesc= 0;
-# 56 "mcc_generated_files/../main.h"
+# 59 "mcc_generated_files/../main.h"
 _Bool isValidFloor(char floor);
 
 

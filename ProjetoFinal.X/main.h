@@ -1,8 +1,8 @@
 /* 
  * File:   main.h
- * Author: Victor
+ * Author: AC Tecnologia
  *
- * Created on 13 July 2023, 22:06
+ * Created on 13 de Julho de 2023, 19:54
  */
 
 #ifndef MAIN_H
@@ -11,6 +11,19 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
+
+//Defines
+#define flip_matrix  true
+
+//Constantes 
+const uint8_t matrix_conf[] = {
+    0x09,0x00,  // Decode mode = 0
+    0x0A,0x00,  // Intensity 1/32
+    0x0B,0x07,  // Scan Limit
+    0x0C,0x01,  // Shutdown mode = 1
+    0x0F,0x01,  // Display-Test = 1
+    0x0F,0x00,  // Display-Test = 0
+};  ///< ConfiguraÃ§Ã£o da matriz de  LEDs
 
 /**
  * Variaveis Globais 
@@ -21,20 +34,35 @@ union{
         char o : 4;
         char d : 4;
     };
-}rxValue; // Variavel para receber as informações do USART
+}rxValue; // Variavel para receber as informaï¿½ï¿½es do USART
 bool waitRX = false; // Indica se o micro-controlador deve aguardar pelos valores de origem e destino do elevador
-bool RXaccepted = false; // Indica que o valor recebido pela comunicação serial é valida
+bool RXaccepted = false; // Indica que o valor recebido pela comunicaï¿½ï¿½o serial ï¿½ valida
 
 uint8_t origem; // Indica origem da chamada do elevador
 uint8_t destino; // Indica o destino do elevador
 
+bool subindo = true; //flag que indica se o elevador estï¿½ subindo ou descendo
+uint8_t MatrixLed[8]; //Matrix de Dados que armazena o valor a ser transmito por SPI para a matrix de LED
+uint8_t destinoSub= 0; // indice 1 para andar 1, 2 para andar 2 e 3 para andar 3
+uint8_t destinoDesc= 0;// indice 0 para andar 0, 1 para andar 1 e 2 para andar 2
+
+//FunÃ§Ãµes
+
 /**
- * Funcao para checar se o char é um número entre '0' e '3', que sao os andares de operacao do elevador
+ * Funcao para checar se o char ï¿½ um nï¿½mero entre '0' e '3', que sao os andares de operacao do elevador
  * @param floor
- * @return true se o char é um número entre '0' e '3' e false se nao é
+ * @return true se o char ï¿½ um nï¿½mero entre '0' e '3' e false se nao ï¿½
  */
 bool isValidFloor(char floor);
 
+//funcï¿½es SPI
+void txSpi( uint8_t *data, size_t dataSize); //funcao que realiza a transmissao da matriz de Dados para a Matriz de LED
+void matrixUpdate(); //Funcao que converte os valores da Matriz de Dados para a forma recebida pela Matriz de LED
+void initMatrix(); //Inicializacao da matriz de LED
+void chegadaS1(); //funÃ§Ã£o acionada ao sensor S1 ser acionado
+void chegadaS2(); //funÃ§Ã£o acionada ao sensor S2 ser acionado
+void chegadaS3(); //funÃ§Ã£o acionada ao sensor S3 ser acionado
+void chegadaS4(); //funÃ§Ã£o acionada ao sensor S4 ser acionado
 #ifdef	__cplusplus
 }
 #endif

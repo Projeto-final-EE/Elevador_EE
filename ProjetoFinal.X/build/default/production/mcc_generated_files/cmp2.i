@@ -4362,6 +4362,8 @@ uint8_t destinoSub= 0;
 uint8_t destinoDesc= 0;
 
 
+enum estadoMov{ Repouso, IniciarTrajeto, EmTrajeto, RetornaS0}mov=Repouso;
+
 
 void txSpi( uint8_t *data, size_t dataSize);
 void matrixUpdate();
@@ -4370,6 +4372,9 @@ void chegadaS1();
 void chegadaS2();
 void chegadaS3();
 void chegadaS4();
+
+
+void controleMovimento();
 # 54 "mcc_generated_files/cmp2.c" 2
 
 

@@ -1,4 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
+"35 mcc_generated_files/../main.h
+[; ;mcc_generated_files/../main.h: 35: enum estadoMov{ Repouso, IniciarTrajeto, EmTrajeto, RetornaS0}mov=Repouso;
+[c E2488 0 1 2 3 .. ]
+[n E2488 estadoMov Repouso IniciarTrajeto EmTrajeto RetornaS0  ]
 "1345 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1345:     struct {
 [s S77 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -38,8 +42,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2416
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 2416: extern volatile CMOUTbits_t CMOUTbits __attribute__((address(0x115)));
 [v _CMOUTbits `VS123 ~T0 @X0 0 e@277 ]
-"42 mcc_generated_files/../main.h
-[; ;mcc_generated_files/../main.h: 42: void chegadaS4();
+"44 mcc_generated_files/../main.h
+[; ;mcc_generated_files/../main.h: 44: void chegadaS4();
 [v _chegadaS4 `(v ~T0 @X0 0 e? ]
 "55 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 55: __asm("INDF0 equ 00h");
@@ -554,6 +558,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _destinoDesc `uc ~T0 @X0 1 e ]
 [i _destinoDesc
 -> -> 0 `i `uc
+]
+"35
+[; ;mcc_generated_files/../main.h: 35: enum estadoMov{ Repouso, IniciarTrajeto, EmTrajeto, RetornaS0}mov=Repouso;
+[v _mov `E2488 ~T0 @X0 1 e ]
+[i _mov
+. `E2488 0
 ]
 "59 mcc_generated_files/cmp2.c
 [; ;mcc_generated_files/cmp2.c: 59: void CMP2_Initialize(void)

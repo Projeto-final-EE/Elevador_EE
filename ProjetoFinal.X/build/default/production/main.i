@@ -4731,6 +4731,8 @@ uint8_t destinoSub= 0;
 uint8_t destinoDesc= 0;
 
 
+enum estadoMov{ Repouso, IniciarTrajeto, EmTrajeto, RetornaS0}mov=Repouso;
+
 
 void txSpi( uint8_t *data, size_t dataSize);
 void matrixUpdate();
@@ -4739,6 +4741,9 @@ void chegadaS1();
 void chegadaS2();
 void chegadaS3();
 void chegadaS4();
+
+
+void controleMovimento();
 # 45 "main.c" 2
 # 54 "main.c"
 void txSpi( uint8_t *data, size_t dataSize){
@@ -4788,7 +4793,39 @@ void initMatrix(){
     }
 }
 
+
+void controleMovimento(){
+    switch(mov){
+        case Repouso:
+            PWM3_LoadDutyValue(0);
+            break;
+        case IniciarTrajeto:
+            PWM3_LoadDutyValue(511);
+            break;
+        case EmTrajeto:
+            PWM3_LoadDutyValue(511);
+            break;
+        case RetornaS0:
+            _delay((unsigned long)((1500)*(4000000/4000.0)));
+            PWM3_LoadDutyValue(511);
+            break;
+    }
+
+    if(destinoSub != 0 && mov != RetornaS0 ){
+
+        subindo = 1;
+    }else{
+
+        subindo = 0;
+    }
+}
+
+
 void chegadaS1(){
+    PWM3_LoadDutyValue(0);
+
+
+    mov = Repouso;
 
     MatrixLed[0] = 0b01111110;
     MatrixLed[1] = 0b10000001;
@@ -4806,9 +4843,15 @@ void chegadaS1(){
         destinoDesc = destinoDesc & 0b11111110;
     }
     matrixUpdate();
+
+
+
+
 }
 
 void chegadaS2(){
+    PWM3_LoadDutyValue(0);
+
 
     MatrixLed[0] = 0b00000000;
     MatrixLed[1] = 0b01000001;
@@ -4820,18 +4863,32 @@ void chegadaS2(){
         MatrixLed[6] = 0b11000000;
         MatrixLed[7] = 0b01100000;
         destinoSub = destinoSub & 0b11111101;
+
+        mov = EmTrajeto;
     }else{
         MatrixLed[5] = 0b11000000;
         MatrixLed[6] = 0b01100000;
         MatrixLed[7] = 0b11000000;
         destinoDesc = destinoDesc & 0b11111101;
+
+
+        if(destinoDesc == 0){
+            mov = RetornaS0;
+        }
     }
     MatrixLed[7] = MatrixLed[7] | destinoSub;
     MatrixLed[6] = MatrixLed[6] | destinoDesc;
     matrixUpdate();
+
+
+
+    _delay((unsigned long)((500)*(4000000/4000.0)));
+    controleMovimento();
 }
 
 void chegadaS3(){
+    PWM3_LoadDutyValue(0);
+
 
     MatrixLed[0] = 0b01000011;
     MatrixLed[1] = 0b10000101;
@@ -4852,9 +4909,20 @@ void chegadaS3(){
     MatrixLed[7] = MatrixLed[7] | destinoSub;
     MatrixLed[6] = MatrixLed[6] | destinoDesc;
     matrixUpdate();
+
+
+    if(destinoDesc ==0 && destinoSub == 0){
+        mov = RetornaS0;
+    }
+
+
+    _delay((unsigned long)((500)*(4000000/4000.0)));
+    controleMovimento();
 }
 
 void chegadaS4(){
+    PWM3_LoadDutyValue(0);
+
 
     MatrixLed[0] = 0b10000001;
     MatrixLed[1] = 0b10010001;
@@ -4875,7 +4943,18 @@ void chegadaS4(){
     MatrixLed[7] = MatrixLed[7] | destinoSub;
     MatrixLed[6] = MatrixLed[6] | destinoDesc;
     matrixUpdate();
+
+
+    if(destinoDesc ==0 && destinoSub == 0){
+        mov = RetornaS0;
+    }
+
+
+    _delay((unsigned long)((500)*(4000000/4000.0)));
+    controleMovimento();
 }
+
+
 
 void main(void)
 {
@@ -4912,12 +4991,5 @@ void main(void)
     while (1)
     {
 
-        chegadaS1();
-        _delay((unsigned long)((1000)*(4000000/4000.0)));
-        chegadaS2();
-        _delay((unsigned long)((1000)*(4000000/4000.0)));
-        chegadaS3();
-        _delay((unsigned long)((1000)*(4000000/4000.0)));
-        chegadaS4();
     }
 }

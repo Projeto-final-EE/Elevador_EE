@@ -98,7 +98,39 @@ void initMatrix(){
     }
 }
 
+
+void controleMovimento(){
+    switch(mov){
+        case Repouso:
+            PWM3_LoadDutyValue(0);
+            break;
+        case IniciarTrajeto:
+            PWM3_LoadDutyValue(511);
+            break;
+        case EmTrajeto:
+            PWM3_LoadDutyValue(511);
+            break;
+        case RetornaS0:
+            __delay_ms(1500); //aguarda mais 1,5s para retornar a posi��o de repouso
+            PWM3_LoadDutyValue(511);
+            break;
+    }
+    
+    if(destinoSub != 0 && mov != RetornaS0 ){//Determina o sentido do movimento do motor
+        //Seta o movimento ascendente do motor
+        subindo = true;
+    }else{
+        //Seta o movimento ascendente do motor
+        subindo = false;
+    }
+}
+
+
 void chegadaS1(){ //função acionada ao sensor S1 ser acionado
+    PWM3_LoadDutyValue(0); //Desligando o Movimento do Motor 
+    
+    //Ao chegar no primeiro andar o elevador j� finalizou todo seu trajeto
+    mov = Repouso;
     //Atualização da variavel da matrix de de Dados com o numero 0 mais a direcao de movimento do elevador
     MatrixLed[0] = 0b01111110;
     MatrixLed[1] = 0b10000001;
@@ -116,9 +148,15 @@ void chegadaS1(){ //função acionada ao sensor S1 ser acionado
         destinoDesc = destinoDesc & 0b11111110; //limpa a flag que mantem o andar 0 como destino do elevador
     }
     matrixUpdate();
+    
+     //Retorno do movimento do Motor
+    /*__delay_ms(500); //Espera 500ms para retornar o movimento
+    controleMovimento(); //Retorna o movimento */ //Retorno de movimento n�o necess�rio
 }
 
 void chegadaS2(){ //função acionada ao sensor S2 ser acionado
+    PWM3_LoadDutyValue(0);//Desligando o Movimento do Motor
+    
     //Atualização da variavel da matrix de de Dados com o numero 1 mais a direcao de movimento do elevador
     MatrixLed[0] = 0b00000000;
     MatrixLed[1] = 0b01000001;
@@ -130,18 +168,32 @@ void chegadaS2(){ //função acionada ao sensor S2 ser acionado
         MatrixLed[6] =  0b11000000;
         MatrixLed[7] =  0b01100000;
         destinoSub = destinoSub & 0b11111101; //limpa a flag que mantem o andar 1 como destino do elevador
+        
+        mov = EmTrajeto; //Primeira Interrupcao gerada apos iniciar o trajeto por tanto o motor j� iniciou o movimento
     }else{ //seta apontando pra baixo
         MatrixLed[5] =  0b11000000;
         MatrixLed[6] =  0b01100000;
         MatrixLed[7] =  0b11000000;
         destinoDesc = destinoDesc & 0b11111101; //limpa a flag que mantem o andar 1 como destino do elevador
+        
+        //Controle dos estados
+        if(destinoDesc == 0){
+            mov = RetornaS0;
+        }
     }
     MatrixLed[7] = MatrixLed[7] | destinoSub;
     MatrixLed[6] = MatrixLed[6] | destinoDesc;
     matrixUpdate();
+    
+    //Retorno do movimento do Motor
+    
+    __delay_ms(500); //Espera 500ms para retornar o movimento
+    controleMovimento(); //Retorna o movimento 
 }
 
 void chegadaS3(){ //função acionada ao sensor S3 ser acionado
+    PWM3_LoadDutyValue(0); //Desligando o Movimento do Motor
+    
     //Atualização da variavel da matrix de de Dados com o numero 2 mais a direcao de movimento do elevador
     MatrixLed[0] = 0b01000011;
     MatrixLed[1] = 0b10000101; 
@@ -162,9 +214,20 @@ void chegadaS3(){ //função acionada ao sensor S3 ser acionado
     MatrixLed[7] = MatrixLed[7] | destinoSub;
     MatrixLed[6] = MatrixLed[6] | destinoDesc;
     matrixUpdate();
+    
+    //Controle dos estados
+    if(destinoDesc ==0 && destinoSub == 0){
+        mov = RetornaS0;
+    }
+    
+    //Retorno do movimento do Motor
+    __delay_ms(500); //Espera 500ms para retornar o movimento
+    controleMovimento(); //Retorna o movimento 
 }
 
 void chegadaS4(){ //função acionada ao sensor S4 ser acionado
+    PWM3_LoadDutyValue(0); //Desligando o Movimento do Motor
+    
     //Atualização da variavel da matrix de de Dados com o numero 3 mais a direcao de movimento do elevador
     MatrixLed[0] = 0b10000001;
     MatrixLed[1] = 0b10010001;
@@ -185,7 +248,18 @@ void chegadaS4(){ //função acionada ao sensor S4 ser acionado
     MatrixLed[7] = MatrixLed[7] | destinoSub;
     MatrixLed[6] = MatrixLed[6] | destinoDesc;
     matrixUpdate();
+    
+    //Controle dos estados
+    if(destinoDesc ==0 && destinoSub == 0){ // Caso n�o tenha mais nenhum destino no trajeto
+        mov = RetornaS0;
+    }
+    
+    //Retorno do movimento do Motor
+    __delay_ms(500); //Espera 500ms para retornar o movimento
+    controleMovimento(); //Retorna o movimento 
 }
+
+
 
 void main(void)
 {
@@ -222,13 +296,6 @@ void main(void)
     while (1)
     {
         // Add your application code
-        chegadaS1();
-        __delay_ms(1000);
-        chegadaS2();
-        __delay_ms(1000);
-        chegadaS3();
-        __delay_ms(1000);
-        chegadaS4();
     }
 }
 /**

@@ -100,6 +100,7 @@ void initMatrix(){
 
 
 void controleMovimento(){
+    static uint8_t cont = 0;
     switch(mov){
         case Repouso:
             PWM3_LoadDutyValue(0);
@@ -111,8 +112,12 @@ void controleMovimento(){
             PWM3_LoadDutyValue(511);
             break;
         case RetornaS0:
-            __delay_ms(1500); //aguarda mais 1,5s para retornar a posi��o de repouso
-            PWM3_LoadDutyValue(511);
+            if (cont >=4){
+                PWM3_LoadDutyValue(511);
+                cont = 0;
+            }else{
+                cont++;
+            }
             break;
     }
     
@@ -157,6 +162,13 @@ void chegadaS1(){ //função acionada ao sensor S1 ser acionado
 void chegadaS2(){ //função acionada ao sensor S2 ser acionado
     PWM3_LoadDutyValue(0);//Desligando o Movimento do Motor
     
+    //Caso o Andar 3 seja um ponto de Parada reinicia o TRM1 que controla o tempo de espera do elevador
+    if(((destinoSub & 0b00000010) == 2 )||((destinoDesc & 0b00000010) == 2 ) ){ 
+        TMR1_ReadTimer(); 
+        TMR1_StartTimer();
+    }
+    
+    
     //Atualização da variavel da matrix de de Dados com o numero 1 mais a direcao de movimento do elevador
     MatrixLed[0] = 0b00000000;
     MatrixLed[1] = 0b01000001;
@@ -185,14 +197,17 @@ void chegadaS2(){ //função acionada ao sensor S2 ser acionado
     MatrixLed[6] = MatrixLed[6] | destinoDesc;
     matrixUpdate();
     
-    //Retorno do movimento do Motor
     
-    __delay_ms(500); //Espera 500ms para retornar o movimento
-    controleMovimento(); //Retorna o movimento 
 }
 
 void chegadaS3(){ //função acionada ao sensor S3 ser acionado
     PWM3_LoadDutyValue(0); //Desligando o Movimento do Motor
+    
+    //Caso o Andar 3 seja um ponto de Parada reinicia o TRM1 que controla o tempo de espera do elevador
+    if(((destinoSub & 0b00000100) == 4 )||((destinoDesc & 0b00000100) == 4 ) ){ 
+        TMR1_ReadTimer();
+        TMR1_StartTimer();
+    }
     
     //Atualização da variavel da matrix de de Dados com o numero 2 mais a direcao de movimento do elevador
     MatrixLed[0] = 0b01000011;
@@ -220,13 +235,17 @@ void chegadaS3(){ //função acionada ao sensor S3 ser acionado
         mov = RetornaS0;
     }
     
-    //Retorno do movimento do Motor
-    __delay_ms(500); //Espera 500ms para retornar o movimento
-    controleMovimento(); //Retorna o movimento 
+    
 }
 
 void chegadaS4(){ //função acionada ao sensor S4 ser acionado
     PWM3_LoadDutyValue(0); //Desligando o Movimento do Motor
+    
+    //Caso o Andar 3 seja um ponto de Parada reinicia o TRM1 que controla o tempo de espera do elevador
+    if(((destinoSub & 0b00001000) == 8 )||((destinoDesc & 0b00001000) == 8 ) ){ 
+        TMR1_ReadTimer();
+        TMR1_StartTimer();
+    }
     
     //Atualização da variavel da matrix de de Dados com o numero 3 mais a direcao de movimento do elevador
     MatrixLed[0] = 0b10000001;
@@ -254,9 +273,7 @@ void chegadaS4(){ //função acionada ao sensor S4 ser acionado
         mov = RetornaS0;
     }
     
-    //Retorno do movimento do Motor
-    __delay_ms(500); //Espera 500ms para retornar o movimento
-    controleMovimento(); //Retorna o movimento 
+    
 }
 
 
@@ -274,7 +291,7 @@ void main(void)
             a funcao esta sendo chamada dentro da funcao de interrupcao do periferico*/
     IOCBF3_SetInterruptHandler(chegadaS1);
     IOCBF3_SetInterruptHandler(chegadaS2);
-    
+    TMR1_SetInterruptHandler(controleMovimento);
     
     //Incializacao do SPI
     CS_SetHigh(); //Mantem Desativado o CS

@@ -569,11 +569,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/tmr1.c: 69:     T1GCON = 0x00;
 [e = _T1GCON -> -> 0 `i `uc ]
 "72
-[; ;mcc_generated_files/tmr1.c: 72:     TMR1H = 0x6D;
-[e = _TMR1H -> -> 109 `i `uc ]
+[; ;mcc_generated_files/tmr1.c: 72:     TMR1H = 0x0B;
+[e = _TMR1H -> -> 11 `i `uc ]
 "75
-[; ;mcc_generated_files/tmr1.c: 75:     TMR1L = 0x84;
-[e = _TMR1L -> -> 132 `i `uc ]
+[; ;mcc_generated_files/tmr1.c: 75:     TMR1L = 0xDC;
+[e = _TMR1L -> -> 220 `i `uc ]
 "78
 [; ;mcc_generated_files/tmr1.c: 78:     PIR1bits.TMR1IF = 0;
 [e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]

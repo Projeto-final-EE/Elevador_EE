@@ -526,11 +526,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/tmr0.c: 69:     OPTION_REG = (uint8_t)((OPTION_REG & 0xC0) | (0xD7 & 0x3F));
 [e = _OPTION_REG -> | & -> _OPTION_REG `i -> 192 `i & -> 215 `i -> 63 `i `uc ]
 "72
-[; ;mcc_generated_files/tmr0.c: 72:     TMR0 = 0x00;
-[e = _TMR0 -> -> 0 `i `uc ]
+[; ;mcc_generated_files/tmr0.c: 72:     TMR0 = 0x16;
+[e = _TMR0 -> -> 22 `i `uc ]
 "75
-[; ;mcc_generated_files/tmr0.c: 75:     timer0ReloadVal= 0;
-[e = _timer0ReloadVal -> -> 0 `i `uc ]
+[; ;mcc_generated_files/tmr0.c: 75:     timer0ReloadVal= 22;
+[e = _timer0ReloadVal -> -> 22 `i `uc ]
 "78
 [; ;mcc_generated_files/tmr0.c: 78:     INTCONbits.TMR0IF = 0;
 [e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
@@ -622,8 +622,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/tmr0.c: 115:     TMR0 = timer0ReloadVal;
 [e = _TMR0 _timer0ReloadVal ]
 "118
-[; ;mcc_generated_files/tmr0.c: 118:     if (++CountCallBack >= 32)
-[e $ ! >= -> =+ F2505 -> -> 1 `i `Vus `ui -> -> 32 `i `ui 359  ]
+[; ;mcc_generated_files/tmr0.c: 118:     if (++CountCallBack >= 5)
+[e $ ! >= -> =+ F2505 -> -> 1 `i `Vus `ui -> -> 5 `i `ui 359  ]
 "119
 [; ;mcc_generated_files/tmr0.c: 119:     {
 {

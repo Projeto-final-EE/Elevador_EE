@@ -34,7 +34,7 @@ IniciarTrajeto 1
 EmTrajeto 2
 RetornaS0 3
 ]
-"281 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+"298 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
 [e E2816 . `uc
 SPI1_DEFAULT 0
 ]
@@ -55,15 +55,15 @@ SPI1_DEFAULT 0
 [v _initMatrix initMatrix `(v  1 e 1 0 ]
 "102
 [v _controleMovimento controleMovimento `(v  1 e 1 0 ]
-"129
+"134
 [v _chegadaS1 chegadaS1 `(v  1 e 1 0 ]
-"157
+"162
 [v _chegadaS2 chegadaS2 `(v  1 e 1 0 ]
-"194
+"203
 [v _chegadaS3 chegadaS3 `(v  1 e 1 0 ]
-"228
+"241
 [v _chegadaS4 chegadaS4 `(v  1 e 1 0 ]
-"264
+"281
 [v _main main `(v  1 e 1 0 ]
 "67 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
@@ -140,6 +140,10 @@ SPI1_DEFAULT 0
 [v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
 "64 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/tmr1.c
 [v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+"93
+[v _TMR1_StartTimer TMR1_StartTimer `(v  1 e 1 0 ]
+"105
+[v _TMR1_ReadTimer TMR1_ReadTimer `(us  1 e 2 0 ]
 "120
 [v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
 "157
@@ -572,10 +576,10 @@ SPI1_DEFAULT 0
 [v _timer1ReloadVal timer1ReloadVal `VEus  1 e 2 0 ]
 "58
 [v _TMR1_InterruptHandler TMR1_InterruptHandler `*.37(v  1 e 2 0 ]
-"264 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+"281 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"300
+"317
 } 0
 "82
 [v _initMatrix initMatrix `(v  1 e 1 0 ]
@@ -583,7 +587,7 @@ SPI1_DEFAULT 0
 "89
 [v initMatrix@j j `uc  1 a 1 16 ]
 "88
-[v initMatrix@i_1322 i `uc  1 a 1 15 ]
+[v initMatrix@i_1325 i `uc  1 a 1 15 ]
 "85
 [v initMatrix@i i `uc  1 a 1 14 ]
 "83
@@ -761,6 +765,13 @@ SPI1_DEFAULT 0
 {
 "185
 } 0
+"102 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+[v _controleMovimento controleMovimento `(v  1 e 1 0 ]
+{
+"103
+[v controleMovimento@cont cont `uc  1 s 1 cont ]
+"131
+} 0
 "108 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/tmr0.c
 [v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
 {
@@ -788,20 +799,20 @@ SPI1_DEFAULT 0
 {
 "176
 } 0
-"129 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+"134 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
 [v _chegadaS1 chegadaS1 `(v  1 e 1 0 ]
 {
-"155
+"160
 } 0
 "188 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/pin_manager.c
 [v _IOCBF3_DefaultInterruptHandler IOCBF3_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
 "191
 } 0
-"157 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+"162 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
 [v _chegadaS2 chegadaS2 `(v  1 e 1 0 ]
 {
-"192
+"201
 } 0
 "136 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/pin_manager.c
 [v _IOCBF0_ISR IOCBF0_ISR `(v  1 e 1 0 ]
@@ -818,20 +829,20 @@ SPI1_DEFAULT 0
 {
 "91
 } 0
-"228 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+"241 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
 [v _chegadaS4 chegadaS4 `(v  1 e 1 0 ]
 {
-"260
+"277
 } 0
 "86 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/cmp1.c
 [v _CMP1_ISR CMP1_ISR `(v  1 e 1 0 ]
 {
 "91
 } 0
-"194 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+"203 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
 [v _chegadaS3 chegadaS3 `(v  1 e 1 0 ]
 {
-"226
+"239
 } 0
 "62
 [v _matrixUpdate matrixUpdate `(v  1 e 1 0 ]
@@ -864,10 +875,19 @@ SPI1_DEFAULT 0
 [v i1SPI1_ExchangeBlock@block block `*.4v  1 a 1 3 ]
 "110
 } 0
-"102 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-[v _controleMovimento controleMovimento `(v  1 e 1 0 ]
+"93 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/tmr1.c
+[v _TMR1_StartTimer TMR1_StartTimer `(v  1 e 1 0 ]
 {
-"126
+"97
+} 0
+"105
+[v _TMR1_ReadTimer TMR1_ReadTimer `(us  1 e 2 0 ]
+{
+"109
+[v TMR1_ReadTimer@readValLow readValLow `uc  1 a 1 2 ]
+"108
+[v TMR1_ReadTimer@readValHigh readValHigh `uc  1 a 1 1 ]
+"118
 } 0
 "82 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/pwm3.c
 [v _PWM3_LoadDutyValue PWM3_LoadDutyValue `(v  1 e 1 0 ]

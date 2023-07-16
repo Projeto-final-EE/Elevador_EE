@@ -4566,15 +4566,6 @@ extern void (*TMR1_InterruptHandler)(void);
 void TMR1_DefaultInterruptHandler(void);
 # 57 "./mcc_generated_files/mcc.h" 2
 
-# 1 "./mcc_generated_files/cmp2.h" 1
-# 92 "./mcc_generated_files/cmp2.h"
-void CMP2_Initialize(void);
-# 132 "./mcc_generated_files/cmp2.h"
-_Bool CMP2_GetOutputStatus(void);
-# 148 "./mcc_generated_files/cmp2.h"
-void CMP2_ISR(void);
-# 58 "./mcc_generated_files/mcc.h" 2
-
 # 1 "./mcc_generated_files/tmr2.h" 1
 # 103 "./mcc_generated_files/tmr2.h"
 void TMR2_Initialize(void);
@@ -4590,6 +4581,15 @@ void TMR2_WriteTimer(uint8_t timerVal);
 void TMR2_LoadPeriodRegister(uint8_t periodVal);
 # 325 "./mcc_generated_files/tmr2.h"
 _Bool TMR2_HasOverflowOccured(void);
+# 58 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/cmp2.h" 1
+# 92 "./mcc_generated_files/cmp2.h"
+void CMP2_Initialize(void);
+# 132 "./mcc_generated_files/cmp2.h"
+_Bool CMP2_GetOutputStatus(void);
+# 148 "./mcc_generated_files/cmp2.h"
+void CMP2_ISR(void);
 # 59 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/cmp1.h" 1
@@ -4795,6 +4795,7 @@ void initMatrix(){
 
 
 void controleMovimento(){
+    static uint8_t cont = 0;
     switch(mov){
         case Repouso:
             PWM3_LoadDutyValue(0);
@@ -4806,8 +4807,12 @@ void controleMovimento(){
             PWM3_LoadDutyValue(511);
             break;
         case RetornaS0:
-            _delay((unsigned long)((1500)*(4000000/4000.0)));
-            PWM3_LoadDutyValue(511);
+            if (cont >=4){
+                PWM3_LoadDutyValue(511);
+                cont = 0;
+            }else{
+                cont++;
+            }
             break;
     }
 
@@ -4853,6 +4858,13 @@ void chegadaS2(){
     PWM3_LoadDutyValue(0);
 
 
+    if(((destinoSub & 0b00000010) == 2 )||((destinoDesc & 0b00000010) == 2 ) ){
+        TMR1_ReadTimer();
+        TMR1_StartTimer();
+    }
+
+
+
     MatrixLed[0] = 0b00000000;
     MatrixLed[1] = 0b01000001;
     MatrixLed[2] = 0b11111111;
@@ -4881,13 +4893,16 @@ void chegadaS2(){
     matrixUpdate();
 
 
-
-    _delay((unsigned long)((500)*(4000000/4000.0)));
-    controleMovimento();
 }
 
 void chegadaS3(){
     PWM3_LoadDutyValue(0);
+
+
+    if(((destinoSub & 0b00000100) == 4 )||((destinoDesc & 0b00000100) == 4 ) ){
+        TMR1_ReadTimer();
+        TMR1_StartTimer();
+    }
 
 
     MatrixLed[0] = 0b01000011;
@@ -4916,12 +4931,16 @@ void chegadaS3(){
     }
 
 
-    _delay((unsigned long)((500)*(4000000/4000.0)));
-    controleMovimento();
 }
 
 void chegadaS4(){
     PWM3_LoadDutyValue(0);
+
+
+    if(((destinoSub & 0b00001000) == 8 )||((destinoDesc & 0b00001000) == 8 ) ){
+        TMR1_ReadTimer();
+        TMR1_StartTimer();
+    }
 
 
     MatrixLed[0] = 0b10000001;
@@ -4950,8 +4969,6 @@ void chegadaS4(){
     }
 
 
-    _delay((unsigned long)((500)*(4000000/4000.0)));
-    controleMovimento();
 }
 
 
@@ -4969,7 +4986,7 @@ void main(void)
 
     IOCBF3_SetInterruptHandler(chegadaS1);
     IOCBF3_SetInterruptHandler(chegadaS2);
-
+    TMR1_SetInterruptHandler(controleMovimento);
 
 
     do { LATBbits.LATB1 = 1; } while(0);

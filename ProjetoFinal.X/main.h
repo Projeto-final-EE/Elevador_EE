@@ -12,6 +12,9 @@
 extern "C" {
 #endif
 
+//Includes
+#include "bin2bcd.h"
+    
 //Defines
 #define flip_matrix  true
     
@@ -43,6 +46,7 @@ bool RXaccepted = false; // Indica que o valor recebido pela comunicacao serial 
 
 uint8_t origem; // Indica origem da chamada do elevador
 uint8_t destino; // Indica o destino do elevador
+uint8_t andarAtual = 0; // Indica o andar atual
 
 bool subindo = true; //flag que indica se o elevador est� subindo ou descendo
 uint8_t MatrixLed[8]; //Matrix de Dados que armazena o valor a ser transmito por SPI para a matrix de LED
@@ -57,6 +61,24 @@ uint8_t destinoDesc= 0;// indice 0 para andar 0, 1 para andar 1 e 2 para andar 2
  * @return true se o char � um n�mero entre '0' e '3' e false se nao �
  */
 bool isValidFloor(char floor);
+
+/**
+  @Summary
+    Timer1 Interrupt Handler function
+
+  @Description
+ Essa funcao envia as informacoes atuais sobre o elevador por meio da comunicacao serial
+
+  @Preconditions
+    Initialize  the TMR1 module with interrupt before calling this isr.
+
+  @Param
+    None
+
+  @Returns
+    None
+*/
+void sendInfo(void);
 
 //func�es SPI
 void txSpi( uint8_t *data, size_t dataSize); //funcao que realiza a transmissao da matriz de Dados para a Matriz de LED

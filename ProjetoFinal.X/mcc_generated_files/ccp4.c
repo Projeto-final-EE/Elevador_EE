@@ -59,7 +59,9 @@ static void (*CCP4_CallBack)(uint16_t);
 
 static void CCP4_DefaultCallBack(uint16_t capturedValue)
 {
-    ccp4Timer1 = capturedValue;                     //passa o valor pra a varivel global
+    velocidadeMotor = capturedValue - ccp4Timer1;   // Calcula a velocidade do motor
+    ccp4Timer1 = capturedValue;                     // Passa o valor pra a varivel global
+    
 }
 
 void CCP4_Initialize(void)

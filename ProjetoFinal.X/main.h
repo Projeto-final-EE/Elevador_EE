@@ -27,11 +27,15 @@ const uint8_t matrix_conf[] = {
 
 
 //Variaveis Globais
-bool subindo = true; //flag que indica se o elevador está subindo ou descendo
-uint8_t MatrixLed[8]; //Matrix de Dados que armazena o valor a ser transmito por SPI para a matrix de LED
-uint8_t destinoSub= 0; // indice 1 para andar 1, 2 para andar 2 e 3 para andar 3
-uint8_t destinoDesc= 0;// indice 0 para andar 0, 1 para andar 1 e 2 para andar 2
+bool subindo = true;            // Flag que indica se o elevador está subindo ou descendo
+uint8_t MatrixLed[8];           // Matrix de Dados que armazena o valor a ser transmito por SPI para a matrix de LED
+uint8_t destinoSub = 0;         // Indice 1 para andar 1, 2 para andar 2 e 3 para andar 3
+uint8_t destinoDesc = 0;        // Indice 0 para andar 0, 1 para andar 1 e 2 para andar 2
 
+uint8_t pulsoEncoder = 0;       // Numero de pulsos do encoder
+uint16_t velocidadeMotor = 0;   // Velocidade do motor (transformar em 9 bits))
+uint8_t flag = 0x00;            // Flag auxiliar para CCP4
+uint16_t t1 = 0, t2 = 0;        // Tempo 1 e 2 para CCP4
 
 //funcões SPI
 void txSpi( uint8_t *data, size_t dataSize); //funcao que realiza a transmissao da matriz de Dados para a Matriz de LED

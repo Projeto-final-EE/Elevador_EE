@@ -13,15 +13,22 @@
 #include "main.h"
 
 void interrupcaoCCP4(){
+    
+    if (pulsoEncoder <= 215){
+        pulsoEncoder++;
+    } else {
+        pulsoEncoder = 0;
+    }
+    
     if(!flag){
         t1 = (CCPR4H << 8) + CCPR4L;   // Tempo da primeira interrupcao
         flag = 0x01;
     } else {
         t2 = (CCPR4H << 8) + CCPR4L;   // Tempo da segunda interrupcao
         flag = 0x02;
+        
+        velocidadeMotor = (0.8372 * pulsoEncoder) / ((t2 - t1) / 1000000); // (mm/pulsos) / (tempo(s))
     }
-    
-    velocidadeMotor = 2/((t2 - t1) / 1e+6);
 }
 
 void txSpi( uint8_t *data, size_t dataSize){

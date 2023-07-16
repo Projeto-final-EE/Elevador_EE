@@ -164,8 +164,8 @@ void chegadaS2(){ //função acionada ao sensor S2 ser acionado
     
     //Caso o Andar 3 seja um ponto de Parada reinicia o TRM1 que controla o tempo de espera do elevador
     if(((destinoSub & 0b00000010) == 2 )||((destinoDesc & 0b00000010) == 2 ) ){ 
-        TMR1_ReadTimer(); 
-        TMR1_StartTimer();
+        TMR4_ReadTimer(); 
+        TMR4_StartTimer();
     }
     
     
@@ -205,8 +205,8 @@ void chegadaS3(){ //função acionada ao sensor S3 ser acionado
     
     //Caso o Andar 3 seja um ponto de Parada reinicia o TRM1 que controla o tempo de espera do elevador
     if(((destinoSub & 0b00000100) == 4 )||((destinoDesc & 0b00000100) == 4 ) ){ 
-        TMR1_ReadTimer();
-        TMR1_StartTimer();
+        TMR4_ReadTimer();
+        TMR4_StartTimer();
     }
     
     //Atualização da variavel da matrix de de Dados com o numero 2 mais a direcao de movimento do elevador
@@ -243,8 +243,8 @@ void chegadaS4(){ //função acionada ao sensor S4 ser acionado
     
     //Caso o Andar 3 seja um ponto de Parada reinicia o TRM1 que controla o tempo de espera do elevador
     if(((destinoSub & 0b00001000) == 8 )||((destinoDesc & 0b00001000) == 8 ) ){ 
-        TMR1_ReadTimer();
-        TMR1_StartTimer();
+        TMR4_ReadTimer();
+        TMR4_StartTimer();
     }
     
     //Atualização da variavel da matrix de de Dados com o numero 3 mais a direcao de movimento do elevador
@@ -291,8 +291,9 @@ void main(void)
             a funcao esta sendo chamada dentro da funcao de interrupcao do periferico*/
     IOCBF3_SetInterruptHandler(chegadaS1);
     IOCBF3_SetInterruptHandler(chegadaS2);
-    TMR1_SetInterruptHandler(controleMovimento);
+    TMR4_SetInterruptHandler(controleMovimento);
     
+    TMR1_StopTimer();//Mantendo o Timer 0 desligado ao iniciar o codigo
     //Incializacao do SPI
     CS_SetHigh(); //Mantem Desativado o CS
     SPI1_Open(SPI1_DEFAULT);        // Configura MSSP1

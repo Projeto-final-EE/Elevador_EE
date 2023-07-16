@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "mcc_generated_files/ccp4.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,10 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-# 44 "main.c"
-# 1 "./mcc_generated_files/mcc.h" 1
-# 49 "./mcc_generated_files/mcc.h"
+# 1 "mcc_generated_files/ccp4.c" 2
+# 51 "mcc_generated_files/ccp4.c"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -4331,316 +4329,13 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 29 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\\pic\\include\\xc.h" 2 3
-# 49 "./mcc_generated_files/mcc.h" 2
+# 51 "mcc_generated_files/ccp4.c" 2
 
-# 1 "./mcc_generated_files/device_config.h" 1
-# 50 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/pin_manager.h" 1
-# 243 "./mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_Initialize (void);
-# 255 "./mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_IOC(void);
-# 268 "./mcc_generated_files/pin_manager.h"
-void IOCBF0_ISR(void);
-# 291 "./mcc_generated_files/pin_manager.h"
-void IOCBF0_SetInterruptHandler(void (* InterruptHandler)(void));
-# 315 "./mcc_generated_files/pin_manager.h"
-extern void (*IOCBF0_InterruptHandler)(void);
-# 339 "./mcc_generated_files/pin_manager.h"
-void IOCBF0_DefaultInterruptHandler(void);
-# 352 "./mcc_generated_files/pin_manager.h"
-void IOCBF3_ISR(void);
-# 375 "./mcc_generated_files/pin_manager.h"
-void IOCBF3_SetInterruptHandler(void (* InterruptHandler)(void));
-# 399 "./mcc_generated_files/pin_manager.h"
-extern void (*IOCBF3_InterruptHandler)(void);
-# 423 "./mcc_generated_files/pin_manager.h"
-void IOCBF3_DefaultInterruptHandler(void);
-# 51 "./mcc_generated_files/mcc.h" 2
-
-
+# 1 "mcc_generated_files/ccp4.h" 1
+# 56 "mcc_generated_files/ccp4.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdbool.h" 1 3
-# 53 "./mcc_generated_files/mcc.h" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\conio.h" 1 3
-
-
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdio.h" 1 3
-# 24 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdio.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 1 3
-
-
-
-
-
-typedef void * va_list[1];
-
-
-
-
-typedef void * __isoc_va_list[1];
-# 137 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long ssize_t;
-# 246 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long off_t;
-# 399 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef struct _IO_FILE FILE;
-# 24 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdio.h" 2 3
-# 52 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\stdio.h" 3
-typedef union _G_fpos64_t {
- char __opaque[16];
- double __align;
-} fpos_t;
-
-extern FILE *const stdin;
-extern FILE *const stdout;
-extern FILE *const stderr;
-
-
-
-
-
-FILE *fopen(const char *restrict, const char *restrict);
-FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
-int fclose(FILE *);
-
-int remove(const char *);
-int rename(const char *, const char *);
-
-int feof(FILE *);
-int ferror(FILE *);
-int fflush(FILE *);
-void clearerr(FILE *);
-
-int fseek(FILE *, long, int);
-long ftell(FILE *);
-void rewind(FILE *);
-
-int fgetpos(FILE *restrict, fpos_t *restrict);
-int fsetpos(FILE *, const fpos_t *);
-
-size_t fread(void *restrict, size_t, size_t, FILE *restrict);
-size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
-
-int fgetc(FILE *);
-int getc(FILE *);
-int getchar(void);
-int ungetc(int, FILE *);
-
-int fputc(int, FILE *);
-int putc(int, FILE *);
-int putchar(int);
-
-char *fgets(char *restrict, int, FILE *restrict);
-
-char *gets(char *);
-
-
-int fputs(const char *restrict, FILE *restrict);
-int puts(const char *);
-
-__attribute__((__format__(__printf__, 1, 2)))
-int printf(const char *restrict, ...);
-__attribute__((__format__(__printf__, 2, 3)))
-int fprintf(FILE *restrict, const char *restrict, ...);
-__attribute__((__format__(__printf__, 2, 3)))
-int sprintf(char *restrict, const char *restrict, ...);
-__attribute__((__format__(__printf__, 3, 4)))
-int snprintf(char *restrict, size_t, const char *restrict, ...);
-
-__attribute__((__format__(__printf__, 1, 0)))
-int vprintf(const char *restrict, __isoc_va_list);
-int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__printf__, 2, 0)))
-int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__printf__, 3, 0)))
-int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
-
-__attribute__((__format__(__scanf__, 1, 2)))
-int scanf(const char *restrict, ...);
-__attribute__((__format__(__scanf__, 2, 3)))
-int fscanf(FILE *restrict, const char *restrict, ...);
-__attribute__((__format__(__scanf__, 2, 3)))
-int sscanf(const char *restrict, const char *restrict, ...);
-
-__attribute__((__format__(__scanf__, 1, 0)))
-int vscanf(const char *restrict, __isoc_va_list);
-int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
-__attribute__((__format__(__scanf__, 2, 0)))
-int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
-
-void perror(const char *);
-
-int setvbuf(FILE *restrict, char *restrict, int, size_t);
-void setbuf(FILE *restrict, char *restrict);
-
-char *tmpnam(char *);
-FILE *tmpfile(void);
-
-
-
-
-FILE *fmemopen(void *restrict, size_t, const char *restrict);
-FILE *open_memstream(char **, size_t *);
-FILE *fdopen(int, const char *);
-FILE *popen(const char *, const char *);
-int pclose(FILE *);
-int fileno(FILE *);
-int fseeko(FILE *, off_t, int);
-off_t ftello(FILE *);
-int dprintf(int, const char *restrict, ...);
-int vdprintf(int, const char *restrict, __isoc_va_list);
-void flockfile(FILE *);
-int ftrylockfile(FILE *);
-void funlockfile(FILE *);
-int getc_unlocked(FILE *);
-int getchar_unlocked(void);
-int putc_unlocked(int, FILE *);
-int putchar_unlocked(int);
-ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
-ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
-int renameat(int, const char *, int, const char *);
-char *ctermid(char *);
-
-
-
-
-
-
-
-char *tempnam(const char *, const char *);
-# 7 "C:\\Program Files\\Microchip\\xc8\\v2.36\\pic\\include\\c99\\conio.h" 2 3
-# 54 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/interrupt_manager.h" 1
-# 55 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/spi1.h" 1
-# 59 "./mcc_generated_files/spi1.h"
-typedef enum {
-    SPI1_DEFAULT
-} spi1_modes_t;
-
-void SPI1_Initialize(void);
-_Bool SPI1_Open(spi1_modes_t spi1UniqueConfiguration);
-void SPI1_Close(void);
-uint8_t SPI1_ExchangeByte(uint8_t data);
-void SPI1_ExchangeBlock(void *block, size_t blockSize);
-void SPI1_WriteBlock(void *block, size_t blockSize);
-void SPI1_ReadBlock(void *block, size_t blockSize);
-void SPI1_WriteByte(uint8_t byte);
-uint8_t SPI1_ReadByte(void);
-# 56 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/tmr4.h" 1
-# 104 "./mcc_generated_files/tmr4.h"
-void TMR4_Initialize(void);
-# 133 "./mcc_generated_files/tmr4.h"
-void TMR4_StartTimer(void);
-# 165 "./mcc_generated_files/tmr4.h"
-void TMR4_StopTimer(void);
-# 200 "./mcc_generated_files/tmr4.h"
-uint8_t TMR4_ReadTimer(void);
-# 239 "./mcc_generated_files/tmr4.h"
-void TMR4_WriteTimer(uint8_t timerVal);
-# 291 "./mcc_generated_files/tmr4.h"
-void TMR4_LoadPeriodRegister(uint8_t periodVal);
-# 309 "./mcc_generated_files/tmr4.h"
-void TMR4_ISR(void);
-# 327 "./mcc_generated_files/tmr4.h"
- void TMR4_CallBack(void);
-# 344 "./mcc_generated_files/tmr4.h"
- void TMR4_SetInterruptHandler(void (* InterruptHandler)(void));
-# 362 "./mcc_generated_files/tmr4.h"
-extern void (*TMR4_InterruptHandler)(void);
-# 380 "./mcc_generated_files/tmr4.h"
-void TMR4_DefaultInterruptHandler(void);
-# 57 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/tmr1.h" 1
-# 100 "./mcc_generated_files/tmr1.h"
-void TMR1_Initialize(void);
-# 129 "./mcc_generated_files/tmr1.h"
-void TMR1_StartTimer(void);
-# 161 "./mcc_generated_files/tmr1.h"
-void TMR1_StopTimer(void);
-# 196 "./mcc_generated_files/tmr1.h"
-uint16_t TMR1_ReadTimer(void);
-# 235 "./mcc_generated_files/tmr1.h"
-void TMR1_WriteTimer(uint16_t timerVal);
-# 271 "./mcc_generated_files/tmr1.h"
-void TMR1_Reload(void);
-# 310 "./mcc_generated_files/tmr1.h"
-void TMR1_StartSinglePulseAcquisition(void);
-# 349 "./mcc_generated_files/tmr1.h"
-uint8_t TMR1_CheckGateValueStatus(void);
-# 387 "./mcc_generated_files/tmr1.h"
-_Bool TMR1_HasOverflowOccured(void);
-# 58 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/tmr2.h" 1
-# 103 "./mcc_generated_files/tmr2.h"
-void TMR2_Initialize(void);
-# 132 "./mcc_generated_files/tmr2.h"
-void TMR2_StartTimer(void);
-# 164 "./mcc_generated_files/tmr2.h"
-void TMR2_StopTimer(void);
-# 199 "./mcc_generated_files/tmr2.h"
-uint8_t TMR2_ReadTimer(void);
-# 238 "./mcc_generated_files/tmr2.h"
-void TMR2_WriteTimer(uint8_t timerVal);
-# 290 "./mcc_generated_files/tmr2.h"
-void TMR2_LoadPeriodRegister(uint8_t periodVal);
-# 325 "./mcc_generated_files/tmr2.h"
-_Bool TMR2_HasOverflowOccured(void);
-# 59 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/cmp2.h" 1
-# 92 "./mcc_generated_files/cmp2.h"
-void CMP2_Initialize(void);
-# 132 "./mcc_generated_files/cmp2.h"
-_Bool CMP2_GetOutputStatus(void);
-# 148 "./mcc_generated_files/cmp2.h"
-void CMP2_ISR(void);
-# 60 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/cmp1.h" 1
-# 92 "./mcc_generated_files/cmp1.h"
-void CMP1_Initialize(void);
-# 132 "./mcc_generated_files/cmp1.h"
-_Bool CMP1_GetOutputStatus(void);
-# 148 "./mcc_generated_files/cmp1.h"
-void CMP1_ISR(void);
-# 61 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/tmr0.h" 1
-# 104 "./mcc_generated_files/tmr0.h"
-void TMR0_Initialize(void);
-# 135 "./mcc_generated_files/tmr0.h"
-uint8_t TMR0_ReadTimer(void);
-# 174 "./mcc_generated_files/tmr0.h"
-void TMR0_WriteTimer(uint8_t timerVal);
-# 210 "./mcc_generated_files/tmr0.h"
-void TMR0_Reload(void);
-# 225 "./mcc_generated_files/tmr0.h"
-void TMR0_ISR(void);
-# 243 "./mcc_generated_files/tmr0.h"
-void TMR0_CallBack(void);
-# 261 "./mcc_generated_files/tmr0.h"
- void TMR0_SetInterruptHandler(void (* InterruptHandler)(void));
-# 279 "./mcc_generated_files/tmr0.h"
-extern void (*TMR0_InterruptHandler)(void);
-# 297 "./mcc_generated_files/tmr0.h"
-void TMR0_DefaultInterruptHandler(void);
-# 62 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/ccp4.h" 1
-# 80 "./mcc_generated_files/ccp4.h"
+# 56 "mcc_generated_files/ccp4.h" 2
+# 80 "mcc_generated_files/ccp4.h"
 typedef union CCPR4Reg_tag
 {
    struct
@@ -4653,400 +4348,65 @@ typedef union CCPR4Reg_tag
       uint16_t ccpr4_16Bit;
    };
 } CCP4_PERIOD_REG_T ;
-# 123 "./mcc_generated_files/ccp4.h"
+# 123 "mcc_generated_files/ccp4.h"
 void CCP4_Initialize(void);
-# 139 "./mcc_generated_files/ccp4.h"
+# 139 "mcc_generated_files/ccp4.h"
 void CCP4_CaptureISR(void);
-# 180 "./mcc_generated_files/ccp4.h"
+# 180 "mcc_generated_files/ccp4.h"
  void CCP4_SetCallBack(void (*customCallBack)(uint16_t));
-# 63 "./mcc_generated_files/mcc.h" 2
+# 52 "mcc_generated_files/ccp4.c" 2
 
-# 1 "./mcc_generated_files/fvr.h" 1
-# 93 "./mcc_generated_files/fvr.h"
- void FVR_Initialize(void);
-# 127 "./mcc_generated_files/fvr.h"
-_Bool FVR_IsOutputReady(void);
-# 64 "./mcc_generated_files/mcc.h" 2
 
-# 1 "./mcc_generated_files/pwm3.h" 1
-# 97 "./mcc_generated_files/pwm3.h"
-void PWM3_Initialize(void);
-# 124 "./mcc_generated_files/pwm3.h"
-void PWM3_LoadDutyValue(uint16_t dutyValue);
-# 65 "./mcc_generated_files/mcc.h" 2
+static void (*CCP4_CallBack)(uint16_t);
 
-# 1 "./mcc_generated_files/adc.h" 1
-# 72 "./mcc_generated_files/adc.h"
-typedef uint16_t adc_result_t;
 
 
 
 
-typedef struct
-{
-    adc_result_t adcResult1;
-    adc_result_t adcResult2;
-} adc_sync_double_result_t;
-# 95 "./mcc_generated_files/adc.h"
-typedef enum
-{
-    Temp = 0x2,
-    channel_Temp = 0x1D,
-    channel_DAC = 0x1E,
-    channel_FVR = 0x1F
-} adc_channel_t;
-# 136 "./mcc_generated_files/adc.h"
-void ADC_Initialize(void);
-# 166 "./mcc_generated_files/adc.h"
-void ADC_SelectChannel(adc_channel_t channel);
-# 193 "./mcc_generated_files/adc.h"
-void ADC_StartConversion(void);
-# 225 "./mcc_generated_files/adc.h"
-_Bool ADC_IsConversionDone(void);
-# 258 "./mcc_generated_files/adc.h"
-adc_result_t ADC_GetConversionResult(void);
-# 288 "./mcc_generated_files/adc.h"
-adc_result_t ADC_GetConversion(adc_channel_t channel);
-# 316 "./mcc_generated_files/adc.h"
-void ADC_TemperatureAcquisitionDelay(void);
-# 66 "./mcc_generated_files/mcc.h" 2
-
-# 1 "./mcc_generated_files/eusart.h" 1
-# 75 "./mcc_generated_files/eusart.h"
-typedef union {
-    struct {
-        unsigned perr : 1;
-        unsigned ferr : 1;
-        unsigned oerr : 1;
-        unsigned reserved : 5;
-    };
-    uint8_t status;
-}eusart_status_t;
-# 110 "./mcc_generated_files/eusart.h"
-void EUSART_Initialize(void);
-# 158 "./mcc_generated_files/eusart.h"
-_Bool EUSART_is_tx_ready(void);
-# 206 "./mcc_generated_files/eusart.h"
-_Bool EUSART_is_rx_ready(void);
-# 253 "./mcc_generated_files/eusart.h"
-_Bool EUSART_is_tx_done(void);
-# 301 "./mcc_generated_files/eusart.h"
-eusart_status_t EUSART_get_last_status(void);
-# 321 "./mcc_generated_files/eusart.h"
-uint8_t EUSART_Read(void);
-# 341 "./mcc_generated_files/eusart.h"
-void EUSART_Write(uint8_t txData);
-# 361 "./mcc_generated_files/eusart.h"
-void EUSART_SetFramingErrorHandler(void (* interruptHandler)(void));
-# 379 "./mcc_generated_files/eusart.h"
-void EUSART_SetOverrunErrorHandler(void (* interruptHandler)(void));
-# 397 "./mcc_generated_files/eusart.h"
-void EUSART_SetErrorHandler(void (* interruptHandler)(void));
-# 67 "./mcc_generated_files/mcc.h" 2
-# 82 "./mcc_generated_files/mcc.h"
-void SYSTEM_Initialize(void);
-# 95 "./mcc_generated_files/mcc.h"
-void OSCILLATOR_Initialize(void);
-# 107 "./mcc_generated_files/mcc.h"
-void WDT_Initialize(void);
-# 44 "main.c" 2
-
-# 1 "./main.h" 1
-# 18 "./main.h"
-const uint8_t matrix_conf[] = {
-    0x09,0x00,
-    0x0A,0x00,
-    0x0B,0x07,
-    0x0C,0x01,
-    0x0F,0x01,
-    0x0F,0x00,
-};
-
-
-
-_Bool subindo = 1;
-uint8_t MatrixLed[8];
-uint8_t destinoSub= 0;
-uint8_t destinoDesc= 0;
-
-
-enum estadoMov{ Repouso, IniciarTrajeto, EmTrajeto, RetornaS0}mov=Repouso;
-
-
-void txSpi( uint8_t *data, size_t dataSize);
-void matrixUpdate();
-void initMatrix();
-void chegadaS1();
-void chegadaS2();
-void chegadaS3();
-void chegadaS4();
-
-
-void controleMovimento();
-# 45 "main.c" 2
-# 54 "main.c"
-void txSpi( uint8_t *data, size_t dataSize){
-    do { LATBbits.LATB1 = 0; } while(0);
-    SPI1_ExchangeBlock(data,dataSize);
-    do { LATBbits.LATB1 = 1; } while(0);
-
-
-}
-
-void matrixUpdate(){
-    uint8_t data[2];
-    if (1){
-        for(uint8_t i=8;i>0;i--){
-            data[0] = i;
-            data[1] = MatrixLed[i-1];
-            txSpi(data, 2);
-        }
-    }else{
-        uint8_t index = 7;
-        for(uint8_t i=1;i<9;i++){
-
-            data[0] = i;
-            data[1] = MatrixLed[index];
-            txSpi(data, 2);
-            index--;
-        }
-    }
-}
-
-void initMatrix(){
-    uint8_t data[4];
-    uint8_t k=0;
-   for(uint8_t i =0; i<8; i++){
-            MatrixLed[i] = 0;
-        }
-    for(uint8_t i=0;i<6;i++){
-        for(uint8_t j=0;j<4;j=j+2){
-            data[j]= matrix_conf[k];
-            data[j+1]= matrix_conf[k+1];
-        }
-        k=k+2;
-        txSpi( data, 4);
-        if(i==4){
-
-        }
-    }
-}
-
-
-void controleMovimento(){
-    static uint8_t cont = 0;
-    switch(mov){
-        case Repouso:
-            PWM3_LoadDutyValue(0);
-            break;
-        case IniciarTrajeto:
-            PWM3_LoadDutyValue(511);
-            break;
-        case EmTrajeto:
-            PWM3_LoadDutyValue(511);
-            break;
-        case RetornaS0:
-            if (cont >=4){
-                PWM3_LoadDutyValue(511);
-                cont = 0;
-            }else{
-                cont++;
-            }
-            break;
-    }
-
-    if(destinoSub != 0 && mov != RetornaS0 ){
-
-        subindo = 1;
-    }else{
-
-        subindo = 0;
-    }
-}
-
-
-void chegadaS1(){
-    PWM3_LoadDutyValue(0);
-
-
-    mov = Repouso;
-
-    MatrixLed[0] = 0b01111110;
-    MatrixLed[1] = 0b10000001;
-    MatrixLed[2] = 0b10000001;
-    MatrixLed[3] = 0b01111110;
-    MatrixLed[4] = 0;
-    if(subindo){
-        MatrixLed[5] = 0b01100000;
-        MatrixLed[6] = 0b11000000;
-        MatrixLed[7] = 0b01100000;
-    }else{
-        MatrixLed[5] = 0b11000000;
-        MatrixLed[6] = 0b01100000;
-        MatrixLed[7] = 0b11000000;
-        destinoDesc = destinoDesc & 0b11111110;
-    }
-    matrixUpdate();
-
-
-
-
-}
-
-void chegadaS2(){
-    PWM3_LoadDutyValue(0);
-
-
-    if(((destinoSub & 0b00000010) == 2 )||((destinoDesc & 0b00000010) == 2 ) ){
-        TMR4_ReadTimer();
-        TMR4_StartTimer();
-    }
-
-
-
-    MatrixLed[0] = 0b00000000;
-    MatrixLed[1] = 0b01000001;
-    MatrixLed[2] = 0b11111111;
-    MatrixLed[3] = 0b00000001;
-    MatrixLed[4] = 0;
-    if(subindo){
-        MatrixLed[5] = 0b01100000;
-        MatrixLed[6] = 0b11000000;
-        MatrixLed[7] = 0b01100000;
-        destinoSub = destinoSub & 0b11111101;
-
-        mov = EmTrajeto;
-    }else{
-        MatrixLed[5] = 0b11000000;
-        MatrixLed[6] = 0b01100000;
-        MatrixLed[7] = 0b11000000;
-        destinoDesc = destinoDesc & 0b11111101;
-
-
-        if(destinoDesc == 0){
-            mov = RetornaS0;
-        }
-    }
-    MatrixLed[7] = MatrixLed[7] | destinoSub;
-    MatrixLed[6] = MatrixLed[6] | destinoDesc;
-    matrixUpdate();
-
-
-}
-
-void chegadaS3(){
-    PWM3_LoadDutyValue(0);
-
-
-    if(((destinoSub & 0b00000100) == 4 )||((destinoDesc & 0b00000100) == 4 ) ){
-        TMR4_ReadTimer();
-        TMR4_StartTimer();
-    }
-
-
-    MatrixLed[0] = 0b01000011;
-    MatrixLed[1] = 0b10000101;
-    MatrixLed[2] = 0b10001001;
-    MatrixLed[3] = 0b01110001;
-    MatrixLed[4] = 0;
-    if(subindo){
-        MatrixLed[5] = 0b01100000;
-        MatrixLed[6] = 0b11000000;
-        MatrixLed[7] = 0b01100000;
-        destinoSub = destinoSub & 0b11111011;
-    }else{
-        MatrixLed[5] = 0b11000000;
-        MatrixLed[6] = 0b01100000;
-        MatrixLed[7] = 0b11000000;
-        destinoDesc = destinoDesc & 0b11111011;
-    }
-    MatrixLed[7] = MatrixLed[7] | destinoSub;
-    MatrixLed[6] = MatrixLed[6] | destinoDesc;
-    matrixUpdate();
-
-
-    if(destinoDesc ==0 && destinoSub == 0){
-        mov = RetornaS0;
-    }
-
-
-}
-
-void chegadaS4(){
-    PWM3_LoadDutyValue(0);
-
-
-    if(((destinoSub & 0b00001000) == 8 )||((destinoDesc & 0b00001000) == 8 ) ){
-        TMR4_ReadTimer();
-        TMR4_StartTimer();
-    }
-
-
-    MatrixLed[0] = 0b10000001;
-    MatrixLed[1] = 0b10010001;
-    MatrixLed[2] = 0b10010001;
-    MatrixLed[3] = 0b01101110;
-    MatrixLed[4] = 0;
-    if(subindo){
-        MatrixLed[5] = 0b01100000;
-        MatrixLed[6] = 0b11000000;
-        MatrixLed[7] = 0b01100000;
-        destinoSub = destinoSub & 0b11110111;
-    }else{
-        MatrixLed[5] = 0b11000000;
-        MatrixLed[6] = 0b01100000;
-        MatrixLed[7] = 0b11000000;
-        destinoDesc = destinoDesc & 0b11110111;
-    }
-    MatrixLed[7] = MatrixLed[7] | destinoSub;
-    MatrixLed[6] = MatrixLed[6] | destinoDesc;
-    matrixUpdate();
-
-
-    if(destinoDesc ==0 && destinoSub == 0){
-        mov = RetornaS0;
-    }
-
-
-}
-
-
-
-void main(void)
+static void CCP4_DefaultCallBack(uint16_t capturedValue)
 {
 
-    SYSTEM_Initialize();
+}
+
+void CCP4_Initialize(void)
+{
 
 
 
+ CCP4CON = 0x04;
+
+
+ CCPR4L = 0x00;
+
+
+ CCPR4H = 0x00;
+
+
+    CCP4_SetCallBack(CCP4_DefaultCallBack);
 
 
 
-
-    IOCBF3_SetInterruptHandler(chegadaS1);
-    IOCBF3_SetInterruptHandler(chegadaS2);
-    TMR4_SetInterruptHandler(controleMovimento);
-
-    TMR1_StopTimer();
-
-    do { LATBbits.LATB1 = 1; } while(0);
-    SPI1_Open(SPI1_DEFAULT);
-    initMatrix();
+    PIR3bits.CCP4IF = 0;
 
 
-    (INTCONbits.GIE = 1);
+    PIE3bits.CCP4IE = 1;
+}
+
+void CCP4_CaptureISR(void)
+{
+    CCP4_PERIOD_REG_T module;
 
 
-    (INTCONbits.PEIE = 1);
+    PIR3bits.CCP4IF = 0;
 
 
+    module.ccpr4l = CCPR4L;
+    module.ccpr4h = CCPR4H;
 
 
+    CCP4_CallBack(module.ccpr4_16Bit);
+}
 
-
-
-    while (1)
-    {
-
-    }
+void CCP4_SetCallBack(void (*customCallBack)(uint16_t)){
+    CCP4_CallBack = customCallBack;
 }

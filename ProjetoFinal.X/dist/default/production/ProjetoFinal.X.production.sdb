@@ -28,13 +28,13 @@ channel_FVR 31
 SPI1_DEFAULT 0
 ]
 "35 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X/main.h
-[e E2946 estadoMov `uc
+[e E2972 estadoMov `uc
 Repouso 0
 IniciarTrajeto 1
 EmTrajeto 2
 RetornaS0 3
 ]
-"298 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
+"299 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
 [e E2816 . `uc
 SPI1_DEFAULT 0
 ]
@@ -67,6 +67,14 @@ SPI1_DEFAULT 0
 [v _main main `(v  1 e 1 0 ]
 "67 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+"60 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/ccp4.c
+[v _CCP4_DefaultCallBack CCP4_DefaultCallBack `(v  1 s 1 CCP4_DefaultCallBack ]
+"65
+[v _CCP4_Initialize CCP4_Initialize `(v  1 e 1 0 ]
+"89
+[v _CCP4_CaptureISR CCP4_CaptureISR `(v  1 e 1 0 ]
+"104
+[v _CCP4_SetCallBack CCP4_SetCallBack `(v  1 e 1 0 ]
 "59 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/cmp1.c
 [v _CMP1_Initialize CMP1_Initialize `(v  1 e 1 0 ]
 "86
@@ -95,9 +103,9 @@ SPI1_DEFAULT 0
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 "50 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
-"68
+"70
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
-"78
+"80
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
 "58 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
@@ -138,24 +146,28 @@ SPI1_DEFAULT 0
 [v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
 "144
 [v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
-"64 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/tmr1.c
+"63 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/tmr1.c
 [v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
-"93
-[v _TMR1_StartTimer TMR1_StartTimer `(v  1 e 1 0 ]
-"105
-[v _TMR1_ReadTimer TMR1_ReadTimer `(us  1 e 2 0 ]
-"120
+"92
+[v _TMR1_StopTimer TMR1_StopTimer `(v  1 e 1 0 ]
+"113
 [v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
-"157
-[v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
-"169
-[v _TMR1_CallBack TMR1_CallBack `(v  1 e 1 0 ]
-"178
-[v _TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
-"182
-[v _TMR1_DefaultInterruptHandler TMR1_DefaultInterruptHandler `(v  1 e 1 0 ]
 "62 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
+"64 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/tmr4.c
+[v _TMR4_Initialize TMR4_Initialize `(v  1 e 1 0 ]
+"87
+[v _TMR4_StartTimer TMR4_StartTimer `(v  1 e 1 0 ]
+"99
+[v _TMR4_ReadTimer TMR4_ReadTimer `(uc  1 e 1 0 ]
+"119
+[v _TMR4_ISR TMR4_ISR `(v  1 e 1 0 ]
+"137
+[v _TMR4_CallBack TMR4_CallBack `(v  1 e 1 0 ]
+"147
+[v _TMR4_SetInterruptHandler TMR4_SetInterruptHandler `(v  1 e 1 0 ]
+"151
+[v _TMR4_DefaultInterruptHandler TMR4_DefaultInterruptHandler `(v  1 e 1 0 ]
 "18 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X/main.h
 [v _matrix_conf matrix_conf `DC[12]uc  1 e 12 0 ]
 "29
@@ -185,7 +197,7 @@ SPI1_DEFAULT 0
 ]
 [u S351 . 1 `S337 1 . 1 0 `S346 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES351  1 e 1 @11 ]
-[s S648 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[s S656 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSP1IF 1 0 :1:3 
@@ -195,8 +207,8 @@ SPI1_DEFAULT 0
 `uc 1 TMR1GIF 1 0 :1:7 
 ]
 "571
-[u S657 . 1 `S648 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES657  1 e 1 @17 ]
+[u S665 . 1 `S656 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES665  1 e 1 @17 ]
 [s S90 . 1 `uc 1 CCP2IF 1 0 :1:0 
 `uc 1 . 1 0 :2:1 
 `uc 1 BCL1IF 1 0 :1:3 
@@ -208,6 +220,16 @@ SPI1_DEFAULT 0
 "632
 [u S98 . 1 `S90 1 . 1 0 ]
 [v _PIR2bits PIR2bits `VES98  1 e 1 @18 ]
+[s S957 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 TMR4IF 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 TMR6IF 1 0 :1:3 
+`uc 1 CCP3IF 1 0 :1:4 
+`uc 1 CCP4IF 1 0 :1:5 
+]
+"682
+[u S964 . 1 `S957 1 . 1 0 ]
+[v _PIR3bits PIR3bits `VES964  1 e 1 @19 ]
 "733
 [v _TMR0 TMR0 `VEuc  1 e 1 @21 ]
 "760
@@ -216,7 +238,7 @@ SPI1_DEFAULT 0
 [v _TMR1H TMR1H `VEuc  1 e 1 @23 ]
 "800
 [v _T1CON T1CON `VEuc  1 e 1 @24 ]
-[s S1024 . 1 `uc 1 TMR1ON 1 0 :1:0 
+[s S1018 . 1 `uc 1 TMR1ON 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 nT1SYNC 1 0 :1:2 
 `uc 1 T1OSCEN 1 0 :1:3 
@@ -226,15 +248,15 @@ SPI1_DEFAULT 0
 `uc 1 TMR1CS1 1 0 :1:7 
 ]
 "822
-[s S1033 . 1 `uc 1 . 1 0 :4:0 
+[s S1027 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 T1CKPS 1 0 :2:4 
 `uc 1 TMR1CS 1 0 :2:6 
 ]
-[u S1037 . 1 `S1024 1 . 1 0 `S1033 1 . 1 0 ]
-[v _T1CONbits T1CONbits `VES1037  1 e 1 @24 ]
+[u S1031 . 1 `S1018 1 . 1 0 `S1027 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES1031  1 e 1 @24 ]
 "872
 [v _T1GCON T1GCON `VEuc  1 e 1 @25 ]
-[s S1054 . 1 `uc 1 T1GSS0 1 0 :1:0 
+[s S1048 . 1 `uc 1 T1GSS0 1 0 :1:0 
 `uc 1 T1GSS1 1 0 :1:1 
 `uc 1 T1GVAL 1 0 :1:2 
 `uc 1 T1GGO 1 0 :1:3 
@@ -244,17 +266,17 @@ SPI1_DEFAULT 0
 `uc 1 TMR1GE 1 0 :1:7 
 ]
 "892
-[s S1063 . 1 `uc 1 T1GSS 1 0 :2:0 
+[s S1057 . 1 `uc 1 T1GSS 1 0 :2:0 
 ]
-[u S1065 . 1 `S1054 1 . 1 0 `S1063 1 . 1 0 ]
-[v _T1GCONbits T1GCONbits `VES1065  1 e 1 @25 ]
+[u S1059 . 1 `S1048 1 . 1 0 `S1057 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES1059  1 e 1 @25 ]
 "942
 [v _TMR2 TMR2 `VEuc  1 e 1 @26 ]
 "962
 [v _PR2 PR2 `VEuc  1 e 1 @27 ]
 "982
 [v _T2CON T2CON `VEuc  1 e 1 @28 ]
-[s S1139 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+[s S1120 . 1 `uc 1 T2CKPS0 1 0 :1:0 
 `uc 1 T2CKPS1 1 0 :1:1 
 `uc 1 TMR2ON 1 0 :1:2 
 `uc 1 T2OUTPS0 1 0 :1:3 
@@ -263,17 +285,17 @@ SPI1_DEFAULT 0
 `uc 1 T2OUTPS3 1 0 :1:6 
 ]
 "1003
-[s S1147 . 1 `uc 1 T2CKPS 1 0 :2:0 
+[s S1128 . 1 `uc 1 T2CKPS 1 0 :2:0 
 `uc 1 . 1 0 :1:2 
 `uc 1 T2OUTPS 1 0 :4:3 
 ]
-[u S1151 . 1 `S1139 1 . 1 0 `S1147 1 . 1 0 ]
-[v _T2CONbits T2CONbits `VES1151  1 e 1 @28 ]
+[u S1132 . 1 `S1120 1 . 1 0 `S1128 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES1132  1 e 1 @28 ]
 "1153
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1215
 [v _TRISB TRISB `VEuc  1 e 1 @141 ]
-[s S779 . 1 `uc 1 TRISB0 1 0 :1:0 
+[s S787 . 1 `uc 1 TRISB0 1 0 :1:0 
 `uc 1 TRISB1 1 0 :1:1 
 `uc 1 TRISB2 1 0 :1:2 
 `uc 1 TRISB3 1 0 :1:3 
@@ -283,20 +305,8 @@ SPI1_DEFAULT 0
 `uc 1 TRISB7 1 0 :1:7 
 ]
 "1232
-[u S788 . 1 `S779 1 . 1 0 ]
-[v _TRISBbits TRISBbits `VES788  1 e 1 @141 ]
-[s S932 . 1 `uc 1 TMR1IE 1 0 :1:0 
-`uc 1 TMR2IE 1 0 :1:1 
-`uc 1 CCP1IE 1 0 :1:2 
-`uc 1 SSP1IE 1 0 :1:3 
-`uc 1 TXIE 1 0 :1:4 
-`uc 1 RCIE 1 0 :1:5 
-`uc 1 ADIE 1 0 :1:6 
-`uc 1 TMR1GIE 1 0 :1:7 
-]
-"1294
-[u S941 . 1 `S932 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES941  1 e 1 @145 ]
+[u S796 . 1 `S787 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES796  1 e 1 @141 ]
 [s S69 . 1 `uc 1 CCP2IE 1 0 :1:0 
 `uc 1 . 1 0 :2:1 
 `uc 1 BCL1IE 1 0 :1:3 
@@ -308,6 +318,16 @@ SPI1_DEFAULT 0
 "1355
 [u S77 . 1 `S69 1 . 1 0 ]
 [v _PIE2bits PIE2bits `VES77  1 e 1 @146 ]
+[s S940 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 TMR4IE 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 TMR6IE 1 0 :1:3 
+`uc 1 CCP3IE 1 0 :1:4 
+`uc 1 CCP4IE 1 0 :1:5 
+]
+"1405
+[u S947 . 1 `S940 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES947  1 e 1 @147 ]
 "1456
 [v _OPTION_REG OPTION_REG `VEuc  1 e 1 @149 ]
 [s S205 . 1 `uc 1 PS0 1 0 :1:0 
@@ -339,7 +359,7 @@ SPI1_DEFAULT 0
 [v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
 "1888
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
-[s S502 . 1 `uc 1 ADON 1 0 :1:0 
+[s S510 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -348,22 +368,22 @@ SPI1_DEFAULT 0
 `uc 1 CHS4 1 0 :1:6 
 ]
 "1913
-[s S510 . 1 `uc 1 . 1 0 :1:0 
+[s S518 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADGO 1 0 :1:1 
 `uc 1 CHS 1 0 :5:2 
 ]
-[s S514 . 1 `uc 1 . 1 0 :1:0 
+[s S522 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 ]
-[u S517 . 1 `S502 1 . 1 0 `S510 1 . 1 0 `S514 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES517  1 e 1 @157 ]
+[u S525 . 1 `S510 1 . 1 0 `S518 1 . 1 0 `S522 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES525  1 e 1 @157 ]
 "1968
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
 "2040
 [v _LATA LATA `VEuc  1 e 1 @268 ]
 "2097
 [v _LATB LATB `VEuc  1 e 1 @269 ]
-[s S1243 . 1 `uc 1 LATB0 1 0 :1:0 
+[s S1224 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -373,8 +393,8 @@ SPI1_DEFAULT 0
 `uc 1 LATB7 1 0 :1:7 
 ]
 "2114
-[u S1252 . 1 `S1243 1 . 1 0 ]
-[v _LATBbits LATBbits `VES1252  1 e 1 @269 ]
+[u S1233 . 1 `S1224 1 . 1 0 ]
+[v _LATBbits LATBbits `VES1233  1 e 1 @269 ]
 "2159
 [v _CM1CON0 CM1CON0 `VEuc  1 e 1 @273 ]
 "2216
@@ -393,7 +413,7 @@ SPI1_DEFAULT 0
 [v _BORCON BORCON `VEuc  1 e 1 @278 ]
 "2458
 [v _FVRCON FVRCON `VEuc  1 e 1 @279 ]
-[s S564 . 1 `uc 1 ADFVR0 1 0 :1:0 
+[s S572 . 1 `uc 1 ADFVR0 1 0 :1:0 
 `uc 1 ADFVR1 1 0 :1:1 
 `uc 1 CDAFVR0 1 0 :1:2 
 `uc 1 CDAFVR1 1 0 :1:3 
@@ -403,11 +423,11 @@ SPI1_DEFAULT 0
 `uc 1 FVREN 1 0 :1:7 
 ]
 "2479
-[s S573 . 1 `uc 1 ADFVR 1 0 :2:0 
+[s S581 . 1 `uc 1 ADFVR 1 0 :2:0 
 `uc 1 CDAFVR 1 0 :2:2 
 ]
-[u S576 . 1 `S564 1 . 1 0 `S573 1 . 1 0 ]
-[v _FVRCONbits FVRCONbits `VES576  1 e 1 @279 ]
+[u S584 . 1 `S572 1 . 1 0 `S581 1 . 1 0 ]
+[v _FVRCONbits FVRCONbits `VES584  1 e 1 @279 ]
 "2780
 [v _APFCON0 APFCON0 `VEuc  1 e 1 @285 ]
 "2842
@@ -426,7 +446,7 @@ SPI1_DEFAULT 0
 [v _SPBRGH SPBRGH `VEuc  1 e 1 @412 ]
 "3312
 [v _RCSTA RCSTA `VEuc  1 e 1 @413 ]
-[s S690 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S698 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -436,11 +456,11 @@ SPI1_DEFAULT 0
 `uc 1 SPEN 1 0 :1:7 
 ]
 "3329
-[u S699 . 1 `S690 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES699  1 e 1 @413 ]
+[u S707 . 1 `S698 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES707  1 e 1 @413 ]
 "3374
 [v _TXSTA TXSTA `VEuc  1 e 1 @414 ]
-[s S669 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S677 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -450,8 +470,8 @@ SPI1_DEFAULT 0
 `uc 1 CSRC 1 0 :1:7 
 ]
 "3391
-[u S678 . 1 `S669 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES678  1 e 1 @414 ]
+[u S686 . 1 `S677 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES686  1 e 1 @414 ]
 "3436
 [v _BAUDCON BAUDCON `VEuc  1 e 1 @415 ]
 "3488
@@ -466,7 +486,7 @@ SPI1_DEFAULT 0
 [v _SSP1STAT SSP1STAT `VEuc  1 e 1 @532 ]
 "3823
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
-[s S800 . 1 `uc 1 SSPM0 1 0 :1:0 
+[s S808 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
 `uc 1 SSPM2 1 0 :1:2 
 `uc 1 SSPM3 1 0 :1:3 
@@ -476,10 +496,10 @@ SPI1_DEFAULT 0
 `uc 1 WCOL 1 0 :1:7 
 ]
 "3852
-[s S809 . 1 `uc 1 SSPM 1 0 :4:0 
+[s S817 . 1 `uc 1 SSPM 1 0 :4:0 
 ]
-[u S811 . 1 `S800 1 . 1 0 `S809 1 . 1 0 ]
-[v _SSP1CON1bits SSP1CON1bits `VES811  1 e 1 @533 ]
+[u S819 . 1 `S808 1 . 1 0 `S817 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES819  1 e 1 @533 ]
 "4027
 [v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @534 ]
 [s S25 . 1 `uc 1 C1TSEL0 1 0 :1:0 
@@ -505,6 +525,12 @@ SPI1_DEFAULT 0
 [v _CCPR3H CCPR3H `VEuc  1 e 1 @786 ]
 "5618
 [v _CCP3CON CCP3CON `VEuc  1 e 1 @787 ]
+"5689
+[v _CCPR4L CCPR4L `VEuc  1 e 1 @792 ]
+"5709
+[v _CCPR4H CCPR4H `VEuc  1 e 1 @793 ]
+"5729
+[v _CCP4CON CCP4CON `VEuc  1 e 1 @794 ]
 [s S291 . 1 `uc 1 IOCBP0 1 0 :1:0 
 `uc 1 IOCBP1 1 0 :1:1 
 `uc 1 IOCBP2 1 0 :1:2 
@@ -547,14 +573,37 @@ SPI1_DEFAULT 0
 ]
 [u S250 . 1 `S239 1 . 1 0 `S248 1 . 1 0 ]
 [v _IOCBFbits IOCBFbits `VES250  1 e 1 @918 ]
-[s S602 . 1 `uc 1 perr 1 0 :1:0 
+"6313
+[v _TMR4 TMR4 `VEuc  1 e 1 @1045 ]
+"6333
+[v _PR4 PR4 `VEuc  1 e 1 @1046 ]
+"6353
+[v _T4CON T4CON `VEuc  1 e 1 @1047 ]
+[s S1430 . 1 `uc 1 T4CKPS0 1 0 :1:0 
+`uc 1 T4CKPS1 1 0 :1:1 
+`uc 1 TMR4ON 1 0 :1:2 
+`uc 1 T4OUTPS0 1 0 :1:3 
+`uc 1 T4OUTPS1 1 0 :1:4 
+`uc 1 T4OUTPS2 1 0 :1:5 
+`uc 1 T4OUTPS3 1 0 :1:6 
+]
+"6374
+[s S1438 . 1 `uc 1 T4CKPS 1 0 :2:0 
+`uc 1 . 1 0 :1:2 
+`uc 1 T4OUTPS 1 0 :4:3 
+]
+[u S1442 . 1 `S1430 1 . 1 0 `S1438 1 . 1 0 ]
+[v _T4CONbits T4CONbits `VES1442  1 e 1 @1047 ]
+"54 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/ccp4.c
+[v _CCP4_CallBack CCP4_CallBack `*.37(v  1 s 2 CCP4_CallBack ]
+[s S610 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
 `uc 1 oerr 1 0 :1:2 
 `uc 1 reserved 1 0 :5:3 
 ]
 "52 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/eusart.c
-[u S607 . 1 `S602 1 . 1 0 `uc 1 status 1 0 ]
-[v _eusartRxLastError eusartRxLastError `VES607  1 e 1 0 ]
+[u S615 . 1 `S610 1 . 1 0 `uc 1 status 1 0 ]
+[v _eusartRxLastError eusartRxLastError `VES615  1 e 1 0 ]
 "58
 [v _EUSART_FramingErrorHandler EUSART_FramingErrorHandler `*.37(v  1 e 2 0 ]
 "59
@@ -565,21 +614,21 @@ SPI1_DEFAULT 0
 [v _IOCBF0_InterruptHandler IOCBF0_InterruptHandler `*.37(v  1 e 2 0 ]
 "55
 [v _IOCBF3_InterruptHandler IOCBF3_InterruptHandler `*.37(v  1 e 2 0 ]
-[s S771 . 4 `uc 1 con1 1 0 `uc 1 stat 1 1 `uc 1 add 1 2 `uc 1 operation 1 3 ]
+[s S779 . 4 `uc 1 con1 1 0 `uc 1 stat 1 1 `uc 1 add 1 2 `uc 1 operation 1 3 ]
 "58 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/spi1.c
-[v _spi1_configuration spi1_configuration `DC[1]S771  1 s 4 spi1_configuration ]
+[v _spi1_configuration spi1_configuration `DC[1]S779  1 s 4 spi1_configuration ]
 "58 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/tmr0.c
 [v _timer0ReloadVal timer0ReloadVal `VEuc  1 e 1 0 ]
 "59
 [v _TMR0_InterruptHandler TMR0_InterruptHandler `*.37(v  1 e 2 0 ]
 "57 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/tmr1.c
 [v _timer1ReloadVal timer1ReloadVal `VEus  1 e 2 0 ]
-"58
-[v _TMR1_InterruptHandler TMR1_InterruptHandler `*.37(v  1 e 2 0 ]
+"58 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/tmr4.c
+[v _TMR4_InterruptHandler TMR4_InterruptHandler `*.37(v  1 e 2 0 ]
 "281 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"317
+"318
 } 0
 "82
 [v _initMatrix initMatrix `(v  1 e 1 0 ]
@@ -587,7 +636,7 @@ SPI1_DEFAULT 0
 "89
 [v initMatrix@j j `uc  1 a 1 16 ]
 "88
-[v initMatrix@i_1325 i `uc  1 a 1 15 ]
+[v initMatrix@i_1317 i `uc  1 a 1 15 ]
 "85
 [v initMatrix@i i `uc  1 a 1 14 ]
 "83
@@ -618,31 +667,41 @@ SPI1_DEFAULT 0
 [v SPI1_ExchangeBlock@block block `*.4v  1 a 1 3 ]
 "110
 } 0
+"92 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/tmr1.c
+[v _TMR1_StopTimer TMR1_StopTimer `(v  1 e 1 0 ]
+{
+"96
+} 0
 "50 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
-"66
+"68
 } 0
-"78
+"80
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
 {
-"82
+"84
+} 0
+"64 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/tmr4.c
+[v _TMR4_Initialize TMR4_Initialize `(v  1 e 1 0 ]
+{
+"85
+} 0
+"147
+[v _TMR4_SetInterruptHandler TMR4_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR4_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"149
 } 0
 "62 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
 {
 "77
 } 0
-"64 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/tmr1.c
+"63 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/tmr1.c
 [v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
 {
-"91
-} 0
-"178
-[v _TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
-{
-[v TMR1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
-"180
+"84
 } 0
 "64 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/tmr0.c
 [v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
@@ -682,10 +741,10 @@ SPI1_DEFAULT 0
 [v IOCBF0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
 "153
 } 0
-"68 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/mcc.c
+"70 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
-"76
+"78
 } 0
 "58 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/fvr.c
 [v _FVR_Initialize FVR_Initialize `(v  1 e 1 0 ]
@@ -725,6 +784,17 @@ SPI1_DEFAULT 0
 {
 "79
 } 0
+"65 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/ccp4.c
+[v _CCP4_Initialize CCP4_Initialize `(v  1 e 1 0 ]
+{
+"87
+} 0
+"104
+[v _CCP4_SetCallBack CCP4_SetCallBack `(v  1 e 1 0 ]
+{
+[v CCP4_SetCallBack@customCallBack customCallBack `*.37(v  1 p 2 0 ]
+"106
+} 0
 "67 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
 {
@@ -742,28 +812,24 @@ SPI1_DEFAULT 0
 "52 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 {
-"78
+"82
 } 0
-"157 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/tmr1.c
-[v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
+"119 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/tmr4.c
+[v _TMR4_ISR TMR4_ISR `(v  1 e 1 0 ]
 {
-"167
+"121
+[v TMR4_ISR@CountCallBack CountCallBack `VEui  1 s 2 CountCallBack ]
+"135
 } 0
-"120
-[v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
+"137
+[v _TMR4_CallBack TMR4_CallBack `(v  1 e 1 0 ]
 {
-[v TMR1_WriteTimer@timerVal timerVal `us  1 p 2 0 ]
-"140
+"145
 } 0
-"169
-[v _TMR1_CallBack TMR1_CallBack `(v  1 e 1 0 ]
+"151
+[v _TMR4_DefaultInterruptHandler TMR4_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
-"176
-} 0
-"182
-[v _TMR1_DefaultInterruptHandler TMR1_DefaultInterruptHandler `(v  1 e 1 0 ]
-{
-"185
+"154
 } 0
 "102 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
 [v _controleMovimento controleMovimento `(v  1 e 1 0 ]
@@ -875,23 +941,35 @@ SPI1_DEFAULT 0
 [v i1SPI1_ExchangeBlock@block block `*.4v  1 a 1 3 ]
 "110
 } 0
-"93 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/tmr1.c
-[v _TMR1_StartTimer TMR1_StartTimer `(v  1 e 1 0 ]
+"87 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/tmr4.c
+[v _TMR4_StartTimer TMR4_StartTimer `(v  1 e 1 0 ]
 {
-"97
+"91
 } 0
-"105
-[v _TMR1_ReadTimer TMR1_ReadTimer `(us  1 e 2 0 ]
+"99
+[v _TMR4_ReadTimer TMR4_ReadTimer `(uc  1 e 1 0 ]
 {
-"109
-[v TMR1_ReadTimer@readValLow readValLow `uc  1 a 1 2 ]
-"108
-[v TMR1_ReadTimer@readValHigh readValHigh `uc  1 a 1 1 ]
-"118
+"106
 } 0
 "82 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/pwm3.c
 [v _PWM3_LoadDutyValue PWM3_LoadDutyValue `(v  1 e 1 0 ]
 {
 [v PWM3_LoadDutyValue@dutyValue dutyValue `us  1 p 2 0 ]
 "89
+} 0
+"89 C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/ccp4.c
+[v _CCP4_CaptureISR CCP4_CaptureISR `(v  1 e 1 0 ]
+{
+[s S1366 . 2 `uc 1 ccpr4l 1 0 `uc 1 ccpr4h 1 1 ]
+"91
+[s S1369 . 2 `us 1 ccpr4_16Bit 2 0 ]
+[u S1371 CCPR4Reg_tag 2 `S1366 1 . 2 0 `S1369 1 . 2 0 ]
+[v CCP4_CaptureISR@module module `S1371  1 a 2 3 ]
+"102
+} 0
+"60
+[v _CCP4_DefaultCallBack CCP4_DefaultCallBack `(v  1 s 1 CCP4_DefaultCallBack ]
+{
+[v CCP4_DefaultCallBack@capturedValue capturedValue `us  1 p 2 0 ]
+"63
 } 0

@@ -1,55 +1,28 @@
-/**
-  Generated Main Source File
-
-  Company:
-    Microchip Technology Inc.
-
-  File Name:
-    main.c
-
-  Summary:
-    This is the main file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
-
-  Description:
-    This header file provides implementations for driver APIs for all modules selected in the GUI.
-    Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
-        Device            :  PIC16F1827
-        Driver Version    :  2.00
-*/
-
 /*
-    (c) 2018 Microchip Technology Inc. and its subsidiaries. 
-    
-    Subject to your compliance with these terms, you may use Microchip software and any 
-    derivatives exclusively with Microchip products. It is your responsibility to comply with third party 
-    license terms applicable to your use of third party software (including open source software) that 
-    may accompany Microchip software.
-    
-    THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER 
-    EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY 
-    IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS 
-    FOR A PARTICULAR PURPOSE.
-    
-    IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, 
-    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND 
-    WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP 
-    HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO 
-    THE FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL 
-    CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT 
-    OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS 
-    SOFTWARE.
+ * 
+ * Grupo 5
+ * 
+ * Thalis Ianzer
+ * Victor Cruz
+ * Jordano dos Santos
+ * Guilherme Costa
+ * 
 */
 
 #include "mcc_generated_files/mcc.h"
 #include "main.h"
 
-/*
-                         Main application
- */
-
-
-
+void interrupcaoCCP4(){
+    if(!flag){
+        t1 = (CCPR4H << 8) + CCPR4L;   // Tempo da primeira interrupcao
+        flag = 0x01;
+    } else {
+        t2 = (CCPR4H << 8) + CCPR4L;   // Tempo da segunda interrupcao
+        flag = 0x02;
+    }
+    
+    velocidadeMotor = 2/((t2 - t1) / 1e+6);
+}
 
 void txSpi( uint8_t *data, size_t dataSize){
     CS_SetLow();            // Ativa CS
@@ -189,21 +162,18 @@ void chegadaS4(){ //função acionada ao sensor S4 ser acionado
 
 void main(void)
 {
-    // initialize the device
     SYSTEM_Initialize();
-
-    // When using interrupts, you need to set the Global and Peripheral Interrupt Enable bits
-    // Use the following macros to:
     
     //Handlers das Interrupçoes
         /*Caso a Interrupcao nao tenha handler,
             a funcao esta sendo chamada dentro da funcao de interrupcao do periferico*/
+    CCP4_SetCallBack(interrupcaoCCP4);
     IOCBF3_SetInterruptHandler(chegadaS1);
     IOCBF3_SetInterruptHandler(chegadaS2);
     
     
     //Incializacao do SPI
-    CS_SetHigh(); //Mantem Desativado o CS
+    CS_SetHigh();                   //Mantem Desativado o CS
     SPI1_Open(SPI1_DEFAULT);        // Configura MSSP1
     initMatrix();                   // Configura matrizes
     
@@ -212,12 +182,6 @@ void main(void)
 
     // Enable the Peripheral Interrupts
     INTERRUPT_PeripheralInterruptEnable();
-
-    // Disable the Global Interrupts
-    //INTERRUPT_GlobalInterruptDisable();
-
-    // Disable the Peripheral Interrupts
-    //INTERRUPT_PeripheralInterruptDisable();
 
     while (1)
     {
@@ -231,6 +195,3 @@ void main(void)
         chegadaS4();
     }
 }
-/**
- End of File
-*/

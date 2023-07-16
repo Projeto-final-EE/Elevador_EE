@@ -62,6 +62,14 @@ void __interrupt() INTERRUPT_InterruptManager (void)
     }
     if(INTCONbits.PEIE == 1)
     {
+        if(PIE3bits.CCP4IE == 1 && PIR3bits.CCP4IF == 1)
+        {
+            CCP4_CaptureISR();
+        } 
+        if(PIE3bits.TMR4IE == 1 && PIR3bits.TMR4IF == 1)
+        {
+            TMR4_ISR();
+        } 
         if(PIE2bits.C1IE == 1 && PIR2bits.C1IF == 1)
         {
             CMP1_ISR();

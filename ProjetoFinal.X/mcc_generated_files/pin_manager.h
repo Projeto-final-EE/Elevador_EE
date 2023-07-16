@@ -177,18 +177,6 @@
 #define CS_SetAnalogMode()      do { ANSELBbits.ANSB1 = 1; } while(0)
 #define CS_SetDigitalMode()     do { ANSELBbits.ANSB1 = 0; } while(0)
 
-// get/set RB2 procedures
-#define RB2_SetHigh()            do { LATBbits.LATB2 = 1; } while(0)
-#define RB2_SetLow()             do { LATBbits.LATB2 = 0; } while(0)
-#define RB2_Toggle()             do { LATBbits.LATB2 = ~LATBbits.LATB2; } while(0)
-#define RB2_GetValue()              PORTBbits.RB2
-#define RB2_SetDigitalInput()    do { TRISBbits.TRISB2 = 1; } while(0)
-#define RB2_SetDigitalOutput()   do { TRISBbits.TRISB2 = 0; } while(0)
-#define RB2_SetPullup()             do { WPUBbits.WPUB2 = 1; } while(0)
-#define RB2_ResetPullup()           do { WPUBbits.WPUB2 = 0; } while(0)
-#define RB2_SetAnalogMode()         do { ANSELBbits.ANSB2 = 1; } while(0)
-#define RB2_SetDigitalMode()        do { ANSELBbits.ANSB2 = 0; } while(0)
-
 // get/set S2 aliases
 #define S2_TRIS                 TRISBbits.TRISB3
 #define S2_LAT                  LATBbits.LATB3

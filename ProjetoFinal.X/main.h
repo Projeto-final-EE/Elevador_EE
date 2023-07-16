@@ -11,6 +11,7 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
+    
 //Defines
 #define flip_matrix  true
     
@@ -40,6 +41,7 @@ void chegadaS1(); //função acionada ao sensor S1 ser acionado
 void chegadaS2(); //função acionada ao sensor S2 ser acionado
 void chegadaS3(); //função acionada ao sensor S3 ser acionado
 void chegadaS4(); //função acionada ao sensor S4 ser acionado
+
 #ifdef	__cplusplus
 }
 #endif

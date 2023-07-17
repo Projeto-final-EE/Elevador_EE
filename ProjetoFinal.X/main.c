@@ -120,10 +120,10 @@ void chegadaS1(){ //função acionada ao sensor S1 ser acionado
 }
 
 void chegadaS2(){ //função acionada ao sensor S2 ser acionado
-    PWM3_LoadDutyValue(0);//Desligando o Movimento do Motor
     
     //Caso o Andar 3 seja um ponto de Parada reinicia o TRM1 que controla o tempo de espera do elevador
     if(((destinoSub & 0b00000010) == 2 )||((destinoDesc & 0b00000010) == 2 ) ){ 
+        PWM3_LoadDutyValue(0);//Desligando o Movimento do Motor
         TMR4_ReadTimer(); 
         TMR4_StartTimer();
     }
@@ -161,10 +161,10 @@ void chegadaS2(){ //função acionada ao sensor S2 ser acionado
 }
 
 void chegadaS3(){ //função acionada ao sensor S3 ser acionado
-    PWM3_LoadDutyValue(0); //Desligando o Movimento do Motor
     
     //Caso o Andar 3 seja um ponto de Parada reinicia o TRM1 que controla o tempo de espera do elevador
     if(((destinoSub & 0b00000100) == 4 )||((destinoDesc & 0b00000100) == 4 ) ){ 
+        PWM3_LoadDutyValue(0);//Desligando o Movimento do Motor
         TMR4_ReadTimer();
         TMR4_StartTimer();
     }
@@ -199,10 +199,10 @@ void chegadaS3(){ //função acionada ao sensor S3 ser acionado
 }
 
 void chegadaS4(){ //função acionada ao sensor S4 ser acionado
-    PWM3_LoadDutyValue(0); //Desligando o Movimento do Motor
     
     //Caso o Andar 3 seja um ponto de Parada reinicia o TRM1 que controla o tempo de espera do elevador
     if(((destinoSub & 0b00001000) == 8 )||((destinoDesc & 0b00001000) == 8 ) ){ 
+        PWM3_LoadDutyValue(0);//Desligando o Movimento do Motor
         TMR4_ReadTimer();
         TMR4_StartTimer();
     }

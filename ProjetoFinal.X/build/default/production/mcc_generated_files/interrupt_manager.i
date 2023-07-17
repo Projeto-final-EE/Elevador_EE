@@ -4536,34 +4536,60 @@ void SPI1_WriteByte(uint8_t byte);
 uint8_t SPI1_ReadByte(void);
 # 56 "mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/tmr1.h" 1
-# 101 "mcc_generated_files/tmr1.h"
-void TMR1_Initialize(void);
-# 130 "mcc_generated_files/tmr1.h"
-void TMR1_StartTimer(void);
-# 162 "mcc_generated_files/tmr1.h"
-void TMR1_StopTimer(void);
-# 197 "mcc_generated_files/tmr1.h"
-uint16_t TMR1_ReadTimer(void);
-# 236 "mcc_generated_files/tmr1.h"
-void TMR1_WriteTimer(uint16_t timerVal);
-# 272 "mcc_generated_files/tmr1.h"
-void TMR1_Reload(void);
-# 311 "mcc_generated_files/tmr1.h"
-void TMR1_StartSinglePulseAcquisition(void);
-# 350 "mcc_generated_files/tmr1.h"
-uint8_t TMR1_CheckGateValueStatus(void);
-# 368 "mcc_generated_files/tmr1.h"
-void TMR1_ISR(void);
-# 385 "mcc_generated_files/tmr1.h"
-void TMR1_CallBack(void);
-# 403 "mcc_generated_files/tmr1.h"
- void TMR1_SetInterruptHandler(void (* InterruptHandler)(void));
-# 421 "mcc_generated_files/tmr1.h"
-extern void (*TMR1_InterruptHandler)(void);
-# 439 "mcc_generated_files/tmr1.h"
-void TMR1_DefaultInterruptHandler(void);
+# 1 "mcc_generated_files/tmr4.h" 1
+# 104 "mcc_generated_files/tmr4.h"
+void TMR4_Initialize(void);
+# 133 "mcc_generated_files/tmr4.h"
+void TMR4_StartTimer(void);
+# 165 "mcc_generated_files/tmr4.h"
+void TMR4_StopTimer(void);
+# 200 "mcc_generated_files/tmr4.h"
+uint8_t TMR4_ReadTimer(void);
+# 239 "mcc_generated_files/tmr4.h"
+void TMR4_WriteTimer(uint8_t timerVal);
+# 291 "mcc_generated_files/tmr4.h"
+void TMR4_LoadPeriodRegister(uint8_t periodVal);
+# 309 "mcc_generated_files/tmr4.h"
+void TMR4_ISR(void);
+# 327 "mcc_generated_files/tmr4.h"
+ void TMR4_CallBack(void);
+# 344 "mcc_generated_files/tmr4.h"
+ void TMR4_SetInterruptHandler(void (* InterruptHandler)(void));
+# 362 "mcc_generated_files/tmr4.h"
+extern void (*TMR4_InterruptHandler)(void);
+# 380 "mcc_generated_files/tmr4.h"
+void TMR4_DefaultInterruptHandler(void);
 # 57 "mcc_generated_files/mcc.h" 2
+
+# 1 "mcc_generated_files/tmr1.h" 1
+# 100 "mcc_generated_files/tmr1.h"
+void TMR1_Initialize(void);
+# 129 "mcc_generated_files/tmr1.h"
+void TMR1_StartTimer(void);
+# 161 "mcc_generated_files/tmr1.h"
+void TMR1_StopTimer(void);
+# 196 "mcc_generated_files/tmr1.h"
+uint16_t TMR1_ReadTimer(void);
+# 235 "mcc_generated_files/tmr1.h"
+void TMR1_WriteTimer(uint16_t timerVal);
+# 271 "mcc_generated_files/tmr1.h"
+void TMR1_Reload(void);
+# 310 "mcc_generated_files/tmr1.h"
+void TMR1_StartSinglePulseAcquisition(void);
+# 349 "mcc_generated_files/tmr1.h"
+uint8_t TMR1_CheckGateValueStatus(void);
+# 387 "mcc_generated_files/tmr1.h"
+_Bool TMR1_HasOverflowOccured(void);
+# 58 "mcc_generated_files/mcc.h" 2
+
+# 1 "mcc_generated_files/cmp2.h" 1
+# 92 "mcc_generated_files/cmp2.h"
+void CMP2_Initialize(void);
+# 132 "mcc_generated_files/cmp2.h"
+_Bool CMP2_GetOutputStatus(void);
+# 148 "mcc_generated_files/cmp2.h"
+void CMP2_ISR(void);
+# 59 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/tmr2.h" 1
 # 103 "mcc_generated_files/tmr2.h"
@@ -4580,16 +4606,7 @@ void TMR2_WriteTimer(uint8_t timerVal);
 void TMR2_LoadPeriodRegister(uint8_t periodVal);
 # 325 "mcc_generated_files/tmr2.h"
 _Bool TMR2_HasOverflowOccured(void);
-# 58 "mcc_generated_files/mcc.h" 2
-
-# 1 "mcc_generated_files/cmp2.h" 1
-# 92 "mcc_generated_files/cmp2.h"
-void CMP2_Initialize(void);
-# 132 "mcc_generated_files/cmp2.h"
-_Bool CMP2_GetOutputStatus(void);
-# 148 "mcc_generated_files/cmp2.h"
-void CMP2_ISR(void);
-# 59 "mcc_generated_files/mcc.h" 2
+# 60 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/cmp1.h" 1
 # 92 "mcc_generated_files/cmp1.h"
@@ -4598,7 +4615,7 @@ void CMP1_Initialize(void);
 _Bool CMP1_GetOutputStatus(void);
 # 148 "mcc_generated_files/cmp1.h"
 void CMP1_ISR(void);
-# 60 "mcc_generated_files/mcc.h" 2
+# 61 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/tmr0.h" 1
 # 104 "mcc_generated_files/tmr0.h"
@@ -4619,21 +4636,43 @@ void TMR0_CallBack(void);
 extern void (*TMR0_InterruptHandler)(void);
 # 297 "mcc_generated_files/tmr0.h"
 void TMR0_DefaultInterruptHandler(void);
-# 61 "mcc_generated_files/mcc.h" 2
+# 62 "mcc_generated_files/mcc.h" 2
+
+# 1 "mcc_generated_files/ccp4.h" 1
+# 80 "mcc_generated_files/ccp4.h"
+typedef union CCPR4Reg_tag
+{
+   struct
+   {
+      uint8_t ccpr4l;
+      uint8_t ccpr4h;
+   };
+   struct
+   {
+      uint16_t ccpr4_16Bit;
+   };
+} CCP4_PERIOD_REG_T ;
+# 123 "mcc_generated_files/ccp4.h"
+void CCP4_Initialize(void);
+# 139 "mcc_generated_files/ccp4.h"
+void CCP4_CaptureISR(void);
+# 180 "mcc_generated_files/ccp4.h"
+ void CCP4_SetCallBack(void (*customCallBack)(uint16_t));
+# 63 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/fvr.h" 1
 # 93 "mcc_generated_files/fvr.h"
  void FVR_Initialize(void);
 # 127 "mcc_generated_files/fvr.h"
 _Bool FVR_IsOutputReady(void);
-# 62 "mcc_generated_files/mcc.h" 2
+# 64 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pwm3.h" 1
 # 97 "mcc_generated_files/pwm3.h"
 void PWM3_Initialize(void);
 # 124 "mcc_generated_files/pwm3.h"
 void PWM3_LoadDutyValue(uint16_t dutyValue);
-# 63 "mcc_generated_files/mcc.h" 2
+# 65 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/adc.h" 1
 # 72 "mcc_generated_files/adc.h"
@@ -4669,7 +4708,7 @@ adc_result_t ADC_GetConversionResult(void);
 adc_result_t ADC_GetConversion(adc_channel_t channel);
 # 316 "mcc_generated_files/adc.h"
 void ADC_TemperatureAcquisitionDelay(void);
-# 64 "mcc_generated_files/mcc.h" 2
+# 66 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/eusart.h" 1
 # 75 "mcc_generated_files/eusart.h"
@@ -4702,12 +4741,12 @@ void EUSART_SetFramingErrorHandler(void (* interruptHandler)(void));
 void EUSART_SetOverrunErrorHandler(void (* interruptHandler)(void));
 # 397 "mcc_generated_files/eusart.h"
 void EUSART_SetErrorHandler(void (* interruptHandler)(void));
-# 65 "mcc_generated_files/mcc.h" 2
-# 80 "mcc_generated_files/mcc.h"
+# 67 "mcc_generated_files/mcc.h" 2
+# 82 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 93 "mcc_generated_files/mcc.h"
+# 95 "mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 105 "mcc_generated_files/mcc.h"
+# 107 "mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
 # 50 "mcc_generated_files/interrupt_manager.c" 2
 
@@ -4715,27 +4754,31 @@ void WDT_Initialize(void);
 void __attribute__((picinterrupt(("")))) INTERRUPT_InterruptManager (void)
 {
 
-    if(INTCONbits.TMR0IE == 1 && INTCONbits.TMR0IF == 1)
-    {
-        TMR0_ISR();
-    }
     if(INTCONbits.IOCIE == 1 && INTCONbits.IOCIF == 1)
     {
         PIN_MANAGER_IOC();
     }
+    if(INTCONbits.TMR0IE == 1 && INTCONbits.TMR0IF == 1)
+    {
+        TMR0_ISR();
+    }
     if(INTCONbits.PEIE == 1)
     {
-        if(PIE2bits.C1IE == 1 && PIR2bits.C1IF == 1)
-        {
-            CMP1_ISR();
-        }
         if(PIE2bits.C2IE == 1 && PIR2bits.C2IF == 1)
         {
             CMP2_ISR();
         }
-        if(PIE1bits.TMR1IE == 1 && PIR1bits.TMR1IF == 1)
+        if(PIE2bits.C1IE == 1 && PIR2bits.C1IF == 1)
         {
-            TMR1_ISR();
+            CMP1_ISR();
+        }
+        if(PIE3bits.CCP4IE == 1 && PIR3bits.CCP4IF == 1)
+        {
+            CCP4_CaptureISR();
+        }
+        if(PIE3bits.TMR4IE == 1 && PIR3bits.TMR4IF == 1)
+        {
+            TMR4_ISR();
         }
     }
 }

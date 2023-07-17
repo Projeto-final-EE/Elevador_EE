@@ -4456,19 +4456,24 @@ char rxValue;
 _Bool waitRX = 0;
 _Bool RXaccepted = 0;
 
-uint8_t origem;
-uint8_t destino;
+uint8_t pulsoEncoder = 0;
+float velocidadeMotor = 0;
+uint8_t flag = 0x00;
+uint16_t t1 = 0, t2 = 0;
+
+uint8_t origem = 0;
+uint8_t destino = 0;
 uint8_t andarAtual = 0;
-uint16_t altura;
-uint16_t velocidade;
+uint8_t altura;
+uint16_t temperatura;
 
 _Bool subindo = 1;
 uint8_t MatrixLed[8];
 uint8_t destinoSub= 0;
 uint8_t destinoDesc= 0;
-# 65 "mcc_generated_files/../main.h"
+# 70 "mcc_generated_files/../main.h"
 _Bool isValidFloor(char floor);
-# 83 "mcc_generated_files/../main.h"
+# 88 "mcc_generated_files/../main.h"
 void sendInfo(void);
 
 

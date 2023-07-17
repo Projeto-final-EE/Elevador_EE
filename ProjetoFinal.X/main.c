@@ -56,9 +56,9 @@ bool isValidFloor(char floor){
 void sendInfo(){
     
     bcd16_t bcd;
+    uint16_t velocidade;
     
-    // Calcular altura
-    
+    velocidade = (uint16_t)(velocidadeMotor * 10); // Ajustando o valor da velocidade para ser enviado
     
     EUSART_Write('$'); // Caracter inicial
     EUSART_Write(0x30 + origem); // Envia o andar de origem em ASCII
@@ -83,13 +83,35 @@ void sendInfo(){
     EUSART_Write(bcd.num4 + 0x30); // Envia o digito decimal
     EUSART_Write(0x2C); // Envia a virgula
     // Enviando a temperatura em C
-    bcd.v = bin2bcd(velocidade);
+    bcd.v = bin2bcd(temperatura);
     EUSART_Write(bcd.num1 + 0x30); // Envia o primeiro digito
     EUSART_Write(bcd.num2 + 0x30); // Envia o segundo digito
     EUSART_Write(bcd.num3 + 0x30); // Envia o terceiro digito
     EUSART_Write(0x2E); // Envia o ponto
     EUSART_Write(bcd.num4 + 0x30); // Envia o digito decimal
     EUSART_Write(0x0D); // Envia o carriage return
+}
+
+void interrupcaoCCP4(){
+    
+    if (pulsoEncoder <= 215){
+        pulsoEncoder++;
+    } else {
+        pulsoEncoder = 0;
+    }
+    
+    altura = (uint8_t)(pulsoEncoder * 0.83720930);
+    if(pulsoEncoder == 215) altura = 180;
+    
+    if(!flag){
+        t1 = (CCPR4H << 8) + CCPR4L;   // Tempo da primeira interrupcao
+        flag = 0x01;
+    } else {
+        t2 = (CCPR4H << 8) + CCPR4L;   // Tempo da segunda interrupcao
+        flag = 0x02;
+        
+        velocidadeMotor = (altura) / ((t2 - t1) / 1000000); // (mm/pulsos) / (tempo(s))
+    }
 }
 
 void txSpi( uint8_t *data, size_t dataSize){

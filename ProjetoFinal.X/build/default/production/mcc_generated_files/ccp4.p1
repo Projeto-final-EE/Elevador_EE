@@ -1,55 +1,54 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"63 mcc_generated_files/spi1.h
-[; ;mcc_generated_files/spi1.h: 63: void SPI1_Initialize(void);
-[v _SPI1_Initialize `(v ~T0 @X0 0 ef ]
-"243 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 243: void PIN_MANAGER_Initialize (void);
-[v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
-"93 mcc_generated_files/mcc.h
-[; ;mcc_generated_files/mcc.h: 93: void OSCILLATOR_Initialize(void);
-[v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
-"105
-[; ;mcc_generated_files/mcc.h: 105: void WDT_Initialize(void);
-[v _WDT_Initialize `(v ~T0 @X0 0 ef ]
-"92 mcc_generated_files/cmp2.h
-[; ;mcc_generated_files/cmp2.h: 92: void CMP2_Initialize(void);
-[v _CMP2_Initialize `(v ~T0 @X0 0 ef ]
-"93 mcc_generated_files/fvr.h
-[; ;mcc_generated_files/fvr.h: 93:  void FVR_Initialize(void);
-[v _FVR_Initialize `(v ~T0 @X0 0 ef ]
-"103 mcc_generated_files/tmr2.h
-[; ;mcc_generated_files/tmr2.h: 103: void TMR2_Initialize(void);
-[v _TMR2_Initialize `(v ~T0 @X0 0 ef ]
-"104 mcc_generated_files/tmr0.h
-[; ;mcc_generated_files/tmr0.h: 104: void TMR0_Initialize(void);
-[v _TMR0_Initialize `(v ~T0 @X0 0 ef ]
-"92 mcc_generated_files/cmp1.h
-[; ;mcc_generated_files/cmp1.h: 92: void CMP1_Initialize(void);
-[v _CMP1_Initialize `(v ~T0 @X0 0 ef ]
-"136 mcc_generated_files/adc.h
-[; ;mcc_generated_files/adc.h: 136: void ADC_Initialize(void);
-[v _ADC_Initialize `(v ~T0 @X0 0 ef ]
-"97 mcc_generated_files/pwm3.h
-[; ;mcc_generated_files/pwm3.h: 97: void PWM3_Initialize(void);
-[v _PWM3_Initialize `(v ~T0 @X0 0 ef ]
-"101 mcc_generated_files/tmr1.h
-[; ;mcc_generated_files/tmr1.h: 101: void TMR1_Initialize(void);
-[v _TMR1_Initialize `(v ~T0 @X0 0 ef ]
-"110 mcc_generated_files/eusart.h
-[; ;mcc_generated_files/eusart.h: 110: void EUSART_Initialize(void);
-[v _EUSART_Initialize `(v ~T0 @X0 0 ef ]
-"1707 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1707: extern volatile unsigned char OSCCON __attribute__((address(0x099)));
-[v _OSCCON `Vuc ~T0 @X0 0 e@153 ]
-"1649
-[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1649: extern volatile unsigned char OSCTUNE __attribute__((address(0x098)));
-[v _OSCTUNE `Vuc ~T0 @X0 0 e@152 ]
-"2431
-[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 2431: extern volatile unsigned char BORCON __attribute__((address(0x116)));
-[v _BORCON `Vuc ~T0 @X0 0 e@278 ]
-"1590
-[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1590: extern volatile unsigned char WDTCON __attribute__((address(0x097)));
-[v _WDTCON `Vuc ~T0 @X0 0 e@151 ]
+[v F2498 `(v ~T0 @X0 0 tf1`us ]
+"5729 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 5729: extern volatile unsigned char CCP4CON __attribute__((address(0x31A)));
+[v _CCP4CON `Vuc ~T0 @X0 0 e@794 ]
+"5689
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 5689: extern volatile unsigned char CCPR4L __attribute__((address(0x318)));
+[v _CCPR4L `Vuc ~T0 @X0 0 e@792 ]
+"5709
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 5709: extern volatile unsigned char CCPR4H __attribute__((address(0x319)));
+[v _CCPR4H `Vuc ~T0 @X0 0 e@793 ]
+[v F2492 `(v ~T0 @X0 0 tf1`us ]
+"180 mcc_generated_files/ccp4.h
+[; ;mcc_generated_files/ccp4.h: 180:  void CCP4_SetCallBack(void (*customCallBack)(uint16_t));
+[v _CCP4_SetCallBack `(v ~T0 @X0 0 ef1`*F2492 ]
+"673 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 673:     struct {
+[s S42 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S42 . . TMR4IF . TMR6IF CCP3IF CCP4IF ]
+"672
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 672: typedef union {
+[u S41 `S42 1 ]
+[n S41 . . ]
+"682
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 682: extern volatile PIR3bits_t PIR3bits __attribute__((address(0x013)));
+[v _PIR3bits `VS41 ~T0 @X0 0 e@19 ]
+"1396
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1396:     struct {
+[s S79 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S79 . . TMR4IE . TMR6IE CCP3IE CCP4IE ]
+"1395
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1395: typedef union {
+[u S78 `S79 1 ]
+[n S78 . . ]
+"1405
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1405: extern volatile PIE3bits_t PIE3bits __attribute__((address(0x093)));
+[v _PIE3bits `VS78 ~T0 @X0 0 e@147 ]
+"83 mcc_generated_files/ccp4.h
+[; ;mcc_generated_files/ccp4.h: 83:    {
+[s S355 `uc 1 `uc 1 ]
+[n S355 . ccpr4l ccpr4h ]
+"88
+[; ;mcc_generated_files/ccp4.h: 88:    {
+[s S356 `us 1 ]
+[n S356 . ccpr4_16Bit ]
+"81
+[; ;mcc_generated_files/ccp4.h: 81: {
+[u S354 `S355 1 `S356 1 ]
+[n S354 CCPR4Reg_tag . . ]
+[v F2508 `(v ~T0 @X0 0 tf1`us ]
+[v F2511 `(v ~T0 @X0 0 tf1`us ]
 "55 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 55: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -524,90 +523,94 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6749
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 6749: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"50 mcc_generated_files/mcc.c
-[; ;mcc_generated_files/mcc.c: 50: void SYSTEM_Initialize(void)
-[v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]
-"51
-[; ;mcc_generated_files/mcc.c: 51: {
-{
-[e :U _SYSTEM_Initialize ]
-[f ]
-"53
-[; ;mcc_generated_files/mcc.c: 53:     SPI1_Initialize();
-[e ( _SPI1_Initialize ..  ]
-"54
-[; ;mcc_generated_files/mcc.c: 54:     PIN_MANAGER_Initialize();
-[e ( _PIN_MANAGER_Initialize ..  ]
-"55
-[; ;mcc_generated_files/mcc.c: 55:     OSCILLATOR_Initialize();
-[e ( _OSCILLATOR_Initialize ..  ]
-"56
-[; ;mcc_generated_files/mcc.c: 56:     WDT_Initialize();
-[e ( _WDT_Initialize ..  ]
-"57
-[; ;mcc_generated_files/mcc.c: 57:     CMP2_Initialize();
-[e ( _CMP2_Initialize ..  ]
-"58
-[; ;mcc_generated_files/mcc.c: 58:     FVR_Initialize();
-[e ( _FVR_Initialize ..  ]
-"59
-[; ;mcc_generated_files/mcc.c: 59:     TMR2_Initialize();
-[e ( _TMR2_Initialize ..  ]
+"54 mcc_generated_files/ccp4.c
+[; ;mcc_generated_files/ccp4.c: 54: static void (*CCP4_CallBack)(uint16_t);
+[v _CCP4_CallBack `*F2498 ~T0 @X0 1 s ]
 "60
-[; ;mcc_generated_files/mcc.c: 60:     TMR0_Initialize();
-[e ( _TMR0_Initialize ..  ]
+[; ;mcc_generated_files/ccp4.c: 60: static void CCP4_DefaultCallBack(uint16_t capturedValue)
+[v _CCP4_DefaultCallBack `(v ~T0 @X0 1 sf1`us ]
 "61
-[; ;mcc_generated_files/mcc.c: 61:     CMP1_Initialize();
-[e ( _CMP1_Initialize ..  ]
-"62
-[; ;mcc_generated_files/mcc.c: 62:     ADC_Initialize();
-[e ( _ADC_Initialize ..  ]
+[; ;mcc_generated_files/ccp4.c: 61: {
+{
+[e :U _CCP4_DefaultCallBack ]
+"60
+[; ;mcc_generated_files/ccp4.c: 60: static void CCP4_DefaultCallBack(uint16_t capturedValue)
+[v _capturedValue `us ~T0 @X0 1 r1 ]
+"61
+[; ;mcc_generated_files/ccp4.c: 61: {
+[f ]
 "63
-[; ;mcc_generated_files/mcc.c: 63:     PWM3_Initialize();
-[e ( _PWM3_Initialize ..  ]
-"64
-[; ;mcc_generated_files/mcc.c: 64:     TMR1_Initialize();
-[e ( _TMR1_Initialize ..  ]
+[; ;mcc_generated_files/ccp4.c: 63: }
+[e :UE 357 ]
+}
 "65
-[; ;mcc_generated_files/mcc.c: 65:     EUSART_Initialize();
-[e ( _EUSART_Initialize ..  ]
+[; ;mcc_generated_files/ccp4.c: 65: void CCP4_Initialize(void)
+[v _CCP4_Initialize `(v ~T0 @X0 1 ef ]
 "66
-[; ;mcc_generated_files/mcc.c: 66: }
+[; ;mcc_generated_files/ccp4.c: 66: {
+{
+[e :U _CCP4_Initialize ]
+[f ]
+"70
+[; ;mcc_generated_files/ccp4.c: 70:  CCP4CON = 0x04;
+[e = _CCP4CON -> -> 4 `i `uc ]
+"73
+[; ;mcc_generated_files/ccp4.c: 73:  CCPR4L = 0x00;
+[e = _CCPR4L -> -> 0 `i `uc ]
+"76
+[; ;mcc_generated_files/ccp4.c: 76:  CCPR4H = 0x00;
+[e = _CCPR4H -> -> 0 `i `uc ]
+"79
+[; ;mcc_generated_files/ccp4.c: 79:     CCP4_SetCallBack(CCP4_DefaultCallBack);
+[e ( _CCP4_SetCallBack (1 &U _CCP4_DefaultCallBack ]
+"83
+[; ;mcc_generated_files/ccp4.c: 83:     PIR3bits.CCP4IF = 0;
+[e = . . _PIR3bits 0 5 -> -> 0 `i `uc ]
+"86
+[; ;mcc_generated_files/ccp4.c: 86:     PIE3bits.CCP4IE = 1;
+[e = . . _PIE3bits 0 5 -> -> 1 `i `uc ]
+"87
+[; ;mcc_generated_files/ccp4.c: 87: }
+[e :UE 358 ]
+}
+"89
+[; ;mcc_generated_files/ccp4.c: 89: void CCP4_CaptureISR(void)
+[v _CCP4_CaptureISR `(v ~T0 @X0 1 ef ]
+"90
+[; ;mcc_generated_files/ccp4.c: 90: {
+{
+[e :U _CCP4_CaptureISR ]
+[f ]
+"91
+[; ;mcc_generated_files/ccp4.c: 91:     CCP4_PERIOD_REG_T module;
+[v _module `S354 ~T0 @X0 1 a ]
+"94
+[; ;mcc_generated_files/ccp4.c: 94:     PIR3bits.CCP4IF = 0;
+[e = . . _PIR3bits 0 5 -> -> 0 `i `uc ]
+"97
+[; ;mcc_generated_files/ccp4.c: 97:     module.ccpr4l = CCPR4L;
+[e = . . _module 0 0 _CCPR4L ]
+"98
+[; ;mcc_generated_files/ccp4.c: 98:     module.ccpr4h = CCPR4H;
+[e = . . _module 0 1 _CCPR4H ]
+"101
+[; ;mcc_generated_files/ccp4.c: 101:     CCP4_CallBack(module.ccpr4_16Bit);
+[e ( *U _CCP4_CallBack (1 . . _module 1 0 ]
+"102
+[; ;mcc_generated_files/ccp4.c: 102: }
 [e :UE 359 ]
 }
-"68
-[; ;mcc_generated_files/mcc.c: 68: void OSCILLATOR_Initialize(void)
-[v _OSCILLATOR_Initialize `(v ~T0 @X0 1 ef ]
-"69
-[; ;mcc_generated_files/mcc.c: 69: {
+"104
+[; ;mcc_generated_files/ccp4.c: 104: void CCP4_SetCallBack(void (*customCallBack)(uint16_t)){
+[v _CCP4_SetCallBack `(v ~T0 @X0 1 ef1`*F2508 ]
 {
-[e :U _OSCILLATOR_Initialize ]
+[e :U _CCP4_SetCallBack ]
+[v _customCallBack `*F2511 ~T0 @X0 1 r1 ]
 [f ]
-"71
-[; ;mcc_generated_files/mcc.c: 71:     OSCCON = 0x68;
-[e = _OSCCON -> -> 104 `i `uc ]
-"73
-[; ;mcc_generated_files/mcc.c: 73:     OSCTUNE = 0x00;
-[e = _OSCTUNE -> -> 0 `i `uc ]
-"75
-[; ;mcc_generated_files/mcc.c: 75:     BORCON = 0x00;
-[e = _BORCON -> -> 0 `i `uc ]
-"76
-[; ;mcc_generated_files/mcc.c: 76: }
+"105
+[; ;mcc_generated_files/ccp4.c: 105:     CCP4_CallBack = customCallBack;
+[e = _CCP4_CallBack _customCallBack ]
+"106
+[; ;mcc_generated_files/ccp4.c: 106: }
 [e :UE 360 ]
-}
-"78
-[; ;mcc_generated_files/mcc.c: 78: void WDT_Initialize(void)
-[v _WDT_Initialize `(v ~T0 @X0 1 ef ]
-"79
-[; ;mcc_generated_files/mcc.c: 79: {
-{
-[e :U _WDT_Initialize ]
-[f ]
-"81
-[; ;mcc_generated_files/mcc.c: 81:     WDTCON = 0x16;
-[e = _WDTCON -> -> 22 `i `uc ]
-"82
-[; ;mcc_generated_files/mcc.c: 82: }
-[e :UE 361 ]
 }

@@ -124,9 +124,11 @@ void controleMovimento(){
     if(destinoSub != 0 && mov != RetornaS0 ){//Determina o sentido do movimento do motor
         //Seta o movimento ascendente do motor
         subindo = true;
+        Dir_SetHigh();
     }else{
         //Seta o movimento ascendente do motor
         subindo = false;
+        Dir_SetLow();
     }
 }
 
@@ -134,7 +136,7 @@ void controleMovimento(){
 void chegadaS1(){ //função acionada ao sensor S1 ser acionado
     PWM3_LoadDutyValue(0); //Desligando o Movimento do Motor 
     
-    //Ao chegar no primeiro andar o elevador j� finalizou todo seu trajeto
+    //Ao chegar no primeiro andar o elevador j� finalizou todo seu trajeto
     mov = Repouso;
     //Atualização da variavel da matrix de de Dados com o numero 0 mais a direcao de movimento do elevador
     MatrixLed[0] = 0b01111110;
@@ -156,7 +158,7 @@ void chegadaS1(){ //função acionada ao sensor S1 ser acionado
     
      //Retorno do movimento do Motor
     /*__delay_ms(500); //Espera 500ms para retornar o movimento
-    controleMovimento(); //Retorna o movimento */ //Retorno de movimento n�o necess�rio
+    controleMovimento(); //Retorna o movimento */ //Retorno de movimento n�o necess�rio
 }
 
 void chegadaS2(){ //função acionada ao sensor S2 ser acionado
@@ -181,7 +183,7 @@ void chegadaS2(){ //função acionada ao sensor S2 ser acionado
         MatrixLed[7] =  0b01100000;
         destinoSub = destinoSub & 0b11111101; //limpa a flag que mantem o andar 1 como destino do elevador
         
-        mov = EmTrajeto; //Primeira Interrupcao gerada apos iniciar o trajeto por tanto o motor j� iniciou o movimento
+        mov = EmTrajeto; //Primeira Interrupcao gerada apos iniciar o trajeto por tanto o motor j� iniciou o movimento
     }else{ //seta apontando pra baixo
         MatrixLed[5] =  0b11000000;
         MatrixLed[6] =  0b01100000;
@@ -269,7 +271,7 @@ void chegadaS4(){ //função acionada ao sensor S4 ser acionado
     matrixUpdate();
     
     //Controle dos estados
-    if(destinoDesc ==0 && destinoSub == 0){ // Caso n�o tenha mais nenhum destino no trajeto
+    if(destinoDesc ==0 && destinoSub == 0){ // Caso n�o tenha mais nenhum destino no trajeto
         mov = RetornaS0;
     }
     

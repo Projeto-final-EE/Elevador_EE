@@ -62,26 +62,26 @@ void sendInfo(){
     
     EUSART_Write('$'); // Caracter inicial
     EUSART_Write(0x30 + origem); // Envia o andar de origem em ASCII
-    EUSART_Write(0x2C);
+    EUSART_Write(0x2C); // Envia a virgula
     EUSART_Write(0x30 + destino); // Envia o andar destino em ASCII
-    EUSART_Write(0x2C);
+    EUSART_Write(0x2C); // Envia a virgula
     EUSART_Write(0x30 + andarAtual); // Envia o andar atual em ASCII
-    EUSART_Write(0x2C);
+    EUSART_Write(0x2C); // Envia a virgula
     EUSART_Write(0); // Envia o estado atual do motor
-    EUSART_Write(0x2C);
+    EUSART_Write(0x2C); // Envia a virgula
     // Enviando a altura em mm
     bcd.v = bin2bcd(altura);
     EUSART_Write(bcd.num2 + 0x30); // Envia o primeiro digito
     EUSART_Write(bcd.num3 + 0x30); // Envia o segundo digito
     EUSART_Write(bcd.num4 + 0x30); // Envia o terceiro digito
-    EUSART_Write(0x2C);
+    EUSART_Write(0x2C); // Envia a virgula
     // Enviando a velocidade em mm/s
     bcd.v = bin2bcd(velocidade);
     EUSART_Write(bcd.num2 + 0x30); // Envia o primeiro digito
     EUSART_Write(bcd.num3 + 0x30); // Envia o segundo digito
     EUSART_Write(0x2E); // Envia o ponto
     EUSART_Write(bcd.num4 + 0x30); // Envia o digito decimal
-    EUSART_Write(0x2C);
+    EUSART_Write(0x2C); // Envia a virgula
     // Enviando a temperatura em C
     bcd.v = bin2bcd(velocidade);
     EUSART_Write(bcd.num1 + 0x30); // Envia o primeiro digito

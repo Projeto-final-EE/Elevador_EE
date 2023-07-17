@@ -47,6 +47,8 @@ bool RXaccepted = false; // Indica que o valor recebido pela comunicacao serial 
 uint8_t origem; // Indica origem da chamada do elevador
 uint8_t destino; // Indica o destino do elevador
 uint8_t andarAtual = 0; // Indica o andar atual
+uint16_t altura; // Valor da altura atual
+uint16_t velocidade; // Valor da velocidade atual
 
 bool subindo = true; //flag que indica se o elevador est� subindo ou descendo
 uint8_t MatrixLed[8]; //Matrix de Dados que armazena o valor a ser transmito por SPI para a matrix de LED

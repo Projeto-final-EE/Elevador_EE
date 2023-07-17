@@ -53,6 +53,45 @@ bool isValidFloor(char floor){
     return floor >= '0' && floor <= '3';
 }
 
+void sendInfo(){
+    
+    bcd16_t bcd;
+    
+    // Calcular altura
+    
+    
+    EUSART_Write('$'); // Caracter inicial
+    EUSART_Write(0x30 + origem); // Envia o andar de origem em ASCII
+    EUSART_Write(0x2C);
+    EUSART_Write(0x30 + destino); // Envia o andar destino em ASCII
+    EUSART_Write(0x2C);
+    EUSART_Write(0x30 + andarAtual); // Envia o andar atual em ASCII
+    EUSART_Write(0x2C);
+    EUSART_Write(0); // Envia o estado atual do motor
+    EUSART_Write(0x2C);
+    // Enviando a altura em mm
+    bcd.v = bin2bcd(altura);
+    EUSART_Write(bcd.num2 + 0x30); // Envia o primeiro digito
+    EUSART_Write(bcd.num3 + 0x30); // Envia o segundo digito
+    EUSART_Write(bcd.num4 + 0x30); // Envia o terceiro digito
+    EUSART_Write(0x2C);
+    // Enviando a velocidade em mm/s
+    bcd.v = bin2bcd(velocidade);
+    EUSART_Write(bcd.num2 + 0x30); // Envia o primeiro digito
+    EUSART_Write(bcd.num3 + 0x30); // Envia o segundo digito
+    EUSART_Write(0x2E); // Envia o ponto
+    EUSART_Write(bcd.num4 + 0x30); // Envia o digito decimal
+    EUSART_Write(0x2C);
+    // Enviando a temperatura em C
+    bcd.v = bin2bcd(velocidade);
+    EUSART_Write(bcd.num1 + 0x30); // Envia o primeiro digito
+    EUSART_Write(bcd.num2 + 0x30); // Envia o segundo digito
+    EUSART_Write(bcd.num3 + 0x30); // Envia o terceiro digito
+    EUSART_Write(0x2E); // Envia o ponto
+    EUSART_Write(bcd.num4 + 0x30); // Envia o digito decimal
+    EUSART_Write(0x0D); // Envia o carriage return
+}
+
 void txSpi( uint8_t *data, size_t dataSize){
     CS_SetLow();            // Ativa CS
     SPI1_ExchangeBlock(data,dataSize);// Tx
@@ -102,6 +141,8 @@ void initMatrix(){
 
 void chegadaS1(){ //função acionada ao sensor S1 ser acionado
     //Atualização da variavel da matrix de de Dados com o numero 0 mais a direcao de movimento do elevador
+    andarAtual = 0;
+    
     MatrixLed[0] = 0b01111110;
     MatrixLed[1] = 0b10000001;
     MatrixLed[2] = 0b10000001;
@@ -122,6 +163,8 @@ void chegadaS1(){ //função acionada ao sensor S1 ser acionado
 
 void chegadaS2(){ //função acionada ao sensor S2 ser acionado
     //Atualização da variavel da matrix de de Dados com o numero 1 mais a direcao de movimento do elevador
+    andarAtual = 1;
+    
     MatrixLed[0] = 0b00000000;
     MatrixLed[1] = 0b01000001;
     MatrixLed[2] = 0b11111111;
@@ -145,6 +188,8 @@ void chegadaS2(){ //função acionada ao sensor S2 ser acionado
 
 void chegadaS3(){ //função acionada ao sensor S3 ser acionado
     //Atualização da variavel da matrix de de Dados com o numero 2 mais a direcao de movimento do elevador
+    andarAtual = 2;
+    
     MatrixLed[0] = 0b01000011;
     MatrixLed[1] = 0b10000101; 
     MatrixLed[2] = 0b10001001; 
@@ -168,6 +213,8 @@ void chegadaS3(){ //função acionada ao sensor S3 ser acionado
 
 void chegadaS4(){ //função acionada ao sensor S4 ser acionado
     //Atualização da variavel da matrix de de Dados com o numero 3 mais a direcao de movimento do elevador
+    andarAtual = 3;
+    
     MatrixLed[0] = 0b10000001;
     MatrixLed[1] = 0b10010001;
     MatrixLed[2] = 0b10010001;
@@ -198,11 +245,12 @@ void main(void)
     // Use the following macros to:
     
     //Handlers das Interrupçoes
-        /*Caso a Interrupcao nao tenha handler,
-            a funcao esta sendo chamada dentro da funcao de interrupcao do periferico*/
+    /* Caso a Interrupcao nao tenha handler,
+     * a funcao esta sendo chamada dentro da funcao de interrupcao do periferico
+     */
     IOCBF3_SetInterruptHandler(chegadaS1);
     IOCBF3_SetInterruptHandler(chegadaS2);
-    
+    TMR0_SetInterruptHandler(sendInfo);
     
     //Incializacao do SPI
     CS_SetHigh(); //Mantem Desativado o CS

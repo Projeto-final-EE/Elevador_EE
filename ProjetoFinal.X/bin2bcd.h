@@ -12,6 +12,17 @@
 #include <stdint.h>
 #include "bin2bcd.h"
 
+// Type para guardar os 4 numeros em BCD
+typedef union{
+    uint16_t v;
+    struct{
+        uint8_t num4 : 4;
+        uint8_t num3 : 4;
+        uint8_t num2 : 4;
+        uint8_t num1 : 4;
+    };
+}bcd16_t;
+
  /**
  * Converte un valor Binario de 12 bits para BCD (16 bits)
  * @param binVal Valor bin?rio  ser convertido em BCD.

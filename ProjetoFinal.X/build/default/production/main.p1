@@ -1,8 +1,22 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"39 ./main.h
-[; ;./main.h: 39: State state = START;
-[c E2944 0 1 2 3 .. ]
-[n E2944 . START FIRST_NUM SECOND_NUM CR  ]
+"42 ./main.h
+[; ;./main.h: 42: State state = START;
+[c E3122 0 1 2 3 .. ]
+[n E3122 . START FIRST_NUM SECOND_NUM CR  ]
+"18 ./bin2bcd.h
+[; ;./bin2bcd.h: 18:     struct{
+[s S361 :4 `uc 1 :4 `uc 1 :4 `uc 1 :4 `uc 1 ]
+[n S361 . num4 num3 num2 num1 ]
+"16
+[; ;./bin2bcd.h: 16: typedef union{
+[u S360 `us 1 `S361 1 ]
+[n S360 . v . ]
+"341 ./mcc_generated_files/eusart.h
+[; ;./mcc_generated_files/eusart.h: 341: void EUSART_Write(uint8_t txData);
+[v _EUSART_Write `(v ~T0 @X0 0 ef1`uc ]
+"31 ./bin2bcd.h
+[; ;./bin2bcd.h: 31: uint16_t bin2bcd(uint16_t binVal);
+[v _bin2bcd `(us ~T0 @X0 0 ef1`us ]
 "2103 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 2103:     struct {
 [s S112 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -25,10 +39,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "375 ./mcc_generated_files/pin_manager.h
 [; ;./mcc_generated_files/pin_manager.h: 375: void IOCBF3_SetInterruptHandler(void (* InterruptHandler)(void));
 [v _IOCBF3_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F2492 ]
-[v F2993 `(v ~T0 @X0 0 tf ]
-[v F2995 `(v ~T0 @X0 0 tf ]
-"209 main.c
-[; ;main.c: 209:     SPI1_Open(SPI1_DEFAULT);
+[v F3177 `(v ~T0 @X0 0 tf ]
+[v F3179 `(v ~T0 @X0 0 tf ]
+[v F2881 `(v ~T0 @X0 0 tf ]
+"261 ./mcc_generated_files/tmr0.h
+[; ;./mcc_generated_files/tmr0.h: 261:  void TMR0_SetInterruptHandler(void (* InterruptHandler)(void));
+[v _TMR0_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F2881 ]
+"257 main.c
+[; ;main.c: 257:     SPI1_Open(SPI1_DEFAULT);
 [c E2819 0 .. ]
 [n E2819 . SPI1_DEFAULT  ]
 "64 ./mcc_generated_files/spi1.h
@@ -529,8 +547,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6749
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 6749: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"27 ./main.h
-[; ;./main.h: 27: const uint8_t matrix_conf[] = {
+"30 ./main.h
+[; ;./main.h: 30: const uint8_t matrix_conf[] = {
 [v _matrix_conf `Cuc ~T0 @X0 -> 12 `i e ]
 [i _matrix_conf
 :U ..
@@ -548,50 +566,62 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ..
 ]
-"39
-[; ;./main.h: 39: State state = START;
-[v _state `E2944 ~T0 @X0 1 e ]
+"42
+[; ;./main.h: 42: State state = START;
+[v _state `E3122 ~T0 @X0 1 e ]
 [i _state
-. `E2944 0
+. `E3122 0
 ]
-"40
-[; ;./main.h: 40: char rxValue;
+"43
+[; ;./main.h: 43: char rxValue;
 [v _rxValue `uc ~T0 @X0 1 e ]
-"41
-[; ;./main.h: 41: _Bool waitRX = 0;
+"44
+[; ;./main.h: 44: _Bool waitRX = 0;
 [v _waitRX `a ~T0 @X0 1 e ]
 [i _waitRX
 -> -> 0 `i `a
 ]
-"42
-[; ;./main.h: 42: _Bool RXaccepted = 0;
+"45
+[; ;./main.h: 45: _Bool RXaccepted = 0;
 [v _RXaccepted `a ~T0 @X0 1 e ]
 [i _RXaccepted
 -> -> 0 `i `a
 ]
-"44
-[; ;./main.h: 44: uint8_t origem;
-[v _origem `uc ~T0 @X0 1 e ]
-"45
-[; ;./main.h: 45: uint8_t destino;
-[v _destino `uc ~T0 @X0 1 e ]
 "47
-[; ;./main.h: 47: _Bool subindo = 1;
+[; ;./main.h: 47: uint8_t origem;
+[v _origem `uc ~T0 @X0 1 e ]
+"48
+[; ;./main.h: 48: uint8_t destino;
+[v _destino `uc ~T0 @X0 1 e ]
+"49
+[; ;./main.h: 49: uint8_t andarAtual = 0;
+[v _andarAtual `uc ~T0 @X0 1 e ]
+[i _andarAtual
+-> -> 0 `i `uc
+]
+"50
+[; ;./main.h: 50: uint16_t altura;
+[v _altura `us ~T0 @X0 1 e ]
+"51
+[; ;./main.h: 51: uint16_t velocidade;
+[v _velocidade `us ~T0 @X0 1 e ]
+"53
+[; ;./main.h: 53: _Bool subindo = 1;
 [v _subindo `a ~T0 @X0 1 e ]
 [i _subindo
 -> -> 1 `i `a
 ]
-"48
-[; ;./main.h: 48: uint8_t MatrixLed[8];
+"54
+[; ;./main.h: 54: uint8_t MatrixLed[8];
 [v _MatrixLed `uc ~T0 @X0 -> 8 `i e ]
-"49
-[; ;./main.h: 49: uint8_t destinoSub= 0;
+"55
+[; ;./main.h: 55: uint8_t destinoSub= 0;
 [v _destinoSub `uc ~T0 @X0 1 e ]
 [i _destinoSub
 -> -> 0 `i `uc
 ]
-"50
-[; ;./main.h: 50: uint8_t destinoDesc= 0;
+"56
+[; ;./main.h: 56: uint8_t destinoDesc= 0;
 [v _destinoDesc `uc ~T0 @X0 1 e ]
 [i _destinoDesc
 -> -> 0 `i `uc
@@ -606,665 +636,774 @@ Version 4.0 HI-TECH Software Intermediate Code
 "53
 [; ;main.c: 53:     return floor >= '0' && floor <= '3';
 [e ) -> -> && >= -> _floor `ui -> 48 `ui <= -> _floor `ui -> 51 `ui `i `a ]
-[e $UE 359  ]
+[e $UE 362  ]
 "54
 [; ;main.c: 54: }
-[e :UE 359 ]
+[e :UE 362 ]
 }
 "56
-[; ;main.c: 56: void txSpi( uint8_t *data, size_t dataSize){
+[; ;main.c: 56: void sendInfo(){
+[v _sendInfo `(v ~T0 @X0 1 ef ]
+{
+[e :U _sendInfo ]
+[f ]
+"58
+[; ;main.c: 58:     bcd16_t bcd;
+[v _bcd `S360 ~T0 @X0 1 a ]
+"63
+[; ;main.c: 63:     EUSART_Write('$');
+[e ( _EUSART_Write (1 -> -> 36 `ui `uc ]
+"64
+[; ;main.c: 64:     EUSART_Write(0x30 + origem);
+[e ( _EUSART_Write (1 -> + -> 48 `i -> _origem `i `uc ]
+"65
+[; ;main.c: 65:     EUSART_Write(0x2C);
+[e ( _EUSART_Write (1 -> -> 44 `i `uc ]
+"66
+[; ;main.c: 66:     EUSART_Write(0x30 + destino);
+[e ( _EUSART_Write (1 -> + -> 48 `i -> _destino `i `uc ]
+"67
+[; ;main.c: 67:     EUSART_Write(0x2C);
+[e ( _EUSART_Write (1 -> -> 44 `i `uc ]
+"68
+[; ;main.c: 68:     EUSART_Write(0x30 + andarAtual);
+[e ( _EUSART_Write (1 -> + -> 48 `i -> _andarAtual `i `uc ]
+"69
+[; ;main.c: 69:     EUSART_Write(0x2C);
+[e ( _EUSART_Write (1 -> -> 44 `i `uc ]
+"70
+[; ;main.c: 70:     EUSART_Write(0);
+[e ( _EUSART_Write (1 -> -> 0 `i `uc ]
+"71
+[; ;main.c: 71:     EUSART_Write(0x2C);
+[e ( _EUSART_Write (1 -> -> 44 `i `uc ]
+"73
+[; ;main.c: 73:     bcd.v = bin2bcd(altura);
+[e = . _bcd 0 ( _bin2bcd (1 _altura ]
+"74
+[; ;main.c: 74:     EUSART_Write(bcd.num2 + 0x30);
+[e ( _EUSART_Write (1 -> + -> . . _bcd 1 2 `i -> 48 `i `uc ]
+"75
+[; ;main.c: 75:     EUSART_Write(bcd.num3 + 0x30);
+[e ( _EUSART_Write (1 -> + -> . . _bcd 1 1 `i -> 48 `i `uc ]
+"76
+[; ;main.c: 76:     EUSART_Write(bcd.num4 + 0x30);
+[e ( _EUSART_Write (1 -> + -> . . _bcd 1 0 `i -> 48 `i `uc ]
+"77
+[; ;main.c: 77:     EUSART_Write(0x2C);
+[e ( _EUSART_Write (1 -> -> 44 `i `uc ]
+"79
+[; ;main.c: 79:     bcd.v = bin2bcd(velocidade);
+[e = . _bcd 0 ( _bin2bcd (1 _velocidade ]
+"80
+[; ;main.c: 80:     EUSART_Write(bcd.num2 + 0x30);
+[e ( _EUSART_Write (1 -> + -> . . _bcd 1 2 `i -> 48 `i `uc ]
+"81
+[; ;main.c: 81:     EUSART_Write(bcd.num3 + 0x30);
+[e ( _EUSART_Write (1 -> + -> . . _bcd 1 1 `i -> 48 `i `uc ]
+"82
+[; ;main.c: 82:     EUSART_Write(0x2E);
+[e ( _EUSART_Write (1 -> -> 46 `i `uc ]
+"83
+[; ;main.c: 83:     EUSART_Write(bcd.num4 + 0x30);
+[e ( _EUSART_Write (1 -> + -> . . _bcd 1 0 `i -> 48 `i `uc ]
+"84
+[; ;main.c: 84:     EUSART_Write(0x2C);
+[e ( _EUSART_Write (1 -> -> 44 `i `uc ]
+"86
+[; ;main.c: 86:     bcd.v = bin2bcd(velocidade);
+[e = . _bcd 0 ( _bin2bcd (1 _velocidade ]
+"87
+[; ;main.c: 87:     EUSART_Write(bcd.num1 + 0x30);
+[e ( _EUSART_Write (1 -> + -> . . _bcd 1 3 `i -> 48 `i `uc ]
+"88
+[; ;main.c: 88:     EUSART_Write(bcd.num2 + 0x30);
+[e ( _EUSART_Write (1 -> + -> . . _bcd 1 2 `i -> 48 `i `uc ]
+"89
+[; ;main.c: 89:     EUSART_Write(bcd.num3 + 0x30);
+[e ( _EUSART_Write (1 -> + -> . . _bcd 1 1 `i -> 48 `i `uc ]
+"90
+[; ;main.c: 90:     EUSART_Write(0x2E);
+[e ( _EUSART_Write (1 -> -> 46 `i `uc ]
+"91
+[; ;main.c: 91:     EUSART_Write(bcd.num4 + 0x30);
+[e ( _EUSART_Write (1 -> + -> . . _bcd 1 0 `i -> 48 `i `uc ]
+"92
+[; ;main.c: 92:     EUSART_Write(0x0D);
+[e ( _EUSART_Write (1 -> -> 13 `i `uc ]
+"93
+[; ;main.c: 93: }
+[e :UE 363 ]
+}
+"95
+[; ;main.c: 95: void txSpi( uint8_t *data, size_t dataSize){
 [v _txSpi `(v ~T0 @X0 1 ef2`*uc`ui ]
 {
 [e :U _txSpi ]
 [v _data `*uc ~T0 @X0 1 r1 ]
 [v _dataSize `ui ~T0 @X0 1 r2 ]
 [f ]
-"57
-[; ;main.c: 57:     do { LATBbits.LATB1 = 0; } while(0);
-[e :U 363 ]
+"96
+[; ;main.c: 96:     do { LATBbits.LATB1 = 0; } while(0);
+[e :U 367 ]
 {
 [e = . . _LATBbits 0 1 -> -> 0 `i `uc ]
 }
-[e :U 362 ]
-"58
-[; ;main.c: 58:     SPI1_ExchangeBlock(data,dataSize);
-[e ( _SPI1_ExchangeBlock (2 , -> _data `*v _dataSize ]
-"59
-[; ;main.c: 59:     do { LATBbits.LATB1 = 1; } while(0);
 [e :U 366 ]
+"97
+[; ;main.c: 97:     SPI1_ExchangeBlock(data,dataSize);
+[e ( _SPI1_ExchangeBlock (2 , -> _data `*v _dataSize ]
+"98
+[; ;main.c: 98:     do { LATBbits.LATB1 = 1; } while(0);
+[e :U 370 ]
 {
 [e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
 }
-[e :U 365 ]
-"62
-[; ;main.c: 62: }
-[e :UE 360 ]
+[e :U 369 ]
+"101
+[; ;main.c: 101: }
+[e :UE 364 ]
 }
-"64
-[; ;main.c: 64: void matrixUpdate(){
+"103
+[; ;main.c: 103: void matrixUpdate(){
 [v _matrixUpdate `(v ~T0 @X0 1 ef ]
 {
 [e :U _matrixUpdate ]
 [f ]
-"65
-[; ;main.c: 65:     uint8_t data[2];
+"104
+[; ;main.c: 104:     uint8_t data[2];
 [v _data `uc ~T0 @X0 -> 2 `i a ]
-"66
-[; ;main.c: 66:     if (1){
-[e $ ! != -> 1 `i -> 0 `i 368  ]
+"105
+[; ;main.c: 105:     if (1){
+[e $ ! != -> 1 `i -> 0 `i 372  ]
 {
-"67
-[; ;main.c: 67:         for(uint8_t i=8;i>0;i--){
+"106
+[; ;main.c: 106:         for(uint8_t i=8;i>0;i--){
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 8 `i `uc ]
-[e $ > -> _i `i -> 0 `i 369  ]
-[e $U 370  ]
-[e :U 369 ]
-{
-"68
-[; ;main.c: 68:             data[0] = i;
-[e = *U + &U _data * -> -> -> 0 `i `ui `ux -> -> # *U &U _data `ui `ux _i ]
-"69
-[; ;main.c: 69:             data[1] = MatrixLed[i-1];
-[e = *U + &U _data * -> -> -> 1 `i `ui `ux -> -> # *U &U _data `ui `ux *U + &U _MatrixLed * -> -> - -> _i `i -> 1 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux ]
-"70
-[; ;main.c: 70:             txSpi(data, 2);
-[e ( _txSpi (2 , &U _data -> -> 2 `i `ui ]
-"71
-[; ;main.c: 71:         }
-}
-[e -- _i -> -> 1 `i `uc ]
-[e $ > -> _i `i -> 0 `i 369  ]
-[e :U 370 ]
-}
-"72
-[; ;main.c: 72:     }else{
-}
-[e $U 372  ]
-[e :U 368 ]
-{
-"73
-[; ;main.c: 73:         uint8_t index = 7;
-[v _index `uc ~T0 @X0 1 a ]
-[e = _index -> -> 7 `i `uc ]
-"74
-[; ;main.c: 74:         for(uint8_t i=1;i<9;i++){
-{
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 9 `i 373  ]
+[e $ > -> _i `i -> 0 `i 373  ]
 [e $U 374  ]
 [e :U 373 ]
 {
-"76
-[; ;main.c: 76:             data[0] = i;
+"107
+[; ;main.c: 107:             data[0] = i;
 [e = *U + &U _data * -> -> -> 0 `i `ui `ux -> -> # *U &U _data `ui `ux _i ]
-"77
-[; ;main.c: 77:             data[1] = MatrixLed[index];
-[e = *U + &U _data * -> -> -> 1 `i `ui `ux -> -> # *U &U _data `ui `ux *U + &U _MatrixLed * -> _index `ux -> -> # *U &U _MatrixLed `ui `ux ]
-"78
-[; ;main.c: 78:             txSpi(data, 2);
+"108
+[; ;main.c: 108:             data[1] = MatrixLed[i-1];
+[e = *U + &U _data * -> -> -> 1 `i `ui `ux -> -> # *U &U _data `ui `ux *U + &U _MatrixLed * -> -> - -> _i `i -> 1 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux ]
+"109
+[; ;main.c: 109:             txSpi(data, 2);
 [e ( _txSpi (2 , &U _data -> -> 2 `i `ui ]
-"79
-[; ;main.c: 79:             index--;
-[e -- _index -> -> 1 `i `uc ]
-"80
-[; ;main.c: 80:         }
+"110
+[; ;main.c: 110:         }
 }
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 9 `i 373  ]
+[e -- _i -> -> 1 `i `uc ]
+[e $ > -> _i `i -> 0 `i 373  ]
 [e :U 374 ]
 }
-"81
-[; ;main.c: 81:     }
+"111
+[; ;main.c: 111:     }else{
 }
+[e $U 376  ]
 [e :U 372 ]
-"82
-[; ;main.c: 82: }
-[e :UE 367 ]
+{
+"112
+[; ;main.c: 112:         uint8_t index = 7;
+[v _index `uc ~T0 @X0 1 a ]
+[e = _index -> -> 7 `i `uc ]
+"113
+[; ;main.c: 113:         for(uint8_t i=1;i<9;i++){
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 9 `i 377  ]
+[e $U 378  ]
+[e :U 377 ]
+{
+"115
+[; ;main.c: 115:             data[0] = i;
+[e = *U + &U _data * -> -> -> 0 `i `ui `ux -> -> # *U &U _data `ui `ux _i ]
+"116
+[; ;main.c: 116:             data[1] = MatrixLed[index];
+[e = *U + &U _data * -> -> -> 1 `i `ui `ux -> -> # *U &U _data `ui `ux *U + &U _MatrixLed * -> _index `ux -> -> # *U &U _MatrixLed `ui `ux ]
+"117
+[; ;main.c: 117:             txSpi(data, 2);
+[e ( _txSpi (2 , &U _data -> -> 2 `i `ui ]
+"118
+[; ;main.c: 118:             index--;
+[e -- _index -> -> 1 `i `uc ]
+"119
+[; ;main.c: 119:         }
 }
-"84
-[; ;main.c: 84: void initMatrix(){
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 9 `i 377  ]
+[e :U 378 ]
+}
+"120
+[; ;main.c: 120:     }
+}
+[e :U 376 ]
+"121
+[; ;main.c: 121: }
+[e :UE 371 ]
+}
+"123
+[; ;main.c: 123: void initMatrix(){
 [v _initMatrix `(v ~T0 @X0 1 ef ]
 {
 [e :U _initMatrix ]
 [f ]
-"85
-[; ;main.c: 85:     uint8_t data[4];
+"124
+[; ;main.c: 124:     uint8_t data[4];
 [v _data `uc ~T0 @X0 -> 4 `i a ]
-"86
-[; ;main.c: 86:     uint8_t k=0;
+"125
+[; ;main.c: 125:     uint8_t k=0;
 [v _k `uc ~T0 @X0 1 a ]
 [e = _k -> -> 0 `i `uc ]
-"87
-[; ;main.c: 87:    for(uint8_t i =0; i<8; i++){
+"126
+[; ;main.c: 126:    for(uint8_t i =0; i<8; i++){
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 8 `i 377  ]
-[e $U 378  ]
-[e :U 377 ]
+[e $ < -> _i `i -> 8 `i 381  ]
+[e $U 382  ]
+[e :U 381 ]
 {
-"88
-[; ;main.c: 88:             MatrixLed[i] = 0;
+"127
+[; ;main.c: 127:             MatrixLed[i] = 0;
 [e = *U + &U _MatrixLed * -> _i `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 0 `i `uc ]
-"89
-[; ;main.c: 89:         }
+"128
+[; ;main.c: 128:         }
 }
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 8 `i 377  ]
-[e :U 378 ]
+[e $ < -> _i `i -> 8 `i 381  ]
+[e :U 382 ]
 }
-"90
-[; ;main.c: 90:     for(uint8_t i=0;i<6;i++){
+"129
+[; ;main.c: 129:     for(uint8_t i=0;i<6;i++){
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 6 `i 380  ]
-[e $U 381  ]
-[e :U 380 ]
+[e $ < -> _i `i -> 6 `i 384  ]
+[e $U 385  ]
+[e :U 384 ]
 {
-"91
-[; ;main.c: 91:         for(uint8_t j=0;j<4;j=j+2){
+"130
+[; ;main.c: 130:         for(uint8_t j=0;j<4;j=j+2){
 {
 [v _j `uc ~T0 @X0 1 a ]
 [e = _j -> -> 0 `i `uc ]
-[e $ < -> _j `i -> 4 `i 383  ]
-[e $U 384  ]
-[e :U 383 ]
+[e $ < -> _j `i -> 4 `i 387  ]
+[e $U 388  ]
+[e :U 387 ]
 {
-"92
-[; ;main.c: 92:             data[j]= matrix_conf[k];
+"131
+[; ;main.c: 131:             data[j]= matrix_conf[k];
 [e = *U + &U _data * -> _j `ux -> -> # *U &U _data `ui `ux *U + &U _matrix_conf * -> _k `ux -> -> # *U &U _matrix_conf `ui `ux ]
-"93
-[; ;main.c: 93:             data[j+1]= matrix_conf[k+1];
+"132
+[; ;main.c: 132:             data[j+1]= matrix_conf[k+1];
 [e = *U + &U _data * -> -> + -> _j `i -> 1 `i `ui `ux -> -> # *U &U _data `ui `ux *U + &U _matrix_conf * -> -> + -> _k `i -> 1 `i `ui `ux -> -> # *U &U _matrix_conf `ui `ux ]
-"94
-[; ;main.c: 94:         }
+"133
+[; ;main.c: 133:         }
 }
 [e = _j -> + -> _j `i -> 2 `i `uc ]
-[e $ < -> _j `i -> 4 `i 383  ]
-[e :U 384 ]
+[e $ < -> _j `i -> 4 `i 387  ]
+[e :U 388 ]
 }
-"95
-[; ;main.c: 95:         k=k+2;
+"134
+[; ;main.c: 134:         k=k+2;
 [e = _k -> + -> _k `i -> 2 `i `uc ]
-"96
-[; ;main.c: 96:         txSpi( data, 4);
+"135
+[; ;main.c: 135:         txSpi( data, 4);
 [e ( _txSpi (2 , &U _data -> -> 4 `i `ui ]
-"97
-[; ;main.c: 97:         if(i==4){
-[e $ ! == -> _i `i -> 4 `i 386  ]
+"136
+[; ;main.c: 136:         if(i==4){
+[e $ ! == -> _i `i -> 4 `i 390  ]
 {
-"99
-[; ;main.c: 99:         }
+"138
+[; ;main.c: 138:         }
 }
-[e :U 386 ]
-"100
-[; ;main.c: 100:     }
+[e :U 390 ]
+"139
+[; ;main.c: 139:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 6 `i 380  ]
-[e :U 381 ]
+[e $ < -> _i `i -> 6 `i 384  ]
+[e :U 385 ]
 }
-"101
-[; ;main.c: 101: }
-[e :UE 376 ]
+"140
+[; ;main.c: 140: }
+[e :UE 380 ]
 }
-"103
-[; ;main.c: 103: void chegadaS1(){
+"142
+[; ;main.c: 142: void chegadaS1(){
 [v _chegadaS1 `(v ~T0 @X0 1 ef ]
 {
 [e :U _chegadaS1 ]
 [f ]
-"105
-[; ;main.c: 105:     MatrixLed[0] = 0b01111110;
+"144
+[; ;main.c: 144:     andarAtual = 0;
+[e = _andarAtual -> -> 0 `i `uc ]
+"146
+[; ;main.c: 146:     MatrixLed[0] = 0b01111110;
 [e = *U + &U _MatrixLed * -> -> -> 0 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 126 `i `uc ]
-"106
-[; ;main.c: 106:     MatrixLed[1] = 0b10000001;
+"147
+[; ;main.c: 147:     MatrixLed[1] = 0b10000001;
 [e = *U + &U _MatrixLed * -> -> -> 1 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 129 `i `uc ]
-"107
-[; ;main.c: 107:     MatrixLed[2] = 0b10000001;
+"148
+[; ;main.c: 148:     MatrixLed[2] = 0b10000001;
 [e = *U + &U _MatrixLed * -> -> -> 2 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 129 `i `uc ]
-"108
-[; ;main.c: 108:     MatrixLed[3] = 0b01111110;
+"149
+[; ;main.c: 149:     MatrixLed[3] = 0b01111110;
 [e = *U + &U _MatrixLed * -> -> -> 3 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 126 `i `uc ]
-"109
-[; ;main.c: 109:     MatrixLed[4] = 0;
+"150
+[; ;main.c: 150:     MatrixLed[4] = 0;
 [e = *U + &U _MatrixLed * -> -> -> 4 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 0 `i `uc ]
-"110
-[; ;main.c: 110:     if(subindo){
-[e $ ! != -> _subindo `i -> 0 `i 388  ]
+"151
+[; ;main.c: 151:     if(subindo){
+[e $ ! != -> _subindo `i -> 0 `i 392  ]
 {
-"111
-[; ;main.c: 111:         MatrixLed[5] = 0b01100000;
+"152
+[; ;main.c: 152:         MatrixLed[5] = 0b01100000;
 [e = *U + &U _MatrixLed * -> -> -> 5 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 96 `i `uc ]
-"112
-[; ;main.c: 112:         MatrixLed[6] = 0b11000000;
+"153
+[; ;main.c: 153:         MatrixLed[6] = 0b11000000;
 [e = *U + &U _MatrixLed * -> -> -> 6 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 192 `i `uc ]
-"113
-[; ;main.c: 113:         MatrixLed[7] = 0b01100000;
+"154
+[; ;main.c: 154:         MatrixLed[7] = 0b01100000;
 [e = *U + &U _MatrixLed * -> -> -> 7 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 96 `i `uc ]
-"114
-[; ;main.c: 114:     }else{
+"155
+[; ;main.c: 155:     }else{
 }
-[e $U 389  ]
-[e :U 388 ]
+[e $U 393  ]
+[e :U 392 ]
 {
-"115
-[; ;main.c: 115:         MatrixLed[5] = 0b11000000;
+"156
+[; ;main.c: 156:         MatrixLed[5] = 0b11000000;
 [e = *U + &U _MatrixLed * -> -> -> 5 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 192 `i `uc ]
-"116
-[; ;main.c: 116:         MatrixLed[6] = 0b01100000;
+"157
+[; ;main.c: 157:         MatrixLed[6] = 0b01100000;
 [e = *U + &U _MatrixLed * -> -> -> 6 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 96 `i `uc ]
-"117
-[; ;main.c: 117:         MatrixLed[7] = 0b11000000;
+"158
+[; ;main.c: 158:         MatrixLed[7] = 0b11000000;
 [e = *U + &U _MatrixLed * -> -> -> 7 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 192 `i `uc ]
-"118
-[; ;main.c: 118:         destinoDesc = destinoDesc & 0b11111110;
+"159
+[; ;main.c: 159:         destinoDesc = destinoDesc & 0b11111110;
 [e = _destinoDesc -> & -> _destinoDesc `i -> 254 `i `uc ]
-"119
-[; ;main.c: 119:     }
+"160
+[; ;main.c: 160:     }
 }
-[e :U 389 ]
-"120
-[; ;main.c: 120:     matrixUpdate();
+[e :U 393 ]
+"161
+[; ;main.c: 161:     matrixUpdate();
 [e ( _matrixUpdate ..  ]
-"121
-[; ;main.c: 121: }
-[e :UE 387 ]
+"162
+[; ;main.c: 162: }
+[e :UE 391 ]
 }
-"123
-[; ;main.c: 123: void chegadaS2(){
+"164
+[; ;main.c: 164: void chegadaS2(){
 [v _chegadaS2 `(v ~T0 @X0 1 ef ]
 {
 [e :U _chegadaS2 ]
 [f ]
-"125
-[; ;main.c: 125:     MatrixLed[0] = 0b00000000;
+"166
+[; ;main.c: 166:     andarAtual = 1;
+[e = _andarAtual -> -> 1 `i `uc ]
+"168
+[; ;main.c: 168:     MatrixLed[0] = 0b00000000;
 [e = *U + &U _MatrixLed * -> -> -> 0 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 0 `i `uc ]
-"126
-[; ;main.c: 126:     MatrixLed[1] = 0b01000001;
+"169
+[; ;main.c: 169:     MatrixLed[1] = 0b01000001;
 [e = *U + &U _MatrixLed * -> -> -> 1 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 65 `i `uc ]
-"127
-[; ;main.c: 127:     MatrixLed[2] = 0b11111111;
+"170
+[; ;main.c: 170:     MatrixLed[2] = 0b11111111;
 [e = *U + &U _MatrixLed * -> -> -> 2 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 255 `i `uc ]
-"128
-[; ;main.c: 128:     MatrixLed[3] = 0b00000001;
+"171
+[; ;main.c: 171:     MatrixLed[3] = 0b00000001;
 [e = *U + &U _MatrixLed * -> -> -> 3 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 1 `i `uc ]
-"129
-[; ;main.c: 129:     MatrixLed[4] = 0;
+"172
+[; ;main.c: 172:     MatrixLed[4] = 0;
 [e = *U + &U _MatrixLed * -> -> -> 4 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 0 `i `uc ]
-"130
-[; ;main.c: 130:     if(subindo){
-[e $ ! != -> _subindo `i -> 0 `i 391  ]
+"173
+[; ;main.c: 173:     if(subindo){
+[e $ ! != -> _subindo `i -> 0 `i 395  ]
 {
-"131
-[; ;main.c: 131:         MatrixLed[5] = 0b01100000;
+"174
+[; ;main.c: 174:         MatrixLed[5] = 0b01100000;
 [e = *U + &U _MatrixLed * -> -> -> 5 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 96 `i `uc ]
-"132
-[; ;main.c: 132:         MatrixLed[6] = 0b11000000;
+"175
+[; ;main.c: 175:         MatrixLed[6] = 0b11000000;
 [e = *U + &U _MatrixLed * -> -> -> 6 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 192 `i `uc ]
-"133
-[; ;main.c: 133:         MatrixLed[7] = 0b01100000;
+"176
+[; ;main.c: 176:         MatrixLed[7] = 0b01100000;
 [e = *U + &U _MatrixLed * -> -> -> 7 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 96 `i `uc ]
-"134
-[; ;main.c: 134:         destinoSub = destinoSub & 0b11111101;
+"177
+[; ;main.c: 177:         destinoSub = destinoSub & 0b11111101;
 [e = _destinoSub -> & -> _destinoSub `i -> 253 `i `uc ]
-"135
-[; ;main.c: 135:     }else{
+"178
+[; ;main.c: 178:     }else{
 }
-[e $U 392  ]
-[e :U 391 ]
+[e $U 396  ]
+[e :U 395 ]
 {
-"136
-[; ;main.c: 136:         MatrixLed[5] = 0b11000000;
+"179
+[; ;main.c: 179:         MatrixLed[5] = 0b11000000;
 [e = *U + &U _MatrixLed * -> -> -> 5 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 192 `i `uc ]
-"137
-[; ;main.c: 137:         MatrixLed[6] = 0b01100000;
+"180
+[; ;main.c: 180:         MatrixLed[6] = 0b01100000;
 [e = *U + &U _MatrixLed * -> -> -> 6 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 96 `i `uc ]
-"138
-[; ;main.c: 138:         MatrixLed[7] = 0b11000000;
+"181
+[; ;main.c: 181:         MatrixLed[7] = 0b11000000;
 [e = *U + &U _MatrixLed * -> -> -> 7 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 192 `i `uc ]
-"139
-[; ;main.c: 139:         destinoDesc = destinoDesc & 0b11111101;
+"182
+[; ;main.c: 182:         destinoDesc = destinoDesc & 0b11111101;
 [e = _destinoDesc -> & -> _destinoDesc `i -> 253 `i `uc ]
-"140
-[; ;main.c: 140:     }
+"183
+[; ;main.c: 183:     }
 }
-[e :U 392 ]
-"141
-[; ;main.c: 141:     MatrixLed[7] = MatrixLed[7] | destinoSub;
+[e :U 396 ]
+"184
+[; ;main.c: 184:     MatrixLed[7] = MatrixLed[7] | destinoSub;
 [e = *U + &U _MatrixLed * -> -> -> 7 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> | -> *U + &U _MatrixLed * -> -> -> 7 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux `i -> _destinoSub `i `uc ]
-"142
-[; ;main.c: 142:     MatrixLed[6] = MatrixLed[6] | destinoDesc;
+"185
+[; ;main.c: 185:     MatrixLed[6] = MatrixLed[6] | destinoDesc;
 [e = *U + &U _MatrixLed * -> -> -> 6 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> | -> *U + &U _MatrixLed * -> -> -> 6 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux `i -> _destinoDesc `i `uc ]
-"143
-[; ;main.c: 143:     matrixUpdate();
+"186
+[; ;main.c: 186:     matrixUpdate();
 [e ( _matrixUpdate ..  ]
-"144
-[; ;main.c: 144: }
-[e :UE 390 ]
+"187
+[; ;main.c: 187: }
+[e :UE 394 ]
 }
-"146
-[; ;main.c: 146: void chegadaS3(){
+"189
+[; ;main.c: 189: void chegadaS3(){
 [v _chegadaS3 `(v ~T0 @X0 1 ef ]
 {
 [e :U _chegadaS3 ]
 [f ]
-"148
-[; ;main.c: 148:     MatrixLed[0] = 0b01000011;
+"191
+[; ;main.c: 191:     andarAtual = 2;
+[e = _andarAtual -> -> 2 `i `uc ]
+"193
+[; ;main.c: 193:     MatrixLed[0] = 0b01000011;
 [e = *U + &U _MatrixLed * -> -> -> 0 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 67 `i `uc ]
-"149
-[; ;main.c: 149:     MatrixLed[1] = 0b10000101;
+"194
+[; ;main.c: 194:     MatrixLed[1] = 0b10000101;
 [e = *U + &U _MatrixLed * -> -> -> 1 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 133 `i `uc ]
-"150
-[; ;main.c: 150:     MatrixLed[2] = 0b10001001;
+"195
+[; ;main.c: 195:     MatrixLed[2] = 0b10001001;
 [e = *U + &U _MatrixLed * -> -> -> 2 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 137 `i `uc ]
-"151
-[; ;main.c: 151:     MatrixLed[3] = 0b01110001;
+"196
+[; ;main.c: 196:     MatrixLed[3] = 0b01110001;
 [e = *U + &U _MatrixLed * -> -> -> 3 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 113 `i `uc ]
-"152
-[; ;main.c: 152:     MatrixLed[4] = 0;
+"197
+[; ;main.c: 197:     MatrixLed[4] = 0;
 [e = *U + &U _MatrixLed * -> -> -> 4 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 0 `i `uc ]
-"153
-[; ;main.c: 153:     if(subindo){
-[e $ ! != -> _subindo `i -> 0 `i 394  ]
+"198
+[; ;main.c: 198:     if(subindo){
+[e $ ! != -> _subindo `i -> 0 `i 398  ]
 {
-"154
-[; ;main.c: 154:         MatrixLed[5] = 0b01100000;
+"199
+[; ;main.c: 199:         MatrixLed[5] = 0b01100000;
 [e = *U + &U _MatrixLed * -> -> -> 5 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 96 `i `uc ]
-"155
-[; ;main.c: 155:         MatrixLed[6] = 0b11000000;
+"200
+[; ;main.c: 200:         MatrixLed[6] = 0b11000000;
 [e = *U + &U _MatrixLed * -> -> -> 6 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 192 `i `uc ]
-"156
-[; ;main.c: 156:         MatrixLed[7] = 0b01100000;
+"201
+[; ;main.c: 201:         MatrixLed[7] = 0b01100000;
 [e = *U + &U _MatrixLed * -> -> -> 7 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 96 `i `uc ]
-"157
-[; ;main.c: 157:         destinoSub = destinoSub & 0b11111011;
+"202
+[; ;main.c: 202:         destinoSub = destinoSub & 0b11111011;
 [e = _destinoSub -> & -> _destinoSub `i -> 251 `i `uc ]
-"158
-[; ;main.c: 158:     }else{
+"203
+[; ;main.c: 203:     }else{
 }
-[e $U 395  ]
-[e :U 394 ]
+[e $U 399  ]
+[e :U 398 ]
 {
-"159
-[; ;main.c: 159:         MatrixLed[5] = 0b11000000;
+"204
+[; ;main.c: 204:         MatrixLed[5] = 0b11000000;
 [e = *U + &U _MatrixLed * -> -> -> 5 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 192 `i `uc ]
-"160
-[; ;main.c: 160:         MatrixLed[6] = 0b01100000;
+"205
+[; ;main.c: 205:         MatrixLed[6] = 0b01100000;
 [e = *U + &U _MatrixLed * -> -> -> 6 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 96 `i `uc ]
-"161
-[; ;main.c: 161:         MatrixLed[7] = 0b11000000;
+"206
+[; ;main.c: 206:         MatrixLed[7] = 0b11000000;
 [e = *U + &U _MatrixLed * -> -> -> 7 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 192 `i `uc ]
-"162
-[; ;main.c: 162:         destinoDesc = destinoDesc & 0b11111011;
+"207
+[; ;main.c: 207:         destinoDesc = destinoDesc & 0b11111011;
 [e = _destinoDesc -> & -> _destinoDesc `i -> 251 `i `uc ]
-"163
-[; ;main.c: 163:     }
+"208
+[; ;main.c: 208:     }
 }
-[e :U 395 ]
-"164
-[; ;main.c: 164:     MatrixLed[7] = MatrixLed[7] | destinoSub;
+[e :U 399 ]
+"209
+[; ;main.c: 209:     MatrixLed[7] = MatrixLed[7] | destinoSub;
 [e = *U + &U _MatrixLed * -> -> -> 7 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> | -> *U + &U _MatrixLed * -> -> -> 7 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux `i -> _destinoSub `i `uc ]
-"165
-[; ;main.c: 165:     MatrixLed[6] = MatrixLed[6] | destinoDesc;
+"210
+[; ;main.c: 210:     MatrixLed[6] = MatrixLed[6] | destinoDesc;
 [e = *U + &U _MatrixLed * -> -> -> 6 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> | -> *U + &U _MatrixLed * -> -> -> 6 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux `i -> _destinoDesc `i `uc ]
-"166
-[; ;main.c: 166:     matrixUpdate();
+"211
+[; ;main.c: 211:     matrixUpdate();
 [e ( _matrixUpdate ..  ]
-"167
-[; ;main.c: 167: }
-[e :UE 393 ]
+"212
+[; ;main.c: 212: }
+[e :UE 397 ]
 }
-"169
-[; ;main.c: 169: void chegadaS4(){
+"214
+[; ;main.c: 214: void chegadaS4(){
 [v _chegadaS4 `(v ~T0 @X0 1 ef ]
 {
 [e :U _chegadaS4 ]
 [f ]
-"171
-[; ;main.c: 171:     MatrixLed[0] = 0b10000001;
+"216
+[; ;main.c: 216:     andarAtual = 3;
+[e = _andarAtual -> -> 3 `i `uc ]
+"218
+[; ;main.c: 218:     MatrixLed[0] = 0b10000001;
 [e = *U + &U _MatrixLed * -> -> -> 0 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 129 `i `uc ]
-"172
-[; ;main.c: 172:     MatrixLed[1] = 0b10010001;
+"219
+[; ;main.c: 219:     MatrixLed[1] = 0b10010001;
 [e = *U + &U _MatrixLed * -> -> -> 1 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 145 `i `uc ]
-"173
-[; ;main.c: 173:     MatrixLed[2] = 0b10010001;
+"220
+[; ;main.c: 220:     MatrixLed[2] = 0b10010001;
 [e = *U + &U _MatrixLed * -> -> -> 2 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 145 `i `uc ]
-"174
-[; ;main.c: 174:     MatrixLed[3] = 0b01101110;
+"221
+[; ;main.c: 221:     MatrixLed[3] = 0b01101110;
 [e = *U + &U _MatrixLed * -> -> -> 3 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 110 `i `uc ]
-"175
-[; ;main.c: 175:     MatrixLed[4] = 0;
+"222
+[; ;main.c: 222:     MatrixLed[4] = 0;
 [e = *U + &U _MatrixLed * -> -> -> 4 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 0 `i `uc ]
-"176
-[; ;main.c: 176:     if(subindo){
-[e $ ! != -> _subindo `i -> 0 `i 397  ]
+"223
+[; ;main.c: 223:     if(subindo){
+[e $ ! != -> _subindo `i -> 0 `i 401  ]
 {
-"177
-[; ;main.c: 177:         MatrixLed[5] = 0b01100000;
+"224
+[; ;main.c: 224:         MatrixLed[5] = 0b01100000;
 [e = *U + &U _MatrixLed * -> -> -> 5 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 96 `i `uc ]
-"178
-[; ;main.c: 178:         MatrixLed[6] = 0b11000000;
+"225
+[; ;main.c: 225:         MatrixLed[6] = 0b11000000;
 [e = *U + &U _MatrixLed * -> -> -> 6 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 192 `i `uc ]
-"179
-[; ;main.c: 179:         MatrixLed[7] = 0b01100000;
+"226
+[; ;main.c: 226:         MatrixLed[7] = 0b01100000;
 [e = *U + &U _MatrixLed * -> -> -> 7 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 96 `i `uc ]
-"180
-[; ;main.c: 180:         destinoSub = destinoSub & 0b11110111;
+"227
+[; ;main.c: 227:         destinoSub = destinoSub & 0b11110111;
 [e = _destinoSub -> & -> _destinoSub `i -> 247 `i `uc ]
-"181
-[; ;main.c: 181:     }else{
+"228
+[; ;main.c: 228:     }else{
 }
-[e $U 398  ]
-[e :U 397 ]
+[e $U 402  ]
+[e :U 401 ]
 {
-"182
-[; ;main.c: 182:         MatrixLed[5] = 0b11000000;
+"229
+[; ;main.c: 229:         MatrixLed[5] = 0b11000000;
 [e = *U + &U _MatrixLed * -> -> -> 5 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 192 `i `uc ]
-"183
-[; ;main.c: 183:         MatrixLed[6] = 0b01100000;
+"230
+[; ;main.c: 230:         MatrixLed[6] = 0b01100000;
 [e = *U + &U _MatrixLed * -> -> -> 6 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 96 `i `uc ]
-"184
-[; ;main.c: 184:         MatrixLed[7] = 0b11000000;
+"231
+[; ;main.c: 231:         MatrixLed[7] = 0b11000000;
 [e = *U + &U _MatrixLed * -> -> -> 7 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> -> 192 `i `uc ]
-"185
-[; ;main.c: 185:         destinoDesc = destinoDesc & 0b11110111;
+"232
+[; ;main.c: 232:         destinoDesc = destinoDesc & 0b11110111;
 [e = _destinoDesc -> & -> _destinoDesc `i -> 247 `i `uc ]
-"186
-[; ;main.c: 186:     }
+"233
+[; ;main.c: 233:     }
 }
-[e :U 398 ]
-"187
-[; ;main.c: 187:     MatrixLed[7] = MatrixLed[7] | destinoSub;
+[e :U 402 ]
+"234
+[; ;main.c: 234:     MatrixLed[7] = MatrixLed[7] | destinoSub;
 [e = *U + &U _MatrixLed * -> -> -> 7 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> | -> *U + &U _MatrixLed * -> -> -> 7 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux `i -> _destinoSub `i `uc ]
-"188
-[; ;main.c: 188:     MatrixLed[6] = MatrixLed[6] | destinoDesc;
+"235
+[; ;main.c: 235:     MatrixLed[6] = MatrixLed[6] | destinoDesc;
 [e = *U + &U _MatrixLed * -> -> -> 6 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux -> | -> *U + &U _MatrixLed * -> -> -> 6 `i `ui `ux -> -> # *U &U _MatrixLed `ui `ux `i -> _destinoDesc `i `uc ]
-"189
-[; ;main.c: 189:     matrixUpdate();
+"236
+[; ;main.c: 236:     matrixUpdate();
 [e ( _matrixUpdate ..  ]
-"190
-[; ;main.c: 190: }
-[e :UE 396 ]
+"237
+[; ;main.c: 237: }
+[e :UE 400 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"192
-[; ;main.c: 192: void main(void)
+"239
+[; ;main.c: 239: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"193
-[; ;main.c: 193: {
+"240
+[; ;main.c: 240: {
 {
 [e :U _main ]
 [f ]
-"195
-[; ;main.c: 195:     SYSTEM_Initialize();
+"242
+[; ;main.c: 242:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"203
-[; ;main.c: 203:     IOCBF3_SetInterruptHandler(chegadaS1);
-[e ( _IOCBF3_SetInterruptHandler (1 -> &U _chegadaS1 `*F2993 ]
-"204
-[; ;main.c: 204:     IOCBF3_SetInterruptHandler(chegadaS2);
-[e ( _IOCBF3_SetInterruptHandler (1 -> &U _chegadaS2 `*F2995 ]
-"208
-[; ;main.c: 208:     do { LATBbits.LATB1 = 1; } while(0);
-[e :U 402 ]
+"251
+[; ;main.c: 251:     IOCBF3_SetInterruptHandler(chegadaS1);
+[e ( _IOCBF3_SetInterruptHandler (1 -> &U _chegadaS1 `*F3177 ]
+"252
+[; ;main.c: 252:     IOCBF3_SetInterruptHandler(chegadaS2);
+[e ( _IOCBF3_SetInterruptHandler (1 -> &U _chegadaS2 `*F3179 ]
+"253
+[; ;main.c: 253:     TMR0_SetInterruptHandler(sendInfo);
+[e ( _TMR0_SetInterruptHandler (1 &U _sendInfo ]
+"256
+[; ;main.c: 256:     do { LATBbits.LATB1 = 1; } while(0);
+[e :U 406 ]
 {
 [e = . . _LATBbits 0 1 -> -> 1 `i `uc ]
 }
-[e :U 401 ]
-"209
-[; ;main.c: 209:     SPI1_Open(SPI1_DEFAULT);
+[e :U 405 ]
+"257
+[; ;main.c: 257:     SPI1_Open(SPI1_DEFAULT);
 [e ( _SPI1_Open (1 . `E2819 0 ]
-"210
-[; ;main.c: 210:     initMatrix();
+"258
+[; ;main.c: 258:     initMatrix();
 [e ( _initMatrix ..  ]
-"213
-[; ;main.c: 213:     (INTCONbits.GIE = 1);
+"261
+[; ;main.c: 261:     (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"216
-[; ;main.c: 216:     (INTCONbits.PEIE = 1);
+"264
+[; ;main.c: 264:     (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"224
-[; ;main.c: 224:     while (1)
-[e :U 404 ]
-"225
-[; ;main.c: 225:     {
+"272
+[; ;main.c: 272:     while (1)
+[e :U 408 ]
+"273
+[; ;main.c: 273:     {
 {
-"227
-[; ;main.c: 227:         if(EUSART_is_rx_ready()){
-[e $ ! != -> ( _EUSART_is_rx_ready ..  `i -> 0 `i 406  ]
+"275
+[; ;main.c: 275:         if(EUSART_is_rx_ready()){
+[e $ ! != -> ( _EUSART_is_rx_ready ..  `i -> 0 `i 410  ]
 {
-"228
-[; ;main.c: 228:             rxValue = EUSART_Read();
+"276
+[; ;main.c: 276:             rxValue = EUSART_Read();
 [e = _rxValue -> ( _EUSART_Read ..  `uc ]
-"229
-[; ;main.c: 229:             switch(state){
-[e $U 408  ]
+"277
+[; ;main.c: 277:             switch(state){
+[e $U 412  ]
 {
-"230
-[; ;main.c: 230:                 case START:
-[e :U 409 ]
-"231
-[; ;main.c: 231:                     if(rxValue == '$'){
-[e $ ! == -> _rxValue `ui -> 36 `ui 410  ]
+"278
+[; ;main.c: 278:                 case START:
+[e :U 413 ]
+"279
+[; ;main.c: 279:                     if(rxValue == '$'){
+[e $ ! == -> _rxValue `ui -> 36 `ui 414  ]
 {
-"232
-[; ;main.c: 232:                         state = FIRST_NUM;
-[e = _state . `E2944 1 ]
-"233
-[; ;main.c: 233:                     }
+"280
+[; ;main.c: 280:                         state = FIRST_NUM;
+[e = _state . `E3122 1 ]
+"281
+[; ;main.c: 281:                     }
+}
+[e :U 414 ]
+"282
+[; ;main.c: 282:                     break;
+[e $U 411  ]
+"283
+[; ;main.c: 283:                 case FIRST_NUM:
+[e :U 415 ]
+"284
+[; ;main.c: 284:                     if(isValidFloor(rxValue)){
+[e $ ! != -> ( _isValidFloor (1 _rxValue `i -> 0 `i 416  ]
+{
+"285
+[; ;main.c: 285:                         origem = rxValue - 0x30;
+[e = _origem -> - -> _rxValue `i -> 48 `i `uc ]
+"286
+[; ;main.c: 286:                         state = SECOND_NUM;
+[e = _state . `E3122 2 ]
+"287
+[; ;main.c: 287:                     }else{
+}
+[e $U 417  ]
+[e :U 416 ]
+{
+"288
+[; ;main.c: 288:                         state = START;
+[e = _state . `E3122 0 ]
+"289
+[; ;main.c: 289:                     }
+}
+[e :U 417 ]
+"290
+[; ;main.c: 290:                     break;
+[e $U 411  ]
+"291
+[; ;main.c: 291:                 case SECOND_NUM:
+[e :U 418 ]
+"292
+[; ;main.c: 292:                     if(isValidFloor(rxValue)){
+[e $ ! != -> ( _isValidFloor (1 _rxValue `i -> 0 `i 419  ]
+{
+"293
+[; ;main.c: 293:                         destino = rxValue - 0x30;
+[e = _destino -> - -> _rxValue `i -> 48 `i `uc ]
+"294
+[; ;main.c: 294:                         state = CR;
+[e = _state . `E3122 3 ]
+"295
+[; ;main.c: 295:                     }else{
+}
+[e $U 420  ]
+[e :U 419 ]
+{
+"296
+[; ;main.c: 296:                         state = START;
+[e = _state . `E3122 0 ]
+"297
+[; ;main.c: 297:                     }
+}
+[e :U 420 ]
+"298
+[; ;main.c: 298:                     break;
+[e $U 411  ]
+"299
+[; ;main.c: 299:                 case CR:
+[e :U 421 ]
+"300
+[; ;main.c: 300:                     if(rxValue == 0x0D){
+[e $ ! == -> _rxValue `i -> 13 `i 422  ]
+{
+"302
+[; ;main.c: 302:                     }
+}
+[e :U 422 ]
+"303
+[; ;main.c: 303:                     state = START;
+[e = _state . `E3122 0 ]
+"304
+[; ;main.c: 304:                     break;
+[e $U 411  ]
+"305
+[; ;main.c: 305:                 default:
+[e :U 423 ]
+"306
+[; ;main.c: 306:                     state = START;
+[e = _state . `E3122 0 ]
+"307
+[; ;main.c: 307:             }
+}
+[e $U 411  ]
+[e :U 412 ]
+[e [\ -> _state `ui , $ -> . `E3122 0 `ui 413
+ , $ -> . `E3122 1 `ui 415
+ , $ -> . `E3122 2 `ui 418
+ , $ -> . `E3122 3 `ui 421
+ 423 ]
+[e :U 411 ]
+"308
+[; ;main.c: 308:         }
 }
 [e :U 410 ]
-"234
-[; ;main.c: 234:                     break;
-[e $U 407  ]
-"235
-[; ;main.c: 235:                 case FIRST_NUM:
-[e :U 411 ]
-"236
-[; ;main.c: 236:                     if(isValidFloor(rxValue)){
-[e $ ! != -> ( _isValidFloor (1 _rxValue `i -> 0 `i 412  ]
-{
-"237
-[; ;main.c: 237:                         origem = rxValue - 0x30;
-[e = _origem -> - -> _rxValue `i -> 48 `i `uc ]
-"238
-[; ;main.c: 238:                         state = SECOND_NUM;
-[e = _state . `E2944 2 ]
-"239
-[; ;main.c: 239:                     }else{
+"309
+[; ;main.c: 309:     }
 }
-[e $U 413  ]
-[e :U 412 ]
-{
-"240
-[; ;main.c: 240:                         state = START;
-[e = _state . `E2944 0 ]
-"241
-[; ;main.c: 241:                     }
-}
-[e :U 413 ]
-"242
-[; ;main.c: 242:                     break;
-[e $U 407  ]
-"243
-[; ;main.c: 243:                 case SECOND_NUM:
-[e :U 414 ]
-"244
-[; ;main.c: 244:                     if(isValidFloor(rxValue)){
-[e $ ! != -> ( _isValidFloor (1 _rxValue `i -> 0 `i 415  ]
-{
-"245
-[; ;main.c: 245:                         destino = rxValue - 0x30;
-[e = _destino -> - -> _rxValue `i -> 48 `i `uc ]
-"246
-[; ;main.c: 246:                         state = CR;
-[e = _state . `E2944 3 ]
-"247
-[; ;main.c: 247:                     }else{
-}
-[e $U 416  ]
-[e :U 415 ]
-{
-"248
-[; ;main.c: 248:                         state = START;
-[e = _state . `E2944 0 ]
-"249
-[; ;main.c: 249:                     }
-}
-[e :U 416 ]
-"250
-[; ;main.c: 250:                     break;
-[e $U 407  ]
-"251
-[; ;main.c: 251:                 case CR:
-[e :U 417 ]
-"252
-[; ;main.c: 252:                     if(rxValue == 0x0D){
-[e $ ! == -> _rxValue `i -> 13 `i 418  ]
-{
-"254
-[; ;main.c: 254:                     }
-}
-[e :U 418 ]
-"255
-[; ;main.c: 255:                     state = START;
-[e = _state . `E2944 0 ]
-"256
-[; ;main.c: 256:                     break;
-[e $U 407  ]
-"257
-[; ;main.c: 257:                 default:
-[e :U 419 ]
-"258
-[; ;main.c: 258:                     state = START;
-[e = _state . `E2944 0 ]
-"259
-[; ;main.c: 259:             }
-}
-[e $U 407  ]
-[e :U 408 ]
-[e [\ -> _state `ui , $ -> . `E2944 0 `ui 409
- , $ -> . `E2944 1 `ui 411
- , $ -> . `E2944 2 `ui 414
- , $ -> . `E2944 3 `ui 417
- 419 ]
 [e :U 407 ]
-"260
-[; ;main.c: 260:         }
-}
-[e :U 406 ]
-"261
-[; ;main.c: 261:     }
-}
-[e :U 403 ]
-[e $U 404  ]
-[e :U 405 ]
-"262
-[; ;main.c: 262: }
-[e :UE 399 ]
+[e $U 408  ]
+[e :U 409 ]
+"310
+[; ;main.c: 310: }
+[e :UE 403 ]
 }

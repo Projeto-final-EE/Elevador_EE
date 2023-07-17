@@ -4564,15 +4564,6 @@ extern void (*TMR1_InterruptHandler)(void);
 void TMR1_DefaultInterruptHandler(void);
 # 57 "./mcc_generated_files/mcc.h" 2
 
-# 1 "./mcc_generated_files/cmp2.h" 1
-# 92 "./mcc_generated_files/cmp2.h"
-void CMP2_Initialize(void);
-# 132 "./mcc_generated_files/cmp2.h"
-_Bool CMP2_GetOutputStatus(void);
-# 148 "./mcc_generated_files/cmp2.h"
-void CMP2_ISR(void);
-# 58 "./mcc_generated_files/mcc.h" 2
-
 # 1 "./mcc_generated_files/tmr2.h" 1
 # 103 "./mcc_generated_files/tmr2.h"
 void TMR2_Initialize(void);
@@ -4588,6 +4579,15 @@ void TMR2_WriteTimer(uint8_t timerVal);
 void TMR2_LoadPeriodRegister(uint8_t periodVal);
 # 325 "./mcc_generated_files/tmr2.h"
 _Bool TMR2_HasOverflowOccured(void);
+# 58 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/cmp2.h" 1
+# 92 "./mcc_generated_files/cmp2.h"
+void CMP2_Initialize(void);
+# 132 "./mcc_generated_files/cmp2.h"
+_Bool CMP2_GetOutputStatus(void);
+# 148 "./mcc_generated_files/cmp2.h"
+void CMP2_ISR(void);
 # 59 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/cmp1.h" 1
@@ -4711,7 +4711,97 @@ void WDT_Initialize(void);
 # 44 "main.c" 2
 
 # 1 "./main.h" 1
-# 19 "./main.h"
+# 16 "./main.h"
+# 1 "./bin2bcd.h" 1
+# 11 "./bin2bcd.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\string.h" 1 3
+# 25 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\string.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 411 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct __locale_struct * locale_t;
+# 26 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\string.h" 2 3
+
+void *memcpy (void *restrict, const void *restrict, size_t);
+void *memmove (void *, const void *, size_t);
+void *memset (void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void *memchr (const void *, int, size_t);
+
+char *strcpy (char *restrict, const char *restrict);
+char *strncpy (char *restrict, const char *restrict, size_t);
+
+char *strcat (char *restrict, const char *restrict);
+char *strncat (char *restrict, const char *restrict, size_t);
+
+int strcmp (const char *, const char *);
+int strncmp (const char *, const char *, size_t);
+
+int strcoll (const char *, const char *);
+size_t strxfrm (char *restrict, const char *restrict, size_t);
+
+char *strchr (const char *, int);
+char *strrchr (const char *, int);
+
+size_t strcspn (const char *, const char *);
+size_t strspn (const char *, const char *);
+char *strpbrk (const char *, const char *);
+char *strstr (const char *, const char *);
+char *strtok (char *restrict, const char *restrict);
+
+size_t strlen (const char *);
+
+char *strerror (int);
+
+
+
+
+char *strtok_r (char *restrict, const char *restrict, char **restrict);
+int strerror_r (int, char *, size_t);
+char *stpcpy(char *restrict, const char *restrict);
+char *stpncpy(char *restrict, const char *restrict, size_t);
+size_t strnlen (const char *, size_t);
+char *strdup (const char *);
+char *strndup (const char *, size_t);
+char *strsignal(int);
+char *strerror_l (int, locale_t);
+int strcoll_l (const char *, const char *, locale_t);
+size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
+
+
+
+
+void *memccpy (void *restrict, const void *restrict, int, size_t);
+# 11 "./bin2bcd.h" 2
+
+
+# 1 "./bin2bcd.h" 1
+# 13 "./bin2bcd.h" 2
+
+
+
+typedef union{
+    uint16_t v;
+    struct{
+        uint8_t num4 : 4;
+        uint8_t num3 : 4;
+        uint8_t num2 : 4;
+        uint8_t num1 : 4;
+    };
+}bcd16_t;
+
+
+
+
+
+
+uint16_t bin2bcd(uint16_t binVal);
+# 16 "./main.h" 2
+
+
+
+
+
+
 typedef enum{
     START,
     FIRST_NUM,
@@ -4739,13 +4829,18 @@ _Bool RXaccepted = 0;
 
 uint8_t origem;
 uint8_t destino;
+uint8_t andarAtual = 0;
+uint16_t altura;
+uint16_t velocidade;
 
 _Bool subindo = 1;
 uint8_t MatrixLed[8];
 uint8_t destinoSub= 0;
 uint8_t destinoDesc= 0;
-# 59 "./main.h"
+# 65 "./main.h"
 _Bool isValidFloor(char floor);
+# 83 "./main.h"
+void sendInfo(void);
 
 
 void txSpi( uint8_t *data, size_t dataSize);
@@ -4765,6 +4860,45 @@ void chegadaS4();
 
 _Bool isValidFloor(char floor){
     return floor >= '0' && floor <= '3';
+}
+
+void sendInfo(){
+
+    bcd16_t bcd;
+
+
+
+
+    EUSART_Write('$');
+    EUSART_Write(0x30 + origem);
+    EUSART_Write(0x2C);
+    EUSART_Write(0x30 + destino);
+    EUSART_Write(0x2C);
+    EUSART_Write(0x30 + andarAtual);
+    EUSART_Write(0x2C);
+    EUSART_Write(0);
+    EUSART_Write(0x2C);
+
+    bcd.v = bin2bcd(altura);
+    EUSART_Write(bcd.num2 + 0x30);
+    EUSART_Write(bcd.num3 + 0x30);
+    EUSART_Write(bcd.num4 + 0x30);
+    EUSART_Write(0x2C);
+
+    bcd.v = bin2bcd(velocidade);
+    EUSART_Write(bcd.num2 + 0x30);
+    EUSART_Write(bcd.num3 + 0x30);
+    EUSART_Write(0x2E);
+    EUSART_Write(bcd.num4 + 0x30);
+    EUSART_Write(0x2C);
+
+    bcd.v = bin2bcd(velocidade);
+    EUSART_Write(bcd.num1 + 0x30);
+    EUSART_Write(bcd.num2 + 0x30);
+    EUSART_Write(bcd.num3 + 0x30);
+    EUSART_Write(0x2E);
+    EUSART_Write(bcd.num4 + 0x30);
+    EUSART_Write(0x0D);
 }
 
 void txSpi( uint8_t *data, size_t dataSize){
@@ -4816,6 +4950,8 @@ void initMatrix(){
 
 void chegadaS1(){
 
+    andarAtual = 0;
+
     MatrixLed[0] = 0b01111110;
     MatrixLed[1] = 0b10000001;
     MatrixLed[2] = 0b10000001;
@@ -4835,6 +4971,8 @@ void chegadaS1(){
 }
 
 void chegadaS2(){
+
+    andarAtual = 1;
 
     MatrixLed[0] = 0b00000000;
     MatrixLed[1] = 0b01000001;
@@ -4859,6 +4997,8 @@ void chegadaS2(){
 
 void chegadaS3(){
 
+    andarAtual = 2;
+
     MatrixLed[0] = 0b01000011;
     MatrixLed[1] = 0b10000101;
     MatrixLed[2] = 0b10001001;
@@ -4881,6 +5021,8 @@ void chegadaS3(){
 }
 
 void chegadaS4(){
+
+    andarAtual = 3;
 
     MatrixLed[0] = 0b10000001;
     MatrixLed[1] = 0b10010001;
@@ -4907,16 +5049,10 @@ void main(void)
 {
 
     SYSTEM_Initialize();
-
-
-
-
-
-
-
+# 251 "main.c"
     IOCBF3_SetInterruptHandler(chegadaS1);
     IOCBF3_SetInterruptHandler(chegadaS2);
-
+    TMR0_SetInterruptHandler(sendInfo);
 
 
     do { LATBbits.LATB1 = 1; } while(0);

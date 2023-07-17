@@ -11,6 +11,7 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
+    
 //Defines
 #define flip_matrix  true
     
@@ -26,13 +27,38 @@ const uint8_t matrix_conf[] = {
 
 
 //Variaveis Globais
-bool subindo = true; //flag que indica se o elevador est· subindo ou descendo
-uint8_t MatrixLed[8]; //Matrix de Dados que armazena o valor a ser transmito por SPI para a matrix de LED
-uint8_t destinoSub= 0; // indice 1 para andar 1, 2 para andar 2 e 3 para andar 3
-uint8_t destinoDesc= 0;// indice 0 para andar 0, 1 para andar 1 e 2 para andar 2
+bool subindo = true;            // Flag que indica se o elevador est· subindo ou descendo
+bool mover = false;              // Flag para acionar o movimento do elevador
+uint8_t MatrixLed[8];           // Matrix de Dados que armazena o valor a ser transmito por SPI para a matrix de LED
+uint8_t destinoSub = 0;         // Indice 1 para andar 1, 2 para andar 2 e 3 para andar 3
+uint8_t destinoDesc = 0;        // Indice 0 para andar 0, 1 para andar 1 e 2 para andar 2
 
-//Maquinas de Estados
-enum estadoMov{ Repouso, IniciarTrajeto, EmTrajeto, RetornaS0}mov=Repouso;
+uint8_t pulsoEncoder = 0;       // Numero de pulsos do encoder
+uint16_t velocidadeMotor = 0;   // Velocidade do motor (transformar em 9 bits))
+uint8_t flag = 0x00;            // Flag auxiliar para CCP4
+uint16_t t1 = 0, t2 = 0;        // Tempo 1 e 2 para CCP4
+
+uint8_t pathup;//define os andares de subida 
+uint8_t pathdown;// define os andares de descida
+uint8_t andaratual;// andar atual
+uint8_t proxandar; // proximo andar 
+uint8_t rxdata;
+
+
+union andares{
+    struct origens{
+    int andares;
+    uint8_t bytes[5];
+};
+    struct destinos{
+        int andares;
+        uint8_t bytes[5];
+    };
+};
+
+
+
+
 
 //funcıes SPI
 void txSpi( uint8_t *data, size_t dataSize); //funcao que realiza a transmissao da matriz de Dados para a Matriz de LED
@@ -43,8 +69,7 @@ void chegadaS2(); //fun√ß√£o acionada ao sensor S2 ser acionado
 void chegadaS3(); //fun√ß√£o acionada ao sensor S3 ser acionado
 void chegadaS4(); //fun√ß√£o acionada ao sensor S4 ser acionado
 
-//FunÁıes Ponte-H
-void controleMovimento();
+
 #ifdef	__cplusplus
 }
 #endif

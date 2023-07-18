@@ -59,6 +59,7 @@ void sendInfo(){
     uint16_t velocidade;
     
     velocidade = (uint16_t)(velocidadeMotor * 10); // Ajustando o valor da velocidade para ser enviado
+    temperatura = (ADC_GetConversion(2) / 1024) * 999; // Calcula a temperatura
     
     EUSART_Write('$'); // Caracter inicial
     EUSART_Write(0x30 + origem); // Envia o andar de origem em ASCII
@@ -111,6 +112,7 @@ void interrupcaoCCP4(){
         flag = 0x02;
         
         velocidadeMotor = (altura) / ((t2 - t1) / 1000000); // (mm/pulsos) / (tempo(s))
+        
     }
 }
 

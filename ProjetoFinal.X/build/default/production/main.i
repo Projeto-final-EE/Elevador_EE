@@ -4912,6 +4912,7 @@ void sendInfo(){
     uint16_t velocidade;
 
     velocidade = (uint16_t)(velocidadeMotor * 10);
+    temperatura = (ADC_GetConversion(2) / 1024) * 999;
 
     EUSART_Write('$');
     EUSART_Write(0x30 + origem);
@@ -4964,6 +4965,7 @@ void interrupcaoCCP4(){
         flag = 0x02;
 
         velocidadeMotor = (altura) / ((t2 - t1) / 1000000);
+
     }
 }
 
@@ -5115,7 +5117,7 @@ void main(void)
 {
 
     SYSTEM_Initialize();
-# 273 "main.c"
+# 275 "main.c"
     IOCBF3_SetInterruptHandler(chegadaS1);
     IOCBF3_SetInterruptHandler(chegadaS2);
     TMR0_SetInterruptHandler(sendInfo);

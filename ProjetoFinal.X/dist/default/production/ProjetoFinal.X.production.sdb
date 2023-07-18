@@ -34,7 +34,14 @@ FIRST_NUM 1
 SECOND_NUM 2
 CR 3
 ]
-"279 C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
+"62 C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
+[e E2923 . `uc
+Temp 2
+channel_Temp 29
+channel_DAC 30
+channel_FVR 31
+]
+"281
 [e E2819 . `uc
 SPI1_DEFAULT 0
 ]
@@ -50,6 +57,8 @@ SPI1_DEFAULT 0
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\xxtofl.c
@@ -62,25 +71,27 @@ SPI1_DEFAULT 0
 [v _isValidFloor isValidFloor `(a  1 e 1 0 ]
 "56
 [v _sendInfo sendInfo `(v  1 e 1 0 ]
-"117
+"119
 [v _txSpi txSpi `(v  1 e 1 0 ]
 [v i1_txSpi txSpi `(v  1 e 1 0 ]
-"125
+"127
 [v _matrixUpdate matrixUpdate `(v  1 e 1 0 ]
-"145
+"147
 [v _initMatrix initMatrix `(v  1 e 1 0 ]
-"164
+"166
 [v _chegadaS1 chegadaS1 `(v  1 e 1 0 ]
-"186
+"188
 [v _chegadaS2 chegadaS2 `(v  1 e 1 0 ]
-"211
+"213
 [v _chegadaS3 chegadaS3 `(v  1 e 1 0 ]
-"236
+"238
 [v _chegadaS4 chegadaS4 `(v  1 e 1 0 ]
-"261
+"263
 [v _main main `(v  1 e 1 0 ]
 "67 C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
+"112
+[v _ADC_GetConversion ADC_GetConversion `(us  1 e 2 0 ]
 "60 C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\mcc_generated_files/ccp4.c
 [v _CCP4_DefaultCallBack CCP4_DefaultCallBack `(v  1 s 1 CCP4_DefaultCallBack ]
 "65
@@ -418,7 +429,7 @@ SPI1_DEFAULT 0
 [v _LATA LATA `VEuc  1 e 1 @268 ]
 "2097
 [v _LATB LATB `VEuc  1 e 1 @269 ]
-[s S1270 . 1 `uc 1 LATB0 1 0 :1:0 
+[s S1276 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -428,8 +439,8 @@ SPI1_DEFAULT 0
 `uc 1 LATB7 1 0 :1:7 
 ]
 "2114
-[u S1279 . 1 `S1270 1 . 1 0 ]
-[v _LATBbits LATBbits `VES1279  1 e 1 @269 ]
+[u S1285 . 1 `S1276 1 . 1 0 ]
+[v _LATBbits LATBbits `VES1285  1 e 1 @269 ]
 "2159
 [v _CM1CON0 CM1CON0 `VEuc  1 e 1 @273 ]
 "2216
@@ -614,7 +625,7 @@ SPI1_DEFAULT 0
 [v _PR4 PR4 `VEuc  1 e 1 @1046 ]
 "6353
 [v _T4CON T4CON `VEuc  1 e 1 @1047 ]
-[s S1537 . 1 `uc 1 T4CKPS0 1 0 :1:0 
+[s S1544 . 1 `uc 1 T4CKPS0 1 0 :1:0 
 `uc 1 T4CKPS1 1 0 :1:1 
 `uc 1 TMR4ON 1 0 :1:2 
 `uc 1 T4OUTPS0 1 0 :1:3 
@@ -623,12 +634,12 @@ SPI1_DEFAULT 0
 `uc 1 T4OUTPS3 1 0 :1:6 
 ]
 "6374
-[s S1545 . 1 `uc 1 T4CKPS 1 0 :2:0 
+[s S1552 . 1 `uc 1 T4CKPS 1 0 :2:0 
 `uc 1 . 1 0 :1:2 
 `uc 1 T4OUTPS 1 0 :4:3 
 ]
-[u S1549 . 1 `S1537 1 . 1 0 `S1545 1 . 1 0 ]
-[v _T4CONbits T4CONbits `VES1549  1 e 1 @1047 ]
+[u S1556 . 1 `S1544 1 . 1 0 `S1552 1 . 1 0 ]
+[v _T4CONbits T4CONbits `VES1556  1 e 1 @1047 ]
 "54 C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\mcc_generated_files/ccp4.c
 [v _CCP4_CallBack CCP4_CallBack `*.37(v  1 s 2 CCP4_CallBack ]
 [s S640 . 1 `uc 1 perr 1 0 :1:0 
@@ -660,10 +671,10 @@ SPI1_DEFAULT 0
 [v _timer1ReloadVal timer1ReloadVal `VEus  1 e 2 0 ]
 "58 C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\mcc_generated_files/tmr4.c
 [v _TMR4_InterruptHandler TMR4_InterruptHandler `*.37(v  1 e 2 0 ]
-"261 C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
+"263 C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"334
+"336
 } 0
 "52
 [v _isValidFloor isValidFloor `(a  1 e 1 0 ]
@@ -673,29 +684,29 @@ SPI1_DEFAULT 0
 [v isValidFloor@floor floor `uc  1 a 1 1 ]
 "54
 } 0
-"145
+"147
 [v _initMatrix initMatrix `(v  1 e 1 0 ]
 {
-"152
+"154
 [v initMatrix@j j `uc  1 a 1 16 ]
-"151
-[v initMatrix@i_1383 i `uc  1 a 1 15 ]
-"148
+"153
+[v initMatrix@i_1390 i `uc  1 a 1 15 ]
+"150
 [v initMatrix@i i `uc  1 a 1 14 ]
-"146
+"148
 [v initMatrix@data data `[4]uc  1 a 4 9 ]
-"147
+"149
 [v initMatrix@k k `uc  1 a 1 13 ]
-"162
+"164
 } 0
-"117
+"119
 [v _txSpi txSpi `(v  1 e 1 0 ]
 {
 [v txSpi@data data `*.4uc  1 a 1 wreg ]
 [v txSpi@data data `*.4uc  1 a 1 wreg ]
 [v txSpi@dataSize dataSize `ui  1 p 2 5 ]
 [v txSpi@data data `*.4uc  1 a 1 7 ]
-"123
+"125
 } 0
 "100 C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\mcc_generated_files/spi1.c
 [v _SPI1_ExchangeBlock SPI1_ExchangeBlock `(v  1 e 1 0 ]
@@ -909,14 +920,14 @@ SPI1_DEFAULT 0
 [v sendInfo@bcd bcd `S1259  1 a 2 35 ]
 "59
 [v sendInfo@velocidade velocidade `us  1 a 2 33 ]
-"93
+"94
 } 0
 "10 C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\bin2bcd.c
 [v _bin2bcd bin2bcd `(us  1 e 2 0 ]
 {
 "25
 [v bin2bcd@i i `uc  1 a 1 4 ]
-[s S1401 . 4 `uc 1 . 1 0 :8:0 
+[s S1408 . 4 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :4:0 
 `uc 1 d3 1 1 :4:4 
 `uc 1 d2 1 2 :4:0 
@@ -925,8 +936,8 @@ SPI1_DEFAULT 0
 `uc 1 . 1 3 :4:4 
 ]
 "22
-[u S1409 . 4 `ul 1 shift 4 0 `S1401 1 dat 4 0 ]
-[v bin2bcd@dataU dataU `S1409  1 a 4 5 ]
+[u S1416 . 4 `ul 1 shift 4 0 `S1408 1 dat 4 0 ]
+[v bin2bcd@dataU dataU `S1416  1 a 4 5 ]
 "10
 [v bin2bcd@binVal binVal `us  1 p 2 10 ]
 "41
@@ -947,6 +958,16 @@ SPI1_DEFAULT 0
 [v memset@dest dest `*.4v  1 a 1 8 ]
 "90
 } 0
+"15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 8 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 4 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 6 ]
+"53
+} 0
 "43 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\fltol.c
 [v ___fltol __fltol `(l  1 e 4 0 ]
 {
@@ -960,17 +981,17 @@ SPI1_DEFAULT 0
 "8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S1893 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S1900 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S1898 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S1901 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1893 1 fAsBytes 4 0 `S1898 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1901  1 a 4 15 ]
+[s S1905 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S1908 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1900 1 fAsBytes 4 0 `S1905 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1908  1 a 4 15 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 9 ]
-[s S1970 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S1977 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S1973 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S1970 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S1973  1 a 2 19 ]
+[u S1980 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S1977 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1980  1 a 2 19 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 14 ]
 "11
@@ -1004,6 +1025,15 @@ SPI1_DEFAULT 0
 [v EUSART_Write@txData txData `uc  1 a 1 0 ]
 "139
 } 0
+"112 C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\mcc_generated_files/adc.c
+[v _ADC_GetConversion ADC_GetConversion `(us  1 e 2 0 ]
+{
+[v ADC_GetConversion@channel channel `E2485  1 a 1 wreg ]
+[v ADC_GetConversion@channel channel `E2485  1 a 1 wreg ]
+"115
+[v ADC_GetConversion@channel channel `E2485  1 a 1 3 ]
+"133
+} 0
 "119 C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
 {
@@ -1014,20 +1044,20 @@ SPI1_DEFAULT 0
 {
 "176
 } 0
-"164 C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
+"166 C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
 [v _chegadaS1 chegadaS1 `(v  1 e 1 0 ]
 {
-"184
+"186
 } 0
 "188 C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\mcc_generated_files/pin_manager.c
 [v _IOCBF3_DefaultInterruptHandler IOCBF3_DefaultInterruptHandler `(v  1 e 1 0 ]
 {
 "191
 } 0
-"186 C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
+"188 C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
 [v _chegadaS2 chegadaS2 `(v  1 e 1 0 ]
 {
-"209
+"211
 } 0
 "136 C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\mcc_generated_files/pin_manager.c
 [v _IOCBF0_ISR IOCBF0_ISR `(v  1 e 1 0 ]
@@ -1044,38 +1074,38 @@ SPI1_DEFAULT 0
 {
 "91
 } 0
-"236 C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
+"238 C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
 [v _chegadaS4 chegadaS4 `(v  1 e 1 0 ]
 {
-"259
+"261
 } 0
 "86 C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\mcc_generated_files/cmp1.c
 [v _CMP1_ISR CMP1_ISR `(v  1 e 1 0 ]
 {
 "91
 } 0
-"211 C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
+"213 C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\main.c
 [v _chegadaS3 chegadaS3 `(v  1 e 1 0 ]
 {
-"234
+"236
 } 0
-"125
+"127
 [v _matrixUpdate matrixUpdate `(v  1 e 1 0 ]
 {
-"128
+"130
 [v matrixUpdate@i i `uc  1 a 1 10 ]
-"126
+"128
 [v matrixUpdate@data data `[2]uc  1 a 2 8 ]
-"143
+"145
 } 0
-"117
+"119
 [v i1_txSpi txSpi `(v  1 e 1 0 ]
 {
 [v i1txSpi@data data `*.4uc  1 a 1 wreg ]
 [v i1txSpi@data data `*.4uc  1 a 1 wreg ]
 [v i1txSpi@dataSize dataSize `ui  1 p 2 5 ]
 [v i1txSpi@data data `*.4uc  1 a 1 7 ]
-"123
+"125
 } 0
 "100 C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\mcc_generated_files/spi1.c
 [v i1_SPI1_ExchangeBlock SPI1_ExchangeBlock `(v  1 e 1 0 ]
@@ -1093,11 +1123,11 @@ SPI1_DEFAULT 0
 "89 C:\Users\Victor\Documents\UnB\Materias\5-semestre\Eletronica_Embarcada\Trabalho_Final\Elevador_EE\ProjetoFinal.X\mcc_generated_files/ccp4.c
 [v _CCP4_CaptureISR CCP4_CaptureISR `(v  1 e 1 0 ]
 {
-[s S1469 . 2 `uc 1 ccpr4l 1 0 `uc 1 ccpr4h 1 1 ]
+[s S1476 . 2 `uc 1 ccpr4l 1 0 `uc 1 ccpr4h 1 1 ]
 "91
-[s S1472 . 2 `us 1 ccpr4_16Bit 2 0 ]
-[u S1474 CCPR4Reg_tag 2 `S1469 1 . 2 0 `S1472 1 . 2 0 ]
-[v CCP4_CaptureISR@module module `S1474  1 a 2 2 ]
+[s S1479 . 2 `us 1 ccpr4_16Bit 2 0 ]
+[u S1481 CCPR4Reg_tag 2 `S1476 1 . 2 0 `S1479 1 . 2 0 ]
+[v CCP4_CaptureISR@module module `S1481  1 a 2 2 ]
 "102
 } 0
 "60

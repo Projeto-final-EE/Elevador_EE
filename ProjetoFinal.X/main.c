@@ -14,10 +14,11 @@
 
 void interrupcaoCCP4(){
     
-    if (pulsoEncoder <= 215){
-        pulsoEncoder++;
+    if (pulsoEncoder >= 0 && pulsoEncoder <= 215){
+        pulsoEncoder += inc;
     } else {
-        pulsoEncoder = 0;
+        inc = -1 * inc;
+        pulsoEncoder += inc;
     }
     
     if(!flag){
@@ -27,7 +28,8 @@ void interrupcaoCCP4(){
         t2 = (CCPR4H << 8) + CCPR4L;   // Tempo da segunda interrupcao
         flag = 0x02;
         
-        velocidadeMotor = (0.8372 * pulsoEncoder) / ((t2 - t1) / 1000000); // (mm/pulsos) / (tempo(s))
+        posicao = (0.8372 * pulsoEncoder);
+        velocidadeMotor = posicao / ((t2 - t1) / 1000000); // (mm/pulsos) / (tempo(s))
     }
 }
 

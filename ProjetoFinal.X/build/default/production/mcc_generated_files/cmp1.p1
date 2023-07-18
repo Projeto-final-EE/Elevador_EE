@@ -649,8 +649,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/cmp1.c: 69:     CM1CON0 = 0x84;
 [e = _CM1CON0 -> -> 132 `i `uc ]
 "72
-[; ;mcc_generated_files/cmp1.c: 72:     CM1CON1 = 0xA0;
-[e = _CM1CON1 -> -> 160 `i `uc ]
+[; ;mcc_generated_files/cmp1.c: 72:     CM1CON1 = 0x60;
+[e = _CM1CON1 -> -> 96 `i `uc ]
 "75
 [; ;mcc_generated_files/cmp1.c: 75:     PIR2bits.C1IF = 0;
 [e = . . _PIR2bits 0 4 -> -> 0 `i `uc ]

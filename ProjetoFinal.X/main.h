@@ -37,8 +37,6 @@ uint16_t velocidadeMotor = 0;   // Velocidade do motor (transformar em 9 bits))
 uint8_t flag = 0x00;            // Flag auxiliar para CCP4
 uint16_t t1 = 0, t2 = 0;        // Tempo 1 e 2 para CCP4
 uint8_t inc = 1;
-
-uint8_t temperatura = 0;        // Temperatura da ponte 
 uint8_t posicao = 0;            // Posicao elevador
 
 //funcões SPI

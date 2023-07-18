@@ -4374,10 +4374,10 @@ void TMR0_Initialize(void)
     OPTION_REG = (uint8_t)((OPTION_REG & 0xC0) | (0xD7 & 0x3F));
 
 
-    TMR0 = 0x00;
+    TMR0 = 0x16;
 
 
-    timer0ReloadVal= 0;
+    timer0ReloadVal= 22;
 
 
     INTCONbits.TMR0IF = 0;
@@ -4420,7 +4420,7 @@ void TMR0_ISR(void)
     TMR0 = timer0ReloadVal;
 
 
-    if (++CountCallBack >= 32)
+    if (++CountCallBack >= 5)
     {
 
         TMR0_CallBack();

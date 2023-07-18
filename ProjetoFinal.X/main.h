@@ -11,9 +11,21 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
+
+//Includes
+#include "bin2bcd.h"
+    
 //Defines
 #define flip_matrix  true
     
+// Enums
+typedef enum{
+    START,
+    FIRST_NUM,
+    SECOND_NUM,
+    CR    
+}State;
+
 //Constantes 
 const uint8_t matrix_conf[] = {
     0x09,0x00,  // Decode mode = 0
@@ -24,15 +36,58 @@ const uint8_t matrix_conf[] = {
     0x0F,0x00,  // Display-Test = 0
 };  ///< ConfiguraÃ§Ã£o da matriz de  LEDs
 
+/**
+ * Variaveis Globais 
+*/
+State state = START; // O estado que indica qual valor o EUSART esta aguardando
+char rxValue; // Variavel para receber as informacoes do USART
+bool waitRX = false; // Indica se o micro-controlador deve aguardar pelos valores de origem e destino do elevador
+bool RXaccepted = false; // Indica que o valor recebido pela comunicacao serial e valida
 
-//Variaveis Globais
-bool subindo = true; //flag que indica se o elevador está subindo ou descendo
+uint8_t pulsoEncoder = 0;       // Numero de pulsos do encoder
+float velocidadeMotor = 0;   // Velocidade do motor (transformar em 9 bits))
+uint8_t flag = 0x00;            // Flag auxiliar para CCP4
+uint16_t t1 = 0, t2 = 0;        // Tempo 1 e 2 para CCP4
+
+uint8_t origem = 0, oTemp; // Indica origem da chamada do elevador
+uint8_t destino = 0, dTemp; // Indica o destino do elevador
+uint8_t andarAtual = 0; // Indica o andar atual
+uint8_t altura; // Valor da altura atual
+uint16_t temperatura; // Valor da temperatura do motor
+
+bool subindo = true; //flag que indica se o elevador estï¿½ subindo ou descendo
 uint8_t MatrixLed[8]; //Matrix de Dados que armazena o valor a ser transmito por SPI para a matrix de LED
 uint8_t destinoSub= 0; // indice 1 para andar 1, 2 para andar 2 e 3 para andar 3
 uint8_t destinoDesc= 0;// indice 0 para andar 0, 1 para andar 1 e 2 para andar 2
 
+//Funcoes
 
-//funcões SPI
+/**
+ * Funcao para checar se o char ï¿½ um nï¿½mero entre '0' e '3', que sao os andares de operacao do elevador
+ * @param floor
+ * @return true se o char ï¿½ um nï¿½mero entre '0' e '3' e false se nao ï¿½
+ */
+bool isValidFloor(char floor);
+
+/**
+  @Summary
+    Timer1 Interrupt Handler function
+
+  @Description
+ Essa funcao envia as informacoes atuais sobre o elevador por meio da comunicacao serial
+
+  @Preconditions
+    Initialize  the TMR1 module with interrupt before calling this isr.
+
+  @Param
+    None
+
+  @Returns
+    None
+*/
+void sendInfo(void);
+
+//funcï¿½es SPI
 void txSpi( uint8_t *data, size_t dataSize); //funcao que realiza a transmissao da matriz de Dados para a Matriz de LED
 void matrixUpdate(); //Funcao que converte os valores da Matriz de Dados para a forma recebida pela Matriz de LED
 void initMatrix(); //Inicializacao da matriz de LED

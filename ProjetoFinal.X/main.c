@@ -48,8 +48,73 @@
                          Main application
  */
 
+// Functions
+bool isValidFloor(char floor){
+    return floor >= '0' && floor <= '3';
+}
 
+void sendInfo(){
+    
+    bcd16_t bcd;
+    uint16_t velocidade;
+    
+    velocidade = (uint16_t)(velocidadeMotor * 10); // Ajustando o valor da velocidade para ser enviado
+    temperatura = (ADC_GetConversion(2) / 1024) * 999; // Calcula a temperatura
+    
+    EUSART_Write('$'); // Caracter inicial
+    EUSART_Write(0x30 + origem); // Envia o andar de origem em ASCII
+    EUSART_Write(0x2C); // Envia a virgula
+    EUSART_Write(0x30 + destino); // Envia o andar destino em ASCII
+    EUSART_Write(0x2C); // Envia a virgula
+    EUSART_Write(0x30 + andarAtual); // Envia o andar atual em ASCII
+    EUSART_Write(0x2C); // Envia a virgula
+    EUSART_Write(0); // Envia o estado atual do motor
+    EUSART_Write(0x2C); // Envia a virgula
+    // Enviando a altura em mm
+    bcd.v = bin2bcd(altura);
+    EUSART_Write(bcd.num2 + 0x30); // Envia o primeiro digito
+    EUSART_Write(bcd.num3 + 0x30); // Envia o segundo digito
+    EUSART_Write(bcd.num4 + 0x30); // Envia o terceiro digito
+    EUSART_Write(0x2C); // Envia a virgula
+    // Enviando a velocidade em mm/s
+    bcd.v = bin2bcd(velocidade);
+    EUSART_Write(bcd.num2 + 0x30); // Envia o primeiro digito
+    EUSART_Write(bcd.num3 + 0x30); // Envia o segundo digito
+    EUSART_Write(0x2E); // Envia o ponto
+    EUSART_Write(bcd.num4 + 0x30); // Envia o digito decimal
+    EUSART_Write(0x2C); // Envia a virgula
+    // Enviando a temperatura em C
+    bcd.v = bin2bcd(temperatura);
+    EUSART_Write(bcd.num1 + 0x30); // Envia o primeiro digito
+    EUSART_Write(bcd.num2 + 0x30); // Envia o segundo digito
+    EUSART_Write(bcd.num3 + 0x30); // Envia o terceiro digito
+    EUSART_Write(0x2E); // Envia o ponto
+    EUSART_Write(bcd.num4 + 0x30); // Envia o digito decimal
+    EUSART_Write(0x0D); // Envia o carriage return
+}
 
+void interrupcaoCCP4(){
+    
+    if (pulsoEncoder <= 215){
+        pulsoEncoder++;
+    } else {
+        pulsoEncoder = 0;
+    }
+    
+    altura = (uint8_t)(pulsoEncoder * 0.83720930);
+    if(pulsoEncoder == 215) altura = 180;
+    
+    if(!flag){
+        t1 = (CCPR4H << 8) + CCPR4L;   // Tempo da primeira interrupcao
+        flag = 0x01;
+    } else {
+        t2 = (CCPR4H << 8) + CCPR4L;   // Tempo da segunda interrupcao
+        flag = 0x02;
+        
+        velocidadeMotor = (altura) / ((t2 - t1) / 1000000); // (mm/pulsos) / (tempo(s))
+        
+    }
+}
 
 void txSpi( uint8_t *data, size_t dataSize){
     CS_SetLow();            // Ativa CS
@@ -100,6 +165,8 @@ void initMatrix(){
 
 void chegadaS1(){ //função acionada ao sensor S1 ser acionado
     //Atualização da variavel da matrix de de Dados com o numero 0 mais a direcao de movimento do elevador
+    andarAtual = 0;
+    
     MatrixLed[0] = 0b01111110;
     MatrixLed[1] = 0b10000001;
     MatrixLed[2] = 0b10000001;
@@ -120,6 +187,8 @@ void chegadaS1(){ //função acionada ao sensor S1 ser acionado
 
 void chegadaS2(){ //função acionada ao sensor S2 ser acionado
     //Atualização da variavel da matrix de de Dados com o numero 1 mais a direcao de movimento do elevador
+    andarAtual = 1;
+    
     MatrixLed[0] = 0b00000000;
     MatrixLed[1] = 0b01000001;
     MatrixLed[2] = 0b11111111;
@@ -143,6 +212,8 @@ void chegadaS2(){ //função acionada ao sensor S2 ser acionado
 
 void chegadaS3(){ //função acionada ao sensor S3 ser acionado
     //Atualização da variavel da matrix de de Dados com o numero 2 mais a direcao de movimento do elevador
+    andarAtual = 2;
+    
     MatrixLed[0] = 0b01000011;
     MatrixLed[1] = 0b10000101; 
     MatrixLed[2] = 0b10001001; 
@@ -166,6 +237,8 @@ void chegadaS3(){ //função acionada ao sensor S3 ser acionado
 
 void chegadaS4(){ //função acionada ao sensor S4 ser acionado
     //Atualização da variavel da matrix de de Dados com o numero 3 mais a direcao de movimento do elevador
+    andarAtual = 3;
+    
     MatrixLed[0] = 0b10000001;
     MatrixLed[1] = 0b10010001;
     MatrixLed[2] = 0b10010001;
@@ -196,11 +269,12 @@ void main(void)
     // Use the following macros to:
     
     //Handlers das Interrupçoes
-        /*Caso a Interrupcao nao tenha handler,
-            a funcao esta sendo chamada dentro da funcao de interrupcao do periferico*/
+    /* Caso a Interrupcao nao tenha handler,
+     * a funcao esta sendo chamada dentro da funcao de interrupcao do periferico
+     */
     IOCBF3_SetInterruptHandler(chegadaS1);
     IOCBF3_SetInterruptHandler(chegadaS2);
-    
+    TMR0_SetInterruptHandler(sendInfo);
     
     //Incializacao do SPI
     CS_SetHigh(); //Mantem Desativado o CS
@@ -222,13 +296,42 @@ void main(void)
     while (1)
     {
         // Add your application code
-        chegadaS1();
-        __delay_ms(1000);
-        chegadaS2();
-        __delay_ms(1000);
-        chegadaS3();
-        __delay_ms(1000);
-        chegadaS4();
+        if(EUSART_is_rx_ready()){
+            rxValue = EUSART_Read();
+            switch(state){
+                case START:
+                    if(rxValue == '$'){
+                        state = FIRST_NUM;
+                    }
+                    break;
+                case FIRST_NUM:
+                    if(isValidFloor(rxValue)){
+                        oTemp = rxValue - 0x30;
+                        state = SECOND_NUM;
+                    }else{
+                        state = START;
+                    }
+                    break;
+                case SECOND_NUM:
+                    if(isValidFloor(rxValue)){
+                        dTemp = rxValue - 0x30;
+                        state = CR;
+                    }else{
+                        state = START;
+                    }
+                    break;
+                case CR:
+                    if(rxValue == 0x0D){
+                        origem = oTemp;
+                        destino = dTemp;
+                        // Chamar alguma funcao
+                    }
+                    state = START;
+                    break;
+                default:
+                    state = START;
+            }
+        }
     }
 }
 /**

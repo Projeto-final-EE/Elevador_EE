@@ -52,27 +52,31 @@
 void __interrupt() INTERRUPT_InterruptManager (void)
 {
     // interrupt handler
-    if(INTCONbits.TMR0IE == 1 && INTCONbits.TMR0IF == 1)
-    {
-        TMR0_ISR();
-    }
     if(INTCONbits.IOCIE == 1 && INTCONbits.IOCIF == 1)
     {
         PIN_MANAGER_IOC();
     }
+    if(INTCONbits.TMR0IE == 1 && INTCONbits.TMR0IF == 1)
+    {
+        TMR0_ISR();
+    }
     if(INTCONbits.PEIE == 1)
     {
-        if(PIE2bits.C1IE == 1 && PIR2bits.C1IF == 1)
-        {
-            CMP1_ISR();
-        } 
         if(PIE2bits.C2IE == 1 && PIR2bits.C2IF == 1)
         {
             CMP2_ISR();
         } 
-        if(PIE1bits.TMR1IE == 1 && PIR1bits.TMR1IF == 1)
+        if(PIE2bits.C1IE == 1 && PIR2bits.C1IF == 1)
         {
-            TMR1_ISR();
+            CMP1_ISR();
+        } 
+        if(PIE3bits.CCP4IE == 1 && PIR3bits.CCP4IF == 1)
+        {
+            CCP4_CaptureISR();
+        } 
+        if(PIE3bits.TMR4IE == 1 && PIR3bits.TMR4IF == 1)
+        {
+            TMR4_ISR();
         } 
     }      
 }

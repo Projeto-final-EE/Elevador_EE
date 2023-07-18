@@ -588,17 +588,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `us
 ]
 "52
-[; ;mcc_generated_files/../main.h: 52: uint8_t origem = 0;
+[; ;mcc_generated_files/../main.h: 52: uint8_t origem = 0, oTemp;
 [v _origem `uc ~T0 @X0 1 e ]
 [i _origem
 -> -> 0 `i `uc
 ]
+[v _oTemp `uc ~T0 @X0 1 e ]
 "53
-[; ;mcc_generated_files/../main.h: 53: uint8_t destino = 0;
+[; ;mcc_generated_files/../main.h: 53: uint8_t destino = 0, dTemp;
 [v _destino `uc ~T0 @X0 1 e ]
 [i _destino
 -> -> 0 `i `uc
 ]
+[v _dTemp `uc ~T0 @X0 1 e ]
 "54
 [; ;mcc_generated_files/../main.h: 54: uint8_t andarAtual = 0;
 [v _andarAtual `uc ~T0 @X0 1 e ]

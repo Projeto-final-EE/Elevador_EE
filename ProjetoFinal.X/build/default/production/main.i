@@ -4871,8 +4871,8 @@ float velocidadeMotor = 0;
 uint8_t flag = 0x00;
 uint16_t t1 = 0, t2 = 0;
 
-uint8_t origem = 0;
-uint8_t destino = 0;
+uint8_t origem = 0, oTemp;
+uint8_t destino = 0, dTemp;
 uint8_t andarAtual = 0;
 uint8_t altura;
 uint16_t temperatura;
@@ -5150,7 +5150,7 @@ void main(void)
                     break;
                 case FIRST_NUM:
                     if(isValidFloor(rxValue)){
-                        origem = rxValue - 0x30;
+                        oTemp = rxValue - 0x30;
                         state = SECOND_NUM;
                     }else{
                         state = START;
@@ -5158,7 +5158,7 @@ void main(void)
                     break;
                 case SECOND_NUM:
                     if(isValidFloor(rxValue)){
-                        destino = rxValue - 0x30;
+                        dTemp = rxValue - 0x30;
                         state = CR;
                     }else{
                         state = START;
@@ -5166,6 +5166,8 @@ void main(void)
                     break;
                 case CR:
                     if(rxValue == 0x0D){
+                        origem = oTemp;
+                        destino = dTemp;
 
                     }
                     state = START;

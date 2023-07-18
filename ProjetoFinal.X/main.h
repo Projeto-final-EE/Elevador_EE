@@ -49,8 +49,8 @@ float velocidadeMotor = 0;   // Velocidade do motor (transformar em 9 bits))
 uint8_t flag = 0x00;            // Flag auxiliar para CCP4
 uint16_t t1 = 0, t2 = 0;        // Tempo 1 e 2 para CCP4
 
-uint8_t origem = 0; // Indica origem da chamada do elevador
-uint8_t destino = 0; // Indica o destino do elevador
+uint8_t origem = 0, oTemp; // Indica origem da chamada do elevador
+uint8_t destino = 0, dTemp; // Indica o destino do elevador
 uint8_t andarAtual = 0; // Indica o andar atual
 uint8_t altura; // Valor da altura atual
 uint16_t temperatura; // Valor da temperatura do motor

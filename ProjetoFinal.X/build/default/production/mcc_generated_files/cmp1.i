@@ -4461,8 +4461,8 @@ float velocidadeMotor = 0;
 uint8_t flag = 0x00;
 uint16_t t1 = 0, t2 = 0;
 
-uint8_t origem = 0;
-uint8_t destino = 0;
+uint8_t origem = 0, oTemp;
+uint8_t destino = 0, dTemp;
 uint8_t andarAtual = 0;
 uint8_t altura;
 uint16_t temperatura;

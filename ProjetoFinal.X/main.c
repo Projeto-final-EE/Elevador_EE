@@ -304,7 +304,7 @@ void main(void)
                     break;
                 case FIRST_NUM:
                     if(isValidFloor(rxValue)){
-                        origem = rxValue - 0x30;
+                        oTemp = rxValue - 0x30;
                         state = SECOND_NUM;
                     }else{
                         state = START;
@@ -312,7 +312,7 @@ void main(void)
                     break;
                 case SECOND_NUM:
                     if(isValidFloor(rxValue)){
-                        destino = rxValue - 0x30;
+                        dTemp = rxValue - 0x30;
                         state = CR;
                     }else{
                         state = START;
@@ -320,6 +320,8 @@ void main(void)
                     break;
                 case CR:
                     if(rxValue == 0x0D){
+                        origem = oTemp;
+                        destino = dTemp;
                         // Chamar alguma funcao
                     }
                     state = START;

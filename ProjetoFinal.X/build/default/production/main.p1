@@ -45,8 +45,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "375 ./mcc_generated_files/pin_manager.h
 [; ;./mcc_generated_files/pin_manager.h: 375: void IOCBF3_SetInterruptHandler(void (* InterruptHandler)(void));
 [v _IOCBF3_SetInterruptHandler `(v ~T0 @X0 0 ef1`*F2492 ]
-[v F3210 `(v ~T0 @X0 0 tf ]
 [v F3212 `(v ~T0 @X0 0 tf ]
+[v F3214 `(v ~T0 @X0 0 tf ]
 [v F2890 `(v ~T0 @X0 0 tf ]
 "261 ./mcc_generated_files/tmr0.h
 [; ;./mcc_generated_files/tmr0.h: 261:  void TMR0_SetInterruptHandler(void (* InterruptHandler)(void));
@@ -622,17 +622,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `us
 ]
 "52
-[; ;./main.h: 52: uint8_t origem = 0;
+[; ;./main.h: 52: uint8_t origem = 0, oTemp;
 [v _origem `uc ~T0 @X0 1 e ]
 [i _origem
 -> -> 0 `i `uc
 ]
+[v _oTemp `uc ~T0 @X0 1 e ]
 "53
-[; ;./main.h: 53: uint8_t destino = 0;
+[; ;./main.h: 53: uint8_t destino = 0, dTemp;
 [v _destino `uc ~T0 @X0 1 e ]
 [i _destino
 -> -> 0 `i `uc
 ]
+[v _dTemp `uc ~T0 @X0 1 e ]
 "54
 [; ;./main.h: 54: uint8_t andarAtual = 0;
 [v _andarAtual `uc ~T0 @X0 1 e ]
@@ -1354,10 +1356,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e ( _SYSTEM_Initialize ..  ]
 "273
 [; ;main.c: 273:     IOCBF3_SetInterruptHandler(chegadaS1);
-[e ( _IOCBF3_SetInterruptHandler (1 -> &U _chegadaS1 `*F3210 ]
+[e ( _IOCBF3_SetInterruptHandler (1 -> &U _chegadaS1 `*F3212 ]
 "274
 [; ;main.c: 274:     IOCBF3_SetInterruptHandler(chegadaS2);
-[e ( _IOCBF3_SetInterruptHandler (1 -> &U _chegadaS2 `*F3212 ]
+[e ( _IOCBF3_SetInterruptHandler (1 -> &U _chegadaS2 `*F3214 ]
 "275
 [; ;main.c: 275:     TMR0_SetInterruptHandler(sendInfo);
 [e ( _TMR0_SetInterruptHandler (1 &U _sendInfo ]
@@ -1422,8 +1424,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! != -> ( _isValidFloor (1 _rxValue `i -> 0 `i 425  ]
 {
 "307
-[; ;main.c: 307:                         origem = rxValue - 0x30;
-[e = _origem -> - -> _rxValue `i -> 48 `i `uc ]
+[; ;main.c: 307:                         oTemp = rxValue - 0x30;
+[e = _oTemp -> - -> _rxValue `i -> 48 `i `uc ]
 "308
 [; ;main.c: 308:                         state = SECOND_NUM;
 [e = _state . `E3148 2 ]
@@ -1451,8 +1453,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! != -> ( _isValidFloor (1 _rxValue `i -> 0 `i 428  ]
 {
 "315
-[; ;main.c: 315:                         destino = rxValue - 0x30;
-[e = _destino -> - -> _rxValue `i -> 48 `i `uc ]
+[; ;main.c: 315:                         dTemp = rxValue - 0x30;
+[e = _dTemp -> - -> _rxValue `i -> 48 `i `uc ]
 "316
 [; ;main.c: 316:                         state = CR;
 [e = _state . `E3148 3 ]
@@ -1479,24 +1481,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 322:                     if(rxValue == 0x0D){
 [e $ ! == -> _rxValue `i -> 13 `i 431  ]
 {
+"323
+[; ;main.c: 323:                         origem = oTemp;
+[e = _origem _oTemp ]
 "324
-[; ;main.c: 324:                     }
+[; ;main.c: 324:                         destino = dTemp;
+[e = _destino _dTemp ]
+"326
+[; ;main.c: 326:                     }
 }
 [e :U 431 ]
-"325
-[; ;main.c: 325:                     state = START;
-[e = _state . `E3148 0 ]
-"326
-[; ;main.c: 326:                     break;
-[e $U 420  ]
 "327
-[; ;main.c: 327:                 default:
-[e :U 432 ]
-"328
-[; ;main.c: 328:                     state = START;
+[; ;main.c: 327:                     state = START;
 [e = _state . `E3148 0 ]
+"328
+[; ;main.c: 328:                     break;
+[e $U 420  ]
 "329
-[; ;main.c: 329:             }
+[; ;main.c: 329:                 default:
+[e :U 432 ]
+"330
+[; ;main.c: 330:                     state = START;
+[e = _state . `E3148 0 ]
+"331
+[; ;main.c: 331:             }
 }
 [e $U 420  ]
 [e :U 421 ]
@@ -1506,17 +1514,17 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E3148 3 `ui 430
  432 ]
 [e :U 420 ]
-"330
-[; ;main.c: 330:         }
+"332
+[; ;main.c: 332:         }
 }
 [e :U 419 ]
-"331
-[; ;main.c: 331:     }
+"333
+[; ;main.c: 333:     }
 }
 [e :U 416 ]
 [e $U 417  ]
 [e :U 418 ]
-"332
-[; ;main.c: 332: }
+"334
+[; ;main.c: 334: }
 [e :UE 412 ]
 }

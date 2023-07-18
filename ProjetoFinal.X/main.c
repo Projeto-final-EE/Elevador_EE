@@ -54,6 +54,8 @@ bool isValidFloor(char floor){
 }
 
 void sendInfo(){
+
+    temp();                 // calcula a temperatura
     
     bcd16_t bcd;
     uint16_t velocidade;
@@ -112,6 +114,10 @@ void interrupcaoCCP4(){
         
         velocidadeMotor = (altura) / ((t2 - t1) / 1000000); // (mm/pulsos) / (tempo(s))
     }
+}
+
+void temp() {
+    temperatura = (ADC_GetConversion(2) / 1024) * 999;
 }
 
 void txSpi( uint8_t *data, size_t dataSize){

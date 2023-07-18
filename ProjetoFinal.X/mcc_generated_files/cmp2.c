@@ -68,8 +68,8 @@ void CMP2_Initialize(void)
 	// C2HYS disabled; C2SP hi_speed; C2ON enabled; C2POL not inverted; C2OE COUT_internal; C2SYNC asynchronous;                          
     CM2CON0 = 0x84;
 	
-	// C2INTN no_intFlag; C2INTP intFlag_pos; C2PCH FVR; C2NCH CIN1-;                          
-    CM2CON1 = 0xA1;
+	// C2INTN intFlag_neg; C2INTP no_intFlag; C2PCH FVR; C2NCH CIN1-;                          
+    CM2CON1 = 0x61;
 	
     // Clearing IF flag before enabling the interrupt.
     PIR2bits.C2IF = 0;

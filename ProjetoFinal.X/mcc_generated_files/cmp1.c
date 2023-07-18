@@ -68,8 +68,8 @@ void CMP1_Initialize(void)
 	// C1HYS disabled; C1SP hi_speed; C1ON enabled; C1POL not inverted; C1OE COUT_internal; C1SYNC asynchronous;                          
     CM1CON0 = 0x84;
 	
-	// C1INTN no_intFlag; C1INTP intFlag_pos; C1PCH FVR; C1NCH CIN0-;                          
-    CM1CON1 = 0xA0;
+	// C1INTN intFlag_neg; C1INTP no_intFlag; C1PCH FVR; C1NCH CIN0-;                          
+    CM1CON1 = 0x60;
 	
     // Clearing IF flag before enabling the interrupt.
     PIR2bits.C1IF = 0;

@@ -14,7 +14,7 @@ void txSpi( uint8_t *data, size_t dataSize){
     SPI1_ExchangeBlock(data,dataSize);// Tx
     CS_SetHigh();          // Desativa CS
     
-    //__delay_us(1);
+    __delay_us(1);
 }
 
 void matrixUpdate(){
@@ -50,9 +50,7 @@ void initMatrix(){
         }
         k=k+2;                  // Inc ponteiro da configuração     
         txSpi( data, 4); // Tx configuração para a  matriz de LED
-        if(i==4){               // Display-Test
-            //__delay_ms(800);
-        }
+        
     }
 }
 
@@ -62,17 +60,21 @@ void controleMovimento(){
     switch(mov){
         case Repouso:
             PWM3_LoadDutyValue(0);
+            TMR4_StopTimer();
             break;
         case IniciarTrajeto:
-            PWM3_LoadDutyValue(511);
+            PWM3_LoadDutyValue(300);
+            TMR4_StopTimer();
             break;
         case EmTrajeto:
-            PWM3_LoadDutyValue(511);
+            PWM3_LoadDutyValue(300);
+            TMR4_StopTimer();
             break;
         case RetornaS0:
             if (cont >=4){
-                PWM3_LoadDutyValue(511);
+                PWM3_LoadDutyValue(300);
                 cont = 0;
+                TMR4_StopTimer();
             }else{
                 cont++;
             }
@@ -88,14 +90,13 @@ void controleMovimento(){
         subindo = false;
         Dir_SetLow();
     }
+    
 }
 
 
 void chegadaS1(){ //função acionada ao sensor S1 ser acionado
-    PWM3_LoadDutyValue(0); //Desligando o Movimento do Motor 
     
     //Ao chegar no primeiro andar o elevador j� finalizou todo seu trajeto
-    mov = Repouso;
     //Atualização da variavel da matrix de de Dados com o numero 0 mais a direcao de movimento do elevador
     MatrixLed[0] = 0b01111110;
     MatrixLed[1] = 0b10000001;
@@ -106,6 +107,7 @@ void chegadaS1(){ //função acionada ao sensor S1 ser acionado
         MatrixLed[5] =  0b01100000;
         MatrixLed[6] =  0b11000000;
         MatrixLed[7] =  0b01100000;
+        destinoSub = destinoSub & 0b11111110; //limpa a flag que mantem o andar 3 como destino do elevador
     }else{ //seta apontando pra baixo
         MatrixLed[5] =  0b11000000;
         MatrixLed[6] =  0b01100000;
@@ -114,6 +116,8 @@ void chegadaS1(){ //função acionada ao sensor S1 ser acionado
     }
     matrixUpdate();
     
+    MatrixLed[7] = MatrixLed[7] | destinoSub;
+    MatrixLed[6] = MatrixLed[6] | destinoDesc;
      //Retorno do movimento do Motor
     /*__delay_ms(500); //Espera 500ms para retornar o movimento
     controleMovimento(); //Retorna o movimento */ //Retorno de movimento n�o necess�rio
@@ -122,9 +126,9 @@ void chegadaS1(){ //função acionada ao sensor S1 ser acionado
 void chegadaS2(){ //função acionada ao sensor S2 ser acionado
     
     //Caso o Andar 3 seja um ponto de Parada reinicia o TRM1 que controla o tempo de espera do elevador
-    if(((destinoSub & 0b00000010) == 2 )||((destinoDesc & 0b00000010) == 2 ) ){ 
+    if((((destinoSub & 0b00000010) == 2 )&& subindo)||(!subindo &&((destinoDesc & 0b00000010) == 2) ) ){ 
         PWM3_LoadDutyValue(0);//Desligando o Movimento do Motor
-        TMR4_ReadTimer(); 
+        TMR4_WriteTimer(0); 
         TMR4_StartTimer();
     }
     
@@ -163,9 +167,9 @@ void chegadaS2(){ //função acionada ao sensor S2 ser acionado
 void chegadaS3(){ //função acionada ao sensor S3 ser acionado
     
     //Caso o Andar 3 seja um ponto de Parada reinicia o TRM1 que controla o tempo de espera do elevador
-    if(((destinoSub & 0b00000100) == 4 )||((destinoDesc & 0b00000100) == 4 ) ){ 
+    if((((destinoSub & 0b00000100) == 4 )&& subindo)||(!subindo &&((destinoDesc & 0b00000100) == 4 )) ){ 
         PWM3_LoadDutyValue(0);//Desligando o Movimento do Motor
-        TMR4_ReadTimer();
+        TMR4_WriteTimer(0);
         TMR4_StartTimer();
     }
     
@@ -201,9 +205,9 @@ void chegadaS3(){ //função acionada ao sensor S3 ser acionado
 void chegadaS4(){ //função acionada ao sensor S4 ser acionado
     
     //Caso o Andar 3 seja um ponto de Parada reinicia o TRM1 que controla o tempo de espera do elevador
-    if(((destinoSub & 0b00001000) == 8 )||((destinoDesc & 0b00001000) == 8 ) ){ 
+    if((((destinoSub & 0b00001000) == 8 )&& subindo)||(!subindo &&((destinoDesc & 0b00001000) == 8 )) ){ 
         PWM3_LoadDutyValue(0);//Desligando o Movimento do Motor
-        TMR4_ReadTimer();
+        TMR4_WriteTimer(0);
         TMR4_StartTimer();
     }
     
@@ -229,10 +233,7 @@ void chegadaS4(){ //função acionada ao sensor S4 ser acionado
     matrixUpdate();
     
     //Controle dos estados
-    if(destinoDesc ==0 && destinoSub == 0){ // Caso n�o tenha mais nenhum destino no trajeto
-        mov = RetornaS0;
-    }
-    
+    mov = RetornaS0;
     
 }
 
@@ -249,11 +250,11 @@ void main(void)
     //Handlers das Interrupçoes
         /*Caso a Interrupcao nao tenha handler,
             a funcao esta sendo chamada dentro da funcao de interrupcao do periferico*/
-    IOCBF3_SetInterruptHandler(chegadaS1);
+    IOCBF0_SetInterruptHandler(chegadaS1);
     IOCBF3_SetInterruptHandler(chegadaS2);
     TMR4_SetInterruptHandler(controleMovimento);
     
-    TMR1_StopTimer();//Mantendo o Timer 0 desligado ao iniciar o codigo
+    //Mantendo o Timer 0 desligado ao iniciar o codigo
     //Incializacao do SPI
     CS_SetHigh(); //Mantem Desativado o CS
     SPI1_Open(SPI1_DEFAULT);        // Configura MSSP1
@@ -270,10 +271,9 @@ void main(void)
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
-
+    chegadaS1();
     while (1)
     {
-        // Add your application code
     }
 }
 /**

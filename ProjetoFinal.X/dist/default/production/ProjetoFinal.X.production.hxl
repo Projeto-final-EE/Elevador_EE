@@ -1,26 +1,26 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- dist/default/production\ProjetoFinal.X.production.hex
+ C:\Users\Alunos\AppData\Local\Temp\xcBs92g.1\driver_tmp_3.o
  -Odist/default/production\ProjetoFinal.X.production.hex
  -logfile=dist/default/production\ProjetoFinal.X.production.hxl
  -addressing=2
 
 ### Memory Usage ###
- Intel Hex-file ranges:
-  0h - 3h		(dist/default/production\ProjetoFinal.X.production.hex)
-  8h - B81h		(dist/default/production\ProjetoFinal.X.production.hex)
-  10000h - 10007h		(dist/default/production\ProjetoFinal.X.production.hex)
-  1000Eh - 10011h		(dist/default/production\ProjetoFinal.X.production.hex)
+ Input file ranges:
+  0h - 3h		(C:\Users\Alunos\AppData\Local\Temp\xcBs92g.1\driver_tmp_3.o)
+  8h - B7Bh		(C:\Users\Alunos\AppData\Local\Temp\xcBs92g.1\driver_tmp_3.o)
+  10000h - 10007h		(C:\Users\Alunos\AppData\Local\Temp\xcBs92g.1\driver_tmp_3.o)
+  1000Eh - 10011h		(C:\Users\Alunos\AppData\Local\Temp\xcBs92g.1\driver_tmp_3.o)
  Unused ranges:
   4h - 7h
-  B82h - FFFFh
+  B7Ch - FFFFh
   10008h - 1000Dh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Intel Hex-file         (dist/default/production\ProjetoFinal.X.production.hex)
+  H1 = Input file             (C:\Users\Alunos\AppData\Local\Temp\xcBs92g.1\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -207,8 +207,7 @@
 00000B40 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000B50 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00000B60 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00000B70 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00000B80 | H1 H1 -- -- -- -- -- -- -- -- -- -- -- -- -- --
+00000B70 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- --
 ----------------------------------------------------------
 00010000 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- H1 H1
 00010010 | H1 H1 -- -- -- -- -- -- -- -- -- -- -- -- -- --

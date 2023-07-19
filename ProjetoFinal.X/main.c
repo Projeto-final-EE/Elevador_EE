@@ -209,12 +209,12 @@ void controleMovimento(){
             }
             break;
         case EmTrajeto:
-            PWM3_LoadDutyValue(DUTTY);
+            PWM3_LoadDutyValue(DUTY);
             TMR4_StopTimer();
             cont = 0;
             break;
         case RetornaS0:
-            PWM3_LoadDutyValue(DUTTY);
+            PWM3_LoadDutyValue(DUTY);
             cont = 0;
             TMR4_StopTimer();
             break;

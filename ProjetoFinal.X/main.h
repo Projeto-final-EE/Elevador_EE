@@ -42,7 +42,7 @@ const uint8_t matrix_conf[] = {
 
 //Maquinas de Estados
 State state = START; // O estado que indica qual valor o EUSART esta aguardando
-enum estadoMov{ Repouso, IniciarTrajeto, EmTrajeto, RetornaS0}mov=IniciarTrajeto;
+enum estadoMov{ Repouso, Espera, EmTrajeto, RetornaS0}mov=Repouso;
 
 //variaveis USART
 char rxValue; // Variavel para receber as informacoes do USART
@@ -107,6 +107,8 @@ void chegadaS2(); //função acionada ao sensor S2 ser acionado
 void chegadaS3(); //função acionada ao sensor S3 ser acionado
 void chegadaS4(); //função acionada ao sensor S4 ser acionado
 
+//Funcoes Ponte-H
+void controleMovimento();
 
 
 #ifdef	__cplusplus

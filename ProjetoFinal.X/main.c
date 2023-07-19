@@ -67,6 +67,11 @@ void organizaTrajeto(){ //função que aplica as mascaras as variaveis destinoSu
     if (mov == RetornaS0) //Caso o percuso já tenha acabado e ele estiver esperando um novo comando
     {
         mov = EmTrajeto; //retoma o trajeto
+        //Reinicia o Timer4
+        TMR4_WriteTimer(0);
+        TMR4_StartTimer;
+    }else{
+        mov = EmTrajeto;
     }
     
 }
@@ -186,6 +191,46 @@ void initMatrix(){
     }
 }
 
+void controleMovimento(){
+    static uint8_t cont = 0;
+    switch(mov){
+        case Repouso:
+            PWM3_LoadDutyValue(0);
+            cont = 0;
+            break;
+        case Espera:
+            if (cont >=4){
+                
+                mov = RetornaS0; //Caso não tenha tido atualizações no trajeto entra em retornaS0
+                cont = 0;
+            }else{
+                cont++;
+            }
+            break;
+        case EmTrajeto:
+            PWM3_LoadDutyValue(300);
+            TMR4_StopTimer();
+            cont = 0;
+            break;
+        case RetornaS0:
+            PWM3_LoadDutyValue(300);
+            cont = 0;
+            TMR4_StopTimer();
+            break;
+    }
+    
+    if(destinoSub != 0 && mov != RetornaS0 ){//Determina o sentido do movimento do motor
+        //Seta o movimento ascendente do motor
+        subindo = true;
+        Dir_SetHigh();
+    }else{
+        //Seta o movimento ascendente do motor
+        subindo = false;
+        Dir_SetLow();
+    }
+    
+}
+
 void chegadaS1(){ //função acionada ao sensor S1 ser acionado
     //Atualização da variavel da matrix de de Dados com o numero 0 mais a direcao de movimento do elevador
     andarAtual = 0;
@@ -207,8 +252,9 @@ void chegadaS1(){ //função acionada ao sensor S1 ser acionado
         MatrixLed[6] =  0b01100000;
         MatrixLed[7] =  0b11000000;
         destinoDesc = destinoDesc & 0b11111110; //limpa a flag que mantem o andar 0 como destino do elevador
+        mov = Repouso;
     }
-    matrixUpdate();
+    //matrixUpdate();
     
     MatrixLed[7] = MatrixLed[7] | destinoSub;
     MatrixLed[6] = MatrixLed[6] | destinoDesc;
@@ -252,7 +298,7 @@ void chegadaS2(){ //função acionada ao sensor S2 ser acionado
     }
     MatrixLed[7] = MatrixLed[7] | destinoSub;
     MatrixLed[6] = MatrixLed[6] | destinoDesc;
-    matrixUpdate();
+    //matrixUpdate();
 }
 
 void chegadaS3(){ //função acionada ao sensor S3 ser acionado
@@ -285,7 +331,7 @@ void chegadaS3(){ //função acionada ao sensor S3 ser acionado
     }
     MatrixLed[7] = MatrixLed[7] | destinoSub;
     MatrixLed[6] = MatrixLed[6] | destinoDesc;
-    matrixUpdate();
+    //matrixUpdate();
     
     //Controle dos estados
     if(destinoDesc ==0 && destinoSub == 0){
@@ -324,7 +370,7 @@ void chegadaS4(){ //função acionada ao sensor S4 ser acionado
     }
     MatrixLed[7] = MatrixLed[7] | destinoSub;
     MatrixLed[6] = MatrixLed[6] | destinoDesc;
-    matrixUpdate();
+    //matrixUpdate();
     
     //Controle dos estados
     if(destinoDesc ==0 && destinoSub == 0){
@@ -346,12 +392,13 @@ void main(void)
      */
     IOCBF0_SetInterruptHandler(chegadaS1);
     IOCBF3_SetInterruptHandler(chegadaS2);
+    TMR4_SetInterruptHandler(controleMovimento);
     TMR0_SetInterruptHandler(sendInfo);
     
     //Incializacao do SPI
     CS_SetHigh(); //Mantem Desativado o CS
-    SPI1_Open(SPI1_DEFAULT);        // Configura MSSP1
-    initMatrix();                   // Configura matrizes
+    //SPI1_Open(SPI1_DEFAULT);        // Configura MSSP1
+    //initMatrix();                   // Configura matrizes
     
     // Enable the Global Interrupts
     INTERRUPT_GlobalInterruptEnable();

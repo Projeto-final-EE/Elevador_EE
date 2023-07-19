@@ -4453,10 +4453,17 @@ const uint8_t matrix_conf[] = {
 
 
 
+
+
 State state = START;
+enum estadoMov{ Repouso, Espera, EmTrajeto, RetornaS0}mov=EmTrajeto;
+
+
 char rxValue;
 _Bool waitRX = 0;
 _Bool RXaccepted = 0;
+uint8_t contComandos=0 ;
+
 
 uint8_t pulsoEncoder = 0;
 float velocidadeMotor = 0;
@@ -4471,21 +4478,28 @@ uint16_t temperatura;
 
 _Bool subindo = 1;
 uint8_t MatrixLed[8];
-uint8_t destinoSub= 0;
-uint8_t destinoDesc= 0;
-# 70 "mcc_generated_files/../main.h"
+uint8_t destinoSub= 0b00000000;
+uint8_t destinoDesc= 0b00000000;
+# 77 "mcc_generated_files/../main.h"
 _Bool isValidFloor(char floor);
-# 88 "mcc_generated_files/../main.h"
+# 95 "mcc_generated_files/../main.h"
 void sendInfo(void);
+
+void organizaTrajeto();
 
 
 void txSpi( uint8_t *data, size_t dataSize);
 void matrixUpdate();
 void initMatrix();
+
+
 void chegadaS1();
 void chegadaS2();
 void chegadaS3();
 void chegadaS4();
+
+
+void controleMovimento();
 # 54 "mcc_generated_files/cmp2.c" 2
 
 

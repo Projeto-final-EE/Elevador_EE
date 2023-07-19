@@ -4861,10 +4861,17 @@ const uint8_t matrix_conf[] = {
 
 
 
+
+
 State state = START;
+enum estadoMov{ Repouso, Espera, EmTrajeto, RetornaS0}mov=EmTrajeto;
+
+
 char rxValue;
 _Bool waitRX = 0;
 _Bool RXaccepted = 0;
+uint8_t contComandos=0 ;
+
 
 uint8_t pulsoEncoder = 0;
 float velocidadeMotor = 0;
@@ -4879,27 +4886,62 @@ uint16_t temperatura;
 
 _Bool subindo = 1;
 uint8_t MatrixLed[8];
-uint8_t destinoSub= 0;
-uint8_t destinoDesc= 0;
-# 70 "./main.h"
+uint8_t destinoSub= 0b00000000;
+uint8_t destinoDesc= 0b00000000;
+# 77 "./main.h"
 _Bool isValidFloor(char floor);
-# 88 "./main.h"
+# 95 "./main.h"
 void sendInfo(void);
+
+void organizaTrajeto();
 
 
 void txSpi( uint8_t *data, size_t dataSize);
 void matrixUpdate();
 void initMatrix();
+
+
 void chegadaS1();
 void chegadaS2();
 void chegadaS3();
 void chegadaS4();
+
+
+void controleMovimento();
 # 45 "main.c" 2
 
 
 
 
 
+
+
+void organizaTrajeto(){
+    uint8_t mascaraOrigem = 1<<origem;
+    uint8_t mascaraDestino = 1<<destino;
+
+
+    if (origem < destino)
+    {
+        destinoSub =destinoSub | mascaraOrigem | mascaraDestino;
+    }else if(origem > destino){
+
+
+        destinoSub = destinoSub| mascaraOrigem;
+        destinoDesc = destinoDesc| mascaraDestino;
+    }
+
+    if (mov == RetornaS0)
+    {
+        mov = EmTrajeto;
+
+        TMR4_WriteTimer(0);
+        TMR4_StartTimer;
+    }else{
+        mov = EmTrajeto;
+    }
+
+}
 
 
 _Bool isValidFloor(char floor){
@@ -5016,9 +5058,51 @@ void initMatrix(){
     }
 }
 
+void controleMovimento(){
+    static uint8_t cont = 0;
+    switch(mov){
+        case Repouso:
+            PWM3_LoadDutyValue(0);
+            cont = 0;
+            break;
+        case Espera:
+            if (cont >=4){
+
+                mov = RetornaS0;
+                cont = 0;
+            }else{
+                cont++;
+            }
+            break;
+        case EmTrajeto:
+            PWM3_LoadDutyValue(300);
+            TMR4_StopTimer();
+            cont = 0;
+            break;
+        case RetornaS0:
+            PWM3_LoadDutyValue(300);
+            cont = 0;
+            TMR4_StopTimer();
+            break;
+    }
+
+    if(destinoSub != 0 && mov != RetornaS0 ){
+
+        subindo = 1;
+        do { LATAbits.LATA7 = 1; } while(0);
+    }else{
+
+        subindo = 0;
+        do { LATAbits.LATA7 = 0; } while(0);
+    }
+
+}
+
 void chegadaS1(){
 
     andarAtual = 0;
+
+
 
     MatrixLed[0] = 0b01111110;
     MatrixLed[1] = 0b10000001;
@@ -5029,18 +5113,32 @@ void chegadaS1(){
         MatrixLed[5] = 0b01100000;
         MatrixLed[6] = 0b11000000;
         MatrixLed[7] = 0b01100000;
+        destinoSub = destinoSub & 0b11111110;
     }else{
         MatrixLed[5] = 0b11000000;
         MatrixLed[6] = 0b01100000;
         MatrixLed[7] = 0b11000000;
         destinoDesc = destinoDesc & 0b11111110;
+        mov = Repouso;
     }
     matrixUpdate();
+
+    MatrixLed[7] = MatrixLed[7] | destinoSub;
+    MatrixLed[6] = MatrixLed[6] | destinoDesc;
 }
 
 void chegadaS2(){
 
     andarAtual = 1;
+
+
+    if((((destinoSub & 0b00000010) == 2 )&& subindo)||(!subindo &&((destinoDesc & 0b00000010) == 2) ) ){
+        PWM3_LoadDutyValue(0);
+        TMR4_WriteTimer(0);
+        TMR4_StartTimer();
+    }
+
+
 
     MatrixLed[0] = 0b00000000;
     MatrixLed[1] = 0b01000001;
@@ -5052,11 +5150,18 @@ void chegadaS2(){
         MatrixLed[6] = 0b11000000;
         MatrixLed[7] = 0b01100000;
         destinoSub = destinoSub & 0b11111101;
+
+        mov = EmTrajeto;
     }else{
         MatrixLed[5] = 0b11000000;
         MatrixLed[6] = 0b01100000;
         MatrixLed[7] = 0b11000000;
         destinoDesc = destinoDesc & 0b11111101;
+
+
+        if(destinoDesc == 0){
+            mov = RetornaS0;
+        }
     }
     MatrixLed[7] = MatrixLed[7] | destinoSub;
     MatrixLed[6] = MatrixLed[6] | destinoDesc;
@@ -5066,6 +5171,14 @@ void chegadaS2(){
 void chegadaS3(){
 
     andarAtual = 2;
+
+
+    if((((destinoSub & 0b00000100) == 4 )&& subindo)||(!subindo &&((destinoDesc & 0b00000100) == 4 )) ){
+        PWM3_LoadDutyValue(0);
+        TMR4_WriteTimer(0);
+        TMR4_StartTimer();
+    }
+
 
     MatrixLed[0] = 0b01000011;
     MatrixLed[1] = 0b10000101;
@@ -5086,11 +5199,25 @@ void chegadaS3(){
     MatrixLed[7] = MatrixLed[7] | destinoSub;
     MatrixLed[6] = MatrixLed[6] | destinoDesc;
     matrixUpdate();
+
+
+    if(destinoDesc ==0 && destinoSub == 0){
+        mov = RetornaS0;
+    }
+
 }
 
 void chegadaS4(){
 
     andarAtual = 3;
+
+
+    if((((destinoSub & 0b00001000) == 8 )&& subindo)||(!subindo &&((destinoDesc & 0b00001000) == 8 )) ){
+        PWM3_LoadDutyValue(0);
+        TMR4_WriteTimer(0);
+        TMR4_StartTimer();
+    }
+
 
     MatrixLed[0] = 0b10000001;
     MatrixLed[1] = 0b10010001;
@@ -5111,15 +5238,21 @@ void chegadaS4(){
     MatrixLed[7] = MatrixLed[7] | destinoSub;
     MatrixLed[6] = MatrixLed[6] | destinoDesc;
     matrixUpdate();
+
+
+    if(destinoDesc ==0 && destinoSub == 0){
+        mov = RetornaS0;
+    }
 }
 
 void main(void)
 {
 
     SYSTEM_Initialize();
-# 275 "main.c"
-    IOCBF3_SetInterruptHandler(chegadaS1);
+# 393 "main.c"
+    IOCBF0_SetInterruptHandler(chegadaS1);
     IOCBF3_SetInterruptHandler(chegadaS2);
+    TMR4_SetInterruptHandler(controleMovimento);
     TMR0_SetInterruptHandler(sendInfo);
 
 
@@ -5142,7 +5275,7 @@ void main(void)
     while (1)
     {
 
-        if(EUSART_is_rx_ready()){
+        if(EUSART_is_rx_ready()&& contComandos<5){
             rxValue = EUSART_Read();
             switch(state){
                 case START:
@@ -5171,6 +5304,8 @@ void main(void)
                         origem = oTemp;
                         destino = dTemp;
 
+                        organizaTrajeto();
+                        contComandos++;
                     }
                     state = START;
                     break;

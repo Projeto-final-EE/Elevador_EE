@@ -1,0 +1,5 @@
+build/default/debug/mcc_generated_files/cmp2.p1:  \
+mcc_generated_files/cmp2.c  \
+mcc_generated_files/cmp2.h  \
+mcc_generated_files/../main.h  \
+bin2bcd.h 

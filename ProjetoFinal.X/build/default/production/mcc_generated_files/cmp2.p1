@@ -1,8 +1,12 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"42 mcc_generated_files/../main.h
-[; ;mcc_generated_files/../main.h: 42: State state = START;
+"44 mcc_generated_files/../main.h
+[; ;mcc_generated_files/../main.h: 44: State state = START;
 [c E2661 0 1 2 3 .. ]
 [n E2661 . START FIRST_NUM SECOND_NUM CR  ]
+"45
+[; ;mcc_generated_files/../main.h: 45: enum estadoMov{ Repouso, Espera, EmTrajeto, RetornaS0}mov=EmTrajeto;
+[c E2669 0 1 2 3 .. ]
+[n E2669 estadoMov Repouso Espera EmTrajeto RetornaS0  ]
 "1345 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1345:     struct {
 [s S77 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -42,8 +46,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2416
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 2416: extern volatile CMOUTbits_t CMOUTbits __attribute__((address(0x115)));
 [v _CMOUTbits `VS123 ~T0 @X0 0 e@277 ]
-"97 mcc_generated_files/../main.h
-[; ;mcc_generated_files/../main.h: 97: void chegadaS4();
+"108 mcc_generated_files/../main.h
+[; ;mcc_generated_files/../main.h: 108: void chegadaS4();
 [v _chegadaS4 `(v ~T0 @X0 0 e? ]
 "55 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 55: __asm("INDF0 equ 00h");
@@ -538,47 +542,59 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ..
 ]
-"42
-[; ;mcc_generated_files/../main.h: 42: State state = START;
+"44
+[; ;mcc_generated_files/../main.h: 44: State state = START;
 [v _state `E2661 ~T0 @X0 1 e ]
 [i _state
 . `E2661 0
 ]
-"43
-[; ;mcc_generated_files/../main.h: 43: char rxValue;
+"45
+[; ;mcc_generated_files/../main.h: 45: enum estadoMov{ Repouso, Espera, EmTrajeto, RetornaS0}mov=EmTrajeto;
+[v _mov `E2669 ~T0 @X0 1 e ]
+[i _mov
+. `E2669 2
+]
+"48
+[; ;mcc_generated_files/../main.h: 48: char rxValue;
 [v _rxValue `uc ~T0 @X0 1 e ]
-"44
-[; ;mcc_generated_files/../main.h: 44: _Bool waitRX = 0;
+"49
+[; ;mcc_generated_files/../main.h: 49: _Bool waitRX = 0;
 [v _waitRX `a ~T0 @X0 1 e ]
 [i _waitRX
 -> -> 0 `i `a
 ]
-"45
-[; ;mcc_generated_files/../main.h: 45: _Bool RXaccepted = 0;
+"50
+[; ;mcc_generated_files/../main.h: 50: _Bool RXaccepted = 0;
 [v _RXaccepted `a ~T0 @X0 1 e ]
 [i _RXaccepted
 -> -> 0 `i `a
 ]
-"47
-[; ;mcc_generated_files/../main.h: 47: uint8_t pulsoEncoder = 0;
+"51
+[; ;mcc_generated_files/../main.h: 51: uint8_t contComandos=0 ;
+[v _contComandos `uc ~T0 @X0 1 e ]
+[i _contComandos
+-> -> 0 `i `uc
+]
+"54
+[; ;mcc_generated_files/../main.h: 54: uint8_t pulsoEncoder = 0;
 [v _pulsoEncoder `uc ~T0 @X0 1 e ]
 [i _pulsoEncoder
 -> -> 0 `i `uc
 ]
-"48
-[; ;mcc_generated_files/../main.h: 48: float velocidadeMotor = 0;
+"55
+[; ;mcc_generated_files/../main.h: 55: float velocidadeMotor = 0;
 [v _velocidadeMotor `f ~T0 @X0 1 e ]
 [i _velocidadeMotor
 -> -> 0 `i `f
 ]
-"49
-[; ;mcc_generated_files/../main.h: 49: uint8_t flag = 0x00;
+"56
+[; ;mcc_generated_files/../main.h: 56: uint8_t flag = 0x00;
 [v _flag `uc ~T0 @X0 1 e ]
 [i _flag
 -> -> 0 `i `uc
 ]
-"50
-[; ;mcc_generated_files/../main.h: 50: uint16_t t1 = 0, t2 = 0;
+"57
+[; ;mcc_generated_files/../main.h: 57: uint16_t t1 = 0, t2 = 0;
 [v _t1 `us ~T0 @X0 1 e ]
 [i _t1
 -> -> 0 `i `us
@@ -587,49 +603,49 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _t2
 -> -> 0 `i `us
 ]
-"52
-[; ;mcc_generated_files/../main.h: 52: uint8_t origem = 0, oTemp;
+"59
+[; ;mcc_generated_files/../main.h: 59: uint8_t origem = 0, oTemp;
 [v _origem `uc ~T0 @X0 1 e ]
 [i _origem
 -> -> 0 `i `uc
 ]
 [v _oTemp `uc ~T0 @X0 1 e ]
-"53
-[; ;mcc_generated_files/../main.h: 53: uint8_t destino = 0, dTemp;
+"60
+[; ;mcc_generated_files/../main.h: 60: uint8_t destino = 0, dTemp;
 [v _destino `uc ~T0 @X0 1 e ]
 [i _destino
 -> -> 0 `i `uc
 ]
 [v _dTemp `uc ~T0 @X0 1 e ]
-"54
-[; ;mcc_generated_files/../main.h: 54: uint8_t andarAtual = 0;
+"61
+[; ;mcc_generated_files/../main.h: 61: uint8_t andarAtual = 0;
 [v _andarAtual `uc ~T0 @X0 1 e ]
 [i _andarAtual
 -> -> 0 `i `uc
 ]
-"55
-[; ;mcc_generated_files/../main.h: 55: uint8_t altura;
+"62
+[; ;mcc_generated_files/../main.h: 62: uint8_t altura;
 [v _altura `uc ~T0 @X0 1 e ]
-"56
-[; ;mcc_generated_files/../main.h: 56: uint16_t temperatura;
+"63
+[; ;mcc_generated_files/../main.h: 63: uint16_t temperatura;
 [v _temperatura `us ~T0 @X0 1 e ]
-"58
-[; ;mcc_generated_files/../main.h: 58: _Bool subindo = 1;
+"65
+[; ;mcc_generated_files/../main.h: 65: _Bool subindo = 1;
 [v _subindo `a ~T0 @X0 1 e ]
 [i _subindo
 -> -> 1 `i `a
 ]
-"59
-[; ;mcc_generated_files/../main.h: 59: uint8_t MatrixLed[8];
+"66
+[; ;mcc_generated_files/../main.h: 66: uint8_t MatrixLed[8];
 [v _MatrixLed `uc ~T0 @X0 -> 8 `i e ]
-"60
-[; ;mcc_generated_files/../main.h: 60: uint8_t destinoSub= 0;
+"67
+[; ;mcc_generated_files/../main.h: 67: uint8_t destinoSub= 0b00000000;
 [v _destinoSub `uc ~T0 @X0 1 e ]
 [i _destinoSub
 -> -> 0 `i `uc
 ]
-"61
-[; ;mcc_generated_files/../main.h: 61: uint8_t destinoDesc= 0;
+"68
+[; ;mcc_generated_files/../main.h: 68: uint8_t destinoDesc= 0b00000000;
 [v _destinoDesc `uc ~T0 @X0 1 e ]
 [i _destinoDesc
 -> -> 0 `i `uc

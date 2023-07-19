@@ -1,4 +1,4 @@
-# Firmware de Controle de um Elevador Controlado por Bluetooth
+# Desenvolvimento do Firmware de Controle de um Elevador Controlado por Bluetooth
 
 Este projeto consiste no desenvolvimento de um firmware de controle para um elevador controlado por Bluetooth, utilizando o microcontrolador PIC16F1827. O objetivo principal é criar um sistema eletrônico embarcado que permita controlar remotamente um elevador por meio de comunicação Bluetooth.
 

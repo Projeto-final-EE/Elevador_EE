@@ -4864,7 +4864,7 @@ const uint8_t matrix_conf[] = {
 
 
 State state = START;
-enum estadoMov{ Repouso, Espera, EmTrajeto, RetornaS0}mov=EmTrajeto;
+enum estadoMov{ Repouso, Espera, EmTrajeto, RetornaS0}mov=Repouso;
 
 
 char rxValue;
@@ -4920,8 +4920,9 @@ void organizaTrajeto(){
     uint8_t mascaraOrigem = 1<<origem;
     uint8_t mascaraDestino = 1<<destino;
 
-
-    if (origem < destino)
+    if(origem == 0){
+        destinoSub = destinoSub | mascaraDestino;
+    }else if (origem < destino)
     {
         destinoSub =destinoSub | mascaraOrigem | mascaraDestino;
     }else if(origem > destino){
@@ -4963,7 +4964,7 @@ void sendInfo(){
     EUSART_Write(0x2C);
     EUSART_Write(0x30 + andarAtual);
     EUSART_Write(0x2C);
-    EUSART_Write(0);
+    EUSART_Write(0x30);
     EUSART_Write(0x2C);
 
     bcd.v = bin2bcd(altura);
@@ -5004,7 +5005,7 @@ void interrupcaoCCP4(){
         flag = 0x01;
     } else {
         t2 = (CCPR4H << 8) + CCPR4L;
-        flag = 0x02;
+        flag = 0x00;
 
         velocidadeMotor = (altura) / ((t2 - t1) / 1000000);
 
@@ -5086,7 +5087,7 @@ void controleMovimento(){
             break;
     }
 
-    if(destinoSub != 0 && mov != RetornaS0 ){
+    if(destinoSub != 0 ){
 
         subindo = 1;
         do { LATAbits.LATA7 = 1; } while(0);
@@ -5120,6 +5121,8 @@ void chegadaS1(){
         MatrixLed[7] = 0b11000000;
         destinoDesc = destinoDesc & 0b11111110;
         mov = Repouso;
+
+        TMR4_StartTimer();
     }
     matrixUpdate();
 
@@ -5249,7 +5252,7 @@ void main(void)
 {
 
     SYSTEM_Initialize();
-# 393 "main.c"
+# 396 "main.c"
     IOCBF0_SetInterruptHandler(chegadaS1);
     IOCBF3_SetInterruptHandler(chegadaS2);
     TMR4_SetInterruptHandler(controleMovimento);
@@ -5271,11 +5274,11 @@ void main(void)
 
 
 
-
+    chegadaS1();
     while (1)
     {
 
-        if(EUSART_is_rx_ready()&& contComandos<5){
+        if(EUSART_is_rx_ready()){
             rxValue = EUSART_Read();
             switch(state){
                 case START:

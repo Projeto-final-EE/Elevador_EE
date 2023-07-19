@@ -4456,7 +4456,7 @@ const uint8_t matrix_conf[] = {
 
 
 State state = START;
-enum estadoMov{ Repouso, Espera, EmTrajeto, RetornaS0}mov=EmTrajeto;
+enum estadoMov{ Repouso, Espera, EmTrajeto, RetornaS0}mov=Repouso;
 
 
 char rxValue;

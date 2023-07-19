@@ -4,7 +4,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [c E2661 0 1 2 3 .. ]
 [n E2661 . START FIRST_NUM SECOND_NUM CR  ]
 "45
-[; ;mcc_generated_files/../main.h: 45: enum estadoMov{ Repouso, Espera, EmTrajeto, RetornaS0}mov=EmTrajeto;
+[; ;mcc_generated_files/../main.h: 45: enum estadoMov{ Repouso, Espera, EmTrajeto, RetornaS0}mov=Repouso;
 [c E2669 0 1 2 3 .. ]
 [n E2669 estadoMov Repouso Espera EmTrajeto RetornaS0  ]
 "1345 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
@@ -549,10 +549,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 . `E2661 0
 ]
 "45
-[; ;mcc_generated_files/../main.h: 45: enum estadoMov{ Repouso, Espera, EmTrajeto, RetornaS0}mov=EmTrajeto;
+[; ;mcc_generated_files/../main.h: 45: enum estadoMov{ Repouso, Espera, EmTrajeto, RetornaS0}mov=Repouso;
 [v _mov `E2669 ~T0 @X0 1 e ]
 [i _mov
-. `E2669 2
+. `E2669 0
 ]
 "48
 [; ;mcc_generated_files/../main.h: 48: char rxValue;

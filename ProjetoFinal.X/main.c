@@ -53,8 +53,9 @@ void organizaTrajeto(){ //função que aplica as mascaras as variaveis destinoSu
     uint8_t mascaraOrigem = 1<<origem; // desloca o bit '1' até a posição do andar escolhido com origem
     uint8_t mascaraDestino = 1<<destino; // desloca o bit '1' até a posição do andar escolhido com destino
 
-    
-    if (origem < destino)
+    if(origem == 0){
+        destinoSub = destinoSub | mascaraDestino;
+    }else if (origem < destino)
     {
         destinoSub =destinoSub | mascaraOrigem | mascaraDestino; //aplica ambas as mascaras simultaneamente aos andares de destino de subida
     }else if(origem > destino){
@@ -96,7 +97,7 @@ void sendInfo(){
     EUSART_Write(0x2C); // Envia a virgula
     EUSART_Write(0x30 + andarAtual); // Envia o andar atual em ASCII
     EUSART_Write(0x2C); // Envia a virgula
-    EUSART_Write(0); // Envia o estado atual do motor
+    EUSART_Write(0x30); // Envia o estado atual do motor
     EUSART_Write(0x2C); // Envia a virgula
     // Enviando a altura em mm
     bcd.v = bin2bcd(altura);
@@ -137,7 +138,7 @@ void interrupcaoCCP4(){
         flag = 0x01;
     } else {
         t2 = (CCPR4H << 8) + CCPR4L;   // Tempo da segunda interrupcao
-        flag = 0x02;
+        flag = 0x00;
         
         velocidadeMotor = (altura) / ((t2 - t1) / 1000000); // (mm/pulsos) / (tempo(s))
         
@@ -219,7 +220,7 @@ void controleMovimento(){
             break;
     }
     
-    if(destinoSub != 0 && mov != RetornaS0 ){//Determina o sentido do movimento do motor
+    if(destinoSub != 0 ){//Determina o sentido do movimento do motor
         //Seta o movimento ascendente do motor
         subindo = true;
         Dir_SetHigh();
@@ -253,8 +254,10 @@ void chegadaS1(){ //função acionada ao sensor S1 ser acionado
         MatrixLed[7] =  0b11000000;
         destinoDesc = destinoDesc & 0b11111110; //limpa a flag que mantem o andar 0 como destino do elevador
         mov = Repouso;
+        //contComandos = 0;
+        TMR4_StartTimer();
     }
-    //matrixUpdate();
+    matrixUpdate();
     
     MatrixLed[7] = MatrixLed[7] | destinoSub;
     MatrixLed[6] = MatrixLed[6] | destinoDesc;
@@ -298,7 +301,7 @@ void chegadaS2(){ //função acionada ao sensor S2 ser acionado
     }
     MatrixLed[7] = MatrixLed[7] | destinoSub;
     MatrixLed[6] = MatrixLed[6] | destinoDesc;
-    //matrixUpdate();
+    matrixUpdate();
 }
 
 void chegadaS3(){ //função acionada ao sensor S3 ser acionado
@@ -331,7 +334,7 @@ void chegadaS3(){ //função acionada ao sensor S3 ser acionado
     }
     MatrixLed[7] = MatrixLed[7] | destinoSub;
     MatrixLed[6] = MatrixLed[6] | destinoDesc;
-    //matrixUpdate();
+    matrixUpdate();
     
     //Controle dos estados
     if(destinoDesc ==0 && destinoSub == 0){
@@ -370,7 +373,7 @@ void chegadaS4(){ //função acionada ao sensor S4 ser acionado
     }
     MatrixLed[7] = MatrixLed[7] | destinoSub;
     MatrixLed[6] = MatrixLed[6] | destinoDesc;
-    //matrixUpdate();
+    matrixUpdate();
     
     //Controle dos estados
     if(destinoDesc ==0 && destinoSub == 0){
@@ -397,8 +400,8 @@ void main(void)
     
     //Incializacao do SPI
     CS_SetHigh(); //Mantem Desativado o CS
-    //SPI1_Open(SPI1_DEFAULT);        // Configura MSSP1
-    //initMatrix();                   // Configura matrizes
+    SPI1_Open(SPI1_DEFAULT);        // Configura MSSP1
+    initMatrix();                   // Configura matrizes
     
     // Enable the Global Interrupts
     INTERRUPT_GlobalInterruptEnable();
@@ -411,11 +414,11 @@ void main(void)
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
-
+    chegadaS1();
     while (1)
     {
         // Add your application code
-        if(EUSART_is_rx_ready()&& contComandos<5){
+        if(EUSART_is_rx_ready()){
             rxValue = EUSART_Read();
             switch(state){
                 case START:

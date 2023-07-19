@@ -17,7 +17,7 @@ extern "C" {
     
 //Defines
 #define flip_matrix  true
-    
+#define DUTY 500
 // Enums
 typedef enum{
     START,
@@ -62,7 +62,7 @@ uint8_t andarAtual = 0; // Indica o andar atual
 uint8_t altura; // Valor da altura atual
 uint16_t temperatura; // Valor da temperatura do motor
 
-bool subindo = true; //flag que indica se o elevador est� subindo ou descendo
+bool subindo = true; //flag que indica se o elevador estA subindo ou descendo
 uint8_t MatrixLed[8]; //Matrix de Dados que armazena o valor a ser transmito por SPI para a matrix de LED
 uint8_t destinoSub= 0b00000000; // indice 1 para andar 1, 2 para andar 2 e 3 para andar 3
 uint8_t destinoDesc= 0b00000000;// indice 0 para andar 0, 1 para andar 1 e 2 para andar 2

@@ -397,6 +397,7 @@ void main(void)
     IOCBF3_SetInterruptHandler(chegadaS2);
     TMR4_SetInterruptHandler(controleMovimento);
     TMR0_SetInterruptHandler(sendInfo);
+    CCP4_SetCallBack(interrupcaoCCP4);
     
     //Incializacao do SPI
     CS_SetHigh(); //Mantem Desativado o CS

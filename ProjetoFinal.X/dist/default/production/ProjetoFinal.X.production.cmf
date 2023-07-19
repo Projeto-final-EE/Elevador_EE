@@ -91,7 +91,7 @@ idataBANK0 CODE 0 3 3 1 2 1
 dataBANK0 BANK0 1 6A 6A 1 1 1
 clrtext CODE 0 D39 D39 6 2 1
 config CONFIG 4 8007 8007 2 2 1
-$C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.o
+$C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.o
 idloc IDLOC 5 8000 8000 4 2 1
 reset_vec CODE 0 0 0 2 2 1
 end_init CODE 0 56 56 2 2 1
@@ -165,26 +165,26 @@ STRING 810-CF7 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\ProjetoFinal.X.production.o
-58 cinit CODE >5835:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
-58 cinit CODE >5838:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
-58 cinit CODE >5927:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
-5B cinit CODE >5928:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
-5C cinit CODE >5945:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
-5D cinit CODE >5946:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
-5E cinit CODE >5947:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
-5F cinit CODE >5948:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
-60 cinit CODE >5949:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
-61 cinit CODE >5950:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
-64 cinit CODE >5954:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
-65 cinit CODE >5955:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
-66 cinit CODE >5956:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
-67 cinit CODE >5957:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
-68 cinit CODE >5958:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
-69 cinit CODE >5959:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
-6C cinit CODE >5965:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
-6C cinit CODE >5967:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
-6D cinit CODE >5968:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
-6E cinit CODE >5969:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
+58 cinit CODE >5835:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
+58 cinit CODE >5838:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
+58 cinit CODE >5927:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
+5B cinit CODE >5928:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
+5C cinit CODE >5945:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
+5D cinit CODE >5946:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
+5E cinit CODE >5947:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
+5F cinit CODE >5948:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
+60 cinit CODE >5949:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
+61 cinit CODE >5950:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
+64 cinit CODE >5954:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
+65 cinit CODE >5955:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
+66 cinit CODE >5956:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
+67 cinit CODE >5957:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
+68 cinit CODE >5958:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
+69 cinit CODE >5959:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
+6C cinit CODE >5965:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
+6C cinit CODE >5967:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
+6D cinit CODE >5968:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
+6E cinit CODE >5969:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
 4 intentry CODE >52:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/interrupt_manager.c
 6 intentry CODE >55:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/interrupt_manager.c
 E intentry CODE >57:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\mcc_generated_files/interrupt_manager.c
@@ -850,14 +850,14 @@ E02 text3 CODE >125:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal
 451 maintext CODE >333:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
 454 maintext CODE >333:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
 457 maintext CODE >334:C:\Users\AC Tecnologia\Documents\ProjetoFinalEE\ProjetoFinal.X\main.c
-D39 clrtext CODE >5934:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
-D39 clrtext CODE >5935:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
-D3A clrtext CODE >5936:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
-D3A clrtext CODE >5937:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
-D3B clrtext CODE >5938:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
-D3C clrtext CODE >5939:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
-D3D clrtext CODE >5940:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
-D3E clrtext CODE >5941:C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.s
+D39 clrtext CODE >5934:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
+D39 clrtext CODE >5935:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
+D3A clrtext CODE >5936:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
+D3A clrtext CODE >5937:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
+D3B clrtext CODE >5938:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
+D3C clrtext CODE >5939:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
+D3D clrtext CODE >5940:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
+D3E clrtext CODE >5941:C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -907,13 +907,13 @@ _TMR4 415 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 _WPUA 20C 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 _WPUB 20D 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 __end_of_IOCBF0_SetInterruptHandler 1ABE 0 CODE 0 text17 dist/default/production\ProjetoFinal.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.o
+___sp 0 0 STACK 2 stack C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.o
 _flag 5F 0 BANK0 1 bssBANK0 dist/default/production\ProjetoFinal.X.production.o
 _main 76C 0 CODE 0 maintext dist/default/production\ProjetoFinal.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 __end_of_ADC_GetConversion 1D84 0 CODE 0 text47 dist/default/production\ProjetoFinal.X.production.o
 _IOCBF0_DefaultInterruptHandler 19F2 0 CODE 0 text54 dist/default/production\ProjetoFinal.X.production.o
-start AC 0 CODE 0 init C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.o
+start AC 0 CODE 0 init C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.o
 ___flmul@aexp 2D 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
 ___flmul@bexp 2E 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
 ___flmul@prod 2F 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
@@ -940,12 +940,12 @@ __Hpowerup 0 0 CODE 0 powerup -
 __end_of_spi1_configuration 1020 0 STRCODE 0 stringtext2 dist/default/production\ProjetoFinal.X.production.o
 _TMR2_Initialize 1A9C 0 CODE 0 text9 dist/default/production\ProjetoFinal.X.production.o
 TMR0_SetInterruptHandler@InterruptHandler A0 0 BANK1 1 cstackBANK1 dist/default/production\ProjetoFinal.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.o
 wtemp0 7E 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 _EUSART_DefaultFramingErrorHandler 0 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
@@ -995,8 +995,8 @@ __end_of___flmul 58E 0 CODE 0 text44 dist/default/production\ProjetoFinal.X.prod
 __end_of___fltol C0A 0 CODE 0 text43 dist/default/production\ProjetoFinal.X.production.o
 __Umul8_16@multiplicand 70 0 COMMON 1 cstackCOMMON dist/default/production\ProjetoFinal.X.production.o
 _OPTION_REG 95 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.o
-___stacklo 0 0 ABS 0 - C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.o
+___stackhi 0 0 ABS 0 - C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.o
+___stacklo 0 0 ABS 0 - C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.o
 _CCP4_CaptureISR 1C96 0 CODE 0 text62 dist/default/production\ProjetoFinal.X.production.o
 _EUSART_Initialize 1E48 0 CODE 0 text20 dist/default/production\ProjetoFinal.X.production.o
 ___flmul@a 24 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
@@ -1029,7 +1029,7 @@ matrixUpdate@data 79 0 COMMON 1 cstackCOMMON dist/default/production\ProjetoFina
 __end_of_TMR4_Initialize 1C96 0 CODE 0 text7 dist/default/production\ProjetoFinal.X.production.o
 _IOCBF3_SetInterruptHandler 1ABE 0 CODE 0 text16 dist/default/production\ProjetoFinal.X.production.o
 _WDTCON 97 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.o
+___int_sp 0 0 STACK 2 stack C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.o
 __end_of_EUSART_Read 1BE6 0 CODE 0 text31 dist/default/production\ProjetoFinal.X.production.o
 __end_of_PWM3_Initialize 1AE2 0 CODE 0 text14 dist/default/production\ProjetoFinal.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
@@ -1214,7 +1214,7 @@ _rxValue 63 0 BANK0 1 bssBANK0 dist/default/production\ProjetoFinal.X.production
 __HnvBANK0 0 0 ABS 0 nvBANK0 -
 __HnvBANK1 0 0 ABS 0 nvBANK1 -
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.o
 _CCPTMRS0bits 29E 0 ABS 0 - dist/default/production\ProjetoFinal.X.production.o
 __pdataBANK0 6A 0 BANK0 1 dataBANK0 dist/default/production\ProjetoFinal.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
@@ -1409,8 +1409,8 @@ __Lreset_vec 0 0 CODE 0 reset_vec -
 __end_ofi1_SPI1_ExchangeBlock 1EE8 0 CODE 0 text61 dist/default/production\ProjetoFinal.X.production.o
 __Hstringtext1 0 0 ABS 0 stringtext1 -
 __Hstringtext2 0 0 ABS 0 stringtext2 -
-___heap_hi 0 0 ABS 0 - C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.o
-___heap_lo 0 0 ABS 0 - C:\Users\ACTECN~1\AppData\Local\Temp\xcAsg74.o
+___heap_hi 0 0 ABS 0 - C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.o
+___heap_lo 0 0 ABS 0 - C:\Users\ACTECN~1\AppData\Local\Temp\xcAscso.o
 _subindo 6A 0 BANK0 1 dataBANK0 dist/default/production\ProjetoFinal.X.production.o
 ___fltol@f1 35 0 BANK0 1 cstackBANK0 dist/default/production\ProjetoFinal.X.production.o
 i1SPI1_ExchangeBlock@data 74 0 COMMON 1 cstackCOMMON dist/default/production\ProjetoFinal.X.production.o

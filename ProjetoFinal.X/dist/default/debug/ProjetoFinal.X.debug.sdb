@@ -3,71 +3,71 @@
 [d edition pro ]
 [d chip 16F1827 ]
 [d frameptr 6 ]
-"44 C:\Users\Alunos\Desktop\ProjetoFinal.X/main.h
+"43 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X/main.h
 [e E2661 . `uc
 START 0
 FIRST_NUM 1
 SECOND_NUM 2
 CR 3
-]
-"45
-[e E2669 estadoMov `uc
-Repouso 0
-Espera 1
-EmTrajeto 2
-RetornaS0 3
 ]
 "44
-[e E2661 . `uc
-START 0
-FIRST_NUM 1
-SECOND_NUM 2
-CR 3
-]
-"45
 [e E2669 estadoMov `uc
 Repouso 0
 Espera 1
 EmTrajeto 2
 RetornaS0 3
 ]
-"85 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/adc.c
+"43
+[e E2661 . `uc
+START 0
+FIRST_NUM 1
+SECOND_NUM 2
+CR 3
+]
+"44
+[e E2669 estadoMov `uc
+Repouso 0
+Espera 1
+EmTrajeto 2
+RetornaS0 3
+]
+"85 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/adc.c
 [e E2485 . `uc
 Temp 2
 channel_Temp 29
 channel_DAC 30
 channel_FVR 31
 ]
-"72 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/spi1.c
+"72 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/spi1.c
 [e E358 . `uc
 SPI1_DEFAULT 0
 ]
-"44 C:\Users\Alunos\Desktop\ProjetoFinal.X/main.h
+"43 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X/main.h
 [e E3148 . `uc
 START 0
 FIRST_NUM 1
 SECOND_NUM 2
 CR 3
 ]
-"45
+"44
 [e E3156 estadoMov `uc
 Repouso 0
 Espera 1
 EmTrajeto 2
 RetornaS0 3
 ]
-"137 C:\Users\Alunos\Desktop\ProjetoFinal.X\main.c
+"73 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
 [e E2923 . `uc
 Temp 2
 channel_Temp 29
 channel_DAC 30
 channel_FVR 31
 ]
-"463
+"489
 [e E2819 . `uc
 SPI1_DEFAULT 0
 ]
-"10 C:\Users\Alunos\Desktop\ProjetoFinal.X\bin2bcd.c
+"10 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\bin2bcd.c
 [v _bin2bcd bin2bcd `(us  1 e 2 0 ]
 "1 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\abs.c
 [v _abs abs `(i  1 e 2 0 ]
@@ -81,8 +81,6 @@ SPI1_DEFAULT 0
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
 "8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
-"15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul16.c
-[v ___wmul __wmul `(ui  1 e 2 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\xxtofl.c
@@ -91,45 +89,47 @@ SPI1_DEFAULT 0
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"52 C:\Users\Alunos\Desktop\ProjetoFinal.X\main.c
+"20 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
 [v _organizaTrajeto organizaTrajeto `(v  1 e 1 0 ]
-"76
+"48
 [v _alteraSentido alteraSentido `(v  1 e 1 0 ]
-"86
+"63
 [v _isValidFloor isValidFloor `(a  1 e 1 0 ]
-"90
+"72
+[v _calcTemp calcTemp `(us  1 e 2 0 ]
+"81
 [v _sendInfo sendInfo `(v  1 e 1 0 ]
-"171
+"166
 [v _interrupcaoCCP4 interrupcaoCCP4 `(v  1 e 1 0 ]
-"188
+"179
 [v _txSpi txSpi `(v  1 e 1 0 ]
 [v i1_txSpi txSpi `(v  1 e 1 0 ]
-"196
+"190
 [v _matrixUpdate matrixUpdate `(v  1 e 1 0 ]
 [v i1_matrixUpdate matrixUpdate `(v  1 e 1 0 ]
 "216
 [v _initMatrix initMatrix `(v  1 e 1 0 ]
-"235
+"240
 [v _controleMovimento controleMovimento `(v  1 e 1 0 ]
-"287
+"297
 [v _apagaFlag apagaFlag `(v  1 e 1 0 ]
 [v i1_apagaFlag apagaFlag `(v  1 e 1 0 ]
-"296
+"310
 [v _chegadaS1 chegadaS1 `(v  1 e 1 0 ]
 [v i1_chegadaS1 chegadaS1 `(v  1 e 1 0 ]
-"327
+"346
 [v _chegadaS2 chegadaS2 `(v  1 e 1 0 ]
-"368
+"391
 [v _chegadaS3 chegadaS3 `(v  1 e 1 0 ]
-"404
+"431
 [v _chegadaS4 chegadaS4 `(v  1 e 1 0 ]
-"443
+"473
 [v _main main `(v  1 e 1 0 ]
-"67 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/adc.c
+"67 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
 "112
 [v _ADC_GetConversion ADC_GetConversion `(us  1 e 2 0 ]
-"60 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/ccp4.c
+"60 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/ccp4.c
 [v _CCP4_DefaultCallBack CCP4_DefaultCallBack `(v  1 s 1 CCP4_DefaultCallBack ]
 "65
 [v _CCP4_Initialize CCP4_Initialize `(v  1 e 1 0 ]
@@ -137,15 +137,15 @@ SPI1_DEFAULT 0
 [v _CCP4_CaptureISR CCP4_CaptureISR `(v  1 e 1 0 ]
 "104
 [v _CCP4_SetCallBack CCP4_SetCallBack `(v  1 e 1 0 ]
-"59 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/cmp1.c
+"59 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/cmp1.c
 [v _CMP1_Initialize CMP1_Initialize `(v  1 e 1 0 ]
 "86
 [v _CMP1_ISR CMP1_ISR `(v  1 e 1 0 ]
-"59 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/cmp2.c
+"59 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/cmp2.c
 [v _CMP2_Initialize CMP2_Initialize `(v  1 e 1 0 ]
 "86
 [v _CMP2_ISR CMP2_ISR `(v  1 e 1 0 ]
-"66 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/eusart.c
+"66 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/eusart.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
 "99
 [v _EUSART_is_rx_ready EUSART_is_rx_ready `(a  1 e 1 0 ]
@@ -165,17 +165,17 @@ SPI1_DEFAULT 0
 [v _EUSART_SetOverrunErrorHandler EUSART_SetOverrunErrorHandler `(v  1 e 1 0 ]
 "165
 [v _EUSART_SetErrorHandler EUSART_SetErrorHandler `(v  1 e 1 0 ]
-"58 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/fvr.c
+"58 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/fvr.c
 [v _FVR_Initialize FVR_Initialize `(v  1 e 1 0 ]
-"52 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/interrupt_manager.c
+"52 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
-"50 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/mcc.c
+"50 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "70
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 "80
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
-"58 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/pin_manager.c
+"58 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 "119
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
@@ -191,11 +191,11 @@ SPI1_DEFAULT 0
 [v _IOCBF3_SetInterruptHandler IOCBF3_SetInterruptHandler `(v  1 e 1 0 ]
 "188
 [v _IOCBF3_DefaultInterruptHandler IOCBF3_DefaultInterruptHandler `(v  1 e 1 0 ]
-"64 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/pwm3.c
+"64 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/pwm3.c
 [v _PWM3_Initialize PWM3_Initialize `(v  1 e 1 0 ]
 "82
 [v _PWM3_LoadDutyValue PWM3_LoadDutyValue `(v  1 e 1 0 ]
-"62 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/spi1.c
+"62 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/spi1.c
 [v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
 "72
 [v _SPI1_Open SPI1_Open `(a  1 e 1 0 ]
@@ -204,7 +204,7 @@ SPI1_DEFAULT 0
 "100
 [v _SPI1_ExchangeBlock SPI1_ExchangeBlock `(v  1 e 1 0 ]
 [v i1_SPI1_ExchangeBlock SPI1_ExchangeBlock `(v  1 e 1 0 ]
-"64 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/tmr0.c
+"64 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/tmr0.c
 [v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
 "108
 [v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
@@ -214,13 +214,13 @@ SPI1_DEFAULT 0
 [v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
 "144
 [v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
-"63 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/tmr1.c
+"63 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/tmr1.c
 [v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
 "113
 [v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
-"62 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/tmr2.c
+"62 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
-"64 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/tmr4.c
+"64 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/tmr4.c
 [v _TMR4_Initialize TMR4_Initialize `(v  1 e 1 0 ]
 "87
 [v _TMR4_StartTimer TMR4_StartTimer `(v  1 e 1 0 ]
@@ -235,41 +235,41 @@ SPI1_DEFAULT 0
 [v _TMR4_SetInterruptHandler TMR4_SetInterruptHandler `(v  1 e 1 0 ]
 "151
 [v _TMR4_DefaultInterruptHandler TMR4_DefaultInterruptHandler `(v  1 e 1 0 ]
-"30 C:\Users\Alunos\Desktop\ProjetoFinal.X/main.h
+"29 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X/main.h
 [v _matrix_conf matrix_conf `DC[12]uc  1 e 12 0 ]
-"44
+"43
 [v _state state `E2661  1 e 1 0 ]
-"45
+"44
 [v _mov mov `E2669  1 e 1 0 ]
-"48
+"47
 [v _rxValue rxValue `uc  1 e 1 0 ]
-"51
+"50
 [v _contComandos contComandos `uc  1 e 1 0 ]
-"54
+"53
 [v _pulsoEncoder pulsoEncoder `uc  1 e 1 0 ]
-"55
+"54
 [v _velocidadeMotor velocidadeMotor `f  1 e 4 0 ]
-"60
+"59
 [v _origem origem `uc  1 e 1 0 ]
 [v _oTemp oTemp `uc  1 e 1 0 ]
-"61
+"60
 [v _destino destino `uc  1 e 1 0 ]
 [v _dTemp dTemp `uc  1 e 1 0 ]
-"62
+"61
 [v _andarAtual andarAtual `uc  1 e 1 0 ]
-"63
+"62
 [v _altura altura `uc  1 e 1 0 ]
-"64
+"63
 [v _temperatura temperatura `us  1 e 2 0 ]
-"65
+"64
 [v _motor motor `uc  1 e 1 0 ]
-"66
+"65
 [v _subindo subindo `a  1 e 1 0 ]
-"67
+"66
 [v _MatrixLed MatrixLed `[8]uc  1 e 8 0 ]
-"68
+"67
 [v _destinoSub destinoSub `uc  1 e 1 0 ]
-"69
+"68
 [v _destinoDesc destinoDesc `uc  1 e 1 0 ]
 [s S385 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
@@ -280,7 +280,7 @@ SPI1_DEFAULT 0
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-"375 C:/Users/Alunos/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
+"374 C:\Program Files\Microchip\xc8\v2.41\pic\include\proc\pic16f1827.h
 [s S394 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
@@ -297,7 +297,7 @@ SPI1_DEFAULT 0
 `uc 1 ADIF 1 0 :1:6 
 `uc 1 TMR1GIF 1 0 :1:7 
 ]
-"571
+"570
 [u S713 . 1 `S704 1 . 1 0 ]
 [v _PIR1bits PIR1bits `VES713  1 e 1 @17 ]
 [s S95 . 1 `uc 1 CCP2IF 1 0 :1:0 
@@ -308,7 +308,7 @@ SPI1_DEFAULT 0
 `uc 1 C2IF 1 0 :1:6 
 `uc 1 OSFIF 1 0 :1:7 
 ]
-"632
+"631
 [u S103 . 1 `S95 1 . 1 0 ]
 [v _PIR2bits PIR2bits `VES103  1 e 1 @18 ]
 [s S1005 . 1 `uc 1 . 1 0 :1:0 
@@ -318,16 +318,16 @@ SPI1_DEFAULT 0
 `uc 1 CCP3IF 1 0 :1:4 
 `uc 1 CCP4IF 1 0 :1:5 
 ]
-"682
+"681
 [u S1012 . 1 `S1005 1 . 1 0 ]
 [v _PIR3bits PIR3bits `VES1012  1 e 1 @19 ]
-"733
+"732
 [v _TMR0 TMR0 `VEuc  1 e 1 @21 ]
-"760
+"759
 [v _TMR1L TMR1L `VEuc  1 e 1 @22 ]
-"780
+"779
 [v _TMR1H TMR1H `VEuc  1 e 1 @23 ]
-"800
+"799
 [v _T1CON T1CON `VEuc  1 e 1 @24 ]
 [s S1066 . 1 `uc 1 TMR1ON 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
@@ -338,14 +338,14 @@ SPI1_DEFAULT 0
 `uc 1 TMR1CS0 1 0 :1:6 
 `uc 1 TMR1CS1 1 0 :1:7 
 ]
-"822
+"821
 [s S1075 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 T1CKPS 1 0 :2:4 
 `uc 1 TMR1CS 1 0 :2:6 
 ]
 [u S1079 . 1 `S1066 1 . 1 0 `S1075 1 . 1 0 ]
 [v _T1CONbits T1CONbits `VES1079  1 e 1 @24 ]
-"872
+"871
 [v _T1GCON T1GCON `VEuc  1 e 1 @25 ]
 [s S1096 . 1 `uc 1 T1GSS0 1 0 :1:0 
 `uc 1 T1GSS1 1 0 :1:1 
@@ -356,16 +356,16 @@ SPI1_DEFAULT 0
 `uc 1 T1GPOL 1 0 :1:6 
 `uc 1 TMR1GE 1 0 :1:7 
 ]
-"892
+"891
 [s S1105 . 1 `uc 1 T1GSS 1 0 :2:0 
 ]
 [u S1107 . 1 `S1096 1 . 1 0 `S1105 1 . 1 0 ]
 [v _T1GCONbits T1GCONbits `VES1107  1 e 1 @25 ]
-"942
+"941
 [v _TMR2 TMR2 `VEuc  1 e 1 @26 ]
-"962
+"961
 [v _PR2 PR2 `VEuc  1 e 1 @27 ]
-"982
+"981
 [v _T2CON T2CON `VEuc  1 e 1 @28 ]
 [s S1168 . 1 `uc 1 T2CKPS0 1 0 :1:0 
 `uc 1 T2CKPS1 1 0 :1:1 
@@ -375,16 +375,16 @@ SPI1_DEFAULT 0
 `uc 1 T2OUTPS2 1 0 :1:5 
 `uc 1 T2OUTPS3 1 0 :1:6 
 ]
-"1003
+"1002
 [s S1176 . 1 `uc 1 T2CKPS 1 0 :2:0 
 `uc 1 . 1 0 :1:2 
 `uc 1 T2OUTPS 1 0 :4:3 
 ]
 [u S1180 . 1 `S1168 1 . 1 0 `S1176 1 . 1 0 ]
 [v _T2CONbits T2CONbits `VES1180  1 e 1 @28 ]
-"1153
+"1152
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
-"1215
+"1214
 [v _TRISB TRISB `VEuc  1 e 1 @141 ]
 [s S835 . 1 `uc 1 TRISB0 1 0 :1:0 
 `uc 1 TRISB1 1 0 :1:1 
@@ -395,7 +395,7 @@ SPI1_DEFAULT 0
 `uc 1 TRISB6 1 0 :1:6 
 `uc 1 TRISB7 1 0 :1:7 
 ]
-"1232
+"1231
 [u S844 . 1 `S835 1 . 1 0 ]
 [v _TRISBbits TRISBbits `VES844  1 e 1 @141 ]
 [s S74 . 1 `uc 1 CCP2IE 1 0 :1:0 
@@ -406,7 +406,7 @@ SPI1_DEFAULT 0
 `uc 1 C2IE 1 0 :1:6 
 `uc 1 OSFIE 1 0 :1:7 
 ]
-"1355
+"1354
 [u S82 . 1 `S74 1 . 1 0 ]
 [v _PIE2bits PIE2bits `VES82  1 e 1 @146 ]
 [s S988 . 1 `uc 1 . 1 0 :1:0 
@@ -416,10 +416,10 @@ SPI1_DEFAULT 0
 `uc 1 CCP3IE 1 0 :1:4 
 `uc 1 CCP4IE 1 0 :1:5 
 ]
-"1405
+"1404
 [u S995 . 1 `S988 1 . 1 0 ]
 [v _PIE3bits PIE3bits `VES995  1 e 1 @147 ]
-"1456
+"1455
 [v _OPTION_REG OPTION_REG `VEuc  1 e 1 @149 ]
 [s S253 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
@@ -430,7 +430,7 @@ SPI1_DEFAULT 0
 `uc 1 INTEDG 1 0 :1:6 
 `uc 1 nWPUEN 1 0 :1:7 
 ]
-"1479
+"1478
 [s S262 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 . 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
@@ -438,17 +438,17 @@ SPI1_DEFAULT 0
 ]
 [u S267 . 1 `S253 1 . 1 0 `S262 1 . 1 0 ]
 [v _OPTION_REGbits OPTION_REGbits `VES267  1 e 1 @149 ]
-"1590
+"1589
 [v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
-"1649
+"1648
 [v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
-"1707
+"1706
 [v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
-"1848
+"1847
 [v _ADRESL ADRESL `VEuc  1 e 1 @155 ]
-"1868
+"1867
 [v _ADRESH ADRESH `VEuc  1 e 1 @156 ]
-"1888
+"1887
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @157 ]
 [s S558 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
@@ -458,7 +458,7 @@ SPI1_DEFAULT 0
 `uc 1 CHS3 1 0 :1:5 
 `uc 1 CHS4 1 0 :1:6 
 ]
-"1913
+"1912
 [s S566 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 ADGO 1 0 :1:1 
 `uc 1 CHS 1 0 :5:2 
@@ -468,9 +468,9 @@ SPI1_DEFAULT 0
 ]
 [u S573 . 1 `S558 1 . 1 0 `S566 1 . 1 0 `S570 1 . 1 0 ]
 [v _ADCON0bits ADCON0bits `VES573  1 e 1 @157 ]
-"1968
+"1967
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
-"2040
+"2039
 [v _LATA LATA `VEuc  1 e 1 @268 ]
 [s S1482 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
@@ -481,10 +481,10 @@ SPI1_DEFAULT 0
 `uc 1 LATA6 1 0 :1:6 
 `uc 1 LATA7 1 0 :1:7 
 ]
-"2057
+"2056
 [u S1491 . 1 `S1482 1 . 1 0 ]
 [v _LATAbits LATAbits `VES1491  1 e 1 @268 ]
-"2097
+"2096
 [v _LATB LATB `VEuc  1 e 1 @269 ]
 [s S1459 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
@@ -495,26 +495,26 @@ SPI1_DEFAULT 0
 `uc 1 LATB6 1 0 :1:6 
 `uc 1 LATB7 1 0 :1:7 
 ]
-"2114
+"2113
 [u S1468 . 1 `S1459 1 . 1 0 ]
 [v _LATBbits LATBbits `VES1468  1 e 1 @269 ]
-"2159
+"2158
 [v _CM1CON0 CM1CON0 `VEuc  1 e 1 @273 ]
-"2216
+"2215
 [v _CM1CON1 CM1CON1 `VEuc  1 e 1 @274 ]
-"2282
+"2281
 [v _CM2CON0 CM2CON0 `VEuc  1 e 1 @275 ]
-"2339
+"2338
 [v _CM2CON1 CM2CON1 `VEuc  1 e 1 @276 ]
 [s S114 . 1 `uc 1 MC1OUT 1 0 :1:0 
 `uc 1 MC2OUT 1 0 :1:1 
 ]
-"2416
+"2415
 [u S117 . 1 `S114 1 . 1 0 ]
 [v _CMOUTbits CMOUTbits `VES117  1 e 1 @277 ]
-"2431
+"2430
 [v _BORCON BORCON `VEuc  1 e 1 @278 ]
-"2458
+"2457
 [v _FVRCON FVRCON `VEuc  1 e 1 @279 ]
 [s S620 . 1 `uc 1 ADFVR0 1 0 :1:0 
 `uc 1 ADFVR1 1 0 :1:1 
@@ -525,29 +525,29 @@ SPI1_DEFAULT 0
 `uc 1 FVRRDY 1 0 :1:6 
 `uc 1 FVREN 1 0 :1:7 
 ]
-"2479
+"2478
 [s S629 . 1 `uc 1 ADFVR 1 0 :2:0 
 `uc 1 CDAFVR 1 0 :2:2 
 ]
 [u S632 . 1 `S620 1 . 1 0 `S629 1 . 1 0 ]
 [v _FVRCONbits FVRCONbits `VES632  1 e 1 @279 ]
-"2780
+"2779
 [v _APFCON0 APFCON0 `VEuc  1 e 1 @285 ]
-"2842
+"2841
 [v _APFCON1 APFCON1 `VEuc  1 e 1 @286 ]
-"2862
+"2861
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
-"2914
+"2913
 [v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
-"3173
+"3172
 [v _RCREG RCREG `VEuc  1 e 1 @409 ]
-"3193
+"3192
 [v _TXREG TXREG `VEuc  1 e 1 @410 ]
-"3229
+"3228
 [v _SPBRGL SPBRGL `VEuc  1 e 1 @411 ]
-"3279
+"3278
 [v _SPBRGH SPBRGH `VEuc  1 e 1 @412 ]
-"3312
+"3311
 [v _RCSTA RCSTA `VEuc  1 e 1 @413 ]
 [s S746 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
@@ -558,10 +558,10 @@ SPI1_DEFAULT 0
 `uc 1 RX9 1 0 :1:6 
 `uc 1 SPEN 1 0 :1:7 
 ]
-"3329
+"3328
 [u S755 . 1 `S746 1 . 1 0 ]
 [v _RCSTAbits RCSTAbits `VES755  1 e 1 @413 ]
-"3374
+"3373
 [v _TXSTA TXSTA `VEuc  1 e 1 @414 ]
 [s S725 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
@@ -572,22 +572,22 @@ SPI1_DEFAULT 0
 `uc 1 TX9 1 0 :1:6 
 `uc 1 CSRC 1 0 :1:7 
 ]
-"3391
+"3390
 [u S734 . 1 `S725 1 . 1 0 ]
 [v _TXSTAbits TXSTAbits `VES734  1 e 1 @414 ]
-"3436
+"3435
 [v _BAUDCON BAUDCON `VEuc  1 e 1 @415 ]
-"3488
+"3487
 [v _WPUA WPUA `VEuc  1 e 1 @524 ]
-"3517
+"3516
 [v _WPUB WPUB `VEuc  1 e 1 @525 ]
-"3587
+"3586
 [v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
-"3625
+"3624
 [v _SSP1ADD SSP1ADD `VEuc  1 e 1 @530 ]
-"3701
+"3700
 [v _SSP1STAT SSP1STAT `VEuc  1 e 1 @532 ]
-"3823
+"3822
 [v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
 [s S856 . 1 `uc 1 SSPM0 1 0 :1:0 
 `uc 1 SSPM1 1 0 :1:1 
@@ -598,12 +598,12 @@ SPI1_DEFAULT 0
 `uc 1 SSPOV 1 0 :1:6 
 `uc 1 WCOL 1 0 :1:7 
 ]
-"3852
+"3851
 [s S865 . 1 `uc 1 SSPM 1 0 :4:0 
 ]
 [u S867 . 1 `S856 1 . 1 0 `S865 1 . 1 0 ]
 [v _SSP1CON1bits SSP1CON1bits `VES867  1 e 1 @533 ]
-"4027
+"4026
 [v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @534 ]
 [s S25 . 1 `uc 1 C1TSEL0 1 0 :1:0 
 `uc 1 C1TSEL1 1 0 :1:1 
@@ -614,7 +614,7 @@ SPI1_DEFAULT 0
 `uc 1 C4TSEL0 1 0 :1:6 
 `uc 1 C4TSEL1 1 0 :1:7 
 ]
-"5506
+"5505
 [s S34 . 1 `uc 1 C1TSEL 1 0 :2:0 
 `uc 1 C2TSEL 1 0 :2:2 
 `uc 1 C3TSEL 1 0 :2:4 
@@ -622,17 +622,17 @@ SPI1_DEFAULT 0
 ]
 [u S39 . 1 `S25 1 . 1 0 `S34 1 . 1 0 ]
 [v _CCPTMRS0bits CCPTMRS0bits `VES39  1 e 1 @670 ]
-"5578
+"5577
 [v _CCPR3L CCPR3L `VEuc  1 e 1 @785 ]
-"5598
+"5597
 [v _CCPR3H CCPR3H `VEuc  1 e 1 @786 ]
-"5618
+"5617
 [v _CCP3CON CCP3CON `VEuc  1 e 1 @787 ]
-"5689
+"5688
 [v _CCPR4L CCPR4L `VEuc  1 e 1 @792 ]
-"5709
+"5708
 [v _CCPR4H CCPR4H `VEuc  1 e 1 @793 ]
-"5729
+"5728
 [v _CCP4CON CCP4CON `VEuc  1 e 1 @794 ]
 [s S339 . 1 `uc 1 IOCBP0 1 0 :1:0 
 `uc 1 IOCBP1 1 0 :1:1 
@@ -643,7 +643,7 @@ SPI1_DEFAULT 0
 `uc 1 IOCBP6 1 0 :1:6 
 `uc 1 IOCBP7 1 0 :1:7 
 ]
-"5813
+"5812
 [s S348 . 1 `uc 1 IOCBP 1 0 :8:0 
 ]
 [u S350 . 1 `S339 1 . 1 0 `S348 1 . 1 0 ]
@@ -657,7 +657,7 @@ SPI1_DEFAULT 0
 `uc 1 IOCBN6 1 0 :1:6 
 `uc 1 IOCBN7 1 0 :1:7 
 ]
-"5883
+"5882
 [s S322 . 1 `uc 1 IOCBN 1 0 :8:0 
 ]
 [u S324 . 1 `S313 1 . 1 0 `S322 1 . 1 0 ]
@@ -671,16 +671,16 @@ SPI1_DEFAULT 0
 `uc 1 IOCBF6 1 0 :1:6 
 `uc 1 IOCBF7 1 0 :1:7 
 ]
-"5953
+"5952
 [s S296 . 1 `uc 1 IOCBF 1 0 :8:0 
 ]
 [u S298 . 1 `S287 1 . 1 0 `S296 1 . 1 0 ]
 [v _IOCBFbits IOCBFbits `VES298  1 e 1 @918 ]
-"6313
+"6312
 [v _TMR4 TMR4 `VEuc  1 e 1 @1045 ]
-"6333
+"6332
 [v _PR4 PR4 `VEuc  1 e 1 @1046 ]
-"6353
+"6352
 [v _T4CON T4CON `VEuc  1 e 1 @1047 ]
 [s S1365 . 1 `uc 1 T4CKPS0 1 0 :1:0 
 `uc 1 T4CKPS1 1 0 :1:1 
@@ -690,21 +690,21 @@ SPI1_DEFAULT 0
 `uc 1 T4OUTPS2 1 0 :1:5 
 `uc 1 T4OUTPS3 1 0 :1:6 
 ]
-"6374
+"6373
 [s S1373 . 1 `uc 1 T4CKPS 1 0 :2:0 
 `uc 1 . 1 0 :1:2 
 `uc 1 T4OUTPS 1 0 :4:3 
 ]
 [u S1377 . 1 `S1365 1 . 1 0 `S1373 1 . 1 0 ]
 [v _T4CONbits T4CONbits `VES1377  1 e 1 @1047 ]
-"54 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/ccp4.c
+"54 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/ccp4.c
 [v _CCP4_CallBack CCP4_CallBack `*.37(v  1 s 2 CCP4_CallBack ]
 [s S658 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
 `uc 1 oerr 1 0 :1:2 
 `uc 1 reserved 1 0 :5:3 
 ]
-"52 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/eusart.c
+"52 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/eusart.c
 [u S663 . 1 `S658 1 . 1 0 `uc 1 status 1 0 ]
 [v _eusartRxLastError eusartRxLastError `VES663  1 e 1 0 ]
 "58
@@ -713,105 +713,105 @@ SPI1_DEFAULT 0
 [v _EUSART_OverrunErrorHandler EUSART_OverrunErrorHandler `*.37(v  1 e 2 0 ]
 "60
 [v _EUSART_ErrorHandler EUSART_ErrorHandler `*.37(v  1 e 2 0 ]
-"54 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/pin_manager.c
+"54 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/pin_manager.c
 [v _IOCBF0_InterruptHandler IOCBF0_InterruptHandler `*.37(v  1 e 2 0 ]
 "55
 [v _IOCBF3_InterruptHandler IOCBF3_InterruptHandler `*.37(v  1 e 2 0 ]
 [s S827 . 4 `uc 1 con1 1 0 `uc 1 stat 1 1 `uc 1 add 1 2 `uc 1 operation 1 3 ]
-"58 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/spi1.c
+"58 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/spi1.c
 [v _spi1_configuration spi1_configuration `DC[1]S827  1 s 4 spi1_configuration ]
-"58 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/tmr0.c
+"58 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/tmr0.c
 [v _timer0ReloadVal timer0ReloadVal `VEuc  1 e 1 0 ]
 "59
 [v _TMR0_InterruptHandler TMR0_InterruptHandler `*.37(v  1 e 2 0 ]
-"57 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/tmr1.c
+"57 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/tmr1.c
 [v _timer1ReloadVal timer1ReloadVal `VEus  1 e 2 0 ]
-"58 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/tmr4.c
+"58 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/tmr4.c
 [v _TMR4_InterruptHandler TMR4_InterruptHandler `*.37(v  1 e 2 0 ]
-"443 C:\Users\Alunos\Desktop\ProjetoFinal.X\main.c
+"473 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"521
+"539
 } 0
-"52
+"20
 [v _organizaTrajeto organizaTrajeto `(v  1 e 1 0 ]
 {
-"54
-[v organizaTrajeto@mascaraDestino mascaraDestino `uc  1 a 1 2 ]
-"53
-[v organizaTrajeto@mascaraOrigem mascaraOrigem `uc  1 a 1 1 ]
-"75
+"22
+[v organizaTrajeto@mascaraDestino mascaraDestino `uc  1 a 1 10 ]
+"21
+[v organizaTrajeto@mascaraOrigem mascaraOrigem `uc  1 a 1 9 ]
+"41
 } 0
-"86
+"63
 [v _isValidFloor isValidFloor `(a  1 e 1 0 ]
 {
 [v isValidFloor@floor floor `uc  1 a 1 wreg ]
 [v isValidFloor@floor floor `uc  1 a 1 wreg ]
-[v isValidFloor@floor floor `uc  1 a 1 1 ]
-"88
+[v isValidFloor@floor floor `uc  1 a 1 9 ]
+"65
 } 0
 "216
 [v _initMatrix initMatrix `(v  1 e 1 0 ]
 {
 "223
-[v initMatrix@j j `uc  1 a 1 16 ]
+[v initMatrix@j j `uc  1 a 1 7 ]
 "222
-[v initMatrix@i_1615 i `uc  1 a 1 15 ]
+[v initMatrix@i_1618 i `uc  1 a 1 6 ]
 "219
-[v initMatrix@i i `uc  1 a 1 14 ]
+[v initMatrix@i i `uc  1 a 1 5 ]
 "217
-[v initMatrix@data data `[4]uc  1 a 4 9 ]
+[v initMatrix@data data `[4]uc  1 a 4 0 ]
 "218
-[v initMatrix@k k `uc  1 a 1 13 ]
+[v initMatrix@k k `uc  1 a 1 4 ]
 "233
 } 0
-"296
+"310
 [v _chegadaS1 chegadaS1 `(v  1 e 1 0 ]
 {
-"325
+"339
 } 0
-"196
+"190
 [v _matrixUpdate matrixUpdate `(v  1 e 1 0 ]
 {
-"199
-[v matrixUpdate@i i `uc  1 a 1 10 ]
-"197
-[v matrixUpdate@data data `[2]uc  1 a 2 8 ]
-"214
+"193
+[v matrixUpdate@i i `uc  1 a 1 2 ]
+"191
+[v matrixUpdate@data data `[2]uc  1 a 2 0 ]
+"209
 } 0
-"188
+"179
 [v _txSpi txSpi `(v  1 e 1 0 ]
 {
-[v txSpi@data data `*.4uc  1 a 1 wreg ]
-[v txSpi@data data `*.4uc  1 a 1 wreg ]
-[v txSpi@dataSize dataSize `ui  1 p 2 5 ]
-[v txSpi@data data `*.4uc  1 a 1 7 ]
-"194
+[v txSpi@data data `*.5uc  1 a 1 wreg ]
+[v txSpi@data data `*.5uc  1 a 1 wreg ]
+[v txSpi@dataSize dataSize `ui  1 p 2 13 ]
+[v txSpi@data data `*.5uc  1 a 1 15 ]
+"183
 } 0
-"100 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/spi1.c
+"100 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/spi1.c
 [v _SPI1_ExchangeBlock SPI1_ExchangeBlock `(v  1 e 1 0 ]
 {
-[v SPI1_ExchangeBlock@block block `*.4v  1 a 1 wreg ]
+[v SPI1_ExchangeBlock@block block `*.5v  1 a 1 wreg ]
 "102
-[v SPI1_ExchangeBlock@data data `*.4uc  1 a 1 4 ]
+[v SPI1_ExchangeBlock@data data `*.5uc  1 a 1 12 ]
 "100
-[v SPI1_ExchangeBlock@block block `*.4v  1 a 1 wreg ]
-[v SPI1_ExchangeBlock@blockSize blockSize `ui  1 p 2 0 ]
+[v SPI1_ExchangeBlock@block block `*.5v  1 a 1 wreg ]
+[v SPI1_ExchangeBlock@blockSize blockSize `ui  1 p 2 8 ]
 "102
-[v SPI1_ExchangeBlock@block block `*.4v  1 a 1 3 ]
+[v SPI1_ExchangeBlock@block block `*.5v  1 a 1 11 ]
 "110
 } 0
-"287 C:\Users\Alunos\Desktop\ProjetoFinal.X\main.c
+"297 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
 [v _apagaFlag apagaFlag `(v  1 e 1 0 ]
 {
-"293
+"303
 } 0
-"87 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/tmr4.c
+"87 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/tmr4.c
 [v _TMR4_StartTimer TMR4_StartTimer `(v  1 e 1 0 ]
 {
 "91
 } 0
-"50 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/mcc.c
+"50 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
 "68
@@ -821,7 +821,7 @@ SPI1_DEFAULT 0
 {
 "84
 } 0
-"64 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/tmr4.c
+"64 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/tmr4.c
 [v _TMR4_Initialize TMR4_Initialize `(v  1 e 1 0 ]
 {
 "85
@@ -829,20 +829,20 @@ SPI1_DEFAULT 0
 "147
 [v _TMR4_SetInterruptHandler TMR4_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v TMR4_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+[v TMR4_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 8 ]
 "149
 } 0
-"62 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/tmr2.c
+"62 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
 {
 "77
 } 0
-"63 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/tmr1.c
+"63 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/tmr1.c
 [v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
 {
 "84
 } 0
-"64 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/tmr0.c
+"64 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/tmr0.c
 [v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
 {
 "85
@@ -850,20 +850,20 @@ SPI1_DEFAULT 0
 "140
 [v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+[v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 8 ]
 "142
 } 0
-"62 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/spi1.c
+"62 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/spi1.c
 [v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
 {
 "70
 } 0
-"64 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/pwm3.c
+"64 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/pwm3.c
 [v _PWM3_Initialize PWM3_Initialize `(v  1 e 1 0 ]
 {
 "80
 } 0
-"58 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/pin_manager.c
+"58 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "117
@@ -871,26 +871,26 @@ SPI1_DEFAULT 0
 "181
 [v _IOCBF3_SetInterruptHandler IOCBF3_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v IOCBF3_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+[v IOCBF3_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 8 ]
 "183
 } 0
 "151
 [v _IOCBF0_SetInterruptHandler IOCBF0_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v IOCBF0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+[v IOCBF0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 8 ]
 "153
 } 0
-"70 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/mcc.c
+"70 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
 "78
 } 0
-"58 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/fvr.c
+"58 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/fvr.c
 [v _FVR_Initialize FVR_Initialize `(v  1 e 1 0 ]
 {
 "62
 } 0
-"66 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/eusart.c
+"66 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/eusart.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
 {
 "92
@@ -898,32 +898,32 @@ SPI1_DEFAULT 0
 "161
 [v _EUSART_SetOverrunErrorHandler EUSART_SetOverrunErrorHandler `(v  1 e 1 0 ]
 {
-[v EUSART_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+[v EUSART_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 8 ]
 "163
 } 0
 "157
 [v _EUSART_SetFramingErrorHandler EUSART_SetFramingErrorHandler `(v  1 e 1 0 ]
 {
-[v EUSART_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+[v EUSART_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 8 ]
 "159
 } 0
 "165
 [v _EUSART_SetErrorHandler EUSART_SetErrorHandler `(v  1 e 1 0 ]
 {
-[v EUSART_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 0 ]
+[v EUSART_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 8 ]
 "167
 } 0
-"59 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/cmp2.c
+"59 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/cmp2.c
 [v _CMP2_Initialize CMP2_Initialize `(v  1 e 1 0 ]
 {
 "79
 } 0
-"59 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/cmp1.c
+"59 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/cmp1.c
 [v _CMP1_Initialize CMP1_Initialize `(v  1 e 1 0 ]
 {
 "79
 } 0
-"65 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/ccp4.c
+"65 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/ccp4.c
 [v _CCP4_Initialize CCP4_Initialize `(v  1 e 1 0 ]
 {
 "87
@@ -931,24 +931,24 @@ SPI1_DEFAULT 0
 "104
 [v _CCP4_SetCallBack CCP4_SetCallBack `(v  1 e 1 0 ]
 {
-[v CCP4_SetCallBack@customCallBack customCallBack `*.37(v  1 p 2 0 ]
+[v CCP4_SetCallBack@customCallBack customCallBack `*.37(v  1 p 2 8 ]
 "106
 } 0
-"67 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/adc.c
+"67 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
 {
 "83
 } 0
-"72 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/spi1.c
+"72 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/spi1.c
 [v _SPI1_Open SPI1_Open `(a  1 e 1 0 ]
 {
 [v SPI1_Open@spi1UniqueConfiguration spi1UniqueConfiguration `E358  1 a 1 wreg ]
 [v SPI1_Open@spi1UniqueConfiguration spi1UniqueConfiguration `E358  1 a 1 wreg ]
 "74
-[v SPI1_Open@spi1UniqueConfiguration spi1UniqueConfiguration `E358  1 a 1 3 ]
+[v SPI1_Open@spi1UniqueConfiguration spi1UniqueConfiguration `E358  1 a 1 11 ]
 "85
 } 0
-"99 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/eusart.c
+"99 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/eusart.c
 [v _EUSART_is_rx_ready EUSART_is_rx_ready `(a  1 e 1 0 ]
 {
 "102
@@ -958,12 +958,12 @@ SPI1_DEFAULT 0
 {
 "130
 } 0
-"52 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/interrupt_manager.c
+"52 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 {
 "82
 } 0
-"119 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/tmr4.c
+"119 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/tmr4.c
 [v _TMR4_ISR TMR4_ISR `(v  1 e 1 0 ]
 {
 "121
@@ -980,14 +980,14 @@ SPI1_DEFAULT 0
 {
 "154
 } 0
-"235 C:\Users\Alunos\Desktop\ProjetoFinal.X\main.c
+"240 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
 [v _controleMovimento controleMovimento `(v  1 e 1 0 ]
 {
-"236
+"241
 [v controleMovimento@cont cont `uc  1 s 1 cont ]
-"285
+"290
 } 0
-"108 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/tmr0.c
+"108 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/tmr0.c
 [v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
 {
 "110
@@ -1004,35 +1004,135 @@ SPI1_DEFAULT 0
 {
 "147
 } 0
-"90 C:\Users\Alunos\Desktop\ProjetoFinal.X\main.c
+"81 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
 [v _sendInfo sendInfo `(v  1 e 1 0 ]
 {
-"104
-[v sendInfo@v v `uc  1 a 1 62 ]
-"103
-[v sendInfo@i i `uc  1 a 1 61 ]
-[s S1434 . 2 `uc 1 num4 1 0 :4:0 
+"94
+[v sendInfo@v v `uc  1 a 1 3 ]
+"93
+[v sendInfo@i i `uc  1 a 1 2 ]
+[s S1440 . 2 `uc 1 num4 1 0 :4:0 
 `uc 1 num3 1 0 :4:4 
 `uc 1 num2 1 1 :4:0 
 `uc 1 num1 1 1 :4:4 
 ]
-"92
-[u S1439 . 2 `us 1 v 2 0 `S1434 1 . 2 0 ]
-[v sendInfo@bcd bcd `S1439  1 a 2 65 ]
-"96
-[v sendInfo@mascara mascara `uc  1 a 1 64 ]
-"94
-[v sendInfo@destinoAtual destinoAtual `uc  1 a 1 63 ]
-"93
+"82
+[u S1445 . 2 `us 1 v 2 0 `S1440 1 . 2 0 ]
+[v sendInfo@bcd bcd `S1445  1 a 2 6 ]
+"85
+[v sendInfo@velocidade velocidade `us  1 a 2 0 ]
+"86
+[v sendInfo@mascara mascara `uc  1 a 1 5 ]
+"84
+[v sendInfo@destinoAtual destinoAtual `uc  1 a 1 4 ]
+"83
 [v sendInfo@aux_altura aux_altura `uc  1 s 1 aux_altura ]
-"169
+"159
 } 0
-"10 C:\Users\Alunos\Desktop\ProjetoFinal.X\bin2bcd.c
+"72
+[v _calcTemp calcTemp `(us  1 e 2 0 ]
+{
+"74
+} 0
+"10 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\xxtofl.c
+[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
+{
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+"13
+[v ___xxtofl@arg arg `ul  1 a 4 2 ]
+"12
+[v ___xxtofl@exp exp `uc  1 a 1 1 ]
+"10
+[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
+[v ___xxtofl@val val `l  1 p 4 4 ]
+"15
+[v ___xxtofl@sign sign `uc  1 a 1 0 ]
+"44
+} 0
+"43 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\fltol.c
+[v ___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v ___fltol@exp1 exp1 `uc  1 a 1 13 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 12 ]
+"43
+[v ___fltol@f1 f1 `d  1 p 4 58 ]
+"70
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+{
+[s S1989 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+"13
+[s S1994 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S1997 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1989 1 fAsBytes 4 0 `S1994 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1997  1 a 4 52 ]
+"12
+[v ___flmul@grs grs `ul  1 a 4 46 ]
+[s S2066 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+"14
+[u S2069 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S2066 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S2069  1 a 2 56 ]
+"10
+[v ___flmul@bexp bexp `uc  1 a 1 51 ]
+"11
+[v ___flmul@aexp aexp `uc  1 a 1 50 ]
+"9
+[v ___flmul@sign sign `uc  1 a 1 45 ]
+"8
+[v ___flmul@b b `d  1 p 4 32 ]
+[v ___flmul@a a `d  1 p 4 36 ]
+"205
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+{
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+"6
+[v __Umul8_16@word_mpld word_mpld `ui  1 a 2 6 ]
+"5
+[v __Umul8_16@product product `ui  1 a 2 4 ]
+"4
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
+[v __Umul8_16@multiplicand multiplicand `uc  1 p 1 0 ]
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 8 ]
+"60
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+{
+"21
+[v ___fldiv@grs grs `ul  1 a 4 26 ]
+"22
+[v ___fldiv@rem rem `ul  1 a 4 19 ]
+"20
+[v ___fldiv@new_exp new_exp `i  1 a 2 24 ]
+"19
+[v ___fldiv@aexp aexp `uc  1 a 1 31 ]
+"18
+[v ___fldiv@bexp bexp `uc  1 a 1 30 ]
+"16
+[v ___fldiv@sign sign `uc  1 a 1 23 ]
+"8
+[v ___fldiv@a a `d  1 p 4 6 ]
+[v ___fldiv@b b `d  1 p 4 10 ]
+"185
+} 0
+"112 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/adc.c
+[v _ADC_GetConversion ADC_GetConversion `(us  1 e 2 0 ]
+{
+[v ADC_GetConversion@channel channel `E2485  1 a 1 wreg ]
+[v ADC_GetConversion@channel channel `E2485  1 a 1 wreg ]
+"115
+[v ADC_GetConversion@channel channel `E2485  1 a 1 3 ]
+"133
+} 0
+"10 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\bin2bcd.c
 [v _bin2bcd bin2bcd `(us  1 e 2 0 ]
 {
 "25
-[v bin2bcd@i i `uc  1 a 1 52 ]
-[s S1651 . 4 `uc 1 . 1 0 :8:0 
+[v bin2bcd@i i `uc  1 a 1 4 ]
+[s S1654 . 4 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :4:0 
 `uc 1 d3 1 1 :4:4 
 `uc 1 d2 1 2 :4:0 
@@ -1041,10 +1141,10 @@ SPI1_DEFAULT 0
 `uc 1 . 1 3 :4:4 
 ]
 "22
-[u S1659 . 4 `ul 1 shift 4 0 `S1651 1 dat 4 0 ]
-[v bin2bcd@dataU dataU `S1659  1 a 4 53 ]
+[u S1662 . 4 `ul 1 shift 4 0 `S1654 1 dat 4 0 ]
+[v bin2bcd@dataU dataU `S1662  1 a 4 5 ]
 "10
-[v bin2bcd@binVal binVal `us  1 p 2 46 ]
+[v bin2bcd@binVal binVal `us  1 p 2 10 ]
 "41
 } 0
 "4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\memset.c
@@ -1069,101 +1169,7 @@ SPI1_DEFAULT 0
 [v abs@a a `i  1 p 2 0 ]
 "4
 } 0
-"10 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\xxtofl.c
-[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-{
-[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-"13
-[v ___xxtofl@arg arg `ul  1 a 4 6 ]
-"12
-[v ___xxtofl@exp exp `uc  1 a 1 5 ]
-"10
-[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-[v ___xxtofl@val val `l  1 p 4 10 ]
-"15
-[v ___xxtofl@sign sign `uc  1 a 1 4 ]
-"44
-} 0
-"15 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul16.c
-[v ___wmul __wmul `(ui  1 e 2 0 ]
-{
-"17
-[v ___wmul@product product `ui  1 a 2 8 ]
-"15
-[v ___wmul@multiplier multiplier `ui  1 p 2 4 ]
-[v ___wmul@multiplicand multiplicand `ui  1 p 2 6 ]
-"53
-} 0
-"43 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\fltol.c
-[v ___fltol __fltol `(l  1 e 4 0 ]
-{
-"45
-[v ___fltol@exp1 exp1 `uc  1 a 1 45 ]
-[v ___fltol@sign1 sign1 `uc  1 a 1 44 ]
-"43
-[v ___fltol@f1 f1 `d  1 p 4 36 ]
-"70
-} 0
-"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcmul.c
-[v ___flmul __flmul `(d  1 e 4 0 ]
-{
-[s S1986 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
-"13
-[s S1991 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S1994 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1986 1 fAsBytes 4 0 `S1991 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1994  1 a 4 30 ]
-"12
-[v ___flmul@grs grs `ul  1 a 4 24 ]
-[s S2063 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
-"14
-[u S2066 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S2063 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S2066  1 a 2 34 ]
-"10
-[v ___flmul@bexp bexp `uc  1 a 1 29 ]
-"11
-[v ___flmul@aexp aexp `uc  1 a 1 28 ]
-"9
-[v ___flmul@sign sign `uc  1 a 1 23 ]
-"8
-[v ___flmul@b b `d  1 p 4 10 ]
-[v ___flmul@a a `d  1 p 4 14 ]
-"205
-} 0
-"4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul8_16.c
-[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-{
-[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
-"6
-[v __Umul8_16@word_mpld word_mpld `ui  1 a 2 6 ]
-"5
-[v __Umul8_16@product product `ui  1 a 2 4 ]
-"4
-[v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
-[v __Umul8_16@multiplicand multiplicand `uc  1 p 1 0 ]
-[v __Umul8_16@multiplier multiplier `uc  1 a 1 8 ]
-"60
-} 0
-"8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcdiv.c
-[v ___fldiv __fldiv `(d  1 e 4 0 ]
-{
-"21
-[v ___fldiv@grs grs `ul  1 a 4 30 ]
-"22
-[v ___fldiv@rem rem `ul  1 a 4 23 ]
-"20
-[v ___fldiv@new_exp new_exp `i  1 a 2 28 ]
-"19
-[v ___fldiv@aexp aexp `uc  1 a 1 35 ]
-"18
-[v ___fldiv@bexp bexp `uc  1 a 1 34 ]
-"16
-[v ___fldiv@sign sign `uc  1 a 1 27 ]
-"8
-[v ___fldiv@a a `d  1 p 4 10 ]
-[v ___fldiv@b b `d  1 p 4 14 ]
-"185
-} 0
-"132 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/eusart.c
+"132 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/eusart.c
 [v _EUSART_Write EUSART_Write `(v  1 e 1 0 ]
 {
 [v EUSART_Write@txData txData `uc  1 a 1 wreg ]
@@ -1171,16 +1177,7 @@ SPI1_DEFAULT 0
 [v EUSART_Write@txData txData `uc  1 a 1 0 ]
 "139
 } 0
-"112 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/adc.c
-[v _ADC_GetConversion ADC_GetConversion `(us  1 e 2 0 ]
-{
-[v ADC_GetConversion@channel channel `E2485  1 a 1 wreg ]
-[v ADC_GetConversion@channel channel `E2485  1 a 1 wreg ]
-"115
-[v ADC_GetConversion@channel channel `E2485  1 a 1 3 ]
-"133
-} 0
-"119 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/pin_manager.c
+"119 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_IOC PIN_MANAGER_IOC `(v  1 e 1 0 ]
 {
 "131
@@ -1195,12 +1192,12 @@ SPI1_DEFAULT 0
 {
 "191
 } 0
-"327 C:\Users\Alunos\Desktop\ProjetoFinal.X\main.c
+"346 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
 [v _chegadaS2 chegadaS2 `(v  1 e 1 0 ]
 {
-"366
+"384
 } 0
-"136 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/pin_manager.c
+"136 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/pin_manager.c
 [v _IOCBF0_ISR IOCBF0_ISR `(v  1 e 1 0 ]
 {
 "146
@@ -1210,78 +1207,73 @@ SPI1_DEFAULT 0
 {
 "161
 } 0
-"296 C:\Users\Alunos\Desktop\ProjetoFinal.X\main.c
+"310 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
 [v i1_chegadaS1 chegadaS1 `(v  1 e 1 0 ]
 {
-"325
+"339
 } 0
-"86 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/cmp2.c
+"86 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/cmp2.c
 [v _CMP2_ISR CMP2_ISR `(v  1 e 1 0 ]
 {
 "91
 } 0
-"404 C:\Users\Alunos\Desktop\ProjetoFinal.X\main.c
+"431 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
 [v _chegadaS4 chegadaS4 `(v  1 e 1 0 ]
 {
-"441
+"468
 } 0
-"86 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/cmp1.c
+"86 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/cmp1.c
 [v _CMP1_ISR CMP1_ISR `(v  1 e 1 0 ]
 {
 "91
 } 0
-"368 C:\Users\Alunos\Desktop\ProjetoFinal.X\main.c
+"391 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
 [v _chegadaS3 chegadaS3 `(v  1 e 1 0 ]
 {
-"402
+"424
 } 0
-"196
+"190
 [v i1_matrixUpdate matrixUpdate `(v  1 e 1 0 ]
 {
-"197
-[v i1matrixUpdate@data data `[2]uc  1 a 2 8 ]
-"199
-[v i1matrixUpdate@i i `uc  1 a 1 10 ]
-"214
+"191
+[v i1matrixUpdate@data data `[2]uc  1 a 2 10 ]
+"193
+[v i1matrixUpdate@i i `uc  1 a 1 12 ]
+"209
 } 0
-"188
+"179
 [v i1_txSpi txSpi `(v  1 e 1 0 ]
 {
-[v i1txSpi@data data `*.4uc  1 a 1 wreg ]
-[v i1txSpi@data data `*.4uc  1 a 1 wreg ]
-[v i1txSpi@dataSize dataSize `ui  1 p 2 5 ]
-[v i1txSpi@data data `*.4uc  1 a 1 7 ]
-"194
+[v i1txSpi@data data `*.39uc  1 p 2 6 ]
+[v i1txSpi@dataSize dataSize `ui  1 p 2 8 ]
+"183
 } 0
-"100 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/spi1.c
+"100 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/spi1.c
 [v i1_SPI1_ExchangeBlock SPI1_ExchangeBlock `(v  1 e 1 0 ]
 {
-[v i1SPI1_ExchangeBlock@block block `*.4v  1 a 1 wreg ]
 "102
-[v i1SPI1_ExchangeBlock@data data `*.4uc  1 a 1 4 ]
+[v i1SPI1_ExchangeBlock@data data `*.39uc  1 a 2 4 ]
 "100
-[v i1SPI1_ExchangeBlock@block block `*.4v  1 a 1 wreg ]
-[v i1SPI1_ExchangeBlock@blockSize blockSize `ui  1 p 2 0 ]
-"102
-[v i1SPI1_ExchangeBlock@block block `*.4v  1 a 1 3 ]
+[v i1SPI1_ExchangeBlock@block block `*.39v  1 p 2 0 ]
+[v i1SPI1_ExchangeBlock@blockSize blockSize `ui  1 p 2 2 ]
 "110
 } 0
-"287 C:\Users\Alunos\Desktop\ProjetoFinal.X\main.c
+"297 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
 [v i1_apagaFlag apagaFlag `(v  1 e 1 0 ]
 {
-"293
+"303
 } 0
-"87 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/tmr4.c
+"87 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/tmr4.c
 [v i1_TMR4_StartTimer TMR4_StartTimer `(v  1 e 1 0 ]
 {
 "91
 } 0
-"76 C:\Users\Alunos\Desktop\ProjetoFinal.X\main.c
+"48 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
 [v _alteraSentido alteraSentido `(v  1 e 1 0 ]
 {
-"84
+"56
 } 0
-"108 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/tmr4.c
+"108 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/tmr4.c
 [v _TMR4_WriteTimer TMR4_WriteTimer `(v  1 e 1 0 ]
 {
 [v TMR4_WriteTimer@timerVal timerVal `uc  1 a 1 wreg ]
@@ -1290,13 +1282,13 @@ SPI1_DEFAULT 0
 [v TMR4_WriteTimer@timerVal timerVal `uc  1 a 1 0 ]
 "112
 } 0
-"82 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/pwm3.c
+"82 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/pwm3.c
 [v _PWM3_LoadDutyValue PWM3_LoadDutyValue `(v  1 e 1 0 ]
 {
 [v PWM3_LoadDutyValue@dutyValue dutyValue `us  1 p 2 0 ]
 "89
 } 0
-"89 C:\Users\Alunos\Desktop\ProjetoFinal.X\mcc_generated_files/ccp4.c
+"89 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/ccp4.c
 [v _CCP4_CaptureISR CCP4_CaptureISR `(v  1 e 1 0 ]
 {
 [s S1297 . 2 `uc 1 ccpr4l 1 0 `uc 1 ccpr4h 1 1 ]
@@ -1312,8 +1304,8 @@ SPI1_DEFAULT 0
 [v CCP4_DefaultCallBack@capturedValue capturedValue `us  1 p 2 0 ]
 "63
 } 0
-"171 C:\Users\Alunos\Desktop\ProjetoFinal.X\main.c
+"166 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
 [v _interrupcaoCCP4 interrupcaoCCP4 `(v  1 e 1 0 ]
 {
-"186
+"172
 } 0

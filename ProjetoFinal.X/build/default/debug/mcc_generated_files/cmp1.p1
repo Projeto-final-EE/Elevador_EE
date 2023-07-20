@@ -1,10 +1,10 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"44 mcc_generated_files/../main.h
-[; ;mcc_generated_files/../main.h: 44: State state = START;
+"43 mcc_generated_files/../main.h
+[; ;mcc_generated_files/../main.h: 43: State state = START;
 [c E2661 0 1 2 3 .. ]
 [n E2661 . START FIRST_NUM SECOND_NUM CR  ]
-"45
-[; ;mcc_generated_files/../main.h: 45: enum estadoMov{ Repouso, Espera, EmTrajeto, RetornaS0}mov=Repouso;
+"44
+[; ;mcc_generated_files/../main.h: 44: enum estadoMov{ Repouso, Espera, EmTrajeto, RetornaS0}mov=Repouso;
 [c E2669 0 1 2 3 .. ]
 [n E2669 estadoMov Repouso Espera EmTrajeto RetornaS0  ]
 "1345 C:/Users/Alunos/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
@@ -46,8 +46,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2416
 [; ;C:/Users/Alunos/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 2416: extern volatile CMOUTbits_t CMOUTbits __attribute__((address(0x115)));
 [v _CMOUTbits `VS123 ~T0 @X0 0 e@277 ]
-"108 mcc_generated_files/../main.h
-[; ;mcc_generated_files/../main.h: 108: void chegadaS3();
+"86 mcc_generated_files/../main.h
+[; ;mcc_generated_files/../main.h: 86: void chegadaS3();
 [v _chegadaS3 `(v ~T0 @X0 0 e? ]
 "55 C:/Users/Alunos/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
 [; ;C:/Users/Alunos/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 55: __asm("INDF0 equ 00h");
@@ -523,8 +523,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6749
 [; ;C:/Users/Alunos/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 6749: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"30 mcc_generated_files/../main.h
-[; ;mcc_generated_files/../main.h: 30: const uint8_t matrix_conf[] = {
+"29 mcc_generated_files/../main.h
+[; ;mcc_generated_files/../main.h: 29: const uint8_t matrix_conf[] = {
 [v _matrix_conf `Cuc ~T0 @X0 -> 12 `i e ]
 [i _matrix_conf
 :U ..
@@ -542,59 +542,59 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ..
 ]
-"44
-[; ;mcc_generated_files/../main.h: 44: State state = START;
+"43
+[; ;mcc_generated_files/../main.h: 43: State state = START;
 [v _state `E2661 ~T0 @X0 1 e ]
 [i _state
 . `E2661 0
 ]
-"45
-[; ;mcc_generated_files/../main.h: 45: enum estadoMov{ Repouso, Espera, EmTrajeto, RetornaS0}mov=Repouso;
+"44
+[; ;mcc_generated_files/../main.h: 44: enum estadoMov{ Repouso, Espera, EmTrajeto, RetornaS0}mov=Repouso;
 [v _mov `E2669 ~T0 @X0 1 e ]
 [i _mov
 . `E2669 0
 ]
-"48
-[; ;mcc_generated_files/../main.h: 48: char rxValue;
+"47
+[; ;mcc_generated_files/../main.h: 47: char rxValue;
 [v _rxValue `uc ~T0 @X0 1 e ]
-"49
-[; ;mcc_generated_files/../main.h: 49: _Bool waitRX = 0;
+"48
+[; ;mcc_generated_files/../main.h: 48: _Bool waitRX = 0;
 [v _waitRX `a ~T0 @X0 1 e ]
 [i _waitRX
 -> -> 0 `i `a
 ]
-"50
-[; ;mcc_generated_files/../main.h: 50: _Bool RXaccepted = 0;
+"49
+[; ;mcc_generated_files/../main.h: 49: _Bool RXaccepted = 0;
 [v _RXaccepted `a ~T0 @X0 1 e ]
 [i _RXaccepted
 -> -> 0 `i `a
 ]
-"51
-[; ;mcc_generated_files/../main.h: 51: uint8_t contComandos=0 ;
+"50
+[; ;mcc_generated_files/../main.h: 50: uint8_t contComandos=0 ;
 [v _contComandos `uc ~T0 @X0 1 e ]
 [i _contComandos
 -> -> 0 `i `uc
 ]
-"54
-[; ;mcc_generated_files/../main.h: 54: uint8_t pulsoEncoder = 0;
+"53
+[; ;mcc_generated_files/../main.h: 53: uint8_t pulsoEncoder = 0;
 [v _pulsoEncoder `uc ~T0 @X0 1 e ]
 [i _pulsoEncoder
 -> -> 0 `i `uc
 ]
-"55
-[; ;mcc_generated_files/../main.h: 55: float velocidadeMotor = 0;
+"54
+[; ;mcc_generated_files/../main.h: 54: float velocidadeMotor = 0;
 [v _velocidadeMotor `f ~T0 @X0 1 e ]
 [i _velocidadeMotor
 -> -> 0 `i `f
 ]
-"56
-[; ;mcc_generated_files/../main.h: 56: uint8_t flag = 0x00;
+"55
+[; ;mcc_generated_files/../main.h: 55: uint8_t flag = 0x00;
 [v _flag `uc ~T0 @X0 1 e ]
 [i _flag
 -> -> 0 `i `uc
 ]
-"57
-[; ;mcc_generated_files/../main.h: 57: uint16_t t1 = 0, t2 = 0;
+"56
+[; ;mcc_generated_files/../main.h: 56: uint16_t t1 = 0, t2 = 0;
 [v _t1 `us ~T0 @X0 1 e ]
 [i _t1
 -> -> 0 `i `us
@@ -603,61 +603,61 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _t2
 -> -> 0 `i `us
 ]
-"58
-[; ;mcc_generated_files/../main.h: 58: uint8_t inc = 1;
+"57
+[; ;mcc_generated_files/../main.h: 57: uint8_t inc = 1;
 [v _inc `uc ~T0 @X0 1 e ]
 [i _inc
 -> -> 1 `i `uc
 ]
-"60
-[; ;mcc_generated_files/../main.h: 60: uint8_t origem = 0, oTemp;
+"59
+[; ;mcc_generated_files/../main.h: 59: uint8_t origem = 0, oTemp;
 [v _origem `uc ~T0 @X0 1 e ]
 [i _origem
 -> -> 0 `i `uc
 ]
 [v _oTemp `uc ~T0 @X0 1 e ]
-"61
-[; ;mcc_generated_files/../main.h: 61: uint8_t destino = 0, dTemp;
+"60
+[; ;mcc_generated_files/../main.h: 60: uint8_t destino = 0, dTemp;
 [v _destino `uc ~T0 @X0 1 e ]
 [i _destino
 -> -> 0 `i `uc
 ]
 [v _dTemp `uc ~T0 @X0 1 e ]
-"62
-[; ;mcc_generated_files/../main.h: 62: uint8_t andarAtual = 0;
+"61
+[; ;mcc_generated_files/../main.h: 61: uint8_t andarAtual = 0;
 [v _andarAtual `uc ~T0 @X0 1 e ]
 [i _andarAtual
 -> -> 0 `i `uc
 ]
-"63
-[; ;mcc_generated_files/../main.h: 63: uint8_t altura;
+"62
+[; ;mcc_generated_files/../main.h: 62: uint8_t altura;
 [v _altura `uc ~T0 @X0 1 e ]
-"64
-[; ;mcc_generated_files/../main.h: 64: uint16_t temperatura;
+"63
+[; ;mcc_generated_files/../main.h: 63: uint16_t temperatura;
 [v _temperatura `us ~T0 @X0 1 e ]
-"65
-[; ;mcc_generated_files/../main.h: 65: uint8_t motor = 0;
+"64
+[; ;mcc_generated_files/../main.h: 64: uint8_t motor = 0;
 [v _motor `uc ~T0 @X0 1 e ]
 [i _motor
 -> -> 0 `i `uc
 ]
-"66
-[; ;mcc_generated_files/../main.h: 66: _Bool subindo = 1;
+"65
+[; ;mcc_generated_files/../main.h: 65: _Bool subindo = 1;
 [v _subindo `a ~T0 @X0 1 e ]
 [i _subindo
 -> -> 1 `i `a
 ]
-"67
-[; ;mcc_generated_files/../main.h: 67: uint8_t MatrixLed[8];
+"66
+[; ;mcc_generated_files/../main.h: 66: uint8_t MatrixLed[8];
 [v _MatrixLed `uc ~T0 @X0 -> 8 `i e ]
-"68
-[; ;mcc_generated_files/../main.h: 68: uint8_t destinoSub= 0b00000000;
+"67
+[; ;mcc_generated_files/../main.h: 67: uint8_t destinoSub= 0b00000000;
 [v _destinoSub `uc ~T0 @X0 1 e ]
 [i _destinoSub
 -> -> 0 `i `uc
 ]
-"69
-[; ;mcc_generated_files/../main.h: 69: uint8_t destinoDesc= 0b00000000;
+"68
+[; ;mcc_generated_files/../main.h: 68: uint8_t destinoDesc= 0b00000000;
 [v _destinoDesc `uc ~T0 @X0 1 e ]
 [i _destinoDesc
 -> -> 0 `i `uc

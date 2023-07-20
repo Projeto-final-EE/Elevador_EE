@@ -31,14 +31,11 @@ void organizaTrajeto(){
         destinoDesc = destinoDesc| mascaraDestino;
     }
 
-    if (mov == RetornaS0)                                       // Caso o percuso ja tenha acabado e ele estiver esperando um novo comando
+    if (origem < andarAtual) //Caso o percuso já tenha acabado e ele estiver esperando um novo comando
     {
-        mov = EmTrajeto;                                        // Retoma o trajeto
-        //Reinicia o Timer4
-        TMR4_WriteTimer(0);
-        TMR4_StartTimer;
+        mov = RetornaS0; //retoma o trajeto
     }else{
-        mov = EmTrajeto;
+      mov = EmTrajeto;
     }
     
 }
@@ -119,7 +116,7 @@ void sendInfo(){
             destinoAtual = 3;
             break;
         default:
-            destinoAtual = 4;
+            destinoAtual = 0;
     }
     
     altura = (1.5 * pulsoEncoder);                      // Ajusta o valor da altura/pulsoEnconder
@@ -198,6 +195,7 @@ void matrixUpdate(){
             data[1] = MatrixLed[i-1];   // Valor do digito i da Matriz  
             txSpi(data, 2);             // Tx valores dos d?gitos dig para as matrizes
         }
+    }
     /*}else{
         uint8_t index = 7;              //Indice da matrix de dados
         for(uint8_t i=1;i<9;i++){       // Endereca digitos 0..7

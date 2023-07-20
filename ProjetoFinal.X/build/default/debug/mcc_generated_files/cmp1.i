@@ -4340,7 +4340,7 @@ void CMP1_ISR(void);
 # 53 "mcc_generated_files/cmp1.c" 2
 
 # 1 "mcc_generated_files/../main.h" 1
-# 16 "mcc_generated_files/../main.h"
+# 15 "mcc_generated_files/../main.h"
 # 1 "./bin2bcd.h" 1
 # 11 "./bin2bcd.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\string.h" 1 3
@@ -4424,7 +4424,7 @@ typedef union{
 
 
 uint16_t bin2bcd(uint16_t binVal);
-# 16 "mcc_generated_files/../main.h" 2
+# 15 "mcc_generated_files/../main.h" 2
 
 
 
@@ -4479,9 +4479,11 @@ _Bool subindo = 1;
 uint8_t MatrixLed[8];
 uint8_t destinoSub= 0b00000000;
 uint8_t destinoDesc= 0b00000000;
-# 78 "mcc_generated_files/../main.h"
+
+
+
 _Bool isValidFloor(char floor);
-# 96 "mcc_generated_files/../main.h"
+
 void sendInfo(void);
 
 void organizaTrajeto();

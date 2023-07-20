@@ -3,28 +3,28 @@
 [d edition pro ]
 [d chip 16F1827 ]
 [d frameptr 6 ]
-"44 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X/main.h
+"43 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X/main.h
 [e E2661 . `uc
 START 0
 FIRST_NUM 1
 SECOND_NUM 2
 CR 3
 ]
-"45
+"44
 [e E2669 estadoMov `uc
 Repouso 0
 Espera 1
 EmTrajeto 2
 RetornaS0 3
 ]
-"44
+"43
 [e E2661 . `uc
 START 0
 FIRST_NUM 1
 SECOND_NUM 2
 CR 3
 ]
-"45
+"44
 [e E2669 estadoMov `uc
 Repouso 0
 Espera 1
@@ -42,26 +42,30 @@ channel_FVR 31
 [e E358 . `uc
 SPI1_DEFAULT 0
 ]
-"44 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X/main.h
+"43 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X/main.h
 [e E3148 . `uc
 START 0
 FIRST_NUM 1
 SECOND_NUM 2
 CR 3
 ]
-"45
+"44
 [e E3156 estadoMov `uc
 Repouso 0
 Espera 1
 EmTrajeto 2
 RetornaS0 3
 ]
-"56 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
+"73 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
 [e E2923 . `uc
 Temp 2
 channel_Temp 29
 channel_DAC 30
 channel_FVR 31
+]
+"489
+[e E2819 . `uc
+SPI1_DEFAULT 0
 ]
 "10 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\bin2bcd.c
 [v _bin2bcd bin2bcd `(us  1 e 2 0 ]
@@ -85,30 +89,41 @@ channel_FVR 31
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"18 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
+"20 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
 [v _organizaTrajeto organizaTrajeto `(v  1 e 1 0 ]
-"47
+"48
+[v _alteraSentido alteraSentido `(v  1 e 1 0 ]
+"63
 [v _isValidFloor isValidFloor `(a  1 e 1 0 ]
-"55
+"72
 [v _calcTemp calcTemp `(us  1 e 2 0 ]
-"62
+"81
 [v _sendInfo sendInfo `(v  1 e 1 0 ]
-"145
+"166
 [v _interrupcaoCCP4 interrupcaoCCP4 `(v  1 e 1 0 ]
-"156
+"179
 [v _txSpi txSpi `(v  1 e 1 0 ]
-"210
+[v i1_txSpi txSpi `(v  1 e 1 0 ]
+"190
+[v _matrixUpdate matrixUpdate `(v  1 e 1 0 ]
+[v i1_matrixUpdate matrixUpdate `(v  1 e 1 0 ]
+"216
+[v _initMatrix initMatrix `(v  1 e 1 0 ]
+"240
 [v _controleMovimento controleMovimento `(v  1 e 1 0 ]
-"265
+"297
+[v _apagaFlag apagaFlag `(v  1 e 1 0 ]
+[v i1_apagaFlag apagaFlag `(v  1 e 1 0 ]
+"310
 [v _chegadaS1 chegadaS1 `(v  1 e 1 0 ]
 [v i1_chegadaS1 chegadaS1 `(v  1 e 1 0 ]
-"298
+"346
 [v _chegadaS2 chegadaS2 `(v  1 e 1 0 ]
-"338
+"391
 [v _chegadaS3 chegadaS3 `(v  1 e 1 0 ]
-"377
+"431
 [v _chegadaS4 chegadaS4 `(v  1 e 1 0 ]
-"419
+"473
 [v _main main `(v  1 e 1 0 ]
 "67 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/adc.c
 [v _ADC_Initialize ADC_Initialize `(v  1 e 1 0 ]
@@ -182,10 +197,13 @@ channel_FVR 31
 [v _PWM3_LoadDutyValue PWM3_LoadDutyValue `(v  1 e 1 0 ]
 "62 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/spi1.c
 [v _SPI1_Initialize SPI1_Initialize `(v  1 e 1 0 ]
+"72
+[v _SPI1_Open SPI1_Open `(a  1 e 1 0 ]
 "92
 [v _SPI1_ExchangeByte SPI1_ExchangeByte `(uc  1 e 1 0 ]
 "100
 [v _SPI1_ExchangeBlock SPI1_ExchangeBlock `(v  1 e 1 0 ]
+[v i1_SPI1_ExchangeBlock SPI1_ExchangeBlock `(v  1 e 1 0 ]
 "64 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/tmr0.c
 [v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
 "108
@@ -209,7 +227,6 @@ channel_FVR 31
 [v i1_TMR4_StartTimer TMR4_StartTimer `(v  1 e 1 0 ]
 "108
 [v _TMR4_WriteTimer TMR4_WriteTimer `(v  1 e 1 0 ]
-[v i1_TMR4_WriteTimer TMR4_WriteTimer `(v  1 e 1 0 ]
 "119
 [v _TMR4_ISR TMR4_ISR `(v  1 e 1 0 ]
 "137
@@ -218,41 +235,41 @@ channel_FVR 31
 [v _TMR4_SetInterruptHandler TMR4_SetInterruptHandler `(v  1 e 1 0 ]
 "151
 [v _TMR4_DefaultInterruptHandler TMR4_DefaultInterruptHandler `(v  1 e 1 0 ]
-"30 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X/main.h
+"29 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X/main.h
 [v _matrix_conf matrix_conf `DC[12]uc  1 e 12 0 ]
-"44
+"43
 [v _state state `E2661  1 e 1 0 ]
-"45
+"44
 [v _mov mov `E2669  1 e 1 0 ]
-"48
+"47
 [v _rxValue rxValue `uc  1 e 1 0 ]
-"51
+"50
 [v _contComandos contComandos `uc  1 e 1 0 ]
-"54
+"53
 [v _pulsoEncoder pulsoEncoder `uc  1 e 1 0 ]
-"55
+"54
 [v _velocidadeMotor velocidadeMotor `f  1 e 4 0 ]
-"60
+"59
 [v _origem origem `uc  1 e 1 0 ]
 [v _oTemp oTemp `uc  1 e 1 0 ]
-"61
+"60
 [v _destino destino `uc  1 e 1 0 ]
 [v _dTemp dTemp `uc  1 e 1 0 ]
-"62
+"61
 [v _andarAtual andarAtual `uc  1 e 1 0 ]
-"63
+"62
 [v _altura altura `uc  1 e 1 0 ]
-"64
+"63
 [v _temperatura temperatura `us  1 e 2 0 ]
-"65
+"64
 [v _motor motor `uc  1 e 1 0 ]
-"66
+"65
 [v _subindo subindo `a  1 e 1 0 ]
-"67
+"66
 [v _MatrixLed MatrixLed `[8]uc  1 e 8 0 ]
-"68
+"67
 [v _destinoSub destinoSub `uc  1 e 1 0 ]
-"69
+"68
 [v _destinoDesc destinoDesc `uc  1 e 1 0 ]
 [s S385 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
@@ -455,7 +472,7 @@ channel_FVR 31
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @158 ]
 "2039
 [v _LATA LATA `VEuc  1 e 1 @268 ]
-[s S1484 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S1482 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 LATA3 1 0 :1:3 
@@ -465,11 +482,11 @@ channel_FVR 31
 `uc 1 LATA7 1 0 :1:7 
 ]
 "2056
-[u S1493 . 1 `S1484 1 . 1 0 ]
-[v _LATAbits LATAbits `VES1493  1 e 1 @268 ]
+[u S1491 . 1 `S1482 1 . 1 0 ]
+[v _LATAbits LATAbits `VES1491  1 e 1 @268 ]
 "2096
 [v _LATB LATB `VEuc  1 e 1 @269 ]
-[s S1461 . 1 `uc 1 LATB0 1 0 :1:0 
+[s S1459 . 1 `uc 1 LATB0 1 0 :1:0 
 `uc 1 LATB1 1 0 :1:1 
 `uc 1 LATB2 1 0 :1:2 
 `uc 1 LATB3 1 0 :1:3 
@@ -479,8 +496,8 @@ channel_FVR 31
 `uc 1 LATB7 1 0 :1:7 
 ]
 "2113
-[u S1470 . 1 `S1461 1 . 1 0 ]
-[v _LATBbits LATBbits `VES1470  1 e 1 @269 ]
+[u S1468 . 1 `S1459 1 . 1 0 ]
+[v _LATBbits LATBbits `VES1468  1 e 1 @269 ]
 "2158
 [v _CM1CON0 CM1CON0 `VEuc  1 e 1 @273 ]
 "2215
@@ -711,41 +728,83 @@ channel_FVR 31
 [v _timer1ReloadVal timer1ReloadVal `VEus  1 e 2 0 ]
 "58 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/tmr4.c
 [v _TMR4_InterruptHandler TMR4_InterruptHandler `*.37(v  1 e 2 0 ]
-"419 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
+"473 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"485
+"539
 } 0
-"18
+"20
 [v _organizaTrajeto organizaTrajeto `(v  1 e 1 0 ]
 {
-"20
-[v organizaTrajeto@mascaraDestino mascaraDestino `uc  1 a 1 1 ]
-"19
-[v organizaTrajeto@mascaraOrigem mascaraOrigem `uc  1 a 1 0 ]
-"42
+"22
+[v organizaTrajeto@mascaraDestino mascaraDestino `uc  1 a 1 10 ]
+"21
+[v organizaTrajeto@mascaraOrigem mascaraOrigem `uc  1 a 1 9 ]
+"41
 } 0
-"108 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/tmr4.c
-[v _TMR4_WriteTimer TMR4_WriteTimer `(v  1 e 1 0 ]
-{
-[v TMR4_WriteTimer@timerVal timerVal `uc  1 a 1 wreg ]
-[v TMR4_WriteTimer@timerVal timerVal `uc  1 a 1 wreg ]
-"111
-[v TMR4_WriteTimer@timerVal timerVal `uc  1 a 1 8 ]
-"112
-} 0
-"47 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
+"63
 [v _isValidFloor isValidFloor `(a  1 e 1 0 ]
 {
 [v isValidFloor@floor floor `uc  1 a 1 wreg ]
 [v isValidFloor@floor floor `uc  1 a 1 wreg ]
 [v isValidFloor@floor floor `uc  1 a 1 9 ]
-"49
+"65
 } 0
-"265
+"216
+[v _initMatrix initMatrix `(v  1 e 1 0 ]
+{
+"223
+[v initMatrix@j j `uc  1 a 1 7 ]
+"222
+[v initMatrix@i_1618 i `uc  1 a 1 6 ]
+"219
+[v initMatrix@i i `uc  1 a 1 5 ]
+"217
+[v initMatrix@data data `[4]uc  1 a 4 0 ]
+"218
+[v initMatrix@k k `uc  1 a 1 4 ]
+"233
+} 0
+"310
 [v _chegadaS1 chegadaS1 `(v  1 e 1 0 ]
 {
-"293
+"339
+} 0
+"190
+[v _matrixUpdate matrixUpdate `(v  1 e 1 0 ]
+{
+"193
+[v matrixUpdate@i i `uc  1 a 1 2 ]
+"191
+[v matrixUpdate@data data `[2]uc  1 a 2 0 ]
+"209
+} 0
+"179
+[v _txSpi txSpi `(v  1 e 1 0 ]
+{
+[v txSpi@data data `*.5uc  1 a 1 wreg ]
+[v txSpi@data data `*.5uc  1 a 1 wreg ]
+[v txSpi@dataSize dataSize `ui  1 p 2 13 ]
+[v txSpi@data data `*.5uc  1 a 1 15 ]
+"183
+} 0
+"100 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/spi1.c
+[v _SPI1_ExchangeBlock SPI1_ExchangeBlock `(v  1 e 1 0 ]
+{
+[v SPI1_ExchangeBlock@block block `*.5v  1 a 1 wreg ]
+"102
+[v SPI1_ExchangeBlock@data data `*.5uc  1 a 1 12 ]
+"100
+[v SPI1_ExchangeBlock@block block `*.5v  1 a 1 wreg ]
+[v SPI1_ExchangeBlock@blockSize blockSize `ui  1 p 2 8 ]
+"102
+[v SPI1_ExchangeBlock@block block `*.5v  1 a 1 11 ]
+"110
+} 0
+"297 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
+[v _apagaFlag apagaFlag `(v  1 e 1 0 ]
+{
+"303
 } 0
 "87 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/tmr4.c
 [v _TMR4_StartTimer TMR4_StartTimer `(v  1 e 1 0 ]
@@ -880,6 +939,15 @@ channel_FVR 31
 {
 "83
 } 0
+"72 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/spi1.c
+[v _SPI1_Open SPI1_Open `(a  1 e 1 0 ]
+{
+[v SPI1_Open@spi1UniqueConfiguration spi1UniqueConfiguration `E358  1 a 1 wreg ]
+[v SPI1_Open@spi1UniqueConfiguration spi1UniqueConfiguration `E358  1 a 1 wreg ]
+"74
+[v SPI1_Open@spi1UniqueConfiguration spi1UniqueConfiguration `E358  1 a 1 11 ]
+"85
+} 0
 "99 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/eusart.c
 [v _EUSART_is_rx_ready EUSART_is_rx_ready `(a  1 e 1 0 ]
 {
@@ -912,12 +980,12 @@ channel_FVR 31
 {
 "154
 } 0
-"210 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
+"240 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
 [v _controleMovimento controleMovimento `(v  1 e 1 0 ]
 {
-"211
+"241
 [v controleMovimento@cont cont `uc  1 s 1 cont ]
-"260
+"290
 } 0
 "108 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/tmr0.c
 [v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
@@ -936,35 +1004,35 @@ channel_FVR 31
 {
 "147
 } 0
-"62 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
+"81 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
 [v _sendInfo sendInfo `(v  1 e 1 0 ]
 {
-"75
+"94
 [v sendInfo@v v `uc  1 a 1 3 ]
-"74
+"93
 [v sendInfo@i i `uc  1 a 1 2 ]
-[s S1442 . 2 `uc 1 num4 1 0 :4:0 
+[s S1440 . 2 `uc 1 num4 1 0 :4:0 
 `uc 1 num3 1 0 :4:4 
 `uc 1 num2 1 1 :4:0 
 `uc 1 num1 1 1 :4:4 
 ]
-"63
-[u S1447 . 2 `us 1 v 2 0 `S1442 1 . 2 0 ]
-[v sendInfo@bcd bcd `S1447  1 a 2 6 ]
-"66
+"82
+[u S1445 . 2 `us 1 v 2 0 `S1440 1 . 2 0 ]
+[v sendInfo@bcd bcd `S1445  1 a 2 6 ]
+"85
 [v sendInfo@velocidade velocidade `us  1 a 2 0 ]
-"67
+"86
 [v sendInfo@mascara mascara `uc  1 a 1 5 ]
-"65
+"84
 [v sendInfo@destinoAtual destinoAtual `uc  1 a 1 4 ]
-"64
+"83
 [v sendInfo@aux_altura aux_altura `uc  1 s 1 aux_altura ]
-"140
+"159
 } 0
-"55
+"72
 [v _calcTemp calcTemp `(us  1 e 2 0 ]
 {
-"57
+"74
 } 0
 "10 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
@@ -994,17 +1062,17 @@ channel_FVR 31
 "8 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S1981 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S1989 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S1986 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S1989 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1981 1 fAsBytes 4 0 `S1986 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1989  1 a 4 52 ]
+[s S1994 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S1997 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1989 1 fAsBytes 4 0 `S1994 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1997  1 a 4 52 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 46 ]
-[s S2058 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S2066 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S2061 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S2058 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S2061  1 a 2 56 ]
+[u S2069 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S2066 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S2069  1 a 2 56 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 51 ]
 "11
@@ -1064,7 +1132,7 @@ channel_FVR 31
 {
 "25
 [v bin2bcd@i i `uc  1 a 1 4 ]
-[s S1646 . 4 `uc 1 . 1 0 :8:0 
+[s S1654 . 4 `uc 1 . 1 0 :8:0 
 `uc 1 . 1 1 :4:0 
 `uc 1 d3 1 1 :4:4 
 `uc 1 d2 1 2 :4:0 
@@ -1073,8 +1141,8 @@ channel_FVR 31
 `uc 1 . 1 3 :4:4 
 ]
 "22
-[u S1654 . 4 `ul 1 shift 4 0 `S1646 1 dat 4 0 ]
-[v bin2bcd@dataU dataU `S1654  1 a 4 5 ]
+[u S1662 . 4 `ul 1 shift 4 0 `S1654 1 dat 4 0 ]
+[v bin2bcd@dataU dataU `S1662  1 a 4 5 ]
 "10
 [v bin2bcd@binVal binVal `us  1 p 2 10 ]
 "41
@@ -1124,10 +1192,10 @@ channel_FVR 31
 {
 "191
 } 0
-"298 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
+"346 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
 [v _chegadaS2 chegadaS2 `(v  1 e 1 0 ]
 {
-"333
+"384
 } 0
 "136 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/pin_manager.c
 [v _IOCBF0_ISR IOCBF0_ISR `(v  1 e 1 0 ]
@@ -1139,44 +1207,80 @@ channel_FVR 31
 {
 "161
 } 0
-"265 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
+"310 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
 [v i1_chegadaS1 chegadaS1 `(v  1 e 1 0 ]
 {
-"293
+"339
 } 0
 "86 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/cmp2.c
 [v _CMP2_ISR CMP2_ISR `(v  1 e 1 0 ]
 {
 "91
 } 0
-"377 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
+"431 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
 [v _chegadaS4 chegadaS4 `(v  1 e 1 0 ]
 {
-"414
+"468
 } 0
 "86 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/cmp1.c
 [v _CMP1_ISR CMP1_ISR `(v  1 e 1 0 ]
 {
 "91
 } 0
-"338 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
+"391 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
 [v _chegadaS3 chegadaS3 `(v  1 e 1 0 ]
 {
-"372
+"424
 } 0
-"108 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/tmr4.c
-[v i1_TMR4_WriteTimer TMR4_WriteTimer `(v  1 e 1 0 ]
+"190
+[v i1_matrixUpdate matrixUpdate `(v  1 e 1 0 ]
 {
-[v i1TMR4_WriteTimer@timerVal timerVal `uc  1 a 1 wreg ]
-[v i1TMR4_WriteTimer@timerVal timerVal `uc  1 a 1 wreg ]
-"111
-[v i1TMR4_WriteTimer@timerVal timerVal `uc  1 a 1 0 ]
-"112
+"191
+[v i1matrixUpdate@data data `[2]uc  1 a 2 10 ]
+"193
+[v i1matrixUpdate@i i `uc  1 a 1 12 ]
+"209
 } 0
-"87
+"179
+[v i1_txSpi txSpi `(v  1 e 1 0 ]
+{
+[v i1txSpi@data data `*.39uc  1 p 2 6 ]
+[v i1txSpi@dataSize dataSize `ui  1 p 2 8 ]
+"183
+} 0
+"100 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/spi1.c
+[v i1_SPI1_ExchangeBlock SPI1_ExchangeBlock `(v  1 e 1 0 ]
+{
+"102
+[v i1SPI1_ExchangeBlock@data data `*.39uc  1 a 2 4 ]
+"100
+[v i1SPI1_ExchangeBlock@block block `*.39v  1 p 2 0 ]
+[v i1SPI1_ExchangeBlock@blockSize blockSize `ui  1 p 2 2 ]
+"110
+} 0
+"297 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
+[v i1_apagaFlag apagaFlag `(v  1 e 1 0 ]
+{
+"303
+} 0
+"87 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/tmr4.c
 [v i1_TMR4_StartTimer TMR4_StartTimer `(v  1 e 1 0 ]
 {
 "91
+} 0
+"48 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
+[v _alteraSentido alteraSentido `(v  1 e 1 0 ]
+{
+"56
+} 0
+"108 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/tmr4.c
+[v _TMR4_WriteTimer TMR4_WriteTimer `(v  1 e 1 0 ]
+{
+[v TMR4_WriteTimer@timerVal timerVal `uc  1 a 1 wreg ]
+[v TMR4_WriteTimer@timerVal timerVal `uc  1 a 1 wreg ]
+"111
+[v TMR4_WriteTimer@timerVal timerVal `uc  1 a 1 0 ]
+"112
 } 0
 "82 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/pwm3.c
 [v _PWM3_LoadDutyValue PWM3_LoadDutyValue `(v  1 e 1 0 ]
@@ -1200,8 +1304,8 @@ channel_FVR 31
 [v CCP4_DefaultCallBack@capturedValue capturedValue `us  1 p 2 0 ]
 "63
 } 0
-"145 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
+"166 C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
 [v _interrupcaoCCP4 interrupcaoCCP4 `(v  1 e 1 0 ]
 {
-"151
+"172
 } 0

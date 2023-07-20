@@ -4755,7 +4755,7 @@ void WDT_Initialize(void);
 # 11 "main.c" 2
 
 # 1 "./main.h" 1
-# 16 "./main.h"
+# 15 "./main.h"
 # 1 "./bin2bcd.h" 1
 # 11 "./bin2bcd.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.41\\pic\\include\\c99\\string.h" 1 3
@@ -4839,7 +4839,7 @@ typedef union{
 
 
 uint16_t bin2bcd(uint16_t binVal);
-# 16 "./main.h" 2
+# 15 "./main.h" 2
 
 
 
@@ -4894,9 +4894,11 @@ _Bool subindo = 1;
 uint8_t MatrixLed[8];
 uint8_t destinoSub= 0b00000000;
 uint8_t destinoDesc= 0b00000000;
-# 78 "./main.h"
+
+
+
 _Bool isValidFloor(char floor);
-# 96 "./main.h"
+
 void sendInfo(void);
 
 void organizaTrajeto();
@@ -4921,6 +4923,8 @@ void controleMovimento();
 
 
 
+
+
 void organizaTrajeto(){
     uint8_t mascaraOrigem = 1<<origem;
     uint8_t mascaraDestino = 1<<destino;
@@ -4935,17 +4939,31 @@ void organizaTrajeto(){
         destinoDesc = destinoDesc| mascaraDestino;
     }
 
-    if (mov == RetornaS0)
+    if (origem < andarAtual)
     {
-        mov = EmTrajeto;
-
-        TMR4_WriteTimer(0);
-        TMR4_StartTimer;
+        mov = RetornaS0;
     }else{
-        mov = EmTrajeto;
+      mov = EmTrajeto;
     }
 
 }
+
+
+
+
+
+
+void alteraSentido(){
+    if (destinoSub != 0 && mov == RetornaS0)
+    {
+        mov = EmTrajeto;
+    }else if(destinoDesc ==0 && destinoSub == 0){
+        mov = Espera;
+    }
+
+}
+
+
 
 
 
@@ -4958,9 +4976,12 @@ _Bool isValidFloor(char floor){
 
 
 
+
 uint16_t calcTemp(){
     return ((ADC_GetConversion(2) / 1024.f) * 999);
 }
+
+
 
 
 
@@ -5003,11 +5024,11 @@ void sendInfo(){
             destinoAtual = 3;
             break;
         default:
-            destinoAtual = 4;
+            destinoAtual = 0;
     }
 
     altura = (1.5 * pulsoEncoder);
-    velocidadeMotor = (abs(altura - aux_altura)/ 300.f) * 1000;
+    velocidadeMotor = abs(altura - aux_altura)/ 0.300;
     velocidade = (uint16_t)(velocidadeMotor * 10);
     aux_altura = altura;
 
@@ -5015,9 +5036,9 @@ void sendInfo(){
 
     EUSART_Write('$');
 
-    EUSART_Write(0x30 + destinoAtual);
-    EUSART_Write(0x2C);
     EUSART_Write(0x30 + andarAtual);
+    EUSART_Write(0x2C);
+    EUSART_Write(0x30 + destinoAtual);
     EUSART_Write(0x2C);
     EUSART_Write(0x30 + motor);
 
@@ -5048,6 +5069,8 @@ void sendInfo(){
 
 
 
+
+
 void interrupcaoCCP4(){
     if (subindo){
         pulsoEncoder++;
@@ -5055,6 +5078,8 @@ void interrupcaoCCP4(){
         pulsoEncoder--;
     }
 }
+
+
 
 
 
@@ -5068,6 +5093,8 @@ void txSpi( uint8_t *data, size_t dataSize){
 
 
 
+
+
 void matrixUpdate(){
     uint8_t data[2];
     if (1){
@@ -5076,17 +5103,11 @@ void matrixUpdate(){
             data[1] = MatrixLed[i-1];
             txSpi(data, 2);
         }
-    }else{
-        uint8_t index = 7;
-        for(uint8_t i=1;i<9;i++){
-
-            data[0] = i;
-            data[1] = MatrixLed[index];
-            txSpi(data, 2);
-            index--;
-        }
     }
+# 209 "main.c"
 }
+
+
 
 
 
@@ -5103,12 +5124,14 @@ void initMatrix(){
             data[j+1]= matrix_conf[k+1];
         }
         k=k+2;
-        txSpi( data, 4);
+        txSpi(data, 4);
         if(i==4){
 
         }
     }
 }
+
+
 
 
 
@@ -5138,11 +5161,11 @@ void controleMovimento(){
             break;
     }
 
-    if(destinoSub != 0 ){
+    if(destinoSub != 0 && mov != RetornaS0){
 
         subindo = 1;
         do { LATAbits.LATA7 = 1; } while(0);
-        if(mov == EmTrajeto || mov == RetornaS0){
+        if(mov == EmTrajeto ){
             MatrixLed[5] = 0b01100000;
             MatrixLed[6] = 0b11000000;
             MatrixLed[7] = 0b01100000;
@@ -5162,8 +5185,23 @@ void controleMovimento(){
 
     MatrixLed[7] = MatrixLed[7] | destinoSub;
     MatrixLed[6] = MatrixLed[6] | destinoDesc;
-
+    matrixUpdate();
 }
+
+
+
+
+
+
+void apagaFlag(){
+    MatrixLed[5] = 0b00100000;
+    MatrixLed[6] = 0b00100000;
+    MatrixLed[7] = 0b00100000;
+    MatrixLed[7] = MatrixLed[7] | destinoSub;
+    MatrixLed[6] = MatrixLed[6] | destinoDesc;
+}
+
+
 
 
 
@@ -5181,9 +5219,9 @@ void chegadaS1(){
     MatrixLed[2] = 0b10000001;
     MatrixLed[3] = 0b01111110;
     MatrixLed[4] = 0;
-    MatrixLed[5] = 0b00100000;
-    MatrixLed[6] = 0b00100000;
-    MatrixLed[7] = 0b00100000;
+
+
+
     if(subindo){
         destinoSub = destinoSub & 0b11111110;
     }else{
@@ -5192,11 +5230,14 @@ void chegadaS1(){
 
         TMR4_StartTimer();
     }
+    apagaFlag();
+    matrixUpdate();
 
 
-    MatrixLed[7] = MatrixLed[7] | destinoSub;
-    MatrixLed[6] = MatrixLed[6] | destinoDesc;
+
 }
+
+
 
 
 
@@ -5219,9 +5260,9 @@ void chegadaS2(){
     MatrixLed[2] = 0b11111111;
     MatrixLed[3] = 0b00000001;
     MatrixLed[4] = 0;
-    MatrixLed[5] = 0b00100000;
-    MatrixLed[6] = 0b00100000;
-    MatrixLed[7] = 0b00100000;
+
+
+
     if(subindo){
         destinoSub = destinoSub & 0b11111101;
         mov = EmTrajeto;
@@ -5233,10 +5274,15 @@ void chegadaS2(){
             mov = RetornaS0;
         }
     }
-    MatrixLed[7] = MatrixLed[7] | destinoSub;
-    MatrixLed[6] = MatrixLed[6] | destinoDesc;
 
+    alteraSentido();
+
+
+    apagaFlag();
+    matrixUpdate();
 }
+
+
 
 
 
@@ -5259,23 +5305,24 @@ void chegadaS3(){
     MatrixLed[2] = 0b10001001;
     MatrixLed[3] = 0b01110001;
     MatrixLed[4] = 0;
-   MatrixLed[5] = 0b00100000;
-    MatrixLed[6] = 0b00100000;
-    MatrixLed[7] = 0b00100000;
+
+
+
     if(subindo){
         destinoSub = destinoSub & 0b11111011;
     }else{
         destinoDesc = destinoDesc & 0b11111011;
     }
-    MatrixLed[7] = MatrixLed[7] | destinoSub;
-    MatrixLed[6] = MatrixLed[6] | destinoDesc;
 
 
+    apagaFlag();
+    matrixUpdate();
 
-    if(destinoDesc ==0 && destinoSub == 0){
-        mov = RetornaS0;
-    }
+
+    alteraSentido();
 }
+
+
 
 
 
@@ -5299,22 +5346,22 @@ void chegadaS4(){
     MatrixLed[2] = 0b10010001;
     MatrixLed[3] = 0b01101110;
     MatrixLed[4] = 0;
-    MatrixLed[5] = 0b00100000;
-    MatrixLed[6] = 0b00100000;
-    MatrixLed[7] = 0b00100000;
+
+
+
     if(subindo){
         destinoSub = destinoSub & 0b11110111;
     }else{
         destinoDesc = destinoDesc & 0b11110111;
     }
-    MatrixLed[7] = MatrixLed[7] | destinoSub;
-    MatrixLed[6] = MatrixLed[6] | destinoDesc;
 
 
+    apagaFlag();
+    matrixUpdate();
 
-    if(destinoDesc ==0 && destinoSub == 0){
-        mov = RetornaS0;
-    }else if(destinoSub != 0 ){
+
+    alteraSentido();
+    if(destinoSub != 0 ){
         destinoSub = 0;
     }
 }
@@ -5338,8 +5385,8 @@ void main(void)
 
 
     do { LATBbits.LATB1 = 1; } while(0);
-
-
+    SPI1_Open(SPI1_DEFAULT);
+    initMatrix();
 
     (INTCONbits.GIE = 1);
     (INTCONbits.PEIE = 1);

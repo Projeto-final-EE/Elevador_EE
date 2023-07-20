@@ -1,0 +1,67 @@
+\doxysection{cmp2.\+c}
+\hypertarget{cmp2_8c_source}{}\label{cmp2_8c_source}\index{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/mcc\_generated\_files/cmp2.c@{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/mcc\_generated\_files/cmp2.c}}
+\mbox{\hyperlink{cmp2_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00024}00024\ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00025}00025\ \textcolor{comment}{\ \ \ \ (c)\ 2018\ Microchip\ Technology\ Inc.\ and\ its\ subsidiaries.\ }}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00026}00026\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00027}00027\ \textcolor{comment}{\ \ \ \ Subject\ to\ your\ compliance\ with\ these\ terms,\ you\ may\ use\ Microchip\ software\ and\ any\ }}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00028}00028\ \textcolor{comment}{\ \ \ \ derivatives\ exclusively\ with\ Microchip\ products.\ It\ is\ your\ responsibility\ to\ comply\ with\ third\ party\ }}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00029}00029\ \textcolor{comment}{\ \ \ \ license\ terms\ applicable\ to\ your\ use\ of\ third\ party\ software\ (including\ open\ source\ software)\ that\ }}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00030}00030\ \textcolor{comment}{\ \ \ \ may\ accompany\ Microchip\ software.}}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00031}00031\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00032}00032\ \textcolor{comment}{\ \ \ \ THIS\ SOFTWARE\ IS\ SUPPLIED\ BY\ MICROCHIP\ "{}AS\ IS"{}.\ NO\ WARRANTIES,\ WHETHER\ }}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00033}00033\ \textcolor{comment}{\ \ \ \ EXPRESS,\ IMPLIED\ OR\ STATUTORY,\ APPLY\ TO\ THIS\ SOFTWARE,\ INCLUDING\ ANY\ }}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00034}00034\ \textcolor{comment}{\ \ \ \ IMPLIED\ WARRANTIES\ OF\ NON-\/INFRINGEMENT,\ MERCHANTABILITY,\ AND\ FITNESS\ }}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00035}00035\ \textcolor{comment}{\ \ \ \ FOR\ A\ PARTICULAR\ PURPOSE.}}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00036}00036\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00037}00037\ \textcolor{comment}{\ \ \ \ IN\ NO\ EVENT\ WILL\ MICROCHIP\ BE\ LIABLE\ FOR\ ANY\ INDIRECT,\ SPECIAL,\ PUNITIVE,\ }}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00038}00038\ \textcolor{comment}{\ \ \ \ INCIDENTAL\ OR\ CONSEQUENTIAL\ LOSS,\ DAMAGE,\ COST\ OR\ EXPENSE\ OF\ ANY\ KIND\ }}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00039}00039\ \textcolor{comment}{\ \ \ \ WHATSOEVER\ RELATED\ TO\ THE\ SOFTWARE,\ HOWEVER\ CAUSED,\ EVEN\ IF\ MICROCHIP\ }}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00040}00040\ \textcolor{comment}{\ \ \ \ HAS\ BEEN\ ADVISED\ OF\ THE\ POSSIBILITY\ OR\ THE\ DAMAGES\ ARE\ FORESEEABLE.\ TO\ }}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00041}00041\ \textcolor{comment}{\ \ \ \ THE\ FULLEST\ EXTENT\ ALLOWED\ BY\ LAW,\ MICROCHIP'S\ TOTAL\ LIABILITY\ ON\ ALL\ }}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00042}00042\ \textcolor{comment}{\ \ \ \ CLAIMS\ IN\ ANY\ WAY\ RELATED\ TO\ THIS\ SOFTWARE\ WILL\ NOT\ EXCEED\ THE\ AMOUNT\ }}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00043}00043\ \textcolor{comment}{\ \ \ \ OF\ FEES,\ IF\ ANY,\ THAT\ YOU\ HAVE\ PAID\ DIRECTLY\ TO\ MICROCHIP\ FOR\ THIS\ }}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00044}00044\ \textcolor{comment}{\ \ \ \ SOFTWARE.}}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00045}00045\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00046}00046\ \ }
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00052}00052\ \textcolor{preprocessor}{\#include\ <xc.h>}}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00053}00053\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{cmp2_8h}{cmp2.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00054}00054\ \textcolor{preprocessor}{\#include"{}../main.h"{}}}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00059}\mbox{\hyperlink{cmp2_8c_a6e9b9e6aa4b7a2aad99d146769cd740a}{00059}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{cmp2_8c_a6e9b9e6aa4b7a2aad99d146769cd740a}{CMP2\_Initialize}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00060}00060\ \{}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00061}00061\ \ \ \ \ \textcolor{comment}{/*\ Disable\ CMP2\ interrupt\ before\ configuring\ the\ CMP2}}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00062}00062\ \textcolor{comment}{\ \ \ \ \ \ \ control\ register.\ Although\ a\ comparator\ is\ disabled,\ an\ interrupt\ can\ be}}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00063}00063\ \textcolor{comment}{\ \ \ \ \ \ \ generated\ by\ changing\ the\ output\ polarity\ with\ the\ CxPOL\ bit\ of\ the}}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00064}00064\ \textcolor{comment}{\ \ \ \ \ \ \ CMxCON0\ register,or\ by\ switching\ the\ comparator\ on\ or\ off\ with\ the\ CxON}}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00065}00065\ \textcolor{comment}{\ \ \ \ \ \ \ bit\ of\ the\ CMxCON0\ register.*/}}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00066}00066\ \ \ \ \ PIE2bits.C2IE\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00068}00068\ \ \ \ \ \textcolor{comment}{//\ C2HYS\ disabled;\ C2SP\ hi\_speed;\ C2ON\ enabled;\ C2POL\ not\ inverted;\ C2OE\ COUT\_internal;\ C2SYNC\ asynchronous;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00069}00069\ \ \ \ \ CM2CON0\ =\ 0x84;}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00070}00070\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00071}00071\ \ \ \ \ \textcolor{comment}{//\ C2INTN\ intFlag\_neg;\ C2INTP\ no\_intFlag;\ C2PCH\ FVR;\ C2NCH\ CIN1-\/;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00072}00072\ \ \ \ \ CM2CON1\ =\ 0xA1;}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00073}00073\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00074}00074\ \ \ \ \ \textcolor{comment}{//\ Clearing\ IF\ flag\ before\ enabling\ the\ interrupt.}}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00075}00075\ \ \ \ \ PIR2bits.C2IF\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00077}00077\ \ \ \ \ \textcolor{comment}{//\ Enabling\ CMP2\ interrupt.}}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00078}00078\ \ \ \ \ PIE2bits.C2IE\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00079}00079\ \}}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00081}\mbox{\hyperlink{cmp2_8c_a6d07b297bdaecac831b6e467baf247f8}{00081}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{cmp2_8c_a6d07b297bdaecac831b6e467baf247f8}{CMP2\_GetOutputStatus}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00082}00082\ \{}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00083}00083\ \ \ \ \ \textcolor{keywordflow}{return}\ (CMOUTbits.MC2OUT);}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00084}00084\ \}}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00086}\mbox{\hyperlink{cmp2_8c_ac2b6da7ffc7af123b0c46cf4283fe1f5}{00086}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{cmp2_8c_ac2b6da7ffc7af123b0c46cf4283fe1f5}{CMP2\_ISR}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00087}00087\ \{}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00088}00088\ \ \ \ \ \textcolor{comment}{//\ clear\ the\ CMP2\ interrupt\ flag}}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00089}00089\ \ \ \ \ PIR2bits.C2IF\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00090}00090\ \ \ \ \ \mbox{\hyperlink{main_8c_a080ba43c6b8672c73631b8c3b10945dd}{chegadaS4}}();}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00091}00091\ \}}
+\DoxyCodeLine{\Hypertarget{cmp2_8c_source_l00092}00092\ }
+
+\end{DoxyCode}

@@ -1,0 +1,165 @@
+\doxysection{C\+:/\+Users/thali/\+Documents/\+Elevador\+\_\+\+EE/\+Projeto\+Final.X/mcc\+\_\+generated\+\_\+files/pin\+\_\+manager.c File Reference}
+\hypertarget{pin__manager_8c}{}\label{pin__manager_8c}\index{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/mcc\_generated\_files/pin\_manager.c@{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/mcc\_generated\_files/pin\_manager.c}}
+{\ttfamily \#include \"{}pin\+\_\+manager.\+h\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{pin__manager_8c_a50357774183a136d9490f64ad0d5c6cb}{PIN\+\_\+\+MANAGER\+\_\+\+Initialize}} (void)
+\item 
+void \mbox{\hyperlink{pin__manager_8c_a6ff320d017cf9b99ba9045f24d7ec896}{PIN\+\_\+\+MANAGER\+\_\+\+IOC}} (void)
+\item 
+void \mbox{\hyperlink{pin__manager_8c_af604943b8a79191100d2c31fecadbb76}{IOCBF0\+\_\+\+ISR}} (void)
+\item 
+void \mbox{\hyperlink{pin__manager_8c_a1fa094f74ec24d587df5fd9e546e55a2}{IOCBF0\+\_\+\+Set\+Interrupt\+Handler}} (void(\texorpdfstring{$\ast$}{*}Interrupt\+Handler)(void))
+\item 
+void \mbox{\hyperlink{pin__manager_8c_a7785df331b1ef41d8cb46f09192cff38}{IOCBF0\+\_\+\+Default\+Interrupt\+Handler}} (void)
+\item 
+void \mbox{\hyperlink{pin__manager_8c_a2d089cba024a3068b33fcaadeb42df12}{IOCBF3\+\_\+\+ISR}} (void)
+\item 
+void \mbox{\hyperlink{pin__manager_8c_abc46d8993ed4544cd83fc6ccb8f68d67}{IOCBF3\+\_\+\+Set\+Interrupt\+Handler}} (void(\texorpdfstring{$\ast$}{*}Interrupt\+Handler)(void))
+\item 
+void \mbox{\hyperlink{pin__manager_8c_a1a8f2c2e2614db62356a2266be7d69a7}{IOCBF3\+\_\+\+Default\+Interrupt\+Handler}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{pin__manager_8c_a92d7bae0fe36ddceb78cb19f7ccc783e}{IOCBF0\+\_\+\+Interrupt\+Handler}} )(void)
+\item 
+void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{pin__manager_8c_a4ca917d8a807b2ee336126626618cac4}{IOCBF3\+\_\+\+Interrupt\+Handler}} )(void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{pin__manager_8c_a7785df331b1ef41d8cb46f09192cff38}\label{pin__manager_8c_a7785df331b1ef41d8cb46f09192cff38} 
+\index{pin\_manager.c@{pin\_manager.c}!IOCBF0\_DefaultInterruptHandler@{IOCBF0\_DefaultInterruptHandler}}
+\index{IOCBF0\_DefaultInterruptHandler@{IOCBF0\_DefaultInterruptHandler}!pin\_manager.c@{pin\_manager.c}}
+\doxysubsubsection{\texorpdfstring{IOCBF0\_DefaultInterruptHandler()}{IOCBF0\_DefaultInterruptHandler()}}
+{\footnotesize\ttfamily void IOCBF0\+\_\+\+Default\+Interrupt\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Default interrupt handler for IOCBF0 
+
+Definition at line \mbox{\hyperlink{pin__manager_8c_source_l00158}{158}} of file \mbox{\hyperlink{pin__manager_8c_source}{pin\+\_\+manager.\+c}}.
+
+\Hypertarget{pin__manager_8c_af604943b8a79191100d2c31fecadbb76}\label{pin__manager_8c_af604943b8a79191100d2c31fecadbb76} 
+\index{pin\_manager.c@{pin\_manager.c}!IOCBF0\_ISR@{IOCBF0\_ISR}}
+\index{IOCBF0\_ISR@{IOCBF0\_ISR}!pin\_manager.c@{pin\_manager.c}}
+\doxysubsubsection{\texorpdfstring{IOCBF0\_ISR()}{IOCBF0\_ISR()}}
+{\footnotesize\ttfamily void IOCBF0\+\_\+\+ISR (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+IOCBF0 Interrupt Service Routine 
+
+Definition at line \mbox{\hyperlink{pin__manager_8c_source_l00136}{136}} of file \mbox{\hyperlink{pin__manager_8c_source}{pin\+\_\+manager.\+c}}.
+
+\Hypertarget{pin__manager_8c_a1fa094f74ec24d587df5fd9e546e55a2}\label{pin__manager_8c_a1fa094f74ec24d587df5fd9e546e55a2} 
+\index{pin\_manager.c@{pin\_manager.c}!IOCBF0\_SetInterruptHandler@{IOCBF0\_SetInterruptHandler}}
+\index{IOCBF0\_SetInterruptHandler@{IOCBF0\_SetInterruptHandler}!pin\_manager.c@{pin\_manager.c}}
+\doxysubsubsection{\texorpdfstring{IOCBF0\_SetInterruptHandler()}{IOCBF0\_SetInterruptHandler()}}
+{\footnotesize\ttfamily void IOCBF0\+\_\+\+Set\+Interrupt\+Handler (\begin{DoxyParamCaption}\item[{void(\texorpdfstring{$\ast$}{*})(void)}]{Interrupt\+Handler }\end{DoxyParamCaption})}
+
+Allows selecting an interrupt handler for IOCBF0 at application runtime 
+
+Definition at line \mbox{\hyperlink{pin__manager_8c_source_l00151}{151}} of file \mbox{\hyperlink{pin__manager_8c_source}{pin\+\_\+manager.\+c}}.
+
+\Hypertarget{pin__manager_8c_a1a8f2c2e2614db62356a2266be7d69a7}\label{pin__manager_8c_a1a8f2c2e2614db62356a2266be7d69a7} 
+\index{pin\_manager.c@{pin\_manager.c}!IOCBF3\_DefaultInterruptHandler@{IOCBF3\_DefaultInterruptHandler}}
+\index{IOCBF3\_DefaultInterruptHandler@{IOCBF3\_DefaultInterruptHandler}!pin\_manager.c@{pin\_manager.c}}
+\doxysubsubsection{\texorpdfstring{IOCBF3\_DefaultInterruptHandler()}{IOCBF3\_DefaultInterruptHandler()}}
+{\footnotesize\ttfamily void IOCBF3\+\_\+\+Default\+Interrupt\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Default interrupt handler for IOCBF3 
+
+Definition at line \mbox{\hyperlink{pin__manager_8c_source_l00188}{188}} of file \mbox{\hyperlink{pin__manager_8c_source}{pin\+\_\+manager.\+c}}.
+
+\Hypertarget{pin__manager_8c_a2d089cba024a3068b33fcaadeb42df12}\label{pin__manager_8c_a2d089cba024a3068b33fcaadeb42df12} 
+\index{pin\_manager.c@{pin\_manager.c}!IOCBF3\_ISR@{IOCBF3\_ISR}}
+\index{IOCBF3\_ISR@{IOCBF3\_ISR}!pin\_manager.c@{pin\_manager.c}}
+\doxysubsubsection{\texorpdfstring{IOCBF3\_ISR()}{IOCBF3\_ISR()}}
+{\footnotesize\ttfamily void IOCBF3\+\_\+\+ISR (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+IOCBF3 Interrupt Service Routine 
+
+Definition at line \mbox{\hyperlink{pin__manager_8c_source_l00166}{166}} of file \mbox{\hyperlink{pin__manager_8c_source}{pin\+\_\+manager.\+c}}.
+
+\Hypertarget{pin__manager_8c_abc46d8993ed4544cd83fc6ccb8f68d67}\label{pin__manager_8c_abc46d8993ed4544cd83fc6ccb8f68d67} 
+\index{pin\_manager.c@{pin\_manager.c}!IOCBF3\_SetInterruptHandler@{IOCBF3\_SetInterruptHandler}}
+\index{IOCBF3\_SetInterruptHandler@{IOCBF3\_SetInterruptHandler}!pin\_manager.c@{pin\_manager.c}}
+\doxysubsubsection{\texorpdfstring{IOCBF3\_SetInterruptHandler()}{IOCBF3\_SetInterruptHandler()}}
+{\footnotesize\ttfamily void IOCBF3\+\_\+\+Set\+Interrupt\+Handler (\begin{DoxyParamCaption}\item[{void(\texorpdfstring{$\ast$}{*})(void)}]{Interrupt\+Handler }\end{DoxyParamCaption})}
+
+Allows selecting an interrupt handler for IOCBF3 at application runtime 
+
+Definition at line \mbox{\hyperlink{pin__manager_8c_source_l00181}{181}} of file \mbox{\hyperlink{pin__manager_8c_source}{pin\+\_\+manager.\+c}}.
+
+\Hypertarget{pin__manager_8c_a50357774183a136d9490f64ad0d5c6cb}\label{pin__manager_8c_a50357774183a136d9490f64ad0d5c6cb} 
+\index{pin\_manager.c@{pin\_manager.c}!PIN\_MANAGER\_Initialize@{PIN\_MANAGER\_Initialize}}
+\index{PIN\_MANAGER\_Initialize@{PIN\_MANAGER\_Initialize}!pin\_manager.c@{pin\_manager.c}}
+\doxysubsubsection{\texorpdfstring{PIN\_MANAGER\_Initialize()}{PIN\_MANAGER\_Initialize()}}
+{\footnotesize\ttfamily void PIN\+\_\+\+MANAGER\+\_\+\+Initialize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Param none @\+Returns none @\+Description GPIO and peripheral I/O initialization @\+Example \doxylink{pin__manager_8h_a50357774183a136d9490f64ad0d5c6cb}{PIN\+\_\+\+MANAGER\+\_\+\+Initialize()}; LATx registers
+
+TRISx registers
+
+ANSELx registers
+
+WPUx registers
+
+APFCONx registers
+
+IOCx registers
+
+Definition at line \mbox{\hyperlink{pin__manager_8c_source_l00058}{58}} of file \mbox{\hyperlink{pin__manager_8c_source}{pin\+\_\+manager.\+c}}.
+
+\Hypertarget{pin__manager_8c_a6ff320d017cf9b99ba9045f24d7ec896}\label{pin__manager_8c_a6ff320d017cf9b99ba9045f24d7ec896} 
+\index{pin\_manager.c@{pin\_manager.c}!PIN\_MANAGER\_IOC@{PIN\_MANAGER\_IOC}}
+\index{PIN\_MANAGER\_IOC@{PIN\_MANAGER\_IOC}!pin\_manager.c@{pin\_manager.c}}
+\doxysubsubsection{\texorpdfstring{PIN\_MANAGER\_IOC()}{PIN\_MANAGER\_IOC()}}
+{\footnotesize\ttfamily void PIN\+\_\+\+MANAGER\+\_\+\+IOC (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Param none @\+Returns none @\+Description Interrupt on Change Handling routine @\+Example \doxylink{pin__manager_8h_a6ff320d017cf9b99ba9045f24d7ec896}{PIN\+\_\+\+MANAGER\+\_\+\+IOC()}; 
+
+Definition at line \mbox{\hyperlink{pin__manager_8c_source_l00119}{119}} of file \mbox{\hyperlink{pin__manager_8c_source}{pin\+\_\+manager.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{pin__manager_8c_a92d7bae0fe36ddceb78cb19f7ccc783e}\label{pin__manager_8c_a92d7bae0fe36ddceb78cb19f7ccc783e} 
+\index{pin\_manager.c@{pin\_manager.c}!IOCBF0\_InterruptHandler@{IOCBF0\_InterruptHandler}}
+\index{IOCBF0\_InterruptHandler@{IOCBF0\_InterruptHandler}!pin\_manager.c@{pin\_manager.c}}
+\doxysubsubsection{\texorpdfstring{IOCBF0\_InterruptHandler}{IOCBF0\_InterruptHandler}}
+{\footnotesize\ttfamily void(\texorpdfstring{$\ast$}{*} IOCBF0\+\_\+\+Interrupt\+Handler) (void) (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Generated Pin Manager File
+
+Company\+: Microchip Technology Inc.
+
+File Name\+: \doxylink{pin__manager_8c}{pin\+\_\+manager.\+c}
+
+Summary\+: This is the Pin Manager file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+
+Description\+: This header file provides implementations for pin APIs for all pins selected in the GUI. Generation Information \+: Product Revision \+: PIC10 / PIC12 / PIC16 / PIC18 MCUs -\/ 1.\+81.\+8 Device \+: PIC16\+F1827 Driver Version \+: 2.\+11 The generated drivers are tested against the following\+: Compiler \+: XC8 2.\+36 and above MPLAB \+: MPLAB X 6.\+00
+
+Copyright (c) 2013 -\/ 2015 released Microchip Technology Inc. All rights reserved. 
+
+Definition at line \mbox{\hyperlink{pin__manager_8c_source_l00054}{54}} of file \mbox{\hyperlink{pin__manager_8c_source}{pin\+\_\+manager.\+c}}.
+
+\Hypertarget{pin__manager_8c_a4ca917d8a807b2ee336126626618cac4}\label{pin__manager_8c_a4ca917d8a807b2ee336126626618cac4} 
+\index{pin\_manager.c@{pin\_manager.c}!IOCBF3\_InterruptHandler@{IOCBF3\_InterruptHandler}}
+\index{IOCBF3\_InterruptHandler@{IOCBF3\_InterruptHandler}!pin\_manager.c@{pin\_manager.c}}
+\doxysubsubsection{\texorpdfstring{IOCBF3\_InterruptHandler}{IOCBF3\_InterruptHandler}}
+{\footnotesize\ttfamily void(\texorpdfstring{$\ast$}{*} IOCBF3\+\_\+\+Interrupt\+Handler) (void) (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Summary Dynamic Interrupt Handler for IOCBF3 pin
+
+@\+Description This is a dynamic interrupt handler to be used together with the \doxylink{pin__manager_8h_abc46d8993ed4544cd83fc6ccb8f68d67}{IOCBF3\+\_\+\+Set\+Interrupt\+Handler()} method. This handler is called every time the IOCBF3 ISR is executed and allows any function to be registered at runtime.
+
+@\+Preconditions Pin Manager intializer called
+
+@\+Returns None.
+
+@\+Param None.
+
+@\+Example \doxylink{pin__manager_8h_a50357774183a136d9490f64ad0d5c6cb}{PIN\+\_\+\+MANAGER\+\_\+\+Initialize()}; IOCBF3\+\_\+\+Set\+Interrupt\+Handler(\+IOCBF3\+\_\+\+Interrupt\+Handler); 
+
+Definition at line \mbox{\hyperlink{pin__manager_8c_source_l00055}{55}} of file \mbox{\hyperlink{pin__manager_8c_source}{pin\+\_\+manager.\+c}}.
+

@@ -1,0 +1,270 @@
+\doxysection{C\+:/\+Users/thali/\+Documents/\+Elevador\+\_\+\+EE/\+Projeto\+Final.X/mcc\+\_\+generated\+\_\+files/eusart.h File Reference}
+\hypertarget{eusart_8h}{}\label{eusart_8h}\index{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/mcc\_generated\_files/eusart.h@{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/mcc\_generated\_files/eusart.h}}
+{\ttfamily \#include $<$xc.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{unioneusart__status__t}{eusart\+\_\+status\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{eusart_8h_accdd7cd6215305b8b1bc2b3698621bc0}{EUSART\+\_\+\+Data\+Ready}}~(\mbox{\hyperlink{eusart_8c_a1428fbfafd1b08c0910b037ccae9aa09}{EUSART\+\_\+is\+\_\+rx\+\_\+ready}}())
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{eusart_8h_a3b17818bce44b045bfad135a0c19035b}{EUSART\+\_\+\+Initialize}} (void)
+\item 
+bool \mbox{\hyperlink{eusart_8h_a5910980b8fabd42cf735bd4d9c698810}{EUSART\+\_\+is\+\_\+tx\+\_\+ready}} (void)
+\item 
+bool \mbox{\hyperlink{eusart_8h_a1428fbfafd1b08c0910b037ccae9aa09}{EUSART\+\_\+is\+\_\+rx\+\_\+ready}} (void)
+\item 
+bool \mbox{\hyperlink{eusart_8h_a5573b761c39dd9ce6ed8fd961a37a389}{EUSART\+\_\+is\+\_\+tx\+\_\+done}} (void)
+\item 
+\mbox{\hyperlink{unioneusart__status__t}{eusart\+\_\+status\+\_\+t}} \mbox{\hyperlink{eusart_8h_a8fb7d6b27e983f5aaa0555c746aafe42}{EUSART\+\_\+get\+\_\+last\+\_\+status}} (void)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{eusart_8h_ae1f0c4e5aabff2a4c28fc3e6a8cf8776}{EUSART\+\_\+\+Read}} (void)
+\item 
+void \mbox{\hyperlink{eusart_8h_a69df9acb664d598e88c04f43b6fe01d2}{EUSART\+\_\+\+Write}} (uint8\+\_\+t tx\+Data)
+\item 
+void \mbox{\hyperlink{eusart_8h_a53ca91908219b70dd25a97e38096a90a}{EUSART\+\_\+\+Set\+Framing\+Error\+Handler}} (void(\texorpdfstring{$\ast$}{*}interrupt\+Handler)(void))
+\item 
+void \mbox{\hyperlink{eusart_8h_a20e02c3fcd9453f6e7a004960e404eaf}{EUSART\+\_\+\+Set\+Overrun\+Error\+Handler}} (void(\texorpdfstring{$\ast$}{*}interrupt\+Handler)(void))
+\item 
+void \mbox{\hyperlink{eusart_8h_a88d68cb5f802bf2094a5448a1584c6a7}{EUSART\+\_\+\+Set\+Error\+Handler}} (void(\texorpdfstring{$\ast$}{*}interrupt\+Handler)(void))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{eusart_8h_accdd7cd6215305b8b1bc2b3698621bc0}\label{eusart_8h_accdd7cd6215305b8b1bc2b3698621bc0} 
+\index{eusart.h@{eusart.h}!EUSART\_DataReady@{EUSART\_DataReady}}
+\index{EUSART\_DataReady@{EUSART\_DataReady}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_DataReady}{EUSART\_DataReady}}
+{\footnotesize\ttfamily \#define EUSART\+\_\+\+Data\+Ready~(\mbox{\hyperlink{eusart_8c_a1428fbfafd1b08c0910b037ccae9aa09}{EUSART\+\_\+is\+\_\+rx\+\_\+ready}}())}
+
+EUSART Generated Driver API Header File
+
+@\+Company Microchip Technology Inc.
+
+@\+File Name \doxylink{eusart_8h}{eusart.\+h}
+
+@\+Summary This is the generated header file for the EUSART driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+
+@\+Description This header file provides APIs for driver for EUSART. Generation Information \+: Product Revision \+: PIC10 / PIC12 / PIC16 / PIC18 MCUs -\/ 1.\+81.\+8 Device \+: PIC16\+F1827 Driver Version \+: 2.\+1.\+1 The generated drivers are tested against the following\+: Compiler \+: XC8 2.\+36 and above MPLAB \+: MPLAB X 6.\+00 Section\+: Included Files Section\+: Macro Declarations 
+
+Definition at line \mbox{\hyperlink{eusart_8h_source_l00069}{69}} of file \mbox{\hyperlink{eusart_8h_source}{eusart.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{eusart_8h_a8fb7d6b27e983f5aaa0555c746aafe42}\label{eusart_8h_a8fb7d6b27e983f5aaa0555c746aafe42} 
+\index{eusart.h@{eusart.h}!EUSART\_get\_last\_status@{EUSART\_get\_last\_status}}
+\index{EUSART\_get\_last\_status@{EUSART\_get\_last\_status}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_get\_last\_status()}{EUSART\_get\_last\_status()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unioneusart__status__t}{eusart\+\_\+status\+\_\+t}} EUSART\+\_\+get\+\_\+last\+\_\+status (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Summary Gets the error status of the last read byte.
+
+@\+Description This routine gets the error status of the last read byte.
+
+@\+Preconditions \doxylink{eusart_8h_a3b17818bce44b045bfad135a0c19035b}{EUSART\+\_\+\+Initialize()} function should have been called before calling this function. The returned value is only updated after a read is called.
+
+@\+Param None
+
+@\+Returns the status of the last read byte
+
+@\+Example {\ttfamily  void \doxylink{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{main(void)} \{ volatile uint8\+\_\+t rx\+Data; volatile \doxylink{unioneusart__status__t}{eusart\+\_\+status\+\_\+t} rx\+Status;}
+
+{\ttfamily Initialize the device \doxylink{mcc_8c_a5e8391114a0cf91ac20002be25e3d352}{SYSTEM\+\_\+\+Initialize()};}
+
+{\ttfamily Enable the Global Interrupts \doxylink{interrupt__manager_8h_ab801e88ce18e2d200429ffbaa67dbf2b}{INTERRUPT\+\_\+\+Global\+Interrupt\+Enable()};}
+
+{\ttfamily  while(1) \{ Logic to echo received data if(\+EUSART\+\_\+is\+\_\+rx\+\_\+ready()) \{ rx\+Data = \doxylink{eusart_8h_ae1f0c4e5aabff2a4c28fc3e6a8cf8776}{EUSART\+\_\+\+Read()}; rx\+Status = \doxylink{eusart_8h_a8fb7d6b27e983f5aaa0555c746aafe42}{EUSART\+\_\+get\+\_\+last\+\_\+status()}; if(rx\+Status.\+ferr)\{ LED\+\_\+0\+\_\+\+Set\+High(); \} \} \} \} } 
+
+Definition at line \mbox{\hyperlink{eusart_8c_source_l00109}{109}} of file \mbox{\hyperlink{eusart_8c_source}{eusart.\+c}}.
+
+\Hypertarget{eusart_8h_a3b17818bce44b045bfad135a0c19035b}\label{eusart_8h_a3b17818bce44b045bfad135a0c19035b} 
+\index{eusart.h@{eusart.h}!EUSART\_Initialize@{EUSART\_Initialize}}
+\index{EUSART\_Initialize@{EUSART\_Initialize}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_Initialize()}{EUSART\_Initialize()}}
+{\footnotesize\ttfamily void EUSART\+\_\+\+Initialize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Section\+: EUSART APIs @\+Summary Initialization routine that takes inputs from the EUSART GUI.
+
+@\+Description This routine initializes the EUSART driver. This routine must be called before any other EUSART routine is called.
+
+@\+Preconditions None
+
+@\+Param None
+
+@\+Returns None
+
+@\+Comment 
+
+Definition at line \mbox{\hyperlink{eusart_8c_source_l00066}{66}} of file \mbox{\hyperlink{eusart_8c_source}{eusart.\+c}}.
+
+\Hypertarget{eusart_8h_a1428fbfafd1b08c0910b037ccae9aa09}\label{eusart_8h_a1428fbfafd1b08c0910b037ccae9aa09} 
+\index{eusart.h@{eusart.h}!EUSART\_is\_rx\_ready@{EUSART\_is\_rx\_ready}}
+\index{EUSART\_is\_rx\_ready@{EUSART\_is\_rx\_ready}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_is\_rx\_ready()}{EUSART\_is\_rx\_ready()}}
+{\footnotesize\ttfamily bool EUSART\+\_\+is\+\_\+rx\+\_\+ready (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Summary Checks if the EUSART receiver ready for reading
+
+@\+Description This routine checks if EUSART receiver has received data and ready to be read
+
+@\+Preconditions \doxylink{eusart_8h_a3b17818bce44b045bfad135a0c19035b}{EUSART\+\_\+\+Initialize()} function should be called before calling this function EUSART receiver should be enabled before calling this function
+
+@\+Param None
+
+@\+Returns Status of EUSART receiver TRUE\+: EUSART receiver is ready for reading FALSE\+: EUSART receiver is not ready for reading
+
+@\+Example {\ttfamily  void \doxylink{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{main(void)} \{ volatile uint8\+\_\+t rx\+Data;}
+
+{\ttfamily Initialize the device \doxylink{mcc_8c_a5e8391114a0cf91ac20002be25e3d352}{SYSTEM\+\_\+\+Initialize()};}
+
+{\ttfamily  while(1) \{ Logic to echo received data if(\+EUSART\+\_\+is\+\_\+rx\+\_\+ready()) \{ rx\+Data = UART1\+\_\+\+Read(); if(\+EUSART\+\_\+is\+\_\+tx\+\_\+ready()) \{ EUSART\+\_\+\+Write(rx\+Data); \} \} \} \} } 
+
+Definition at line \mbox{\hyperlink{eusart_8c_source_l00099}{99}} of file \mbox{\hyperlink{eusart_8c_source}{eusart.\+c}}.
+
+\Hypertarget{eusart_8h_a5573b761c39dd9ce6ed8fd961a37a389}\label{eusart_8h_a5573b761c39dd9ce6ed8fd961a37a389} 
+\index{eusart.h@{eusart.h}!EUSART\_is\_tx\_done@{EUSART\_is\_tx\_done}}
+\index{EUSART\_is\_tx\_done@{EUSART\_is\_tx\_done}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_is\_tx\_done()}{EUSART\_is\_tx\_done()}}
+{\footnotesize\ttfamily bool EUSART\+\_\+is\+\_\+tx\+\_\+done (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Summary Checks if EUSART data is transmitted
+
+@\+Description This function return the status of transmit shift register
+
+@\+Preconditions \doxylink{eusart_8h_a3b17818bce44b045bfad135a0c19035b}{EUSART\+\_\+\+Initialize()} function should be called before calling this function EUSART transmitter should be enabled and EUSART\+\_\+\+Write should be called before calling this function
+
+@\+Param None
+
+@\+Returns Status of EUSART receiver TRUE\+: Data completely shifted out if the USART shift register FALSE\+: Data is not completely shifted out of the shift register
+
+@\+Example {\ttfamily  void \doxylink{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{main(void)} \{ volatile uint8\+\_\+t rx\+Data;}
+
+{\ttfamily Initialize the device \doxylink{mcc_8c_a5e8391114a0cf91ac20002be25e3d352}{SYSTEM\+\_\+\+Initialize()};}
+
+{\ttfamily  while(1) \{ if(\+EUSART\+\_\+is\+\_\+tx\+\_\+ready()) \{ LED\+\_\+0\+\_\+\+Set\+High(); EUSARTWrite(rx\+Data); \} if(\doxylink{eusart_8h_a5573b761c39dd9ce6ed8fd961a37a389}{EUSART\+\_\+is\+\_\+tx\+\_\+done()} \{ LED\+\_\+0\+\_\+\+Set\+Low(); \} \} \} } 
+
+Definition at line \mbox{\hyperlink{eusart_8c_source_l00104}{104}} of file \mbox{\hyperlink{eusart_8c_source}{eusart.\+c}}.
+
+\Hypertarget{eusart_8h_a5910980b8fabd42cf735bd4d9c698810}\label{eusart_8h_a5910980b8fabd42cf735bd4d9c698810} 
+\index{eusart.h@{eusart.h}!EUSART\_is\_tx\_ready@{EUSART\_is\_tx\_ready}}
+\index{EUSART\_is\_tx\_ready@{EUSART\_is\_tx\_ready}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_is\_tx\_ready()}{EUSART\_is\_tx\_ready()}}
+{\footnotesize\ttfamily bool EUSART\+\_\+is\+\_\+tx\+\_\+ready (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Summary Checks if the EUSART transmitter is ready to transmit data
+
+@\+Description This routine checks if EUSART transmitter is ready to accept and transmit data byte
+
+@\+Preconditions \doxylink{eusart_8h_a3b17818bce44b045bfad135a0c19035b}{EUSART\+\_\+\+Initialize()} function should have been called before calling this function. EUSART transmitter should be enabled before calling this function
+
+@\+Param None
+
+@\+Returns Status of EUSART transmitter TRUE\+: EUSART transmitter is ready FALSE\+: EUSART transmitter is not ready
+
+@\+Example {\ttfamily  void \doxylink{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{main(void)} \{ volatile uint8\+\_\+t rx\+Data;}
+
+{\ttfamily Initialize the device \doxylink{mcc_8c_a5e8391114a0cf91ac20002be25e3d352}{SYSTEM\+\_\+\+Initialize()};}
+
+{\ttfamily  while(1) \{ Logic to echo received data if(\+EUSART\+\_\+is\+\_\+rx\+\_\+ready()) \{ rx\+Data = UART1\+\_\+\+Read(); if(\+EUSART\+\_\+is\+\_\+tx\+\_\+ready()) \{ EUSARTWrite(rx\+Data); \} \} \} \} } 
+
+Definition at line \mbox{\hyperlink{eusart_8c_source_l00094}{94}} of file \mbox{\hyperlink{eusart_8c_source}{eusart.\+c}}.
+
+\Hypertarget{eusart_8h_ae1f0c4e5aabff2a4c28fc3e6a8cf8776}\label{eusart_8h_ae1f0c4e5aabff2a4c28fc3e6a8cf8776} 
+\index{eusart.h@{eusart.h}!EUSART\_Read@{EUSART\_Read}}
+\index{EUSART\_Read@{EUSART\_Read}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_Read()}{EUSART\_Read()}}
+{\footnotesize\ttfamily uint8\+\_\+t EUSART\+\_\+\+Read (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Summary Read a byte of data from the EUSART.
+
+@\+Description This routine reads a byte of data from the EUSART.
+
+@\+Preconditions \doxylink{eusart_8h_a3b17818bce44b045bfad135a0c19035b}{EUSART\+\_\+\+Initialize()} function should have been called before calling this function. The transfer status should be checked to see if the receiver is not empty before calling this function.
+
+@\+Param None
+
+@\+Returns A data byte received by the driver. 
+
+Definition at line \mbox{\hyperlink{eusart_8c_source_l00113}{113}} of file \mbox{\hyperlink{eusart_8c_source}{eusart.\+c}}.
+
+\Hypertarget{eusart_8h_a88d68cb5f802bf2094a5448a1584c6a7}\label{eusart_8h_a88d68cb5f802bf2094a5448a1584c6a7} 
+\index{eusart.h@{eusart.h}!EUSART\_SetErrorHandler@{EUSART\_SetErrorHandler}}
+\index{EUSART\_SetErrorHandler@{EUSART\_SetErrorHandler}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_SetErrorHandler()}{EUSART\_SetErrorHandler()}}
+{\footnotesize\ttfamily void EUSART\+\_\+\+Set\+Error\+Handler (\begin{DoxyParamCaption}\item[{void(\texorpdfstring{$\ast$}{*})(void)}]{interrupt\+Handler }\end{DoxyParamCaption})}
+
+@\+Summary Set EUSART Error Handler
+
+@\+Description This API sets the function to be called upon EUSART error
+
+@\+Preconditions Initialize the EUSART module before calling this API
+
+@\+Param Address of function to be set as error handler
+
+@\+Returns None 
+
+Definition at line \mbox{\hyperlink{eusart_8c_source_l00165}{165}} of file \mbox{\hyperlink{eusart_8c_source}{eusart.\+c}}.
+
+\Hypertarget{eusart_8h_a53ca91908219b70dd25a97e38096a90a}\label{eusart_8h_a53ca91908219b70dd25a97e38096a90a} 
+\index{eusart.h@{eusart.h}!EUSART\_SetFramingErrorHandler@{EUSART\_SetFramingErrorHandler}}
+\index{EUSART\_SetFramingErrorHandler@{EUSART\_SetFramingErrorHandler}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_SetFramingErrorHandler()}{EUSART\_SetFramingErrorHandler()}}
+{\footnotesize\ttfamily void EUSART\+\_\+\+Set\+Framing\+Error\+Handler (\begin{DoxyParamCaption}\item[{void(\texorpdfstring{$\ast$}{*})(void)}]{interrupt\+Handler }\end{DoxyParamCaption})}
+
+@\+Summary Set EUSART Framing Error Handler
+
+@\+Description This API sets the function to be called upon EUSART framing error
+
+@\+Preconditions Initialize the EUSART before calling this API
+
+@\+Param Address of function to be set as framing error handler
+
+@\+Returns None 
+
+Definition at line \mbox{\hyperlink{eusart_8c_source_l00157}{157}} of file \mbox{\hyperlink{eusart_8c_source}{eusart.\+c}}.
+
+\Hypertarget{eusart_8h_a20e02c3fcd9453f6e7a004960e404eaf}\label{eusart_8h_a20e02c3fcd9453f6e7a004960e404eaf} 
+\index{eusart.h@{eusart.h}!EUSART\_SetOverrunErrorHandler@{EUSART\_SetOverrunErrorHandler}}
+\index{EUSART\_SetOverrunErrorHandler@{EUSART\_SetOverrunErrorHandler}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_SetOverrunErrorHandler()}{EUSART\_SetOverrunErrorHandler()}}
+{\footnotesize\ttfamily void EUSART\+\_\+\+Set\+Overrun\+Error\+Handler (\begin{DoxyParamCaption}\item[{void(\texorpdfstring{$\ast$}{*})(void)}]{interrupt\+Handler }\end{DoxyParamCaption})}
+
+@\+Summary Set EUSART Overrun Error Handler
+
+@\+Description This API sets the function to be called upon EUSART overrun error
+
+@\+Preconditions Initialize the EUSART module before calling this API
+
+@\+Param Address of function to be set as overrun error handler
+
+@\+Returns None 
+
+Definition at line \mbox{\hyperlink{eusart_8c_source_l00161}{161}} of file \mbox{\hyperlink{eusart_8c_source}{eusart.\+c}}.
+
+\Hypertarget{eusart_8h_a69df9acb664d598e88c04f43b6fe01d2}\label{eusart_8h_a69df9acb664d598e88c04f43b6fe01d2} 
+\index{eusart.h@{eusart.h}!EUSART\_Write@{EUSART\_Write}}
+\index{EUSART\_Write@{EUSART\_Write}!eusart.h@{eusart.h}}
+\doxysubsubsection{\texorpdfstring{EUSART\_Write()}{EUSART\_Write()}}
+{\footnotesize\ttfamily void EUSART\+\_\+\+Write (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{tx\+Data }\end{DoxyParamCaption})}
+
+@\+Summary Writes a byte of data to the EUSART.
+
+@\+Description This routine writes a byte of data to the EUSART.
+
+@\+Preconditions \doxylink{eusart_8h_a3b17818bce44b045bfad135a0c19035b}{EUSART\+\_\+\+Initialize()} function should have been called before calling this function. The transfer status should be checked to see if transmitter is not busy before calling this function.
+
+@\+Param tx\+Data -\/ Data byte to write to the EUSART
+
+@\+Returns None 
+
+Definition at line \mbox{\hyperlink{eusart_8c_source_l00132}{132}} of file \mbox{\hyperlink{eusart_8c_source}{eusart.\+c}}.
+

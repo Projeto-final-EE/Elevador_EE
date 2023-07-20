@@ -1,0 +1,101 @@
+\doxysection{main.\+h}
+\hypertarget{main_8h_source}{}\label{main_8h_source}\index{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/main.h@{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/main.h}}
+\mbox{\hyperlink{main_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00001}00001\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00002}00002\ \textcolor{comment}{\ *\ File:\ \ \ main.h}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00003}00003\ \textcolor{comment}{\ *\ Author:\ AC\ Tecnologia}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00004}00004\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00005}00005\ \textcolor{comment}{\ *\ Created\ on\ 13\ de\ Julho\ de\ 2023,\ 19:54}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ MAIN\_H}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00009}00009\ \textcolor{preprocessor}{\#define\ MAIN\_H}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00011}00011\ \textcolor{preprocessor}{\#ifdef\ \ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00012}00012\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00013}00013\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00015}00015\ \textcolor{comment}{//Includes}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{bin2bcd_8h}{bin2bcd.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00017}00017\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00018}00018\ \textcolor{comment}{//Defines}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00019}\mbox{\hyperlink{main_8h_aa2d54f404f07aa46689f4582d8e73c0e}{00019}}\ \textcolor{preprocessor}{\#define\ flip\_matrix\ \ true}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00020}\mbox{\hyperlink{main_8h_aae799989484868663493555dfc371e21}{00020}}\ \textcolor{preprocessor}{\#define\ DUTY\ 500}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00021}00021\ \textcolor{comment}{//\ Enums}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00022}\mbox{\hyperlink{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{00022}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\{}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00023}\mbox{\hyperlink{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8a13d000b4d7dc70d90239b7430d1eb6b2}{00023}}\ \ \ \ \ \mbox{\hyperlink{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8a13d000b4d7dc70d90239b7430d1eb6b2}{START}},}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00024}\mbox{\hyperlink{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8a3132fe841b89782cffab338386ce4ee7}{00024}}\ \ \ \ \ \mbox{\hyperlink{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8a3132fe841b89782cffab338386ce4ee7}{FIRST\_NUM}},}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00025}\mbox{\hyperlink{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8a54effdef14a45756f3669cfde6e326fd}{00025}}\ \ \ \ \ \mbox{\hyperlink{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8a54effdef14a45756f3669cfde6e326fd}{SECOND\_NUM}},}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8aaaa8401b50cb34e3a0d58729f70494f0}{CR}}\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00027}\mbox{\hyperlink{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8aaaa8401b50cb34e3a0d58729f70494f0}{00027}}\ \}\mbox{\hyperlink{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}};}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00029}00029\ \textcolor{comment}{//Constantes\ }}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00030}\mbox{\hyperlink{main_8h_aad76415d9a719fccd112b9683dae1afb}{00030}}\ \textcolor{keyword}{const}\ uint8\_t\ \mbox{\hyperlink{main_8h_aad76415d9a719fccd112b9683dae1afb}{matrix\_conf}}[]\ =\ \{}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00031}00031\ \ \ \ \ 0x09,0x00,\ \ \textcolor{comment}{//\ Decode\ mode\ =\ 0}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00032}00032\ \ \ \ \ 0x0A,0x00,\ \ \textcolor{comment}{//\ Intensity\ 1/32}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00033}00033\ \ \ \ \ 0x0B,0x07,\ \ \textcolor{comment}{//\ Scan\ Limit}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00034}00034\ \ \ \ \ 0x0C,0x01,\ \ \textcolor{comment}{//\ Shutdown\ mode\ =\ 1}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00035}00035\ \ \ \ \ 0x0F,0x01,\ \ \textcolor{comment}{//\ Display-\/Test\ =\ 1}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00036}00036\ \ \ \ \ 0x0F,0x00,\ \ \textcolor{comment}{//\ Display-\/Test\ =\ 0}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00037}00037\ \};\ \ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00043}00043\ \textcolor{comment}{//Maquinas\ de\ Estados}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00044}\mbox{\hyperlink{main_8h_a876b486d3a5241a126bd5751c5f70f79}{00044}}\ \mbox{\hyperlink{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}}\ \mbox{\hyperlink{main_8h_a876b486d3a5241a126bd5751c5f70f79}{state}}\ =\ \mbox{\hyperlink{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8a13d000b4d7dc70d90239b7430d1eb6b2}{START}};\ \textcolor{comment}{//\ O\ estado\ que\ indica\ qual\ valor\ o\ EUSART\ esta\ aguardando}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00045}\mbox{\hyperlink{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05a1c2ea0afa66c14d9275c805a0126eef3}{00045}}\ \textcolor{keyword}{enum}\ \mbox{\hyperlink{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05}{estadoMov}}\{\ \mbox{\hyperlink{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05aeec24030b476428460a3bd7084973e0a}{Repouso}},\ \mbox{\hyperlink{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05a73ec0ec8606d83c948cdd6197a87f823}{Espera}},\ \mbox{\hyperlink{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05a1c2ea0afa66c14d9275c805a0126eef3}{EmTrajeto}},\ \mbox{\hyperlink{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05abba0621b18ae0ccf544e8b9814e8f195}{RetornaS0}}\}\mbox{\hyperlink{main_8h_a8e8c15a9621f36ae669f8671a78e034c}{mov}}=\mbox{\hyperlink{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05aeec24030b476428460a3bd7084973e0a}{Repouso}};}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00047}00047\ \textcolor{comment}{//variaveis\ USART}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00048}\mbox{\hyperlink{main_8h_a64190d8804dee261dd98637f83e05dbe}{00048}}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{main_8h_a64190d8804dee261dd98637f83e05dbe}{rxValue}};\ \textcolor{comment}{//\ Variavel\ para\ receber\ as\ informacoes\ do\ USART}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00049}\mbox{\hyperlink{main_8h_ad453f839e79c94ca183faa392ed1ad6e}{00049}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{main_8h_ad453f839e79c94ca183faa392ed1ad6e}{waitRX}}\ =\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ Indica\ se\ o\ micro-\/controlador\ deve\ aguardar\ pelos\ valores\ de\ origem\ e\ destino\ do\ elevador}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00050}\mbox{\hyperlink{main_8h_a3dd4a30305a42b3dd346530de9230169}{00050}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{main_8h_a3dd4a30305a42b3dd346530de9230169}{RXaccepted}}\ =\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ Indica\ que\ o\ valor\ recebido\ pela\ comunicacao\ serial\ e\ valida}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00051}\mbox{\hyperlink{main_8h_a3ca062ebb30c85bbcd548adc19fa9174}{00051}}\ uint8\_t\ \mbox{\hyperlink{main_8h_a3ca062ebb30c85bbcd548adc19fa9174}{contComandos}}=0\ ;\ \textcolor{comment}{//Numero\ de\ comandos\ enviados\ ao\ elevador}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00053}00053\ \textcolor{comment}{//Dados\ para\ envio}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00054}\mbox{\hyperlink{main_8h_a15e3dbff2dca7bb32b98f54eea99cb4d}{00054}}\ uint8\_t\ \mbox{\hyperlink{main_8h_a15e3dbff2dca7bb32b98f54eea99cb4d}{pulsoEncoder}}\ =\ 0;\ \ \ \ \ \ \ \textcolor{comment}{//\ Numero\ de\ pulsos\ do\ encoder}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00055}\mbox{\hyperlink{main_8h_a5ba0e9d3c98a97fcfafcfb00e242f81a}{00055}}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{main_8h_a5ba0e9d3c98a97fcfafcfb00e242f81a}{velocidadeMotor}}\ =\ 0;\ \ \ \textcolor{comment}{//\ Velocidade\ do\ motor\ (transformar\ em\ 9\ bits))}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00056}\mbox{\hyperlink{main_8h_aff31312fb16705aa73c53b945a1a6b30}{00056}}\ uint8\_t\ \mbox{\hyperlink{main_8h_aff31312fb16705aa73c53b945a1a6b30}{flag}}\ =\ 0x00;\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Flag\ auxiliar\ para\ CCP4}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00057}\mbox{\hyperlink{main_8h_acc5ce172913ccabaada04d5c408dd85b}{00057}}\ uint16\_t\ \mbox{\hyperlink{main_8h_acc5ce172913ccabaada04d5c408dd85b}{t1}}\ =\ 0,\ \mbox{\hyperlink{main_8h_a02176c0d04e4f55c507df4178aee9bdb}{t2}}\ =\ 0;\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Tempo\ 1\ e\ 2\ para\ CCP4}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00058}\mbox{\hyperlink{main_8h_a2408a60a20c59cafc8971f965e8fc747}{00058}}\ uint8\_t\ \mbox{\hyperlink{main_8h_a2408a60a20c59cafc8971f965e8fc747}{inc}}\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00060}\mbox{\hyperlink{main_8h_a51aa77f14aee18a6d956d04b775c4b7f}{00060}}\ uint8\_t\ \mbox{\hyperlink{main_8h_a51aa77f14aee18a6d956d04b775c4b7f}{origem}}\ =\ 0,\ \mbox{\hyperlink{main_8h_a0ca4e4e19057f50581f16289de752e81}{oTemp}};\ \textcolor{comment}{//\ Indica\ origem\ da\ chamada\ do\ elevador}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00061}\mbox{\hyperlink{main_8h_a5d242d963a3973d1c67d3318c7c82921}{00061}}\ uint8\_t\ \mbox{\hyperlink{main_8h_a5d242d963a3973d1c67d3318c7c82921}{destino}}\ =\ 0,\ \mbox{\hyperlink{main_8h_aa5d602fcefe0746e15ad9f2a7579aee2}{dTemp}};\ \textcolor{comment}{//\ Indica\ o\ destino\ do\ elevador}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00062}\mbox{\hyperlink{main_8h_a7d63bdff38c945e2a7826f2e5d2a65df}{00062}}\ uint8\_t\ \mbox{\hyperlink{main_8h_a7d63bdff38c945e2a7826f2e5d2a65df}{andarAtual}}\ =\ 0;\ \textcolor{comment}{//\ Indica\ o\ andar\ atual}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00063}\mbox{\hyperlink{main_8h_a6a76d4039a8f89912e25cd6801a13da4}{00063}}\ uint8\_t\ \mbox{\hyperlink{main_8h_a6a76d4039a8f89912e25cd6801a13da4}{altura}};\ \textcolor{comment}{//\ Valor\ da\ altura\ atual}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00064}\mbox{\hyperlink{main_8h_a8806fbf376d2b394ffa40cd10c056616}{00064}}\ uint16\_t\ \mbox{\hyperlink{main_8h_a8806fbf376d2b394ffa40cd10c056616}{temperatura}};\ \textcolor{comment}{//\ Valor\ da\ temperatura\ do\ motor}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00065}\mbox{\hyperlink{main_8h_ad4943496b62604703950a191701b8244}{00065}}\ uint8\_t\ \mbox{\hyperlink{main_8h_ad4943496b62604703950a191701b8244}{motor}}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00066}\mbox{\hyperlink{main_8h_a8119e9a4d1573a397434c2539afccfb4}{00066}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{main_8h_a8119e9a4d1573a397434c2539afccfb4}{subindo}}\ =\ \textcolor{keyword}{true};\ \textcolor{comment}{//flag\ que\ indica\ se\ o\ elevador\ estA\ subindo\ ou\ descendo}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00067}\mbox{\hyperlink{main_8h_a1075f26a9d6b46d37a591d2627746ba5}{00067}}\ uint8\_t\ \mbox{\hyperlink{main_8h_a1075f26a9d6b46d37a591d2627746ba5}{MatrixLed}}[8];\ \textcolor{comment}{//Matrix\ de\ Dados\ que\ armazena\ o\ valor\ a\ ser\ transmito\ por\ SPI\ para\ a\ matrix\ de\ LED}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00068}\mbox{\hyperlink{main_8h_a9747f32603cfb477e5b65d6280c68922}{00068}}\ uint8\_t\ \mbox{\hyperlink{main_8h_a9747f32603cfb477e5b65d6280c68922}{destinoSub}}=\ 0b00000000;\ \textcolor{comment}{//\ indice\ 1\ para\ andar\ 1,\ 2\ para\ andar\ 2\ e\ 3\ para\ andar\ 3}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00069}\mbox{\hyperlink{main_8h_a1a75947dae2e373c8dd430d4174987a5}{00069}}\ uint8\_t\ \mbox{\hyperlink{main_8h_a1a75947dae2e373c8dd430d4174987a5}{destinoDesc}}=\ 0b00000000;\textcolor{comment}{//\ indice\ 0\ para\ andar\ 0,\ 1\ para\ andar\ 1\ e\ 2\ para\ andar\ 2}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00071}00071\ \textcolor{comment}{//Funcoes}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00078}00078\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{main_8h_aa955084e6e45b9b51c4854c7bb703f15}{isValidFloor}}(\textcolor{keywordtype}{char}\ floor);}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00096}00096\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8h_affcd9d3a5217a97cecc2149d218df4a1}{sendInfo}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00098}00098\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8h_a5a0ad392736c79140e71348228b1480b}{organizaTrajeto}}();}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00100}00100\ \textcolor{comment}{//func{\ucr}es\ SPI}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00101}00101\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8h_af1ef9c4ec161ec3d8a9b1cd750341401}{txSpi}}(\ uint8\_t\ *data,\ \textcolor{keywordtype}{size\_t}\ dataSize);\ \textcolor{comment}{//funcao\ que\ realiza\ a\ transmissao\ da\ matriz\ de\ Dados\ para\ a\ Matriz\ de\ LED}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00102}00102\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8h_a87bb572216f5d804e3808591a2972374}{matrixUpdate}}();\ \textcolor{comment}{//Funcao\ que\ converte\ os\ valores\ da\ Matriz\ de\ Dados\ para\ a\ forma\ recebida\ pela\ Matriz\ de\ LED}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00103}00103\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8h_a1c6ba837a09f7a338c9cea26020abbfc}{initMatrix}}();\ \textcolor{comment}{//Inicializacao\ da\ matriz\ de\ LED}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00105}00105\ \textcolor{comment}{//Interrupcoes\ sensores}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00106}00106\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8h_ac46ad3d86c801e71961da21f44f52bdf}{chegadaS1}}();\ \textcolor{comment}{//função\ acionada\ ao\ sensor\ S1\ ser\ acionado}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00107}00107\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8h_a36e82a5cb90ba4962f287c00eca11ac6}{chegadaS2}}();\ \textcolor{comment}{//função\ acionada\ ao\ sensor\ S2\ ser\ acionado}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00108}00108\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8h_a6386bb829e7a1ee467689cb51dacca17}{chegadaS3}}();\ \textcolor{comment}{//função\ acionada\ ao\ sensor\ S3\ ser\ acionado}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00109}00109\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8h_a080ba43c6b8672c73631b8c3b10945dd}{chegadaS4}}();\ \textcolor{comment}{//função\ acionada\ ao\ sensor\ S4\ ser\ acionado}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00111}00111\ \textcolor{comment}{//Funcoes\ Ponte-\/H}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00112}00112\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8h_a8163f9debf771dea55589f7047444c2e}{controleMovimento}}();}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00115}00115\ \textcolor{preprocessor}{\#ifdef\ \ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00116}00116\ \}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00117}00117\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00119}00119\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ MAIN\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00120}00120\ }
+
+\end{DoxyCode}

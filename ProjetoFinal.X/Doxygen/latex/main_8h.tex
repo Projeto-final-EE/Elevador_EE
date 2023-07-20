@@ -1,0 +1,581 @@
+\doxysection{C\+:/\+Users/thali/\+Documents/\+Elevador\+\_\+\+EE/\+Projeto\+Final.X/main.h File Reference}
+\hypertarget{main_8h}{}\label{main_8h}\index{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/main.h@{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/main.h}}
+{\ttfamily \#include \"{}bin2bcd.\+h\"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8h_aa2d54f404f07aa46689f4582d8e73c0e}{flip\+\_\+matrix}}~true
+\item 
+\#define \mbox{\hyperlink{main_8h_aae799989484868663493555dfc371e21}{DUTY}}~500
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \{ \mbox{\hyperlink{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8a13d000b4d7dc70d90239b7430d1eb6b2}{START}}
+, \mbox{\hyperlink{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8a3132fe841b89782cffab338386ce4ee7}{FIRST\+\_\+\+NUM}}
+, \mbox{\hyperlink{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8a54effdef14a45756f3669cfde6e326fd}{SECOND\+\_\+\+NUM}}
+, \mbox{\hyperlink{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8aaaa8401b50cb34e3a0d58729f70494f0}{CR}}
+ \}
+\item 
+enum \mbox{\hyperlink{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05}{estado\+Mov}} \{ \mbox{\hyperlink{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05aeec24030b476428460a3bd7084973e0a}{Repouso}}
+, \mbox{\hyperlink{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05a73ec0ec8606d83c948cdd6197a87f823}{Espera}}
+, \mbox{\hyperlink{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05a1c2ea0afa66c14d9275c805a0126eef3}{Em\+Trajeto}}
+, \mbox{\hyperlink{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05abba0621b18ae0ccf544e8b9814e8f195}{Retorna\+S0}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{main_8h_aa955084e6e45b9b51c4854c7bb703f15}{is\+Valid\+Floor}} (char floor)
+\item 
+void \mbox{\hyperlink{main_8h_affcd9d3a5217a97cecc2149d218df4a1}{send\+Info}} (void)
+\item 
+void \mbox{\hyperlink{main_8h_a5a0ad392736c79140e71348228b1480b}{organiza\+Trajeto}} ()
+\item 
+void \mbox{\hyperlink{main_8h_af1ef9c4ec161ec3d8a9b1cd750341401}{tx\+Spi}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, size\+\_\+t data\+Size)
+\item 
+void \mbox{\hyperlink{main_8h_a87bb572216f5d804e3808591a2972374}{matrix\+Update}} ()
+\item 
+void \mbox{\hyperlink{main_8h_a1c6ba837a09f7a338c9cea26020abbfc}{init\+Matrix}} ()
+\item 
+void \mbox{\hyperlink{main_8h_ac46ad3d86c801e71961da21f44f52bdf}{chegada\+S1}} ()
+\item 
+void \mbox{\hyperlink{main_8h_a36e82a5cb90ba4962f287c00eca11ac6}{chegada\+S2}} ()
+\item 
+void \mbox{\hyperlink{main_8h_a6386bb829e7a1ee467689cb51dacca17}{chegada\+S3}} ()
+\item 
+void \mbox{\hyperlink{main_8h_a080ba43c6b8672c73631b8c3b10945dd}{chegada\+S4}} ()
+\item 
+void \mbox{\hyperlink{main_8h_a8163f9debf771dea55589f7047444c2e}{controle\+Movimento}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const uint8\+\_\+t \mbox{\hyperlink{main_8h_aad76415d9a719fccd112b9683dae1afb}{matrix\+\_\+conf}} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Configuração da matriz de LEDs. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} \mbox{\hyperlink{main_8h_a876b486d3a5241a126bd5751c5f70f79}{state}} = \mbox{\hyperlink{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8a13d000b4d7dc70d90239b7430d1eb6b2}{START}}
+\item 
+enum \mbox{\hyperlink{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05}{estado\+Mov}} \mbox{\hyperlink{main_8h_a8e8c15a9621f36ae669f8671a78e034c}{mov}} =\mbox{\hyperlink{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05aeec24030b476428460a3bd7084973e0a}{Repouso}}
+\item 
+char \mbox{\hyperlink{main_8h_a64190d8804dee261dd98637f83e05dbe}{rx\+Value}}
+\item 
+bool \mbox{\hyperlink{main_8h_ad453f839e79c94ca183faa392ed1ad6e}{wait\+RX}} = false
+\item 
+bool \mbox{\hyperlink{main_8h_a3dd4a30305a42b3dd346530de9230169}{RXaccepted}} = false
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8h_a3ca062ebb30c85bbcd548adc19fa9174}{cont\+Comandos}} =0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8h_a15e3dbff2dca7bb32b98f54eea99cb4d}{pulso\+Encoder}} = 0
+\item 
+float \mbox{\hyperlink{main_8h_a5ba0e9d3c98a97fcfafcfb00e242f81a}{velocidade\+Motor}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8h_aff31312fb16705aa73c53b945a1a6b30}{flag}} = 0x00
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main_8h_acc5ce172913ccabaada04d5c408dd85b}{t1}} = 0
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main_8h_a02176c0d04e4f55c507df4178aee9bdb}{t2}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8h_a2408a60a20c59cafc8971f965e8fc747}{inc}} = 1
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8h_a51aa77f14aee18a6d956d04b775c4b7f}{origem}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8h_a0ca4e4e19057f50581f16289de752e81}{o\+Temp}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8h_a5d242d963a3973d1c67d3318c7c82921}{destino}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8h_aa5d602fcefe0746e15ad9f2a7579aee2}{d\+Temp}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8h_a7d63bdff38c945e2a7826f2e5d2a65df}{andar\+Atual}} = 0
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8h_a6a76d4039a8f89912e25cd6801a13da4}{altura}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main_8h_a8806fbf376d2b394ffa40cd10c056616}{temperatura}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8h_ad4943496b62604703950a191701b8244}{motor}} = 0
+\item 
+bool \mbox{\hyperlink{main_8h_a8119e9a4d1573a397434c2539afccfb4}{subindo}} = true
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8h_a1075f26a9d6b46d37a591d2627746ba5}{Matrix\+Led}} \mbox{[}8\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8h_a9747f32603cfb477e5b65d6280c68922}{destino\+Sub}} = 0b00000000
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8h_a1a75947dae2e373c8dd430d4174987a5}{destino\+Desc}} = 0b00000000
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{main_8h_aae799989484868663493555dfc371e21}\label{main_8h_aae799989484868663493555dfc371e21} 
+\index{main.h@{main.h}!DUTY@{DUTY}}
+\index{DUTY@{DUTY}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{DUTY}{DUTY}}
+{\footnotesize\ttfamily \#define DUTY~500}
+
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00020}{20}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_aa2d54f404f07aa46689f4582d8e73c0e}\label{main_8h_aa2d54f404f07aa46689f4582d8e73c0e} 
+\index{main.h@{main.h}!flip\_matrix@{flip\_matrix}}
+\index{flip\_matrix@{flip\_matrix}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{flip\_matrix}{flip\_matrix}}
+{\footnotesize\ttfamily \#define flip\+\_\+matrix~true}
+
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00019}{19}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05}\label{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05} 
+\index{main.h@{main.h}!estadoMov@{estadoMov}}
+\index{estadoMov@{estadoMov}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{estadoMov}{estadoMov}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05}{estado\+Mov}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Repouso@{Repouso}!main.h@{main.h}}\index{main.h@{main.h}!Repouso@{Repouso}}}\Hypertarget{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05aeec24030b476428460a3bd7084973e0a}\label{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05aeec24030b476428460a3bd7084973e0a} 
+Repouso&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Espera@{Espera}!main.h@{main.h}}\index{main.h@{main.h}!Espera@{Espera}}}\Hypertarget{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05a73ec0ec8606d83c948cdd6197a87f823}\label{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05a73ec0ec8606d83c948cdd6197a87f823} 
+Espera&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EmTrajeto@{EmTrajeto}!main.h@{main.h}}\index{main.h@{main.h}!EmTrajeto@{EmTrajeto}}}\Hypertarget{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05a1c2ea0afa66c14d9275c805a0126eef3}\label{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05a1c2ea0afa66c14d9275c805a0126eef3} 
+Em\+Trajeto&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RetornaS0@{RetornaS0}!main.h@{main.h}}\index{main.h@{main.h}!RetornaS0@{RetornaS0}}}\Hypertarget{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05abba0621b18ae0ccf544e8b9814e8f195}\label{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05abba0621b18ae0ccf544e8b9814e8f195} 
+Retorna\+S0&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00045}{45}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8}\label{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8} 
+\index{main.h@{main.h}!State@{State}}
+\index{State@{State}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{START@{START}!main.h@{main.h}}\index{main.h@{main.h}!START@{START}}}\Hypertarget{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8a13d000b4d7dc70d90239b7430d1eb6b2}\label{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8a13d000b4d7dc70d90239b7430d1eb6b2} 
+START&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FIRST\_NUM@{FIRST\_NUM}!main.h@{main.h}}\index{main.h@{main.h}!FIRST\_NUM@{FIRST\_NUM}}}\Hypertarget{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8a3132fe841b89782cffab338386ce4ee7}\label{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8a3132fe841b89782cffab338386ce4ee7} 
+FIRST\+\_\+\+NUM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SECOND\_NUM@{SECOND\_NUM}!main.h@{main.h}}\index{main.h@{main.h}!SECOND\_NUM@{SECOND\_NUM}}}\Hypertarget{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8a54effdef14a45756f3669cfde6e326fd}\label{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8a54effdef14a45756f3669cfde6e326fd} 
+SECOND\+\_\+\+NUM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CR@{CR}!main.h@{main.h}}\index{main.h@{main.h}!CR@{CR}}}\Hypertarget{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8aaaa8401b50cb34e3a0d58729f70494f0}\label{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8aaaa8401b50cb34e3a0d58729f70494f0} 
+CR&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00022}{22}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8h_ac46ad3d86c801e71961da21f44f52bdf}\label{main_8h_ac46ad3d86c801e71961da21f44f52bdf} 
+\index{main.h@{main.h}!chegadaS1@{chegadaS1}}
+\index{chegadaS1@{chegadaS1}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{chegadaS1()}{chegadaS1()}}
+{\footnotesize\ttfamily void chegada\+S1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Funcao que trata a interrupção do sensor S1 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00265}{265}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8h_a36e82a5cb90ba4962f287c00eca11ac6}\label{main_8h_a36e82a5cb90ba4962f287c00eca11ac6} 
+\index{main.h@{main.h}!chegadaS2@{chegadaS2}}
+\index{chegadaS2@{chegadaS2}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{chegadaS2()}{chegadaS2()}}
+{\footnotesize\ttfamily void chegada\+S2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Funcao que trata a interrupcao do sensor S2 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00298}{298}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8h_a6386bb829e7a1ee467689cb51dacca17}\label{main_8h_a6386bb829e7a1ee467689cb51dacca17} 
+\index{main.h@{main.h}!chegadaS3@{chegadaS3}}
+\index{chegadaS3@{chegadaS3}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{chegadaS3()}{chegadaS3()}}
+{\footnotesize\ttfamily void chegada\+S3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Funcao que trata a interrupcao do sensor S3 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00338}{338}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8h_a080ba43c6b8672c73631b8c3b10945dd}\label{main_8h_a080ba43c6b8672c73631b8c3b10945dd} 
+\index{main.h@{main.h}!chegadaS4@{chegadaS4}}
+\index{chegadaS4@{chegadaS4}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{chegadaS4()}{chegadaS4()}}
+{\footnotesize\ttfamily void chegada\+S4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Funcao que trata a interrupcao do sensor S4 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00377}{377}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8h_a8163f9debf771dea55589f7047444c2e}\label{main_8h_a8163f9debf771dea55589f7047444c2e} 
+\index{main.h@{main.h}!controleMovimento@{controleMovimento}}
+\index{controleMovimento@{controleMovimento}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{controleMovimento()}{controleMovimento()}}
+{\footnotesize\ttfamily void controle\+Movimento (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Funcao que realiza o controle do movimento do motor para cada caso 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00210}{210}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8h_a1c6ba837a09f7a338c9cea26020abbfc}\label{main_8h_a1c6ba837a09f7a338c9cea26020abbfc} 
+\index{main.h@{main.h}!initMatrix@{initMatrix}}
+\index{initMatrix@{initMatrix}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{initMatrix()}{initMatrix()}}
+{\footnotesize\ttfamily void init\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Funcao de inicialização da matriz de led 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00188}{188}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8h_aa955084e6e45b9b51c4854c7bb703f15}\label{main_8h_aa955084e6e45b9b51c4854c7bb703f15} 
+\index{main.h@{main.h}!isValidFloor@{isValidFloor}}
+\index{isValidFloor@{isValidFloor}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{isValidFloor()}{isValidFloor()}}
+{\footnotesize\ttfamily bool is\+Valid\+Floor (\begin{DoxyParamCaption}\item[{char}]{floor }\end{DoxyParamCaption})}
+
+Funcao para checar se o char {\ucr} um n{\ucr}mero entre \textquotesingle{}0\textquotesingle{} e \textquotesingle{}3\textquotesingle{}, que sao os andares de operacao do elevador 
+\begin{DoxyParams}{Parameters}
+{\em floor} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se o char {\ucr} um n{\ucr}mero entre \textquotesingle{}0\textquotesingle{} e \textquotesingle{}3\textquotesingle{} e false se nao {\ucr}
+\end{DoxyReturn}
+Verifica se eh um andar valido 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00047}{47}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8h_a87bb572216f5d804e3808591a2972374}\label{main_8h_a87bb572216f5d804e3808591a2972374} 
+\index{main.h@{main.h}!matrixUpdate@{matrixUpdate}}
+\index{matrixUpdate@{matrixUpdate}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{matrixUpdate()}{matrixUpdate()}}
+{\footnotesize\ttfamily void matrix\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Funcao que atualiza os dados na matriz de led 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00165}{165}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8h_a5a0ad392736c79140e71348228b1480b}\label{main_8h_a5a0ad392736c79140e71348228b1480b} 
+\index{main.h@{main.h}!organizaTrajeto@{organizaTrajeto}}
+\index{organizaTrajeto@{organizaTrajeto}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{organizaTrajeto()}{organizaTrajeto()}}
+{\footnotesize\ttfamily void organiza\+Trajeto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Funcao que aplica as mascaras as variaveis destino\+Sub e Destino\+Desc que controlam as paradas do elvador aos andares 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00018}{18}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8h_affcd9d3a5217a97cecc2149d218df4a1}\label{main_8h_affcd9d3a5217a97cecc2149d218df4a1} 
+\index{main.h@{main.h}!sendInfo@{sendInfo}}
+\index{sendInfo@{sendInfo}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{sendInfo()}{sendInfo()}}
+{\footnotesize\ttfamily void send\+Info (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Summary Timer1 Interrupt Handler function
+
+@\+Description Essa funcao envia as informacoes atuais sobre o elevador por meio da comunicacao serial
+
+@\+Preconditions Initialize the TMR1 module with interrupt before calling this isr.
+
+@\+Param None
+
+@\+Returns None
+
+Funcao que envia os dados por UART 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00062}{62}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8h_af1ef9c4ec161ec3d8a9b1cd750341401}\label{main_8h_af1ef9c4ec161ec3d8a9b1cd750341401} 
+\index{main.h@{main.h}!txSpi@{txSpi}}
+\index{txSpi@{txSpi}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{txSpi()}{txSpi()}}
+{\footnotesize\ttfamily void tx\+Spi (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data,  }\item[{size\+\_\+t}]{data\+Size }\end{DoxyParamCaption})}
+
+Funcao que realiza a comunicacao com a matriz de leds 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00156}{156}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8h_a6a76d4039a8f89912e25cd6801a13da4}\label{main_8h_a6a76d4039a8f89912e25cd6801a13da4} 
+\index{main.h@{main.h}!altura@{altura}}
+\index{altura@{altura}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{altura}{altura}}
+{\footnotesize\ttfamily uint8\+\_\+t altura}
+
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00063}{63}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_a7d63bdff38c945e2a7826f2e5d2a65df}\label{main_8h_a7d63bdff38c945e2a7826f2e5d2a65df} 
+\index{main.h@{main.h}!andarAtual@{andarAtual}}
+\index{andarAtual@{andarAtual}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{andarAtual}{andarAtual}}
+{\footnotesize\ttfamily uint8\+\_\+t andar\+Atual = 0}
+
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00062}{62}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_a3ca062ebb30c85bbcd548adc19fa9174}\label{main_8h_a3ca062ebb30c85bbcd548adc19fa9174} 
+\index{main.h@{main.h}!contComandos@{contComandos}}
+\index{contComandos@{contComandos}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{contComandos}{contComandos}}
+{\footnotesize\ttfamily uint8\+\_\+t cont\+Comandos =0}
+
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00051}{51}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_a5d242d963a3973d1c67d3318c7c82921}\label{main_8h_a5d242d963a3973d1c67d3318c7c82921} 
+\index{main.h@{main.h}!destino@{destino}}
+\index{destino@{destino}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{destino}{destino}}
+{\footnotesize\ttfamily uint8\+\_\+t destino = 0}
+
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00061}{61}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_a1a75947dae2e373c8dd430d4174987a5}\label{main_8h_a1a75947dae2e373c8dd430d4174987a5} 
+\index{main.h@{main.h}!destinoDesc@{destinoDesc}}
+\index{destinoDesc@{destinoDesc}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{destinoDesc}{destinoDesc}}
+{\footnotesize\ttfamily uint8\+\_\+t destino\+Desc = 0b00000000}
+
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00069}{69}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_a9747f32603cfb477e5b65d6280c68922}\label{main_8h_a9747f32603cfb477e5b65d6280c68922} 
+\index{main.h@{main.h}!destinoSub@{destinoSub}}
+\index{destinoSub@{destinoSub}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{destinoSub}{destinoSub}}
+{\footnotesize\ttfamily uint8\+\_\+t destino\+Sub = 0b00000000}
+
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00068}{68}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_aa5d602fcefe0746e15ad9f2a7579aee2}\label{main_8h_aa5d602fcefe0746e15ad9f2a7579aee2} 
+\index{main.h@{main.h}!dTemp@{dTemp}}
+\index{dTemp@{dTemp}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{dTemp}{dTemp}}
+{\footnotesize\ttfamily uint8\+\_\+t d\+Temp}
+
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00061}{61}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_aff31312fb16705aa73c53b945a1a6b30}\label{main_8h_aff31312fb16705aa73c53b945a1a6b30} 
+\index{main.h@{main.h}!flag@{flag}}
+\index{flag@{flag}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{flag}{flag}}
+{\footnotesize\ttfamily uint8\+\_\+t flag = 0x00}
+
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00056}{56}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_a2408a60a20c59cafc8971f965e8fc747}\label{main_8h_a2408a60a20c59cafc8971f965e8fc747} 
+\index{main.h@{main.h}!inc@{inc}}
+\index{inc@{inc}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{inc}{inc}}
+{\footnotesize\ttfamily uint8\+\_\+t inc = 1}
+
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00058}{58}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_aad76415d9a719fccd112b9683dae1afb}\label{main_8h_aad76415d9a719fccd112b9683dae1afb} 
+\index{main.h@{main.h}!matrix\_conf@{matrix\_conf}}
+\index{matrix\_conf@{matrix\_conf}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{matrix\_conf}{matrix\_conf}}
+{\footnotesize\ttfamily const uint8\+\_\+t matrix\+\_\+conf\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ 0x09,0x00,\ \ }
+\DoxyCodeLine{\ \ \ \ 0x0A,0x00,\ \ }
+\DoxyCodeLine{\ \ \ \ 0x0B,0x07,\ \ }
+\DoxyCodeLine{\ \ \ \ 0x0C,0x01,\ \ }
+\DoxyCodeLine{\ \ \ \ 0x0F,0x01,\ \ }
+\DoxyCodeLine{\ \ \ \ 0x0F,0x00,\ \ }
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Configuração da matriz de LEDs. 
+
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00030}{30}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_a1075f26a9d6b46d37a591d2627746ba5}\label{main_8h_a1075f26a9d6b46d37a591d2627746ba5} 
+\index{main.h@{main.h}!MatrixLed@{MatrixLed}}
+\index{MatrixLed@{MatrixLed}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{MatrixLed}{MatrixLed}}
+{\footnotesize\ttfamily uint8\+\_\+t Matrix\+Led\mbox{[}8\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00067}{67}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_ad4943496b62604703950a191701b8244}\label{main_8h_ad4943496b62604703950a191701b8244} 
+\index{main.h@{main.h}!motor@{motor}}
+\index{motor@{motor}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{motor}{motor}}
+{\footnotesize\ttfamily uint8\+\_\+t motor = 0}
+
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00065}{65}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_a8e8c15a9621f36ae669f8671a78e034c}\label{main_8h_a8e8c15a9621f36ae669f8671a78e034c} 
+\index{main.h@{main.h}!mov@{mov}}
+\index{mov@{mov}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{mov}{mov}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05}{estado\+Mov}} mov =\mbox{\hyperlink{main_8h_a44e604eb9bf40be9ed4df403e5b7bc05aeec24030b476428460a3bd7084973e0a}{Repouso}}}
+
+\Hypertarget{main_8h_a51aa77f14aee18a6d956d04b775c4b7f}\label{main_8h_a51aa77f14aee18a6d956d04b775c4b7f} 
+\index{main.h@{main.h}!origem@{origem}}
+\index{origem@{origem}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{origem}{origem}}
+{\footnotesize\ttfamily uint8\+\_\+t origem = 0}
+
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00060}{60}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_a0ca4e4e19057f50581f16289de752e81}\label{main_8h_a0ca4e4e19057f50581f16289de752e81} 
+\index{main.h@{main.h}!oTemp@{oTemp}}
+\index{oTemp@{oTemp}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{oTemp}{oTemp}}
+{\footnotesize\ttfamily uint8\+\_\+t o\+Temp}
+
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00060}{60}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_a15e3dbff2dca7bb32b98f54eea99cb4d}\label{main_8h_a15e3dbff2dca7bb32b98f54eea99cb4d} 
+\index{main.h@{main.h}!pulsoEncoder@{pulsoEncoder}}
+\index{pulsoEncoder@{pulsoEncoder}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{pulsoEncoder}{pulsoEncoder}}
+{\footnotesize\ttfamily uint8\+\_\+t pulso\+Encoder = 0}
+
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00054}{54}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_a3dd4a30305a42b3dd346530de9230169}\label{main_8h_a3dd4a30305a42b3dd346530de9230169} 
+\index{main.h@{main.h}!RXaccepted@{RXaccepted}}
+\index{RXaccepted@{RXaccepted}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{RXaccepted}{RXaccepted}}
+{\footnotesize\ttfamily bool RXaccepted = false}
+
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00050}{50}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_a64190d8804dee261dd98637f83e05dbe}\label{main_8h_a64190d8804dee261dd98637f83e05dbe} 
+\index{main.h@{main.h}!rxValue@{rxValue}}
+\index{rxValue@{rxValue}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{rxValue}{rxValue}}
+{\footnotesize\ttfamily char rx\+Value}
+
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00048}{48}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_a876b486d3a5241a126bd5751c5f70f79}\label{main_8h_a876b486d3a5241a126bd5751c5f70f79} 
+\index{main.h@{main.h}!state@{state}}
+\index{state@{state}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8}{State}} state = \mbox{\hyperlink{main_8h_a5d74787dedbc4e11c1ab15bf487e61f8a13d000b4d7dc70d90239b7430d1eb6b2}{START}}}
+
+Variaveis Globais 
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00044}{44}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_a8119e9a4d1573a397434c2539afccfb4}\label{main_8h_a8119e9a4d1573a397434c2539afccfb4} 
+\index{main.h@{main.h}!subindo@{subindo}}
+\index{subindo@{subindo}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{subindo}{subindo}}
+{\footnotesize\ttfamily bool subindo = true}
+
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00066}{66}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_acc5ce172913ccabaada04d5c408dd85b}\label{main_8h_acc5ce172913ccabaada04d5c408dd85b} 
+\index{main.h@{main.h}!t1@{t1}}
+\index{t1@{t1}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{t1}{t1}}
+{\footnotesize\ttfamily uint16\+\_\+t t1 = 0}
+
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00057}{57}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_a02176c0d04e4f55c507df4178aee9bdb}\label{main_8h_a02176c0d04e4f55c507df4178aee9bdb} 
+\index{main.h@{main.h}!t2@{t2}}
+\index{t2@{t2}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{t2}{t2}}
+{\footnotesize\ttfamily uint16\+\_\+t t2 = 0}
+
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00057}{57}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_a8806fbf376d2b394ffa40cd10c056616}\label{main_8h_a8806fbf376d2b394ffa40cd10c056616} 
+\index{main.h@{main.h}!temperatura@{temperatura}}
+\index{temperatura@{temperatura}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{temperatura}{temperatura}}
+{\footnotesize\ttfamily uint16\+\_\+t temperatura}
+
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00064}{64}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_a5ba0e9d3c98a97fcfafcfb00e242f81a}\label{main_8h_a5ba0e9d3c98a97fcfafcfb00e242f81a} 
+\index{main.h@{main.h}!velocidadeMotor@{velocidadeMotor}}
+\index{velocidadeMotor@{velocidadeMotor}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{velocidadeMotor}{velocidadeMotor}}
+{\footnotesize\ttfamily float velocidade\+Motor = 0}
+
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00055}{55}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
+\Hypertarget{main_8h_ad453f839e79c94ca183faa392ed1ad6e}\label{main_8h_ad453f839e79c94ca183faa392ed1ad6e} 
+\index{main.h@{main.h}!waitRX@{waitRX}}
+\index{waitRX@{waitRX}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{waitRX}{waitRX}}
+{\footnotesize\ttfamily bool wait\+RX = false}
+
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00049}{49}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+

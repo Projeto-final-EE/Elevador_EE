@@ -1,0 +1,36 @@
+\doxysection{bin2bcd.\+h}
+\hypertarget{bin2bcd_8h_source}{}\label{bin2bcd_8h_source}\index{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/bin2bcd.h@{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/bin2bcd.h}}
+\mbox{\hyperlink{bin2bcd_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00001}00001\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00002}00002\ \textcolor{comment}{\ *\ File:\ \ \ bin2bcd.h}}
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00003}00003\ \textcolor{comment}{\ *\ Author:\ Guillermo}}
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00004}00004\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00005}00005\ \textcolor{comment}{\ *\ Created\ on\ 11\ de\ Outubro\ de\ 2021,\ 23:17}}
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ BIN2BCD\_H}}
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00009}00009\ \textcolor{preprocessor}{\#define\ BIN2BCD\_H}}
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{bin2bcd_8h}{bin2bcd.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00015}00015\ \textcolor{comment}{//\ Type\ para\ guardar\ os\ 4\ numeros\ em\ BCD}}
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00016}\mbox{\hyperlink{unionbcd16__t}{00016}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{union}\{}
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00017}\mbox{\hyperlink{unionbcd16__t_ac5f38113a34f9eab3e7782eade81d266}{00017}}\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{unionbcd16__t_ac5f38113a34f9eab3e7782eade81d266}{v}};}
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00018}00018\ \ \ \ \ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00019}\mbox{\hyperlink{unionbcd16__t_ae65f1fc66b41fb52ef0c372ccc27aa6a}{00019}}\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{unionbcd16__t_ae65f1fc66b41fb52ef0c372ccc27aa6a}{num4}}\ :\ 4;}
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00020}\mbox{\hyperlink{unionbcd16__t_a5eff7a10108858ea93f3797be02a07b9}{00020}}\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{unionbcd16__t_a5eff7a10108858ea93f3797be02a07b9}{num3}}\ :\ 4;}
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00021}\mbox{\hyperlink{unionbcd16__t_a6f127ab2b59d3ae66e448b9171f1cb77}{00021}}\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{unionbcd16__t_a6f127ab2b59d3ae66e448b9171f1cb77}{num2}}\ :\ 4;}
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00022}\mbox{\hyperlink{unionbcd16__t_abcf15ce51daf48361a1bbf87c9946ca6}{00022}}\ \ \ \ \ \ \ \ \ uint8\_t\ \mbox{\hyperlink{unionbcd16__t_abcf15ce51daf48361a1bbf87c9946ca6}{num1}}\ :\ 4;}
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00023}00023\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00024}00024\ \}\mbox{\hyperlink{unionbcd16__t}{bcd16\_t}};}
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00031}00031\ uint16\_t\ \mbox{\hyperlink{bin2bcd_8h_ac2d0a40a2bda54e0d5b80f79cfbafcfe}{bin2bcd}}(uint16\_t\ binVal);}
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00034}00034\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*\ BIN2BCD\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{bin2bcd_8h_source_l00035}00035\ }
+
+\end{DoxyCode}

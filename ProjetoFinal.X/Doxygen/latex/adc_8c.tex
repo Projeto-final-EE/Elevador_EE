@@ -1,0 +1,221 @@
+\doxysection{C\+:/\+Users/thali/\+Documents/\+Elevador\+\_\+\+EE/\+Projeto\+Final.X/mcc\+\_\+generated\+\_\+files/adc.c File Reference}
+\hypertarget{adc_8c}{}\label{adc_8c}\index{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/mcc\_generated\_files/adc.c@{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/mcc\_generated\_files/adc.c}}
+{\ttfamily \#include $<$xc.\+h$>$}\newline
+{\ttfamily \#include \"{}adc.\+h\"{}}\newline
+{\ttfamily \#include \"{}device\+\_\+config.\+h\"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{adc_8c_a7edf990d9e0cd259877e405fecfaa611}{ACQ\+\_\+\+US\+\_\+\+DELAY}}~5
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{adc_8c_ab0e0ea1662a8e789547210a2d33127e1}{ADC\+\_\+\+Initialize}} (void)
+\item 
+void \mbox{\hyperlink{adc_8c_a25c0a0a9fe2bdba070f9945ca641b5e0}{ADC\+\_\+\+Select\+Channel}} (\mbox{\hyperlink{adc_8h_aafc4060027875f8fe46242b0656d7814}{adc\+\_\+channel\+\_\+t}} channel)
+\item 
+void \mbox{\hyperlink{adc_8c_af96ee69b063edcebc656d0ca0450c12c}{ADC\+\_\+\+Start\+Conversion}} (void)
+\item 
+bool \mbox{\hyperlink{adc_8c_ad5c10c1709aeacf08e783c3ea174463b}{ADC\+\_\+\+Is\+Conversion\+Done}} (void)
+\item 
+\mbox{\hyperlink{adc_8h_ac5362ae65441a5027b4b9b1bf1b573aa}{adc\+\_\+result\+\_\+t}} \mbox{\hyperlink{adc_8c_a9650956bd92194e1b9f0bfd5bb2d73dd}{ADC\+\_\+\+Get\+Conversion\+Result}} (void)
+\item 
+\mbox{\hyperlink{adc_8h_ac5362ae65441a5027b4b9b1bf1b573aa}{adc\+\_\+result\+\_\+t}} \mbox{\hyperlink{adc_8c_a81501f9b96aa9bb8dbe63b49d0f8e909}{ADC\+\_\+\+Get\+Conversion}} (\mbox{\hyperlink{adc_8h_aafc4060027875f8fe46242b0656d7814}{adc\+\_\+channel\+\_\+t}} channel)
+\item 
+void \mbox{\hyperlink{adc_8c_a46bdd78f96c668432d4ff33115c9dcd9}{ADC\+\_\+\+Temperature\+Acquisition\+Delay}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{adc_8c_afd07ad436449919718eb6b73351335f6}{ADC\+\_\+\+Interrupt\+Handler}} )(void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{adc_8c_a7edf990d9e0cd259877e405fecfaa611}\label{adc_8c_a7edf990d9e0cd259877e405fecfaa611} 
+\index{adc.c@{adc.c}!ACQ\_US\_DELAY@{ACQ\_US\_DELAY}}
+\index{ACQ\_US\_DELAY@{ACQ\_US\_DELAY}!adc.c@{adc.c}}
+\doxysubsubsection{\texorpdfstring{ACQ\_US\_DELAY}{ACQ\_US\_DELAY}}
+{\footnotesize\ttfamily \#define ACQ\+\_\+\+US\+\_\+\+DELAY~5}
+
+ADC Generated Driver File
+
+@\+Company Microchip Technology Inc.
+
+@\+File Name \doxylink{adc_8c}{adc.\+c}
+
+@\+Summary This is the generated driver implementation file for the ADC driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+
+@\+Description This source file provides implementations for driver APIs for ADC. Generation Information \+: Product Revision \+: PIC10 / PIC12 / PIC16 / PIC18 MCUs -\/ 1.\+81.\+8 Device \+: PIC16\+F1827 Driver Version \+: 2.\+02 The generated drivers are tested against the following\+: Compiler \+: XC8 2.\+36 and above MPLAB \+: MPLAB X 6.\+00 Section\+: Included Files Section\+: Macro Declarations 
+
+Definition at line \mbox{\hyperlink{adc_8c_source_l00059}{59}} of file \mbox{\hyperlink{adc_8c_source}{adc.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{adc_8c_a81501f9b96aa9bb8dbe63b49d0f8e909}\label{adc_8c_a81501f9b96aa9bb8dbe63b49d0f8e909} 
+\index{adc.c@{adc.c}!ADC\_GetConversion@{ADC\_GetConversion}}
+\index{ADC\_GetConversion@{ADC\_GetConversion}!adc.c@{adc.c}}
+\doxysubsubsection{\texorpdfstring{ADC\_GetConversion()}{ADC\_GetConversion()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{adc_8h_ac5362ae65441a5027b4b9b1bf1b573aa}{adc\+\_\+result\+\_\+t}} ADC\+\_\+\+Get\+Conversion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{adc_8h_aafc4060027875f8fe46242b0656d7814}{adc\+\_\+channel\+\_\+t}}}]{channel }\end{DoxyParamCaption})}
+
+@\+Summary Returns the ADC conversion value also allows selection of a channel for conversion.
+
+@\+Description This routine is used to select desired channel for conversion and to get the analog to digital converted value.
+
+@\+Preconditions \doxylink{adc_8h_ab0e0ea1662a8e789547210a2d33127e1}{ADC\+\_\+\+Initialize()} function should have been called before calling this function.
+
+@\+Returns Returns the converted value.
+
+@\+Param Pass in required channel number. \"{}\+For available channel refer to enum under adc.\+h file\"{}
+
+@\+Example {\ttfamily  uint16\+\_\+t converted\+Value;}
+
+{\ttfamily  \doxylink{adc_8h_ab0e0ea1662a8e789547210a2d33127e1}{ADC\+\_\+\+Initialize()};}
+
+{\ttfamily  conversion = ADC\+\_\+\+Get\+Conversion(\+AN1\+\_\+\+Channel); } 
+
+Definition at line \mbox{\hyperlink{adc_8c_source_l00112}{112}} of file \mbox{\hyperlink{adc_8c_source}{adc.\+c}}.
+
+\Hypertarget{adc_8c_a9650956bd92194e1b9f0bfd5bb2d73dd}\label{adc_8c_a9650956bd92194e1b9f0bfd5bb2d73dd} 
+\index{adc.c@{adc.c}!ADC\_GetConversionResult@{ADC\_GetConversionResult}}
+\index{ADC\_GetConversionResult@{ADC\_GetConversionResult}!adc.c@{adc.c}}
+\doxysubsubsection{\texorpdfstring{ADC\_GetConversionResult()}{ADC\_GetConversionResult()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{adc_8h_ac5362ae65441a5027b4b9b1bf1b573aa}{adc\+\_\+result\+\_\+t}} ADC\+\_\+\+Get\+Conversion\+Result (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Summary Returns the ADC conversion value.
+
+@\+Description This routine is used to get the analog to digital converted value. This routine gets converted values from the channel specified.
+
+@\+Preconditions This routine returns the conversion value only after the conversion is complete. Completion status can be checked using \doxylink{adc_8h_ad5c10c1709aeacf08e783c3ea174463b}{ADC\+\_\+\+Is\+Conversion\+Done()} routine.
+
+@\+Returns Returns the converted value.
+
+@\+Param None
+
+@\+Example {\ttfamily  uint16\+\_\+t converted\+Value;}
+
+{\ttfamily  \doxylink{adc_8h_ab0e0ea1662a8e789547210a2d33127e1}{ADC\+\_\+\+Initialize()}; \doxylink{adc_8h_af96ee69b063edcebc656d0ca0450c12c}{ADC\+\_\+\+Start\+Conversion()};}
+
+{\ttfamily  while(\+ADC\+\_\+\+Is\+Conversion\+Done());}
+
+{\ttfamily  converted\+Value = \doxylink{adc_8h_a9650956bd92194e1b9f0bfd5bb2d73dd}{ADC\+\_\+\+Get\+Conversion\+Result()}; } 
+
+Definition at line \mbox{\hyperlink{adc_8c_source_l00106}{106}} of file \mbox{\hyperlink{adc_8c_source}{adc.\+c}}.
+
+\Hypertarget{adc_8c_ab0e0ea1662a8e789547210a2d33127e1}\label{adc_8c_ab0e0ea1662a8e789547210a2d33127e1} 
+\index{adc.c@{adc.c}!ADC\_Initialize@{ADC\_Initialize}}
+\index{ADC\_Initialize@{ADC\_Initialize}!adc.c@{adc.c}}
+\doxysubsubsection{\texorpdfstring{ADC\_Initialize()}{ADC\_Initialize()}}
+{\footnotesize\ttfamily void ADC\+\_\+\+Initialize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Section\+: ADC Module APIs 
+
+Definition at line \mbox{\hyperlink{adc_8c_source_l00067}{67}} of file \mbox{\hyperlink{adc_8c_source}{adc.\+c}}.
+
+\Hypertarget{adc_8c_ad5c10c1709aeacf08e783c3ea174463b}\label{adc_8c_ad5c10c1709aeacf08e783c3ea174463b} 
+\index{adc.c@{adc.c}!ADC\_IsConversionDone@{ADC\_IsConversionDone}}
+\index{ADC\_IsConversionDone@{ADC\_IsConversionDone}!adc.c@{adc.c}}
+\doxysubsubsection{\texorpdfstring{ADC\_IsConversionDone()}{ADC\_IsConversionDone()}}
+{\footnotesize\ttfamily bool ADC\+\_\+\+Is\+Conversion\+Done (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Summary Returns true when the conversion is completed otherwise false.
+
+@\+Description This routine is used to determine if conversion is completed. When conversion is complete routine returns true. It returns false otherwise.
+
+@\+Preconditions \doxylink{adc_8h_ab0e0ea1662a8e789547210a2d33127e1}{ADC\+\_\+\+Initialize()} and \doxylink{adc_8h_af96ee69b063edcebc656d0ca0450c12c}{ADC\+\_\+\+Start\+Conversion(void)} function should have been called before calling this function.
+
+@\+Returns true -\/ If conversion is complete false -\/ If conversion is not completed
+
+@\+Param None
+
+@\+Example {\ttfamily  uint16\+\_\+t converted\+Value;}
+
+{\ttfamily  \doxylink{adc_8h_ab0e0ea1662a8e789547210a2d33127e1}{ADC\+\_\+\+Initialize()}; \doxylink{adc_8h_af96ee69b063edcebc656d0ca0450c12c}{ADC\+\_\+\+Start\+Conversion()};}
+
+{\ttfamily  while(!\+ADC\+\_\+\+Is\+Conversion\+Done()); converted\+Value = \doxylink{adc_8h_a9650956bd92194e1b9f0bfd5bb2d73dd}{ADC\+\_\+\+Get\+Conversion\+Result()}; } 
+
+Definition at line \mbox{\hyperlink{adc_8c_source_l00100}{100}} of file \mbox{\hyperlink{adc_8c_source}{adc.\+c}}.
+
+\Hypertarget{adc_8c_a25c0a0a9fe2bdba070f9945ca641b5e0}\label{adc_8c_a25c0a0a9fe2bdba070f9945ca641b5e0} 
+\index{adc.c@{adc.c}!ADC\_SelectChannel@{ADC\_SelectChannel}}
+\index{ADC\_SelectChannel@{ADC\_SelectChannel}!adc.c@{adc.c}}
+\doxysubsubsection{\texorpdfstring{ADC\_SelectChannel()}{ADC\_SelectChannel()}}
+{\footnotesize\ttfamily void ADC\+\_\+\+Select\+Channel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{adc_8h_aafc4060027875f8fe46242b0656d7814}{adc\+\_\+channel\+\_\+t}}}]{channel }\end{DoxyParamCaption})}
+
+@\+Summary Allows selection of a channel for conversion
+
+@\+Description This routine is used to select desired channel for conversion. available
+
+@\+Preconditions \doxylink{adc_8h_ab0e0ea1662a8e789547210a2d33127e1}{ADC\+\_\+\+Initialize()} function should have been called before calling this function.
+
+@\+Returns None
+
+@\+Param Pass in required channel number \"{}\+For available channel refer to enum under adc.\+h file\"{}
+
+@\+Example {\ttfamily  uint16\+\_\+t converted\+Value;}
+
+{\ttfamily  \doxylink{adc_8h_ab0e0ea1662a8e789547210a2d33127e1}{ADC\+\_\+\+Initialize()}; ADC\+\_\+\+Select\+Channel(\+AN1\+\_\+\+Channel); \doxylink{adc_8h_af96ee69b063edcebc656d0ca0450c12c}{ADC\+\_\+\+Start\+Conversion()}; converted\+Value = \doxylink{adc_8h_a9650956bd92194e1b9f0bfd5bb2d73dd}{ADC\+\_\+\+Get\+Conversion\+Result()}; } 
+
+Definition at line \mbox{\hyperlink{adc_8c_source_l00085}{85}} of file \mbox{\hyperlink{adc_8c_source}{adc.\+c}}.
+
+\Hypertarget{adc_8c_af96ee69b063edcebc656d0ca0450c12c}\label{adc_8c_af96ee69b063edcebc656d0ca0450c12c} 
+\index{adc.c@{adc.c}!ADC\_StartConversion@{ADC\_StartConversion}}
+\index{ADC\_StartConversion@{ADC\_StartConversion}!adc.c@{adc.c}}
+\doxysubsubsection{\texorpdfstring{ADC\_StartConversion()}{ADC\_StartConversion()}}
+{\footnotesize\ttfamily void ADC\+\_\+\+Start\+Conversion (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Summary Starts conversion
+
+@\+Description This routine is used to start conversion of desired channel.
+
+@\+Preconditions \doxylink{adc_8h_ab0e0ea1662a8e789547210a2d33127e1}{ADC\+\_\+\+Initialize()} function should have been called before calling this function.
+
+@\+Returns None
+
+@\+Param None
+
+@\+Example {\ttfamily  uint16\+\_\+t converted\+Value;}
+
+{\ttfamily  \doxylink{adc_8h_ab0e0ea1662a8e789547210a2d33127e1}{ADC\+\_\+\+Initialize()}; ~\newline
+ \doxylink{adc_8h_af96ee69b063edcebc656d0ca0450c12c}{ADC\+\_\+\+Start\+Conversion()}; converted\+Value = \doxylink{adc_8h_a9650956bd92194e1b9f0bfd5bb2d73dd}{ADC\+\_\+\+Get\+Conversion\+Result()}; } 
+
+Definition at line \mbox{\hyperlink{adc_8c_source_l00093}{93}} of file \mbox{\hyperlink{adc_8c_source}{adc.\+c}}.
+
+\Hypertarget{adc_8c_a46bdd78f96c668432d4ff33115c9dcd9}\label{adc_8c_a46bdd78f96c668432d4ff33115c9dcd9} 
+\index{adc.c@{adc.c}!ADC\_TemperatureAcquisitionDelay@{ADC\_TemperatureAcquisitionDelay}}
+\index{ADC\_TemperatureAcquisitionDelay@{ADC\_TemperatureAcquisitionDelay}!adc.c@{adc.c}}
+\doxysubsubsection{\texorpdfstring{ADC\_TemperatureAcquisitionDelay()}{ADC\_TemperatureAcquisitionDelay()}}
+{\footnotesize\ttfamily void ADC\+\_\+\+Temperature\+Acquisition\+Delay (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Summary Acquisition Delay for temperature sensor
+
+@\+Description This routine should be called when temperature sensor is used.
+
+@\+Preconditions \doxylink{adc_8h_ab0e0ea1662a8e789547210a2d33127e1}{ADC\+\_\+\+Initialize()} function should have been called before calling this function.
+
+@\+Returns None
+
+@\+Param None
+
+@\+Example {\ttfamily  uint16\+\_\+t converted\+Value;}
+
+{\ttfamily  \doxylink{adc_8h_ab0e0ea1662a8e789547210a2d33127e1}{ADC\+\_\+\+Initialize()}; ~\newline
+ \doxylink{adc_8h_af96ee69b063edcebc656d0ca0450c12c}{ADC\+\_\+\+Start\+Conversion()}; ADC\+\_\+temperature\+Acquisition\+Delay(); converted\+Value = \doxylink{adc_8h_a9650956bd92194e1b9f0bfd5bb2d73dd}{ADC\+\_\+\+Get\+Conversion\+Result()}; } 
+
+Definition at line \mbox{\hyperlink{adc_8c_source_l00135}{135}} of file \mbox{\hyperlink{adc_8c_source}{adc.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{adc_8c_afd07ad436449919718eb6b73351335f6}\label{adc_8c_afd07ad436449919718eb6b73351335f6} 
+\index{adc.c@{adc.c}!ADC\_InterruptHandler@{ADC\_InterruptHandler}}
+\index{ADC\_InterruptHandler@{ADC\_InterruptHandler}!adc.c@{adc.c}}
+\doxysubsubsection{\texorpdfstring{ADC\_InterruptHandler}{ADC\_InterruptHandler}}
+{\footnotesize\ttfamily void(\texorpdfstring{$\ast$}{*} ADC\+\_\+\+Interrupt\+Handler) (void) (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{adc_8c_source_l00061}{61}} of file \mbox{\hyperlink{adc_8c_source}{adc.\+c}}.
+

@@ -1,0 +1,270 @@
+\doxysection{C\+:/\+Users/thali/\+Documents/\+Elevador\+\_\+\+EE/\+Projeto\+Final.X/mcc\+\_\+generated\+\_\+files/tmr1.c File Reference}
+\hypertarget{tmr1_8c}{}\label{tmr1_8c}\index{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/mcc\_generated\_files/tmr1.c@{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/mcc\_generated\_files/tmr1.c}}
+{\ttfamily \#include $<$xc.\+h$>$}\newline
+{\ttfamily \#include \"{}tmr1.\+h\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{tmr1_8c_aeca9435d024c8eeada966c9dffbb8427}{TMR1\+\_\+\+Initialize}} (void)
+\item 
+void \mbox{\hyperlink{tmr1_8c_a7fb12480c3c7725ee1841aef4ef0a37f}{TMR1\+\_\+\+Start\+Timer}} (void)
+\item 
+void \mbox{\hyperlink{tmr1_8c_a753ab808c79ecf999c73d3d829d3bebc}{TMR1\+\_\+\+Stop\+Timer}} (void)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{tmr1_8c_ac467d434ff56049ffe177052ea68662b}{TMR1\+\_\+\+Read\+Timer}} (void)
+\item 
+void \mbox{\hyperlink{tmr1_8c_af5c402c5e3438ddcdd938b7c937cf89c}{TMR1\+\_\+\+Write\+Timer}} (uint16\+\_\+t timer\+Val)
+\item 
+void \mbox{\hyperlink{tmr1_8c_acb2e8bc4afe36fab416c5ea6b5c77c1d}{TMR1\+\_\+\+Reload}} (void)
+\item 
+void \mbox{\hyperlink{tmr1_8c_a4ac588a5ac7c2043026986d345528187}{TMR1\+\_\+\+Start\+Single\+Pulse\+Acquisition}} (void)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{tmr1_8c_a7b46fc2ee213028119efa523084e6fd3}{TMR1\+\_\+\+Check\+Gate\+Value\+Status}} (void)
+\item 
+bool \mbox{\hyperlink{tmr1_8c_a293f6be12a6803562586a4eef051a5a5}{TMR1\+\_\+\+Has\+Overflow\+Occured}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile uint16\+\_\+t \mbox{\hyperlink{tmr1_8c_ae4718aadb96cfb4ab005913c71bf470e}{timer1\+Reload\+Val}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{tmr1_8c_a7b46fc2ee213028119efa523084e6fd3}\label{tmr1_8c_a7b46fc2ee213028119efa523084e6fd3} 
+\index{tmr1.c@{tmr1.c}!TMR1\_CheckGateValueStatus@{TMR1\_CheckGateValueStatus}}
+\index{TMR1\_CheckGateValueStatus@{TMR1\_CheckGateValueStatus}!tmr1.c@{tmr1.c}}
+\doxysubsubsection{\texorpdfstring{TMR1\_CheckGateValueStatus()}{TMR1\_CheckGateValueStatus()}}
+{\footnotesize\ttfamily uint8\+\_\+t TMR1\+\_\+\+Check\+Gate\+Value\+Status (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Summary Check the current state of Timer1 gate.
+
+@\+Description This function reads the TMR1 gate value and return it. This function must be used when the TMR1 gate is enabled.
+
+@\+Preconditions Initialize the TMR1 with gate enable before calling this function.
+
+@\+Param None
+
+@\+Returns None
+
+@\+Example {\ttfamily  uint16\+\_\+t x\+Val; uint16\+\_\+t y\+Val;}
+
+{\ttfamily enable TMR1 singlepulse mode TMR1\+\_\+\+Start\+Single\+Pulse\+Acquistion();}
+
+{\ttfamily check TMR1 gate status if(\doxylink{tmr1_8h_a7b46fc2ee213028119efa523084e6fd3}{TMR1\+\_\+\+Check\+Gate\+Value\+Status()}== 0) x\+Val = \doxylink{tmr1_8h_ac467d434ff56049ffe177052ea68662b}{TMR1\+\_\+\+Read\+Timer()};}
+
+{\ttfamily wait untill gate interrupt occured while(TMR1\+IF == 0) \{ \}}
+
+{\ttfamily  y\+Val = \doxylink{tmr1_8h_ac467d434ff56049ffe177052ea68662b}{TMR1\+\_\+\+Read\+Timer()}; } 
+
+Definition at line \mbox{\hyperlink{tmr1_8c_source_l00145}{145}} of file \mbox{\hyperlink{tmr1_8c_source}{tmr1.\+c}}.
+
+\Hypertarget{tmr1_8c_a293f6be12a6803562586a4eef051a5a5}\label{tmr1_8c_a293f6be12a6803562586a4eef051a5a5} 
+\index{tmr1.c@{tmr1.c}!TMR1\_HasOverflowOccured@{TMR1\_HasOverflowOccured}}
+\index{TMR1\_HasOverflowOccured@{TMR1\_HasOverflowOccured}!tmr1.c@{tmr1.c}}
+\doxysubsubsection{\texorpdfstring{TMR1\_HasOverflowOccured()}{TMR1\_HasOverflowOccured()}}
+{\footnotesize\ttfamily bool TMR1\+\_\+\+Has\+Overflow\+Occured (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Summary Boolean routine to poll or to check for the overflow flag on the fly.
+
+@\+Description This function is called to check for the timer overflow flag. This function is usd in timer polling method.
+
+@\+Preconditions Initialize the TMR1 module before calling this routine.
+
+@\+Param None
+
+@\+Returns true -\/ timer overflow has occured. false -\/ timer overflow has not occured.
+
+@\+Example {\ttfamily  while(1) \{ check the overflow flag if(\+TMR1\+\_\+\+Has\+Overflow\+Occured()) \{ Do something else...}
+
+{\ttfamily clear the TMR1 interrupt flag TMR1\+IF = 0;}
+
+{\ttfamily Reload the TMR1 value \doxylink{tmr1_8h_acb2e8bc4afe36fab416c5ea6b5c77c1d}{TMR1\+\_\+\+Reload()}; \} \} } 
+
+Definition at line \mbox{\hyperlink{tmr1_8c_source_l00150}{150}} of file \mbox{\hyperlink{tmr1_8c_source}{tmr1.\+c}}.
+
+\Hypertarget{tmr1_8c_aeca9435d024c8eeada966c9dffbb8427}\label{tmr1_8c_aeca9435d024c8eeada966c9dffbb8427} 
+\index{tmr1.c@{tmr1.c}!TMR1\_Initialize@{TMR1\_Initialize}}
+\index{TMR1\_Initialize@{TMR1\_Initialize}!tmr1.c@{tmr1.c}}
+\doxysubsubsection{\texorpdfstring{TMR1\_Initialize()}{TMR1\_Initialize()}}
+{\footnotesize\ttfamily void TMR1\+\_\+\+Initialize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Section\+: TMR1 APIs 
+
+Definition at line \mbox{\hyperlink{tmr1_8c_source_l00063}{63}} of file \mbox{\hyperlink{tmr1_8c_source}{tmr1.\+c}}.
+
+\Hypertarget{tmr1_8c_ac467d434ff56049ffe177052ea68662b}\label{tmr1_8c_ac467d434ff56049ffe177052ea68662b} 
+\index{tmr1.c@{tmr1.c}!TMR1\_ReadTimer@{TMR1\_ReadTimer}}
+\index{TMR1\_ReadTimer@{TMR1\_ReadTimer}!tmr1.c@{tmr1.c}}
+\doxysubsubsection{\texorpdfstring{TMR1\_ReadTimer()}{TMR1\_ReadTimer()}}
+{\footnotesize\ttfamily uint16\+\_\+t TMR1\+\_\+\+Read\+Timer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Summary Reads the TMR1 register.
+
+@\+Description This function reads the TMR1 register value and return it.
+
+@\+Preconditions Initialize the TMR1 before calling this function.
+
+@\+Param None
+
+@\+Returns This function returns the current value of TMR1 register.
+
+@\+Example {\ttfamily  Initialize TMR1 module}
+
+{\ttfamily Start TMR1 \doxylink{tmr1_8h_a7fb12480c3c7725ee1841aef4ef0a37f}{TMR1\+\_\+\+Start\+Timer()};}
+
+{\ttfamily Read the current value of TMR1 if(0 == \doxylink{tmr1_8h_ac467d434ff56049ffe177052ea68662b}{TMR1\+\_\+\+Read\+Timer()}) \{ Do something else...}
+
+{\ttfamily Reload the TMR value \doxylink{tmr1_8h_acb2e8bc4afe36fab416c5ea6b5c77c1d}{TMR1\+\_\+\+Reload()}; \} } 
+
+Definition at line \mbox{\hyperlink{tmr1_8c_source_l00098}{98}} of file \mbox{\hyperlink{tmr1_8c_source}{tmr1.\+c}}.
+
+\Hypertarget{tmr1_8c_acb2e8bc4afe36fab416c5ea6b5c77c1d}\label{tmr1_8c_acb2e8bc4afe36fab416c5ea6b5c77c1d} 
+\index{tmr1.c@{tmr1.c}!TMR1\_Reload@{TMR1\_Reload}}
+\index{TMR1\_Reload@{TMR1\_Reload}!tmr1.c@{tmr1.c}}
+\doxysubsubsection{\texorpdfstring{TMR1\_Reload()}{TMR1\_Reload()}}
+{\footnotesize\ttfamily void TMR1\+\_\+\+Reload (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Summary Reload the TMR1 register.
+
+@\+Description This function reloads the TMR1 register. This function must be called to write initial value into TMR1 register.
+
+@\+Preconditions Initialize the TMR1 before calling this function.
+
+@\+Param None
+
+@\+Returns None
+
+@\+Example {\ttfamily  while(1) \{ if(\+TMR1\+IF) \{ Do something else...}
+
+{\ttfamily clear the TMR1 interrupt flag TMR1\+IF = 0;}
+
+{\ttfamily Reload the initial value of TMR1 \doxylink{tmr1_8h_acb2e8bc4afe36fab416c5ea6b5c77c1d}{TMR1\+\_\+\+Reload()}; \} \} } 
+
+Definition at line \mbox{\hyperlink{tmr1_8c_source_l00135}{135}} of file \mbox{\hyperlink{tmr1_8c_source}{tmr1.\+c}}.
+
+\Hypertarget{tmr1_8c_a4ac588a5ac7c2043026986d345528187}\label{tmr1_8c_a4ac588a5ac7c2043026986d345528187} 
+\index{tmr1.c@{tmr1.c}!TMR1\_StartSinglePulseAcquisition@{TMR1\_StartSinglePulseAcquisition}}
+\index{TMR1\_StartSinglePulseAcquisition@{TMR1\_StartSinglePulseAcquisition}!tmr1.c@{tmr1.c}}
+\doxysubsubsection{\texorpdfstring{TMR1\_StartSinglePulseAcquisition()}{TMR1\_StartSinglePulseAcquisition()}}
+{\footnotesize\ttfamily void TMR1\+\_\+\+Start\+Single\+Pulse\+Acquisition (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Summary Starts the single pulse acquisition in TMR1 gate operation.
+
+@\+Description This function starts the single pulse acquisition in TMR1 gate operation. This function must be used when the TMR1 gate is enabled.
+
+@\+Preconditions Initialize the TMR1 with gate enable before calling this function.
+
+@\+Param None
+
+@\+Returns None
+
+@\+Example {\ttfamily  uint16\+\_\+t x\+Val; uint16\+\_\+t y\+Val;}
+
+{\ttfamily enable TMR1 singlepulse mode TMR1\+\_\+\+Start\+Single\+Pulse\+Acquistion();}
+
+{\ttfamily check TMR1 gate status if(\doxylink{tmr1_8h_a7b46fc2ee213028119efa523084e6fd3}{TMR1\+\_\+\+Check\+Gate\+Value\+Status()}== 0) x\+Val = \doxylink{tmr1_8h_ac467d434ff56049ffe177052ea68662b}{TMR1\+\_\+\+Read\+Timer()};}
+
+{\ttfamily wait untill gate interrupt occured while(TMR1\+GIF == 0) \{ \}}
+
+{\ttfamily  y\+Val = \doxylink{tmr1_8h_ac467d434ff56049ffe177052ea68662b}{TMR1\+\_\+\+Read\+Timer()}; } 
+
+Definition at line \mbox{\hyperlink{tmr1_8c_source_l00140}{140}} of file \mbox{\hyperlink{tmr1_8c_source}{tmr1.\+c}}.
+
+\Hypertarget{tmr1_8c_a7fb12480c3c7725ee1841aef4ef0a37f}\label{tmr1_8c_a7fb12480c3c7725ee1841aef4ef0a37f} 
+\index{tmr1.c@{tmr1.c}!TMR1\_StartTimer@{TMR1\_StartTimer}}
+\index{TMR1\_StartTimer@{TMR1\_StartTimer}!tmr1.c@{tmr1.c}}
+\doxysubsubsection{\texorpdfstring{TMR1\_StartTimer()}{TMR1\_StartTimer()}}
+{\footnotesize\ttfamily void TMR1\+\_\+\+Start\+Timer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Summary This function starts the TMR1.
+
+@\+Description This function starts the TMR1 operation. This function must be called after the initialization of TMR1.
+
+@\+Preconditions Initialize the TMR1 before calling this function.
+
+@\+Param None
+
+@\+Returns None
+
+@\+Example {\ttfamily  Initialize TMR1 module}
+
+{\ttfamily Start TMR1 \doxylink{tmr1_8h_a7fb12480c3c7725ee1841aef4ef0a37f}{TMR1\+\_\+\+Start\+Timer()};}
+
+{\ttfamily Do something else... } 
+
+Definition at line \mbox{\hyperlink{tmr1_8c_source_l00086}{86}} of file \mbox{\hyperlink{tmr1_8c_source}{tmr1.\+c}}.
+
+\Hypertarget{tmr1_8c_a753ab808c79ecf999c73d3d829d3bebc}\label{tmr1_8c_a753ab808c79ecf999c73d3d829d3bebc} 
+\index{tmr1.c@{tmr1.c}!TMR1\_StopTimer@{TMR1\_StopTimer}}
+\index{TMR1\_StopTimer@{TMR1\_StopTimer}!tmr1.c@{tmr1.c}}
+\doxysubsubsection{\texorpdfstring{TMR1\_StopTimer()}{TMR1\_StopTimer()}}
+{\footnotesize\ttfamily void TMR1\+\_\+\+Stop\+Timer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Summary This function stops the TMR1.
+
+@\+Description This function stops the TMR1 operation. This function must be called after the start of TMR1.
+
+@\+Preconditions Initialize the TMR1 before calling this function.
+
+@\+Param None
+
+@\+Returns None
+
+@\+Example {\ttfamily  Initialize TMR1 module}
+
+{\ttfamily Start TMR1 \doxylink{tmr1_8h_a7fb12480c3c7725ee1841aef4ef0a37f}{TMR1\+\_\+\+Start\+Timer()};}
+
+{\ttfamily Do something else...}
+
+{\ttfamily Stop TMR1; \doxylink{tmr1_8h_a753ab808c79ecf999c73d3d829d3bebc}{TMR1\+\_\+\+Stop\+Timer()}; } 
+
+Definition at line \mbox{\hyperlink{tmr1_8c_source_l00092}{92}} of file \mbox{\hyperlink{tmr1_8c_source}{tmr1.\+c}}.
+
+\Hypertarget{tmr1_8c_af5c402c5e3438ddcdd938b7c937cf89c}\label{tmr1_8c_af5c402c5e3438ddcdd938b7c937cf89c} 
+\index{tmr1.c@{tmr1.c}!TMR1\_WriteTimer@{TMR1\_WriteTimer}}
+\index{TMR1\_WriteTimer@{TMR1\_WriteTimer}!tmr1.c@{tmr1.c}}
+\doxysubsubsection{\texorpdfstring{TMR1\_WriteTimer()}{TMR1\_WriteTimer()}}
+{\footnotesize\ttfamily void TMR1\+\_\+\+Write\+Timer (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{timer\+Val }\end{DoxyParamCaption})}
+
+@\+Summary Writes the TMR1 register.
+
+@\+Description This function writes the TMR1 register. This function must be called after the initialization of TMR1.
+
+@\+Preconditions Initialize the TMR1 before calling this function.
+
+@\+Param timer\+Val -\/ Value to write into TMR1 register.
+
+@\+Returns None
+
+@\+Example {\ttfamily  \#define PERIOD 0x80 \#define ZERO 0x00}
+
+{\ttfamily  while(1) \{ Read the TMR1 register if(ZERO == \doxylink{tmr1_8h_ac467d434ff56049ffe177052ea68662b}{TMR1\+\_\+\+Read\+Timer()}) \{ Do something else...}
+
+{\ttfamily Write the TMR1 register TMR1\+\_\+\+Write\+Timer(\+PERIOD); \}}
+
+{\ttfamily Do something else... \} } 
+
+Definition at line \mbox{\hyperlink{tmr1_8c_source_l00113}{113}} of file \mbox{\hyperlink{tmr1_8c_source}{tmr1.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{tmr1_8c_ae4718aadb96cfb4ab005913c71bf470e}\label{tmr1_8c_ae4718aadb96cfb4ab005913c71bf470e} 
+\index{tmr1.c@{tmr1.c}!timer1ReloadVal@{timer1ReloadVal}}
+\index{timer1ReloadVal@{timer1ReloadVal}!tmr1.c@{tmr1.c}}
+\doxysubsubsection{\texorpdfstring{timer1ReloadVal}{timer1ReloadVal}}
+{\footnotesize\ttfamily volatile uint16\+\_\+t timer1\+Reload\+Val}
+
+TMR1 Generated Driver File
+
+@\+Company Microchip Technology Inc.
+
+@\+File Name \doxylink{tmr1_8c}{tmr1.\+c}
+
+@\+Summary This is the generated driver implementation file for the TMR1 driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+
+@\+Description This source file provides APIs for TMR1. Generation Information \+: Product Revision \+: PIC10 / PIC12 / PIC16 / PIC18 MCUs -\/ 1.\+81.\+8 Device \+: PIC16\+F1827 Driver Version \+: 2.\+11 The generated drivers are tested against the following\+: Compiler \+: XC8 2.\+36 and above MPLAB \+: MPLAB X 6.\+00 Section\+: Included Files Section\+: Global Variables Definitions 
+
+Definition at line \mbox{\hyperlink{tmr1_8c_source_l00057}{57}} of file \mbox{\hyperlink{tmr1_8c_source}{tmr1.\+c}}.
+

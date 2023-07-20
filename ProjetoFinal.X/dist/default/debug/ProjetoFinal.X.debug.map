@@ -6,16 +6,16 @@ Linker command line:
   --edf=C:\Program Files\Microchip\xc8\v2.41\pic\dat\20230208172133_en.msgs \
   -cn -h+dist/default/debug\ProjetoFinal.X.debug.sym \
   --cmf=dist/default/debug\ProjetoFinal.X.debug.cmf -z -Q16F1827 \
-  -oC:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_3.o \
+  -oC:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_3.o \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/debug/ProjetoFinal.X.debug.map \
-  --md=C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_0.dat -E1 \
+  --md=C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_0.dat -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ACODE=00h-07FFhx2 -ASTRCODE=00h-0FFFh \
   -ASTRING=00h-0FFhx16 -ACONST=00h-0FFhx16 -AENTRY=00h-0FFhx16 \
   -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
-  -ABANK2=0120h-016Fh -ABANK3=01A0h-01EFh -ABANK4=0220h-024Fh \
-  -ABIGRAM=02000h-0216Fh \
-  -ARAM=020h-06Fh,0A0h-0EFh,0120h-016Fh,01A0h-01EFh,0220h-024Fh \
+  -ABANK2=0120h-016Fh -ABANK3=01A0h-01EFh -ABANK4=0220h-023Fh \
+  -ABIGRAM=02000h-0215Fh \
+  -ARAM=020h-06Fh,0A0h-0EFh,0120h-016Fh,01A0h-01EFh,0220h-023Fh \
   -AABS1=020h-07Fh,0A0h-0EFh,0120h-016Fh,01A0h-01EFh,0220h-024Fh \
   -ASFR0=00h-01Fh -ASFR1=080h-09Fh -ASFR2=0100h-011Fh -ASFR3=0180h-019Fh \
   -ASFR4=0200h-021Fh -ASFR5=0280h-02EFh -ASFR6=0300h-036Fh \
@@ -32,7 +32,7 @@ Linker command line:
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
   -DENTRY=2 -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE \
   -pcinit=CODE -pfunctab=ENTRY -k \
-  C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_15.o \
+  C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_15.o \
   dist/default/debug\ProjetoFinal.X.debug.o 
 
 Object code version is 3.11
@@ -42,7 +42,7 @@ Machine type is 16F1827
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_15.o
+C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_15.o
                 end_init                             56       56        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        2        0       4
@@ -491,8 +491,8 @@ UNUSED ADDRESS RANGES
         BANK1            000E6-000EF               A           1
         BANK2            00132-0016F              3E           1
         BANK3            001A0-001EF              50           1
-        BANK4            00220-0024F              30           1
-        BIGRAM           02000-0216F             170           1
+        BANK4            00220-0023F              20           1
+        BIGRAM           02000-0215F             160           1
         CODE             00806-00883              7E           2
         CONST            00806-00883              7E           2
         EEDATA           0F000-0F0FF             100           2
@@ -500,7 +500,7 @@ UNUSED ADDRESS RANGES
         RAM              000E6-000EF               A           1
                          00132-0016F              3E
                          001A0-001EF              50
-                         00220-0024F              30
+                         00220-0023F              20
         SFR0             00000-0001F              20           1
         SFR1             00080-0009F              20           1
         SFR10            00500-0056F              70           1

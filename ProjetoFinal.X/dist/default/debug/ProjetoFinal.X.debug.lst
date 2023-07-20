@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.41 build 20230208172133 
-                                                                                               Thu Jul 20 12:00:16 2023
+                                                                                               Thu Jul 20 12:16:25 2023
 
 Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1 
      1                           	processor	16F1827
@@ -13079,7 +13079,7 @@ Auto Spaces:
     BANK1            80     17      70
     BANK2            80     10      18
     BANK3            80      0       0
-    BANK4            48      0       0
+    BANK4            32      0       0
 
 Pointer List with Targets:
 
@@ -13698,7 +13698,7 @@ Call Graph Tables:
 
  Address spaces:
 Name               Size   Autos  Total    Cost      Usage
-BIGRAM             170      0       0       0        0.0%
+BIGRAM             160      0       0       0        0.0%
 EEDATA             100      0       0       0        0.0%
 NULL                 0      0       0       0        0.0%
 CODE                 0      0       0       0        0.0%
@@ -13738,10 +13738,10 @@ SFR10                0      0       0      11        0.0%
 BANK3               50      0       0      12        0.0%
 BITSFR11             0      0       0      12        0.0%
 SFR11                0      0       0      12        0.0%
-BITBANK4            30      0       0      13        0.0%
+BITBANK4            20      0       0      13        0.0%
 BITSFR12             0      0       0      13        0.0%
 SFR12                0      0       0      13        0.0%
-BANK4               30      0       0      14        0.0%
+BANK4               20      0       0      14        0.0%
 BITSFR13             0      0       0      14        0.0%
 SFR13                0      0       0      14        0.0%
 BITSFR14             0      0       0      15        0.0%
@@ -13784,7 +13784,7 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.41 build 20230208172133 
-Symbol Table                                                                                   Thu Jul 20 12:00:16 2023
+Symbol Table                                                                                   Thu Jul 20 12:16:25 2023
 
                               _CCP4_Initialize 09F1                                   ___fldiv@aexp 003F  
                                  ___fldiv@bexp 003E               ??_IOCBF3_DefaultInterruptHandler 0070  

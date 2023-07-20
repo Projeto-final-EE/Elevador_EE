@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_15.o
+$C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_15.o
 idloc IDLOC 5 8000 8000 4 2 1
 reset_vec CODE 0 0 0 2 2 1
 end_init CODE 0 56 56 2 2 1
@@ -121,11 +121,11 @@ config CONFIG 4 8007 8007 2 2 1
 RAM E6-EF 1
 RAM 132-16F 1
 RAM 1A0-1EF 1
-RAM 220-24F 1
+RAM 220-23F 1
 BANK1 E6-EF 1
 BANK2 132-16F 1
 BANK3 1A0-1EF 1
-BANK4 220-24F 1
+BANK4 220-23F 1
 CONST 806-883 2
 ENTRY 806-883 2
 SFR10 500-56F 1
@@ -161,7 +161,7 @@ SFR6 300-36F 1
 SFR7 380-3EF 1
 SFR8 400-46F 1
 SFR9 480-4EF 1
-BIGRAM 2000-216F 1
+BIGRAM 2000-215F 1
 EEDATA F000-F0FF 2
 STRCODE 806-883 2
 STRING 806-883 2
@@ -179,28 +179,28 @@ STRING 806-883 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/debug\ProjetoFinal.X.debug.o
-58 cinit CODE >5874:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-58 cinit CODE >5877:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-58 cinit CODE >5993:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-59 cinit CODE >5994:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-5C cinit CODE >5995:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-5D cinit CODE >5996:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-60 cinit CODE >5997:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-61 cinit CODE >6014:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-62 cinit CODE >6015:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-63 cinit CODE >6016:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-64 cinit CODE >6017:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-65 cinit CODE >6018:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-66 cinit CODE >6022:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-67 cinit CODE >6023:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-68 cinit CODE >6024:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-69 cinit CODE >6025:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-6A cinit CODE >6026:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-6B cinit CODE >6027:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-6E cinit CODE >6033:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-6E cinit CODE >6035:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-6F cinit CODE >6036:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-70 cinit CODE >6037:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
+58 cinit CODE >5874:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+58 cinit CODE >5877:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+58 cinit CODE >5993:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+59 cinit CODE >5994:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+5C cinit CODE >5995:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+5D cinit CODE >5996:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+60 cinit CODE >5997:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+61 cinit CODE >6014:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+62 cinit CODE >6015:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+63 cinit CODE >6016:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+64 cinit CODE >6017:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+65 cinit CODE >6018:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+66 cinit CODE >6022:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+67 cinit CODE >6023:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+68 cinit CODE >6024:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+69 cinit CODE >6025:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+6A cinit CODE >6026:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+6B cinit CODE >6027:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+6E cinit CODE >6033:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+6E cinit CODE >6035:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+6F cinit CODE >6036:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+70 cinit CODE >6037:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
 4 intentry CODE >52:C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/interrupt_manager.c
 6 intentry CODE >55:C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/interrupt_manager.c
 E intentry CODE >57:C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\mcc_generated_files/interrupt_manager.c
@@ -1163,14 +1163,14 @@ CAB text1 CODE >41:C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
 6B0 maintext CODE >536:C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
 6B3 maintext CODE >536:C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
 6B6 maintext CODE >537:C:\Users\thali\Documents\Elevador_EE\ProjetoFinal.X\main.c
-8C5 clrtext CODE >6003:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-8C5 clrtext CODE >6004:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-8C6 clrtext CODE >6005:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-8C6 clrtext CODE >6006:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-8C7 clrtext CODE >6007:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-8C8 clrtext CODE >6008:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-8C9 clrtext CODE >6009:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
-8CA clrtext CODE >6010:C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_1.s
+8C5 clrtext CODE >6003:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+8C5 clrtext CODE >6004:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+8C6 clrtext CODE >6005:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+8C6 clrtext CODE >6006:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+8C7 clrtext CODE >6007:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+8C8 clrtext CODE >6008:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+8C9 clrtext CODE >6009:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
+8CA clrtext CODE >6010:C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_1.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1221,13 +1221,13 @@ _TMR4 415 0 ABS 0 - dist/default/debug\ProjetoFinal.X.debug.o
 _WPUA 20C 0 ABS 0 - dist/default/debug\ProjetoFinal.X.debug.o
 _WPUB 20D 0 ABS 0 - dist/default/debug\ProjetoFinal.X.debug.o
 __end_of_IOCBF0_SetInterruptHandler 1166 0 CODE 0 text22 dist/default/debug\ProjetoFinal.X.debug.o
-___sp 0 0 STACK 2 stack C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_15.o
+___sp 0 0 STACK 2 stack C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_15.o
 _main C1A 0 CODE 0 maintext dist/default/debug\ProjetoFinal.X.debug.o
 abs@a 70 0 COMMON 1 cstackCOMMON dist/default/debug\ProjetoFinal.X.debug.o
 btemp 7E 0 ABS 0 - dist/default/debug\ProjetoFinal.X.debug.o
 __end_of_ADC_GetConversion 1564 0 CODE 0 text52 dist/default/debug\ProjetoFinal.X.debug.o
 _IOCBF0_DefaultInterruptHandler 110A 0 CODE 0 text62 dist/default/debug\ProjetoFinal.X.debug.o
-start AC 0 CODE 0 init C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_15.o
+start AC 0 CODE 0 init C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_15.o
 ___flmul@aexp 52 0 BANK0 1 cstackBANK0 dist/default/debug\ProjetoFinal.X.debug.o
 ___flmul@bexp 53 0 BANK0 1 cstackBANK0 dist/default/debug\ProjetoFinal.X.debug.o
 ___flmul@prod 54 0 BANK0 1 cstackBANK0 dist/default/debug\ProjetoFinal.X.debug.o
@@ -1256,12 +1256,12 @@ __Hpowerup 0 0 CODE 0 powerup -
 __end_of_spi1_configuration 100C 0 STRCODE 0 stringtext2 dist/default/debug\ProjetoFinal.X.debug.o
 _TMR2_Initialize 11B4 0 CODE 0 text14 dist/default/debug\ProjetoFinal.X.debug.o
 TMR0_SetInterruptHandler@InterruptHandler D3 0 BANK1 1 cstackBANK1 dist/default/debug\ProjetoFinal.X.debug.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_15.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_15.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_15.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_15.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_15.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_15.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_15.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_15.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_15.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_15.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_15.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_15.o
 __end_of_organizaTrajeto 1958 0 CODE 0 text1 dist/default/debug\ProjetoFinal.X.debug.o
 PWM3_LoadDutyValue@dutyValue 70 0 COMMON 1 cstackCOMMON dist/default/debug\ProjetoFinal.X.debug.o
 wtemp0 7E 0 ABS 0 - dist/default/debug\ProjetoFinal.X.debug.o
@@ -1326,8 +1326,8 @@ sendInfo@i CD 0 BANK1 1 cstackBANK1 dist/default/debug\ProjetoFinal.X.debug.o
 sendInfo@v CE 0 BANK1 1 cstackBANK1 dist/default/debug\ProjetoFinal.X.debug.o
 __Umul8_16@multiplicand 70 0 COMMON 1 cstackCOMMON dist/default/debug\ProjetoFinal.X.debug.o
 _OPTION_REG 95 0 ABS 0 - dist/default/debug\ProjetoFinal.X.debug.o
-___stackhi 0 0 ABS 0 - C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_15.o
-___stacklo 0 0 ABS 0 - C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_15.o
+___stackhi 0 0 ABS 0 - C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_15.o
+___stacklo 0 0 ABS 0 - C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_15.o
 _CCP4_CaptureISR 13BE 0 CODE 0 text76 dist/default/debug\ProjetoFinal.X.debug.o
 __end_of_apagaFlag 1300 0 CODE 0 text8 dist/default/debug\ProjetoFinal.X.debug.o
 _EUSART_Initialize 16D4 0 CODE 0 text25 dist/default/debug\ProjetoFinal.X.debug.o
@@ -1372,7 +1372,7 @@ __end_of_TMR4_WriteTimer 1138 0 CODE 0 text74 dist/default/debug\ProjetoFinal.X.
 _contComandos C4 0 BANK1 1 bssBANK1 dist/default/debug\ProjetoFinal.X.debug.o
 _IOCBF3_SetInterruptHandler 1166 0 CODE 0 text21 dist/default/debug\ProjetoFinal.X.debug.o
 _WDTCON 97 0 ABS 0 - dist/default/debug\ProjetoFinal.X.debug.o
-___int_sp 0 0 STACK 2 stack C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_15.o
+___int_sp 0 0 STACK 2 stack C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_15.o
 __end_of_EUSART_Read 137C 0 CODE 0 text36 dist/default/debug\ProjetoFinal.X.debug.o
 organizaTrajeto@mascaraDestino D5 0 BANK1 1 cstackBANK1 dist/default/debug\ProjetoFinal.X.debug.o
 __end_of_PWM3_Initialize 121E 0 CODE 0 text19 dist/default/debug\ProjetoFinal.X.debug.o
@@ -1570,7 +1570,7 @@ _rxValue C5 0 BANK1 1 bssBANK1 dist/default/debug\ProjetoFinal.X.debug.o
 __HnvBANK1 0 0 ABS 0 nvBANK1 -
 __HnvBANK2 0 0 ABS 0 nvBANK2 -
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_15.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_15.o
 _CCPTMRS0bits 29E 0 ABS 0 - dist/default/debug\ProjetoFinal.X.debug.o
 __end_of___xxtofl EC8 0 CODE 0 text47 dist/default/debug\ProjetoFinal.X.debug.o
 __pdataBANK1 E4 0 BANK1 1 dataBANK1 dist/default/debug\ProjetoFinal.X.debug.o
@@ -1796,8 +1796,8 @@ __Lreset_vec 0 0 CODE 0 reset_vec -
 __end_ofi1_SPI1_ExchangeBlock 17C4 0 CODE 0 text70 dist/default/debug\ProjetoFinal.X.debug.o
 __Hstringtext1 0 0 ABS 0 stringtext1 -
 __Hstringtext2 0 0 ABS 0 stringtext2 -
-___heap_hi 0 0 ABS 0 - C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_15.o
-___heap_lo 0 0 ABS 0 - C:\Users\thali\AppData\Local\Temp\xcAs8vg.\driver_tmp_15.o
+___heap_hi 0 0 ABS 0 - C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_15.o
+___heap_lo 0 0 ABS 0 - C:\Users\thali\AppData\Local\Temp\xcAsfck.\driver_tmp_15.o
 _subindo E4 0 BANK1 1 dataBANK1 dist/default/debug\ProjetoFinal.X.debug.o
 ___fltol@f1 5A 0 BANK0 1 cstackBANK0 dist/default/debug\ProjetoFinal.X.debug.o
 i1SPI1_ExchangeBlock@data 74 0 COMMON 1 cstackCOMMON dist/default/debug\ProjetoFinal.X.debug.o

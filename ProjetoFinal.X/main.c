@@ -77,11 +77,18 @@ void organizaTrajeto(){ //função que aplica as mascaras as variaveis destinoSu
     
 }
 
-
+/**
+ * Funcao verifica se dasdsadasda
+ * @param floor
+ * @return 
+ */
 bool isValidFloor(char floor){
     return floor >= '0' && floor <= '3';
 }
 
+/**
+ * funcao abababa
+ */
 void sendInfo(){
     
     bcd16_t bcd;

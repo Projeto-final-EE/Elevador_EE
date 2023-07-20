@@ -1,0 +1,13 @@
+
+Memory Summary:
+<<<<<<< HEAD:ProjetoFinal.X/dist/default/production/ProjetoFinal.X.production.mum
+    Program space        used   F31h (  3889) of  1000h words   ( 94.9%)
+    Data space           used    A8h (   168) of   180h bytes   ( 43.8%)
+=======
+    Program space        used   DD2h (  3538) of  1000h words   ( 86.4%)
+    Data space           used    9Eh (   158) of   180h bytes   ( 41.1%)
+>>>>>>> db4fd3bb393eeecbbe49a5e5d6c01d154fdbcf18:ProjetoFinal.X/dist/default/debug/ProjetoFinal.X.debug.mum
+    EEPROM space         used     0h (     0) of   100h bytes   (  0.0%)
+    Configuration bits   used     2h (     2) of     2h words   (100.0%)
+    ID Location space    used     4h (     4) of     4h bytes   (100.0%)
+

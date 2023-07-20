@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/debug\ProjetoFinal.X.debug.hex">
+    <memory name="program">
+      <units>words</units>
+      <length>4096</length>
+<<<<<<< HEAD:ProjetoFinal.X/dist/default/production/memoryfile.xml
+      <used>3889</used>
+      <free>207</free>
+=======
+      <used>3538</used>
+      <free>558</free>
+>>>>>>> db4fd3bb393eeecbbe49a5e5d6c01d154fdbcf18:ProjetoFinal.X/dist/default/debug/memoryfile.xml
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>384</length>
+<<<<<<< HEAD:ProjetoFinal.X/dist/default/production/memoryfile.xml
+      <used>168</used>
+      <free>216</free>
+=======
+      <used>158</used>
+      <free>226</free>
+>>>>>>> db4fd3bb393eeecbbe49a5e5d6c01d154fdbcf18:ProjetoFinal.X/dist/default/debug/memoryfile.xml
+    </memory>
+  </executable>
+</project>

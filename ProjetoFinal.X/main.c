@@ -49,6 +49,35 @@
  */
 
 // Functions
+void organizaTrajeto(){ //função que aplica as mascaras as variaveis destinoSub e DestinoDesc que controlam as paradas do elvador aos andares
+    uint8_t mascaraOrigem = 1<<origem; // desloca o bit '1' até a posição do andar escolhido com origem
+    uint8_t mascaraDestino = 1<<destino; // desloca o bit '1' até a posição do andar escolhido com destino
+    
+    if(origem == 0){
+        destinoSub = destinoSub | mascaraDestino;
+    }else if (origem < destino)
+    {
+        destinoSub =destinoSub | mascaraOrigem | mascaraDestino; //aplica ambas as mascaras simultaneamente aos andares de destino de subida
+    }else if(origem > destino){
+
+        // elvador sobe até a origem e depois desce até o destino
+        destinoSub = destinoSub| mascaraOrigem; 
+        destinoDesc = destinoDesc| mascaraDestino;
+    }
+
+    if (mov == RetornaS0) //Caso o percuso já tenha acabado e ele estiver esperando um novo comando
+    {
+        mov = EmTrajeto; //retoma o trajeto
+        //Reinicia o Timer4
+        TMR4_WriteTimer(0);
+        TMR4_StartTimer;
+    }else{
+        mov = EmTrajeto;
+    }
+    
+}
+
+
 bool isValidFloor(char floor){
     return floor >= '0' && floor <= '3';
 }
@@ -56,19 +85,60 @@ bool isValidFloor(char floor){
 void sendInfo(){
     
     bcd16_t bcd;
+    static uint8_t aux_altura = 0;
+    uint8_t destinoAtual=0;
     uint16_t velocidade;
+    uint8_t mascara=0;
+    
+    if (subindo){
+        mascara = 0b00000001;
+    }else{
+         mascara = 0b0001000;
+    }
+    for(uint8_t i = 0; i<4; i++ ){
+        uint8_t v= 0;
+        if(subindo){
+            mascara = mascara<<1;
+            v =destinoSub&mascara;
+        }else{
+            mascara = 1>>mascara;
+            v =destinoDesc&mascara;
+        }
+        if(v !=0 ){
+            destinoAtual = v;
+            break;
+        }
+    }
+   
+    switch(destinoAtual){
+        case 2:
+            destinoAtual=1;
+            break;
+        case 4:
+            destinoAtual=2;
+            break;
+        case 8:
+            destinoAtual = 3;
+            break;
+        default:
+            destinoAtual = 4;
+    }
+    
+    altura = (1.5 * pulsoEncoder);
+    velocidadeMotor = (abs(altura - aux_altura)/ 300.f) * 1000; // (mm/pulsos) / (tempo(s))
+    aux_altura = altura;
     
     velocidade = (uint16_t)(velocidadeMotor * 10); // Ajustando o valor da velocidade para ser enviado
-    temperatura = (ADC_GetConversion(2) / 1024) * 999; // Calcula a temperatura
+    temperatura = (ADC_GetConversion(2) / 1024.f) * 999; // Calcula a temperatura
     
     EUSART_Write('$'); // Caracter inicial
-    EUSART_Write(0x30 + origem); // Envia o andar de origem em ASCII
-    EUSART_Write(0x2C); // Envia a virgula
-    EUSART_Write(0x30 + destino); // Envia o andar destino em ASCII
+    
+    EUSART_Write(0x30 + destinoAtual); // Envia o andar destino em ASCII
     EUSART_Write(0x2C); // Envia a virgula
     EUSART_Write(0x30 + andarAtual); // Envia o andar atual em ASCII
     EUSART_Write(0x2C); // Envia a virgula
-    EUSART_Write(0); // Envia o estado atual do motor
+    EUSART_Write(0x30 + motor); // Envia o estado atual do motor
+    
     EUSART_Write(0x2C); // Envia a virgula
     // Enviando a altura em mm
     bcd.v = bin2bcd(altura);
@@ -94,25 +164,19 @@ void sendInfo(){
 }
 
 void interrupcaoCCP4(){
-    
-    if (pulsoEncoder <= 215){
+
+    if (subindo){
         pulsoEncoder++;
     } else {
-        pulsoEncoder = 0;
+        pulsoEncoder--;
     }
-    
-    altura = (uint8_t)(pulsoEncoder * 0.83720930);
-    if(pulsoEncoder == 215) altura = 180;
-    
+
     if(!flag){
         t1 = (CCPR4H << 8) + CCPR4L;   // Tempo da primeira interrupcao
         flag = 0x01;
     } else {
         t2 = (CCPR4H << 8) + CCPR4L;   // Tempo da segunda interrupcao
         flag = 0x02;
-        
-        velocidadeMotor = (altura) / ((t2 - t1) / 1000000); // (mm/pulsos) / (tempo(s))
-        
     }
 }
 
@@ -163,101 +227,201 @@ void initMatrix(){
     }
 }
 
+void controleMovimento(){
+    static uint8_t cont = 0;
+    switch(mov){
+        case Repouso:
+            PWM3_LoadDutyValue(0);
+            cont = 0;
+            break;
+        case Espera:
+            if (cont >=4){
+                
+                mov = RetornaS0; //Caso não tenha tido atualizações no trajeto entra em retornaS0
+                cont = 0;
+            }else{
+                cont++;
+            }
+            break;
+        case EmTrajeto:
+            PWM3_LoadDutyValue(DUTY);
+            cont = 0;
+            break;
+        case RetornaS0:
+            PWM3_LoadDutyValue(DUTY);
+            cont = 0;
+            break;
+    }
+    
+    if(destinoSub != 0 ){//Determina o sentido do movimento do motor
+        //Seta o movimento ascendente do motor
+        subindo = true;
+        Dir_SetHigh();
+        if(mov == EmTrajeto || mov == RetornaS0){
+            MatrixLed[5] =  0b01100000;
+            MatrixLed[6] =  0b11000000;
+            MatrixLed[7] =  0b01100000;
+            motor = 1;
+        }
+    }else{
+        //Seta o movimento ascendente do motor
+        subindo = false;
+        Dir_SetLow();
+        if(mov == EmTrajeto || mov == RetornaS0){
+            MatrixLed[5] =  0b11000000;
+            MatrixLed[6] =  0b01100000;
+            MatrixLed[7] =  0b11000000;
+            motor = 2;
+        }
+    }
+    
+    MatrixLed[7] = MatrixLed[7] | destinoSub;
+    MatrixLed[6] = MatrixLed[6] | destinoDesc;
+    //matrixUpdate();
+}
+
 void chegadaS1(){ //função acionada ao sensor S1 ser acionado
     //Atualização da variavel da matrix de de Dados com o numero 0 mais a direcao de movimento do elevador
+    motor = 0;
     andarAtual = 0;
+    pulsoEncoder = 1;
     
+    //Ao chegar no primeiro andar o elevador j� finalizou todo seu trajeto
+    //Atualização da variavel da matrix de de Dados com o numero 0 mais a direcao de movimento do elevador
     MatrixLed[0] = 0b01111110;
     MatrixLed[1] = 0b10000001;
     MatrixLed[2] = 0b10000001;
     MatrixLed[3] = 0b01111110;
     MatrixLed[4] = 0;
+    MatrixLed[5] =  0b00100000;
+    MatrixLed[6] =  0b00100000;
+    MatrixLed[7] =  0b00100000;
     if(subindo){//seta apontando pra cima
-        MatrixLed[5] =  0b01100000;
-        MatrixLed[6] =  0b11000000;
-        MatrixLed[7] =  0b01100000;
+        destinoSub = destinoSub & 0b11111110; //limpa a flag que mantem o andar 3 como destino do elevador
     }else{ //seta apontando pra baixo
-        MatrixLed[5] =  0b11000000;
-        MatrixLed[6] =  0b01100000;
-        MatrixLed[7] =  0b11000000;
         destinoDesc = destinoDesc & 0b11111110; //limpa a flag que mantem o andar 0 como destino do elevador
+        mov = Repouso;
+        //contComandos = 0;
+        TMR4_StartTimer();
     }
-    matrixUpdate();
+    //matrixUpdate();
+    
+    MatrixLed[7] = MatrixLed[7] | destinoSub;
+    MatrixLed[6] = MatrixLed[6] | destinoDesc;
 }
 
 void chegadaS2(){ //função acionada ao sensor S2 ser acionado
     //Atualização da variavel da matrix de de Dados com o numero 1 mais a direcao de movimento do elevador
+    motor = 0;
     andarAtual = 1;
     
+    //Caso o Andar 3 seja um ponto de Parada reinicia o TRM1 que controla o tempo de espera do elevador
+    if((((destinoSub & 0b00000010) == 2 )&& subindo)||(!subindo &&((destinoDesc & 0b00000010) == 2) ) ){ 
+        PWM3_LoadDutyValue(0);//Desligando o Movimento do Motor
+        TMR4_WriteTimer(0); 
+        TMR4_StartTimer();
+    }
+    
+    
+    //Atualização da variavel da matrix de de Dados com o numero 1 mais a direcao de movimento do elevador
     MatrixLed[0] = 0b00000000;
     MatrixLed[1] = 0b01000001;
     MatrixLed[2] = 0b11111111;
     MatrixLed[3] = 0b00000001;
     MatrixLed[4] = 0;
+    MatrixLed[5] =  0b00100000;
+    MatrixLed[6] =  0b00100000;
+    MatrixLed[7] =  0b00100000;
     if(subindo){//seta apontando pra cima
-        MatrixLed[5] =  0b01100000;
-        MatrixLed[6] =  0b11000000;
-        MatrixLed[7] =  0b01100000;
-        destinoSub = destinoSub & 0b11111101; //limpa a flag que mantem o andar 1 como destino do elevador
+        destinoSub = destinoSub & 0b11111101; //limpa a flag que mantem o andar 3 como destino do elevador
+        mov = EmTrajeto;
     }else{ //seta apontando pra baixo
-        MatrixLed[5] =  0b11000000;
-        MatrixLed[6] =  0b01100000;
-        MatrixLed[7] =  0b11000000;
         destinoDesc = destinoDesc & 0b11111101; //limpa a flag que mantem o andar 1 como destino do elevador
+        
+        //Controle dos estados
+        if(destinoDesc == 0){
+            mov = RetornaS0;
+        }
     }
     MatrixLed[7] = MatrixLed[7] | destinoSub;
     MatrixLed[6] = MatrixLed[6] | destinoDesc;
-    matrixUpdate();
+    //matrixUpdate();
 }
 
 void chegadaS3(){ //função acionada ao sensor S3 ser acionado
     //Atualização da variavel da matrix de de Dados com o numero 2 mais a direcao de movimento do elevador
+    motor = 0;
     andarAtual = 2;
     
+   //Caso o Andar 3 seja um ponto de Parada reinicia o TRM1 que controla o tempo de espera do elevador
+    if((((destinoSub & 0b00000100) == 4 )&& subindo)||(!subindo &&((destinoDesc & 0b00000100) == 4 )) ){ 
+        PWM3_LoadDutyValue(0);//Desligando o Movimento do Motor
+        TMR4_WriteTimer(0);
+        TMR4_StartTimer();
+    }
+    
+    //Atualização da variavel da matrix de de Dados com o numero 2 mais a direcao de movimento do elevador
     MatrixLed[0] = 0b01000011;
     MatrixLed[1] = 0b10000101; 
     MatrixLed[2] = 0b10001001; 
     MatrixLed[3] = 0b01110001; 
     MatrixLed[4] = 0;
+   MatrixLed[5] =  0b00100000;
+    MatrixLed[6] =  0b00100000;
+    MatrixLed[7] =  0b00100000;
     if(subindo){//seta apontando pra cima
-        MatrixLed[5] =  0b01100000;
-        MatrixLed[6] =  0b11000000;
-        MatrixLed[7] =  0b01100000;
-        destinoSub = destinoSub & 0b11111011; //limpa a flag que mantem o andar 2 como destino do elevador
+        destinoSub = destinoSub & 0b11111011; //limpa a flag que mantem o andar 3 como destino do elevador
     }else{ //seta apontando pra baixo
-        MatrixLed[5] =  0b11000000;
-        MatrixLed[6] =  0b01100000;
-        MatrixLed[7] =  0b11000000;
         destinoDesc = destinoDesc & 0b11111011; //limpa a flag que mantem o andar 2 como destino do elevador
     }
     MatrixLed[7] = MatrixLed[7] | destinoSub;
     MatrixLed[6] = MatrixLed[6] | destinoDesc;
-    matrixUpdate();
+    //matrixUpdate();
+    
+    //Controle dos estados
+    if(destinoDesc ==0 && destinoSub == 0){
+        mov = RetornaS0;
+    }
+
 }
 
 void chegadaS4(){ //função acionada ao sensor S4 ser acionado
     //Atualização da variavel da matrix de de Dados com o numero 3 mais a direcao de movimento do elevador
+    motor = 0;
     andarAtual = 3;
+    pulsoEncoder = 120;
     
+    //Caso o Andar 3 seja um ponto de Parada reinicia o TRM1 que controla o tempo de espera do elevador
+    if((((destinoSub & 0b00001000) == 8 )&& subindo)||(!subindo &&((destinoDesc & 0b00001000) == 8 )) ){ 
+        PWM3_LoadDutyValue(0);//Desligando o Movimento do Motor
+        TMR4_WriteTimer(0);
+        TMR4_StartTimer();
+    }
+    
+    //Atualização da variavel da matrix de de Dados com o numero 3 mais a direcao de movimento do elevador
     MatrixLed[0] = 0b10000001;
     MatrixLed[1] = 0b10010001;
     MatrixLed[2] = 0b10010001;
     MatrixLed[3] = 0b01101110;
     MatrixLed[4] = 0;
+    MatrixLed[5] =  0b00100000;
+    MatrixLed[6] =  0b00100000;
+    MatrixLed[7] =  0b00100000;
     if(subindo){//seta apontando pra cima
-        MatrixLed[5] =  0b01100000;
-        MatrixLed[6] =  0b11000000;
-        MatrixLed[7] =  0b01100000;
         destinoSub = destinoSub & 0b11110111; //limpa a flag que mantem o andar 3 como destino do elevador
     }else{ //seta apontando pra baixo
-        MatrixLed[5] =  0b11000000;
-        MatrixLed[6] =  0b01100000;
-        MatrixLed[7] =  0b11000000;
-        destinoDesc = destinoDesc & 0b11110111; //limpa a flag que mantem o andar 3 como destino do elevador
+        destinoDesc = destinoDesc & 0b11110111; //limpa a flag que mantem o andar 2 como destino do elevador
     }
     MatrixLed[7] = MatrixLed[7] | destinoSub;
     MatrixLed[6] = MatrixLed[6] | destinoDesc;
-    matrixUpdate();
+    //matrixUpdate();
+    
+    //Controle dos estados
+    if(destinoDesc ==0 && destinoSub == 0){
+        mov = RetornaS0;
+    }else if(destinoSub != 0 ){
+        destinoSub = 0;
+    }
 }
 
 void main(void)
@@ -272,14 +436,16 @@ void main(void)
     /* Caso a Interrupcao nao tenha handler,
      * a funcao esta sendo chamada dentro da funcao de interrupcao do periferico
      */
-    IOCBF3_SetInterruptHandler(chegadaS1);
+    IOCBF0_SetInterruptHandler(chegadaS1);
     IOCBF3_SetInterruptHandler(chegadaS2);
+    TMR4_SetInterruptHandler(controleMovimento);
     TMR0_SetInterruptHandler(sendInfo);
+    CCP4_SetCallBack(interrupcaoCCP4);
     
     //Incializacao do SPI
     CS_SetHigh(); //Mantem Desativado o CS
-    SPI1_Open(SPI1_DEFAULT);        // Configura MSSP1
-    initMatrix();                   // Configura matrizes
+    //SPI1_Open(SPI1_DEFAULT);        // Configura MSSP1
+    //initMatrix();                   // Configura matrizes
     
     // Enable the Global Interrupts
     INTERRUPT_GlobalInterruptEnable();
@@ -292,12 +458,13 @@ void main(void)
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
-
+    chegadaS1();
     while (1)
     {
         // Add your application code
         if(EUSART_is_rx_ready()){
             rxValue = EUSART_Read();
+            if(rxValue == '$') state = START;
             switch(state){
                 case START:
                     if(rxValue == '$'){
@@ -325,6 +492,8 @@ void main(void)
                         origem = oTemp;
                         destino = dTemp;
                         // Chamar alguma funcao
+                        organizaTrajeto();
+                        contComandos++; //incrementa o contador de comandos eviados ao micro max 5
                     }
                     state = START;
                     break;

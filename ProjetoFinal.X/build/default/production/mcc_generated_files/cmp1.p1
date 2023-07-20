@@ -1,61 +1,54 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"63 mcc_generated_files/spi1.h
-[; ;mcc_generated_files/spi1.h: 63: void SPI1_Initialize(void);
-[v _SPI1_Initialize `(v ~T0 @X0 0 ef ]
-"243 mcc_generated_files/pin_manager.h
-[; ;mcc_generated_files/pin_manager.h: 243: void PIN_MANAGER_Initialize (void);
-[v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
-"95 mcc_generated_files/mcc.h
-[; ;mcc_generated_files/mcc.h: 95: void OSCILLATOR_Initialize(void);
-[v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
-"107
-[; ;mcc_generated_files/mcc.h: 107: void WDT_Initialize(void);
-[v _WDT_Initialize `(v ~T0 @X0 0 ef ]
-"92 mcc_generated_files/cmp2.h
-[; ;mcc_generated_files/cmp2.h: 92: void CMP2_Initialize(void);
-[v _CMP2_Initialize `(v ~T0 @X0 0 ef ]
-"93 mcc_generated_files/fvr.h
-[; ;mcc_generated_files/fvr.h: 93:  void FVR_Initialize(void);
-[v _FVR_Initialize `(v ~T0 @X0 0 ef ]
-"104 mcc_generated_files/tmr4.h
-[; ;mcc_generated_files/tmr4.h: 104: void TMR4_Initialize(void);
-[v _TMR4_Initialize `(v ~T0 @X0 0 ef ]
-"103 mcc_generated_files/tmr2.h
-[; ;mcc_generated_files/tmr2.h: 103: void TMR2_Initialize(void);
-[v _TMR2_Initialize `(v ~T0 @X0 0 ef ]
-"104 mcc_generated_files/tmr0.h
-[; ;mcc_generated_files/tmr0.h: 104: void TMR0_Initialize(void);
-[v _TMR0_Initialize `(v ~T0 @X0 0 ef ]
-"92 mcc_generated_files/cmp1.h
-[; ;mcc_generated_files/cmp1.h: 92: void CMP1_Initialize(void);
-[v _CMP1_Initialize `(v ~T0 @X0 0 ef ]
-"136 mcc_generated_files/adc.h
-[; ;mcc_generated_files/adc.h: 136: void ADC_Initialize(void);
-[v _ADC_Initialize `(v ~T0 @X0 0 ef ]
-"123 mcc_generated_files/ccp4.h
-[; ;mcc_generated_files/ccp4.h: 123: void CCP4_Initialize(void);
-[v _CCP4_Initialize `(v ~T0 @X0 0 ef ]
-"97 mcc_generated_files/pwm3.h
-[; ;mcc_generated_files/pwm3.h: 97: void PWM3_Initialize(void);
-[v _PWM3_Initialize `(v ~T0 @X0 0 ef ]
-"100 mcc_generated_files/tmr1.h
-[; ;mcc_generated_files/tmr1.h: 100: void TMR1_Initialize(void);
-[v _TMR1_Initialize `(v ~T0 @X0 0 ef ]
-"110 mcc_generated_files/eusart.h
-[; ;mcc_generated_files/eusart.h: 110: void EUSART_Initialize(void);
-[v _EUSART_Initialize `(v ~T0 @X0 0 ef ]
-"1707 C:/Users/Alunos/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
-[; ;C:/Users/Alunos/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1707: extern volatile unsigned char OSCCON __attribute__((address(0x099)));
-[v _OSCCON `Vuc ~T0 @X0 0 e@153 ]
-"1649
-[; ;C:/Users/Alunos/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1649: extern volatile unsigned char OSCTUNE __attribute__((address(0x098)));
-[v _OSCTUNE `Vuc ~T0 @X0 0 e@152 ]
-"2431
-[; ;C:/Users/Alunos/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 2431: extern volatile unsigned char BORCON __attribute__((address(0x116)));
-[v _BORCON `Vuc ~T0 @X0 0 e@278 ]
-"1590
-[; ;C:/Users/Alunos/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1590: extern volatile unsigned char WDTCON __attribute__((address(0x097)));
-[v _WDTCON `Vuc ~T0 @X0 0 e@151 ]
+"44 mcc_generated_files/../main.h
+[; ;mcc_generated_files/../main.h: 44: State state = START;
+[c E2661 0 1 2 3 .. ]
+[n E2661 . START FIRST_NUM SECOND_NUM CR  ]
+"45
+[; ;mcc_generated_files/../main.h: 45: enum estadoMov{ Repouso, Espera, EmTrajeto, RetornaS0}mov=RetornaS0;
+[c E2669 0 1 2 3 .. ]
+[n E2669 estadoMov Repouso Espera EmTrajeto RetornaS0  ]
+"1345 C:/Users/Alunos/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
+[; ;C:/Users/Alunos/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1345:     struct {
+[s S77 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S77 . CCP2IE . BCL1IE EEIE C1IE C2IE OSFIE ]
+"1344
+[; ;C:/Users/Alunos/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1344: typedef union {
+[u S76 `S77 1 ]
+[n S76 . . ]
+"1355
+[; ;C:/Users/Alunos/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 1355: extern volatile PIE2bits_t PIE2bits __attribute__((address(0x092)));
+[v _PIE2bits `VS76 ~T0 @X0 0 e@146 ]
+"2159
+[; ;C:/Users/Alunos/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 2159: extern volatile unsigned char CM1CON0 __attribute__((address(0x111)));
+[v _CM1CON0 `Vuc ~T0 @X0 0 e@273 ]
+"2216
+[; ;C:/Users/Alunos/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 2216: extern volatile unsigned char CM1CON1 __attribute__((address(0x112)));
+[v _CM1CON1 `Vuc ~T0 @X0 0 e@274 ]
+"622
+[; ;C:/Users/Alunos/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 622:     struct {
+[s S40 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S40 . CCP2IF . BCL1IF EEIF C1IF C2IF OSFIF ]
+"621
+[; ;C:/Users/Alunos/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 621: typedef union {
+[u S39 `S40 1 ]
+[n S39 . . ]
+"632
+[; ;C:/Users/Alunos/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 632: extern volatile PIR2bits_t PIR2bits __attribute__((address(0x012)));
+[v _PIR2bits `VS39 ~T0 @X0 0 e@18 ]
+"2411
+[; ;C:/Users/Alunos/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 2411:     struct {
+[s S124 :1 `uc 1 :1 `uc 1 ]
+[n S124 . MC1OUT MC2OUT ]
+"2410
+[; ;C:/Users/Alunos/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 2410: typedef union {
+[u S123 `S124 1 ]
+[n S123 . . ]
+"2416
+[; ;C:/Users/Alunos/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 2416: extern volatile CMOUTbits_t CMOUTbits __attribute__((address(0x115)));
+[v _CMOUTbits `VS123 ~T0 @X0 0 e@277 ]
+"108 mcc_generated_files/../main.h
+[; ;mcc_generated_files/../main.h: 108: void chegadaS3();
+[v _chegadaS3 `(v ~T0 @X0 0 e? ]
 "55 C:/Users/Alunos/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h
 [; ;C:/Users/Alunos/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 55: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -530,96 +523,203 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6749
 [; ;C:/Users/Alunos/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.3.90/xc8\pic\include\proc\pic16f1827.h: 6749: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"50 mcc_generated_files/mcc.c
-[; ;mcc_generated_files/mcc.c: 50: void SYSTEM_Initialize(void)
-[v _SYSTEM_Initialize `(v ~T0 @X0 1 ef ]
+"30 mcc_generated_files/../main.h
+[; ;mcc_generated_files/../main.h: 30: const uint8_t matrix_conf[] = {
+[v _matrix_conf `Cuc ~T0 @X0 -> 12 `i e ]
+[i _matrix_conf
+:U ..
+-> -> 9 `i `uc
+-> -> 0 `i `uc
+-> -> 10 `i `uc
+-> -> 0 `i `uc
+-> -> 11 `i `uc
+-> -> 7 `i `uc
+-> -> 12 `i `uc
+-> -> 1 `i `uc
+-> -> 15 `i `uc
+-> -> 1 `i `uc
+-> -> 15 `i `uc
+-> -> 0 `i `uc
+..
+]
+"44
+[; ;mcc_generated_files/../main.h: 44: State state = START;
+[v _state `E2661 ~T0 @X0 1 e ]
+[i _state
+. `E2661 0
+]
+"45
+[; ;mcc_generated_files/../main.h: 45: enum estadoMov{ Repouso, Espera, EmTrajeto, RetornaS0}mov=RetornaS0;
+[v _mov `E2669 ~T0 @X0 1 e ]
+[i _mov
+. `E2669 3
+]
+"48
+[; ;mcc_generated_files/../main.h: 48: char rxValue;
+[v _rxValue `uc ~T0 @X0 1 e ]
+"49
+[; ;mcc_generated_files/../main.h: 49: _Bool waitRX = 0;
+[v _waitRX `a ~T0 @X0 1 e ]
+[i _waitRX
+-> -> 0 `i `a
+]
+"50
+[; ;mcc_generated_files/../main.h: 50: _Bool RXaccepted = 0;
+[v _RXaccepted `a ~T0 @X0 1 e ]
+[i _RXaccepted
+-> -> 0 `i `a
+]
 "51
-[; ;mcc_generated_files/mcc.c: 51: {
-{
-[e :U _SYSTEM_Initialize ]
-[f ]
-"53
-[; ;mcc_generated_files/mcc.c: 53:     SPI1_Initialize();
-[e ( _SPI1_Initialize ..  ]
+[; ;mcc_generated_files/../main.h: 51: uint8_t contComandos=0 ;
+[v _contComandos `uc ~T0 @X0 1 e ]
+[i _contComandos
+-> -> 0 `i `uc
+]
 "54
-[; ;mcc_generated_files/mcc.c: 54:     PIN_MANAGER_Initialize();
-[e ( _PIN_MANAGER_Initialize ..  ]
+[; ;mcc_generated_files/../main.h: 54: uint8_t pulsoEncoder = 0;
+[v _pulsoEncoder `uc ~T0 @X0 1 e ]
+[i _pulsoEncoder
+-> -> 0 `i `uc
+]
 "55
-[; ;mcc_generated_files/mcc.c: 55:     OSCILLATOR_Initialize();
-[e ( _OSCILLATOR_Initialize ..  ]
+[; ;mcc_generated_files/../main.h: 55: float velocidadeMotor = 0;
+[v _velocidadeMotor `f ~T0 @X0 1 e ]
+[i _velocidadeMotor
+-> -> 0 `i `f
+]
 "56
-[; ;mcc_generated_files/mcc.c: 56:     WDT_Initialize();
-[e ( _WDT_Initialize ..  ]
+[; ;mcc_generated_files/../main.h: 56: uint8_t flag = 0x00;
+[v _flag `uc ~T0 @X0 1 e ]
+[i _flag
+-> -> 0 `i `uc
+]
 "57
-[; ;mcc_generated_files/mcc.c: 57:     CMP2_Initialize();
-[e ( _CMP2_Initialize ..  ]
+[; ;mcc_generated_files/../main.h: 57: uint16_t t1 = 0, t2 = 0;
+[v _t1 `us ~T0 @X0 1 e ]
+[i _t1
+-> -> 0 `i `us
+]
+[v _t2 `us ~T0 @X0 1 e ]
+[i _t2
+-> -> 0 `i `us
+]
 "58
-[; ;mcc_generated_files/mcc.c: 58:     FVR_Initialize();
-[e ( _FVR_Initialize ..  ]
-"59
-[; ;mcc_generated_files/mcc.c: 59:     TMR4_Initialize();
-[e ( _TMR4_Initialize ..  ]
+[; ;mcc_generated_files/../main.h: 58: uint8_t inc = 1;
+[v _inc `uc ~T0 @X0 1 e ]
+[i _inc
+-> -> 1 `i `uc
+]
 "60
-[; ;mcc_generated_files/mcc.c: 60:     TMR2_Initialize();
-[e ( _TMR2_Initialize ..  ]
+[; ;mcc_generated_files/../main.h: 60: uint8_t origem = 0, oTemp;
+[v _origem `uc ~T0 @X0 1 e ]
+[i _origem
+-> -> 0 `i `uc
+]
+[v _oTemp `uc ~T0 @X0 1 e ]
 "61
-[; ;mcc_generated_files/mcc.c: 61:     TMR0_Initialize();
-[e ( _TMR0_Initialize ..  ]
+[; ;mcc_generated_files/../main.h: 61: uint8_t destino = 0, dTemp;
+[v _destino `uc ~T0 @X0 1 e ]
+[i _destino
+-> -> 0 `i `uc
+]
+[v _dTemp `uc ~T0 @X0 1 e ]
 "62
-[; ;mcc_generated_files/mcc.c: 62:     CMP1_Initialize();
-[e ( _CMP1_Initialize ..  ]
+[; ;mcc_generated_files/../main.h: 62: uint8_t andarAtual = 0;
+[v _andarAtual `uc ~T0 @X0 1 e ]
+[i _andarAtual
+-> -> 0 `i `uc
+]
 "63
-[; ;mcc_generated_files/mcc.c: 63:     ADC_Initialize();
-[e ( _ADC_Initialize ..  ]
+[; ;mcc_generated_files/../main.h: 63: uint8_t altura;
+[v _altura `uc ~T0 @X0 1 e ]
 "64
-[; ;mcc_generated_files/mcc.c: 64:     CCP4_Initialize();
-[e ( _CCP4_Initialize ..  ]
+[; ;mcc_generated_files/../main.h: 64: uint16_t temperatura;
+[v _temperatura `us ~T0 @X0 1 e ]
 "65
-[; ;mcc_generated_files/mcc.c: 65:     PWM3_Initialize();
-[e ( _PWM3_Initialize ..  ]
+[; ;mcc_generated_files/../main.h: 65: uint8_t motor = 0;
+[v _motor `uc ~T0 @X0 1 e ]
+[i _motor
+-> -> 0 `i `uc
+]
 "66
-[; ;mcc_generated_files/mcc.c: 66:     TMR1_Initialize();
-[e ( _TMR1_Initialize ..  ]
+[; ;mcc_generated_files/../main.h: 66: _Bool subindo = 1;
+[v _subindo `a ~T0 @X0 1 e ]
+[i _subindo
+-> -> 1 `i `a
+]
 "67
-[; ;mcc_generated_files/mcc.c: 67:     EUSART_Initialize();
-[e ( _EUSART_Initialize ..  ]
+[; ;mcc_generated_files/../main.h: 67: uint8_t MatrixLed[8];
+[v _MatrixLed `uc ~T0 @X0 -> 8 `i e ]
 "68
-[; ;mcc_generated_files/mcc.c: 68: }
-[e :UE 362 ]
-}
-"70
-[; ;mcc_generated_files/mcc.c: 70: void OSCILLATOR_Initialize(void)
-[v _OSCILLATOR_Initialize `(v ~T0 @X0 1 ef ]
-"71
-[; ;mcc_generated_files/mcc.c: 71: {
+[; ;mcc_generated_files/../main.h: 68: uint8_t destinoSub= 0b00000000;
+[v _destinoSub `uc ~T0 @X0 1 e ]
+[i _destinoSub
+-> -> 0 `i `uc
+]
+"69
+[; ;mcc_generated_files/../main.h: 69: uint8_t destinoDesc= 0b00000000;
+[v _destinoDesc `uc ~T0 @X0 1 e ]
+[i _destinoDesc
+-> -> 0 `i `uc
+]
+"59 mcc_generated_files/cmp1.c
+[; ;mcc_generated_files/cmp1.c: 59: void CMP1_Initialize(void)
+[v _CMP1_Initialize `(v ~T0 @X0 1 ef ]
+"60
+[; ;mcc_generated_files/cmp1.c: 60: {
 {
-[e :U _OSCILLATOR_Initialize ]
+[e :U _CMP1_Initialize ]
 [f ]
-"73
-[; ;mcc_generated_files/mcc.c: 73:     OSCCON = 0x68;
-[e = _OSCCON -> -> 104 `i `uc ]
+"66
+[; ;mcc_generated_files/cmp1.c: 66:     PIE2bits.C1IE = 0;
+[e = . . _PIE2bits 0 4 -> -> 0 `i `uc ]
+"69
+[; ;mcc_generated_files/cmp1.c: 69:     CM1CON0 = 0x84;
+[e = _CM1CON0 -> -> 132 `i `uc ]
+"72
+[; ;mcc_generated_files/cmp1.c: 72:     CM1CON1 = 0x60;
+[e = _CM1CON1 -> -> 96 `i `uc ]
 "75
-[; ;mcc_generated_files/mcc.c: 75:     OSCTUNE = 0x00;
-[e = _OSCTUNE -> -> 0 `i `uc ]
-"77
-[; ;mcc_generated_files/mcc.c: 77:     BORCON = 0x00;
-[e = _BORCON -> -> 0 `i `uc ]
+[; ;mcc_generated_files/cmp1.c: 75:     PIR2bits.C1IF = 0;
+[e = . . _PIR2bits 0 4 -> -> 0 `i `uc ]
 "78
-[; ;mcc_generated_files/mcc.c: 78: }
-[e :UE 363 ]
+[; ;mcc_generated_files/cmp1.c: 78:     PIE2bits.C1IE = 1;
+[e = . . _PIE2bits 0 4 -> -> 1 `i `uc ]
+"79
+[; ;mcc_generated_files/cmp1.c: 79: }
+[e :UE 357 ]
 }
-"80
-[; ;mcc_generated_files/mcc.c: 80: void WDT_Initialize(void)
-[v _WDT_Initialize `(v ~T0 @X0 1 ef ]
 "81
-[; ;mcc_generated_files/mcc.c: 81: {
+[; ;mcc_generated_files/cmp1.c: 81: _Bool CMP1_GetOutputStatus(void)
+[v _CMP1_GetOutputStatus `(a ~T0 @X0 1 ef ]
+"82
+[; ;mcc_generated_files/cmp1.c: 82: {
 {
-[e :U _WDT_Initialize ]
+[e :U _CMP1_GetOutputStatus ]
 [f ]
 "83
-[; ;mcc_generated_files/mcc.c: 83:     WDTCON = 0x16;
-[e = _WDTCON -> -> 22 `i `uc ]
+[; ;mcc_generated_files/cmp1.c: 83:  return (CMOUTbits.MC1OUT);
+[e ) -> . . _CMOUTbits 0 0 `a ]
+[e $UE 358  ]
 "84
-[; ;mcc_generated_files/mcc.c: 84: }
-[e :UE 364 ]
+[; ;mcc_generated_files/cmp1.c: 84: }
+[e :UE 358 ]
+}
+"86
+[; ;mcc_generated_files/cmp1.c: 86: void CMP1_ISR(void)
+[v _CMP1_ISR `(v ~T0 @X0 1 ef ]
+"87
+[; ;mcc_generated_files/cmp1.c: 87: {
+{
+[e :U _CMP1_ISR ]
+[f ]
+"89
+[; ;mcc_generated_files/cmp1.c: 89:     PIR2bits.C1IF = 0;
+[e = . . _PIR2bits 0 4 -> -> 0 `i `uc ]
+"90
+[; ;mcc_generated_files/cmp1.c: 90:     chegadaS3();
+[e ( _chegadaS3 ..  ]
+"91
+[; ;mcc_generated_files/cmp1.c: 91: }
+[e :UE 359 ]
 }

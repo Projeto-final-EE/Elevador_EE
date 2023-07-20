@@ -1,0 +1,9 @@
+24 30 31 0D
+wait for 10ms
+24 30 32 0D
+wait for 10ms
+24 30 33 0D
+wait for 10ms
+24 33 30 0D
+wait for 10ms
+24 33 31 0D

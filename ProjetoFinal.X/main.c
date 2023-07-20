@@ -100,8 +100,8 @@ void sendInfo(){
             destinoAtual = 4;
     }
     
-    altura = (1.5 * pulsoEncoder);
-    velocidadeMotor = (abs(altura - aux_altura)/ 300.f) * 1000; // (mm/pulsos) / (tempo(s))    
+    altura = (1.5 * pulsoEncoder);                  // Ajusta o valor da altura/pulsoEnconder
+    velocidadeMotor = abs(altura - aux_altura)/ 0.300; // (mm/pulsos) / (tempo(s))    
     velocidade = (uint16_t)(velocidadeMotor * 10); // Ajustando o valor da velocidade para ser enviado
     aux_altura = altura;
 

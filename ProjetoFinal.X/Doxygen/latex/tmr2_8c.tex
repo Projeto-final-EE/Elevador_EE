@@ -1,0 +1,196 @@
+\doxysection{C\+:/\+Users/thali/\+Documents/\+Elevador\+\_\+\+EE/\+Projeto\+Final.X/mcc\+\_\+generated\+\_\+files/tmr2.c File Reference}
+\hypertarget{tmr2_8c}{}\label{tmr2_8c}\index{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/mcc\_generated\_files/tmr2.c@{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/mcc\_generated\_files/tmr2.c}}
+{\ttfamily \#include $<$xc.\+h$>$}\newline
+{\ttfamily \#include \"{}tmr2.\+h\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{tmr2_8c_a46c13c9255379e99c10240229a145d37}{TMR2\+\_\+\+Initialize}} (void)
+\item 
+void \mbox{\hyperlink{tmr2_8c_afb37b846db811f973b4009215d59f91a}{TMR2\+\_\+\+Start\+Timer}} (void)
+\item 
+void \mbox{\hyperlink{tmr2_8c_a36d7e6eab8b279863c83a32fb41adb02}{TMR2\+\_\+\+Stop\+Timer}} (void)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{tmr2_8c_a4acc1f7c8c2dbd46424dad273cdb9cb1}{TMR2\+\_\+\+Read\+Timer}} (void)
+\item 
+void \mbox{\hyperlink{tmr2_8c_acb2fbe8254fcc8c01b9784b028a7eac6}{TMR2\+\_\+\+Write\+Timer}} (uint8\+\_\+t timer\+Val)
+\item 
+void \mbox{\hyperlink{tmr2_8c_a5490961ba3ba77d10896e320ab840a74}{TMR2\+\_\+\+Load\+Period\+Register}} (uint8\+\_\+t period\+Val)
+\item 
+bool \mbox{\hyperlink{tmr2_8c_ab0b9dbd90bacc904f311d71fbcccd038}{TMR2\+\_\+\+Has\+Overflow\+Occured}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{tmr2_8c_ab0b9dbd90bacc904f311d71fbcccd038}\label{tmr2_8c_ab0b9dbd90bacc904f311d71fbcccd038} 
+\index{tmr2.c@{tmr2.c}!TMR2\_HasOverflowOccured@{TMR2\_HasOverflowOccured}}
+\index{TMR2\_HasOverflowOccured@{TMR2\_HasOverflowOccured}!tmr2.c@{tmr2.c}}
+\doxysubsubsection{\texorpdfstring{TMR2\_HasOverflowOccured()}{TMR2\_HasOverflowOccured()}}
+{\footnotesize\ttfamily bool TMR2\+\_\+\+Has\+Overflow\+Occured (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Summary Boolean routine to poll or to check for the match flag on the fly.
+
+@\+Description This function is called to check for the timer match flag. This function is used in timer polling method.
+
+@\+Preconditions Initialize the TMR2 module before calling this routine.
+
+@\+Param None
+
+@\+Returns true -\/ timer match has occurred. false -\/ timer match has not occurred.
+
+@\+Example {\ttfamily  while(1) \{ check the match flag if(\+TMR2\+\_\+\+Has\+Overflow\+Occured()) \{ Do something else...}
+
+{\ttfamily Reload the TMR2 value TMR2\+\_\+\+Reload(); \} \} } 
+
+Definition at line \mbox{\hyperlink{tmr2_8c_source_l00111}{111}} of file \mbox{\hyperlink{tmr2_8c_source}{tmr2.\+c}}.
+
+\Hypertarget{tmr2_8c_a46c13c9255379e99c10240229a145d37}\label{tmr2_8c_a46c13c9255379e99c10240229a145d37} 
+\index{tmr2.c@{tmr2.c}!TMR2\_Initialize@{TMR2\_Initialize}}
+\index{TMR2\_Initialize@{TMR2\_Initialize}!tmr2.c@{tmr2.c}}
+\doxysubsubsection{\texorpdfstring{TMR2\_Initialize()}{TMR2\_Initialize()}}
+{\footnotesize\ttfamily void TMR2\+\_\+\+Initialize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+TMR2 Generated Driver File
+
+@\+Company Microchip Technology Inc.
+
+@\+File Name \doxylink{tmr2_8c}{tmr2.\+c}
+
+@\+Summary This is the generated driver implementation file for the TMR2 driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+
+@\+Description This source file provides APIs for TMR2. Generation Information \+: Product Revision \+: PIC10 / PIC12 / PIC16 / PIC18 MCUs -\/ 1.\+81.\+8 Device \+: PIC16\+F1827 Driver Version \+: 2.\+01 The generated drivers are tested against the following\+: Compiler \+: XC8 2.\+36 and above MPLAB \+: MPLAB X 6.\+00 Section\+: Included Files Section\+: Global Variables Definitions Section\+: TMR2 APIs 
+
+Definition at line \mbox{\hyperlink{tmr2_8c_source_l00062}{62}} of file \mbox{\hyperlink{tmr2_8c_source}{tmr2.\+c}}.
+
+\Hypertarget{tmr2_8c_a5490961ba3ba77d10896e320ab840a74}\label{tmr2_8c_a5490961ba3ba77d10896e320ab840a74} 
+\index{tmr2.c@{tmr2.c}!TMR2\_LoadPeriodRegister@{TMR2\_LoadPeriodRegister}}
+\index{TMR2\_LoadPeriodRegister@{TMR2\_LoadPeriodRegister}!tmr2.c@{tmr2.c}}
+\doxysubsubsection{\texorpdfstring{TMR2\_LoadPeriodRegister()}{TMR2\_LoadPeriodRegister()}}
+{\footnotesize\ttfamily void TMR2\+\_\+\+Load\+Period\+Register (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{period\+Val }\end{DoxyParamCaption})}
+
+@\+Summary Load value to Period Register.
+
+@\+Description This function writes the value to PR2 register. This function must be called after the initialization of TMR2.
+
+@\+Preconditions Initialize the TMR2 before calling this function.
+
+@\+Param period\+Val -\/ Value to load into TMR2 register.
+
+@\+Returns None
+
+@\+Example {\ttfamily  \#define PERIOD1 0x80 \#define PERIOD2 0x40 \#define ZERO 0x00}
+
+{\ttfamily  while(1) \{ Read the TMR2 register if(ZERO == \doxylink{tmr2_8h_a4acc1f7c8c2dbd46424dad273cdb9cb1}{TMR2\+\_\+\+Read\+Timer()}) \{ Do something else... \begin{DoxyVerb}        if(flag)
+        {
+            flag = 0;
+\end{DoxyVerb}
+ Load Period 1 value TMR2\+\_\+\+Load\+Period\+Register(\+PERIOD1); \} else \{ flag = 1;}
+
+{\ttfamily Load Period 2 value TMR2\+\_\+\+Load\+Period\+Register(\+PERIOD2); \} \}}
+
+{\ttfamily Do something else... \} } 
+
+Definition at line \mbox{\hyperlink{tmr2_8c_source_l00106}{106}} of file \mbox{\hyperlink{tmr2_8c_source}{tmr2.\+c}}.
+
+\Hypertarget{tmr2_8c_a4acc1f7c8c2dbd46424dad273cdb9cb1}\label{tmr2_8c_a4acc1f7c8c2dbd46424dad273cdb9cb1} 
+\index{tmr2.c@{tmr2.c}!TMR2\_ReadTimer@{TMR2\_ReadTimer}}
+\index{TMR2\_ReadTimer@{TMR2\_ReadTimer}!tmr2.c@{tmr2.c}}
+\doxysubsubsection{\texorpdfstring{TMR2\_ReadTimer()}{TMR2\_ReadTimer()}}
+{\footnotesize\ttfamily uint8\+\_\+t TMR2\+\_\+\+Read\+Timer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Summary Reads the TMR2 register.
+
+@\+Description This function reads the TMR2 register value and return it.
+
+@\+Preconditions Initialize the TMR2 before calling this function.
+
+@\+Param None
+
+@\+Returns This function returns the current value of TMR2 register.
+
+@\+Example {\ttfamily  Initialize TMR2 module}
+
+{\ttfamily Start TMR2 \doxylink{tmr2_8h_afb37b846db811f973b4009215d59f91a}{TMR2\+\_\+\+Start\+Timer()};}
+
+{\ttfamily Read the current value of TMR2 if(0 == \doxylink{tmr2_8h_a4acc1f7c8c2dbd46424dad273cdb9cb1}{TMR2\+\_\+\+Read\+Timer()}) \{ Do something else...}
+
+{\ttfamily Reload the TMR value TMR2\+\_\+\+Reload(); \} } 
+
+Definition at line \mbox{\hyperlink{tmr2_8c_source_l00091}{91}} of file \mbox{\hyperlink{tmr2_8c_source}{tmr2.\+c}}.
+
+\Hypertarget{tmr2_8c_afb37b846db811f973b4009215d59f91a}\label{tmr2_8c_afb37b846db811f973b4009215d59f91a} 
+\index{tmr2.c@{tmr2.c}!TMR2\_StartTimer@{TMR2\_StartTimer}}
+\index{TMR2\_StartTimer@{TMR2\_StartTimer}!tmr2.c@{tmr2.c}}
+\doxysubsubsection{\texorpdfstring{TMR2\_StartTimer()}{TMR2\_StartTimer()}}
+{\footnotesize\ttfamily void TMR2\+\_\+\+Start\+Timer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Summary This function starts the TMR2.
+
+@\+Description This function starts the TMR2 operation. This function must be called after the initialization of TMR2.
+
+@\+Preconditions Initialize the TMR2 before calling this function.
+
+@\+Param None
+
+@\+Returns None
+
+@\+Example {\ttfamily  Initialize TMR2 module}
+
+{\ttfamily Start TMR2 \doxylink{tmr2_8h_afb37b846db811f973b4009215d59f91a}{TMR2\+\_\+\+Start\+Timer()};}
+
+{\ttfamily Do something else... } 
+
+Definition at line \mbox{\hyperlink{tmr2_8c_source_l00079}{79}} of file \mbox{\hyperlink{tmr2_8c_source}{tmr2.\+c}}.
+
+\Hypertarget{tmr2_8c_a36d7e6eab8b279863c83a32fb41adb02}\label{tmr2_8c_a36d7e6eab8b279863c83a32fb41adb02} 
+\index{tmr2.c@{tmr2.c}!TMR2\_StopTimer@{TMR2\_StopTimer}}
+\index{TMR2\_StopTimer@{TMR2\_StopTimer}!tmr2.c@{tmr2.c}}
+\doxysubsubsection{\texorpdfstring{TMR2\_StopTimer()}{TMR2\_StopTimer()}}
+{\footnotesize\ttfamily void TMR2\+\_\+\+Stop\+Timer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Summary This function stops the TMR2.
+
+@\+Description This function stops the TMR2 operation. This function must be called after the start of TMR2.
+
+@\+Preconditions Initialize the TMR2 before calling this function.
+
+@\+Param None
+
+@\+Returns None
+
+@\+Example {\ttfamily  Initialize TMR2 module}
+
+{\ttfamily Start TMR2 \doxylink{tmr2_8h_afb37b846db811f973b4009215d59f91a}{TMR2\+\_\+\+Start\+Timer()};}
+
+{\ttfamily Do something else...}
+
+{\ttfamily Stop TMR2; \doxylink{tmr2_8h_a36d7e6eab8b279863c83a32fb41adb02}{TMR2\+\_\+\+Stop\+Timer()}; } 
+
+Definition at line \mbox{\hyperlink{tmr2_8c_source_l00085}{85}} of file \mbox{\hyperlink{tmr2_8c_source}{tmr2.\+c}}.
+
+\Hypertarget{tmr2_8c_acb2fbe8254fcc8c01b9784b028a7eac6}\label{tmr2_8c_acb2fbe8254fcc8c01b9784b028a7eac6} 
+\index{tmr2.c@{tmr2.c}!TMR2\_WriteTimer@{TMR2\_WriteTimer}}
+\index{TMR2\_WriteTimer@{TMR2\_WriteTimer}!tmr2.c@{tmr2.c}}
+\doxysubsubsection{\texorpdfstring{TMR2\_WriteTimer()}{TMR2\_WriteTimer()}}
+{\footnotesize\ttfamily void TMR2\+\_\+\+Write\+Timer (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{timer\+Val }\end{DoxyParamCaption})}
+
+@\+Summary Writes the TMR2 register.
+
+@\+Description This function writes the TMR2 register. This function must be called after the initialization of TMR2.
+
+@\+Preconditions Initialize the TMR2 before calling this function.
+
+@\+Param timer\+Val -\/ Value to write into TMR2 register.
+
+@\+Returns None
+
+@\+Example {\ttfamily  \#define PERIOD 0x80 \#define ZERO 0x00}
+
+{\ttfamily  while(1) \{ Read the TMR2 register if(ZERO == \doxylink{tmr2_8h_a4acc1f7c8c2dbd46424dad273cdb9cb1}{TMR2\+\_\+\+Read\+Timer()}) \{ Do something else...}
+
+{\ttfamily Write the TMR2 register TMR2\+\_\+\+Write\+Timer(\+PERIOD); \}}
+
+{\ttfamily Do something else... \} } 
+
+Definition at line \mbox{\hyperlink{tmr2_8c_source_l00100}{100}} of file \mbox{\hyperlink{tmr2_8c_source}{tmr2.\+c}}.
+

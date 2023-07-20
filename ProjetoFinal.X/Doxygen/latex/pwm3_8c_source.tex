@@ -1,0 +1,62 @@
+\doxysection{pwm3.\+c}
+\hypertarget{pwm3_8c_source}{}\label{pwm3_8c_source}\index{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/mcc\_generated\_files/pwm3.c@{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/mcc\_generated\_files/pwm3.c}}
+\mbox{\hyperlink{pwm3_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00024}00024\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00025}00025\ \textcolor{comment}{\ \ \ \ (c)\ 2018\ Microchip\ Technology\ Inc.\ and\ its\ subsidiaries.\ }}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00026}00026\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00027}00027\ \textcolor{comment}{\ \ \ \ Subject\ to\ your\ compliance\ with\ these\ terms,\ you\ may\ use\ Microchip\ software\ and\ any\ }}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00028}00028\ \textcolor{comment}{\ \ \ \ derivatives\ exclusively\ with\ Microchip\ products.\ It\ is\ your\ responsibility\ to\ comply\ with\ third\ party\ }}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00029}00029\ \textcolor{comment}{\ \ \ \ license\ terms\ applicable\ to\ your\ use\ of\ third\ party\ software\ (including\ open\ source\ software)\ that\ }}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00030}00030\ \textcolor{comment}{\ \ \ \ may\ accompany\ Microchip\ software.}}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00031}00031\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00032}00032\ \textcolor{comment}{\ \ \ \ THIS\ SOFTWARE\ IS\ SUPPLIED\ BY\ MICROCHIP\ "{}AS\ IS"{}.\ NO\ WARRANTIES,\ WHETHER\ }}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00033}00033\ \textcolor{comment}{\ \ \ \ EXPRESS,\ IMPLIED\ OR\ STATUTORY,\ APPLY\ TO\ THIS\ SOFTWARE,\ INCLUDING\ ANY\ }}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00034}00034\ \textcolor{comment}{\ \ \ \ IMPLIED\ WARRANTIES\ OF\ NON-\/INFRINGEMENT,\ MERCHANTABILITY,\ AND\ FITNESS\ }}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00035}00035\ \textcolor{comment}{\ \ \ \ FOR\ A\ PARTICULAR\ PURPOSE.}}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00036}00036\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00037}00037\ \textcolor{comment}{\ \ \ \ IN\ NO\ EVENT\ WILL\ MICROCHIP\ BE\ LIABLE\ FOR\ ANY\ INDIRECT,\ SPECIAL,\ PUNITIVE,\ }}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00038}00038\ \textcolor{comment}{\ \ \ \ INCIDENTAL\ OR\ CONSEQUENTIAL\ LOSS,\ DAMAGE,\ COST\ OR\ EXPENSE\ OF\ ANY\ KIND\ }}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00039}00039\ \textcolor{comment}{\ \ \ \ WHATSOEVER\ RELATED\ TO\ THE\ SOFTWARE,\ HOWEVER\ CAUSED,\ EVEN\ IF\ MICROCHIP\ }}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00040}00040\ \textcolor{comment}{\ \ \ \ HAS\ BEEN\ ADVISED\ OF\ THE\ POSSIBILITY\ OR\ THE\ DAMAGES\ ARE\ FORESEEABLE.\ TO\ }}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00041}00041\ \textcolor{comment}{\ \ \ \ THE\ FULLEST\ EXTENT\ ALLOWED\ BY\ LAW,\ MICROCHIP'S\ TOTAL\ LIABILITY\ ON\ ALL\ }}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00042}00042\ \textcolor{comment}{\ \ \ \ CLAIMS\ IN\ ANY\ WAY\ RELATED\ TO\ THIS\ SOFTWARE\ WILL\ NOT\ EXCEED\ THE\ AMOUNT\ }}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00043}00043\ \textcolor{comment}{\ \ \ \ OF\ FEES,\ IF\ ANY,\ THAT\ YOU\ HAVE\ PAID\ DIRECTLY\ TO\ MICROCHIP\ FOR\ THIS\ }}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00044}00044\ \textcolor{comment}{\ \ \ \ SOFTWARE.}}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00045}00045\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00051}00051\ \textcolor{preprocessor}{\#include\ <xc.h>}}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00052}00052\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{pwm3_8h}{pwm3.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00058}\mbox{\hyperlink{pwm3_8c_a91f7cb7d8eb464958f63793324a15947}{00058}}\ \textcolor{preprocessor}{\#define\ PWM3\_INITIALIZE\_DUTY\_VALUE\ \ \ \ 0}}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00064}\mbox{\hyperlink{pwm3_8c_acd0221627112714d97f95b6c512ad005}{00064}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{pwm3_8c_acd0221627112714d97f95b6c512ad005}{PWM3\_Initialize}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00065}00065\ \{}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00066}00066\ \ \ \ \ \textcolor{comment}{//\ Set\ the\ PWM3\ to\ the\ options\ selected\ in\ the\ User\ Interface}}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00067}00067\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00068}00068\ \ \ \ \ \textcolor{comment}{//\ CCP3M\ PWM;\ DC3B\ 0;\ }}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00069}00069\ \ \ \ \ CCP3CON\ =\ 0x0C;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00070}00070\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00071}00071\ \ \ \ \ \textcolor{comment}{//\ CCPR3L\ 0;\ }}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00072}00072\ \ \ \ \ CCPR3L\ =\ 0x00;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00073}00073\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00074}00074\ \ \ \ \ \textcolor{comment}{//\ CCPR3H\ 0;\ }}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00075}00075\ \ \ \ \ CCPR3H\ =\ 0x00;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00077}00077\ \ \ \ \ \textcolor{comment}{//\ Selecting\ Timer\ 2}}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00078}00078\ \ \ \ \ CCPTMRS0bits.C3TSEL\ =\ 0x0;}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00079}00079\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00080}00080\ \}}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00082}\mbox{\hyperlink{pwm3_8c_af9c974bd4a79b9c6c982df94f9eb8508}{00082}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{pwm3_8c_af9c974bd4a79b9c6c982df94f9eb8508}{PWM3\_LoadDutyValue}}(uint16\_t\ dutyValue)}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00083}00083\ \{}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00084}00084\ \ \ \ \textcolor{comment}{//\ Writing\ to\ 8\ MSBs\ of\ pwm\ duty\ cycle\ in\ CCPRL\ register}}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00085}00085\ \ \ \ \ CCPR3L\ =\ ((dutyValue\ \&\ 0x03FC)>>2);}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00086}00086\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00087}00087\ \ \ \ \textcolor{comment}{//\ Writing\ to\ 2\ LSBs\ of\ pwm\ duty\ cycle\ in\ CCPCON\ register}}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00088}00088\ \ \ \ \ CCP3CON\ =\ ((uint8\_t)(CCP3CON\ \&\ 0xCF)\ |\ ((dutyValue\ \&\ 0x0003)<<4));}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00089}00089\ \}}
+\DoxyCodeLine{\Hypertarget{pwm3_8c_source_l00090}00090\ }
+
+\end{DoxyCode}

@@ -1,0 +1,181 @@
+\doxysection{C\+:/\+Users/thali/\+Documents/\+Elevador\+\_\+\+EE/\+Projeto\+Final.X/main.c File Reference}
+\hypertarget{main_8c}{}\label{main_8c}\index{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/main.c@{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/main.c}}
+{\ttfamily \#include \"{}mcc\+\_\+generated\+\_\+files/mcc.\+h\"{}}\newline
+{\ttfamily \#include \"{}main.\+h\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a5a0ad392736c79140e71348228b1480b}{organiza\+Trajeto}} ()
+\item 
+bool \mbox{\hyperlink{main_8c_aa955084e6e45b9b51c4854c7bb703f15}{is\+Valid\+Floor}} (char floor)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main_8c_aa3cee76b75ae7d81f0df7e303271baf2}{calc\+Temp}} ()
+\item 
+void \mbox{\hyperlink{main_8c_a2823171cd7040afa531d616fe515a666}{send\+Info}} ()
+\item 
+void \mbox{\hyperlink{main_8c_a712b4819ed0efdfed4a5f58d515ed378}{interrupcao\+CCP4}} ()
+\item 
+void \mbox{\hyperlink{main_8c_af1ef9c4ec161ec3d8a9b1cd750341401}{tx\+Spi}} (uint8\+\_\+t \texorpdfstring{$\ast$}{*}data, size\+\_\+t data\+Size)
+\item 
+void \mbox{\hyperlink{main_8c_a87bb572216f5d804e3808591a2972374}{matrix\+Update}} ()
+\item 
+void \mbox{\hyperlink{main_8c_a1c6ba837a09f7a338c9cea26020abbfc}{init\+Matrix}} ()
+\item 
+void \mbox{\hyperlink{main_8c_a8163f9debf771dea55589f7047444c2e}{controle\+Movimento}} ()
+\item 
+void \mbox{\hyperlink{main_8c_ac46ad3d86c801e71961da21f44f52bdf}{chegada\+S1}} ()
+\item 
+void \mbox{\hyperlink{main_8c_a36e82a5cb90ba4962f287c00eca11ac6}{chegada\+S2}} ()
+\item 
+void \mbox{\hyperlink{main_8c_a6386bb829e7a1ee467689cb51dacca17}{chegada\+S3}} ()
+\item 
+void \mbox{\hyperlink{main_8c_a080ba43c6b8672c73631b8c3b10945dd}{chegada\+S4}} ()
+\item 
+void \mbox{\hyperlink{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8c_aa3cee76b75ae7d81f0df7e303271baf2}\label{main_8c_aa3cee76b75ae7d81f0df7e303271baf2} 
+\index{main.c@{main.c}!calcTemp@{calcTemp}}
+\index{calcTemp@{calcTemp}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{calcTemp()}{calcTemp()}}
+{\footnotesize\ttfamily uint16\+\_\+t calc\+Temp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Funcao que calcula temperatura da ponte H \begin{DoxyReturn}{Returns}
+uint16\+\_\+t temperatura 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00055}{55}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_ac46ad3d86c801e71961da21f44f52bdf}\label{main_8c_ac46ad3d86c801e71961da21f44f52bdf} 
+\index{main.c@{main.c}!chegadaS1@{chegadaS1}}
+\index{chegadaS1@{chegadaS1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{chegadaS1()}{chegadaS1()}}
+{\footnotesize\ttfamily void chegada\+S1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Funcao que trata a interrupção do sensor S1 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00265}{265}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a36e82a5cb90ba4962f287c00eca11ac6}\label{main_8c_a36e82a5cb90ba4962f287c00eca11ac6} 
+\index{main.c@{main.c}!chegadaS2@{chegadaS2}}
+\index{chegadaS2@{chegadaS2}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{chegadaS2()}{chegadaS2()}}
+{\footnotesize\ttfamily void chegada\+S2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Funcao que trata a interrupcao do sensor S2 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00298}{298}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a6386bb829e7a1ee467689cb51dacca17}\label{main_8c_a6386bb829e7a1ee467689cb51dacca17} 
+\index{main.c@{main.c}!chegadaS3@{chegadaS3}}
+\index{chegadaS3@{chegadaS3}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{chegadaS3()}{chegadaS3()}}
+{\footnotesize\ttfamily void chegada\+S3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Funcao que trata a interrupcao do sensor S3 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00338}{338}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a080ba43c6b8672c73631b8c3b10945dd}\label{main_8c_a080ba43c6b8672c73631b8c3b10945dd} 
+\index{main.c@{main.c}!chegadaS4@{chegadaS4}}
+\index{chegadaS4@{chegadaS4}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{chegadaS4()}{chegadaS4()}}
+{\footnotesize\ttfamily void chegada\+S4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Funcao que trata a interrupcao do sensor S4 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00377}{377}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a8163f9debf771dea55589f7047444c2e}\label{main_8c_a8163f9debf771dea55589f7047444c2e} 
+\index{main.c@{main.c}!controleMovimento@{controleMovimento}}
+\index{controleMovimento@{controleMovimento}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{controleMovimento()}{controleMovimento()}}
+{\footnotesize\ttfamily void controle\+Movimento (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Funcao que realiza o controle do movimento do motor para cada caso 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00210}{210}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a1c6ba837a09f7a338c9cea26020abbfc}\label{main_8c_a1c6ba837a09f7a338c9cea26020abbfc} 
+\index{main.c@{main.c}!initMatrix@{initMatrix}}
+\index{initMatrix@{initMatrix}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{initMatrix()}{initMatrix()}}
+{\footnotesize\ttfamily void init\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Funcao de inicialização da matriz de led 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00188}{188}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a712b4819ed0efdfed4a5f58d515ed378}\label{main_8c_a712b4819ed0efdfed4a5f58d515ed378} 
+\index{main.c@{main.c}!interrupcaoCCP4@{interrupcaoCCP4}}
+\index{interrupcaoCCP4@{interrupcaoCCP4}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{interrupcaoCCP4()}{interrupcaoCCP4()}}
+{\footnotesize\ttfamily void interrupcao\+CCP4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Funcao que trata interrupção do CCP4 (Enconder) 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00145}{145}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_aa955084e6e45b9b51c4854c7bb703f15}\label{main_8c_aa955084e6e45b9b51c4854c7bb703f15} 
+\index{main.c@{main.c}!isValidFloor@{isValidFloor}}
+\index{isValidFloor@{isValidFloor}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{isValidFloor()}{isValidFloor()}}
+{\footnotesize\ttfamily bool is\+Valid\+Floor (\begin{DoxyParamCaption}\item[{char}]{floor }\end{DoxyParamCaption})}
+
+Verifica se eh um andar valido 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00047}{47}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667}\label{main_8c_a6288eba0f8e8ad3ab1544ad731eb7667} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily void main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funcao principal 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00419}{419}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a87bb572216f5d804e3808591a2972374}\label{main_8c_a87bb572216f5d804e3808591a2972374} 
+\index{main.c@{main.c}!matrixUpdate@{matrixUpdate}}
+\index{matrixUpdate@{matrixUpdate}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{matrixUpdate()}{matrixUpdate()}}
+{\footnotesize\ttfamily void matrix\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Funcao que atualiza os dados na matriz de led 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00165}{165}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a5a0ad392736c79140e71348228b1480b}\label{main_8c_a5a0ad392736c79140e71348228b1480b} 
+\index{main.c@{main.c}!organizaTrajeto@{organizaTrajeto}}
+\index{organizaTrajeto@{organizaTrajeto}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{organizaTrajeto()}{organizaTrajeto()}}
+{\footnotesize\ttfamily void organiza\+Trajeto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Funcao que aplica as mascaras as variaveis destino\+Sub e Destino\+Desc que controlam as paradas do elvador aos andares 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00018}{18}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a2823171cd7040afa531d616fe515a666}\label{main_8c_a2823171cd7040afa531d616fe515a666} 
+\index{main.c@{main.c}!sendInfo@{sendInfo}}
+\index{sendInfo@{sendInfo}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{sendInfo()}{sendInfo()}}
+{\footnotesize\ttfamily void send\+Info (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Funcao que envia os dados por UART 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00062}{62}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_af1ef9c4ec161ec3d8a9b1cd750341401}\label{main_8c_af1ef9c4ec161ec3d8a9b1cd750341401} 
+\index{main.c@{main.c}!txSpi@{txSpi}}
+\index{txSpi@{txSpi}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{txSpi()}{txSpi()}}
+{\footnotesize\ttfamily void tx\+Spi (\begin{DoxyParamCaption}\item[{uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{data,  }\item[{size\+\_\+t}]{data\+Size }\end{DoxyParamCaption})}
+
+Funcao que realiza a comunicacao com a matriz de leds 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00156}{156}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+

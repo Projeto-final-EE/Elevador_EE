@@ -1,0 +1,2008 @@
+\doxysection{C\+:/\+Users/thali/\+Documents/\+Elevador\+\_\+\+EE/\+Projeto\+Final.X/mcc\+\_\+generated\+\_\+files/pin\+\_\+manager.h File Reference}
+\hypertarget{pin__manager_8h}{}\label{pin__manager_8h}\index{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/mcc\_generated\_files/pin\_manager.h@{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/mcc\_generated\_files/pin\_manager.h}}
+{\ttfamily \#include $<$xc.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a1bb283bd7893b9855e2f23013891fc82}{INPUT}}~1
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a61a3c9a18380aafb6e430e79bf596557}{OUTPUT}}~0
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}{HIGH}}~1
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_ab811d8c6ff3a505312d3276590444289}{LOW}}~0
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_ad42aa2404559d4a465d5d45e857f2881}{ANALOG}}~1
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a5e3f0ed2799c1275891b863e4b8c89eb}{DIGITAL}}~0
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a2556d56311dd94f5834ef8fb4e6d875d}{PULL\+\_\+\+UP\+\_\+\+ENABLED}}~1
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_aa2df433ea6e6c6cd49babd945e27315e}{PULL\+\_\+\+UP\+\_\+\+DISABLED}}~0
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a55b0d3f9bd735e7f140e0f4afb6d6028}{S3\+\_\+\+TRIS}}~TRISAbits.\+TRISA0
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_adad4d3c9a1a967918e2e730cc0100a39}{S3\+\_\+\+LAT}}~LATAbits.\+LATA0
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a2ce9023ff3425738edc74fe904714de6}{S3\+\_\+\+PORT}}~PORTAbits.\+RA0
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_aece0bb260ab33ce64120cc88dd3b7f5f}{S3\+\_\+\+ANS}}~ANSELAbits.\+ANSA0
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a29a2393eb42f892726f3531731715181}{S3\+\_\+\+Set\+High}}()~do \{ LATAbits.\+LATA0 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_ae6a9b417006d492968a33ba496614392}{S3\+\_\+\+Set\+Low}}()~do \{ LATAbits.\+LATA0 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_af68fb15cd4a737d713880483a135fb4d}{S3\+\_\+\+Toggle}}()~do \{ LATAbits.\+LATA0 = \texorpdfstring{$\sim$}{\string~}LATAbits.\+LATA0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a38637785e2f3a27a05e90cf3624c4ad5}{S3\+\_\+\+Get\+Value}}()~PORTAbits.\+RA0
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a9274493698e1e209e186f70d2203e7b0}{S3\+\_\+\+Set\+Digital\+Input}}()~do \{ TRISAbits.\+TRISA0 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a7e5b8f2ef0595b175f55fea216fc1d14}{S3\+\_\+\+Set\+Digital\+Output}}()~do \{ TRISAbits.\+TRISA0 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a752aa58e26f69f8ceb5ac92fe56e4415}{S3\+\_\+\+Set\+Analog\+Mode}}()~do \{ ANSELAbits.\+ANSA0 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a36f5b75a43aac53d59526ed42e080596}{S3\+\_\+\+Set\+Digital\+Mode}}()~do \{ ANSELAbits.\+ANSA0 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a982072d3bb579d62d6ce2c41a29b45f2}{RA1\+\_\+\+Set\+High}}()~do \{ LATAbits.\+LATA1 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a7c51efcd179afb8c03660e52de473d57}{RA1\+\_\+\+Set\+Low}}()~do \{ LATAbits.\+LATA1 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a137c22c91ee68281bb130a4056c62afc}{RA1\+\_\+\+Toggle}}()~do \{ LATAbits.\+LATA1 = \texorpdfstring{$\sim$}{\string~}LATAbits.\+LATA1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_af6fe967ee2172a1f934760e266bb6bcb}{RA1\+\_\+\+Get\+Value}}()~PORTAbits.\+RA1
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a9e646edb0defd075c77268f116bc9006}{RA1\+\_\+\+Set\+Digital\+Input}}()~do \{ TRISAbits.\+TRISA1 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a16d1a277ee5ada85a5207047138845b8}{RA1\+\_\+\+Set\+Digital\+Output}}()~do \{ TRISAbits.\+TRISA1 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_aba8f93ab7f4ed4cd1282625f27d4bb9d}{RA1\+\_\+\+Set\+Analog\+Mode}}()~do \{ ANSELAbits.\+ANSA1 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a1111cb15563a6e370a8ff9335bcf2513}{RA1\+\_\+\+Set\+Digital\+Mode}}()~do \{ ANSELAbits.\+ANSA1 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a68bb297b6fc265c9f6c6b359354e560d}{Temp\+\_\+\+TRIS}}~TRISAbits.\+TRISA2
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a79c498b13b6739db7ec20731f88c00c2}{Temp\+\_\+\+LAT}}~LATAbits.\+LATA2
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a5434f616cb455609d77aa2d7409f8c69}{Temp\+\_\+\+PORT}}~PORTAbits.\+RA2
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a23026f65f998f9eb7d1fcfb5fb93ab06}{Temp\+\_\+\+ANS}}~ANSELAbits.\+ANSA2
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_ac8a66597709316218683d672b747ee4d}{Temp\+\_\+\+Set\+High}}()~do \{ LATAbits.\+LATA2 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a55e1a2a8e0825953b4a2168917b5166f}{Temp\+\_\+\+Set\+Low}}()~do \{ LATAbits.\+LATA2 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a31f6c1ac6e2b0b08223904dec9438643}{Temp\+\_\+\+Toggle}}()~do \{ LATAbits.\+LATA2 = \texorpdfstring{$\sim$}{\string~}LATAbits.\+LATA2; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a91df149876b5b088fee7d79d65ca513b}{Temp\+\_\+\+Get\+Value}}()~PORTAbits.\+RA2
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a26e3f2fc604d1cfdcfbdb86e7a83e7c5}{Temp\+\_\+\+Set\+Digital\+Input}}()~do \{ TRISAbits.\+TRISA2 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a99f54f4869155c2872eaa26e335b98c5}{Temp\+\_\+\+Set\+Digital\+Output}}()~do \{ TRISAbits.\+TRISA2 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_ac01607c048fae8980525b5288a872b2e}{Temp\+\_\+\+Set\+Analog\+Mode}}()~do \{ ANSELAbits.\+ANSA2 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a1a9f599c603aaf9031be1d18ffeb8f9b}{Temp\+\_\+\+Set\+Digital\+Mode}}()~do \{ ANSELAbits.\+ANSA2 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a3e9d0fd2faa86fc6e3ad055daea844ba}{RA3\+\_\+\+Set\+High}}()~do \{ LATAbits.\+LATA3 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_ad55dcbeb94367223be4a51bf16475241}{RA3\+\_\+\+Set\+Low}}()~do \{ LATAbits.\+LATA3 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_ae79f925e61ecf7dc14f4de17e408a9a7}{RA3\+\_\+\+Toggle}}()~do \{ LATAbits.\+LATA3 = \texorpdfstring{$\sim$}{\string~}LATAbits.\+LATA3; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a313d51d35181ffe2c2d9e0c65997bdb5}{RA3\+\_\+\+Get\+Value}}()~PORTAbits.\+RA3
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_ae6892fefb7377ede47e8665137c88f82}{RA3\+\_\+\+Set\+Digital\+Input}}()~do \{ TRISAbits.\+TRISA3 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a151de270d9db4ce0abeaa0aababf5450}{RA3\+\_\+\+Set\+Digital\+Output}}()~do \{ TRISAbits.\+TRISA3 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a7ac22b4af8840c23c5cf4bab1d6b805f}{RA3\+\_\+\+Set\+Analog\+Mode}}()~do \{ ANSELAbits.\+ANSA3 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a757e76443e7715b33c35860440f110f2}{RA3\+\_\+\+Set\+Digital\+Mode}}()~do \{ ANSELAbits.\+ANSA3 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a8bf9dda789819626387d4fa0c7b57a61}{Enc\+\_\+\+TRIS}}~TRISAbits.\+TRISA4
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_ac9ce2de4b24e4d2d356cf0fce2c8b232}{Enc\+\_\+\+LAT}}~LATAbits.\+LATA4
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a69d7b5423d907fb2cabf2c4f3af1162b}{Enc\+\_\+\+PORT}}~PORTAbits.\+RA4
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_afdaa8cabff564f070bb459050039fe82}{Enc\+\_\+\+ANS}}~ANSELAbits.\+ANSA4
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_acb642634fffb944df44282640ec1185a}{Enc\+\_\+\+Set\+High}}()~do \{ LATAbits.\+LATA4 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a7af3c9acaa03254dea814ed7867c8388}{Enc\+\_\+\+Set\+Low}}()~do \{ LATAbits.\+LATA4 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a8c3e1c2afa1614d84fa37efd8ee4e37d}{Enc\+\_\+\+Toggle}}()~do \{ LATAbits.\+LATA4 = \texorpdfstring{$\sim$}{\string~}LATAbits.\+LATA4; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a980ddcd952f50b2b17fbbbe2244fb4f6}{Enc\+\_\+\+Get\+Value}}()~PORTAbits.\+RA4
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a7513235186b19d88500282a4851c7b54}{Enc\+\_\+\+Set\+Digital\+Input}}()~do \{ TRISAbits.\+TRISA4 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_ae6ffd60fdbd7b5c8b568d520fa16d509}{Enc\+\_\+\+Set\+Digital\+Output}}()~do \{ TRISAbits.\+TRISA4 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a1c71960f2980ed00afd113e521687f6a}{Enc\+\_\+\+Set\+Analog\+Mode}}()~do \{ ANSELAbits.\+ANSA4 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_af1c6c811080924cc4adc7b8d4ff9271e}{Enc\+\_\+\+Set\+Digital\+Mode}}()~do \{ ANSELAbits.\+ANSA4 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a29505e7aee0520827c356c31ce7e583c}{RA6\+\_\+\+Set\+High}}()~do \{ LATAbits.\+LATA6 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a2fc286fb4aa0102b971572d3b0d963e4}{RA6\+\_\+\+Set\+Low}}()~do \{ LATAbits.\+LATA6 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a97739caf525e1933df0f34f91ddb04d5}{RA6\+\_\+\+Toggle}}()~do \{ LATAbits.\+LATA6 = \texorpdfstring{$\sim$}{\string~}LATAbits.\+LATA6; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_ad3c7b4f302ffa56526e16a522fb5bb86}{RA6\+\_\+\+Get\+Value}}()~PORTAbits.\+RA6
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a9ca03bb6e1dd21c0cb1f752be35d7a2d}{RA6\+\_\+\+Set\+Digital\+Input}}()~do \{ TRISAbits.\+TRISA6 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a90737425e88869e2d4315d81b4f79b78}{RA6\+\_\+\+Set\+Digital\+Output}}()~do \{ TRISAbits.\+TRISA6 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a493d2ec95870225e43e65adfa8585e1e}{Dir\+\_\+\+TRIS}}~TRISAbits.\+TRISA7
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a0fcff045da02695fa3e788cf958a24d3}{Dir\+\_\+\+LAT}}~LATAbits.\+LATA7
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a8d2bb944838974d5f08390414dd14980}{Dir\+\_\+\+PORT}}~PORTAbits.\+RA7
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a6895e6e8e20c9be514be8675fb4ecfc5}{Dir\+\_\+\+Set\+High}}()~do \{ LATAbits.\+LATA7 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a3fe37e1e183cb3edc7f2c6bc2e253bc6}{Dir\+\_\+\+Set\+Low}}()~do \{ LATAbits.\+LATA7 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_ac38577671955271310d73e843574b40d}{Dir\+\_\+\+Toggle}}()~do \{ LATAbits.\+LATA7 = \texorpdfstring{$\sim$}{\string~}LATAbits.\+LATA7; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a009be673dc12060c685cc3167a89cfa2}{Dir\+\_\+\+Get\+Value}}()~PORTAbits.\+RA7
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a01b0a30240268027f1e9fd0ea6be496a}{Dir\+\_\+\+Set\+Digital\+Input}}()~do \{ TRISAbits.\+TRISA7 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_acc9aa96c12a1d281e4489f690df51100}{Dir\+\_\+\+Set\+Digital\+Output}}()~do \{ TRISAbits.\+TRISA7 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a0719350a3bafc745e24b8d9817608719}{S1\+\_\+\+TRIS}}~TRISBbits.\+TRISB0
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a735a74357738fc91e677285bea8f046f}{S1\+\_\+\+LAT}}~LATBbits.\+LATB0
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a3d55d272c98df55dfb9f4a84af0e026e}{S1\+\_\+\+PORT}}~PORTBbits.\+RB0
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a7434a6fdae5b0c8bd50319247de32bfc}{S1\+\_\+\+WPU}}~WPUBbits.\+WPUB0
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a3ec9930552ce6dc80ddef3b706ddcaf6}{S1\+\_\+\+Set\+High}}()~do \{ LATBbits.\+LATB0 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a6ebe4eea947816cc370f27446021fc18}{S1\+\_\+\+Set\+Low}}()~do \{ LATBbits.\+LATB0 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a7261aa37fa8115d4095fb9a2a50fa6a3}{S1\+\_\+\+Toggle}}()~do \{ LATBbits.\+LATB0 = \texorpdfstring{$\sim$}{\string~}LATBbits.\+LATB0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a676f389e19a3b743dd6bf6f9cbd0866c}{S1\+\_\+\+Get\+Value}}()~PORTBbits.\+RB0
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_afeaa0a1452fbd1586387a903bff4d111}{S1\+\_\+\+Set\+Digital\+Input}}()~do \{ TRISBbits.\+TRISB0 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_aa8e9680a5db94a60ca1036eaa1a3fa23}{S1\+\_\+\+Set\+Digital\+Output}}()~do \{ TRISBbits.\+TRISB0 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a223afe346b1df035b55004887eca6eb3}{S1\+\_\+\+Set\+Pullup}}()~do \{ WPUBbits.\+WPUB0 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_adc00aa0c6844e0043006c30b3f178720}{S1\+\_\+\+Reset\+Pullup}}()~do \{ WPUBbits.\+WPUB0 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a73e315c1fdfdb88012c160e50e393ec1}{CS\+\_\+\+TRIS}}~TRISBbits.\+TRISB1
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a45006f011867e07d23e62b0ab93aa8f1}{CS\+\_\+\+LAT}}~LATBbits.\+LATB1
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_ab313428e4d073b4508a15ca9d593733e}{CS\+\_\+\+PORT}}~PORTBbits.\+RB1
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a7724974aab82d5b7b9dfa9945cc33a85}{CS\+\_\+\+WPU}}~WPUBbits.\+WPUB1
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_ab8393812bc2fbd749ca3e34026d3f599}{CS\+\_\+\+ANS}}~ANSELBbits.\+ANSB1
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a49fa0b17c14564f1a6a6c3fe2787f1f0}{CS\+\_\+\+Set\+High}}()~do \{ LATBbits.\+LATB1 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a1dfb04be0d22ef09b34273206795571a}{CS\+\_\+\+Set\+Low}}()~do \{ LATBbits.\+LATB1 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_aacd4e615f899a61ff378f90eee0f4667}{CS\+\_\+\+Toggle}}()~do \{ LATBbits.\+LATB1 = \texorpdfstring{$\sim$}{\string~}LATBbits.\+LATB1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a3bce37a82e48fd2ff7c25d3b4fab0b15}{CS\+\_\+\+Get\+Value}}()~PORTBbits.\+RB1
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a2347a09a4b8685d69d87e49febec5846}{CS\+\_\+\+Set\+Digital\+Input}}()~do \{ TRISBbits.\+TRISB1 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_af2af241662c1159905a23968d32d20a3}{CS\+\_\+\+Set\+Digital\+Output}}()~do \{ TRISBbits.\+TRISB1 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_ae3fa9f023cebb44a0a103fe2a9afdbc8}{CS\+\_\+\+Set\+Pullup}}()~do \{ WPUBbits.\+WPUB1 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a88d5abfad6186f4b8d5ddef3ca3f7f8c}{CS\+\_\+\+Reset\+Pullup}}()~do \{ WPUBbits.\+WPUB1 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_ad4e6b6c7fb3feb0d9e29e022d7e6fde7}{CS\+\_\+\+Set\+Analog\+Mode}}()~do \{ ANSELBbits.\+ANSB1 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a6a797ae4794fb2a462fe6881167e9530}{CS\+\_\+\+Set\+Digital\+Mode}}()~do \{ ANSELBbits.\+ANSB1 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a507c905ca62759fbf3dd3dd79efcace9}{RB2\+\_\+\+Set\+High}}()~do \{ LATBbits.\+LATB2 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a8b3cf520c7de9c43630cb0c86097ef8f}{RB2\+\_\+\+Set\+Low}}()~do \{ LATBbits.\+LATB2 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a59ddb2d6bbeac0d834c0b1bd489335db}{RB2\+\_\+\+Toggle}}()~do \{ LATBbits.\+LATB2 = \texorpdfstring{$\sim$}{\string~}LATBbits.\+LATB2; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_abab5ae0d4f48a20063b65eca72a3fa15}{RB2\+\_\+\+Get\+Value}}()~PORTBbits.\+RB2
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_afb237b7eb8b88602680b1d304141d3e5}{RB2\+\_\+\+Set\+Digital\+Input}}()~do \{ TRISBbits.\+TRISB2 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a26b3530e235af2a6beefdd2cd550b85d}{RB2\+\_\+\+Set\+Digital\+Output}}()~do \{ TRISBbits.\+TRISB2 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_aeedb9b9bdf2fd62187919c1b3c3b220f}{RB2\+\_\+\+Set\+Pullup}}()~do \{ WPUBbits.\+WPUB2 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_ae45fc41ac8fbe5674db31b0ccbf78dbd}{RB2\+\_\+\+Reset\+Pullup}}()~do \{ WPUBbits.\+WPUB2 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a5edc7f9915933c2be5b38079a1b8305e}{RB2\+\_\+\+Set\+Analog\+Mode}}()~do \{ ANSELBbits.\+ANSB2 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_afac0ef5c81268a3608c8cd5e9579da27}{RB2\+\_\+\+Set\+Digital\+Mode}}()~do \{ ANSELBbits.\+ANSB2 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_afc24f1d93fbda27ef3fb3e9564964f65}{S2\+\_\+\+TRIS}}~TRISBbits.\+TRISB3
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_ae7898b689f470bcd0268b83f3c83cae3}{S2\+\_\+\+LAT}}~LATBbits.\+LATB3
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_aca6995ea532cc3a532a1680972647cb1}{S2\+\_\+\+PORT}}~PORTBbits.\+RB3
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_ab2c2991dbe43e8cb80f33368bc1eea20}{S2\+\_\+\+WPU}}~WPUBbits.\+WPUB3
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_ac60685a022674693ad9ef44e295bf4e7}{S2\+\_\+\+ANS}}~ANSELBbits.\+ANSB3
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a5208cd89bfa27593a937d96c53ad575e}{S2\+\_\+\+Set\+High}}()~do \{ LATBbits.\+LATB3 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_ad42d2d7b3a12bc65263d7cb6a193f6c1}{S2\+\_\+\+Set\+Low}}()~do \{ LATBbits.\+LATB3 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_af399d0f129526c118606d676df7ce300}{S2\+\_\+\+Toggle}}()~do \{ LATBbits.\+LATB3 = \texorpdfstring{$\sim$}{\string~}LATBbits.\+LATB3; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_ac40db0792f6e30821d8233955ec86a26}{S2\+\_\+\+Get\+Value}}()~PORTBbits.\+RB3
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a246d2270b48fcf10c040773fd2e0beaf}{S2\+\_\+\+Set\+Digital\+Input}}()~do \{ TRISBbits.\+TRISB3 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a9b0d87d888487eb74db4aa90401cf4d2}{S2\+\_\+\+Set\+Digital\+Output}}()~do \{ TRISBbits.\+TRISB3 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_afa1afb037497323c38ff39ac12109ab0}{S2\+\_\+\+Set\+Pullup}}()~do \{ WPUBbits.\+WPUB3 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a0781316b63e75b00ae55501bb0cf13c8}{S2\+\_\+\+Reset\+Pullup}}()~do \{ WPUBbits.\+WPUB3 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a18bbbd41fe642a83b787a7dc7e395f4d}{S2\+\_\+\+Set\+Analog\+Mode}}()~do \{ ANSELBbits.\+ANSB3 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_ab585d6887b84f7fb402a6d663dec1641}{S2\+\_\+\+Set\+Digital\+Mode}}()~do \{ ANSELBbits.\+ANSB3 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a08d2b759efdc6b2469a58a132ae23866}{RB4\+\_\+\+Set\+High}}()~do \{ LATBbits.\+LATB4 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a726fc03e831901caebc179d3a8c2c4fe}{RB4\+\_\+\+Set\+Low}}()~do \{ LATBbits.\+LATB4 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a61cedaf038273bce30d77d3fcce188c8}{RB4\+\_\+\+Toggle}}()~do \{ LATBbits.\+LATB4 = \texorpdfstring{$\sim$}{\string~}LATBbits.\+LATB4; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a0bd4888b6b3a43a242cf36a1cf6cfe11}{RB4\+\_\+\+Get\+Value}}()~PORTBbits.\+RB4
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a49438d3e2831d10098d25f917e3afc3d}{RB4\+\_\+\+Set\+Digital\+Input}}()~do \{ TRISBbits.\+TRISB4 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a40fd8a814959ae0f0723367787f26acc}{RB4\+\_\+\+Set\+Digital\+Output}}()~do \{ TRISBbits.\+TRISB4 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_af3bd1d961ac1782943069112296856f1}{RB4\+\_\+\+Set\+Pullup}}()~do \{ WPUBbits.\+WPUB4 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_af18bb3360c8e4254a2deafdc87dd2c4f}{RB4\+\_\+\+Reset\+Pullup}}()~do \{ WPUBbits.\+WPUB4 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_aef3010aaea8abab0991beff6b1990696}{RB4\+\_\+\+Set\+Analog\+Mode}}()~do \{ ANSELBbits.\+ANSB4 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a3407250c44feb75f4ca67b9e09f14cdf}{RB4\+\_\+\+Set\+Digital\+Mode}}()~do \{ ANSELBbits.\+ANSB4 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_aa2975aeb14fab20a30f2087fa0f2f7fb}{RB5\+\_\+\+Set\+High}}()~do \{ LATBbits.\+LATB5 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_ae4b96148901dae6d17cf5dc06fbfaf53}{RB5\+\_\+\+Set\+Low}}()~do \{ LATBbits.\+LATB5 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a747a758fa0aa57aaf78fcc89d9a3a83b}{RB5\+\_\+\+Toggle}}()~do \{ LATBbits.\+LATB5 = \texorpdfstring{$\sim$}{\string~}LATBbits.\+LATB5; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a2c8e222a7d773d84e430eff06e07d2b1}{RB5\+\_\+\+Get\+Value}}()~PORTBbits.\+RB5
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a3f7ab585d9f8738794dce31221979d8d}{RB5\+\_\+\+Set\+Digital\+Input}}()~do \{ TRISBbits.\+TRISB5 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_ae50f463f927b9d4cfb7ab52c44399c80}{RB5\+\_\+\+Set\+Digital\+Output}}()~do \{ TRISBbits.\+TRISB5 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_aab150171294fff1bb960fb447a40d2d4}{RB5\+\_\+\+Set\+Pullup}}()~do \{ WPUBbits.\+WPUB5 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a13ff39f6eb018c18b0a2d4fa03e563b7}{RB5\+\_\+\+Reset\+Pullup}}()~do \{ WPUBbits.\+WPUB5 = 0; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a33aa0c039bf7b72b4593e467e92f757f}{RB5\+\_\+\+Set\+Analog\+Mode}}()~do \{ ANSELBbits.\+ANSB5 = 1; \} while(0)
+\item 
+\#define \mbox{\hyperlink{pin__manager_8h_a8b92267f563710c3ee7761ddfee39824}{RB5\+\_\+\+Set\+Digital\+Mode}}()~do \{ ANSELBbits.\+ANSB5 = 0; \} while(0)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{pin__manager_8h_a50357774183a136d9490f64ad0d5c6cb}{PIN\+\_\+\+MANAGER\+\_\+\+Initialize}} (void)
+\item 
+void \mbox{\hyperlink{pin__manager_8h_a6ff320d017cf9b99ba9045f24d7ec896}{PIN\+\_\+\+MANAGER\+\_\+\+IOC}} (void)
+\item 
+void \mbox{\hyperlink{pin__manager_8h_af604943b8a79191100d2c31fecadbb76}{IOCBF0\+\_\+\+ISR}} (void)
+\item 
+void \mbox{\hyperlink{pin__manager_8h_a1fa094f74ec24d587df5fd9e546e55a2}{IOCBF0\+\_\+\+Set\+Interrupt\+Handler}} (void(\texorpdfstring{$\ast$}{*}Interrupt\+Handler)(void))
+\item 
+void \mbox{\hyperlink{pin__manager_8h_a7785df331b1ef41d8cb46f09192cff38}{IOCBF0\+\_\+\+Default\+Interrupt\+Handler}} (void)
+\item 
+void \mbox{\hyperlink{pin__manager_8h_a2d089cba024a3068b33fcaadeb42df12}{IOCBF3\+\_\+\+ISR}} (void)
+\item 
+void \mbox{\hyperlink{pin__manager_8h_abc46d8993ed4544cd83fc6ccb8f68d67}{IOCBF3\+\_\+\+Set\+Interrupt\+Handler}} (void(\texorpdfstring{$\ast$}{*}Interrupt\+Handler)(void))
+\item 
+void \mbox{\hyperlink{pin__manager_8h_a1a8f2c2e2614db62356a2266be7d69a7}{IOCBF3\+\_\+\+Default\+Interrupt\+Handler}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{pin__manager_8h_a92d7bae0fe36ddceb78cb19f7ccc783e}{IOCBF0\+\_\+\+Interrupt\+Handler}} )(void)
+\item 
+void(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{pin__manager_8h_a4ca917d8a807b2ee336126626618cac4}{IOCBF3\+\_\+\+Interrupt\+Handler}} )(void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{pin__manager_8h_ad42aa2404559d4a465d5d45e857f2881}\label{pin__manager_8h_ad42aa2404559d4a465d5d45e857f2881} 
+\index{pin\_manager.h@{pin\_manager.h}!ANALOG@{ANALOG}}
+\index{ANALOG@{ANALOG}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{ANALOG}{ANALOG}}
+{\footnotesize\ttfamily \#define ANALOG~1}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00062}{62}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_ab8393812bc2fbd749ca3e34026d3f599}\label{pin__manager_8h_ab8393812bc2fbd749ca3e34026d3f599} 
+\index{pin\_manager.h@{pin\_manager.h}!CS\_ANS@{CS\_ANS}}
+\index{CS\_ANS@{CS\_ANS}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{CS\_ANS}{CS\_ANS}}
+{\footnotesize\ttfamily \#define CS\+\_\+\+ANS~ANSELBbits.\+ANSB1}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00168}{168}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a3bce37a82e48fd2ff7c25d3b4fab0b15}\label{pin__manager_8h_a3bce37a82e48fd2ff7c25d3b4fab0b15} 
+\index{pin\_manager.h@{pin\_manager.h}!CS\_GetValue@{CS\_GetValue}}
+\index{CS\_GetValue@{CS\_GetValue}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{CS\_GetValue}{CS\_GetValue}}
+{\footnotesize\ttfamily \#define CS\+\_\+\+Get\+Value(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~PORTBbits.\+RB1}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00172}{172}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a45006f011867e07d23e62b0ab93aa8f1}\label{pin__manager_8h_a45006f011867e07d23e62b0ab93aa8f1} 
+\index{pin\_manager.h@{pin\_manager.h}!CS\_LAT@{CS\_LAT}}
+\index{CS\_LAT@{CS\_LAT}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{CS\_LAT}{CS\_LAT}}
+{\footnotesize\ttfamily \#define CS\+\_\+\+LAT~LATBbits.\+LATB1}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00165}{165}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_ab313428e4d073b4508a15ca9d593733e}\label{pin__manager_8h_ab313428e4d073b4508a15ca9d593733e} 
+\index{pin\_manager.h@{pin\_manager.h}!CS\_PORT@{CS\_PORT}}
+\index{CS\_PORT@{CS\_PORT}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{CS\_PORT}{CS\_PORT}}
+{\footnotesize\ttfamily \#define CS\+\_\+\+PORT~PORTBbits.\+RB1}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00166}{166}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a88d5abfad6186f4b8d5ddef3ca3f7f8c}\label{pin__manager_8h_a88d5abfad6186f4b8d5ddef3ca3f7f8c} 
+\index{pin\_manager.h@{pin\_manager.h}!CS\_ResetPullup@{CS\_ResetPullup}}
+\index{CS\_ResetPullup@{CS\_ResetPullup}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{CS\_ResetPullup}{CS\_ResetPullup}}
+{\footnotesize\ttfamily \#define CS\+\_\+\+Reset\+Pullup(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ WPUBbits.\+WPUB1 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00176}{176}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_ad4e6b6c7fb3feb0d9e29e022d7e6fde7}\label{pin__manager_8h_ad4e6b6c7fb3feb0d9e29e022d7e6fde7} 
+\index{pin\_manager.h@{pin\_manager.h}!CS\_SetAnalogMode@{CS\_SetAnalogMode}}
+\index{CS\_SetAnalogMode@{CS\_SetAnalogMode}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{CS\_SetAnalogMode}{CS\_SetAnalogMode}}
+{\footnotesize\ttfamily \#define CS\+\_\+\+Set\+Analog\+Mode(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ ANSELBbits.\+ANSB1 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00177}{177}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a2347a09a4b8685d69d87e49febec5846}\label{pin__manager_8h_a2347a09a4b8685d69d87e49febec5846} 
+\index{pin\_manager.h@{pin\_manager.h}!CS\_SetDigitalInput@{CS\_SetDigitalInput}}
+\index{CS\_SetDigitalInput@{CS\_SetDigitalInput}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{CS\_SetDigitalInput}{CS\_SetDigitalInput}}
+{\footnotesize\ttfamily \#define CS\+\_\+\+Set\+Digital\+Input(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ TRISBbits.\+TRISB1 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00173}{173}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a6a797ae4794fb2a462fe6881167e9530}\label{pin__manager_8h_a6a797ae4794fb2a462fe6881167e9530} 
+\index{pin\_manager.h@{pin\_manager.h}!CS\_SetDigitalMode@{CS\_SetDigitalMode}}
+\index{CS\_SetDigitalMode@{CS\_SetDigitalMode}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{CS\_SetDigitalMode}{CS\_SetDigitalMode}}
+{\footnotesize\ttfamily \#define CS\+\_\+\+Set\+Digital\+Mode(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ ANSELBbits.\+ANSB1 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00178}{178}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_af2af241662c1159905a23968d32d20a3}\label{pin__manager_8h_af2af241662c1159905a23968d32d20a3} 
+\index{pin\_manager.h@{pin\_manager.h}!CS\_SetDigitalOutput@{CS\_SetDigitalOutput}}
+\index{CS\_SetDigitalOutput@{CS\_SetDigitalOutput}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{CS\_SetDigitalOutput}{CS\_SetDigitalOutput}}
+{\footnotesize\ttfamily \#define CS\+\_\+\+Set\+Digital\+Output(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ TRISBbits.\+TRISB1 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00174}{174}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a49fa0b17c14564f1a6a6c3fe2787f1f0}\label{pin__manager_8h_a49fa0b17c14564f1a6a6c3fe2787f1f0} 
+\index{pin\_manager.h@{pin\_manager.h}!CS\_SetHigh@{CS\_SetHigh}}
+\index{CS\_SetHigh@{CS\_SetHigh}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{CS\_SetHigh}{CS\_SetHigh}}
+{\footnotesize\ttfamily \#define CS\+\_\+\+Set\+High(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATBbits.\+LATB1 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00169}{169}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a1dfb04be0d22ef09b34273206795571a}\label{pin__manager_8h_a1dfb04be0d22ef09b34273206795571a} 
+\index{pin\_manager.h@{pin\_manager.h}!CS\_SetLow@{CS\_SetLow}}
+\index{CS\_SetLow@{CS\_SetLow}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{CS\_SetLow}{CS\_SetLow}}
+{\footnotesize\ttfamily \#define CS\+\_\+\+Set\+Low(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATBbits.\+LATB1 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00170}{170}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_ae3fa9f023cebb44a0a103fe2a9afdbc8}\label{pin__manager_8h_ae3fa9f023cebb44a0a103fe2a9afdbc8} 
+\index{pin\_manager.h@{pin\_manager.h}!CS\_SetPullup@{CS\_SetPullup}}
+\index{CS\_SetPullup@{CS\_SetPullup}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{CS\_SetPullup}{CS\_SetPullup}}
+{\footnotesize\ttfamily \#define CS\+\_\+\+Set\+Pullup(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ WPUBbits.\+WPUB1 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00175}{175}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_aacd4e615f899a61ff378f90eee0f4667}\label{pin__manager_8h_aacd4e615f899a61ff378f90eee0f4667} 
+\index{pin\_manager.h@{pin\_manager.h}!CS\_Toggle@{CS\_Toggle}}
+\index{CS\_Toggle@{CS\_Toggle}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{CS\_Toggle}{CS\_Toggle}}
+{\footnotesize\ttfamily \#define CS\+\_\+\+Toggle(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATBbits.\+LATB1 = \texorpdfstring{$\sim$}{\string~}LATBbits.\+LATB1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00171}{171}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a73e315c1fdfdb88012c160e50e393ec1}\label{pin__manager_8h_a73e315c1fdfdb88012c160e50e393ec1} 
+\index{pin\_manager.h@{pin\_manager.h}!CS\_TRIS@{CS\_TRIS}}
+\index{CS\_TRIS@{CS\_TRIS}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{CS\_TRIS}{CS\_TRIS}}
+{\footnotesize\ttfamily \#define CS\+\_\+\+TRIS~TRISBbits.\+TRISB1}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00164}{164}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a7724974aab82d5b7b9dfa9945cc33a85}\label{pin__manager_8h_a7724974aab82d5b7b9dfa9945cc33a85} 
+\index{pin\_manager.h@{pin\_manager.h}!CS\_WPU@{CS\_WPU}}
+\index{CS\_WPU@{CS\_WPU}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{CS\_WPU}{CS\_WPU}}
+{\footnotesize\ttfamily \#define CS\+\_\+\+WPU~WPUBbits.\+WPUB1}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00167}{167}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a5e3f0ed2799c1275891b863e4b8c89eb}\label{pin__manager_8h_a5e3f0ed2799c1275891b863e4b8c89eb} 
+\index{pin\_manager.h@{pin\_manager.h}!DIGITAL@{DIGITAL}}
+\index{DIGITAL@{DIGITAL}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{DIGITAL}{DIGITAL}}
+{\footnotesize\ttfamily \#define DIGITAL~0}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00063}{63}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a009be673dc12060c685cc3167a89cfa2}\label{pin__manager_8h_a009be673dc12060c685cc3167a89cfa2} 
+\index{pin\_manager.h@{pin\_manager.h}!Dir\_GetValue@{Dir\_GetValue}}
+\index{Dir\_GetValue@{Dir\_GetValue}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Dir\_GetValue}{Dir\_GetValue}}
+{\footnotesize\ttfamily \#define Dir\+\_\+\+Get\+Value(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~PORTAbits.\+RA7}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00145}{145}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a0fcff045da02695fa3e788cf958a24d3}\label{pin__manager_8h_a0fcff045da02695fa3e788cf958a24d3} 
+\index{pin\_manager.h@{pin\_manager.h}!Dir\_LAT@{Dir\_LAT}}
+\index{Dir\_LAT@{Dir\_LAT}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Dir\_LAT}{Dir\_LAT}}
+{\footnotesize\ttfamily \#define Dir\+\_\+\+LAT~LATAbits.\+LATA7}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00140}{140}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a8d2bb944838974d5f08390414dd14980}\label{pin__manager_8h_a8d2bb944838974d5f08390414dd14980} 
+\index{pin\_manager.h@{pin\_manager.h}!Dir\_PORT@{Dir\_PORT}}
+\index{Dir\_PORT@{Dir\_PORT}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Dir\_PORT}{Dir\_PORT}}
+{\footnotesize\ttfamily \#define Dir\+\_\+\+PORT~PORTAbits.\+RA7}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00141}{141}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a01b0a30240268027f1e9fd0ea6be496a}\label{pin__manager_8h_a01b0a30240268027f1e9fd0ea6be496a} 
+\index{pin\_manager.h@{pin\_manager.h}!Dir\_SetDigitalInput@{Dir\_SetDigitalInput}}
+\index{Dir\_SetDigitalInput@{Dir\_SetDigitalInput}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Dir\_SetDigitalInput}{Dir\_SetDigitalInput}}
+{\footnotesize\ttfamily \#define Dir\+\_\+\+Set\+Digital\+Input(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ TRISAbits.\+TRISA7 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00146}{146}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_acc9aa96c12a1d281e4489f690df51100}\label{pin__manager_8h_acc9aa96c12a1d281e4489f690df51100} 
+\index{pin\_manager.h@{pin\_manager.h}!Dir\_SetDigitalOutput@{Dir\_SetDigitalOutput}}
+\index{Dir\_SetDigitalOutput@{Dir\_SetDigitalOutput}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Dir\_SetDigitalOutput}{Dir\_SetDigitalOutput}}
+{\footnotesize\ttfamily \#define Dir\+\_\+\+Set\+Digital\+Output(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ TRISAbits.\+TRISA7 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00147}{147}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a6895e6e8e20c9be514be8675fb4ecfc5}\label{pin__manager_8h_a6895e6e8e20c9be514be8675fb4ecfc5} 
+\index{pin\_manager.h@{pin\_manager.h}!Dir\_SetHigh@{Dir\_SetHigh}}
+\index{Dir\_SetHigh@{Dir\_SetHigh}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Dir\_SetHigh}{Dir\_SetHigh}}
+{\footnotesize\ttfamily \#define Dir\+\_\+\+Set\+High(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATAbits.\+LATA7 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00142}{142}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a3fe37e1e183cb3edc7f2c6bc2e253bc6}\label{pin__manager_8h_a3fe37e1e183cb3edc7f2c6bc2e253bc6} 
+\index{pin\_manager.h@{pin\_manager.h}!Dir\_SetLow@{Dir\_SetLow}}
+\index{Dir\_SetLow@{Dir\_SetLow}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Dir\_SetLow}{Dir\_SetLow}}
+{\footnotesize\ttfamily \#define Dir\+\_\+\+Set\+Low(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATAbits.\+LATA7 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00143}{143}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_ac38577671955271310d73e843574b40d}\label{pin__manager_8h_ac38577671955271310d73e843574b40d} 
+\index{pin\_manager.h@{pin\_manager.h}!Dir\_Toggle@{Dir\_Toggle}}
+\index{Dir\_Toggle@{Dir\_Toggle}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Dir\_Toggle}{Dir\_Toggle}}
+{\footnotesize\ttfamily \#define Dir\+\_\+\+Toggle(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATAbits.\+LATA7 = \texorpdfstring{$\sim$}{\string~}LATAbits.\+LATA7; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00144}{144}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a493d2ec95870225e43e65adfa8585e1e}\label{pin__manager_8h_a493d2ec95870225e43e65adfa8585e1e} 
+\index{pin\_manager.h@{pin\_manager.h}!Dir\_TRIS@{Dir\_TRIS}}
+\index{Dir\_TRIS@{Dir\_TRIS}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Dir\_TRIS}{Dir\_TRIS}}
+{\footnotesize\ttfamily \#define Dir\+\_\+\+TRIS~TRISAbits.\+TRISA7}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00139}{139}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_afdaa8cabff564f070bb459050039fe82}\label{pin__manager_8h_afdaa8cabff564f070bb459050039fe82} 
+\index{pin\_manager.h@{pin\_manager.h}!Enc\_ANS@{Enc\_ANS}}
+\index{Enc\_ANS@{Enc\_ANS}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Enc\_ANS}{Enc\_ANS}}
+{\footnotesize\ttfamily \#define Enc\+\_\+\+ANS~ANSELAbits.\+ANSA4}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00120}{120}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a980ddcd952f50b2b17fbbbe2244fb4f6}\label{pin__manager_8h_a980ddcd952f50b2b17fbbbe2244fb4f6} 
+\index{pin\_manager.h@{pin\_manager.h}!Enc\_GetValue@{Enc\_GetValue}}
+\index{Enc\_GetValue@{Enc\_GetValue}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Enc\_GetValue}{Enc\_GetValue}}
+{\footnotesize\ttfamily \#define Enc\+\_\+\+Get\+Value(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~PORTAbits.\+RA4}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00124}{124}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_ac9ce2de4b24e4d2d356cf0fce2c8b232}\label{pin__manager_8h_ac9ce2de4b24e4d2d356cf0fce2c8b232} 
+\index{pin\_manager.h@{pin\_manager.h}!Enc\_LAT@{Enc\_LAT}}
+\index{Enc\_LAT@{Enc\_LAT}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Enc\_LAT}{Enc\_LAT}}
+{\footnotesize\ttfamily \#define Enc\+\_\+\+LAT~LATAbits.\+LATA4}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00118}{118}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a69d7b5423d907fb2cabf2c4f3af1162b}\label{pin__manager_8h_a69d7b5423d907fb2cabf2c4f3af1162b} 
+\index{pin\_manager.h@{pin\_manager.h}!Enc\_PORT@{Enc\_PORT}}
+\index{Enc\_PORT@{Enc\_PORT}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Enc\_PORT}{Enc\_PORT}}
+{\footnotesize\ttfamily \#define Enc\+\_\+\+PORT~PORTAbits.\+RA4}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00119}{119}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a1c71960f2980ed00afd113e521687f6a}\label{pin__manager_8h_a1c71960f2980ed00afd113e521687f6a} 
+\index{pin\_manager.h@{pin\_manager.h}!Enc\_SetAnalogMode@{Enc\_SetAnalogMode}}
+\index{Enc\_SetAnalogMode@{Enc\_SetAnalogMode}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Enc\_SetAnalogMode}{Enc\_SetAnalogMode}}
+{\footnotesize\ttfamily \#define Enc\+\_\+\+Set\+Analog\+Mode(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ ANSELAbits.\+ANSA4 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00127}{127}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a7513235186b19d88500282a4851c7b54}\label{pin__manager_8h_a7513235186b19d88500282a4851c7b54} 
+\index{pin\_manager.h@{pin\_manager.h}!Enc\_SetDigitalInput@{Enc\_SetDigitalInput}}
+\index{Enc\_SetDigitalInput@{Enc\_SetDigitalInput}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Enc\_SetDigitalInput}{Enc\_SetDigitalInput}}
+{\footnotesize\ttfamily \#define Enc\+\_\+\+Set\+Digital\+Input(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ TRISAbits.\+TRISA4 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00125}{125}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_af1c6c811080924cc4adc7b8d4ff9271e}\label{pin__manager_8h_af1c6c811080924cc4adc7b8d4ff9271e} 
+\index{pin\_manager.h@{pin\_manager.h}!Enc\_SetDigitalMode@{Enc\_SetDigitalMode}}
+\index{Enc\_SetDigitalMode@{Enc\_SetDigitalMode}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Enc\_SetDigitalMode}{Enc\_SetDigitalMode}}
+{\footnotesize\ttfamily \#define Enc\+\_\+\+Set\+Digital\+Mode(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ ANSELAbits.\+ANSA4 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00128}{128}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_ae6ffd60fdbd7b5c8b568d520fa16d509}\label{pin__manager_8h_ae6ffd60fdbd7b5c8b568d520fa16d509} 
+\index{pin\_manager.h@{pin\_manager.h}!Enc\_SetDigitalOutput@{Enc\_SetDigitalOutput}}
+\index{Enc\_SetDigitalOutput@{Enc\_SetDigitalOutput}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Enc\_SetDigitalOutput}{Enc\_SetDigitalOutput}}
+{\footnotesize\ttfamily \#define Enc\+\_\+\+Set\+Digital\+Output(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ TRISAbits.\+TRISA4 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00126}{126}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_acb642634fffb944df44282640ec1185a}\label{pin__manager_8h_acb642634fffb944df44282640ec1185a} 
+\index{pin\_manager.h@{pin\_manager.h}!Enc\_SetHigh@{Enc\_SetHigh}}
+\index{Enc\_SetHigh@{Enc\_SetHigh}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Enc\_SetHigh}{Enc\_SetHigh}}
+{\footnotesize\ttfamily \#define Enc\+\_\+\+Set\+High(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATAbits.\+LATA4 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00121}{121}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a7af3c9acaa03254dea814ed7867c8388}\label{pin__manager_8h_a7af3c9acaa03254dea814ed7867c8388} 
+\index{pin\_manager.h@{pin\_manager.h}!Enc\_SetLow@{Enc\_SetLow}}
+\index{Enc\_SetLow@{Enc\_SetLow}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Enc\_SetLow}{Enc\_SetLow}}
+{\footnotesize\ttfamily \#define Enc\+\_\+\+Set\+Low(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATAbits.\+LATA4 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00122}{122}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a8c3e1c2afa1614d84fa37efd8ee4e37d}\label{pin__manager_8h_a8c3e1c2afa1614d84fa37efd8ee4e37d} 
+\index{pin\_manager.h@{pin\_manager.h}!Enc\_Toggle@{Enc\_Toggle}}
+\index{Enc\_Toggle@{Enc\_Toggle}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Enc\_Toggle}{Enc\_Toggle}}
+{\footnotesize\ttfamily \#define Enc\+\_\+\+Toggle(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATAbits.\+LATA4 = \texorpdfstring{$\sim$}{\string~}LATAbits.\+LATA4; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00123}{123}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a8bf9dda789819626387d4fa0c7b57a61}\label{pin__manager_8h_a8bf9dda789819626387d4fa0c7b57a61} 
+\index{pin\_manager.h@{pin\_manager.h}!Enc\_TRIS@{Enc\_TRIS}}
+\index{Enc\_TRIS@{Enc\_TRIS}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Enc\_TRIS}{Enc\_TRIS}}
+{\footnotesize\ttfamily \#define Enc\+\_\+\+TRIS~TRISAbits.\+TRISA4}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00117}{117}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2}\label{pin__manager_8h_a5bb885982ff66a2e0a0a45a8ee9c35e2} 
+\index{pin\_manager.h@{pin\_manager.h}!HIGH@{HIGH}}
+\index{HIGH@{HIGH}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{HIGH}{HIGH}}
+{\footnotesize\ttfamily \#define HIGH~1}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00059}{59}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a1bb283bd7893b9855e2f23013891fc82}\label{pin__manager_8h_a1bb283bd7893b9855e2f23013891fc82} 
+\index{pin\_manager.h@{pin\_manager.h}!INPUT@{INPUT}}
+\index{INPUT@{INPUT}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{INPUT}{INPUT}}
+{\footnotesize\ttfamily \#define INPUT~1}
+
+@\+Generated Pin Manager Header File
+
+@\+Company\+: Microchip Technology Inc.
+
+@\+File Name\+: \doxylink{pin__manager_8h}{pin\+\_\+manager.\+h}
+
+@\+Summary\+: This is the Pin Manager file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+
+@\+Description This header file provides APIs for driver for . Generation Information \+: Product Revision \+: PIC10 / PIC12 / PIC16 / PIC18 MCUs -\/ 1.\+81.\+8 Device \+: PIC16\+F1827 Driver Version \+: 2.\+11 The generated drivers are tested against the following\+: Compiler \+: XC8 2.\+36 and above MPLAB \+: MPLAB X 6.\+00 ~\newline
+ Section\+: Included Files 
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00056}{56}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_ab811d8c6ff3a505312d3276590444289}\label{pin__manager_8h_ab811d8c6ff3a505312d3276590444289} 
+\index{pin\_manager.h@{pin\_manager.h}!LOW@{LOW}}
+\index{LOW@{LOW}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{LOW}{LOW}}
+{\footnotesize\ttfamily \#define LOW~0}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00060}{60}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a61a3c9a18380aafb6e430e79bf596557}\label{pin__manager_8h_a61a3c9a18380aafb6e430e79bf596557} 
+\index{pin\_manager.h@{pin\_manager.h}!OUTPUT@{OUTPUT}}
+\index{OUTPUT@{OUTPUT}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{OUTPUT}{OUTPUT}}
+{\footnotesize\ttfamily \#define OUTPUT~0}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00057}{57}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_aa2df433ea6e6c6cd49babd945e27315e}\label{pin__manager_8h_aa2df433ea6e6c6cd49babd945e27315e} 
+\index{pin\_manager.h@{pin\_manager.h}!PULL\_UP\_DISABLED@{PULL\_UP\_DISABLED}}
+\index{PULL\_UP\_DISABLED@{PULL\_UP\_DISABLED}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{PULL\_UP\_DISABLED}{PULL\_UP\_DISABLED}}
+{\footnotesize\ttfamily \#define PULL\+\_\+\+UP\+\_\+\+DISABLED~0}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00066}{66}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a2556d56311dd94f5834ef8fb4e6d875d}\label{pin__manager_8h_a2556d56311dd94f5834ef8fb4e6d875d} 
+\index{pin\_manager.h@{pin\_manager.h}!PULL\_UP\_ENABLED@{PULL\_UP\_ENABLED}}
+\index{PULL\_UP\_ENABLED@{PULL\_UP\_ENABLED}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{PULL\_UP\_ENABLED}{PULL\_UP\_ENABLED}}
+{\footnotesize\ttfamily \#define PULL\+\_\+\+UP\+\_\+\+ENABLED~1}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00065}{65}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_af6fe967ee2172a1f934760e266bb6bcb}\label{pin__manager_8h_af6fe967ee2172a1f934760e266bb6bcb} 
+\index{pin\_manager.h@{pin\_manager.h}!RA1\_GetValue@{RA1\_GetValue}}
+\index{RA1\_GetValue@{RA1\_GetValue}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RA1\_GetValue}{RA1\_GetValue}}
+{\footnotesize\ttfamily \#define RA1\+\_\+\+Get\+Value(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~PORTAbits.\+RA1}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00086}{86}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_aba8f93ab7f4ed4cd1282625f27d4bb9d}\label{pin__manager_8h_aba8f93ab7f4ed4cd1282625f27d4bb9d} 
+\index{pin\_manager.h@{pin\_manager.h}!RA1\_SetAnalogMode@{RA1\_SetAnalogMode}}
+\index{RA1\_SetAnalogMode@{RA1\_SetAnalogMode}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RA1\_SetAnalogMode}{RA1\_SetAnalogMode}}
+{\footnotesize\ttfamily \#define RA1\+\_\+\+Set\+Analog\+Mode(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ ANSELAbits.\+ANSA1 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00089}{89}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a9e646edb0defd075c77268f116bc9006}\label{pin__manager_8h_a9e646edb0defd075c77268f116bc9006} 
+\index{pin\_manager.h@{pin\_manager.h}!RA1\_SetDigitalInput@{RA1\_SetDigitalInput}}
+\index{RA1\_SetDigitalInput@{RA1\_SetDigitalInput}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RA1\_SetDigitalInput}{RA1\_SetDigitalInput}}
+{\footnotesize\ttfamily \#define RA1\+\_\+\+Set\+Digital\+Input(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ TRISAbits.\+TRISA1 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00087}{87}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a1111cb15563a6e370a8ff9335bcf2513}\label{pin__manager_8h_a1111cb15563a6e370a8ff9335bcf2513} 
+\index{pin\_manager.h@{pin\_manager.h}!RA1\_SetDigitalMode@{RA1\_SetDigitalMode}}
+\index{RA1\_SetDigitalMode@{RA1\_SetDigitalMode}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RA1\_SetDigitalMode}{RA1\_SetDigitalMode}}
+{\footnotesize\ttfamily \#define RA1\+\_\+\+Set\+Digital\+Mode(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ ANSELAbits.\+ANSA1 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00090}{90}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a16d1a277ee5ada85a5207047138845b8}\label{pin__manager_8h_a16d1a277ee5ada85a5207047138845b8} 
+\index{pin\_manager.h@{pin\_manager.h}!RA1\_SetDigitalOutput@{RA1\_SetDigitalOutput}}
+\index{RA1\_SetDigitalOutput@{RA1\_SetDigitalOutput}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RA1\_SetDigitalOutput}{RA1\_SetDigitalOutput}}
+{\footnotesize\ttfamily \#define RA1\+\_\+\+Set\+Digital\+Output(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ TRISAbits.\+TRISA1 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00088}{88}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a982072d3bb579d62d6ce2c41a29b45f2}\label{pin__manager_8h_a982072d3bb579d62d6ce2c41a29b45f2} 
+\index{pin\_manager.h@{pin\_manager.h}!RA1\_SetHigh@{RA1\_SetHigh}}
+\index{RA1\_SetHigh@{RA1\_SetHigh}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RA1\_SetHigh}{RA1\_SetHigh}}
+{\footnotesize\ttfamily \#define RA1\+\_\+\+Set\+High(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATAbits.\+LATA1 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00083}{83}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a7c51efcd179afb8c03660e52de473d57}\label{pin__manager_8h_a7c51efcd179afb8c03660e52de473d57} 
+\index{pin\_manager.h@{pin\_manager.h}!RA1\_SetLow@{RA1\_SetLow}}
+\index{RA1\_SetLow@{RA1\_SetLow}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RA1\_SetLow}{RA1\_SetLow}}
+{\footnotesize\ttfamily \#define RA1\+\_\+\+Set\+Low(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATAbits.\+LATA1 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00084}{84}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a137c22c91ee68281bb130a4056c62afc}\label{pin__manager_8h_a137c22c91ee68281bb130a4056c62afc} 
+\index{pin\_manager.h@{pin\_manager.h}!RA1\_Toggle@{RA1\_Toggle}}
+\index{RA1\_Toggle@{RA1\_Toggle}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RA1\_Toggle}{RA1\_Toggle}}
+{\footnotesize\ttfamily \#define RA1\+\_\+\+Toggle(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATAbits.\+LATA1 = \texorpdfstring{$\sim$}{\string~}LATAbits.\+LATA1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00085}{85}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a313d51d35181ffe2c2d9e0c65997bdb5}\label{pin__manager_8h_a313d51d35181ffe2c2d9e0c65997bdb5} 
+\index{pin\_manager.h@{pin\_manager.h}!RA3\_GetValue@{RA3\_GetValue}}
+\index{RA3\_GetValue@{RA3\_GetValue}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RA3\_GetValue}{RA3\_GetValue}}
+{\footnotesize\ttfamily \#define RA3\+\_\+\+Get\+Value(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~PORTAbits.\+RA3}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00110}{110}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a7ac22b4af8840c23c5cf4bab1d6b805f}\label{pin__manager_8h_a7ac22b4af8840c23c5cf4bab1d6b805f} 
+\index{pin\_manager.h@{pin\_manager.h}!RA3\_SetAnalogMode@{RA3\_SetAnalogMode}}
+\index{RA3\_SetAnalogMode@{RA3\_SetAnalogMode}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RA3\_SetAnalogMode}{RA3\_SetAnalogMode}}
+{\footnotesize\ttfamily \#define RA3\+\_\+\+Set\+Analog\+Mode(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ ANSELAbits.\+ANSA3 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00113}{113}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_ae6892fefb7377ede47e8665137c88f82}\label{pin__manager_8h_ae6892fefb7377ede47e8665137c88f82} 
+\index{pin\_manager.h@{pin\_manager.h}!RA3\_SetDigitalInput@{RA3\_SetDigitalInput}}
+\index{RA3\_SetDigitalInput@{RA3\_SetDigitalInput}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RA3\_SetDigitalInput}{RA3\_SetDigitalInput}}
+{\footnotesize\ttfamily \#define RA3\+\_\+\+Set\+Digital\+Input(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ TRISAbits.\+TRISA3 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00111}{111}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a757e76443e7715b33c35860440f110f2}\label{pin__manager_8h_a757e76443e7715b33c35860440f110f2} 
+\index{pin\_manager.h@{pin\_manager.h}!RA3\_SetDigitalMode@{RA3\_SetDigitalMode}}
+\index{RA3\_SetDigitalMode@{RA3\_SetDigitalMode}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RA3\_SetDigitalMode}{RA3\_SetDigitalMode}}
+{\footnotesize\ttfamily \#define RA3\+\_\+\+Set\+Digital\+Mode(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ ANSELAbits.\+ANSA3 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00114}{114}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a151de270d9db4ce0abeaa0aababf5450}\label{pin__manager_8h_a151de270d9db4ce0abeaa0aababf5450} 
+\index{pin\_manager.h@{pin\_manager.h}!RA3\_SetDigitalOutput@{RA3\_SetDigitalOutput}}
+\index{RA3\_SetDigitalOutput@{RA3\_SetDigitalOutput}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RA3\_SetDigitalOutput}{RA3\_SetDigitalOutput}}
+{\footnotesize\ttfamily \#define RA3\+\_\+\+Set\+Digital\+Output(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ TRISAbits.\+TRISA3 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00112}{112}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a3e9d0fd2faa86fc6e3ad055daea844ba}\label{pin__manager_8h_a3e9d0fd2faa86fc6e3ad055daea844ba} 
+\index{pin\_manager.h@{pin\_manager.h}!RA3\_SetHigh@{RA3\_SetHigh}}
+\index{RA3\_SetHigh@{RA3\_SetHigh}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RA3\_SetHigh}{RA3\_SetHigh}}
+{\footnotesize\ttfamily \#define RA3\+\_\+\+Set\+High(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATAbits.\+LATA3 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00107}{107}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_ad55dcbeb94367223be4a51bf16475241}\label{pin__manager_8h_ad55dcbeb94367223be4a51bf16475241} 
+\index{pin\_manager.h@{pin\_manager.h}!RA3\_SetLow@{RA3\_SetLow}}
+\index{RA3\_SetLow@{RA3\_SetLow}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RA3\_SetLow}{RA3\_SetLow}}
+{\footnotesize\ttfamily \#define RA3\+\_\+\+Set\+Low(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATAbits.\+LATA3 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00108}{108}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_ae79f925e61ecf7dc14f4de17e408a9a7}\label{pin__manager_8h_ae79f925e61ecf7dc14f4de17e408a9a7} 
+\index{pin\_manager.h@{pin\_manager.h}!RA3\_Toggle@{RA3\_Toggle}}
+\index{RA3\_Toggle@{RA3\_Toggle}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RA3\_Toggle}{RA3\_Toggle}}
+{\footnotesize\ttfamily \#define RA3\+\_\+\+Toggle(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATAbits.\+LATA3 = \texorpdfstring{$\sim$}{\string~}LATAbits.\+LATA3; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00109}{109}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_ad3c7b4f302ffa56526e16a522fb5bb86}\label{pin__manager_8h_ad3c7b4f302ffa56526e16a522fb5bb86} 
+\index{pin\_manager.h@{pin\_manager.h}!RA6\_GetValue@{RA6\_GetValue}}
+\index{RA6\_GetValue@{RA6\_GetValue}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RA6\_GetValue}{RA6\_GetValue}}
+{\footnotesize\ttfamily \#define RA6\+\_\+\+Get\+Value(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~PORTAbits.\+RA6}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00134}{134}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a9ca03bb6e1dd21c0cb1f752be35d7a2d}\label{pin__manager_8h_a9ca03bb6e1dd21c0cb1f752be35d7a2d} 
+\index{pin\_manager.h@{pin\_manager.h}!RA6\_SetDigitalInput@{RA6\_SetDigitalInput}}
+\index{RA6\_SetDigitalInput@{RA6\_SetDigitalInput}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RA6\_SetDigitalInput}{RA6\_SetDigitalInput}}
+{\footnotesize\ttfamily \#define RA6\+\_\+\+Set\+Digital\+Input(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ TRISAbits.\+TRISA6 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00135}{135}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a90737425e88869e2d4315d81b4f79b78}\label{pin__manager_8h_a90737425e88869e2d4315d81b4f79b78} 
+\index{pin\_manager.h@{pin\_manager.h}!RA6\_SetDigitalOutput@{RA6\_SetDigitalOutput}}
+\index{RA6\_SetDigitalOutput@{RA6\_SetDigitalOutput}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RA6\_SetDigitalOutput}{RA6\_SetDigitalOutput}}
+{\footnotesize\ttfamily \#define RA6\+\_\+\+Set\+Digital\+Output(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ TRISAbits.\+TRISA6 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00136}{136}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a29505e7aee0520827c356c31ce7e583c}\label{pin__manager_8h_a29505e7aee0520827c356c31ce7e583c} 
+\index{pin\_manager.h@{pin\_manager.h}!RA6\_SetHigh@{RA6\_SetHigh}}
+\index{RA6\_SetHigh@{RA6\_SetHigh}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RA6\_SetHigh}{RA6\_SetHigh}}
+{\footnotesize\ttfamily \#define RA6\+\_\+\+Set\+High(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATAbits.\+LATA6 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00131}{131}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a2fc286fb4aa0102b971572d3b0d963e4}\label{pin__manager_8h_a2fc286fb4aa0102b971572d3b0d963e4} 
+\index{pin\_manager.h@{pin\_manager.h}!RA6\_SetLow@{RA6\_SetLow}}
+\index{RA6\_SetLow@{RA6\_SetLow}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RA6\_SetLow}{RA6\_SetLow}}
+{\footnotesize\ttfamily \#define RA6\+\_\+\+Set\+Low(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATAbits.\+LATA6 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00132}{132}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a97739caf525e1933df0f34f91ddb04d5}\label{pin__manager_8h_a97739caf525e1933df0f34f91ddb04d5} 
+\index{pin\_manager.h@{pin\_manager.h}!RA6\_Toggle@{RA6\_Toggle}}
+\index{RA6\_Toggle@{RA6\_Toggle}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RA6\_Toggle}{RA6\_Toggle}}
+{\footnotesize\ttfamily \#define RA6\+\_\+\+Toggle(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATAbits.\+LATA6 = \texorpdfstring{$\sim$}{\string~}LATAbits.\+LATA6; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00133}{133}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_abab5ae0d4f48a20063b65eca72a3fa15}\label{pin__manager_8h_abab5ae0d4f48a20063b65eca72a3fa15} 
+\index{pin\_manager.h@{pin\_manager.h}!RB2\_GetValue@{RB2\_GetValue}}
+\index{RB2\_GetValue@{RB2\_GetValue}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB2\_GetValue}{RB2\_GetValue}}
+{\footnotesize\ttfamily \#define RB2\+\_\+\+Get\+Value(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~PORTBbits.\+RB2}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00184}{184}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_ae45fc41ac8fbe5674db31b0ccbf78dbd}\label{pin__manager_8h_ae45fc41ac8fbe5674db31b0ccbf78dbd} 
+\index{pin\_manager.h@{pin\_manager.h}!RB2\_ResetPullup@{RB2\_ResetPullup}}
+\index{RB2\_ResetPullup@{RB2\_ResetPullup}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB2\_ResetPullup}{RB2\_ResetPullup}}
+{\footnotesize\ttfamily \#define RB2\+\_\+\+Reset\+Pullup(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ WPUBbits.\+WPUB2 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00188}{188}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a5edc7f9915933c2be5b38079a1b8305e}\label{pin__manager_8h_a5edc7f9915933c2be5b38079a1b8305e} 
+\index{pin\_manager.h@{pin\_manager.h}!RB2\_SetAnalogMode@{RB2\_SetAnalogMode}}
+\index{RB2\_SetAnalogMode@{RB2\_SetAnalogMode}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB2\_SetAnalogMode}{RB2\_SetAnalogMode}}
+{\footnotesize\ttfamily \#define RB2\+\_\+\+Set\+Analog\+Mode(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ ANSELBbits.\+ANSB2 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00189}{189}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_afb237b7eb8b88602680b1d304141d3e5}\label{pin__manager_8h_afb237b7eb8b88602680b1d304141d3e5} 
+\index{pin\_manager.h@{pin\_manager.h}!RB2\_SetDigitalInput@{RB2\_SetDigitalInput}}
+\index{RB2\_SetDigitalInput@{RB2\_SetDigitalInput}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB2\_SetDigitalInput}{RB2\_SetDigitalInput}}
+{\footnotesize\ttfamily \#define RB2\+\_\+\+Set\+Digital\+Input(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ TRISBbits.\+TRISB2 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00185}{185}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_afac0ef5c81268a3608c8cd5e9579da27}\label{pin__manager_8h_afac0ef5c81268a3608c8cd5e9579da27} 
+\index{pin\_manager.h@{pin\_manager.h}!RB2\_SetDigitalMode@{RB2\_SetDigitalMode}}
+\index{RB2\_SetDigitalMode@{RB2\_SetDigitalMode}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB2\_SetDigitalMode}{RB2\_SetDigitalMode}}
+{\footnotesize\ttfamily \#define RB2\+\_\+\+Set\+Digital\+Mode(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ ANSELBbits.\+ANSB2 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00190}{190}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a26b3530e235af2a6beefdd2cd550b85d}\label{pin__manager_8h_a26b3530e235af2a6beefdd2cd550b85d} 
+\index{pin\_manager.h@{pin\_manager.h}!RB2\_SetDigitalOutput@{RB2\_SetDigitalOutput}}
+\index{RB2\_SetDigitalOutput@{RB2\_SetDigitalOutput}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB2\_SetDigitalOutput}{RB2\_SetDigitalOutput}}
+{\footnotesize\ttfamily \#define RB2\+\_\+\+Set\+Digital\+Output(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ TRISBbits.\+TRISB2 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00186}{186}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a507c905ca62759fbf3dd3dd79efcace9}\label{pin__manager_8h_a507c905ca62759fbf3dd3dd79efcace9} 
+\index{pin\_manager.h@{pin\_manager.h}!RB2\_SetHigh@{RB2\_SetHigh}}
+\index{RB2\_SetHigh@{RB2\_SetHigh}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB2\_SetHigh}{RB2\_SetHigh}}
+{\footnotesize\ttfamily \#define RB2\+\_\+\+Set\+High(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATBbits.\+LATB2 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00181}{181}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a8b3cf520c7de9c43630cb0c86097ef8f}\label{pin__manager_8h_a8b3cf520c7de9c43630cb0c86097ef8f} 
+\index{pin\_manager.h@{pin\_manager.h}!RB2\_SetLow@{RB2\_SetLow}}
+\index{RB2\_SetLow@{RB2\_SetLow}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB2\_SetLow}{RB2\_SetLow}}
+{\footnotesize\ttfamily \#define RB2\+\_\+\+Set\+Low(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATBbits.\+LATB2 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00182}{182}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_aeedb9b9bdf2fd62187919c1b3c3b220f}\label{pin__manager_8h_aeedb9b9bdf2fd62187919c1b3c3b220f} 
+\index{pin\_manager.h@{pin\_manager.h}!RB2\_SetPullup@{RB2\_SetPullup}}
+\index{RB2\_SetPullup@{RB2\_SetPullup}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB2\_SetPullup}{RB2\_SetPullup}}
+{\footnotesize\ttfamily \#define RB2\+\_\+\+Set\+Pullup(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ WPUBbits.\+WPUB2 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00187}{187}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a59ddb2d6bbeac0d834c0b1bd489335db}\label{pin__manager_8h_a59ddb2d6bbeac0d834c0b1bd489335db} 
+\index{pin\_manager.h@{pin\_manager.h}!RB2\_Toggle@{RB2\_Toggle}}
+\index{RB2\_Toggle@{RB2\_Toggle}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB2\_Toggle}{RB2\_Toggle}}
+{\footnotesize\ttfamily \#define RB2\+\_\+\+Toggle(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATBbits.\+LATB2 = \texorpdfstring{$\sim$}{\string~}LATBbits.\+LATB2; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00183}{183}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a0bd4888b6b3a43a242cf36a1cf6cfe11}\label{pin__manager_8h_a0bd4888b6b3a43a242cf36a1cf6cfe11} 
+\index{pin\_manager.h@{pin\_manager.h}!RB4\_GetValue@{RB4\_GetValue}}
+\index{RB4\_GetValue@{RB4\_GetValue}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB4\_GetValue}{RB4\_GetValue}}
+{\footnotesize\ttfamily \#define RB4\+\_\+\+Get\+Value(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~PORTBbits.\+RB4}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00213}{213}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_af18bb3360c8e4254a2deafdc87dd2c4f}\label{pin__manager_8h_af18bb3360c8e4254a2deafdc87dd2c4f} 
+\index{pin\_manager.h@{pin\_manager.h}!RB4\_ResetPullup@{RB4\_ResetPullup}}
+\index{RB4\_ResetPullup@{RB4\_ResetPullup}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB4\_ResetPullup}{RB4\_ResetPullup}}
+{\footnotesize\ttfamily \#define RB4\+\_\+\+Reset\+Pullup(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ WPUBbits.\+WPUB4 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00217}{217}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_aef3010aaea8abab0991beff6b1990696}\label{pin__manager_8h_aef3010aaea8abab0991beff6b1990696} 
+\index{pin\_manager.h@{pin\_manager.h}!RB4\_SetAnalogMode@{RB4\_SetAnalogMode}}
+\index{RB4\_SetAnalogMode@{RB4\_SetAnalogMode}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB4\_SetAnalogMode}{RB4\_SetAnalogMode}}
+{\footnotesize\ttfamily \#define RB4\+\_\+\+Set\+Analog\+Mode(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ ANSELBbits.\+ANSB4 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00218}{218}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a49438d3e2831d10098d25f917e3afc3d}\label{pin__manager_8h_a49438d3e2831d10098d25f917e3afc3d} 
+\index{pin\_manager.h@{pin\_manager.h}!RB4\_SetDigitalInput@{RB4\_SetDigitalInput}}
+\index{RB4\_SetDigitalInput@{RB4\_SetDigitalInput}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB4\_SetDigitalInput}{RB4\_SetDigitalInput}}
+{\footnotesize\ttfamily \#define RB4\+\_\+\+Set\+Digital\+Input(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ TRISBbits.\+TRISB4 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00214}{214}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a3407250c44feb75f4ca67b9e09f14cdf}\label{pin__manager_8h_a3407250c44feb75f4ca67b9e09f14cdf} 
+\index{pin\_manager.h@{pin\_manager.h}!RB4\_SetDigitalMode@{RB4\_SetDigitalMode}}
+\index{RB4\_SetDigitalMode@{RB4\_SetDigitalMode}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB4\_SetDigitalMode}{RB4\_SetDigitalMode}}
+{\footnotesize\ttfamily \#define RB4\+\_\+\+Set\+Digital\+Mode(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ ANSELBbits.\+ANSB4 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00219}{219}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a40fd8a814959ae0f0723367787f26acc}\label{pin__manager_8h_a40fd8a814959ae0f0723367787f26acc} 
+\index{pin\_manager.h@{pin\_manager.h}!RB4\_SetDigitalOutput@{RB4\_SetDigitalOutput}}
+\index{RB4\_SetDigitalOutput@{RB4\_SetDigitalOutput}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB4\_SetDigitalOutput}{RB4\_SetDigitalOutput}}
+{\footnotesize\ttfamily \#define RB4\+\_\+\+Set\+Digital\+Output(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ TRISBbits.\+TRISB4 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00215}{215}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a08d2b759efdc6b2469a58a132ae23866}\label{pin__manager_8h_a08d2b759efdc6b2469a58a132ae23866} 
+\index{pin\_manager.h@{pin\_manager.h}!RB4\_SetHigh@{RB4\_SetHigh}}
+\index{RB4\_SetHigh@{RB4\_SetHigh}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB4\_SetHigh}{RB4\_SetHigh}}
+{\footnotesize\ttfamily \#define RB4\+\_\+\+Set\+High(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATBbits.\+LATB4 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00210}{210}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a726fc03e831901caebc179d3a8c2c4fe}\label{pin__manager_8h_a726fc03e831901caebc179d3a8c2c4fe} 
+\index{pin\_manager.h@{pin\_manager.h}!RB4\_SetLow@{RB4\_SetLow}}
+\index{RB4\_SetLow@{RB4\_SetLow}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB4\_SetLow}{RB4\_SetLow}}
+{\footnotesize\ttfamily \#define RB4\+\_\+\+Set\+Low(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATBbits.\+LATB4 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00211}{211}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_af3bd1d961ac1782943069112296856f1}\label{pin__manager_8h_af3bd1d961ac1782943069112296856f1} 
+\index{pin\_manager.h@{pin\_manager.h}!RB4\_SetPullup@{RB4\_SetPullup}}
+\index{RB4\_SetPullup@{RB4\_SetPullup}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB4\_SetPullup}{RB4\_SetPullup}}
+{\footnotesize\ttfamily \#define RB4\+\_\+\+Set\+Pullup(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ WPUBbits.\+WPUB4 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00216}{216}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a61cedaf038273bce30d77d3fcce188c8}\label{pin__manager_8h_a61cedaf038273bce30d77d3fcce188c8} 
+\index{pin\_manager.h@{pin\_manager.h}!RB4\_Toggle@{RB4\_Toggle}}
+\index{RB4\_Toggle@{RB4\_Toggle}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB4\_Toggle}{RB4\_Toggle}}
+{\footnotesize\ttfamily \#define RB4\+\_\+\+Toggle(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATBbits.\+LATB4 = \texorpdfstring{$\sim$}{\string~}LATBbits.\+LATB4; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00212}{212}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a2c8e222a7d773d84e430eff06e07d2b1}\label{pin__manager_8h_a2c8e222a7d773d84e430eff06e07d2b1} 
+\index{pin\_manager.h@{pin\_manager.h}!RB5\_GetValue@{RB5\_GetValue}}
+\index{RB5\_GetValue@{RB5\_GetValue}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB5\_GetValue}{RB5\_GetValue}}
+{\footnotesize\ttfamily \#define RB5\+\_\+\+Get\+Value(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~PORTBbits.\+RB5}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00225}{225}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a13ff39f6eb018c18b0a2d4fa03e563b7}\label{pin__manager_8h_a13ff39f6eb018c18b0a2d4fa03e563b7} 
+\index{pin\_manager.h@{pin\_manager.h}!RB5\_ResetPullup@{RB5\_ResetPullup}}
+\index{RB5\_ResetPullup@{RB5\_ResetPullup}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB5\_ResetPullup}{RB5\_ResetPullup}}
+{\footnotesize\ttfamily \#define RB5\+\_\+\+Reset\+Pullup(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ WPUBbits.\+WPUB5 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00229}{229}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a33aa0c039bf7b72b4593e467e92f757f}\label{pin__manager_8h_a33aa0c039bf7b72b4593e467e92f757f} 
+\index{pin\_manager.h@{pin\_manager.h}!RB5\_SetAnalogMode@{RB5\_SetAnalogMode}}
+\index{RB5\_SetAnalogMode@{RB5\_SetAnalogMode}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB5\_SetAnalogMode}{RB5\_SetAnalogMode}}
+{\footnotesize\ttfamily \#define RB5\+\_\+\+Set\+Analog\+Mode(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ ANSELBbits.\+ANSB5 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00230}{230}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a3f7ab585d9f8738794dce31221979d8d}\label{pin__manager_8h_a3f7ab585d9f8738794dce31221979d8d} 
+\index{pin\_manager.h@{pin\_manager.h}!RB5\_SetDigitalInput@{RB5\_SetDigitalInput}}
+\index{RB5\_SetDigitalInput@{RB5\_SetDigitalInput}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB5\_SetDigitalInput}{RB5\_SetDigitalInput}}
+{\footnotesize\ttfamily \#define RB5\+\_\+\+Set\+Digital\+Input(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ TRISBbits.\+TRISB5 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00226}{226}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a8b92267f563710c3ee7761ddfee39824}\label{pin__manager_8h_a8b92267f563710c3ee7761ddfee39824} 
+\index{pin\_manager.h@{pin\_manager.h}!RB5\_SetDigitalMode@{RB5\_SetDigitalMode}}
+\index{RB5\_SetDigitalMode@{RB5\_SetDigitalMode}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB5\_SetDigitalMode}{RB5\_SetDigitalMode}}
+{\footnotesize\ttfamily \#define RB5\+\_\+\+Set\+Digital\+Mode(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ ANSELBbits.\+ANSB5 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00231}{231}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_ae50f463f927b9d4cfb7ab52c44399c80}\label{pin__manager_8h_ae50f463f927b9d4cfb7ab52c44399c80} 
+\index{pin\_manager.h@{pin\_manager.h}!RB5\_SetDigitalOutput@{RB5\_SetDigitalOutput}}
+\index{RB5\_SetDigitalOutput@{RB5\_SetDigitalOutput}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB5\_SetDigitalOutput}{RB5\_SetDigitalOutput}}
+{\footnotesize\ttfamily \#define RB5\+\_\+\+Set\+Digital\+Output(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ TRISBbits.\+TRISB5 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00227}{227}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_aa2975aeb14fab20a30f2087fa0f2f7fb}\label{pin__manager_8h_aa2975aeb14fab20a30f2087fa0f2f7fb} 
+\index{pin\_manager.h@{pin\_manager.h}!RB5\_SetHigh@{RB5\_SetHigh}}
+\index{RB5\_SetHigh@{RB5\_SetHigh}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB5\_SetHigh}{RB5\_SetHigh}}
+{\footnotesize\ttfamily \#define RB5\+\_\+\+Set\+High(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATBbits.\+LATB5 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00222}{222}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_ae4b96148901dae6d17cf5dc06fbfaf53}\label{pin__manager_8h_ae4b96148901dae6d17cf5dc06fbfaf53} 
+\index{pin\_manager.h@{pin\_manager.h}!RB5\_SetLow@{RB5\_SetLow}}
+\index{RB5\_SetLow@{RB5\_SetLow}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB5\_SetLow}{RB5\_SetLow}}
+{\footnotesize\ttfamily \#define RB5\+\_\+\+Set\+Low(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATBbits.\+LATB5 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00223}{223}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_aab150171294fff1bb960fb447a40d2d4}\label{pin__manager_8h_aab150171294fff1bb960fb447a40d2d4} 
+\index{pin\_manager.h@{pin\_manager.h}!RB5\_SetPullup@{RB5\_SetPullup}}
+\index{RB5\_SetPullup@{RB5\_SetPullup}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB5\_SetPullup}{RB5\_SetPullup}}
+{\footnotesize\ttfamily \#define RB5\+\_\+\+Set\+Pullup(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ WPUBbits.\+WPUB5 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00228}{228}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a747a758fa0aa57aaf78fcc89d9a3a83b}\label{pin__manager_8h_a747a758fa0aa57aaf78fcc89d9a3a83b} 
+\index{pin\_manager.h@{pin\_manager.h}!RB5\_Toggle@{RB5\_Toggle}}
+\index{RB5\_Toggle@{RB5\_Toggle}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{RB5\_Toggle}{RB5\_Toggle}}
+{\footnotesize\ttfamily \#define RB5\+\_\+\+Toggle(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATBbits.\+LATB5 = \texorpdfstring{$\sim$}{\string~}LATBbits.\+LATB5; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00224}{224}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a676f389e19a3b743dd6bf6f9cbd0866c}\label{pin__manager_8h_a676f389e19a3b743dd6bf6f9cbd0866c} 
+\index{pin\_manager.h@{pin\_manager.h}!S1\_GetValue@{S1\_GetValue}}
+\index{S1\_GetValue@{S1\_GetValue}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S1\_GetValue}{S1\_GetValue}}
+{\footnotesize\ttfamily \#define S1\+\_\+\+Get\+Value(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~PORTBbits.\+RB0}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00157}{157}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a735a74357738fc91e677285bea8f046f}\label{pin__manager_8h_a735a74357738fc91e677285bea8f046f} 
+\index{pin\_manager.h@{pin\_manager.h}!S1\_LAT@{S1\_LAT}}
+\index{S1\_LAT@{S1\_LAT}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S1\_LAT}{S1\_LAT}}
+{\footnotesize\ttfamily \#define S1\+\_\+\+LAT~LATBbits.\+LATB0}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00151}{151}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a3d55d272c98df55dfb9f4a84af0e026e}\label{pin__manager_8h_a3d55d272c98df55dfb9f4a84af0e026e} 
+\index{pin\_manager.h@{pin\_manager.h}!S1\_PORT@{S1\_PORT}}
+\index{S1\_PORT@{S1\_PORT}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S1\_PORT}{S1\_PORT}}
+{\footnotesize\ttfamily \#define S1\+\_\+\+PORT~PORTBbits.\+RB0}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00152}{152}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_adc00aa0c6844e0043006c30b3f178720}\label{pin__manager_8h_adc00aa0c6844e0043006c30b3f178720} 
+\index{pin\_manager.h@{pin\_manager.h}!S1\_ResetPullup@{S1\_ResetPullup}}
+\index{S1\_ResetPullup@{S1\_ResetPullup}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S1\_ResetPullup}{S1\_ResetPullup}}
+{\footnotesize\ttfamily \#define S1\+\_\+\+Reset\+Pullup(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ WPUBbits.\+WPUB0 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00161}{161}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_afeaa0a1452fbd1586387a903bff4d111}\label{pin__manager_8h_afeaa0a1452fbd1586387a903bff4d111} 
+\index{pin\_manager.h@{pin\_manager.h}!S1\_SetDigitalInput@{S1\_SetDigitalInput}}
+\index{S1\_SetDigitalInput@{S1\_SetDigitalInput}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S1\_SetDigitalInput}{S1\_SetDigitalInput}}
+{\footnotesize\ttfamily \#define S1\+\_\+\+Set\+Digital\+Input(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ TRISBbits.\+TRISB0 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00158}{158}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_aa8e9680a5db94a60ca1036eaa1a3fa23}\label{pin__manager_8h_aa8e9680a5db94a60ca1036eaa1a3fa23} 
+\index{pin\_manager.h@{pin\_manager.h}!S1\_SetDigitalOutput@{S1\_SetDigitalOutput}}
+\index{S1\_SetDigitalOutput@{S1\_SetDigitalOutput}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S1\_SetDigitalOutput}{S1\_SetDigitalOutput}}
+{\footnotesize\ttfamily \#define S1\+\_\+\+Set\+Digital\+Output(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ TRISBbits.\+TRISB0 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00159}{159}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a3ec9930552ce6dc80ddef3b706ddcaf6}\label{pin__manager_8h_a3ec9930552ce6dc80ddef3b706ddcaf6} 
+\index{pin\_manager.h@{pin\_manager.h}!S1\_SetHigh@{S1\_SetHigh}}
+\index{S1\_SetHigh@{S1\_SetHigh}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S1\_SetHigh}{S1\_SetHigh}}
+{\footnotesize\ttfamily \#define S1\+\_\+\+Set\+High(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATBbits.\+LATB0 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00154}{154}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a6ebe4eea947816cc370f27446021fc18}\label{pin__manager_8h_a6ebe4eea947816cc370f27446021fc18} 
+\index{pin\_manager.h@{pin\_manager.h}!S1\_SetLow@{S1\_SetLow}}
+\index{S1\_SetLow@{S1\_SetLow}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S1\_SetLow}{S1\_SetLow}}
+{\footnotesize\ttfamily \#define S1\+\_\+\+Set\+Low(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATBbits.\+LATB0 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00155}{155}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a223afe346b1df035b55004887eca6eb3}\label{pin__manager_8h_a223afe346b1df035b55004887eca6eb3} 
+\index{pin\_manager.h@{pin\_manager.h}!S1\_SetPullup@{S1\_SetPullup}}
+\index{S1\_SetPullup@{S1\_SetPullup}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S1\_SetPullup}{S1\_SetPullup}}
+{\footnotesize\ttfamily \#define S1\+\_\+\+Set\+Pullup(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ WPUBbits.\+WPUB0 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00160}{160}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a7261aa37fa8115d4095fb9a2a50fa6a3}\label{pin__manager_8h_a7261aa37fa8115d4095fb9a2a50fa6a3} 
+\index{pin\_manager.h@{pin\_manager.h}!S1\_Toggle@{S1\_Toggle}}
+\index{S1\_Toggle@{S1\_Toggle}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S1\_Toggle}{S1\_Toggle}}
+{\footnotesize\ttfamily \#define S1\+\_\+\+Toggle(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATBbits.\+LATB0 = \texorpdfstring{$\sim$}{\string~}LATBbits.\+LATB0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00156}{156}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a0719350a3bafc745e24b8d9817608719}\label{pin__manager_8h_a0719350a3bafc745e24b8d9817608719} 
+\index{pin\_manager.h@{pin\_manager.h}!S1\_TRIS@{S1\_TRIS}}
+\index{S1\_TRIS@{S1\_TRIS}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S1\_TRIS}{S1\_TRIS}}
+{\footnotesize\ttfamily \#define S1\+\_\+\+TRIS~TRISBbits.\+TRISB0}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00150}{150}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a7434a6fdae5b0c8bd50319247de32bfc}\label{pin__manager_8h_a7434a6fdae5b0c8bd50319247de32bfc} 
+\index{pin\_manager.h@{pin\_manager.h}!S1\_WPU@{S1\_WPU}}
+\index{S1\_WPU@{S1\_WPU}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S1\_WPU}{S1\_WPU}}
+{\footnotesize\ttfamily \#define S1\+\_\+\+WPU~WPUBbits.\+WPUB0}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00153}{153}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_ac60685a022674693ad9ef44e295bf4e7}\label{pin__manager_8h_ac60685a022674693ad9ef44e295bf4e7} 
+\index{pin\_manager.h@{pin\_manager.h}!S2\_ANS@{S2\_ANS}}
+\index{S2\_ANS@{S2\_ANS}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S2\_ANS}{S2\_ANS}}
+{\footnotesize\ttfamily \#define S2\+\_\+\+ANS~ANSELBbits.\+ANSB3}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00197}{197}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_ac40db0792f6e30821d8233955ec86a26}\label{pin__manager_8h_ac40db0792f6e30821d8233955ec86a26} 
+\index{pin\_manager.h@{pin\_manager.h}!S2\_GetValue@{S2\_GetValue}}
+\index{S2\_GetValue@{S2\_GetValue}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S2\_GetValue}{S2\_GetValue}}
+{\footnotesize\ttfamily \#define S2\+\_\+\+Get\+Value(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~PORTBbits.\+RB3}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00201}{201}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_ae7898b689f470bcd0268b83f3c83cae3}\label{pin__manager_8h_ae7898b689f470bcd0268b83f3c83cae3} 
+\index{pin\_manager.h@{pin\_manager.h}!S2\_LAT@{S2\_LAT}}
+\index{S2\_LAT@{S2\_LAT}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S2\_LAT}{S2\_LAT}}
+{\footnotesize\ttfamily \#define S2\+\_\+\+LAT~LATBbits.\+LATB3}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00194}{194}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_aca6995ea532cc3a532a1680972647cb1}\label{pin__manager_8h_aca6995ea532cc3a532a1680972647cb1} 
+\index{pin\_manager.h@{pin\_manager.h}!S2\_PORT@{S2\_PORT}}
+\index{S2\_PORT@{S2\_PORT}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S2\_PORT}{S2\_PORT}}
+{\footnotesize\ttfamily \#define S2\+\_\+\+PORT~PORTBbits.\+RB3}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00195}{195}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a0781316b63e75b00ae55501bb0cf13c8}\label{pin__manager_8h_a0781316b63e75b00ae55501bb0cf13c8} 
+\index{pin\_manager.h@{pin\_manager.h}!S2\_ResetPullup@{S2\_ResetPullup}}
+\index{S2\_ResetPullup@{S2\_ResetPullup}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S2\_ResetPullup}{S2\_ResetPullup}}
+{\footnotesize\ttfamily \#define S2\+\_\+\+Reset\+Pullup(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ WPUBbits.\+WPUB3 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00205}{205}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a18bbbd41fe642a83b787a7dc7e395f4d}\label{pin__manager_8h_a18bbbd41fe642a83b787a7dc7e395f4d} 
+\index{pin\_manager.h@{pin\_manager.h}!S2\_SetAnalogMode@{S2\_SetAnalogMode}}
+\index{S2\_SetAnalogMode@{S2\_SetAnalogMode}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S2\_SetAnalogMode}{S2\_SetAnalogMode}}
+{\footnotesize\ttfamily \#define S2\+\_\+\+Set\+Analog\+Mode(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ ANSELBbits.\+ANSB3 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00206}{206}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a246d2270b48fcf10c040773fd2e0beaf}\label{pin__manager_8h_a246d2270b48fcf10c040773fd2e0beaf} 
+\index{pin\_manager.h@{pin\_manager.h}!S2\_SetDigitalInput@{S2\_SetDigitalInput}}
+\index{S2\_SetDigitalInput@{S2\_SetDigitalInput}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S2\_SetDigitalInput}{S2\_SetDigitalInput}}
+{\footnotesize\ttfamily \#define S2\+\_\+\+Set\+Digital\+Input(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ TRISBbits.\+TRISB3 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00202}{202}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_ab585d6887b84f7fb402a6d663dec1641}\label{pin__manager_8h_ab585d6887b84f7fb402a6d663dec1641} 
+\index{pin\_manager.h@{pin\_manager.h}!S2\_SetDigitalMode@{S2\_SetDigitalMode}}
+\index{S2\_SetDigitalMode@{S2\_SetDigitalMode}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S2\_SetDigitalMode}{S2\_SetDigitalMode}}
+{\footnotesize\ttfamily \#define S2\+\_\+\+Set\+Digital\+Mode(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ ANSELBbits.\+ANSB3 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00207}{207}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a9b0d87d888487eb74db4aa90401cf4d2}\label{pin__manager_8h_a9b0d87d888487eb74db4aa90401cf4d2} 
+\index{pin\_manager.h@{pin\_manager.h}!S2\_SetDigitalOutput@{S2\_SetDigitalOutput}}
+\index{S2\_SetDigitalOutput@{S2\_SetDigitalOutput}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S2\_SetDigitalOutput}{S2\_SetDigitalOutput}}
+{\footnotesize\ttfamily \#define S2\+\_\+\+Set\+Digital\+Output(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ TRISBbits.\+TRISB3 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00203}{203}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a5208cd89bfa27593a937d96c53ad575e}\label{pin__manager_8h_a5208cd89bfa27593a937d96c53ad575e} 
+\index{pin\_manager.h@{pin\_manager.h}!S2\_SetHigh@{S2\_SetHigh}}
+\index{S2\_SetHigh@{S2\_SetHigh}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S2\_SetHigh}{S2\_SetHigh}}
+{\footnotesize\ttfamily \#define S2\+\_\+\+Set\+High(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATBbits.\+LATB3 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00198}{198}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_ad42d2d7b3a12bc65263d7cb6a193f6c1}\label{pin__manager_8h_ad42d2d7b3a12bc65263d7cb6a193f6c1} 
+\index{pin\_manager.h@{pin\_manager.h}!S2\_SetLow@{S2\_SetLow}}
+\index{S2\_SetLow@{S2\_SetLow}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S2\_SetLow}{S2\_SetLow}}
+{\footnotesize\ttfamily \#define S2\+\_\+\+Set\+Low(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATBbits.\+LATB3 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00199}{199}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_afa1afb037497323c38ff39ac12109ab0}\label{pin__manager_8h_afa1afb037497323c38ff39ac12109ab0} 
+\index{pin\_manager.h@{pin\_manager.h}!S2\_SetPullup@{S2\_SetPullup}}
+\index{S2\_SetPullup@{S2\_SetPullup}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S2\_SetPullup}{S2\_SetPullup}}
+{\footnotesize\ttfamily \#define S2\+\_\+\+Set\+Pullup(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ WPUBbits.\+WPUB3 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00204}{204}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_af399d0f129526c118606d676df7ce300}\label{pin__manager_8h_af399d0f129526c118606d676df7ce300} 
+\index{pin\_manager.h@{pin\_manager.h}!S2\_Toggle@{S2\_Toggle}}
+\index{S2\_Toggle@{S2\_Toggle}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S2\_Toggle}{S2\_Toggle}}
+{\footnotesize\ttfamily \#define S2\+\_\+\+Toggle(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATBbits.\+LATB3 = \texorpdfstring{$\sim$}{\string~}LATBbits.\+LATB3; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00200}{200}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_afc24f1d93fbda27ef3fb3e9564964f65}\label{pin__manager_8h_afc24f1d93fbda27ef3fb3e9564964f65} 
+\index{pin\_manager.h@{pin\_manager.h}!S2\_TRIS@{S2\_TRIS}}
+\index{S2\_TRIS@{S2\_TRIS}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S2\_TRIS}{S2\_TRIS}}
+{\footnotesize\ttfamily \#define S2\+\_\+\+TRIS~TRISBbits.\+TRISB3}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00193}{193}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_ab2c2991dbe43e8cb80f33368bc1eea20}\label{pin__manager_8h_ab2c2991dbe43e8cb80f33368bc1eea20} 
+\index{pin\_manager.h@{pin\_manager.h}!S2\_WPU@{S2\_WPU}}
+\index{S2\_WPU@{S2\_WPU}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S2\_WPU}{S2\_WPU}}
+{\footnotesize\ttfamily \#define S2\+\_\+\+WPU~WPUBbits.\+WPUB3}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00196}{196}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_aece0bb260ab33ce64120cc88dd3b7f5f}\label{pin__manager_8h_aece0bb260ab33ce64120cc88dd3b7f5f} 
+\index{pin\_manager.h@{pin\_manager.h}!S3\_ANS@{S3\_ANS}}
+\index{S3\_ANS@{S3\_ANS}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S3\_ANS}{S3\_ANS}}
+{\footnotesize\ttfamily \#define S3\+\_\+\+ANS~ANSELAbits.\+ANSA0}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00072}{72}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a38637785e2f3a27a05e90cf3624c4ad5}\label{pin__manager_8h_a38637785e2f3a27a05e90cf3624c4ad5} 
+\index{pin\_manager.h@{pin\_manager.h}!S3\_GetValue@{S3\_GetValue}}
+\index{S3\_GetValue@{S3\_GetValue}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S3\_GetValue}{S3\_GetValue}}
+{\footnotesize\ttfamily \#define S3\+\_\+\+Get\+Value(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~PORTAbits.\+RA0}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00076}{76}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_adad4d3c9a1a967918e2e730cc0100a39}\label{pin__manager_8h_adad4d3c9a1a967918e2e730cc0100a39} 
+\index{pin\_manager.h@{pin\_manager.h}!S3\_LAT@{S3\_LAT}}
+\index{S3\_LAT@{S3\_LAT}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S3\_LAT}{S3\_LAT}}
+{\footnotesize\ttfamily \#define S3\+\_\+\+LAT~LATAbits.\+LATA0}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00070}{70}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a2ce9023ff3425738edc74fe904714de6}\label{pin__manager_8h_a2ce9023ff3425738edc74fe904714de6} 
+\index{pin\_manager.h@{pin\_manager.h}!S3\_PORT@{S3\_PORT}}
+\index{S3\_PORT@{S3\_PORT}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S3\_PORT}{S3\_PORT}}
+{\footnotesize\ttfamily \#define S3\+\_\+\+PORT~PORTAbits.\+RA0}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00071}{71}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a752aa58e26f69f8ceb5ac92fe56e4415}\label{pin__manager_8h_a752aa58e26f69f8ceb5ac92fe56e4415} 
+\index{pin\_manager.h@{pin\_manager.h}!S3\_SetAnalogMode@{S3\_SetAnalogMode}}
+\index{S3\_SetAnalogMode@{S3\_SetAnalogMode}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S3\_SetAnalogMode}{S3\_SetAnalogMode}}
+{\footnotesize\ttfamily \#define S3\+\_\+\+Set\+Analog\+Mode(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ ANSELAbits.\+ANSA0 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00079}{79}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a9274493698e1e209e186f70d2203e7b0}\label{pin__manager_8h_a9274493698e1e209e186f70d2203e7b0} 
+\index{pin\_manager.h@{pin\_manager.h}!S3\_SetDigitalInput@{S3\_SetDigitalInput}}
+\index{S3\_SetDigitalInput@{S3\_SetDigitalInput}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S3\_SetDigitalInput}{S3\_SetDigitalInput}}
+{\footnotesize\ttfamily \#define S3\+\_\+\+Set\+Digital\+Input(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ TRISAbits.\+TRISA0 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00077}{77}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a36f5b75a43aac53d59526ed42e080596}\label{pin__manager_8h_a36f5b75a43aac53d59526ed42e080596} 
+\index{pin\_manager.h@{pin\_manager.h}!S3\_SetDigitalMode@{S3\_SetDigitalMode}}
+\index{S3\_SetDigitalMode@{S3\_SetDigitalMode}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S3\_SetDigitalMode}{S3\_SetDigitalMode}}
+{\footnotesize\ttfamily \#define S3\+\_\+\+Set\+Digital\+Mode(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ ANSELAbits.\+ANSA0 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00080}{80}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a7e5b8f2ef0595b175f55fea216fc1d14}\label{pin__manager_8h_a7e5b8f2ef0595b175f55fea216fc1d14} 
+\index{pin\_manager.h@{pin\_manager.h}!S3\_SetDigitalOutput@{S3\_SetDigitalOutput}}
+\index{S3\_SetDigitalOutput@{S3\_SetDigitalOutput}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S3\_SetDigitalOutput}{S3\_SetDigitalOutput}}
+{\footnotesize\ttfamily \#define S3\+\_\+\+Set\+Digital\+Output(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ TRISAbits.\+TRISA0 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00078}{78}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a29a2393eb42f892726f3531731715181}\label{pin__manager_8h_a29a2393eb42f892726f3531731715181} 
+\index{pin\_manager.h@{pin\_manager.h}!S3\_SetHigh@{S3\_SetHigh}}
+\index{S3\_SetHigh@{S3\_SetHigh}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S3\_SetHigh}{S3\_SetHigh}}
+{\footnotesize\ttfamily \#define S3\+\_\+\+Set\+High(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATAbits.\+LATA0 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00073}{73}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_ae6a9b417006d492968a33ba496614392}\label{pin__manager_8h_ae6a9b417006d492968a33ba496614392} 
+\index{pin\_manager.h@{pin\_manager.h}!S3\_SetLow@{S3\_SetLow}}
+\index{S3\_SetLow@{S3\_SetLow}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S3\_SetLow}{S3\_SetLow}}
+{\footnotesize\ttfamily \#define S3\+\_\+\+Set\+Low(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATAbits.\+LATA0 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00074}{74}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_af68fb15cd4a737d713880483a135fb4d}\label{pin__manager_8h_af68fb15cd4a737d713880483a135fb4d} 
+\index{pin\_manager.h@{pin\_manager.h}!S3\_Toggle@{S3\_Toggle}}
+\index{S3\_Toggle@{S3\_Toggle}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S3\_Toggle}{S3\_Toggle}}
+{\footnotesize\ttfamily \#define S3\+\_\+\+Toggle(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATAbits.\+LATA0 = \texorpdfstring{$\sim$}{\string~}LATAbits.\+LATA0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00075}{75}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a55b0d3f9bd735e7f140e0f4afb6d6028}\label{pin__manager_8h_a55b0d3f9bd735e7f140e0f4afb6d6028} 
+\index{pin\_manager.h@{pin\_manager.h}!S3\_TRIS@{S3\_TRIS}}
+\index{S3\_TRIS@{S3\_TRIS}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{S3\_TRIS}{S3\_TRIS}}
+{\footnotesize\ttfamily \#define S3\+\_\+\+TRIS~TRISAbits.\+TRISA0}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00069}{69}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a23026f65f998f9eb7d1fcfb5fb93ab06}\label{pin__manager_8h_a23026f65f998f9eb7d1fcfb5fb93ab06} 
+\index{pin\_manager.h@{pin\_manager.h}!Temp\_ANS@{Temp\_ANS}}
+\index{Temp\_ANS@{Temp\_ANS}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Temp\_ANS}{Temp\_ANS}}
+{\footnotesize\ttfamily \#define Temp\+\_\+\+ANS~ANSELAbits.\+ANSA2}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00096}{96}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a91df149876b5b088fee7d79d65ca513b}\label{pin__manager_8h_a91df149876b5b088fee7d79d65ca513b} 
+\index{pin\_manager.h@{pin\_manager.h}!Temp\_GetValue@{Temp\_GetValue}}
+\index{Temp\_GetValue@{Temp\_GetValue}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Temp\_GetValue}{Temp\_GetValue}}
+{\footnotesize\ttfamily \#define Temp\+\_\+\+Get\+Value(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~PORTAbits.\+RA2}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00100}{100}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a79c498b13b6739db7ec20731f88c00c2}\label{pin__manager_8h_a79c498b13b6739db7ec20731f88c00c2} 
+\index{pin\_manager.h@{pin\_manager.h}!Temp\_LAT@{Temp\_LAT}}
+\index{Temp\_LAT@{Temp\_LAT}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Temp\_LAT}{Temp\_LAT}}
+{\footnotesize\ttfamily \#define Temp\+\_\+\+LAT~LATAbits.\+LATA2}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00094}{94}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a5434f616cb455609d77aa2d7409f8c69}\label{pin__manager_8h_a5434f616cb455609d77aa2d7409f8c69} 
+\index{pin\_manager.h@{pin\_manager.h}!Temp\_PORT@{Temp\_PORT}}
+\index{Temp\_PORT@{Temp\_PORT}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Temp\_PORT}{Temp\_PORT}}
+{\footnotesize\ttfamily \#define Temp\+\_\+\+PORT~PORTAbits.\+RA2}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00095}{95}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_ac01607c048fae8980525b5288a872b2e}\label{pin__manager_8h_ac01607c048fae8980525b5288a872b2e} 
+\index{pin\_manager.h@{pin\_manager.h}!Temp\_SetAnalogMode@{Temp\_SetAnalogMode}}
+\index{Temp\_SetAnalogMode@{Temp\_SetAnalogMode}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Temp\_SetAnalogMode}{Temp\_SetAnalogMode}}
+{\footnotesize\ttfamily \#define Temp\+\_\+\+Set\+Analog\+Mode(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ ANSELAbits.\+ANSA2 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00103}{103}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a26e3f2fc604d1cfdcfbdb86e7a83e7c5}\label{pin__manager_8h_a26e3f2fc604d1cfdcfbdb86e7a83e7c5} 
+\index{pin\_manager.h@{pin\_manager.h}!Temp\_SetDigitalInput@{Temp\_SetDigitalInput}}
+\index{Temp\_SetDigitalInput@{Temp\_SetDigitalInput}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Temp\_SetDigitalInput}{Temp\_SetDigitalInput}}
+{\footnotesize\ttfamily \#define Temp\+\_\+\+Set\+Digital\+Input(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ TRISAbits.\+TRISA2 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00101}{101}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a1a9f599c603aaf9031be1d18ffeb8f9b}\label{pin__manager_8h_a1a9f599c603aaf9031be1d18ffeb8f9b} 
+\index{pin\_manager.h@{pin\_manager.h}!Temp\_SetDigitalMode@{Temp\_SetDigitalMode}}
+\index{Temp\_SetDigitalMode@{Temp\_SetDigitalMode}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Temp\_SetDigitalMode}{Temp\_SetDigitalMode}}
+{\footnotesize\ttfamily \#define Temp\+\_\+\+Set\+Digital\+Mode(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ ANSELAbits.\+ANSA2 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00104}{104}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a99f54f4869155c2872eaa26e335b98c5}\label{pin__manager_8h_a99f54f4869155c2872eaa26e335b98c5} 
+\index{pin\_manager.h@{pin\_manager.h}!Temp\_SetDigitalOutput@{Temp\_SetDigitalOutput}}
+\index{Temp\_SetDigitalOutput@{Temp\_SetDigitalOutput}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Temp\_SetDigitalOutput}{Temp\_SetDigitalOutput}}
+{\footnotesize\ttfamily \#define Temp\+\_\+\+Set\+Digital\+Output(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ TRISAbits.\+TRISA2 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00102}{102}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_ac8a66597709316218683d672b747ee4d}\label{pin__manager_8h_ac8a66597709316218683d672b747ee4d} 
+\index{pin\_manager.h@{pin\_manager.h}!Temp\_SetHigh@{Temp\_SetHigh}}
+\index{Temp\_SetHigh@{Temp\_SetHigh}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Temp\_SetHigh}{Temp\_SetHigh}}
+{\footnotesize\ttfamily \#define Temp\+\_\+\+Set\+High(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATAbits.\+LATA2 = 1; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00097}{97}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a55e1a2a8e0825953b4a2168917b5166f}\label{pin__manager_8h_a55e1a2a8e0825953b4a2168917b5166f} 
+\index{pin\_manager.h@{pin\_manager.h}!Temp\_SetLow@{Temp\_SetLow}}
+\index{Temp\_SetLow@{Temp\_SetLow}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Temp\_SetLow}{Temp\_SetLow}}
+{\footnotesize\ttfamily \#define Temp\+\_\+\+Set\+Low(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATAbits.\+LATA2 = 0; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00098}{98}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a31f6c1ac6e2b0b08223904dec9438643}\label{pin__manager_8h_a31f6c1ac6e2b0b08223904dec9438643} 
+\index{pin\_manager.h@{pin\_manager.h}!Temp\_Toggle@{Temp\_Toggle}}
+\index{Temp\_Toggle@{Temp\_Toggle}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Temp\_Toggle}{Temp\_Toggle}}
+{\footnotesize\ttfamily \#define Temp\+\_\+\+Toggle(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~do \{ LATAbits.\+LATA2 = \texorpdfstring{$\sim$}{\string~}LATAbits.\+LATA2; \} while(0)}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00099}{99}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+\Hypertarget{pin__manager_8h_a68bb297b6fc265c9f6c6b359354e560d}\label{pin__manager_8h_a68bb297b6fc265c9f6c6b359354e560d} 
+\index{pin\_manager.h@{pin\_manager.h}!Temp\_TRIS@{Temp\_TRIS}}
+\index{Temp\_TRIS@{Temp\_TRIS}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{Temp\_TRIS}{Temp\_TRIS}}
+{\footnotesize\ttfamily \#define Temp\+\_\+\+TRIS~TRISAbits.\+TRISA2}
+
+
+
+Definition at line \mbox{\hyperlink{pin__manager_8h_source_l00093}{93}} of file \mbox{\hyperlink{pin__manager_8h_source}{pin\+\_\+manager.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{pin__manager_8h_a7785df331b1ef41d8cb46f09192cff38}\label{pin__manager_8h_a7785df331b1ef41d8cb46f09192cff38} 
+\index{pin\_manager.h@{pin\_manager.h}!IOCBF0\_DefaultInterruptHandler@{IOCBF0\_DefaultInterruptHandler}}
+\index{IOCBF0\_DefaultInterruptHandler@{IOCBF0\_DefaultInterruptHandler}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{IOCBF0\_DefaultInterruptHandler()}{IOCBF0\_DefaultInterruptHandler()}}
+{\footnotesize\ttfamily void IOCBF0\+\_\+\+Default\+Interrupt\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Summary Default Interrupt Handler for IOCBF0 pin
+
+@\+Description This is a predefined interrupt handler to be used together with the \doxylink{pin__manager_8c_a1fa094f74ec24d587df5fd9e546e55a2}{IOCBF0\+\_\+\+Set\+Interrupt\+Handler()} method. This handler is called every time the IOCBF0 ISR is executed.
+
+@\+Preconditions Pin Manager intializer called
+
+@\+Returns None.
+
+@\+Param None.
+
+@\+Example \doxylink{pin__manager_8c_a50357774183a136d9490f64ad0d5c6cb}{PIN\+\_\+\+MANAGER\+\_\+\+Initialize()}; IOCBF0\+\_\+\+Set\+Interrupt\+Handler(\+IOCBF0\+\_\+\+Default\+Interrupt\+Handler);
+
+Default interrupt handler for IOCBF0 
+
+Definition at line \mbox{\hyperlink{pin__manager_8c_source_l00158}{158}} of file \mbox{\hyperlink{pin__manager_8c_source}{pin\+\_\+manager.\+c}}.
+
+\Hypertarget{pin__manager_8h_af604943b8a79191100d2c31fecadbb76}\label{pin__manager_8h_af604943b8a79191100d2c31fecadbb76} 
+\index{pin\_manager.h@{pin\_manager.h}!IOCBF0\_ISR@{IOCBF0\_ISR}}
+\index{IOCBF0\_ISR@{IOCBF0\_ISR}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{IOCBF0\_ISR()}{IOCBF0\_ISR()}}
+{\footnotesize\ttfamily void IOCBF0\+\_\+\+ISR (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Param none @\+Returns none @\+Description Interrupt on Change Handler for the IOCBF0 pin functionality @\+Example \doxylink{pin__manager_8c_af604943b8a79191100d2c31fecadbb76}{IOCBF0\+\_\+\+ISR()};
+
+IOCBF0 Interrupt Service Routine 
+
+Definition at line \mbox{\hyperlink{pin__manager_8c_source_l00136}{136}} of file \mbox{\hyperlink{pin__manager_8c_source}{pin\+\_\+manager.\+c}}.
+
+\Hypertarget{pin__manager_8h_a1fa094f74ec24d587df5fd9e546e55a2}\label{pin__manager_8h_a1fa094f74ec24d587df5fd9e546e55a2} 
+\index{pin\_manager.h@{pin\_manager.h}!IOCBF0\_SetInterruptHandler@{IOCBF0\_SetInterruptHandler}}
+\index{IOCBF0\_SetInterruptHandler@{IOCBF0\_SetInterruptHandler}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{IOCBF0\_SetInterruptHandler()}{IOCBF0\_SetInterruptHandler()}}
+{\footnotesize\ttfamily void IOCBF0\+\_\+\+Set\+Interrupt\+Handler (\begin{DoxyParamCaption}\item[{void(\texorpdfstring{$\ast$}{*})(void)}]{Interrupt\+Handler }\end{DoxyParamCaption})}
+
+@\+Summary Interrupt Handler Setter for IOCBF0 pin interrupt-\/on-\/change functionality
+
+@\+Description Allows selecting an interrupt handler for IOCBF0 at application runtime
+
+@\+Preconditions Pin Manager intializer called
+
+@\+Returns None.
+
+@\+Param Interrupt\+Handler function pointer.
+
+@\+Example \doxylink{pin__manager_8c_a50357774183a136d9490f64ad0d5c6cb}{PIN\+\_\+\+MANAGER\+\_\+\+Initialize()}; IOCBF0\+\_\+\+Set\+Interrupt\+Handler(\+My\+Interrupt\+Handler);
+
+Allows selecting an interrupt handler for IOCBF0 at application runtime 
+
+Definition at line \mbox{\hyperlink{pin__manager_8c_source_l00151}{151}} of file \mbox{\hyperlink{pin__manager_8c_source}{pin\+\_\+manager.\+c}}.
+
+\Hypertarget{pin__manager_8h_a1a8f2c2e2614db62356a2266be7d69a7}\label{pin__manager_8h_a1a8f2c2e2614db62356a2266be7d69a7} 
+\index{pin\_manager.h@{pin\_manager.h}!IOCBF3\_DefaultInterruptHandler@{IOCBF3\_DefaultInterruptHandler}}
+\index{IOCBF3\_DefaultInterruptHandler@{IOCBF3\_DefaultInterruptHandler}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{IOCBF3\_DefaultInterruptHandler()}{IOCBF3\_DefaultInterruptHandler()}}
+{\footnotesize\ttfamily void IOCBF3\+\_\+\+Default\+Interrupt\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Summary Default Interrupt Handler for IOCBF3 pin
+
+@\+Description This is a predefined interrupt handler to be used together with the \doxylink{pin__manager_8c_abc46d8993ed4544cd83fc6ccb8f68d67}{IOCBF3\+\_\+\+Set\+Interrupt\+Handler()} method. This handler is called every time the IOCBF3 ISR is executed.
+
+@\+Preconditions Pin Manager intializer called
+
+@\+Returns None.
+
+@\+Param None.
+
+@\+Example \doxylink{pin__manager_8c_a50357774183a136d9490f64ad0d5c6cb}{PIN\+\_\+\+MANAGER\+\_\+\+Initialize()}; IOCBF3\+\_\+\+Set\+Interrupt\+Handler(\+IOCBF3\+\_\+\+Default\+Interrupt\+Handler);
+
+Default interrupt handler for IOCBF3 
+
+Definition at line \mbox{\hyperlink{pin__manager_8c_source_l00188}{188}} of file \mbox{\hyperlink{pin__manager_8c_source}{pin\+\_\+manager.\+c}}.
+
+\Hypertarget{pin__manager_8h_a2d089cba024a3068b33fcaadeb42df12}\label{pin__manager_8h_a2d089cba024a3068b33fcaadeb42df12} 
+\index{pin\_manager.h@{pin\_manager.h}!IOCBF3\_ISR@{IOCBF3\_ISR}}
+\index{IOCBF3\_ISR@{IOCBF3\_ISR}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{IOCBF3\_ISR()}{IOCBF3\_ISR()}}
+{\footnotesize\ttfamily void IOCBF3\+\_\+\+ISR (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Param none @\+Returns none @\+Description Interrupt on Change Handler for the IOCBF3 pin functionality @\+Example \doxylink{pin__manager_8c_a2d089cba024a3068b33fcaadeb42df12}{IOCBF3\+\_\+\+ISR()};
+
+IOCBF3 Interrupt Service Routine 
+
+Definition at line \mbox{\hyperlink{pin__manager_8c_source_l00166}{166}} of file \mbox{\hyperlink{pin__manager_8c_source}{pin\+\_\+manager.\+c}}.
+
+\Hypertarget{pin__manager_8h_abc46d8993ed4544cd83fc6ccb8f68d67}\label{pin__manager_8h_abc46d8993ed4544cd83fc6ccb8f68d67} 
+\index{pin\_manager.h@{pin\_manager.h}!IOCBF3\_SetInterruptHandler@{IOCBF3\_SetInterruptHandler}}
+\index{IOCBF3\_SetInterruptHandler@{IOCBF3\_SetInterruptHandler}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{IOCBF3\_SetInterruptHandler()}{IOCBF3\_SetInterruptHandler()}}
+{\footnotesize\ttfamily void IOCBF3\+\_\+\+Set\+Interrupt\+Handler (\begin{DoxyParamCaption}\item[{void(\texorpdfstring{$\ast$}{*})(void)}]{Interrupt\+Handler }\end{DoxyParamCaption})}
+
+@\+Summary Interrupt Handler Setter for IOCBF3 pin interrupt-\/on-\/change functionality
+
+@\+Description Allows selecting an interrupt handler for IOCBF3 at application runtime
+
+@\+Preconditions Pin Manager intializer called
+
+@\+Returns None.
+
+@\+Param Interrupt\+Handler function pointer.
+
+@\+Example \doxylink{pin__manager_8c_a50357774183a136d9490f64ad0d5c6cb}{PIN\+\_\+\+MANAGER\+\_\+\+Initialize()}; IOCBF3\+\_\+\+Set\+Interrupt\+Handler(\+My\+Interrupt\+Handler);
+
+Allows selecting an interrupt handler for IOCBF3 at application runtime 
+
+Definition at line \mbox{\hyperlink{pin__manager_8c_source_l00181}{181}} of file \mbox{\hyperlink{pin__manager_8c_source}{pin\+\_\+manager.\+c}}.
+
+\Hypertarget{pin__manager_8h_a50357774183a136d9490f64ad0d5c6cb}\label{pin__manager_8h_a50357774183a136d9490f64ad0d5c6cb} 
+\index{pin\_manager.h@{pin\_manager.h}!PIN\_MANAGER\_Initialize@{PIN\_MANAGER\_Initialize}}
+\index{PIN\_MANAGER\_Initialize@{PIN\_MANAGER\_Initialize}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{PIN\_MANAGER\_Initialize()}{PIN\_MANAGER\_Initialize()}}
+{\footnotesize\ttfamily void PIN\+\_\+\+MANAGER\+\_\+\+Initialize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Param none @\+Returns none @\+Description GPIO and peripheral I/O initialization @\+Example \doxylink{pin__manager_8h_a50357774183a136d9490f64ad0d5c6cb}{PIN\+\_\+\+MANAGER\+\_\+\+Initialize()}; LATx registers
+
+TRISx registers
+
+ANSELx registers
+
+WPUx registers
+
+APFCONx registers
+
+IOCx registers
+
+Definition at line \mbox{\hyperlink{pin__manager_8c_source_l00058}{58}} of file \mbox{\hyperlink{pin__manager_8c_source}{pin\+\_\+manager.\+c}}.
+
+\Hypertarget{pin__manager_8h_a6ff320d017cf9b99ba9045f24d7ec896}\label{pin__manager_8h_a6ff320d017cf9b99ba9045f24d7ec896} 
+\index{pin\_manager.h@{pin\_manager.h}!PIN\_MANAGER\_IOC@{PIN\_MANAGER\_IOC}}
+\index{PIN\_MANAGER\_IOC@{PIN\_MANAGER\_IOC}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{PIN\_MANAGER\_IOC()}{PIN\_MANAGER\_IOC()}}
+{\footnotesize\ttfamily void PIN\+\_\+\+MANAGER\+\_\+\+IOC (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+@\+Param none @\+Returns none @\+Description Interrupt on Change Handling routine @\+Example \doxylink{pin__manager_8h_a6ff320d017cf9b99ba9045f24d7ec896}{PIN\+\_\+\+MANAGER\+\_\+\+IOC()}; 
+
+Definition at line \mbox{\hyperlink{pin__manager_8c_source_l00119}{119}} of file \mbox{\hyperlink{pin__manager_8c_source}{pin\+\_\+manager.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{pin__manager_8h_a92d7bae0fe36ddceb78cb19f7ccc783e}\label{pin__manager_8h_a92d7bae0fe36ddceb78cb19f7ccc783e} 
+\index{pin\_manager.h@{pin\_manager.h}!IOCBF0\_InterruptHandler@{IOCBF0\_InterruptHandler}}
+\index{IOCBF0\_InterruptHandler@{IOCBF0\_InterruptHandler}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{IOCBF0\_InterruptHandler}{IOCBF0\_InterruptHandler}}
+{\footnotesize\ttfamily void(\texorpdfstring{$\ast$}{*} IOCBF0\+\_\+\+Interrupt\+Handler) (void) (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+@\+Summary Dynamic Interrupt Handler for IOCBF0 pin
+
+@\+Description This is a dynamic interrupt handler to be used together with the \doxylink{pin__manager_8c_a1fa094f74ec24d587df5fd9e546e55a2}{IOCBF0\+\_\+\+Set\+Interrupt\+Handler()} method. This handler is called every time the IOCBF0 ISR is executed and allows any function to be registered at runtime.
+
+@\+Preconditions Pin Manager intializer called
+
+@\+Returns None.
+
+@\+Param None.
+
+@\+Example \doxylink{pin__manager_8c_a50357774183a136d9490f64ad0d5c6cb}{PIN\+\_\+\+MANAGER\+\_\+\+Initialize()}; IOCBF0\+\_\+\+Set\+Interrupt\+Handler(\+IOCBF0\+\_\+\+Interrupt\+Handler);
+
+Generated Pin Manager File
+
+Company\+: Microchip Technology Inc.
+
+File Name\+: \doxylink{pin__manager_8c}{pin\+\_\+manager.\+c}
+
+Summary\+: This is the Pin Manager file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+
+Description\+: This header file provides implementations for pin APIs for all pins selected in the GUI. Generation Information \+: Product Revision \+: PIC10 / PIC12 / PIC16 / PIC18 MCUs -\/ 1.\+81.\+8 Device \+: PIC16\+F1827 Driver Version \+: 2.\+11 The generated drivers are tested against the following\+: Compiler \+: XC8 2.\+36 and above MPLAB \+: MPLAB X 6.\+00
+
+Copyright (c) 2013 -\/ 2015 released Microchip Technology Inc. All rights reserved. 
+
+Definition at line \mbox{\hyperlink{pin__manager_8c_source_l00054}{54}} of file \mbox{\hyperlink{pin__manager_8c_source}{pin\+\_\+manager.\+c}}.
+
+\Hypertarget{pin__manager_8h_a4ca917d8a807b2ee336126626618cac4}\label{pin__manager_8h_a4ca917d8a807b2ee336126626618cac4} 
+\index{pin\_manager.h@{pin\_manager.h}!IOCBF3\_InterruptHandler@{IOCBF3\_InterruptHandler}}
+\index{IOCBF3\_InterruptHandler@{IOCBF3\_InterruptHandler}!pin\_manager.h@{pin\_manager.h}}
+\doxysubsubsection{\texorpdfstring{IOCBF3\_InterruptHandler}{IOCBF3\_InterruptHandler}}
+{\footnotesize\ttfamily void(\texorpdfstring{$\ast$}{*} IOCBF3\+\_\+\+Interrupt\+Handler) (void) (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [extern]}}
+
+@\+Summary Dynamic Interrupt Handler for IOCBF3 pin
+
+@\+Description This is a dynamic interrupt handler to be used together with the \doxylink{pin__manager_8h_abc46d8993ed4544cd83fc6ccb8f68d67}{IOCBF3\+\_\+\+Set\+Interrupt\+Handler()} method. This handler is called every time the IOCBF3 ISR is executed and allows any function to be registered at runtime.
+
+@\+Preconditions Pin Manager intializer called
+
+@\+Returns None.
+
+@\+Param None.
+
+@\+Example \doxylink{pin__manager_8h_a50357774183a136d9490f64ad0d5c6cb}{PIN\+\_\+\+MANAGER\+\_\+\+Initialize()}; IOCBF3\+\_\+\+Set\+Interrupt\+Handler(\+IOCBF3\+\_\+\+Interrupt\+Handler); 
+
+Definition at line \mbox{\hyperlink{pin__manager_8c_source_l00055}{55}} of file \mbox{\hyperlink{pin__manager_8c_source}{pin\+\_\+manager.\+c}}.
+

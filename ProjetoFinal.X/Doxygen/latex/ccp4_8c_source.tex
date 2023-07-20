@@ -1,0 +1,82 @@
+\doxysection{ccp4.\+c}
+\hypertarget{ccp4_8c_source}{}\label{ccp4_8c_source}\index{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/mcc\_generated\_files/ccp4.c@{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/mcc\_generated\_files/ccp4.c}}
+\mbox{\hyperlink{ccp4_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00024}00024\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00025}00025\ \textcolor{comment}{\ \ \ \ (c)\ 2018\ Microchip\ Technology\ Inc.\ and\ its\ subsidiaries.\ }}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00026}00026\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00027}00027\ \textcolor{comment}{\ \ \ \ Subject\ to\ your\ compliance\ with\ these\ terms,\ you\ may\ use\ Microchip\ software\ and\ any\ }}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00028}00028\ \textcolor{comment}{\ \ \ \ derivatives\ exclusively\ with\ Microchip\ products.\ It\ is\ your\ responsibility\ to\ comply\ with\ third\ party\ }}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00029}00029\ \textcolor{comment}{\ \ \ \ license\ terms\ applicable\ to\ your\ use\ of\ third\ party\ software\ (including\ open\ source\ software)\ that\ }}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00030}00030\ \textcolor{comment}{\ \ \ \ may\ accompany\ Microchip\ software.}}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00031}00031\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00032}00032\ \textcolor{comment}{\ \ \ \ THIS\ SOFTWARE\ IS\ SUPPLIED\ BY\ MICROCHIP\ "{}AS\ IS"{}.\ NO\ WARRANTIES,\ WHETHER\ }}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00033}00033\ \textcolor{comment}{\ \ \ \ EXPRESS,\ IMPLIED\ OR\ STATUTORY,\ APPLY\ TO\ THIS\ SOFTWARE,\ INCLUDING\ ANY\ }}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00034}00034\ \textcolor{comment}{\ \ \ \ IMPLIED\ WARRANTIES\ OF\ NON-\/INFRINGEMENT,\ MERCHANTABILITY,\ AND\ FITNESS\ }}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00035}00035\ \textcolor{comment}{\ \ \ \ FOR\ A\ PARTICULAR\ PURPOSE.}}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00036}00036\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00037}00037\ \textcolor{comment}{\ \ \ \ IN\ NO\ EVENT\ WILL\ MICROCHIP\ BE\ LIABLE\ FOR\ ANY\ INDIRECT,\ SPECIAL,\ PUNITIVE,\ }}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00038}00038\ \textcolor{comment}{\ \ \ \ INCIDENTAL\ OR\ CONSEQUENTIAL\ LOSS,\ DAMAGE,\ COST\ OR\ EXPENSE\ OF\ ANY\ KIND\ }}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00039}00039\ \textcolor{comment}{\ \ \ \ WHATSOEVER\ RELATED\ TO\ THE\ SOFTWARE,\ HOWEVER\ CAUSED,\ EVEN\ IF\ MICROCHIP\ }}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00040}00040\ \textcolor{comment}{\ \ \ \ HAS\ BEEN\ ADVISED\ OF\ THE\ POSSIBILITY\ OR\ THE\ DAMAGES\ ARE\ FORESEEABLE.\ TO\ }}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00041}00041\ \textcolor{comment}{\ \ \ \ THE\ FULLEST\ EXTENT\ ALLOWED\ BY\ LAW,\ MICROCHIP'S\ TOTAL\ LIABILITY\ ON\ ALL\ }}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00042}00042\ \textcolor{comment}{\ \ \ \ CLAIMS\ IN\ ANY\ WAY\ RELATED\ TO\ THIS\ SOFTWARE\ WILL\ NOT\ EXCEED\ THE\ AMOUNT\ }}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00043}00043\ \textcolor{comment}{\ \ \ \ OF\ FEES,\ IF\ ANY,\ THAT\ YOU\ HAVE\ PAID\ DIRECTLY\ TO\ MICROCHIP\ FOR\ THIS\ }}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00044}00044\ \textcolor{comment}{\ \ \ \ SOFTWARE.}}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00045}00045\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00051}00051\ \textcolor{preprocessor}{\#include\ <xc.h>}}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00052}00052\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ccp4_8h}{ccp4.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00054}00054\ \textcolor{keyword}{static}\ void\ (*CCP4\_CallBack)(uint16\_t);}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00060}00060\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ CCP4\_DefaultCallBack(uint16\_t\ capturedValue)}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00061}00061\ \{}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00062}00062\ \ \ \ \ \textcolor{comment}{//\ Add\ your\ code\ here}}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00063}00063\ \}}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00065}\mbox{\hyperlink{ccp4_8c_aeb3609b719ad6ea8b1a2b2a4691233ce}{00065}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ccp4_8c_aeb3609b719ad6ea8b1a2b2a4691233ce}{CCP4\_Initialize}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00066}00066\ \{}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00067}00067\ \ \ \ \ \textcolor{comment}{//\ Set\ the\ CCP4\ to\ the\ options\ selected\ in\ the\ User\ Interface}}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00068}00068\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00069}00069\ \ \ \ \ \textcolor{comment}{//\ CCP4M\ Falling\ edge;\ DC4B\ 0;\ }}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00070}00070\ \ \ \ \ CCP4CON\ =\ 0x04;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00071}00071\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00072}00072\ \ \ \ \ \textcolor{comment}{//\ CCPR4L\ 0;\ }}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00073}00073\ \ \ \ \ CCPR4L\ =\ 0x00;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00074}00074\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00075}00075\ \ \ \ \ \textcolor{comment}{//\ CCPR4H\ 0;\ }}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00076}00076\ \ \ \ \ CCPR4H\ =\ 0x00;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00077}00077\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00078}00078\ \ \ \ \ \textcolor{comment}{//\ Set\ the\ default\ call\ back\ function\ for\ CCP4}}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00079}00079\ \ \ \ \ \mbox{\hyperlink{ccp4_8c_a6796c430376f1dd1c73c3e593e8b6621}{CCP4\_SetCallBack}}(CCP4\_DefaultCallBack);}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00081}00081\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00082}00082\ \ \ \ \ \textcolor{comment}{//\ Clear\ the\ CCP4\ interrupt\ flag}}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00083}00083\ \ \ \ \ PIR3bits.CCP4IF\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00085}00085\ \ \ \ \ \textcolor{comment}{//\ Enable\ the\ CCP4\ interrupt}}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00086}00086\ \ \ \ \ PIE3bits.CCP4IE\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00087}00087\ \}}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00089}\mbox{\hyperlink{ccp4_8c_a2631fb394a26872b917161db6a7b5e17}{00089}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ccp4_8c_a2631fb394a26872b917161db6a7b5e17}{CCP4\_CaptureISR}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00090}00090\ \{}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00091}00091\ \ \ \ \ \mbox{\hyperlink{union_c_c_p_r4_reg__tag}{CCP4\_PERIOD\_REG\_T}}\ module;}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00093}00093\ \ \ \ \ \textcolor{comment}{//\ Clear\ the\ CCP4\ interrupt\ flag}}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00094}00094\ \ \ \ \ PIR3bits.CCP4IF\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00095}00095\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00096}00096\ \ \ \ \ \textcolor{comment}{//\ Copy\ captured\ value.}}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00097}00097\ \ \ \ \ module.\mbox{\hyperlink{union_c_c_p_r4_reg__tag_a0554cb666564e6b0f353775e95023121}{ccpr4l}}\ =\ CCPR4L;}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00098}00098\ \ \ \ \ module.\mbox{\hyperlink{union_c_c_p_r4_reg__tag_a2772b30b2b6436bb5467b1f3006541fd}{ccpr4h}}\ =\ CCPR4H;}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00099}00099\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00100}00100\ \ \ \ \ \textcolor{comment}{//\ Return\ 16bit\ captured\ value}}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00101}00101\ \ \ \ \ CCP4\_CallBack(module.\mbox{\hyperlink{union_c_c_p_r4_reg__tag_a3630dc0185e20bc01ff796e819fe02a4}{ccpr4\_16Bit}});}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00102}00102\ \}}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00104}\mbox{\hyperlink{ccp4_8c_a6796c430376f1dd1c73c3e593e8b6621}{00104}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ccp4_8c_a6796c430376f1dd1c73c3e593e8b6621}{CCP4\_SetCallBack}}(\textcolor{keywordtype}{void}\ (*customCallBack)(uint16\_t))\{}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00105}00105\ \ \ \ \ CCP4\_CallBack\ =\ customCallBack;}
+\DoxyCodeLine{\Hypertarget{ccp4_8c_source_l00106}00106\ \}}
+
+\end{DoxyCode}

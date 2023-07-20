@@ -1,0 +1,120 @@
+\doxysection{tmr0.\+c}
+\hypertarget{tmr0_8c_source}{}\label{tmr0_8c_source}\index{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/mcc\_generated\_files/tmr0.c@{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/mcc\_generated\_files/tmr0.c}}
+\mbox{\hyperlink{tmr0_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00024}00024\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00025}00025\ \textcolor{comment}{\ \ \ \ (c)\ 2018\ Microchip\ Technology\ Inc.\ and\ its\ subsidiaries.\ }}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00026}00026\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00027}00027\ \textcolor{comment}{\ \ \ \ Subject\ to\ your\ compliance\ with\ these\ terms,\ you\ may\ use\ Microchip\ software\ and\ any\ }}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00028}00028\ \textcolor{comment}{\ \ \ \ derivatives\ exclusively\ with\ Microchip\ products.\ It\ is\ your\ responsibility\ to\ comply\ with\ third\ party\ }}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00029}00029\ \textcolor{comment}{\ \ \ \ license\ terms\ applicable\ to\ your\ use\ of\ third\ party\ software\ (including\ open\ source\ software)\ that\ }}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00030}00030\ \textcolor{comment}{\ \ \ \ may\ accompany\ Microchip\ software.}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00031}00031\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00032}00032\ \textcolor{comment}{\ \ \ \ THIS\ SOFTWARE\ IS\ SUPPLIED\ BY\ MICROCHIP\ "{}AS\ IS"{}.\ NO\ WARRANTIES,\ WHETHER\ }}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00033}00033\ \textcolor{comment}{\ \ \ \ EXPRESS,\ IMPLIED\ OR\ STATUTORY,\ APPLY\ TO\ THIS\ SOFTWARE,\ INCLUDING\ ANY\ }}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00034}00034\ \textcolor{comment}{\ \ \ \ IMPLIED\ WARRANTIES\ OF\ NON-\/INFRINGEMENT,\ MERCHANTABILITY,\ AND\ FITNESS\ }}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00035}00035\ \textcolor{comment}{\ \ \ \ FOR\ A\ PARTICULAR\ PURPOSE.}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00036}00036\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00037}00037\ \textcolor{comment}{\ \ \ \ IN\ NO\ EVENT\ WILL\ MICROCHIP\ BE\ LIABLE\ FOR\ ANY\ INDIRECT,\ SPECIAL,\ PUNITIVE,\ }}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00038}00038\ \textcolor{comment}{\ \ \ \ INCIDENTAL\ OR\ CONSEQUENTIAL\ LOSS,\ DAMAGE,\ COST\ OR\ EXPENSE\ OF\ ANY\ KIND\ }}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00039}00039\ \textcolor{comment}{\ \ \ \ WHATSOEVER\ RELATED\ TO\ THE\ SOFTWARE,\ HOWEVER\ CAUSED,\ EVEN\ IF\ MICROCHIP\ }}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00040}00040\ \textcolor{comment}{\ \ \ \ HAS\ BEEN\ ADVISED\ OF\ THE\ POSSIBILITY\ OR\ THE\ DAMAGES\ ARE\ FORESEEABLE.\ TO\ }}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00041}00041\ \textcolor{comment}{\ \ \ \ THE\ FULLEST\ EXTENT\ ALLOWED\ BY\ LAW,\ MICROCHIP'S\ TOTAL\ LIABILITY\ ON\ ALL\ }}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00042}00042\ \textcolor{comment}{\ \ \ \ CLAIMS\ IN\ ANY\ WAY\ RELATED\ TO\ THIS\ SOFTWARE\ WILL\ NOT\ EXCEED\ THE\ AMOUNT\ }}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00043}00043\ \textcolor{comment}{\ \ \ \ OF\ FEES,\ IF\ ANY,\ THAT\ YOU\ HAVE\ PAID\ DIRECTLY\ TO\ MICROCHIP\ FOR\ THIS\ }}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00044}00044\ \textcolor{comment}{\ \ \ \ SOFTWARE.}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00045}00045\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00051}00051\ \textcolor{preprocessor}{\#include\ <xc.h>}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00052}00052\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{tmr0_8h}{tmr0.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00058}\mbox{\hyperlink{tmr0_8c_aee53ca6ad8ef9a518fdc9a0a8af1fe91}{00058}}\ \textcolor{keyword}{volatile}\ uint8\_t\ \mbox{\hyperlink{tmr0_8c_aee53ca6ad8ef9a518fdc9a0a8af1fe91}{timer0ReloadVal}};}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00059}\mbox{\hyperlink{tmr0_8c_a809211677d0753d6397e04afdbb945a3}{00059}}\ void\ (*\mbox{\hyperlink{tmr0_8c_a809211677d0753d6397e04afdbb945a3}{TMR0\_InterruptHandler}})(void);}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00064}\mbox{\hyperlink{tmr0_8c_a73398a18b711af030af4db3c4c6c15e1}{00064}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tmr0_8c_a73398a18b711af030af4db3c4c6c15e1}{TMR0\_Initialize}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00065}00065\ \{}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00066}00066\ \ \ \ \ \textcolor{comment}{//\ Set\ TMR0\ to\ the\ options\ selected\ in\ the\ User\ Interface}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00067}00067\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00068}00068\ \ \ \ \ \textcolor{comment}{//\ PSA\ assigned;\ PS\ 1:256;\ TMRSE\ Increment\_hi\_lo;\ mask\ the\ nWPUEN\ and\ INTEDG\ bits}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00069}00069\ \ \ \ \ OPTION\_REG\ =\ (uint8\_t)((OPTION\_REG\ \&\ 0xC0)\ |\ (0xD7\ \&\ 0x3F));\ }
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00070}00070\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00071}00071\ \ \ \ \ \textcolor{comment}{//\ TMR0\ 22;\ }}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00072}00072\ \ \ \ \ TMR0\ =\ 0x16;}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00073}00073\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00074}00074\ \ \ \ \ \textcolor{comment}{//\ Load\ the\ TMR\ value\ to\ reload\ variable}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00075}00075\ \ \ \ \ \mbox{\hyperlink{tmr0_8c_aee53ca6ad8ef9a518fdc9a0a8af1fe91}{timer0ReloadVal}}=\ 22;}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00077}00077\ \ \ \ \ \textcolor{comment}{//\ Clear\ Interrupt\ flag\ before\ enabling\ the\ interrupt}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00078}00078\ \ \ \ \ INTCONbits.TMR0IF\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00080}00080\ \ \ \ \ \textcolor{comment}{//\ Enabling\ TMR0\ interrupt}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00081}00081\ \ \ \ \ INTCONbits.TMR0IE\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00083}00083\ \ \ \ \ \textcolor{comment}{//\ Set\ Default\ Interrupt\ Handler}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00084}00084\ \ \ \ \ \mbox{\hyperlink{tmr0_8c_a1b6adc623040b0e791871a0f9652a67f}{TMR0\_SetInterruptHandler}}(\mbox{\hyperlink{tmr0_8c_aab6153f25bf68ecb07d33a269e5b8dc4}{TMR0\_DefaultInterruptHandler}});}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00085}00085\ \}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00087}\mbox{\hyperlink{tmr0_8c_a091fd68f48dfccc6890ab47872b0e551}{00087}}\ uint8\_t\ \mbox{\hyperlink{tmr0_8c_a091fd68f48dfccc6890ab47872b0e551}{TMR0\_ReadTimer}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00088}00088\ \{}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00089}00089\ \ \ \ \ uint8\_t\ readVal;}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00091}00091\ \ \ \ \ readVal\ =\ TMR0;}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00093}00093\ \ \ \ \ \textcolor{keywordflow}{return}\ readVal;}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00094}00094\ \}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00095}00095\ }
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00096}\mbox{\hyperlink{tmr0_8c_a951111850fea5583b9f98b566b2e4508}{00096}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tmr0_8c_a951111850fea5583b9f98b566b2e4508}{TMR0\_WriteTimer}}(uint8\_t\ timerVal)}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00097}00097\ \{}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00098}00098\ \ \ \ \ \textcolor{comment}{//\ Write\ to\ the\ Timer0\ register}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00099}00099\ \ \ \ \ TMR0\ =\ timerVal;}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00100}00100\ \}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00102}\mbox{\hyperlink{tmr0_8c_a61659c2dc0ff29595abe23b24cf81d14}{00102}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tmr0_8c_a61659c2dc0ff29595abe23b24cf81d14}{TMR0\_Reload}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00103}00103\ \{}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00104}00104\ \ \ \ \ \textcolor{comment}{//\ Write\ to\ the\ Timer0\ register}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00105}00105\ \ \ \ \ TMR0\ =\ \mbox{\hyperlink{tmr0_8c_aee53ca6ad8ef9a518fdc9a0a8af1fe91}{timer0ReloadVal}};}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00106}00106\ \}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00108}\mbox{\hyperlink{tmr0_8c_a8a465e070e24fe06a488f952b089886d}{00108}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tmr0_8c_a8a465e070e24fe06a488f952b089886d}{TMR0\_ISR}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00109}00109\ \{}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00110}00110\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{volatile}\ uint16\_t\ CountCallBack\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00112}00112\ \ \ \ \ \textcolor{comment}{//\ Clear\ the\ TMR0\ interrupt\ flag}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00113}00113\ \ \ \ \ INTCONbits.TMR0IF\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00115}00115\ \ \ \ \ TMR0\ =\ \mbox{\hyperlink{tmr0_8c_aee53ca6ad8ef9a518fdc9a0a8af1fe91}{timer0ReloadVal}};}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00117}00117\ \ \ \ \ \textcolor{comment}{//\ callback\ function\ -\/\ called\ every\ 5th\ pass}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00118}00118\ \ \ \ \ \textcolor{keywordflow}{if}\ (++CountCallBack\ >=\ \mbox{\hyperlink{tmr0_8h_a362446b9c5fcc0ef12a216235b07ca11}{TMR0\_INTERRUPT\_TICKER\_FACTOR}})}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00119}00119\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00120}00120\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ticker\ function\ call}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00121}00121\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{tmr0_8c_aa22fd5246420471763940949dfa43a97}{TMR0\_CallBack}}();}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00123}00123\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ reset\ ticker\ counter}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00124}00124\ \ \ \ \ \ \ \ \ CountCallBack\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00125}00125\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00127}00127\ \ \ \ \ \textcolor{comment}{//\ add\ your\ TMR0\ interrupt\ custom\ code}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00128}00128\ \}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00129}00129\ }
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00130}\mbox{\hyperlink{tmr0_8c_aa22fd5246420471763940949dfa43a97}{00130}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tmr0_8c_aa22fd5246420471763940949dfa43a97}{TMR0\_CallBack}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00131}00131\ \{}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00132}00132\ \ \ \ \ \textcolor{comment}{//\ Add\ your\ custom\ callback\ code\ here}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00134}00134\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{tmr0_8c_a809211677d0753d6397e04afdbb945a3}{TMR0\_InterruptHandler}})}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00135}00135\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00136}00136\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{tmr0_8c_a809211677d0753d6397e04afdbb945a3}{TMR0\_InterruptHandler}}();}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00137}00137\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00138}00138\ \}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00140}\mbox{\hyperlink{tmr0_8c_a1b6adc623040b0e791871a0f9652a67f}{00140}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tmr0_8c_a1b6adc623040b0e791871a0f9652a67f}{TMR0\_SetInterruptHandler}}(\textcolor{keywordtype}{void}\ (*\ InterruptHandler)(\textcolor{keywordtype}{void}))\{}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00141}00141\ \ \ \ \ \mbox{\hyperlink{tmr0_8c_a809211677d0753d6397e04afdbb945a3}{TMR0\_InterruptHandler}}\ =\ InterruptHandler;}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00142}00142\ \}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00143}00143\ }
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00144}\mbox{\hyperlink{tmr0_8c_aab6153f25bf68ecb07d33a269e5b8dc4}{00144}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tmr0_8c_aab6153f25bf68ecb07d33a269e5b8dc4}{TMR0\_DefaultInterruptHandler}}(\textcolor{keywordtype}{void})\{}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00145}00145\ \ \ \ \ \textcolor{comment}{//\ add\ your\ TMR0\ interrupt\ custom\ code}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00146}00146\ \ \ \ \ \textcolor{comment}{//\ or\ set\ custom\ function\ using\ TMR0\_SetInterruptHandler()}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00147}00147\ \}}
+\DoxyCodeLine{\Hypertarget{tmr0_8c_source_l00148}00148\ }
+
+\end{DoxyCode}

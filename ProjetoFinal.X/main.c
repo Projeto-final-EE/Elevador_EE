@@ -13,11 +13,11 @@
 
 
 /**
- * Função que aplica as mascaras as variaveis destinoSub e DestinoDesc que controlam as paradas do elvador aos andares
+ * Funcao que aplica as mascaras as variaveis destinoSub e DestinoDesc que controlam as paradas do elvador aos andares
 */
 void organizaTrajeto(){
-    uint8_t mascaraOrigem = 1<<origem;                          // Desloca o bit '1' até a posição do andar escolhido com origem
-    uint8_t mascaraDestino = 1<<destino;                        // Desloca o bit '1' até a posição do andar escolhido com destino
+    uint8_t mascaraOrigem = 1<<origem;                          // Desloca o bit '1' ate a posicao do andar escolhido com origem
+    uint8_t mascaraDestino = 1<<destino;                        // Desloca o bit '1' ate a posicao do andar escolhido com destino
     
     if(origem == 0){
         destinoSub = destinoSub | mascaraDestino;
@@ -165,18 +165,18 @@ void txSpi( uint8_t *data, size_t dataSize){
 void matrixUpdate(){
     uint8_t data[2];                    // Buffer para tx spi
     if (flip_matrix){                   // No Lab Remoto a imagem aparece invertida na horizontal
-        for(uint8_t i=8;i>0;i--){       // Endere?a digitos 7..0
+        for(uint8_t i=8;i>0;i--){       // Endereca digitos 7..0
             data[0] = i;                // Digito i da Matriz
             data[1] = MatrixLed[i-1];   // Valor do digito i da Matriz  
             txSpi(data, 2);             // Tx valores dos d?gitos dig para as matrizes
         }
     }else{
         uint8_t index = 7;              //Indice da matrix de dados
-        for(uint8_t i=1;i<9;i++){       // Endere?a digitos 0..7
+        for(uint8_t i=1;i<9;i++){       // Endereca digitos 0..7
 
             data[0] = i;                // Digito i da Matriz
             data[1] = MatrixLed[index]; // Valor do digito i da Matriz  
-            txSpi(data, 2);             // Tx valores dos d?gitos dig para as matrizes
+            txSpi(data, 2);             // Tx valores dos digitos dig para as matrizes
             index--;
         }
     }
@@ -188,16 +188,16 @@ void matrixUpdate(){
 void initMatrix(){
     uint8_t data[4];                    // Buffer para tx spi
     uint8_t k=0;                        // Ponteiro do arranjo da configuração das matrizes
-   for(uint8_t  i =0; i<8; i++){        // Zera dígitos
+   for(uint8_t  i =0; i<8; i++){        // Zera digitos
             MatrixLed[i] = 0;
         }        
     for(uint8_t i=0;i<6;i++){           // Envia os 8 valores de configuração
         for(uint8_t j=0;j<4;j=j+2){
-            data[j]= matrix_conf[k];    // Define o endereço dos registradores de configuração
-            data[j+1]= matrix_conf[k+1];// Define o valor dos registradores de configuração
+            data[j]= matrix_conf[k];    // Define o endereço dos registradores de configuracao
+            data[j+1]= matrix_conf[k+1];// Define o valor dos registradores de configuracao
         }
-        k=k+2;                          // Inc ponteiro da configuração     
-        txSpi( data, 4);                // Tx configuração para a  matriz de LED
+        k=k+2;                          // Inc ponteiro da configuracao     
+        txSpi( data, 4);                // Tx configuracao para a  matriz de LED
         if(i==4){                       // Display-Test
             //__delay_ms(800);
         }
@@ -216,7 +216,7 @@ void controleMovimento(){
             break;
         case Espera:
             if (cont >=4){
-                mov = RetornaS0; //Caso não tenha tido atualizações no trajeto entra em retornaS0
+                mov = RetornaS0; //Caso não tenha tido atualizacoes no trajeto entra em retornaS0
                 cont = 0;
             }else{
                 cont++;
@@ -263,13 +263,13 @@ void controleMovimento(){
  * Funcao que trata a interrupção do sensor S1
 */
 void chegadaS1(){ 
-    //Atualização da variavel da matrix de de Dados com o numero 0 mais a direcao de movimento do elevador
+    //Atualizacao da variavel da matrix de de Dados com o numero 0 mais a direcao de movimento do elevador
     motor = 0;
     andarAtual = 0;
     pulsoEncoder = 1;
     
-    //Ao chegar no primeiro andar o elevador j� finalizou todo seu trajeto
-    //Atualização da variavel da matrix de de Dados com o numero 0 mais a direcao de movimento do elevador
+    //Ao chegar no primeiro andar o elevador ja finalizou todo seu trajeto
+    //Atualizacao da variavel da matrix de de Dados com o numero 0 mais a direcao de movimento do elevador
     MatrixLed[0] = 0b01111110;
     MatrixLed[1] = 0b10000001;
     MatrixLed[2] = 0b10000001;
@@ -293,10 +293,10 @@ void chegadaS1(){
 }
 
 /**
- * Funcao que trata a interrupção do sensor S2
+ * Funcao que trata a interrupcao do sensor S2
 */
 void chegadaS2(){
-    //Atualização da variavel da matrix de de Dados com o numero 1 mais a direcao de movimento do elevador
+    //Atualizacao da variavel da matrix de de Dados com o numero 1 mais a direcao de movimento do elevador
     motor = 0;
     andarAtual = 1;
     
@@ -307,7 +307,7 @@ void chegadaS2(){
         TMR4_StartTimer();
     }
     
-    //Atualização da variavel da matrix de de Dados com o numero 1 mais a direcao de movimento do elevador
+    //Atualizacao da variavel da matrix de de Dados com o numero 1 mais a direcao de movimento do elevador
     MatrixLed[0] = 0b00000000;
     MatrixLed[1] = 0b01000001;
     MatrixLed[2] = 0b11111111;
@@ -333,10 +333,10 @@ void chegadaS2(){
 }
 
 /**
- * Funcao que trata a interrupção do sensor S3
+ * Funcao que trata a interrupcao do sensor S3
 */
 void chegadaS3(){
-    //Atualização da variavel da matrix de de Dados com o numero 2 mais a direcao de movimento do elevador
+    //Atualizacao da variavel da matrix de de Dados com o numero 2 mais a direcao de movimento do elevador
     motor = 0;
     andarAtual = 2;
     
@@ -372,10 +372,10 @@ void chegadaS3(){
 }
 
 /**
- * Funcao que trata a interrupção do sensor S4
+ * Funcao que trata a interrupcao do sensor S4
 */
 void chegadaS4(){
-    //Atualização da variavel da matrix de de Dados com o numero 3 mais a direcao de movimento do elevador
+    //Atualizacao da variavel da matrix de de Dados com o numero 3 mais a direcao de movimento do elevador
     motor = 0;
     andarAtual = 3;
     pulsoEncoder = 120;
@@ -387,7 +387,7 @@ void chegadaS4(){
         TMR4_StartTimer();
     }
     
-    //Atualização da variavel da matrix de de Dados com o numero 3 mais a direcao de movimento do elevador
+    //Atualizacao da variavel da matrix de de Dados com o numero 3 mais a direcao de movimento do elevador
     MatrixLed[0] = 0b10000001;
     MatrixLed[1] = 0b10010001;
     MatrixLed[2] = 0b10010001;
@@ -420,7 +420,7 @@ void main(void)
 {
     SYSTEM_Initialize();
     
-    //Handlers das Interrupçoes
+    //Handlers das Interrupcoes
     /* Caso a Interrupcao nao tenha handler,
      * a funcao esta sendo chamada dentro da funcao de interrupcao do periferico
      */

@@ -1,0 +1,93 @@
+\doxysection{tmr2.\+c}
+\hypertarget{tmr2_8c_source}{}\label{tmr2_8c_source}\index{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/mcc\_generated\_files/tmr2.c@{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/mcc\_generated\_files/tmr2.c}}
+\mbox{\hyperlink{tmr2_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00024}00024\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00025}00025\ \textcolor{comment}{\ \ \ \ (c)\ 2018\ Microchip\ Technology\ Inc.\ and\ its\ subsidiaries.\ }}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00026}00026\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00027}00027\ \textcolor{comment}{\ \ \ \ Subject\ to\ your\ compliance\ with\ these\ terms,\ you\ may\ use\ Microchip\ software\ and\ any\ }}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00028}00028\ \textcolor{comment}{\ \ \ \ derivatives\ exclusively\ with\ Microchip\ products.\ It\ is\ your\ responsibility\ to\ comply\ with\ third\ party\ }}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00029}00029\ \textcolor{comment}{\ \ \ \ license\ terms\ applicable\ to\ your\ use\ of\ third\ party\ software\ (including\ open\ source\ software)\ that\ }}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00030}00030\ \textcolor{comment}{\ \ \ \ may\ accompany\ Microchip\ software.}}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00031}00031\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00032}00032\ \textcolor{comment}{\ \ \ \ THIS\ SOFTWARE\ IS\ SUPPLIED\ BY\ MICROCHIP\ "{}AS\ IS"{}.\ NO\ WARRANTIES,\ WHETHER\ }}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00033}00033\ \textcolor{comment}{\ \ \ \ EXPRESS,\ IMPLIED\ OR\ STATUTORY,\ APPLY\ TO\ THIS\ SOFTWARE,\ INCLUDING\ ANY\ }}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00034}00034\ \textcolor{comment}{\ \ \ \ IMPLIED\ WARRANTIES\ OF\ NON-\/INFRINGEMENT,\ MERCHANTABILITY,\ AND\ FITNESS\ }}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00035}00035\ \textcolor{comment}{\ \ \ \ FOR\ A\ PARTICULAR\ PURPOSE.}}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00036}00036\ \textcolor{comment}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00037}00037\ \textcolor{comment}{\ \ \ \ IN\ NO\ EVENT\ WILL\ MICROCHIP\ BE\ LIABLE\ FOR\ ANY\ INDIRECT,\ SPECIAL,\ PUNITIVE,\ }}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00038}00038\ \textcolor{comment}{\ \ \ \ INCIDENTAL\ OR\ CONSEQUENTIAL\ LOSS,\ DAMAGE,\ COST\ OR\ EXPENSE\ OF\ ANY\ KIND\ }}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00039}00039\ \textcolor{comment}{\ \ \ \ WHATSOEVER\ RELATED\ TO\ THE\ SOFTWARE,\ HOWEVER\ CAUSED,\ EVEN\ IF\ MICROCHIP\ }}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00040}00040\ \textcolor{comment}{\ \ \ \ HAS\ BEEN\ ADVISED\ OF\ THE\ POSSIBILITY\ OR\ THE\ DAMAGES\ ARE\ FORESEEABLE.\ TO\ }}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00041}00041\ \textcolor{comment}{\ \ \ \ THE\ FULLEST\ EXTENT\ ALLOWED\ BY\ LAW,\ MICROCHIP'S\ TOTAL\ LIABILITY\ ON\ ALL\ }}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00042}00042\ \textcolor{comment}{\ \ \ \ CLAIMS\ IN\ ANY\ WAY\ RELATED\ TO\ THIS\ SOFTWARE\ WILL\ NOT\ EXCEED\ THE\ AMOUNT\ }}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00043}00043\ \textcolor{comment}{\ \ \ \ OF\ FEES,\ IF\ ANY,\ THAT\ YOU\ HAVE\ PAID\ DIRECTLY\ TO\ MICROCHIP\ FOR\ THIS\ }}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00044}00044\ \textcolor{comment}{\ \ \ \ SOFTWARE.}}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00045}00045\ \textcolor{comment}{*/}}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00051}00051\ \textcolor{preprocessor}{\#include\ <xc.h>}}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00052}00052\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{tmr2_8h}{tmr2.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00062}\mbox{\hyperlink{tmr2_8c_a46c13c9255379e99c10240229a145d37}{00062}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tmr2_8c_a46c13c9255379e99c10240229a145d37}{TMR2\_Initialize}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00063}00063\ \{}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00064}00064\ \ \ \ \ \textcolor{comment}{//\ Set\ TMR2\ to\ the\ options\ selected\ in\ the\ User\ Interface}}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00066}00066\ \ \ \ \ \textcolor{comment}{//\ PR2\ 255;\ }}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00067}00067\ \ \ \ \ PR2\ =\ 0xFF;}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00069}00069\ \ \ \ \ \textcolor{comment}{//\ TMR2\ 0;\ }}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00070}00070\ \ \ \ \ TMR2\ =\ 0x00;}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00072}00072\ \ \ \ \ \textcolor{comment}{//\ Clearing\ IF\ flag.}}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00073}00073\ \ \ \ \ PIR1bits.TMR2IF\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00075}00075\ \ \ \ \ \textcolor{comment}{//\ T2CKPS\ 1:1;\ T2OUTPS\ 1:1;\ TMR2ON\ on;\ }}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00076}00076\ \ \ \ \ T2CON\ =\ 0x04;}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00077}00077\ \}}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00079}\mbox{\hyperlink{tmr2_8c_afb37b846db811f973b4009215d59f91a}{00079}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tmr2_8c_afb37b846db811f973b4009215d59f91a}{TMR2\_StartTimer}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00080}00080\ \{}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00081}00081\ \ \ \ \ \textcolor{comment}{//\ Start\ the\ Timer\ by\ writing\ to\ TMRxON\ bit}}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00082}00082\ \ \ \ \ T2CONbits.TMR2ON\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00083}00083\ \}}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00085}\mbox{\hyperlink{tmr2_8c_a36d7e6eab8b279863c83a32fb41adb02}{00085}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tmr2_8c_a36d7e6eab8b279863c83a32fb41adb02}{TMR2\_StopTimer}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00086}00086\ \{}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00087}00087\ \ \ \ \ \textcolor{comment}{//\ Stop\ the\ Timer\ by\ writing\ to\ TMRxON\ bit}}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00088}00088\ \ \ \ \ T2CONbits.TMR2ON\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00089}00089\ \}}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00091}\mbox{\hyperlink{tmr2_8c_a4acc1f7c8c2dbd46424dad273cdb9cb1}{00091}}\ uint8\_t\ \mbox{\hyperlink{tmr2_8c_a4acc1f7c8c2dbd46424dad273cdb9cb1}{TMR2\_ReadTimer}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00092}00092\ \{}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00093}00093\ \ \ \ \ uint8\_t\ readVal;}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00095}00095\ \ \ \ \ readVal\ =\ TMR2;}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00097}00097\ \ \ \ \ \textcolor{keywordflow}{return}\ readVal;}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00098}00098\ \}}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00100}\mbox{\hyperlink{tmr2_8c_acb2fbe8254fcc8c01b9784b028a7eac6}{00100}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tmr2_8c_acb2fbe8254fcc8c01b9784b028a7eac6}{TMR2\_WriteTimer}}(uint8\_t\ timerVal)}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00101}00101\ \{}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00102}00102\ \ \ \ \ \textcolor{comment}{//\ Write\ to\ the\ Timer2\ register}}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00103}00103\ \ \ \ \ TMR2\ =\ timerVal;}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00104}00104\ \}}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00106}\mbox{\hyperlink{tmr2_8c_a5490961ba3ba77d10896e320ab840a74}{00106}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{tmr2_8c_a5490961ba3ba77d10896e320ab840a74}{TMR2\_LoadPeriodRegister}}(uint8\_t\ periodVal)}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00107}00107\ \{}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00108}00108\ \ \ \ PR2\ =\ periodVal;}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00109}00109\ \}}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00111}\mbox{\hyperlink{tmr2_8c_ab0b9dbd90bacc904f311d71fbcccd038}{00111}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{tmr2_8c_ab0b9dbd90bacc904f311d71fbcccd038}{TMR2\_HasOverflowOccured}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00112}00112\ \{}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00113}00113\ \ \ \ \ \textcolor{comment}{//\ check\ if\ \ overflow\ has\ occurred\ by\ checking\ the\ TMRIF\ bit}}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00114}00114\ \ \ \ \ \textcolor{keywordtype}{bool}\ status\ =\ PIR1bits.TMR2IF;}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00115}00115\ \ \ \ \ \textcolor{keywordflow}{if}(status)}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00116}00116\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00117}00117\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Clearing\ IF\ flag.}}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00118}00118\ \ \ \ \ \ \ \ \ PIR1bits.TMR2IF\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00119}00119\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00120}00120\ \ \ \ \ \textcolor{keywordflow}{return}\ status;}
+\DoxyCodeLine{\Hypertarget{tmr2_8c_source_l00121}00121\ \}}
+
+\end{DoxyCode}

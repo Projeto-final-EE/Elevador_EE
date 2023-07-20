@@ -1,0 +1,71 @@
+\doxysection{C\+:/\+Users/thali/\+Documents/\+Elevador\+\_\+\+EE/\+Projeto\+Final.X/mcc\+\_\+generated\+\_\+files/pwm3.h File Reference}
+\hypertarget{pwm3_8h}{}\label{pwm3_8h}\index{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/mcc\_generated\_files/pwm3.h@{C:/Users/thali/Documents/Elevador\_EE/ProjetoFinal.X/mcc\_generated\_files/pwm3.h}}
+{\ttfamily \#include $<$xc.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{pwm3_8h_acd0221627112714d97f95b6c512ad005}{PWM3\+\_\+\+Initialize}} (void)
+\item 
+void \mbox{\hyperlink{pwm3_8h_af9c974bd4a79b9c6c982df94f9eb8508}{PWM3\+\_\+\+Load\+Duty\+Value}} (uint16\+\_\+t duty\+Value)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{pwm3_8h_acd0221627112714d97f95b6c512ad005}\label{pwm3_8h_acd0221627112714d97f95b6c512ad005} 
+\index{pwm3.h@{pwm3.h}!PWM3\_Initialize@{PWM3\_Initialize}}
+\index{PWM3\_Initialize@{PWM3\_Initialize}!pwm3.h@{pwm3.h}}
+\doxysubsubsection{\texorpdfstring{PWM3\_Initialize()}{PWM3\_Initialize()}}
+{\footnotesize\ttfamily void PWM3\+\_\+\+Initialize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+PWM3 Generated Driver File
+
+@\+Company Microchip Technology Inc.
+
+@\+File Name \doxylink{pwm3_8h}{pwm3.\+h}
+
+@\+Summary This is the generated driver implementation file for the PWM3 driver using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+
+@\+Description This header file provides implementations for driver APIs for PWM3. Generation Information \+: Product Revision \+: PIC10 / PIC12 / PIC16 / PIC18 MCUs -\/ 1.\+81.\+8 Device \+: PIC16\+F1827 Driver Version \+: 2.\+01 The generated drivers are tested against the following\+: Compiler \+: XC8 2.\+36 and above MPLAB \+: MPLAB X 6.\+00 Section\+: Included Files Section\+: PWM Module APIs @\+Summary Initializes the PWM3
+
+@\+Description This routine initializes the PWM3 module. This routine must be called before any other PWM3 routine is called. This routine should only be called once during system initialization.
+
+@\+Preconditions None
+
+@\+Param None
+
+@\+Returns None
+
+@\+Comment
+
+@\+Example {\ttfamily  uint16\+\_\+t dutycycle;}
+
+{\ttfamily  CCP3\+\_\+\+Initialize(); PWM3\+\_\+\+Load\+Duty\+Value(dutycycle); }
+
+Section\+: PWM Module APIs 
+
+Definition at line \mbox{\hyperlink{pwm3_8c_source_l00064}{64}} of file \mbox{\hyperlink{pwm3_8c_source}{pwm3.\+c}}.
+
+\Hypertarget{pwm3_8h_af9c974bd4a79b9c6c982df94f9eb8508}\label{pwm3_8h_af9c974bd4a79b9c6c982df94f9eb8508} 
+\index{pwm3.h@{pwm3.h}!PWM3\_LoadDutyValue@{PWM3\_LoadDutyValue}}
+\index{PWM3\_LoadDutyValue@{PWM3\_LoadDutyValue}!pwm3.h@{pwm3.h}}
+\doxysubsubsection{\texorpdfstring{PWM3\_LoadDutyValue()}{PWM3\_LoadDutyValue()}}
+{\footnotesize\ttfamily void PWM3\+\_\+\+Load\+Duty\+Value (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{duty\+Value }\end{DoxyParamCaption})}
+
+@\+Summary Loads 16-\/bit duty cycle.
+
+@\+Description This routine loads the 16 bit duty cycle value.
+
+@\+Preconditions \doxylink{pwm3_8h_acd0221627112714d97f95b6c512ad005}{PWM3\+\_\+\+Initialize()} function should have been called before calling this function.
+
+@\+Param Pass 16bit duty cycle value.
+
+@\+Returns None
+
+@\+Example {\ttfamily  uint16\+\_\+t dutycycle;}
+
+{\ttfamily  \doxylink{pwm3_8h_acd0221627112714d97f95b6c512ad005}{PWM3\+\_\+\+Initialize()}; PWM3\+\_\+\+Load\+Duty\+Value(dutycycle); } 
+
+Definition at line \mbox{\hyperlink{pwm3_8c_source_l00082}{82}} of file \mbox{\hyperlink{pwm3_8c_source}{pwm3.\+c}}.
+

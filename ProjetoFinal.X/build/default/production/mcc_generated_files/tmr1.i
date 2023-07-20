@@ -4373,10 +4373,10 @@ void TMR1_Initialize(void)
     T1GCON = 0x00;
 
 
-    TMR1H = 0x0B;
+    TMR1H = 0xFF;
 
 
-    TMR1L = 0xDC;
+    TMR1L = 0xFF;
 
 
     PIR1bits.TMR1IF = 0;
@@ -4385,7 +4385,7 @@ void TMR1_Initialize(void)
     timer1ReloadVal=(uint16_t)((TMR1H << 8) | TMR1L);
 
 
-    T1CON = 0x31;
+    T1CON = 0x01;
 }
 
 void TMR1_StartTimer(void)

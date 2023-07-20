@@ -4584,15 +4584,6 @@ uint8_t TMR1_CheckGateValueStatus(void);
 _Bool TMR1_HasOverflowOccured(void);
 # 58 "mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/cmp2.h" 1
-# 92 "mcc_generated_files/cmp2.h"
-void CMP2_Initialize(void);
-# 132 "mcc_generated_files/cmp2.h"
-_Bool CMP2_GetOutputStatus(void);
-# 148 "mcc_generated_files/cmp2.h"
-void CMP2_ISR(void);
-# 59 "mcc_generated_files/mcc.h" 2
-
 # 1 "mcc_generated_files/tmr2.h" 1
 # 103 "mcc_generated_files/tmr2.h"
 void TMR2_Initialize(void);
@@ -4608,6 +4599,15 @@ void TMR2_WriteTimer(uint8_t timerVal);
 void TMR2_LoadPeriodRegister(uint8_t periodVal);
 # 325 "mcc_generated_files/tmr2.h"
 _Bool TMR2_HasOverflowOccured(void);
+# 59 "mcc_generated_files/mcc.h" 2
+
+# 1 "mcc_generated_files/cmp2.h" 1
+# 92 "mcc_generated_files/cmp2.h"
+void CMP2_Initialize(void);
+# 132 "mcc_generated_files/cmp2.h"
+_Bool CMP2_GetOutputStatus(void);
+# 148 "mcc_generated_files/cmp2.h"
+void CMP2_ISR(void);
 # 60 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/cmp1.h" 1
@@ -4640,6 +4640,13 @@ extern void (*TMR0_InterruptHandler)(void);
 void TMR0_DefaultInterruptHandler(void);
 # 62 "mcc_generated_files/mcc.h" 2
 
+# 1 "mcc_generated_files/fvr.h" 1
+# 93 "mcc_generated_files/fvr.h"
+ void FVR_Initialize(void);
+# 127 "mcc_generated_files/fvr.h"
+_Bool FVR_IsOutputReady(void);
+# 63 "mcc_generated_files/mcc.h" 2
+
 # 1 "mcc_generated_files/ccp4.h" 1
 # 80 "mcc_generated_files/ccp4.h"
 typedef union CCPR4Reg_tag
@@ -4660,13 +4667,6 @@ void CCP4_Initialize(void);
 void CCP4_CaptureISR(void);
 # 180 "mcc_generated_files/ccp4.h"
  void CCP4_SetCallBack(void (*customCallBack)(uint16_t));
-# 63 "mcc_generated_files/mcc.h" 2
-
-# 1 "mcc_generated_files/fvr.h" 1
-# 93 "mcc_generated_files/fvr.h"
- void FVR_Initialize(void);
-# 127 "mcc_generated_files/fvr.h"
-_Bool FVR_IsOutputReady(void);
 # 64 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pwm3.h" 1

@@ -55,13 +55,14 @@ uint8_t pulsoEncoder = 0;       // Numero de pulsos do encoder
 float velocidadeMotor = 0;   // Velocidade do motor (transformar em 9 bits))
 uint8_t flag = 0x00;            // Flag auxiliar para CCP4
 uint16_t t1 = 0, t2 = 0;        // Tempo 1 e 2 para CCP4
+uint8_t inc = 1;
 
 uint8_t origem = 0, oTemp; // Indica origem da chamada do elevador
 uint8_t destino = 0, dTemp; // Indica o destino do elevador
 uint8_t andarAtual = 0; // Indica o andar atual
 uint8_t altura; // Valor da altura atual
 uint16_t temperatura; // Valor da temperatura do motor
-
+uint8_t motor = 0;
 bool subindo = true; //flag que indica se o elevador estA subindo ou descendo
 uint8_t MatrixLed[8]; //Matrix de Dados que armazena o valor a ser transmito por SPI para a matrix de LED
 uint8_t destinoSub= 0b00000000; // indice 1 para andar 1, 2 para andar 2 e 3 para andar 3

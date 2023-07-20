@@ -4469,20 +4469,21 @@ uint8_t pulsoEncoder = 0;
 float velocidadeMotor = 0;
 uint8_t flag = 0x00;
 uint16_t t1 = 0, t2 = 0;
+uint8_t inc = 1;
 
 uint8_t origem = 0, oTemp;
 uint8_t destino = 0, dTemp;
 uint8_t andarAtual = 0;
 uint8_t altura;
 uint16_t temperatura;
-
+uint8_t motor = 0;
 _Bool subindo = 1;
 uint8_t MatrixLed[8];
 uint8_t destinoSub= 0b00000000;
 uint8_t destinoDesc= 0b00000000;
-# 77 "mcc_generated_files/../main.h"
+# 78 "mcc_generated_files/../main.h"
 _Bool isValidFloor(char floor);
-# 95 "mcc_generated_files/../main.h"
+# 96 "mcc_generated_files/../main.h"
 void sendInfo(void);
 
 void organizaTrajeto();

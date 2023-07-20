@@ -1,0 +1,99 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"13 bin2bcd.c
+[; ;bin2bcd.c: 13:         struct{
+[s S6 :8 `uc 1 :4 `uc 1 :4 `uc 1 :4 `uc 1 :4 `uc 1 :4 `uc 1 :4 `uc 1 ]
+[n S6 . . . d3 d2 d1 d0 . ]
+"11
+[; ;bin2bcd.c: 11:     union{
+[u S5 `ul 1 `S6 1 ]
+[n S5 . shift dat ]
+"29 C:\Program Files\Microchip\xc8\v2.41\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.41\pic\include\c99\string.h: 29: void *memset (void *, int, size_t);
+[v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
+"10 bin2bcd.c
+[; ;bin2bcd.c: 10: uint16_t bin2bcd(uint16_t binVal){
+[v _bin2bcd `(us ~T0 @X0 1 ef1`us ]
+{
+[e :U _bin2bcd ]
+[v _binVal `us ~T0 @X0 1 r1 ]
+[f ]
+"22
+[; ;bin2bcd.c: 22:     }dataU;
+[v _dataU `S5 ~T0 @X0 1 a ]
+"23
+[; ;bin2bcd.c: 23:     memset(&dataU,0,4);
+[e ( _memset (3 , , -> &U _dataU `*v -> 0 `i -> -> 4 `i `ui ]
+"24
+[; ;bin2bcd.c: 24:     dataU.shift = (uint32_t)binVal;
+[e = . _dataU 0 -> _binVal `ul ]
+"25
+[; ;bin2bcd.c: 25:     for(uint8_t i=0;i<12;i++){
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 12 `i 7  ]
+[e $U 8  ]
+[e :U 7 ]
+{
+"26
+[; ;bin2bcd.c: 26:    if(dataU.dat.d0>=5){
+[e $ ! >= -> . . _dataU 1 5 `i -> 5 `i 10  ]
+{
+"27
+[; ;bin2bcd.c: 27:     dataU.dat.d0 = dataU.dat.d0 + 3;
+[e = . . _dataU 1 5 -> + -> . . _dataU 1 5 `i -> 3 `i `uc ]
+"28
+[; ;bin2bcd.c: 28:    }
+}
+[e :U 10 ]
+"29
+[; ;bin2bcd.c: 29:    if(dataU.dat.d1>=5){
+[e $ ! >= -> . . _dataU 1 4 `i -> 5 `i 11  ]
+{
+"30
+[; ;bin2bcd.c: 30:     dataU.dat.d1 = dataU.dat.d1 + 3;
+[e = . . _dataU 1 4 -> + -> . . _dataU 1 4 `i -> 3 `i `uc ]
+"31
+[; ;bin2bcd.c: 31:    }
+}
+[e :U 11 ]
+"32
+[; ;bin2bcd.c: 32:             if(dataU.dat.d2>=5){
+[e $ ! >= -> . . _dataU 1 3 `i -> 5 `i 12  ]
+{
+"33
+[; ;bin2bcd.c: 33:     dataU.dat.d2 = dataU.dat.d2 + 3;
+[e = . . _dataU 1 3 -> + -> . . _dataU 1 3 `i -> 3 `i `uc ]
+"34
+[; ;bin2bcd.c: 34:    }
+}
+[e :U 12 ]
+"35
+[; ;bin2bcd.c: 35:             if(dataU.dat.d3>=5){
+[e $ ! >= -> . . _dataU 1 2 `i -> 5 `i 13  ]
+{
+"36
+[; ;bin2bcd.c: 36:     dataU.dat.d3 = dataU.dat.d3 + 3;
+[e = . . _dataU 1 2 -> + -> . . _dataU 1 2 `i -> 3 `i `uc ]
+"37
+[; ;bin2bcd.c: 37:    }
+}
+[e :U 13 ]
+"38
+[; ;bin2bcd.c: 38:    dataU.shift = dataU.shift<<1;
+[e = . _dataU 0 << . _dataU 0 -> 1 `i ]
+"39
+[; ;bin2bcd.c: 39:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 12 `i 7  ]
+[e :U 8 ]
+}
+"40
+[; ;bin2bcd.c: 40:     return (uint16_t)(dataU.shift>>12);
+[e ) -> >> . _dataU 0 -> 12 `i `us ]
+[e $UE 4  ]
+"41
+[; ;bin2bcd.c: 41: }
+[e :UE 4 ]
+}
